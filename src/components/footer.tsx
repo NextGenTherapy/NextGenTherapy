@@ -17,7 +17,6 @@ export default function Footer() {
                                 rel="noopener noreferrer">
                                 Colchester Business Centre, 1 George Williams Way, Colchester CO1 2JS
                             </a>
-                        Colchester Business Centre, 1 George Williams Way, Colchester CO1 2JS
                         </li>
                     <li>
                     <a
@@ -31,7 +30,9 @@ export default function Footer() {
             </div>
 
             <div className={styles.footerColumn}>
-                <h3>Hours</h3>
+            <Link href="/contact">
+                        <h3>Hours</h3>
+                    </Link>
                 <ul className="weekday">
                     <li>
                         Monday — Tuesday

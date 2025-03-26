@@ -1,9 +1,13 @@
 :root {
-    --color-primary: #3498db; /* Primary color (e.g., blue) */
+    --color-primary: #ffffff; /* Primary color (e.g., blue) */
     --color-secondary: #2ecc71; /* Secondary color (e.g., green) */
     --color-background: #f4f4f4; /* Background color (e.g., light gray) */
     --color-text: #333333; /* Default text color */
     --color-accent: #e74c3c; /* Accent color (e.g., red) */
+
+    /* header and footer colors*/
+    --color-hf-background: #000000;
+    --color-hf-text: #ffffff;
   
     /* Spacing Variables */
     --spacing-small: 8px;
