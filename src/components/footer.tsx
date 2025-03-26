@@ -70,19 +70,19 @@ export default function Footer() {
                         target="_blank" 
                         rel="noopener noreferrer"
                         title="Vist our Facebook page">
-                        <Image src="/../../public/images/facebook.png" alt="Instagram" width={30} height={30} />
+                        <Image src="/images/facebook.png" alt="Instagram" width={40} height={40} />
                     </a>
                     <a href="https://www.instagram.com/nextgentherapycolchester?igsh=MWx2N2g0NnI0eTVveQ%3D%3D&utm_source=qr" 
                         target="_blank" 
                         rel="noopener noreferrer"
                         title="Vist our Instagram page">
-                        <Image src="/../../public/images/instagram.png" alt="Instagram" width={30} height={30} />
+                        <Image src="/images/instagram.png" alt="Instagram" width={40} height={40} />
                     </a>
                     <a href="https://www.bacp.co.uk/therapists/385976/andreea-horhocea/london-e16" 
                        target="_blank" 
                        rel="noopener noreferrer"
                        title="Vist our BACP page">
-                        <Image src="/../../public/images/bacp.png" alt="Instagram" width={30} height={30} />
+                        <Image src="/images/bacp.png" alt="Instagram" width={40} height={40} />
                     </a>
                 </div>
             </div>
