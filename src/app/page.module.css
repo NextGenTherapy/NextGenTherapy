@@ -1,12 +1,70 @@
-
-
-.main {
+.intro {
   display: flex;
   flex-direction: column;
-  gap: 32px;
-  grid-row-start: 2;
-  background-color: white;
+  justify-content: center;
+  align-items: center;
+  gap: var(--spacing-large)
 }
 
+.title {
+  text-align: center;
+  font-size: var(--font-size-large);
+  margin-top: var(--spacing-xlarge);
+}
+
+.buttonLinks {
+  text-align: center;
+  margin-top: var(--spacing-xlarge);
+  margin-bottom: var(--spacing-large);
+  font-size: var(--font-size-medium);
+}
+
+.button {
+  display: flex;
+  justify-content: space-around;
+  margin: var(--spacing-large);
+  padding-top: var(--spacing-large);
+}
+
+.introAndreea {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: var(--spacing-large);
+  margin-top: var(--spacing-large);
+  padding: var(--spacing-xlarge);
+}
+
+.textContainer {
+  flex: 1;
+  max-width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-small);
+}
+
+.greeting {
+  font-size: var(--font-size-large);
+  font-weight: bold;
+  margin-bottom: var(--spacing-large);
+}
+
+.description {
+  margin: 0;
+  font-size: var(--font-size-medium);
+}
+
+.imageContainer {
+  flex: 1;
+  max-width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--spacing-small);
+}
+
+.image {
+  border-radius: 50%;
+}
 
 

@@ -1,0 +1,18 @@
+.button {
+    display: inline-block; /* Ensure the button is displayed */
+    padding: 10px 20px;
+    font-size: var(--font-size-medium);
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    background-color: var(--color-accent);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .button:hover {
+    background-color: var(--color-accent-hover);
+  }
