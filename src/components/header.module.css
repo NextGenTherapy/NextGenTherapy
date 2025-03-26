@@ -1,0 +1,37 @@
+.header {
+    background-color: var(--color-hf-background);
+    color: var(--color-hf-text);
+    padding: var(--spacing-large);
+    min-height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.logo h1 {
+    font-size: var(--font-size-logo);
+    margin: 0;
+}
+
+.navList {
+    display: flex;
+    gap: var(--spacing-large);
+    margin: 0;
+    padding: 0;
+}
+
+.navItem a {
+    font-size: var(--font-size-large);
+}
+
+.navItem a:hover {
+    text-decoration: none;
+    color: var(--color-accent);
+}
