@@ -1,13 +1,15 @@
 :root {
     --color-primary: #ffffff; /* Primary color (e.g., blue) */
     --color-secondary: #2ecc71; /* Secondary color (e.g., green) */
-    --color-background: #f4f4f4; /* Background color (e.g., light gray) */
+    --color-background: #fefae0;/* Background color (e.g., light gray) */
     --color-text: #000000; /* Default text color */
-    --color-accent: #e74c3c; /* Accent color (e.g., red) */
+    --color-text-secondary: #ffffff;
+    --color-accent: #dbbfa4; /* Accent color (e.g., red) */
+    --color-accent-hover: #dc8f70;
 
     /* header and footer colors*/
-    --color-hf-background: #000000;
-    --color-hf-text: #ffffff;
+    --color-header-background: #164B39;
+    --color-header-text: #ffffff;
   
     /* Spacing Variables */
     --spacing-small: 8px;

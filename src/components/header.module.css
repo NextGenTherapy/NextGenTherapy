@@ -1,6 +1,6 @@
 .header {
-    background-color: var(--color-hf-background);
-    color: var(--color-hf-text);
+    background-color: var(--color-header-background);
+    color: var(--color-header-text);
     padding: var(--spacing-large);
     min-height: 90px;
     display: flex;

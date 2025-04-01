@@ -6,14 +6,11 @@ export default function Home() {
   return (
     <div className={styles.page}>
     <main>
-      <div className={styles.intro}>
-      <div className={styles.title}>
-        <h1>Andreea Horhocea</h1>
-        <h1>Next Generation Counselling & Psychotherapy</h1>
-      </div>
+      <div className={styles.imageLogoContainer}>
+      
       
       <div className={styles.buttonLinks}>
-        <h4>Come explore a new path to healing with a safe space for growth and self-discovery!</h4>
+        <h1>Come explore a new path to healing with a safe space for growth and self-discovery!</h1>
         <div className={styles.button}>
         <Button href="/therapy-101">Learn More</Button>
         <Button href="/services">Services</Button>

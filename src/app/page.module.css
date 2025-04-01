@@ -1,22 +1,29 @@
-.intro {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: var(--spacing-large)
+.page {
+  background-color: var(--color-background);
 }
 
-.title {
-  text-align: center;
-  font-size: var(--font-size-large);
-  margin-top: var(--spacing-xlarge);
+
+.imageLogoContainer {
+  background-image: url("/images/logo.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center 120%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  height: 130vh;
+  width: 100%;
+  padding: var(--spacing-large);
 }
+
 
 .buttonLinks {
   text-align: center;
-  margin-top: var(--spacing-xlarge);
-  margin-bottom: var(--spacing-large);
+  margin-top: 250px;
+  margin-bottom: var(--font-size-large);
   font-size: var(--font-size-medium);
+  color: var(--color-text-secondary);
 }
 
 .button {
@@ -63,8 +70,5 @@
   gap: var(--spacing-small);
 }
 
-.image {
-  border-radius: 50%;
-}
 
 
