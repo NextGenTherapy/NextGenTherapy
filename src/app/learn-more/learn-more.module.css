@@ -1,0 +1,86 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 100vh;
+  padding: var(--spacing-large);
+  box-sizing: border-box;
+}
+
+.pageTop {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: var(--spacing-xlarge);
+}
+
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--spacing-xlarge);
+  width: 100%;
+  max-width: 1200px;
+}
+
+.intro {
+  width: 100%;
+  margin: var(--spacing-large); /* Add larger gap above intro */
+}
+
+.intro h2 {
+  text-align: center;
+  margin-bottom: var(--spacing-large); /* Increased space below the h2 */
+}
+
+.intro .list p {
+  margin-top: var(--spacing-large);
+  margin-bottom: var(--spacing-medium); /* Add spacing between paragraphs */
+  text-align: left; /* Ensure paragraphs are left-aligned */
+}
+
+.outro {
+  width: 100%;
+  margin: var(--spacing-large);
+}
+
+.outro h2 {
+  text-align: center;
+  margin-bottom: var(--spacing-large); /* Increased space below the h2 */
+}
+
+.outro .list {
+  text-align: left; /* Ensure lists are left-aligned */
+  margin: 0;
+  padding: 0;
+}
+
+.list li {
+  margin-top: var(--spacing-large);
+  margin-bottom: var(--spacing-medium); /* Add spacing between list items */
+  list-style-position: inside; /* Ensure list items are properly aligned */
+}
+
+.list li::marker {
+  font-weight: bold; /* Make the list item numbers bold */
+}
+
+.list li h3 {
+  font-weight: bold; /* Ensure h3 matches the bold style */
+}
+
+.buttonLinks {
+  display: flex; /* Use flexbox for layout */
+  justify-content: space-around; /* Ensure equal space between buttons */
+  align-items: center; /* Align buttons vertically in the center */
+  flex-wrap: wrap; /* Allow buttons to wrap to the next line if needed */
+  margin: var(--spacing-large); /* Add spacing around the container */
+  gap: var(--spacing-xlarge); /* Add consistent spacing between buttons */
+  margin-bottom: var(--spacing-xlarge);
+}

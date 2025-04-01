@@ -25,6 +25,7 @@
     gap: var(--spacing-large);
     margin: 0;
     padding: 0;
+    list-style: none;
 }
 
 .navItem a {
@@ -35,3 +36,4 @@
     text-decoration: none;
     color: var(--color-accent);
 }
+

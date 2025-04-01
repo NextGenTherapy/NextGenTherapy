@@ -21,7 +21,7 @@
 .buttonLinks {
   text-align: center;
   margin-top: 250px;
-  margin-bottom: var(--font-size-large);
+  margin-bottom: var(--spacing-large);
   font-size: var(--font-size-medium);
   color: var(--color-text-secondary);
 }
@@ -70,5 +70,73 @@
   gap: var(--spacing-small);
 }
 
+.image {
+  border-radius: 15px;
+  max-width: 100%;
+  height: auto;
+}
 
+
+
+/* Responsive styles for tablets (max-width: 768px) */
+@media (max-width: 768px) {
+  .introAndreea {
+    flex-direction: column; /* Stack content vertically */
+    text-align: center;
+    gap: var(--spacing-medium); /* Adjust spacing for tablets */
+    padding: var(--spacing-large); /* Reduce padding */
+  }
+
+  .textContainer {
+    max-width: 100%; /* Allow full width for text */
+    margin-bottom: var(--spacing-medium);
+  }
+
+  .imageContainer {
+    max-width: 80%; /* Reduce image size for tablets */
+  }
+
+  .button {
+    flex-direction: column; /* Stack buttons vertically */
+    gap: var(--spacing-small); /* Adjust button spacing */
+  }
+}
+
+/* Responsive styles for mobile devices (max-width: 480px) */
+@media (max-width: 480px) {
+  .imageLogoContainer {
+    height: auto; /* Adjust height for smaller screens */
+    background-position: center; /* Center the background image */
+    padding: var(--spacing-medium); /* Reduce padding */
+  }
+
+  .buttonLinks {
+    margin-top: var(--spacing-large); /* Adjust margin for smaller screens */
+    font-size: var(--font-size-small); /* Reduce font size */
+  }
+
+  .introAndreea {
+    flex-direction: column; /* Stack content vertically */
+    align-items: center; /* Center content horizontally */
+    text-align: center; /* Center text */
+    gap: var(--spacing-medium); /* Adjust spacing between elements */
+    padding: var(--spacing-medium); /* Reduce padding */
+  }
+
+  .textContainer {
+    max-width: 100%; /* Allow full width for text */
+    margin-bottom: var(--spacing-small);
+  }
+
+  .imageContainer {
+    max-width: 100%; /* Allow full width for the image */
+    justify-content: center; /* Center the image */
+  }
+
+  .button {
+    flex-direction: column; /* Stack buttons vertically */
+    gap: var(--spacing-small); /* Adjust button spacing */
+    align-items: center; /* Center buttons horizontally */
+  }
+}
 

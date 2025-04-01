@@ -12,9 +12,9 @@
     --color-header-text: #ffffff;
   
     /* Spacing Variables */
-    --spacing-small: 8px;
-    --spacing-medium: 16px;
-    --spacing-large: 24px;
+    --spacing-small: 12px;
+    --spacing-medium: 20px;
+    --spacing-large: 30px;
     --spacing-xlarge: 200px;
   
     /* Font Variables */

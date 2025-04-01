@@ -6,6 +6,7 @@ import Header from "../components/header";
 import Footer from "../components/footer";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("http://localhost:3000"), // Base URL for resolving relative URLs
   title: "Next Generation Therapy",
   description: "Providing professional therapy and psychodynamic psychotherapist services for children, teenagers, young adults and adults. Specializing in mental health, personal growth, and emotional well-being in Colchester and Chelmsford. Contact us today.",
   keywords: ["therapy", "psychotherapy", "mental health", "Colchester", "Chelmsford", "psychodynamic therapy", "personal growth", "emotional well-being", "online"], // Add relevant keywords
@@ -31,9 +32,11 @@ export const metadata: Metadata = {
     description: "Providing professional therapy and psychodynamic psychotherapist services for children, teenagers, young adults and adults.",
     images: ["/images/default-social-share.jpg"], 
   },
-  viewport: "width=device-width, initial-scale=1", 
   robots: "index, follow", 
 };
+
+
+export const viewport = "width=device-width, initial-scale=1";
 
 export default function RootLayout({
   children,
@@ -44,7 +47,7 @@ export default function RootLayout({
     <html lang="en-GB">
       <head>
         <link rel="icon" href="/favicon.ico" type="image/x-icon" />
-        <link rel="canonical" href="http://localhost:3000" /> {/* Replace with your production URL when deploying */}
+        <link rel="canonical" href="http://localhost:3000" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -52,8 +55,8 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "Organization",
               name: "Next Generation Therapy",
-              url: "http://localhost:3000", // Replace with your production URL
-              logo: "http://localhost:3000/images/default-social-share.jpg", //change with website
+              url: "http://localhost:3000",
+              logo: "http://localhost:3000/images/default-social-share.jpg",
               description:
                 "Providing professional therapy and psychodynamic psychotherapist services for children, teenagers, young adults and adults. Specializing in mental health, personal growth, and emotional well-being in Colchester and Chelmsford.",
               address: {
@@ -66,7 +69,7 @@ export default function RootLayout({
               },
               contactPoint: {
                 "@type": "ContactPoint",
-                telephone: "+44 7849 944790", 
+                telephone: "+44 7849 944790",
                 contactType: "Customer Service",
               },
             }),

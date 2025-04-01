@@ -18,22 +18,19 @@ export default function Header() {
                         <Link href="/">Home</Link>
                     </li>
                     <li className={styles.navItem}>
-                        <Link href="/therapy-101">Therapy 101</Link>
+                        <Link href="/learn-more">Learn More</Link>
                     </li>
                     <li className={styles.navItem}>
-                        <Link href="/why-therapy">Why Therapy</Link>
+                        <Link href="/who-I-see">Who I see</Link>
                     </li>
                     <li className={styles.navItem}>
-                        <Link href="/clientele">Who I see</Link>
-                    </li>
-                    <li className={styles.navItem}>
-                        <Link href="/about">About</Link>
+                        <Link href="/about">About Me</Link>
                     </li>
                     <li className={styles.navItem}>
                         <Link href="/services">Services</Link>
                     </li>
                     <li className={styles.navItem}>
-                        <Link href="/contact">Contact</Link>
+                        <Link href="/book-now">Book Now</Link>
                     </li>
                 </ul>
             </nav>

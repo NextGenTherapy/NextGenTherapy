@@ -29,6 +29,7 @@
 .footerColumn ul {
     padding: 0;
     margin: 0;
+    list-style: none;
 }
 
 .footerColumn ul li {
@@ -50,3 +51,4 @@ margin-bottom: var(--spacing-medium);
     gap: var(--spacing-large);
     margin-top: var(--spacing-large);
 }
+

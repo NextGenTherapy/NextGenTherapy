@@ -5,6 +5,7 @@ import Button from "../components/button";
 
 // Page-specific metadata
 export const metadata: Metadata = {
+  metadataBase: new URL("http://localhost:3000"), // Base URL for resolving relative URLs
   title: "Welcome to Next Generation Therapy",
   description: "Discover a safe space for growth and self-discovery with Andreea Horhocea, a psychodynamic psychotherapist offering 1-to-1 sessions in Colchester, Chelmsford, and online.",
   keywords: [
@@ -37,8 +38,10 @@ export const metadata: Metadata = {
     description: "Discover a safe space for growth and self-discovery with Andreea Horhocea, a psychodynamic psychotherapist offering 1-to-1 sessions in Colchester, Chelmsford, and online.",
     images: ["/images/default-social-share.jpg"],
   },
-  viewport: "width=device-width, initial-scale=1",
 };
+
+// Separate viewport export
+export const viewport = "width=device-width, initial-scale=1";
 
 export default function Home() {
   return (
@@ -48,8 +51,9 @@ export default function Home() {
           <div className={styles.buttonLinks}>
             <h1>Come explore a new path to healing with a safe space for growth and self-discovery!</h1>
             <div className={styles.button}>
-              <Button href="/therapy-101">Learn More</Button>
+              <Button href="/learn-more">Learn More</Button>
               <Button href="/services">Services</Button>
+              <Button href="/book-now">Book Now</Button>
             </div>
           </div>
         </div>
@@ -69,7 +73,7 @@ export default function Home() {
             <Image
               src="/images/andreea.jpg"
               alt="Andreea Horhocea - Psychodynamic Psychotherapist"
-              height={300}
+              height={400}
               width={300}
               className={styles.image}
             />
