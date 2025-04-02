@@ -4,7 +4,6 @@
   justify-content: space-between;
   align-items: center;
   min-height: 100vh;
-  padding: var(--spacing-large);
   box-sizing: border-box;
 }
 
@@ -15,7 +14,7 @@
   align-items: center;
   width: 100%;
   max-width: 1200px;
-  margin: var(--spacing-xlarge);
+  margin-top: var(--spacing-xlarge);
 }
 
 .main {
@@ -31,7 +30,7 @@
 
 .intro {
   width: 100%;
-  margin: var(--spacing-large); /* Add larger gap above intro */
+  margin: var(--spacing-medium); /* Add larger gap above intro */
 }
 
 .intro h2 {
