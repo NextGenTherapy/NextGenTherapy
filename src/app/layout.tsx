@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     url: "http://localhost:3000", // Localhost URL for development
     images: [
       {
-        url: "/images/default-social-share.jpg", 
+        url: "../images/default-social-share.jpg", 
         width: 1200,
         height: 630,
         alt: "Next Generation Therapy - A Safe Space for Growth and Self-Discovery",
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Next Generation Therapy",
     description: "Providing professional therapy and psychodynamic psychotherapist services for children, teenagers, young adults and adults.",
-    images: ["/images/default-social-share.jpg"], 
+    images: ["../images/default-social-share.jpg"], 
   },
   robots: "index, follow", 
 };

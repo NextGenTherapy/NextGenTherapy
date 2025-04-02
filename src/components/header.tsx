@@ -21,7 +21,7 @@ export default function Header() {
                         <Link href="/learn-more">Learn More</Link>
                     </li>
                     <li className={styles.navItem}>
-                        <Link href="/who-I-see">Who I see</Link>
+                        <Link href="/who-i-see">Who I see</Link>
                     </li>
                     <li className={styles.navItem}>
                         <Link href="/about">About Me</Link>
