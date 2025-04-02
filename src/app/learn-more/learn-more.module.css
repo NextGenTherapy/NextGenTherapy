@@ -84,3 +84,7 @@
   gap: var(--spacing-xlarge); /* Add consistent spacing between buttons */
   margin-bottom: var(--spacing-xlarge);
 }
+
+.image {
+  border-radius: 15px;
+}

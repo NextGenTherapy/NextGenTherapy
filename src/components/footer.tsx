@@ -35,7 +35,7 @@ export default function Footer() {
                     </Link>
                 <ul className="weekday">
                     <li>
-                        Monday — Tuesday
+                        Monday - Tuesday
                     </li>
                     <li>
                     10am - 7pm 
