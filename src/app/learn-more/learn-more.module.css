@@ -75,13 +75,12 @@
 }
 
 .buttonLinks {
-  display: flex; /* Use flexbox for layout */
-  justify-content: space-around; /* Ensure equal space between buttons */
-  align-items: center; /* Align buttons vertically in the center */
-  flex-wrap: wrap; /* Allow buttons to wrap to the next line if needed */
-  margin: var(--spacing-large); /* Add spacing around the container */
-  gap: var(--spacing-xlarge); /* Add consistent spacing between buttons */
-  margin-bottom: var(--spacing-xlarge);
+  display: flex; 
+  justify-content: space-around; 
+  align-items: center; 
+  flex-wrap: wrap; 
+  margin: var(--spacing-xlarge); 
+  
 }
 
 .image {

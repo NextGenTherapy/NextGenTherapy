@@ -1,0 +1,124 @@
+.intro {
+  display: flex;
+  flex-direction: column; /* Stack heading and content vertically */
+  justify-content: flex-start;
+  align-items: center;
+  gap: var(--spacing-large); /* Add spacing between heading and content */
+  margin-bottom: var(--spacing-xlarge);
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 var(--spacing-xlarge); /* Ensure padding doesn't affect width */
+}
+
+.introHeading {
+  text-align: center; /* Center-align the heading */
+  width: 100%; /* Ensure the heading spans the full width */
+  margin: var(--spacing-xlarge);
+}
+
+.introContent {
+  display: flex;
+  flex-direction: row; /* Arrange text and image side by side */
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--spacing-large); /* Add spacing between text and image */
+  width: 100%;
+}
+
+.introImage {
+  flex: 1; /* Allow the image to take up equal space */
+  max-width: 50%; /* Constrain the image width */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.introImage .image {
+  border-radius: 15px; /* Add rounded corners to the image */
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.introText {
+  flex: 1; /* Allow the text to take up equal space */
+  max-width: 50%; /* Constrain the text width */
+  text-align: left; /* Align text to the left */
+}
+
+.introText h2 {
+  font-size: var(--font-size-large); /* Use font size from variables.css */
+  font-weight: bold;
+  margin-bottom: var(--spacing-medium);
+}
+
+.introText ul {
+  list-style: none; /* Remove default bullet points */
+  padding: 0;
+  margin: 0;
+}
+
+.introText li {
+  font-size: var(--font-size-base); /* Use font size from variables.css */
+  margin-bottom: var(--spacing-small);
+  line-height: 1.6;
+}
+
+.children,
+.adults {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--spacing-large);
+  margin-bottom: var(--spacing-xlarge);
+  width: 100%;
+  padding: 0 var(--spacing-xlarge); /* Add horizontal padding */
+  box-sizing: border-box; /* Ensure padding doesn't affect width */
+}
+
+.childrenImage,
+.adultsImage {
+  flex: 1;
+  max-width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.childrenImage .image,
+.adultsImage .image {
+  border-radius: 15px; /* Add rounded corners to the image */
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.childrenText,
+.adultsText {
+  flex: 1;
+  max-width: 50%;
+  text-align: left;
+}
+
+.childrenText h2,
+.adultsText h2 {
+  font-size: var(--font-size-large); /* Use font size from variables.css */
+  font-weight: bold;
+  margin-bottom: var(--spacing-medium);
+}
+
+.childrenText p,
+.adultsText p {
+  font-size: var(--font-size-base); /* Use font size from variables.css */
+  margin-bottom: var(--spacing-small);
+  line-height: 1.6;
+}
+
+.buttonLinks {
+    display: flex; 
+    justify-content: space-around; 
+    align-items: center; 
+    flex-wrap: wrap; 
+    margin: var(--spacing-xlarge); 
+}
