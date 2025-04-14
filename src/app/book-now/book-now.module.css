@@ -1,0 +1,166 @@
+/* Layout container for the page */
+.layout {
+  display: flex;
+  flex-direction: row; /* Arrange leftSide and imageContainer side by side */
+  justify-content: space-between;
+  align-items: stretch; /* Stretch both sides to match height */
+  gap: var(--spacing-large); /* Add spacing between leftSide and imageContainer */
+  width: 100%;
+  max-width: 1200px; /* Constrain the width of the layout */
+  margin: 0 auto; /* Center the layout horizontally */
+  padding: var(--spacing-large); /* Add consistent spacing around the layout */
+  box-sizing: border-box;
+}
+
+/* Left side content */
+.leftSide {
+  flex: 2; /* Take up 2/3 of the width */
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-large); /* Add spacing between sections inside the leftSide */
+}
+
+/* Page Top Section */
+.pageTop {
+  text-align: center; /* Center the text */
+  margin: var(--spacing-xlarge); /* Add spacing below the heading */
+  
+}
+
+.pageTop h1 {
+  font-size: var(--font-size-logo);
+  font-weight: bold;
+  padding: var(--spacing-medium);
+}
+
+/* Content Section */
+.content h2 {
+  font-size: var(--font-size-large);
+  font-weight: bold;
+  margin-bottom: var(--spacing-medium);
+}
+
+.content p {
+  font-size: var(--font-size-base);
+  line-height: 1.6;
+  margin-bottom: var(--spacing-medium);
+}
+
+/* Contact Section */
+.contact {
+  margin-bottom: var(--spacing-large); /* Add spacing below the contact section */
+}
+
+.contact a {
+  display: block;
+  font-size: var(--font-size-base);
+  color: var(--color-accent);
+  text-decoration: none;
+  margin-bottom: var(--spacing-small);
+}
+
+.contact a:hover {
+  text-decoration: underline;
+}
+
+/* Location Section */
+.location {
+  margin-bottom: var(--spacing-large); /* Add spacing below the location section */
+}
+
+.location ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.location li {
+  margin-bottom: var(--spacing-small);
+}
+
+.location a {
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+.location a:hover {
+  text-decoration: underline;
+}
+
+/* Hours Section */
+.hours {
+  margin-bottom: var(--spacing-large); /* Add spacing below the hours section */
+}
+
+.hours ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.hours li {
+  margin-bottom: var(--spacing-small);
+}
+
+/* Add spacing between h3 and ul */
+.contact h3,
+.location h3,
+.hours h3 {
+  margin-bottom: var(--spacing-medium); /* Add spacing below the h3 */
+}
+
+.contact ul,
+.location ul,
+.hours ul {
+  margin-top: 0; /* Ensure no extra margin above the ul */
+}
+
+/* Match link styles to footer */
+.contact a,
+.location a,
+.hours a {
+  color: black; /* Black text by default */
+  text-decoration: none;
+}
+
+.contact a:hover,
+.location a:hover,
+.hours a:hover {
+  color: var(--color-accent); /* Change to accent color on hover */
+  text-decoration: none;
+}
+
+/* Right side image container */
+.imageContainer {
+  flex: 1; /* Take up 1/3 of the width */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image {
+  border-radius: 15px; /* Optional: Add rounded corners to the image */
+  object-fit: cover; /* Ensure the image covers the container */
+  width: 100%;
+  height: auto;
+}
+
+/* Contact Form Section */
+.formContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: var(--spacing-xlarge); /* Add spacing above the form */
+  padding: 0 var(--spacing-large); /* Add horizontal padding for consistency */
+  box-sizing: border-box;
+}
+
+/* Button Links Section */
+.buttonLinks {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-medium);
+  margin-top: var(--spacing-large);
+  flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
+}
