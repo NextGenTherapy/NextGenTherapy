@@ -154,6 +154,63 @@
   margin-top: var(--spacing-xlarge); /* Add spacing above the form */
   padding: 0 var(--spacing-large); /* Add horizontal padding for consistency */
   box-sizing: border-box;
+  
+}
+
+.formContainer form {
+  width: 100%;
+  max-width: 600px; /* Constrain the form width */
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-medium); /* Add spacing between form fields */
+  border-radius: 10px; /* Optional: Add rounded corners */
+  padding: var(--spacing-large); /* Add padding inside the form */
+  border: 2px solid var(--color-header-background); /* Add border around the form */
+  box-sizing: border-box;
+}
+
+.formContainer label {
+  font-size: var(--font-size-base);
+  font-weight: bold;
+  margin-bottom: var(--spacing-small);
+}
+
+.formContainer input,
+.formContainer textarea {
+  width: 100%;
+  padding: var(--spacing-small);
+  font-size: var(--font-size-base);
+  border: 1px solid var(--color-border);
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.formContainer textarea {
+  resize: vertical; /* Allow vertical resizing only */
+}
+
+.formContainer input:focus,
+.formContainer textarea:focus {
+  outline: none;
+  border-color: var(--color-accent);
+  box-shadow: 0 0 5px var(--color-accent);
+}
+
+.formContainer button {
+  align-self: center; /* Center the button */
+  padding: var(--spacing-small) var(--spacing-medium);
+  background-color: var(--color-accent);
+  color: var(--color-text-secondary);
+  border: none;
+  border-radius: 5px;
+  font-size: var(--font-size-base);
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.formContainer button:hover {
+  background-color: var(--color-accent-hover);
 }
 
 /* Button Links Section */
