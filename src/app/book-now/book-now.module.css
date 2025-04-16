@@ -48,7 +48,7 @@
 
 /* Contact Section */
 .contact {
-  margin-bottom: var(--spacing-large); /* Add spacing below the contact section */
+  margin-bottom: var(--spacing-large); 
 }
 
 .contact a {
@@ -65,7 +65,7 @@
 
 /* Location Section */
 .location {
-  margin-bottom: var(--spacing-large); /* Add spacing below the location section */
+  margin-bottom: var(--spacing-large); 
 }
 
 .location ul {
@@ -215,9 +215,9 @@
 
 /* Button Links Section */
 .buttonLinks {
-  display: flex;
-  justify-content: center;
-  gap: var(--spacing-medium);
-  margin-top: var(--spacing-large);
-  flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
+  display: flex; 
+  justify-content: space-around; 
+  align-items: center; 
+  flex-wrap: wrap; 
+  margin: var(--spacing-xlarge); 
 }

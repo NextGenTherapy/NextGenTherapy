@@ -3,62 +3,51 @@ import Image from "next/image";
 import styles from "./page.module.css";
 import Button from "../components/button";
 
-// Page-specific metadata
-export const metadata: Metadata = {
-  metadataBase: new URL("http://localhost:3000"), // Base URL for resolving relative URLs
-  title: "Welcome to Next Generation Therapy",
-  description: "Discover a safe space for growth and self-discovery with Andreea Horhocea, a psychodynamic psychotherapist offering 1-to-1 sessions in Colchester, Chelmsford, and online.",
-  keywords: [
-    "therapy",
-    "psychotherapy",
-    "mental health",
-    "Colchester",
-    "Chelmsford",
-    "psychodynamic therapy",
-    "personal growth",
-    "emotional well-being",
-    "online",
-  ],
-  openGraph: {
-    title: "Welcome to Next Generation Therapy",
-    description: "Discover a safe space for growth and self-discovery with Andreea Horhocea, a psychodynamic psychotherapist offering 1-to-1 sessions in Colchester, Chelmsford, and online.",
-    url: "http://localhost:3000", // Replace with actual website link
-    images: [
-      {
-        url: "/images/default-social-share.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Next Generation Therapy - A Safe Space for Growth and Self-Discovery",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Welcome to Next Generation Therapy",
-    description: "Discover a safe space for growth and self-discovery with Andreea Horhocea, a psychodynamic psychotherapist offering 1-to-1 sessions in Colchester, Chelmsford, and online.",
-    images: ["/images/default-social-share.jpg"],
-  },
-};
+function getMetadata(): Metadata {
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
 
-// Separate viewport export
-export const viewport = "width=device-width, initial-scale=1";
+  return {
+    metadataBase: new URL(siteUrl),
+    title: "Welcome to Next Generation Therapy",
+    description: "Discover a safe space for growth and self-discovery with Andreea Horhocea.",
+    openGraph: {
+      title: "Welcome to Next Generation Therapy",
+      description: "Discover a safe space for growth and self-discovery with Andreea Horhocea.",
+      url: siteUrl,
+      images: [
+        {
+          url: "/images/default-social-share.jpg",
+          width: 1200,
+          height: 630,
+          alt: "Next Generation Therapy - A Safe Space for Growth and Self-Discovery",
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: "Welcome to Next Generation Therapy",
+      description: "Discover a safe space for growth and self-discovery with Andreea Horhocea.",
+      images: ["/images/default-social-share.jpg"],
+    },
+  };
+}
+
+export const metadata = getMetadata();
 
 export default function Home() {
   return (
     <div className={styles.page}>
       <main>
-        <div className={styles.imageLogoContainer}>
-          <div className={styles.buttonLinks}>
-            <h1>Come explore a new path to healing with a safe space for growth and self-discovery!</h1>
-            <div className={styles.button}>
-              <Button href="/learn-more">Learn More</Button>
-              <Button href="/services">Services</Button>
-              <Button href="/book-now">Book Now</Button>
-            </div>
+        <header className={styles.imageLogoContainer}>
+          <h1>Come explore a new path to healing with a safe space for growth and self-discovery!</h1>
+          <div className={styles.button}>
+            <Button href="/learn-more">Learn More</Button>
+            <Button href="/services">Services</Button>
+            <Button href="/book-now">Book Now</Button>
           </div>
-        </div>
+        </header>
 
-        <div className={styles.introAndreea}>
+        <section className={styles.introAndreea}>
           <div className={styles.textContainer}>
             <div className={styles.greeting}>
               <p>Hi! I am Andreea Horhocea.</p>
@@ -78,7 +67,7 @@ export default function Home() {
               className={styles.image}
             />
           </div>
-        </div>
+        </section>
       </main>
     </div>
   );

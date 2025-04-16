@@ -33,10 +33,8 @@ export const metadata: Metadata = {
     images: ["../images/default-social-share.jpg"], 
   },
   robots: "index, follow", 
+  viewport: "width=device-width, initial-scale=1", 
 };
-
-
-export const viewport = "width=device-width, initial-scale=1";
 
 export default function RootLayout({
   children,
