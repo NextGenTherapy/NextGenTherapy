@@ -10,6 +10,7 @@ function getMetadata(): Metadata {
     metadataBase: new URL(siteUrl),
     title: "Welcome to Next Generation Therapy",
     description: "Discover a safe space for growth and self-discovery with Andreea Horhocea.",
+    authors: [{ name: "Andreea Horhocea" }], // Added authors metadata
     openGraph: {
       title: "Welcome to Next Generation Therapy",
       description: "Discover a safe space for growth and self-discovery with Andreea Horhocea.",

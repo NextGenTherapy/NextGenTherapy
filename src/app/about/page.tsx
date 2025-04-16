@@ -8,6 +8,39 @@ export const metadata: Metadata = {
   title: "About me - Next Generation Therapy",
   description:
     "Learn about Andreea Horhocea, a psychodynamic psychotherapist with extensive experience working with children, young people, and adults. Discover her approach to therapy, her qualifications, and her dedication to creating a safe and supportive space for personal growth.",
+  keywords: [
+    "psychodynamic psychotherapy",
+    "Andreea Horhocea",
+    "mental health",
+    "therapy for children",
+    "therapy for young people",
+    "therapy for adults",
+    "Colchester therapy",
+    "Chelmsford therapy",
+    "online therapy",
+  ],
+  authors: [{ name: "Andreea Horhocea" }],
+  openGraph: {
+    title: "About me - Next Generation Therapy",
+    description:
+      "Learn about Andreea Horhocea, a psychodynamic psychotherapist with extensive experience working with children, young people, and adults. Discover her approach to therapy, her qualifications, and her dedication to creating a safe and supportive space for personal growth.",
+    url: "http://localhost:3000/about",
+    images: [
+      {
+        url: "/images/andreea.jpg",
+        width: 300,
+        height: 300,
+        alt: "Andreea Horhocea - Psychodynamic Psychotherapist",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "About me - Next Generation Therapy",
+    description:
+      "Learn about Andreea Horhocea, a psychodynamic psychotherapist with extensive experience working with children, young people, and adults.",
+    images: ["/images/andreea.jpg"],
+  },
 };
 
 export default function AboutMe() {
