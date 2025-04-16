@@ -5,22 +5,56 @@ import Button from "../../components/button";
 
 export const metadata: Metadata = {
   metadataBase: new URL("http://localhost:3000"),
-  title: "Why Therapy - Next Generation Therapy",
+  title: "Who I See - Next Generation Therapy",
   description:
-    "Learn why therapy is important and how it can help you achieve personal growth and emotional well-being.",
+    "Discover who Andreea Horhocea works with, including children, adults, and individuals facing anxiety, depression, trauma, and more. Learn about her therapy approach and locations.",
+  keywords: [
+    "therapy for children",
+    "therapy for adults",
+    "anxiety therapy",
+    "depression therapy",
+    "trauma therapy",
+    "grief therapy",
+    "identity issues",
+    "low self-esteem",
+    "neurodiversity support",
+    "Andreea Horhocea",
+  ],
+  authors: [{ name: "Andreea Horhocea" }],
+  openGraph: {
+    title: "Who I See - Next Generation Therapy",
+    description:
+      "Discover who Andreea Horhocea works with, including children, adults, and individuals facing anxiety, depression, trauma, and more. Learn about her therapy approach and locations.",
+    url: "http://localhost:3000/who-I-see",
+    images: [
+      {
+        url: "/images/andreea.jpg",
+        width: 300,
+        height: 300,
+        alt: "Andreea Horhocea - Psychodynamic Psychotherapist",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Who I See - Next Generation Therapy",
+    description:
+      "Discover who Andreea Horhocea works with, including children, adults, and individuals facing anxiety, depression, trauma, and more.",
+    images: ["/images/andreea.jpg"],
+  },
 };
 
 export default function WhoISee() {
   return (
     <div className={styles.page}>
-      <main className={styles.main}>
-        <div className={styles.pageTop}>
-          <h1> Who do I work with? Where do I work?</h1>
-        </div>
+      <header className={styles.pageTop}>
+        <h1>Who Do I Work With?</h1>
+      </header>
 
-        <div className={styles.intro}>
-          {/* List Container */}
-          <div className={styles.list}>
+      <main className={styles.main}>
+        <section className={styles.intro}>
+          <article className={styles.list}>
+            <h2>Who I Work With</h2>
             <ul>
               <li>Children and young people</li>
               <li>Adults experiencing anxiety</li>
@@ -35,10 +69,56 @@ export default function WhoISee() {
               <li>ADD/ADHD related struggles</li>
               <li>Neurodiversity</li>
             </ul>
-          </div>
+          </article>
+          <aside className={styles.imageContainer}>
+            <Image
+              src="/images/andreea.jpg"
+              alt="Andreea Horhocea - Psychodynamic Psychotherapist"
+              height={300}
+              width={300}
+              className={styles.image}
+            />
+          </aside>
+        </section>
 
-          {/* Image Container */}
-          <div className={styles.imageContainer}>
+        <section className={styles.photoGallery}>
+          <h2>Photo Gallery</h2>
+          <div className={styles.gallery}>
+            <Image
+              src="/images/andreea.jpg"
+              alt="Andreea Horhocea - Psychodynamic Psychotherapist"
+              height={300}
+              width={300}
+              className={styles.image}
+            />
+            <Image
+              src="/images/andreea.jpg"
+              alt="Andreea Horhocea - Psychodynamic Psychotherapist"
+              height={300}
+              width={300}
+              className={styles.image}
+            />
+            <Image
+              src="/images/andreea.jpg"
+              alt="Andreea Horhocea - Psychodynamic Psychotherapist"
+              height={300}
+              width={300}
+              className={styles.image}
+            />
+            <Image
+              src="/images/andreea.jpg"
+              alt="Andreea Horhocea - Psychodynamic Psychotherapist"
+              height={300}
+              width={300}
+              className={styles.image}
+            />
+            <Image
+              src="/images/andreea.jpg"
+              alt="Andreea Horhocea - Psychodynamic Psychotherapist"
+              height={300}
+              width={300}
+              className={styles.image}
+            />
             <Image
               src="/images/andreea.jpg"
               alt="Andreea Horhocea - Psychodynamic Psychotherapist"
@@ -47,58 +127,15 @@ export default function WhoISee() {
               className={styles.image}
             />
           </div>
-        </div>
+        </section>
 
-        <div className={styles.photoGallery}>
-          <Image
-            src="/images/andreea.jpg"
-            alt="Andreea Horhocea - Psychodynamic Psychotherapist"
-            height={300}
-            width={300}
-            className={styles.image}
-          />
-          <Image
-            src="/images/andreea.jpg"
-            alt="Andreea Horhocea - Psychodynamic Psychotherapist"
-            height={300}
-            width={300}
-            className={styles.image}
-          />
-          <Image
-            src="/images/andreea.jpg"
-            alt="Andreea Horhocea - Psychodynamic Psychotherapist"
-            height={300}
-            width={300}
-            className={styles.image}
-          />
-          <Image
-            src="/images/andreea.jpg"
-            alt="Andreea Horhocea - Psychodynamic Psychotherapist"
-            height={300}
-            width={300}
-            className={styles.image}
-          />
-          <Image
-            src="/images/andreea.jpg"
-            alt="Andreea Horhocea - Psychodynamic Psychotherapist"
-            height={300}
-            width={300}
-            className={styles.image}
-          />
-          <Image
-            src="/images/andreea.jpg"
-            alt="Andreea Horhocea - Psychodynamic Psychotherapist"
-            height={300}
-            width={300}
-            className={styles.image}
-          />
-        </div>
-        <div className={styles.location}>
-          <div className={styles.textContainer}>
-            <h2>
+        <section className={styles.location}>
+          <h2>Location & Working Hours</h2>
+          <article className={styles.textContainer}>
+            <p>
               This is my Google map location, so you can get to me easily and
-              as stress free as possible.
-            </h2>
+              as stress-free as possible.
+            </p>
             <div className={styles.centeredList}>
               <div>
                 <h3>Monday - Tuesday</h3>
@@ -119,8 +156,8 @@ export default function WhoISee() {
                 </ul>
               </div>
             </div>
-          </div>
-          <div className={styles.map}>
+          </article>
+          <aside className={styles.map}>
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2462.624902209368!2d0.9056014!3d51.8860592!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d905d138eb59f9%3A0xcba6bcd08ff9a10!2sAndreea%20Horhocea%20Next%20Generation%20Counselling%20%26%20Psychotherapy!5e0!3m2!1sen!2suk!4v1743611123198!5m2!1sen!2suk"
               width="600"
@@ -129,14 +166,14 @@ export default function WhoISee() {
               title="Google Map Location of Andreea Horhocea Next Generation Counselling & Psychotherapy"
               referrerPolicy="no-referrer-when-downgrade"
             ></iframe>
-          </div>
-        </div>
+          </aside>
+        </section>
 
-        <div className={styles.buttonLinks}>
+        <footer className={styles.buttonLinks}>
           <Button href="/about">About Me</Button>
           <Button href="/services">Services</Button>
           <Button href="/book-now">Book Now</Button>
-        </div>
+        </footer>
       </main>
     </div>
   );

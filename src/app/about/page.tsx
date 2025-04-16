@@ -46,15 +46,13 @@ export const metadata: Metadata = {
 export default function AboutMe() {
   return (
     <div className={styles.page}>
-      <main className={styles.main}>
-        {/* Page Top Section */}
-        <div className={styles.pageTop}>
-          <h1>About Me</h1>
-        </div>
+      <header className={styles.pageTop}>
+        <h1>About Me</h1>
+      </header>
 
-      
-        <div className={styles.intro}>
-          <div className={styles.introText}>
+      <main className={styles.main}>
+        <section className={styles.intro}>
+          <article className={styles.introText}>
             <h2>Andreea Horhocea</h2>
             <h3>Hi There,</h3>
             <p>I am Andreea. Lovely to meet you.</p>
@@ -89,8 +87,8 @@ export default function AboutMe() {
               Contrary to popular belief, therapy is not just for times of
               crisis but a valuable resource regardless of the stage of life.
             </p>
-          </div>
-          <div className={styles.introImage}>
+          </article>
+          <aside className={styles.introImage}>
             <Image
               src="/images/andreea.jpg"
               alt="Andreea Horhocea - Psychodynamic Psychotherapist"
@@ -98,12 +96,11 @@ export default function AboutMe() {
               width={300}
               className={styles.image}
             />
-          </div>
-        </div>
+          </aside>
+        </section>
 
-      
-        <div className={styles.outro}>
-          <div className={styles.outroText}>
+        <section className={styles.outro}>
+          <article className={styles.outroText}>
             <p>
               After working under multiple organisations for the last few
               years, I realised that there is a greater need for support. I
@@ -143,24 +140,23 @@ export default function AboutMe() {
               therapeutic match, I am happy to help you in the search for a
               better fit for you.
             </p>
-          </div>
-          <div className={styles.outroImage}>
+          </article>
+          <aside className={styles.outroImage}>
             <Image
               src="/images/bacp.jpg"
-              alt="Andreea Horhocea - Psychodynamic Psychotherapist"
+              alt="BACP Logo - British Association of Counselling and Psychotherapy"
               height={300}
               width={300}
               className={styles.image}
             />
-          </div>
-        </div>
+          </aside>
+        </section>
 
-       
-        <div className={styles.buttonLinks}>
+        <footer className={styles.buttonLinks}>
           <Button href="/who-i-see">Who I See</Button>
           <Button href="/services">Services</Button>
           <Button href="/book-now">Book Now</Button>
-        </div>
+        </footer>
       </main>
     </div>
   );
