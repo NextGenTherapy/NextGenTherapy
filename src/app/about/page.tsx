@@ -52,7 +52,7 @@ export default function AboutMe() {
           <h1>About Me</h1>
         </div>
 
-        {/* Intro Section */}
+      
         <div className={styles.intro}>
           <div className={styles.introText}>
             <h2>Andreea Horhocea</h2>
@@ -101,7 +101,7 @@ export default function AboutMe() {
           </div>
         </div>
 
-        {/* Outro Section */}
+      
         <div className={styles.outro}>
           <div className={styles.outroText}>
             <p>
@@ -155,7 +155,7 @@ export default function AboutMe() {
           </div>
         </div>
 
-        {/* Button Links Section */}
+       
         <div className={styles.buttonLinks}>
           <Button href="/who-i-see">Who I See</Button>
           <Button href="/services">Services</Button>

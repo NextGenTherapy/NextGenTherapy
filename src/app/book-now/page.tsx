@@ -8,22 +8,49 @@ export const metadata: Metadata = {
   metadataBase: new URL("http://localhost:3000"),
   title: "Book now - Next Generation Therapy",
   description:
-    "Learn about Andreea Horhocea, a psychodynamic psychotherapist with extensive experience working with children, young people, and adults. Discover her approach to therapy, her qualifications, and her dedication to creating a safe and supportive space for personal growth.",
+    "Book a therapy session with Andreea Horhocea, a psychodynamic psychotherapist offering services in Colchester, Chelmsford, and online.",
+  keywords: [
+    "book therapy session",
+    "psychodynamic psychotherapy",
+    "therapy in Colchester",
+    "therapy in Chelmsford",
+    "online therapy",
+    "Andreea Horhocea",
+  ],
+  authors: [{ name: "Andreea Horhocea" }],
+  openGraph: {
+    title: "Book now - Next Generation Therapy",
+    description:
+      "Book a therapy session with Andreea Horhocea, a psychodynamic psychotherapist offering services in Colchester, Chelmsford, and online.",
+    url: "http://localhost:3000/book-now",
+    images: [
+      {
+        url: "/images/book-now.jpg",
+        width: 500,
+        height: 500,
+        alt: "Therapy session illustration",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Book now - Next Generation Therapy",
+    description:
+      "Book a therapy session with Andreea Horhocea, a psychodynamic psychotherapist offering services in Colchester, Chelmsford, and online.",
+    images: ["/images/book-now.jpg"],
+  },
 };
 
 export default function BookNow() {
   return (
     <div className={styles.page}>
-      {/* Page Top Section */}
-      <div className={styles.pageTop}>
+      <header className={styles.pageTop}>
         <h1>Let the journey begin… Enquiry form</h1>
-      </div>
+      </header>
 
-      {/* Layout Section */}
-      <div className={styles.layout}>
-        {/* Left Side: Intro and Content */}
-        <div className={styles.leftSide}>
-          <div className={styles.content}>
+      <main className={styles.layout}>
+        <section className={styles.leftSide}>
+          <article className={styles.content}>
             <h2>Ready to Take the First Step?</h2>
             <p>
               If you&apos;re feeling ready to explore therapy or have questions about
@@ -32,17 +59,25 @@ export default function BookNow() {
               schedule a brief consultation and discuss how we might work
               together.
             </p>
-          </div>
+          </article>
 
-          <div className={styles.contact}>
+          <section className={styles.contact}>
             <h3>My contact details</h3>
-            <a href="mailto:andreeatherapytoday@gmail.com">
+            <a
+              href="mailto:andreeatherapytoday@gmail.com"
+              aria-label="Send an email to Andreea Therapy Today"
+            >
               Email: andreeatherapytoday@gmail.com
             </a>
-            <a href="tel:07448036017">Phone number: 07448036017</a>
-          </div>
+            <a
+              href="tel:07448036017"
+              aria-label="Call Andreea Therapy Today at 07448036017"
+            >
+              Phone number: 07448036017
+            </a>
+          </section>
 
-          <div className={styles.location}>
+          <section className={styles.location}>
             <h3>Location</h3>
             <ul>
               <li>
@@ -64,9 +99,9 @@ export default function BookNow() {
                 </a>
               </li>
             </ul>
-          </div>
+          </section>
 
-          <div className={styles.hours}>
+          <section className={styles.hours}>
             <h3>Working office hours (however more availability online)</h3>
             <ul>
               <li>Monday - Tuesday</li>
@@ -76,32 +111,30 @@ export default function BookNow() {
               <li>Saturday - Chelmsford</li>
               <li>9am - 3pm</li>
             </ul>
-          </div>
-        </div>
+          </section>
+        </section>
 
-        {/* Right Side: Image */}
-        <div className={styles.imageContainer}>
+        <aside className={styles.imageContainer}>
           <Image
-            src="/images/book-now.jpg" // Replace with your image path
+            src="/images/book-now.jpg"
             alt="Therapy session illustration"
             width={500}
             height={500}
             className={styles.image}
+            loading="lazy"
           />
-        </div>
-      </div>
+        </aside>
+      </main>
 
-      {/* Contact Form Below */}
-      <div className={styles.formContainer}>
+      <section className={styles.formContainer}>
         <ContactForm />
-      </div>
+      </section>
 
-      {/* Button Links */}
-      <div className={styles.buttonLinks}>
+      <footer className={styles.buttonLinks}>
         <Button href="/who-i-see">Who I See</Button>
         <Button href="/services">Services</Button>
         <Button href="/book-now">Book Now</Button>
-      </div>
+      </footer>
     </div>
   );
 }
