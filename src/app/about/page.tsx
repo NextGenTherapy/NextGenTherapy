@@ -69,7 +69,7 @@ export default function AboutMe() {
             <p>
               I understand the importance of finding the right therapist for
               you and how the process sometimes can be exhausting and
-              frustrating. Whether it’s your first time looking for therapy or
+              frustrating. Whether it&apos;s your first time looking for therapy or
               you have tried different places so far, I hope to make your
               journey as smooth as possible.
             </p>
