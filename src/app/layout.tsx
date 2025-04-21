@@ -40,11 +40,7 @@ export const viewport = {
   initialScale: 1,
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en-GB">
       <head>
@@ -85,4 +81,4 @@ export default function RootLayout({
       </body>
     </html>
   );
-}
+} 

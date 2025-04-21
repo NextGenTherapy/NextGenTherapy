@@ -1,39 +1,113 @@
+.menuButton {
+  display: none; /* Hidden by default */
+  background: none;
+  border: none;
+  color: var(--color-header-text);
+  font-size: var(--font-size-logo);
+  cursor: pointer;
+  z-index: 1001;
+  position: absolute; /* Keep the button fixed in its position */
+  right: var(--spacing-medium); /* Align it to the right of the nav */
+  top: 50%; /* Vertically center it within the nav */
+  transform: translateY(-50%); /* Adjust for vertical centering */
+  height: var(--header-height);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .header {
-    background-color: var(--color-header-background);
-    color: var(--color-header-text);
-    padding: var(--spacing-large);
-    min-height: 90px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  background-color: var(--color-header-background);
+  color: var(--color-header-text);
+  position: relative;
+  z-index: 1000;
 }
 
 .nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Space between logo and menu button */
+  width: 100%;
+  height: var(--header-height); /* Consistent header height */
+  background-color: var(--color-header-background);
+  padding: 0 var(--spacing-medium);
 }
 
 .logo h1 {
-    font-size: var(--font-size-logo);
-    margin: 0;
+  font-size: var(--font-size-logo);
+  margin: 0;
+  color: var(--color-header-text);
+  line-height: var(--header-height);
 }
 
 .navList {
-    display: flex;
-    gap: var(--spacing-large);
-    margin: 0;
-    padding: 0;
-    list-style: none;
+  display: none; /* Hidden by default */
+  flex-direction: column;
+  list-style: none;
+  margin: 0;
+  padding: var(--spacing-medium);
+  width: 100vw; /* Full width of the viewport */
+  background-color: var(--color-header-background);
+  color: var(--color-header-text);
+  gap: var(--spacing-medium);
+  box-sizing: border-box;
+  position: absolute; /* Overlay content */
+  top: var(--header-height); /* Position below the header */
+  left: 0; /* Align with the left edge of the viewport */
+  z-index: 999; /* Ensure it appears above other content */
+  text-align: center;
+}
+
+.navListOpen {
+  display: flex; /* Show the navigation list when menu is open */
+  flex-direction: column;
 }
 
 .navItem a {
-    font-size: var(--font-size-large);
+  text-decoration: none;
+  color: var(--color-header-text);
+  font-size: var(--font-size-large);
+  transition: color 0.3s ease;
 }
 
 .navItem a:hover {
-    text-decoration: none;
-    color: var(--color-accent);
+  color: var(--color-accent);
+}
+
+/* Show the button and hide nav items on smaller screens */
+@media (max-width: 1024px) {
+  .menuButton {
+    display: block; /* Show the hamburger menu button */
+  }
+
+  .navList {
+    display: none; /* Hide navigation items by default */
+  }
+
+  .navListOpen {
+    display: flex; /* Show navigation items when menu is open */
+  }
+}
+
+/* Inline navigation for larger screens */
+@media (min-width: 1025px) {
+  .navList {
+    display: flex; /* Always show navigation items on larger screens */
+    flex-direction: row;
+    position: static;
+    background-color: transparent;
+    width: auto;
+    padding: 0;
+    gap: var(--spacing-large);
+    margin-top: 0; /* Remove the margin-top for larger screens */
+  }
+
+  .menuButton {
+    display: none; /* Hide the hamburger menu button */
+  }
 }
 

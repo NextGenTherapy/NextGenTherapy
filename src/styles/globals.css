@@ -17,6 +17,9 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--color-background);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 
@@ -26,11 +29,7 @@ body {
   height: 100%;
 }
 
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
+
 
 a {
   color: inherit;
