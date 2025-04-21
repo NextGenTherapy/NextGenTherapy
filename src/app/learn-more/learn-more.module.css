@@ -1,88 +1,161 @@
-.page {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  min-height: 100vh;
-  box-sizing: border-box;
-}
-
+/* Top Section */
 .pageTop {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: row; /* Stack elements vertically */
+  justify-content: space-around; /* Center content vertically */
+  align-items: center; /* Center content horizontally */
   width: 100%;
   max-width: 1200px;
-  margin-top: var(--spacing-xlarge);
+  margin: 0 auto; /* Center the section horizontally */
+  text-align: center; /* Center-align text */
+  padding: var(--spacing-medium); /* Add padding for spacing */
+  gap: var(--spacing-large); /* Add consistent spacing between child elements */
+  min-height: 100vh; /* Ensure full height for the section */
+  box-sizing: border-box; /* Include padding and border in width/height */
 }
 
-.main {
-  flex: 1;
+.pageTop h1 {
+  font-size: var(--font-size-logo);
+}
+
+.pageTop .image {
+  border-radius: 15px;
+  max-width: 100%;
+  height: auto;
+  flex-shrink: 0;
+}
+
+/* Intro Section */
+.intro {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  gap: var(--spacing-xlarge);
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Center content horizontally */
   width: 100%;
   max-width: 1200px;
-}
-
-.intro {
-  width: 100%;
-  margin: var(--spacing-medium); /* Add larger gap above intro */
+  margin: 0 auto; /* Center the section horizontally */
+  text-align: center; /* Center-align text */
+  padding: var(--spacing-medium); /* Add padding for spacing */
+  gap: var(--spacing-large); /* Add spacing between child elements */
+  margin-bottom: var(--spacing-xlarge);
 }
 
 .intro h2 {
   text-align: center;
-  margin-bottom: var(--spacing-large); /* Increased space below the h2 */
+  margin-bottom: var(--spacing-large);
 }
 
 .intro .list p {
   margin-top: var(--spacing-large);
-  margin-bottom: var(--spacing-medium); /* Add spacing between paragraphs */
-  text-align: left; /* Ensure paragraphs are left-aligned */
+  margin-bottom: var(--spacing-medium);
+  text-align: center; /* Center-align text */
+  line-height: 1.6;
 }
 
+/* Outro Section */
 .outro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Center content horizontally */
   width: 100%;
-  margin: var(--spacing-large);
+  max-width: 1200px;
+  margin: 0 auto; /* Center the section horizontally */
+  text-align: center; /* Center-align text */
+  padding: var(--spacing-medium); /* Add padding for spacing */
+  gap: var(--spacing-large); /* Add spacing between child elements */
+  
 }
 
 .outro h2 {
   text-align: center;
-  margin-bottom: var(--spacing-large); /* Increased space below the h2 */
+  margin-bottom: var(--spacing-large);
 }
 
 .outro .list {
-  text-align: left; /* Ensure lists are left-aligned */
+  text-align: center; /* Center-align text */
   margin: 0;
   padding: 0;
 }
 
 .list li {
   margin-top: var(--spacing-large);
-  margin-bottom: var(--spacing-medium); /* Add spacing between list items */
-  list-style-position: inside; /* Ensure list items are properly aligned */
+  margin-bottom: var(--spacing-medium);
+  list-style-position: inside;
 }
 
 .list li::marker {
-  font-weight: bold; /* Make the list item numbers bold */
+  font-weight: bold;
 }
 
 .list li h3 {
-  font-weight: bold; /* Ensure h3 matches the bold style */
+  font-weight: bold;
+  margin-bottom: var(--spacing-small);
 }
 
+/* Button Links Section */
 .buttonLinks {
   display: flex; 
   justify-content: space-around; 
   align-items: center; 
   flex-wrap: wrap; 
   margin: var(--spacing-xlarge); 
-  
 }
 
-.image {
-  border-radius: 15px;
+/* Responsive Design */
+
+/* iPad (Tablet) Styles */
+@media (max-width: 1024px) {
+  .pageTop {
+    flex-direction: column; /* Stack elements vertically */
+    padding: var(--spacing-medium);
+    gap: var(--spacing-medium);
+  }
+
+  .pageTop h1 {
+    font-size: var(--font-size-logo); /* Adjust font size for smaller screens */
+  }
+
+  .intro {
+    padding: var(--spacing-medium);
+    gap: var(--spacing-medium); /* Reduce spacing between elements */
+  }
+
+  .outro {
+    padding: var(--spacing-medium);
+    gap: var(--spacing-medium); /* Reduce spacing between elements */
+  }
+
+  .buttonLinks {
+    flex-direction: column; /* Stack buttons vertically */
+    gap: var(--spacing-medium); /* Add consistent spacing between buttons */
+  }
+}
+
+/* Phone Styles */
+@media (max-width: 768px) {
+  .pageTop {
+    flex-direction: column; /* Stack elements vertically */
+    padding: var(--spacing-small);
+    gap: var(--spacing-small); /* Reduce spacing for smaller screens */
+  }
+
+  .pageTop h1 {
+    font-size: var(--font-size-logo); /* Adjust font size for phones */
+  }
+
+  .intro {
+    padding: var(--spacing-small);
+    gap: var(--spacing-small); /* Reduce spacing between elements */
+  }
+
+  .outro {
+    padding: var(--spacing-small);
+    gap: var(--spacing-small); /* Reduce spacing between elements */
+  }
+
+  .buttonLinks {
+    flex-direction: column; /* Stack buttons vertically */
+    gap: var(--spacing-small); /* Add smaller spacing between buttons */
+  }
 }

@@ -12,7 +12,7 @@ export default function Header() {
                     </Link>
                 </div>
 
-                {/* Nav bar links */}
+
                 <ul className={styles.navList}>
                     <li className={styles.navItem}>
                         <Link href="/">Home</Link>

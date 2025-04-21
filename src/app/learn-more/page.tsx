@@ -44,18 +44,18 @@ export const metadata: Metadata = {
 export default function LearnMore() {
   return (
     <div className={styles.page}>
-      <header className={styles.pageTop}>
-        <h1>Why Therapy?</h1>
-        <Image
-          src="/images/andreea.jpg"
-          alt="Andreea Horhocea - Psychodynamic Psychotherapist"
-          height={300}
-          width={300}
-          className={styles.image}
-        />
-      </header>
-
       <main className={styles.main}>
+        <section className={styles.pageTop}>
+          <h1>Why Therapy?</h1>
+          <Image
+            src="/images/andreea.jpg"
+            alt="Andreea Horhocea - Psychodynamic Psychotherapist"
+            height={300}
+            width={300}
+            className={styles.image}
+          />
+        </section>
+
         <section className={styles.intro}>
           <h2>Why do people seek therapy?</h2>
           <article className={styles.list}>
@@ -166,11 +166,11 @@ export default function LearnMore() {
           </ol>
         </section>
 
-        <footer className={styles.buttonLinks}>
+        <div className={styles.buttonLinks}>
           <Button href="/who-I-see">Who I See</Button>
           <Button href="/services">Services</Button>
           <Button href="/book-now">Book Now</Button>
-        </footer>
+        </div>
       </main>
     </div>
   );
