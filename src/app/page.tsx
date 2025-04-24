@@ -39,16 +39,20 @@ export default function Home() {
   return (
     <div className={styles.page}>
       <main>
-        <header className={styles.imageLogoContainer}>
+        <section className={styles.intro}>
+        <div className={styles.imageLogoContainer}>
+        </div>
+        <div className={styles.imageText}>
           <h1>Come explore a new path to healing with a safe space for growth and self-discovery!</h1>
-          <div className={styles.button}>
+          </div>
+          <div className={styles.buttonLinks}>
             <Button href="/learn-more">Learn More</Button>
             <Button href="/services">Services</Button>
             <Button href="/book-now">Book Now</Button>
           </div>
-        </header>
+        </section>
 
-        <section className={styles.introAndreea}>
+        <section className={styles.welcome}>
           <div className={styles.textContainer}>
             <div className={styles.greeting}>
               <p>Hi! I am Andreea Horhocea.</p>

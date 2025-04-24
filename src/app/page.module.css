@@ -1,35 +1,38 @@
+.intro {
+  background-color: var(--color-header-background);
+  box-sizing: border-box;
+}
 
 .imageLogoContainer {
   background-image: url("/images/logo.jpg");
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: center 120%;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
   align-items: center;
-  height: 130vh;
+  height: 100vh;
+  max-height: 130vh;
   width: 100%;
-  padding: var(--spacing-large);
 }
 
+.imageText {
+  text-align: center;
+  color: var(--color-text-secondary);
+  margin: var(--spacing-large);
+}
 
 .buttonLinks {
-  text-align: center;
-  margin-top: 250px;
-  margin-bottom: var(--spacing-large);
-  font-size: var(--font-size-medium);
-  color: var(--color-text-secondary);
+  display: flex; 
+  justify-content: space-around; 
+  align-items: center; 
+  flex-wrap: wrap; 
+  margin: var(--spacing-xlarge); 
+  padding-bottom: var(--spacing-xlarge);
 }
 
-.button {
-  display: flex;
-  justify-content: space-around;
-  margin: var(--spacing-large);
-  padding-top: var(--spacing-large);
-}
 
-.introAndreea {
+.welcome {
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -74,6 +77,15 @@
 
 
 
+/* Responsive styles for tablets (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .imageLogoContainer {
+    height: 80vh; /* Reduce height for tablets */
+    background-position: center; /* Center the background image */
+    padding: var(--spacing-medium); /* Reduce padding */
+  }
+}
+
 /* Responsive styles for tablets (max-width: 768px) */
 @media (max-width: 768px) {
   .introAndreea {
@@ -92,18 +104,24 @@
     max-width: 80%; /* Reduce image size for tablets */
   }
 
-  .button {
+  .buttonLinks {
     flex-direction: column; /* Stack buttons vertically */
     gap: var(--spacing-small); /* Adjust button spacing */
+  }
+
+  .imageLogoContainer {
+    height: 60vh; /* Further reduce height for smaller screens */
+    background-position: center; /* Center the background image */
+    padding: var(--spacing-small); /* Reduce padding */
   }
 }
 
 /* Responsive styles for mobile devices (max-width: 480px) */
 @media (max-width: 480px) {
   .imageLogoContainer {
-    height: auto; /* Adjust height for smaller screens */
+    height: auto; /* Allow height to adjust automatically */
     background-position: center; /* Center the background image */
-    padding: var(--spacing-medium); /* Reduce padding */
+    padding: var(--spacing-small); /* Reduce padding */
   }
 
   .buttonLinks {
@@ -129,7 +147,7 @@
     justify-content: center; /* Center the image */
   }
 
-  .button {
+  .buttonLinks {
     flex-direction: column; /* Stack buttons vertically */
     gap: var(--spacing-small); /* Adjust button spacing */
     align-items: center; /* Center buttons horizontally */
