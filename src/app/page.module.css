@@ -31,14 +31,13 @@
   padding-bottom: var(--spacing-xlarge);
 }
 
-
 .welcome {
   display: flex;
   justify-content: space-around;
   align-items: center;
   gap: var(--spacing-large);
-  margin-top: var(--spacing-large);
-  padding: var(--spacing-xlarge);
+  margin: var(--spacing-xlarge);
+  box-sizing: border-box;
 }
 
 .textContainer {
@@ -75,8 +74,6 @@
   height: auto;
 }
 
-
-
 /* Responsive styles for tablets (max-width: 1024px) */
 @media (max-width: 1024px) {
   .imageLogoContainer {
@@ -84,10 +81,7 @@
     background-position: center; /* Center the background image */
     padding: var(--spacing-medium); /* Reduce padding */
   }
-}
 
-/* Responsive styles for tablets (max-width: 768px) */
-@media (max-width: 768px) {
   .introAndreea {
     flex-direction: column; /* Stack content vertically */
     text-align: center;
@@ -98,59 +92,113 @@
   .textContainer {
     max-width: 100%; /* Allow full width for text */
     margin-bottom: var(--spacing-medium);
+    order: 2; /* Ensure text appears below the image */
+    padding: var(--spacing-small); /* Add padding for better spacing */
   }
 
   .imageContainer {
     max-width: 80%; /* Reduce image size for tablets */
-  }
-
-  .buttonLinks {
-    flex-direction: column; /* Stack buttons vertically */
-    gap: var(--spacing-small); /* Adjust button spacing */
-  }
-
-  .imageLogoContainer {
-    height: 60vh; /* Further reduce height for smaller screens */
-    background-position: center; /* Center the background image */
-    padding: var(--spacing-small); /* Reduce padding */
-  }
-}
-
-/* Responsive styles for mobile devices (max-width: 480px) */
-@media (max-width: 480px) {
-  .imageLogoContainer {
-    height: auto; /* Allow height to adjust automatically */
-    background-position: center; /* Center the background image */
-    padding: var(--spacing-small); /* Reduce padding */
-  }
-
-  .buttonLinks {
-    margin-top: var(--spacing-large); /* Adjust margin for smaller screens */
-    font-size: var(--font-size-small); /* Reduce font size */
-  }
-
-  .introAndreea {
-    flex-direction: column; /* Stack content vertically */
-    align-items: center; /* Center content horizontally */
-    text-align: center; /* Center text */
-    gap: var(--spacing-medium); /* Adjust spacing between elements */
-    padding: var(--spacing-medium); /* Reduce padding */
-  }
-
-  .textContainer {
-    max-width: 100%; /* Allow full width for text */
-    margin-bottom: var(--spacing-small);
-  }
-
-  .imageContainer {
-    max-width: 100%; /* Allow full width for the image */
+    order: 1; /* Ensure the image appears first */
     justify-content: center; /* Center the image */
   }
 
   .buttonLinks {
     flex-direction: column; /* Stack buttons vertically */
     gap: var(--spacing-small); /* Adjust button spacing */
-    align-items: center; /* Center buttons horizontally */
+  }
+
+  .welcome {
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center-align items */
+    gap: var(--spacing-medium); /* Adjust spacing between elements */
   }
 }
 
+/* Responsive styles for tablets (max-width: 768px) */
+@media (max-width: 768px) {
+  .introAndreea {
+    flex-direction: column;
+    text-align: center;
+    gap: var(--spacing-medium);
+    padding: var(--spacing-large);
+  }
+
+  .welcome {
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center-align items */
+    gap: var(--spacing-medium); /* Adjust spacing between elements */
+    margin: var(--spacing-large) auto; /* Center the section */
+    padding: 0 var(--spacing-medium); /* Add horizontal padding */
+  }
+
+  .textContainer {
+    max-width: 100%;
+    margin: 0 auto; /* Center the text container */
+    padding: 0 var(--spacing-medium); /* Add horizontal padding */
+    margin-bottom: var(--spacing-medium); 
+  }
+
+  .imageContainer {
+    max-width: 80%;
+  }
+
+  .buttonLinks {
+    flex-direction: column;
+    gap: var(--spacing-small);
+  }
+
+  .imageLogoContainer {
+    height: 60vh;
+    background-position: center;
+    padding: var(--spacing-small);
+  }
+}
+
+/* Responsive styles for mobile devices (max-width: 480px) */
+@media (max-width: 480px) {
+  .imageLogoContainer {
+    height: auto;
+    background-position: center;
+    padding: var(--spacing-small);
+  }
+
+  .buttonLinks {
+    margin-top: var(--spacing-large);
+    font-size: var(--font-size-small);
+  }
+
+  .introAndreea {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: var(--spacing-medium);
+    padding: var(--spacing-medium);
+  }
+
+  .welcome {
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center-align items */
+    gap: var(--spacing-small); /* Reduce spacing between elements */
+    margin: var(--spacing-medium); /* Center the section */
+    padding: 0 var(--spacing-small); /* Add smaller horizontal padding */
+  }
+
+  .textContainer {
+    max-width: 100%;
+     /* Center the text container */
+    padding: 0 var(--spacing-small); /* Add smaller horizontal padding */
+    margin-bottom: var(--spacing-small); 
+  }
+
+  .imageContainer {
+    max-width: 100%;
+    justify-content: center;
+  }
+
+  .buttonLinks {
+    flex-direction: column;
+    gap: var(--spacing-small);
+    align-items: center;
+  }
+
+}

@@ -26,7 +26,7 @@
 }
 
 /* Intro Section */
-.intro {
+.intro, .outro{
   display: flex;
   flex-direction: column;
   justify-content: center; /* Center content vertically */
@@ -35,12 +35,12 @@
   max-width: 1200px;
   margin: 0 auto; /* Center the section horizontally */
   text-align: center; /* Center-align text */
-  padding: var(--spacing-medium); /* Add padding for spacing */
+  padding: var(--spacing-large); /* Add padding for spacing */
   gap: var(--spacing-large); /* Add spacing between child elements */
-  margin-bottom: var(--spacing-xlarge);
+  box-sizing: border-box;
 }
 
-.intro h2 {
+.intro h2, .outro h2 {
   text-align: center;
   margin-bottom: var(--spacing-large);
 }
@@ -52,25 +52,6 @@
   line-height: 1.6;
 }
 
-/* Outro Section */
-.outro {
-  display: flex;
-  flex-direction: column;
-  justify-content: center; /* Center content vertically */
-  align-items: center; /* Center content horizontally */
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto; /* Center the section horizontally */
-  text-align: center; /* Center-align text */
-  padding: var(--spacing-medium); /* Add padding for spacing */
-  gap: var(--spacing-large); /* Add spacing between child elements */
-  
-}
-
-.outro h2 {
-  text-align: center;
-  margin-bottom: var(--spacing-large);
-}
 
 .outro .list {
   text-align: center; /* Center-align text */
@@ -116,15 +97,12 @@
     font-size: var(--font-size-logo); /* Adjust font size for smaller screens */
   }
 
-  .intro {
-    padding: var(--spacing-medium);
+  .intro, .outro {
+    padding: var(--spacing-large);
+    margin: var(--spacing-medium);
     gap: var(--spacing-medium); /* Reduce spacing between elements */
   }
 
-  .outro {
-    padding: var(--spacing-medium);
-    gap: var(--spacing-medium); /* Reduce spacing between elements */
-  }
 
   .buttonLinks {
     flex-direction: column; /* Stack buttons vertically */
@@ -144,14 +122,10 @@
     font-size: var(--font-size-logo); /* Adjust font size for phones */
   }
 
-  .intro {
-    padding: var(--spacing-small);
-    gap: var(--spacing-small); /* Reduce spacing between elements */
-  }
-
-  .outro {
-    padding: var(--spacing-small);
-    gap: var(--spacing-small); /* Reduce spacing between elements */
+  .intro, .outro {
+    padding: var(--spacing-large);
+    margin: var(--spacing-medium) auto;
+    gap: var(--spacing-medium); /* Reduce spacing between elements */
   }
 
   .buttonLinks {
