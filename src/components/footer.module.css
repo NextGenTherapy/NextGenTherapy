@@ -4,21 +4,27 @@
     padding: var(--spacing-large);
     width: 100%;
     margin-top: auto;
+    box-sizing: border-box; /* Include padding in the width calculation */
 }
 
 .footerContent {
     display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: var(--spacing-large);
-    max-width: 1200px;
-    margin: var(--spacing-medium) auto 0;
-    text-align: center;
+    justify-content: space-between; /* Space items evenly */
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+    gap: var(--spacing-large); /* Add spacing between items */
+    max-width: 1200px; /* Limit the width of the footer content */
+    margin: 0 auto; /* Center the content horizontally */
+    padding: 0 var(--spacing-medium); /* Add horizontal padding */
+    box-sizing: border-box; /* Include padding in the width calculation */
+    text-align: center; /* Center-align text */
 }
 
 .footerColumn {
     flex: 1;
-    min-width: 200px;
+    min-width: 200px; /* Ensure columns have a minimum width */
+    padding: var(--spacing-small); /* Add padding inside each column */
+    box-sizing: border-box; /* Include padding in the width calculation */
+    text-align: center; /* Center-align text */
 }
 
 .footerColumn h3 {
@@ -45,6 +51,11 @@ margin-bottom: var(--spacing-medium);
     color: var(--color-accent);
 }
 
+.footerColumn a span {
+    display: block; /* Ensure each line appears on a new line */
+    margin-bottom: var(--spacing-small); /* Add spacing between lines */
+}
+
 .socialLinks {
     display: flex;
     justify-content: center;
@@ -52,3 +63,33 @@ margin-bottom: var(--spacing-medium);
     margin-top: var(--spacing-large);
 }
 
+/*Media queires for smaller screens */
+@media (max-width: 1024px) {
+    .footerContent {
+        padding: var(--spacing-medium); /* Add padding around footer content */
+        gap: var(--spacing-medium); /* Ensure proper spacing between items */
+    }
+
+    .footerColumn {
+        min-width: 100%; /* Make each column take full width */
+        text-align: center; /* Center-align text */
+    }
+}
+
+@media (max-width: 768px) {
+    .footerContent {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items */
+        gap: var(--spacing-medium); /* Add spacing between stacked items */
+    }
+
+    .footerColumn {
+        min-width: 100%; /* Make each column take full width */
+        text-align: center; /* Center-align text */
+    }
+
+    .socialLinks {
+        flex-direction: row; /* Stack social links vertically */
+        gap: var(--spacing-small); /* Reduce spacing for smaller screens */
+    }
+}
