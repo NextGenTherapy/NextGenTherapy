@@ -1,15 +1,15 @@
 .menuButton {
-  display: none; /* Hidden by default */
+  display: none;
   background: none;
   border: none;
   color: var(--color-header-text);
   font-size: var(--font-size-logo);
   cursor: pointer;
   z-index: 1001;
-  position: absolute; /* Keep the button fixed in its position */
-  right: var(--spacing-medium); /* Align it to the right of the nav */
-  top: 50%; /* Vertically center it within the nav */
-  transform: translateY(-50%); /* Adjust for vertical centering */
+  position: absolute;
+  right: var(--spacing-medium);
+  top: 50%;
+  transform: translateY(-50%);
   height: var(--header-height);
   display: flex;
   align-items: center;
@@ -30,11 +30,11 @@
 .nav {
   display: flex;
   align-items: center;
-  justify-content: space-between; /* Space between logo and menu button */
+  justify-content: space-between;
   width: 100%;
-  height: var(--header-height); /* Consistent header height */
+  height: var(--header-height);
   background-color: var(--color-header-background);
-  padding: 0 var(--spacing-medium);
+  padding: 0 var(--spacing-large);
   box-sizing: border-box;
 }
 
@@ -46,25 +46,25 @@
 }
 
 .navList {
-  display: none; /* Hidden by default */
+  display: none;
   flex-direction: column;
   list-style: none;
   margin: 0;
   padding: var(--spacing-medium);
-  width: 100%; /* Full width of the viewport */
+  width: 100%;
   background-color: var(--color-header-background);
   color: var(--color-header-text);
   gap: var(--spacing-medium);
   box-sizing: border-box;
-  position: absolute; /* Overlay content */
-  top: var(--header-height); /* Position below the header */
-  left: 0; /* Align with the left edge of the viewport */
-  z-index: 999; /* Ensure it appears above other content */
+  position: absolute;
+  top: var(--header-height);
+  left: 0;
+  z-index: 999;
   text-align: center;
 }
 
 .navListOpen {
-  display: flex; /* Show the navigation list when menu is open */
+  display: flex;
   flex-direction: column;
 }
 
@@ -83,33 +83,33 @@
 /* Show the button and hide nav items on smaller screens */
 @media (max-width: 1024px) {
   .menuButton {
-    display: block; /* Show the hamburger menu button */
+    display: block;
   }
 
   .navList {
-    display: none; /* Hide navigation items by default */
+    display: none;
   }
 
   .navListOpen {
-    display: flex; /* Show navigation items when menu is open */
+    display: flex;
   }
 }
 
 /* Inline navigation for larger screens */
 @media (min-width: 1025px) {
   .navList {
-    display: flex; /* Always show navigation items on larger screens */
+    display: flex;
     flex-direction: row;
     position: static;
     background-color: transparent;
     width: auto;
     padding: 0;
     gap: var(--spacing-large);
-    margin-top: 0; /* Remove the margin-top for larger screens */
+    margin-top: 0;
   }
 
   .menuButton {
-    display: none; /* Hide the hamburger menu button */
+    display: none;
   }
 }
 
