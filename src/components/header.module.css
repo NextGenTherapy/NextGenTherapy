@@ -35,6 +35,7 @@
   height: var(--header-height); /* Consistent header height */
   background-color: var(--color-header-background);
   padding: 0 var(--spacing-medium);
+  box-sizing: border-box;
 }
 
 .logo h1 {
@@ -50,7 +51,7 @@
   list-style: none;
   margin: 0;
   padding: var(--spacing-medium);
-  width: 100vw; /* Full width of the viewport */
+  width: 100%; /* Full width of the viewport */
   background-color: var(--color-header-background);
   color: var(--color-header-text);
   gap: var(--spacing-medium);
@@ -72,6 +73,7 @@
   color: var(--color-header-text);
   font-size: var(--font-size-large);
   transition: color 0.3s ease;
+  max-width: 100%;
 }
 
 .navItem a:hover {
