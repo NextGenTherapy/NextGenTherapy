@@ -44,14 +44,26 @@ export const metadata: Metadata = {
   },
 };
 
+// Image data for the photo gallery
+const images = [
+  { src: "/images/andreea.jpg", alt: "Andreea Horhocea - Image 1" },
+  { src: "/images/andreea.jpg", alt: "Andreea Horhocea - Image 2" },
+  { src: "/images/andreea.jpg", alt: "Andreea Horhocea - Image 3" },
+  { src: "/images/andreea.jpg", alt: "Andreea Horhocea - Image 4" },
+  { src: "/images/andreea.jpg", alt: "Andreea Horhocea - Image 5" },
+  { src: "/images/andreea.jpg", alt: "Andreea Horhocea - Image 6" },
+];
+
 export default function WhoISee() {
   return (
     <div className={styles.page}>
-      <header className={styles.pageTop}>
+      {/* Page top */}
+      <div className={styles.pageTop}>
         <h1>Who Do I Work With?</h1>
-      </header>
+      </div>
 
       <main className={styles.main}>
+        {/* Intro Section */}
         <section className={styles.intro}>
           <article className={styles.list}>
             <h2>Who I Work With</h2>
@@ -74,73 +86,38 @@ export default function WhoISee() {
             <Image
               src="/images/andreea.jpg"
               alt="Andreea Horhocea - Psychodynamic Psychotherapist"
-              height={300}
+              height={400}
               width={300}
               className={styles.image}
             />
           </aside>
         </section>
 
+        {/* Photo Gallery Section */}
         <section className={styles.photoGallery}>
-          <h2>Photo Gallery</h2>
-          <div className={styles.gallery}>
+          {images.map((image, index) => (
             <Image
-              src="/images/andreea.jpg"
-              alt="Andreea Horhocea - Psychodynamic Psychotherapist"
-              height={300}
-              width={300}
+              key={index}
+              src={image.src}
+              alt={image.alt}
+              height={500}
+              width={400}
               className={styles.image}
             />
-            <Image
-              src="/images/andreea.jpg"
-              alt="Andreea Horhocea - Psychodynamic Psychotherapist"
-              height={300}
-              width={300}
-              className={styles.image}
-            />
-            <Image
-              src="/images/andreea.jpg"
-              alt="Andreea Horhocea - Psychodynamic Psychotherapist"
-              height={300}
-              width={300}
-              className={styles.image}
-            />
-            <Image
-              src="/images/andreea.jpg"
-              alt="Andreea Horhocea - Psychodynamic Psychotherapist"
-              height={300}
-              width={300}
-              className={styles.image}
-            />
-            <Image
-              src="/images/andreea.jpg"
-              alt="Andreea Horhocea - Psychodynamic Psychotherapist"
-              height={300}
-              width={300}
-              className={styles.image}
-            />
-            <Image
-              src="/images/andreea.jpg"
-              alt="Andreea Horhocea - Psychodynamic Psychotherapist"
-              height={300}
-              width={300}
-              className={styles.image}
-            />
-          </div>
+          ))}
         </section>
 
+        {/* Location Section */}
         <section className={styles.location}>
-          <h2>Location & Working Hours</h2>
-          <article className={styles.textContainer}>
-            <p>
-              This is my Google map location, so you can get to me easily and
-              as stress-free as possible.
-            </p>
+          <div className={styles.locationIntro}>
+            <h2>Location & Working Hours</h2>
+          </div>
+          <div className={styles.locationContent}>
             <div className={styles.centeredList}>
               <div>
-                <h3>Monday - Tuesday</h3>
+                <h3>Monday - Tuesday (Colchester)</h3>
                 <ul>
-                  <li>10am - 7pm</li>
+                  <li>10am - 7pm (Colchester)</li>
                 </ul>
               </div>
               <div>
@@ -150,30 +127,31 @@ export default function WhoISee() {
                 </ul>
               </div>
               <div>
-                <h3>Saturday - Chelmsford</h3>
+                <h3>Saturday (Chelmsford)</h3>
                 <ul>
                   <li>9am - 3pm</li>
                 </ul>
               </div>
             </div>
-          </article>
-          <aside className={styles.map}>
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2462.624902209368!2d0.9056014!3d51.8860592!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d905d138eb59f9%3A0xcba6bcd08ff9a10!2sAndreea%20Horhocea%20Next%20Generation%20Counselling%20%26%20Psychotherapy!5e0!3m2!1sen!2suk!4v1743611123198!5m2!1sen!2suk"
-              width="600"
-              height="450"
-              allowFullScreen={true}
-              title="Google Map Location of Andreea Horhocea Next Generation Counselling & Psychotherapy"
-              referrerPolicy="no-referrer-when-downgrade"
-            ></iframe>
-          </aside>
+            <aside className={styles.map}>
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2462.624902209368!2d0.9056014!3d51.8860592!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d905d138eb59f9%3A0xcba6bcd08ff9a10!2sAndreea%20Horhocea%20Next%20Generation%20Counselling%20%26%20Psychotherapy!5e0!3m2!1sen!2suk!4v1743611123198!5m2!1sen!2suk"
+                width="600"
+                height="450"
+                allowFullScreen={true}
+                title="Google Map Location of Andreea Horhocea Next Generation Counselling & Psychotherapy"
+                referrerPolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </aside>
+          </div>
         </section>
 
-        <footer className={styles.buttonLinks}>
+        {/* Button Links Section */}
+        <section className={styles.buttonLinks}>
           <Button href="/about">About Me</Button>
           <Button href="/services">Services</Button>
           <Button href="/book-now">Book Now</Button>
-        </footer>
+        </section>
       </main>
     </div>
   );

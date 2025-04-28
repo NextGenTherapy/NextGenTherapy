@@ -2,75 +2,120 @@
   border-radius: 15px;
 }
 
-
 .pageTop {
-  text-align: center; /* Center the header text */
-  margin-top: var(--spacing-xlarge); /* Add consistent spacing below the header */
+  text-align: center;
+  margin-top: var(--spacing-xlarge);
 }
 
 .intro {
-  display: flex; /* Arrange items in a row */
-  justify-content: space-around; /* Space items evenly */
-  align-items: flex-start; /* Align items to the top */
-  gap: var(--spacing-xlarge); /* Add consistent spacing between items */
-  margin: var(--spacing-xlarge); /* Add padding around the intro section */
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  gap: var(--spacing-xlarge);
+  margin: var(--spacing-xlarge);
 }
 
 .list {
-   /* Constrain the list to 40% of the width */
   display: flex;
-  flex-direction: column; /* Stack list items vertically */
-  gap: var(--spacing-medium); /* Add spacing between list items */
+  flex-direction: column;
+  gap: var(--spacing-medium);
+}
+
+.list li {
+  margin-bottom: var(--spacing-small);
 }
 
 .imageContainer {
-  /* Constrain the image container to 40% of the width */
   display: flex;
-  justify-content: center; /* Center the image inside the container */
-  align-items: center; /* Vertically align the image */
+  justify-content: center;
+  align-items: center;
   border-radius: 15px;
 }
 
 .imageContainer .image {
-  width: 100%; /* Ensure the image does not overflow its container */
-  height: 100%; /* Ensure the image does not stretch vertically */
-  object-fit: cover; /* Maintain the aspect ratio of the image */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .photoGallery {
-  display: grid; /* Use grid layout for the photo gallery */
-  grid-template-columns: repeat(3, 1fr); /* Create 3 columns */
-  gap: var(--spacing-xlarge); /* Add consistent spacing between images */
-  margin: var(--spacing-large) auto;
-  width: fit-content;
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
+  gap: var(--spacing-xlarge);
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.photoGallery .image {
+  object-fit: cover;
+  max-width: 500px;
+  max-height: 600px;
 }
 
 .location {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
-  gap: var(--spacing-xlarge);
+  gap: var(--spacing-large);
   margin: var(--spacing-xlarge) auto;
   max-width: 1200px;
   width: 100%;
 }
 
-.textContainer {
+.locationIntro {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: var(--spacing-medium);
+  width: 100%;
+}
+
+.locationContent {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-start;
+  width: 100%;
+  flex-wrap: wrap;
+  padding: 0 var(--spacing-large);
+  box-sizing: border-box;
+  gap: var(--spacing-large);
+}
+
+.centeredList {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
   flex: 1;
-  max-width: 50%;
-  text-align: center; /* Center-align the text */
-  margin: 0 auto; /* Center the container */
+  height: 100%;
+}
+
+.centeredList h3 {
+  margin-bottom: var(--spacing-small);
+}
+
+.centeredList ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.centeredList li {
+  margin-bottom: var(--spacing-small);
 }
 
 .map {
+  display: flex;
   flex: 1;
-  max-width: 50%;
   aspect-ratio: 16 / 9;
   overflow: hidden;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  align-items: center;
+  justify-content: center;
+  transform: none;
 }
 
 .map iframe {
@@ -80,31 +125,101 @@
 }
 
 .buttonLinks {
-  display: flex; 
-  justify-content: space-around; 
-  align-items: center; 
-  flex-wrap: wrap; 
-  margin: var(--spacing-xlarge); 
-  
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: var(--spacing-xlarge);
 }
 
-.centeredList {
-  margin-top: var(--spacing-large); /* Add spacing between the heading and the list */
+@media (max-width: 1200px) {
+  .intro {
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-medium);
+    margin: var(--spacing-large);
+  }
+  .imageContainer {
+    order: -1;
+    margin: var(--spacing-large);
+  }
+  .photoGallery .image {
+    max-height: 400px;
+    max-width: 500px;
+  }
+  .locationContent {
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-medium);
+    padding: var(--spacing-medium);
+  }
+  .map {
+    max-width: 100%;
+    margin-top: var(--spacing-medium);
+  }
+  .buttonLinks {
+    flex-direction: column;
+    gap: var(--spacing-medium);
+  }
 }
 
-.centeredList h3 {
-  margin-bottom: var(--spacing-small); /* Add spacing below each day heading */
-  font-size: 1.2rem; /* Adjust font size for the day names */
-  font-weight: bold; /* Make the day names bold */
+@media (max-width: 768px) {
+  .pageTop {
+    margin-top: var(--spacing-xlarge);
+    margin-bottom: var(--spacing-medium);
+  }
+  .intro {
+    gap: var(--spacing-small);
+    margin: var(--spacing-medium);
+  }
+  .photoGallery .image {
+    max-height: 350px;
+    max-width: 450px;
+    gap: var(--font-size-large);
+  }
+  .locationIntro {
+    font-size: var(--font-size-large);
+    margin-bottom: var(--spacing-small);
+  }
+  .locationContent {
+    gap: var(--spacing-small);
+    padding: 0 var(--spacing-small);
+  }
+  .map {
+    aspect-ratio: auto;
+    height: auto;
+  }
+  .buttonLinks {
+    gap: var(--spacing-small);
+  }
 }
 
-.centeredList ul {
-  list-style: none; /* Remove default bullet points */
-  padding: 0; /* Remove default padding */
-  margin: 0; /* Remove default margin */
-}
-
-.centeredList li {
-  margin-bottom: var(--spacing-small); /* Add spacing between list items */
-  font-size: 1rem; /* Adjust font size for consistency */
+@media (max-width: 480px) {
+  .pageTop {
+    margin-top: var(--spacing-xlarge);
+    margin-bottom: var(--spacing-medium);
+  }
+  .intro {
+    gap: var(--spacing-small);
+    margin: var(--spacing-small);
+  }
+  .photoGallery .image {
+    max-height: 250px;
+    max-width: 350px;
+    gap: var(--spacing-medium);
+  }
+  .locationIntro {
+    font-size: var(--font-size-medium);
+    margin-bottom: var(--spacing-small);
+  }
+  .locationContent {
+    gap: var(--spacing-small);
+  }
+  .map {
+    aspect-ratio: auto;
+    height: auto;
+  }
+  .buttonLinks {
+    gap: var(--spacing-small);
+  }
 }
