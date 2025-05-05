@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import styles from "./who-i-see.module.css";
+import buttonLinksStyles from "../../components/buttonLinks.module.css";
 import Button from "../../components/button";
 
 export const metadata: Metadata = {
@@ -147,7 +148,7 @@ export default function WhoISee() {
         </section>
 
         {/* Button Links Section */}
-        <section className={styles.buttonLinks}>
+        <section className={buttonLinksStyles.buttonLinks}>
           <Button href="/about">About Me</Button>
           <Button href="/services">Services</Button>
           <Button href="/book-now">Book Now</Button>

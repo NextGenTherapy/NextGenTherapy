@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import styles from "./book-now.module.css";
+import buttonLinksStyles from "../../components/buttonLinks.module.css";
 import Button from "../../components/button";
 import ContactForm from "../../components/contact-form";
 
@@ -137,7 +138,7 @@ export default function BookNow() {
         <ContactForm />
       </section>
 
-      <footer className={styles.buttonLinks}>
+      <footer className={buttonLinksStyles.buttonLinks}>
         <Button href="/who-i-see">Who I See</Button>
         <Button href="/services">Services</Button>
         <Button href="/book-now">Book Now</Button>

@@ -38,7 +38,9 @@ a {
   text-decoration: none;
 }
 
-
-
-
+button {
+  -webkit-appearance: none; /* Remove default iOS button styles */
+  appearance: none;
+  margin: 0;
+}
 

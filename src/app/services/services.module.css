@@ -1,28 +1,27 @@
+.pageTop {
+  text-align: center;
+  margin: var(--spacing-xlarge);
+}
+
 .intro {
   display: flex;
-  flex-direction: column; /* Stack heading and content vertically */
-  justify-content: flex-start;
+  flex-direction: row; /* Stack heading and content vertically */
+  justify-content: space-around;
   align-items: center;
   gap: var(--spacing-large); /* Add spacing between heading and content */
-  margin-bottom: var(--spacing-xlarge);
+  padding: 0 var(--spacing-xlarge);
   width: 100%;
   box-sizing: border-box;
-  padding: 0 var(--spacing-xlarge); /* Ensure padding doesn't affect width */
+  overflow: hidden;
+ /* Ensure padding doesn't affect width */
 }
+
+
 
 .introHeading {
   text-align: center; /* Center-align the heading */
   width: 100%; /* Ensure the heading spans the full width */
   margin: var(--spacing-xlarge);
-}
-
-.introContent {
-  display: flex;
-  flex-direction: row; /* Arrange text and image side by side */
-  justify-content: space-between;
-  align-items: center;
-  gap: var(--spacing-large); /* Add spacing between text and image */
-  width: 100%;
 }
 
 .introImage {
@@ -31,12 +30,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  max-height: 400px;
+  max-width: 400px;
 }
 
 .introImage .image {
   border-radius: 15px; /* Add rounded corners to the image */
   width: 100%;
-  height: auto;
   object-fit: cover;
 }
 
@@ -44,6 +44,9 @@
   flex: 1; /* Allow the text to take up equal space */
   max-width: 50%; /* Constrain the text width */
   text-align: left; /* Align text to the left */
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+ 
 }
 
 .introText h2 {
@@ -53,7 +56,7 @@
 }
 
 .introText ul {
-  list-style: none; /* Remove default bullet points */
+  list-style: circle; /* Remove default bullet points */
   padding: 0;
   margin: 0;
 }
@@ -64,21 +67,19 @@
   line-height: 1.6;
 }
 
-.children,
-.adults {
+.outro {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   gap: var(--spacing-large);
-  margin-bottom: var(--spacing-xlarge);
+  margin: var(--spacing-xlarge);
   width: 100%;
-  padding: 0 var(--spacing-xlarge); /* Add horizontal padding */
+/* Add horizontal padding */
   box-sizing: border-box; /* Ensure padding doesn't affect width */
 }
 
-.childrenImage,
-.adultsImage {
+.outroImage {
   flex: 1;
   max-width: 50%;
   display: flex;
@@ -86,39 +87,98 @@
   align-items: center;
 }
 
-.childrenImage .image,
-.adultsImage .image {
+.outro .image {
   border-radius: 15px; /* Add rounded corners to the image */
   width: 100%;
   height: auto;
   object-fit: cover;
 }
 
-.childrenText,
-.adultsText {
+.children, .adults{
   flex: 1;
   max-width: 50%;
   text-align: left;
 }
 
-.childrenText h2,
-.adultsText h2 {
+.outro h2 {
   font-size: var(--font-size-large); /* Use font size from variables.css */
   font-weight: bold;
   margin-bottom: var(--spacing-medium);
 }
 
-.childrenText p,
-.adultsText p {
+.outro p {
   font-size: var(--font-size-base); /* Use font size from variables.css */
   margin-bottom: var(--spacing-small);
   line-height: 1.6;
 }
 
-.buttonLinks {
-    display: flex; 
-    justify-content: space-around; 
-    align-items: center; 
-    flex-wrap: wrap; 
-    margin: var(--spacing-xlarge); 
+
+/* Media Queries */
+@media (max-width: 1024px) {
+  .intro {
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-large);
+    padding: 0 var(--spacing-medium);
+    width: 100%;
+  }
+  .outro {
+    flex-direction: column;
+    align-items: center;
+    justify-content:flex-start;
+    gap: var(--spacing-large);
+    margin: var(--spacing-medium);
+  }
+
+  .introText {
+    max-width: 95%;
+    text-align: left;
+  }
+
+  .introImage {
+    order: -1;
+  }
+
+  .children,
+  .adults {
+    max-width: 100%; /* Allow text to span full width */
+    text-align: center; /* Center-align text */
+  }
+  .outroImage {
+    max-width: 80%; /* Constrain image width */
+    align-items: center; /* Center-align image */
+  }
+}
+
+@media (max-width: 768px) {
+  .intro, .outro {
+    gap: var(--spacing-medium);
+    margin: var(--spacing-large);
+    padding: 0 var(--spacing-medium);
+  }
+
+  .introText, .outroText {
+    text-align: left;
+  }
+
+  .introImage {
+    order: -1;
+  }
+}
+
+@media (max-width: 480px) {
+  .intro, .outro {
+    gap: var(--spacing-small);
+    margin-bottom: var(--spacing-large);
+    padding: 0 var(--spacing-medium);
+  }
+
+  .introText, .outroText {
+    text-align: left;
+  }
+
+  .introImage {
+    
+    order: -1;
+  }
 }

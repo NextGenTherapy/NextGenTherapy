@@ -1,11 +1,10 @@
 .pageTop {
   text-align: center;
   margin: var(--spacing-xlarge);
-   /* Add horizontal padding */
 }
 
 .pageTop h1 {
-  font-size: var(--font-size-logo); /* Use font size from variables.css */
+  font-size: var(--font-size-logo);
   font-weight: bold;
 }
 
@@ -17,8 +16,8 @@
   gap: var(--spacing-large);
   margin-bottom: var(--spacing-xlarge);
   width: 100%;
-  padding: 0 var(--spacing-xlarge); /* Add horizontal padding */
-  box-sizing: border-box; /* Ensure padding doesn't affect width */
+  padding: 0 var(--spacing-xlarge);
+  box-sizing: border-box;
 }
 
 .introText {
@@ -28,19 +27,19 @@
 }
 
 .introText h2 {
-  font-size: var(--font-size-large); /* Use font size from variables.css */
+  font-size: var(--font-size-large);
   font-weight: bold;
   margin-bottom: var(--spacing-medium);
 }
 
 .introText h3 {
-  font-size: var(--font-size-base); /* Use font size from variables.css */
+  font-size: var(--font-size-base);
   font-weight: normal;
   margin-bottom: var(--spacing-small);
 }
 
 .introText p {
-  font-size: var(--font-size-base); /* Use font size from variables.css */
+  font-size: var(--font-size-base);
   margin-bottom: var(--spacing-small);
   line-height: 1.6;
 }
@@ -62,45 +61,88 @@
 
 .outro {
   display: flex;
-  flex-direction: column; /* Stack text and image vertically */
-  justify-content: flex-start; /* Align items to the top */
-  align-items: center; /* Center-align the content */
-  gap: var(--spacing-large); /* Add spacing between text and image */
-  margin-bottom: var(--spacing-xlarge); /* Add spacing below the outro section */
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: var(--spacing-large);
+  margin-bottom: var(--spacing-xlarge);
   width: 100%;
-  padding: 0 var(--spacing-xlarge); /* Add horizontal padding */
-  box-sizing: border-box; /* Ensure padding doesn't affect width */
+  padding: 0 var(--spacing-xlarge);
+  box-sizing: border-box;
 }
 
 .outroText {
-  max-width: 80%; /* Constrain the width of the text */
-  text-align: center; /* Center-align the text */
+  text-align: center;
 }
 
 .outroText p {
-  font-size: var(--font-size-base); /* Use font size from variables.css */
+  font-size: var(--font-size-base);
   margin-bottom: var(--spacing-medium);
   line-height: 1.6;
 }
 
 .outroImage {
-  max-width: 50%; /* Constrain the width of the image */
+  max-width: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .outroImage .image {
-  border-radius: 15px; /* Add rounded corners to the image */
+  border-radius: 15px;
   width: 100%;
   height: auto;
-  object-fit: cover; /* Maintain the aspect ratio of the image */
+  object-fit: cover;
 }
 
-.buttonLinks {
-    display: flex; 
-    justify-content: space-around; 
-    align-items: center; 
-    flex-wrap: wrap; 
-    margin: var(--spacing-xlarge); 
+/* Media Queries */
+@media (max-width: 1024px) {
+  .intro, .outro{
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-large);
+    padding: var(--spacing-medium);
+  }
+
+  .introText, .outro {
+    max-width: 100%;
+    text-align: left;
+  }
+
+  .introImage {
+    max-width: 80%;
+  }
+
+}
+
+@media (max-width: 768px) {
+  .intro, .outro {
+    gap: var(--spacing-medium);
+    padding: var(--spacing-medium);
+  }
+
+  .introText, .outroText {
+    text-align: left;
+  }
+
+  .introImage {
+    max-width: 100%;
+    order: -1;
+  }
+}
+
+@media (max-width: 480px) {
+  .intro, .outro {
+    gap: var(--spacing-small);
+    padding: var(--spacing-small);
+  }
+
+  .introText, .outroText {
+    text-align: left;
+  }
+
+  .introImage {
+    max-width: 100%;
+    order: -1;
+  }
 }

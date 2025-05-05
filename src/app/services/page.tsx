@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import styles from "./services.module.css";
+import buttonLinksStyles from "../../components/buttonLinks.module.css";
 import Button from "../../components/button";
 
 export const metadata: Metadata = {
@@ -54,8 +55,7 @@ export default function Services() {
       <main className={styles.main}>
         <section className={styles.intro}>
           <article className={styles.introText}>
-            <h2>Personalized Therapy Sessions</h2>
-            <p>I offer therapy sessions tailored to help with:</p>
+            <h2>I offer therapy sessions tailored to help with:</h2>
             <ul>
               <li>Anxiety & Overwhelm: Managing persistent worry and finding calm.</li>
               <li>Self-Esteem & Confidence: Building a stronger sense of self-worth.</li>
@@ -78,13 +78,9 @@ export default function Services() {
           </aside>
         </section>
 
-        <section className={styles.children}>
-          <article className={styles.childrenText}>
-            <h2>Play Therapy for Children</h2>
-            <p>£60 for the therapeutic hour (50 mins).</p>
-            <p>Discover the benefits in a safe space.</p>
-          </article>
-          <aside className={styles.childrenImage}>
+        <section className={styles.outro}>
+        <div className={styles.children}>
+        <aside className={styles.outroImage}>
             <Image
               src="/images/bacp.jpg"
               alt="Play therapy session for children"
@@ -93,10 +89,15 @@ export default function Services() {
               className={styles.image}
             />
           </aside>
-        </section>
+          <article className={styles.childrenText}>
+            <h2>Play Therapy for Children</h2>
+            <p>£60 for the therapeutic hour (50 mins).</p>
+            <p>Discover the benefits in a safe space.</p>
+          </article>
+        </div>
 
-        <section className={styles.adults}>
-          <aside className={styles.adultsImage}>
+        <div className={styles.adults}>
+          <aside className={styles.outroImage}>
             <Image
               src="/images/bacp.jpg"
               alt="Talking therapy session for adults"
@@ -110,14 +111,17 @@ export default function Services() {
             <p>£60 for the therapeutic hour (50 mins).</p>
             <p>Explore new perspectives and grow.</p>
           </article>
+        </div>
         </section>
 
-        <footer className={styles.buttonLinks}>
+        <section className={buttonLinksStyles.buttonLinks}>
           <Button href="/who-i-see">Who I See</Button>
           <Button href="/about">About Me</Button>
           <Button href="/book-now">Book Now</Button>
-        </footer>
+        </section>
       </main>
     </div>
   );
 }
+
+

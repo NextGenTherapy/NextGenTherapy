@@ -48,13 +48,13 @@
 .intro .list p {
   margin-top: var(--spacing-large);
   margin-bottom: var(--spacing-medium);
-  text-align: center; /* Center-align text */
+  text-align: center; 
   line-height: 1.6;
 }
 
 
 .outro .list {
-  text-align: center; /* Center-align text */
+  text-align: center; 
   margin: 0;
   padding: 0;
 }
@@ -74,39 +74,25 @@
   margin-bottom: var(--spacing-small);
 }
 
-/* Button Links Section */
-.buttonLinks {
-  display: flex; 
-  justify-content: space-around; 
-  align-items: center; 
-  flex-wrap: wrap; 
-  margin: var(--spacing-xlarge); 
-}
 
 /* Responsive Design */
 
 /* iPad (Tablet) Styles */
 @media (max-width: 1024px) {
   .pageTop {
-    flex-direction: column; /* Stack elements vertically */
+    flex-direction: column; 
     padding: var(--spacing-medium);
     gap: var(--spacing-medium);
   }
 
   .pageTop h1 {
-    font-size: var(--font-size-logo); /* Adjust font size for smaller screens */
+    font-size: var(--font-size-logo); 
   }
 
   .intro, .outro {
     padding: var(--spacing-large);
     margin: var(--spacing-medium);
-    gap: var(--spacing-medium); /* Reduce spacing between elements */
-  }
-
-
-  .buttonLinks {
-    flex-direction: column; /* Stack buttons vertically */
-    gap: var(--spacing-medium); /* Add consistent spacing between buttons */
+    gap: var(--spacing-medium); 
   }
 }
 
@@ -123,13 +109,8 @@
   }
 
   .intro, .outro {
-    padding: var(--spacing-large);
+    padding: var(--spacing-medium);
     margin: var(--spacing-medium) auto;
     gap: var(--spacing-medium); /* Reduce spacing between elements */
-  }
-
-  .buttonLinks {
-    flex-direction: column; /* Stack buttons vertically */
-    gap: var(--spacing-small); /* Add smaller spacing between buttons */
   }
 }

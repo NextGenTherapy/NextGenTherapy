@@ -7,7 +7,7 @@ export default function Footer() {
         <footer className={styles.footer}>
             <div className={styles.footerContent}>
                 <div className={styles.footerColumn}>
-                    <Link href="/contact">
+                    <Link href="/book-now">
                         <h3>Location</h3>
                     </Link>
                     <ul>
@@ -39,7 +39,7 @@ export default function Footer() {
                 </div>
 
                 <div className={styles.footerColumn}>
-                    <Link href="/contact">
+                    <Link href="/book-now">
                         <h3>Hours</h3>
                     </Link>
                     <ul className="weekday">
@@ -53,7 +53,7 @@ export default function Footer() {
                 </div>
 
                 <div className={styles.footerColumn}>
-                    <Link href="/contact">
+                    <Link href="/book-now">
                         <h3>Contact me</h3>
                     </Link>
                     <p>

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import styles from "./about.module.css";
+import buttonLinksStyles from "../../components/buttonLinks.module.css";
 import Button from "../../components/button";
 
 export const metadata: Metadata = {
@@ -53,7 +54,6 @@ export default function AboutMe() {
       <main className={styles.main}>
         <section className={styles.intro}>
           <article className={styles.introText}>
-            <h2>Andreea Horhocea</h2>
             <h3>Hi There,</h3>
             <p>I am Andreea. Lovely to meet you.</p>
             <p>
@@ -152,7 +152,7 @@ export default function AboutMe() {
           </aside>
         </section>
 
-        <footer className={styles.buttonLinks}>
+        <footer className={buttonLinksStyles.buttonLinks}>
           <Button href="/who-i-see">Who I See</Button>
           <Button href="/services">Services</Button>
           <Button href="/book-now">Book Now</Button>

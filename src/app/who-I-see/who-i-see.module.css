@@ -1,21 +1,26 @@
 .image {
   border-radius: 15px;
+  max-width: 100%;
+  height: auto;
+  min-width: 300px; /* Prevent the image from shrinking below 300px */
+  min-height: 400px; /* Prevent the image from shrinking below 400px */
 }
 
 .pageTop {
   text-align: center;
-  margin-top: var(--spacing-xlarge);
+  margin: var(--spacing-xlarge); /* Default xl spacing */
 }
 
 .intro {
   display: flex;
-  justify-content: space-around;
-  align-items: flex-start;
-  gap: var(--spacing-xlarge);
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  gap: var(--spacing-xlarge); /* Add spacing between the list and imageContainer */
   margin: var(--spacing-xlarge);
 }
 
 .list {
+  flex: 1; /* Allow the list to take up equal space */
   display: flex;
   flex-direction: column;
   gap: var(--spacing-medium);
@@ -26,10 +31,15 @@
 }
 
 .imageContainer {
+  flex: 1; /* Allow the imageContainer to take up equal space */
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: var(--spacing-xlarge) auto; /* Default xl spacing */
+  gap: var(--spacing-small);
   border-radius: 15px;
+  max-width: 300px;
+  max-height: 300px;
 }
 
 .imageContainer .image {
@@ -52,6 +62,8 @@
   object-fit: cover;
   max-width: 500px;
   max-height: 600px;
+  min-width: 300px; /* Prevent shrinking */
+  min-height: 400px; /* Prevent shrinking */
 }
 
 .location {
@@ -124,28 +136,24 @@
   border: 0;
 }
 
-.buttonLinks {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-wrap: wrap;
-  margin: var(--spacing-xlarge);
-}
 
 @media (max-width: 1200px) {
   .intro {
-    flex-direction: column;
+    flex-direction: column; /* Stack the list and imageContainer vertically */
     align-items: center;
     gap: var(--spacing-medium);
-    margin: var(--spacing-large);
+    margin: var(--spacing-xlarge);
   }
+
   .imageContainer {
     order: -1;
-    margin: var(--spacing-large);
+    margin: var(--spacing-xlarge);
   }
   .photoGallery .image {
     max-height: 400px;
     max-width: 500px;
+    min-width: 300px; /* Prevent shrinking */
+    min-height: 400px; /* Prevent shrinking */
   }
   .locationContent {
     flex-direction: column;
@@ -157,24 +165,22 @@
     max-width: 100%;
     margin-top: var(--spacing-medium);
   }
-  .buttonLinks {
-    flex-direction: column;
-    gap: var(--spacing-medium);
-  }
 }
 
 @media (max-width: 768px) {
   .pageTop {
-    margin-top: var(--spacing-xlarge);
-    margin-bottom: var(--spacing-medium);
+    margin: var(--spacing-xlarge); /* Further reduce spacing for phones */
   }
+
   .intro {
     gap: var(--spacing-small);
     margin: var(--spacing-medium);
   }
-  .photoGallery .image {
+.photoGallery .image {
     max-height: 350px;
     max-width: 450px;
+    min-width: 300px; /* Prevent shrinking */
+    min-height: 400px; /* Prevent shrinking */
     gap: var(--font-size-large);
   }
   .locationIntro {
@@ -189,23 +195,22 @@
     aspect-ratio: auto;
     height: auto;
   }
-  .buttonLinks {
-    gap: var(--spacing-small);
-  }
 }
 
 @media (max-width: 480px) {
   .pageTop {
-    margin-top: var(--spacing-xlarge);
-    margin-bottom: var(--spacing-medium);
+    margin: var(--spacing-xlarge); /* Minimal spacing for small phones */
   }
+
   .intro {
     gap: var(--spacing-small);
     margin: var(--spacing-small);
   }
-  .photoGallery .image {
+.photoGallery .image {
     max-height: 250px;
     max-width: 350px;
+    min-width: 300px; /* Prevent shrinking */
+    min-height: 400px; /* Prevent shrinking */
     gap: var(--spacing-medium);
   }
   .locationIntro {
@@ -218,8 +223,5 @@
   .map {
     aspect-ratio: auto;
     height: auto;
-  }
-  .buttonLinks {
-    gap: var(--spacing-small);
   }
 }

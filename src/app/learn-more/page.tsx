@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import styles from "./learn-more.module.css";
+import buttonLinksStyles from "../../components/buttonLinks.module.css";
 import Button from "../../components/button";
 
 // Page-specific metadata
@@ -166,7 +167,7 @@ export default function LearnMore() {
           </ol>
         </section>
 
-        <div className={styles.buttonLinks}>
+        <div className={buttonLinksStyles.buttonLinks}>
           <Button href="/who-I-see">Who I See</Button>
           <Button href="/services">Services</Button>
           <Button href="/book-now">Book Now</Button>

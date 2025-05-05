@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import styles from "./page.module.css";
 import Button from "../components/button";
+import buttonLinksStyles from "../components/buttonLinks.module.css";
 
 function getMetadata(): Metadata {
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
@@ -10,7 +11,7 @@ function getMetadata(): Metadata {
     metadataBase: new URL(siteUrl),
     title: "Welcome to Next Generation Therapy",
     description: "Discover a safe space for growth and self-discovery with Andreea Horhocea.",
-    authors: [{ name: "Andreea Horhocea" }], // Added authors metadata
+    authors: [{ name: "Andreea Horhocea" }],
     openGraph: {
       title: "Welcome to Next Generation Therapy",
       description: "Discover a safe space for growth and self-discovery with Andreea Horhocea.",
@@ -39,19 +40,22 @@ export default function Home() {
   return (
     <div className={styles.page}>
       <main>
+        {/* Intro Section */}
         <section className={styles.intro}>
-        <div className={styles.imageLogoContainer}>
-        </div>
-        <div className={styles.imageText}>
-          <h1>Come explore a new path to healing with a safe space for growth and self-discovery!</h1>
+          <div className={styles.imageLogoContainer}></div>
+          <div className={styles.imageText}>
+            <h1>
+              Come explore a new path to healing with a safe space for growth and self-discovery!
+            </h1>
           </div>
-          <div className={styles.buttonLinks}>
+          <div className={buttonLinksStyles.buttonLinks}>
             <Button href="/learn-more">Learn More</Button>
             <Button href="/services">Services</Button>
             <Button href="/book-now">Book Now</Button>
           </div>
         </section>
 
+        {/* Welcome Section */}
         <section className={styles.welcome}>
           <div className={styles.textContainer}>
             <div className={styles.greeting}>
@@ -59,7 +63,12 @@ export default function Home() {
             </div>
             <div className={styles.description}>
               <p>
-                A psychodynamic psychotherapist. I am offering 1-to-1 sessions in Colchester, Chelmsford, and online. I work with people of any age who are looking to address mental health-related challenges such as anxiety, depression, stress, eating disorders, and more. I focus on creating a safe, compassionate, and supportive environment where you can feel comfortable to achieve a meaningful and lasting change.
+                A psychodynamic psychotherapist. I am offering 1-to-1 sessions in Colchester,
+                Chelmsford, and online. I work with people of any age who are looking to address
+                mental health-related challenges such as anxiety, depression, stress, eating
+                disorders, and more. I focus on creating a safe, compassionate, and supportive
+                environment where you can feel comfortable to achieve a meaningful and lasting
+                change.
               </p>
             </div>
           </div>
