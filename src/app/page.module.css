@@ -1,3 +1,5 @@
+
+
 .intro {
   background-color: var(--color-header-background);
   box-sizing: border-box;
@@ -75,6 +77,12 @@
     height: 80vh;
     background-position: center;
     padding: var(--spacing-medium);
+  }
+
+  .buttonLinksContainer {
+    display: flex;
+    flex-direction: column; /* Switch to column layout */
+    align-items: center;
   }
 
   .introAndreea {

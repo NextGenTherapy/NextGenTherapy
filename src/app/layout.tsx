@@ -35,17 +35,11 @@ export const metadata: Metadata = {
   robots: "index, follow", 
 };
 
-export const viewport = {
-  width: "device-width",
-  initialScale: 1,
-  "maximum-scale": 1,
-  "user-scalable": "none"
-};
-
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en-GB">
       <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
         <link rel="icon" href="/favicon.ico" type="image/x-icon" />
         <link rel="canonical" href="http://localhost:3000" />
         <script
@@ -77,9 +71,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        <Header />
-        <main>{children}</main>
-        <Footer />
+        <div className="layout-container">
+          <Header />
+          <div className="page">{children}</div>
+          <Footer />
+        </div>
       </body>
     </html>
   );
