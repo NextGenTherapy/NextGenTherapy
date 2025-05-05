@@ -113,3 +113,21 @@
   }
 }
 
+@media (max-width: 480px) {
+  .nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Ensure space between logo and menu button */
+    padding: 0 var(--spacing-small); /* Adjust padding for smaller screens */
+  }
+
+  .logo {
+    margin-right: auto; /* Push the logo to the far left */
+  }
+
+  .menuButton { /* Remove absolute positioning */
+    margin-left: auto; /* Push the menu button to the far right */
+    right: var(--spacing-small); /* Add spacing around the button */
+    padding: 0;
+  }
+}

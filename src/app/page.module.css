@@ -16,6 +16,10 @@
   width: 100%;
 }
 
+.buttonLinksContainer {
+    padding: var(--spacing-xlarge); /* Add space below the button links */
+}
+
 .imageText {
   text-align: center;
   color: var(--color-text-secondary);
@@ -66,7 +70,7 @@
   height: auto;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1030px) {
   .imageLogoContainer {
     height: 80vh;
     background-position: center;
@@ -105,6 +109,16 @@
 }
 
 @media (max-width: 768px) {
+  .buttonLinksContainer {
+    padding: var(--spacing-large); /* Add space below the button links */
+}
+
+.imageLogoContainer {
+  height: 40vh;
+  background-position: center ;
+  padding: var(--spacing-medium);
+}  
+
   .introAndreea {
     flex-direction: column;
     text-align: center;
@@ -131,26 +145,19 @@
     max-width: 80%;
     gap: var(--spacing-small); /* Further reduce gap for phones */
     margin: 0 auto; /* Center the image container */
-  }
-
-
-  .imageLogoContainer {
-    height: 60vh;
-    background-position: center;
-    padding: var(--spacing-small);
-  }
-
-  
+  }  
 }
 
 @media (max-width: 480px) {
   .imageLogoContainer {
-    height: auto;
-    background-position: center;
-    padding: var(--spacing-small);
+    height: 35vh;
+    max-width: 95%;
+    
   }
 
-
+   .intro {
+    padding: 0;
+   }
   .introAndreea {
     flex-direction: column;
     align-items: center;

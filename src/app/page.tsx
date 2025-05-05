@@ -48,7 +48,7 @@ export default function Home() {
               Come explore a new path to healing with a safe space for growth and self-discovery!
             </h1>
           </div>
-          <div className={buttonLinksStyles.buttonLinks}>
+          <div className={`${buttonLinksStyles.buttonLinks} ${styles.buttonLinksContainer}`}>
             <Button href="/learn-more">Learn More</Button>
             <Button href="/services">Services</Button>
             <Button href="/book-now">Book Now</Button>
