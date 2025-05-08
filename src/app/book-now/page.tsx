@@ -45,13 +45,13 @@ export const metadata: Metadata = {
 export default function BookNow() {
   return (
     <div className={styles.page}>
-      <header className={styles.pageTop}>
+     <main className={styles.main}> 
+      <section className={styles.greeting}>
         <h1>Let the Journey Begin… Enquiry Form</h1>
-      </header>
+      </section>
 
-      <main className={styles.layout}>
-        <section className={styles.leftSide}>
-          <article className={styles.content}>
+          <section className={styles.contentTop}>
+          <article>
             <h2>Ready to Take the First Step?</h2>
             <p>
               If you&apos;re feeling ready to explore therapy or have questions about
@@ -61,8 +61,20 @@ export default function BookNow() {
               together.
             </p>
           </article>
+          <aside className={styles.topImageContainer}>
+          <Image
+            src="/images/andreea.jpg"
+            alt="Therapy session illustration"
+            width={300}
+            height={300}
+            className={styles.image}
+            loading="lazy"
+          />
+        </aside>
+          </section>
 
-          <section className={styles.contact}>
+          <section className={styles.contentMiddle}>
+            <div className={styles.contact}>
             <h3>My Contact Details</h3>
             <ul>
               <li>
@@ -82,67 +94,42 @@ export default function BookNow() {
                 </a>
               </li>
             </ul>
-          </section>
-
-          <section className={styles.location}>
-            <h3>Location</h3>
-            <ul>
-              <li>
-                <a
-                  href="https://www.google.com/maps?q=Colchester+Business+Centre,+1+George+Williams+Way,+Colchester+CO1+2JS"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="View Colchester Business Centre on Google Maps"
-                >
-                  Colchester Business Centre, 1 George Williams Way, Colchester CO1 2JS
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://www.google.com/maps?q=The+Henry+Centre,+Rochester+House,+145+New+London+Rd,+Chelmsford+CM2+0QT"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="View The Henry Centre on Google Maps"
-                >
-                  The Henry Centre, Rochester House, 145 New London Rd, Chelmsford CM2 0QT
-                </a>
-              </li>
-            </ul>
-          </section>
-
-          <section className={styles.hours}>
-            <h3>Working Office Hours</h3>
-            <p>(More availability online)</p>
+            </div>
+             
+             <div className={styles.location}>
+             <h3>Location</h3>
+             <ul>
+               <li>
+                 <a href="https://www.google.com/maps?q=Colchester+Business+Centre,+1+George+Williams+Way,+Colchester+CO1+2JS"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="View Colchester Business Centre on Google Maps"
+                  >
+                    Colchester Business Centre, 1 George Williams Way, Colchester CO1 2JS
+                  </a>
+               </li>
+             </ul>
+             </div>
+            <div className={styles.hours}>
+            <h3>Working Office Hours (More availability online)</h3>
             <ul>
               <li>Monday - Tuesday: 10am - 7pm</li>
               <li>Friday: 9am - 2pm</li>
-              <li>Saturday (Chelmsford): 9am - 3pm</li>
             </ul>
-          </section>
+            </div>
         </section>
 
-        <aside className={styles.imageContainer}>
-          <Image
-            src="/images/book-now.jpg"
-            alt="Therapy session illustration"
-            width={500}
-            height={500}
-            className={styles.image}
-            loading="lazy"
-          />
-        </aside>
-      </main>
-
-      <section className={styles.formContainer}>
+      <section className={styles.contentEnd}>
         <h2>Contact Form</h2>
         <ContactForm />
       </section>
 
-      <footer className={buttonLinksStyles.buttonLinks}>
+      <section className={buttonLinksStyles.buttonLinks}>
         <Button href="/who-i-see">Who I See</Button>
         <Button href="/services">Services</Button>
         <Button href="/book-now">Book Now</Button>
-      </footer>
+      </section>
+    </main>
     </div>
   );
 }

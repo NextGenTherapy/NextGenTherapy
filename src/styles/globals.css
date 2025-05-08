@@ -52,6 +52,10 @@ a {
   text-decoration: none;
 }
 
+a:hover {
+  color: var(--color-accent);
+}
+
 button {
   -webkit-appearance: none; /* Remove default iOS button styles */
   appearance: none;
