@@ -59,13 +59,14 @@ export default function WhoISee() {
   return (
     <div className={styles.page}>
       {/* Page top */}
-      <div className={styles.pageTop}>
+      <main>
+        <div className={styles.greeting}>
         <h1>Who Do I Work With?</h1>
       </div>
 
-      <main className={styles.main}>
+      
         {/* Intro Section */}
-        <section className={styles.intro}>
+        <section className={styles.contentTop}>
           <article className={styles.list}>
             <h2>Who I Work With</h2>
             <ul>
@@ -109,30 +110,22 @@ export default function WhoISee() {
         </section>
 
         {/* Location Section */}
-        <section className={styles.location}>
           <div className={styles.locationIntro}>
-            <h2>Location & Working Hours</h2>
+            <h2>Location & Working Hours for Colchester and online sessions.</h2>
           </div>
+          <section className={styles.contentEnd}>
           <div className={styles.locationContent}>
             <div className={styles.centeredList}>
               <div>
-                <h3>Monday - Tuesday (Colchester)</h3>
+                <h3>Monday - Tuesday</h3>
                 <ul>
-                  <li>10am - 7pm (Colchester)</li>
+                  <li>10am - 7pm</li>
                 </ul>
-              </div>
-              <div>
                 <h3>Friday</h3>
                 <ul>
                   <li>9am - 2pm</li>
                 </ul>
-              </div>
-              <div>
-                <h3>Saturday (Chelmsford)</h3>
-                <ul>
-                  <li>9am - 3pm</li>
-                </ul>
-              </div>
+            </div>
             </div>
             <aside className={styles.map}>
               <iframe

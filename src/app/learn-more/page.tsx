@@ -168,7 +168,7 @@ export default function LearnMore() {
         </section>
 
         <div className={buttonLinksStyles.buttonLinks}>
-          <Button href="/who-I-see">Who I See</Button>
+          <Button href="/who-i-see">Who I See</Button>
           <Button href="/services">Services</Button>
           <Button href="/book-now">Book Now</Button>
         </div>

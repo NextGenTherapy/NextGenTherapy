@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import styles from "./page.module.css";
 import Button from "../components/button";
-import buttonLinksStyles from "../components/buttonLinks.module.css";
 
 function getMetadata(): Metadata {
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
@@ -40,28 +39,37 @@ export default function Home() {
   return (
     <div className={styles.page}>
       <main>
-        {/* Intro Section */}
-        <section className={styles.intro}>
+        {/* ContentTop Section */}
+        <section className={styles.contentTop}>
           <div className={styles.imageLogoContainer}></div>
           <div className={styles.imageText}>
             <h1>
               Come explore a new path to healing with a safe space for growth and self-discovery!
             </h1>
           </div>
-          <div className={`${buttonLinksStyles.buttonLinks} ${styles.buttonLinksContainer}`}>
+          <div className={styles.buttonLinksContainer}>
             <Button href="/learn-more">Learn More</Button>
             <Button href="/services">Services</Button>
             <Button href="/book-now">Book Now</Button>
           </div>
         </section>
 
-        {/* Welcome Section */}
-        <section className={styles.welcome}>
+        {/* ContentEnd Section */}
+        
+             <div className={styles.greeting}>
+             <h2>Hi! I am Andreea Horhocea.</h2>
+          </div>
+          <section className={styles.contentEnd}>
+            <div className={styles.imageContainer}>
+            <Image
+              src="/images/andreea.jpg"
+              alt="Andreea Horhocea - Psychodynamic Psychotherapist"
+              height={400}
+              width={300}
+              className={styles.image}
+            />
+          </div>
           <div className={styles.textContainer}>
-            <div className={styles.greeting}>
-              <p>Hi! I am Andreea Horhocea.</p>
-            </div>
-            <div className={styles.description}>
               <p>
                 A psychodynamic psychotherapist. I am offering 1-to-1 sessions in Colchester,
                 Chelmsford, and online. I work with people of any age who are looking to address
@@ -71,16 +79,6 @@ export default function Home() {
                 change.
               </p>
             </div>
-          </div>
-          <div className={styles.imageContainer}>
-            <Image
-              src="/images/andreea.jpg"
-              alt="Andreea Horhocea - Psychodynamic Psychotherapist"
-              height={400}
-              width={300}
-              className={styles.image}
-            />
-          </div>
         </section>
       </main>
     </div>

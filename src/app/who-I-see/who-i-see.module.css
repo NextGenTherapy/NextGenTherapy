@@ -1,45 +1,32 @@
-.image {
-  border-radius: 15px;
-  max-width: 100%;
-  height: auto;
-  min-width: 300px; /* Prevent the image from shrinking below 300px */
-  min-height: 400px; /* Prevent the image from shrinking below 400px */
-}
-
-.pageTop {
+.greeting {
+  font-size: var(--font-size-large);
+  font-weight: bold;
   text-align: center;
-  margin: var(--spacing-xlarge); /* Default xl spacing */
-}
-
-.intro {
-  display: flex;
-  justify-content: center; /* Center content horizontally */
-  align-items: center; /* Center content vertically */
-  gap: var(--spacing-xlarge); /* Add spacing between the list and imageContainer */
   margin: var(--spacing-xlarge);
 }
 
+
+.contentTop {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  align-items: center;
+}
+
 .list {
-  flex: 1; /* Allow the list to take up equal space */
+  gap: var(--spacing-medium);
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-medium);
 }
 
 .list li {
-  margin-bottom: var(--spacing-small);
+  margin-bottom: var(--spacing-medium);
+  list-style: circle;
 }
 
 .imageContainer {
-  flex: 1; /* Allow the imageContainer to take up equal space */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: var(--spacing-xlarge) auto; /* Default xl spacing */
-  gap: var(--spacing-small);
   border-radius: 15px;
-  max-width: 300px;
-  max-height: 300px;
 }
 
 .imageContainer .image {
@@ -47,40 +34,41 @@
   height: 100%;
   object-fit: cover;
 }
-
+.image {
+  border-radius: 15px;
+}
 .photoGallery {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: var(--spacing-xlarge);
-  margin: 0 auto;
+  flex-wrap: wrap; /* Allow wrapping of images */
+  justify-content: center; /* Center images horizontally */
+  gap: var(--spacing-medium); /* Add spacing between images */
+  margin: var(--spacing-xlarge) auto;
   width: 100%;
-  max-width: 1200px;
+  max-width: 1200px; /* Limit the gallery width */
 }
 
 .photoGallery .image {
   object-fit: cover;
-  max-width: 500px;
-  max-height: 600px;
-  min-width: 300px; /* Prevent shrinking */
-  min-height: 400px; /* Prevent shrinking */
+  width: calc(33.33% - var(--spacing-medium)); /* Default: 3 images per row */
+  max-width: 400px; /* Limit maximum width */
+  aspect-ratio: 4 / 3; /* Maintain aspect ratio */
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.location {
+.contentEnd {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: var(--spacing-large);
-  margin: var(--spacing-xlarge) auto;
-  max-width: 1200px;
-  width: 100%;
+  justify-content: space-around;
+  margin: var(--spacing-xlarge);
 }
+
 
 .locationIntro {
   text-align: center;
   font-weight: bold;
-  margin-bottom: var(--spacing-medium);
-  width: 100%;
+  margin-bottom: var(--spacing-large);
 }
 
 .locationContent {
@@ -90,9 +78,6 @@
   align-items: flex-start;
   width: 100%;
   flex-wrap: wrap;
-  padding: 0 var(--spacing-large);
-  box-sizing: border-box;
-  gap: var(--spacing-large);
 }
 
 .centeredList {
@@ -137,89 +122,82 @@
 }
 
 
+/* Adjustments for screens smaller than 1200px */
 @media (max-width: 1200px) {
-  .intro {
-    flex-direction: column; /* Stack the list and imageContainer vertically */
-    align-items: center;
-    gap: var(--spacing-medium);
-    margin: var(--spacing-xlarge);
+  .greeting {
+    margin: var(--spacing-large);
   }
 
-  .imageContainer {
-    order: -1;
-    margin: var(--spacing-xlarge);
+  .contentTop,
+  .contentEnd {
+    gap: var(--spacing-large);
+    margin: var(--spacing-large);
   }
+
   .photoGallery .image {
     max-height: 400px;
     max-width: 500px;
-    min-width: 300px; /* Prevent shrinking */
-    min-height: 400px; /* Prevent shrinking */
+    min-width: 300px;
+    min-height: 400px;
+    margin: var(--spacing-large);
   }
-  .locationContent {
-    flex-direction: column;
-    align-items: center;
-    gap: var(--spacing-medium);
-    padding: var(--spacing-medium);
-  }
+
   .map {
     max-width: 100%;
     margin-top: var(--spacing-medium);
   }
 }
 
+/* Adjustments for screens smaller than 768px */
 @media (max-width: 768px) {
-  .pageTop {
-    margin: var(--spacing-xlarge); /* Further reduce spacing for phones */
-  }
-
-  .intro {
-    gap: var(--spacing-small);
+  .contentTop,
+  .contentEnd {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-medium);
     margin: var(--spacing-medium);
   }
-.photoGallery .image {
-    max-height: 350px;
-    max-width: 450px;
-    min-width: 300px; /* Prevent shrinking */
-    min-height: 400px; /* Prevent shrinking */
-    gap: var(--font-size-large);
+
+  .imageContainer {
+    order: -1; /* Move image to the top */
   }
-  .locationIntro {
-    font-size: var(--font-size-large);
-    margin-bottom: var(--spacing-small);
+ 
+.photoGallery {
+  margin: var(--spacing-medium);
+}
+
+  .photoGallery .image {
+    width: calc(50% - var(--spacing-medium)); /* 2 images per row */
   }
+
   .locationContent {
+    flex-direction: column;
+    align-items: center;
     gap: var(--spacing-small);
-    padding: 0 var(--spacing-small);
   }
+
   .map {
     aspect-ratio: auto;
     height: auto;
   }
 }
 
+/* Adjustments for screens smaller than 480px */
 @media (max-width: 480px) {
-  .pageTop {
-    margin: var(--spacing-xlarge); /* Minimal spacing for small phones */
+  .photoGallery .image {
+    width: 100%; /* Stack images vertically */
   }
 
-  .intro {
-    gap: var(--spacing-small);
-    margin: var(--spacing-small);
-  }
-.photoGallery .image {
-    max-height: 250px;
-    max-width: 350px;
-    min-width: 300px; /* Prevent shrinking */
-    min-height: 400px; /* Prevent shrinking */
-    gap: var(--spacing-medium);
-  }
   .locationIntro {
     font-size: var(--font-size-medium);
     margin-bottom: var(--spacing-small);
   }
+
   .locationContent {
     gap: var(--spacing-small);
   }
+
   .map {
     aspect-ratio: auto;
     height: auto;
