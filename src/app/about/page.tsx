@@ -47,13 +47,21 @@ export const metadata: Metadata = {
 export default function AboutMe() {
   return (
     <div className={styles.page}>
-      <header className={styles.pageTop}>
-        <h1>About Me</h1>
-      </header>
-
       <main className={styles.main}>
-        <section className={styles.intro}>
-          <article className={styles.introText}>
+        <div className={styles.greeting}>
+        <h1>About Me</h1>
+        </div>
+        <section className={styles.contentTop}>
+           <aside className={styles.topImageContainer}>
+            <Image
+              src="/images/andreea.jpg"
+              alt="Andreea Horhocea - Psychodynamic Psychotherapist"
+              height={300}
+              width={300}
+              className={styles.image}
+            />
+          </aside>
+          <article className={styles.topTextContainer}>
             <h3>Hi There,</h3>
             <p>I am Andreea. Lovely to meet you.</p>
             <p>
@@ -88,19 +96,10 @@ export default function AboutMe() {
               crisis but a valuable resource regardless of the stage of life.
             </p>
           </article>
-          <aside className={styles.introImage}>
-            <Image
-              src="/images/andreea.jpg"
-              alt="Andreea Horhocea - Psychodynamic Psychotherapist"
-              height={300}
-              width={300}
-              className={styles.image}
-            />
-          </aside>
         </section>
 
-        <section className={styles.outro}>
-          <article className={styles.outroText}>
+        <section className={styles.contentEnd}>
+          <article className={styles.endTextContainer}>
             <p>
               After working under multiple organisations for the last few
               years, I realised that there is a greater need for support. I
@@ -141,7 +140,7 @@ export default function AboutMe() {
               better fit for you.
             </p>
           </article>
-          <aside className={styles.outroImage}>
+          <aside className={styles.endImageContainer}>
             <Image
               src="/images/bacp.jpg"
               alt="BACP Logo - British Association of Counselling and Psychotherapy"
@@ -152,11 +151,11 @@ export default function AboutMe() {
           </aside>
         </section>
 
-        <footer className={buttonLinksStyles.buttonLinks}>
+        <section className={buttonLinksStyles.buttonLinks}>
           <Button href="/who-i-see">Who I See</Button>
           <Button href="/services">Services</Button>
           <Button href="/book-now">Book Now</Button>
-        </footer>
+        </section>
       </main>
     </div>
   );

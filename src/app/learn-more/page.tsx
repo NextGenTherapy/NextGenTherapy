@@ -171,11 +171,11 @@ export default function LearnMore() {
           </ol>
         </section>
 
-        <div className={buttonLinksStyles.buttonLinks}>
+        <section className={buttonLinksStyles.buttonLinks}>
           <Button href="/who-i-see">Who I See</Button>
           <Button href="/services">Services</Button>
           <Button href="/book-now">Book Now</Button>
-        </div>
+        </section>
       </main>
     </div>
   );

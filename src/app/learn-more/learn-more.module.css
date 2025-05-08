@@ -4,8 +4,8 @@
   font-weight: bold;
   text-align: center;
   margin: var(--spacing-large);
-  
 }
+
 .contentTop {
   box-sizing: border-box;
   display: flex;
@@ -34,7 +34,7 @@
  
 }
 
-/* Intro Section */
+
 .contentMiddle, .contentEnd{
   display: flex;
   flex-direction: column;
