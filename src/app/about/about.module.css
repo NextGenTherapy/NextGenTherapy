@@ -21,12 +21,11 @@
   max-width: 100%;
 }
 
-.bottomTextContainer, .topTextContainer {
+.endTextContainer, .topTextContainer {
  text-align: left;
- 
 }
 
-.topImageContainer, .bottomImageContainer {
+.topImageContainer, .endImageContainer {
   display: flex;
   justify-content: center;
   align-items: center;

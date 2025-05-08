@@ -1,184 +1,100 @@
-.pageTop {
+.greeting {
+  font-size: var(--font-size-large);
+  font-weight: bold;
   text-align: center;
   margin: var(--spacing-xlarge);
 }
 
-.intro {
-  display: flex;
-  flex-direction: row; /* Stack heading and content vertically */
-  justify-content: space-around;
-  align-items: center;
-  gap: var(--spacing-large); /* Add spacing between heading and content */
-  padding: 0 var(--spacing-xlarge);
-  width: 100%;
+
+.contentTop {
   box-sizing: border-box;
-  overflow: hidden;
- /* Ensure padding doesn't affect width */
-}
-
-
-
-.introHeading {
-  text-align: center; /* Center-align the heading */
-  width: 100%; /* Ensure the heading spans the full width */
-  margin: var(--spacing-xlarge);
-}
-
-.introImage {
-  flex: 1; /* Allow the image to take up equal space */
-  max-width: 50%; /* Constrain the image width */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  max-height: 400px;
-  max-width: 400px;
-}
-
-.introImage .image {
-  border-radius: 15px; /* Add rounded corners to the image */
-  width: 100%;
-  object-fit: cover;
-}
-
-.introText {
-  flex: 1; /* Allow the text to take up equal space */
-  max-width: 50%; /* Constrain the text width */
-  text-align: left; /* Align text to the left */
-  word-wrap: break-word;
-  overflow-wrap: break-word;
- 
-}
-
-.introText h2 {
-  font-size: var(--font-size-large); /* Use font size from variables.css */
-  font-weight: bold;
-  margin-bottom: var(--spacing-medium);
-}
-
-.introText ul {
-  list-style: circle; /* Remove default bullet points */
-  padding: 0;
-  margin: 0;
-}
-
-.introText li {
-  font-size: var(--font-size-base); /* Use font size from variables.css */
-  margin-bottom: var(--spacing-small);
-  line-height: 1.6;
-}
-
-.outro {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  gap: var(--spacing-large);
   margin: var(--spacing-xlarge);
-  width: 100%;
-/* Add horizontal padding */
-  box-sizing: border-box; /* Ensure padding doesn't affect width */
+}
+ 
+.topTextContainer li {
+  list-style: circle;
+ margin-bottom: var(--spacing-medium);
+ }
+
+ .topTextContainer h2 {
+  text-align: center;
+ }
+
+.contentEnd {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin: var(--spacing-xlarge);
+  gap: var(--spacing-large);
 }
 
-.outroImage {
-  flex: 1;
-  max-width: 50%;
+.image {
+  border-radius: 15px;
+  max-width: 100%;
+}
+
+ .topTextContainer, .childTextContainer, .adultTextContainer  {
+  text-align: left;
+  width: 100%
+ }
+
+
+ .topImageContainer, .endImageContainer {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.outro .image {
-  border-radius: 15px; /* Add rounded corners to the image */
   width: 100%;
-  height: auto;
+  height: 100%;
   object-fit: cover;
 }
 
-.children, .adults{
-  flex: 1;
-  max-width: 50%;
-  text-align: left;
-}
 
-.outro h2 {
-  font-size: var(--font-size-large); /* Use font size from variables.css */
-  font-weight: bold;
-  margin-bottom: var(--spacing-medium);
-}
+/* Responsive Design */
 
-.outro p {
-  font-size: var(--font-size-base); /* Use font size from variables.css */
-  margin-bottom: var(--spacing-small);
-  line-height: 1.6;
-}
-
-
-/* Media Queries */
+/* iPad (Tablet) Styles */
 @media (max-width: 1024px) {
-  .intro {
-    flex-direction: column;
-    align-items: center;
+  .greeting {
+    margin: var(--spacing-large);
+  }
+
+  .contentTop, .contentEnd {
     gap: var(--spacing-large);
-    padding: 0 var(--spacing-medium);
-    width: 100%;
-  }
-  .outro {
-    flex-direction: column;
-    align-items: center;
-    justify-content:flex-start;
-    gap: var(--spacing-large);
-    margin: var(--spacing-medium);
-  }
-
-  .introText {
-    max-width: 95%;
-    text-align: left;
-  }
-
-  .introImage {
-    order: -1;
-  }
-
-  .children,
-  .adults {
-    max-width: 100%; /* Allow text to span full width */
-    text-align: center; /* Center-align text */
-  }
-  .outroImage {
-    max-width: 80%; /* Constrain image width */
-    align-items: center; /* Center-align image */
+    margin: var(--spacing-large);
   }
 }
 
 @media (max-width: 768px) {
-  .intro, .outro {
+  .greeting {
+    margin: var(--spacing-medium);
+  }
+ .contentTop, .contentEnd {
+     flex-direction: column;
     gap: var(--spacing-medium);
-    margin: var(--spacing-large);
-    padding: 0 var(--spacing-medium);
+    margin: var(--spacing-medium);
   }
 
-  .introText, .outroText {
-    text-align: left;
-  }
-
-  .introImage {
+  .topImageContainer {
     order: -1;
+  }
+
+  .contentEnd {
+    margin-top: var(--spacing-xlarge);
+  }
+  .adultTextContainer, .childTextContainer {
+    text-align: center;
   }
 }
 
-@media (max-width: 480px) {
-  .intro, .outro {
-    gap: var(--spacing-small);
-    margin-bottom: var(--spacing-large);
-    padding: 0 var(--spacing-medium);
-  }
 
-  .introText, .outroText {
-    text-align: left;
-  }
 
-  .introImage {
-    
-    order: -1;
-  }
-}
+
+
+
+
+

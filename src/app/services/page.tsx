@@ -48,13 +48,13 @@ export const metadata: Metadata = {
 export default function Services() {
   return (
     <div className={styles.page}>
-      <header className={styles.pageTop}>
-        <h1>Services Provided</h1>
-      </header>
-
       <main className={styles.main}>
-        <section className={styles.intro}>
-          <article className={styles.introText}>
+        <div className={styles.greeting}>
+        <h1>Services Provided</h1>
+      </div>
+
+        <section className={styles.contentTop}>
+          <article className={styles.topTextContainer}>
             <h2>I offer therapy sessions tailored to help with:</h2>
             <ul>
               <li>Anxiety & Overwhelm: Managing persistent worry and finding calm.</li>
@@ -62,12 +62,10 @@ export default function Services() {
               <li>Body Image & Eating Concerns: Developing a healthier relationship with food and your body.</li>
               <li>Relationship Patterns: Understanding and improving interpersonal dynamics.</li>
               <li>Teenagers: Supporting them through the complexities of becoming who they want to be.</li>
+              <li>Sessions are available in-person in Colchester or online, providing flexibility to suit your lifestyle.</li>
             </ul>
-            <p>
-              Sessions are available in-person in Colchester or online, providing flexibility to suit your lifestyle.
-            </p>
           </article>
-          <aside className={styles.introImage}>
+          <aside className={styles.topImageContainer}>
             <Image
               src="/images/bacp.jpg"
               alt="Andreea Horhocea - Psychodynamic Psychotherapist"
@@ -78,9 +76,9 @@ export default function Services() {
           </aside>
         </section>
 
-        <section className={styles.outro}>
-        <div className={styles.children}>
-        <aside className={styles.outroImage}>
+        <section className={styles.contentEnd}>
+        <div className={styles.childrenSection}>
+        <aside className={styles.endImageContainer}>
             <Image
               src="/images/bacp.jpg"
               alt="Play therapy session for children"
@@ -89,15 +87,15 @@ export default function Services() {
               className={styles.image}
             />
           </aside>
-          <article className={styles.childrenText}>
+          <article className={styles.childTextContainer}>
             <h2>Play Therapy for Children</h2>
             <p>£60 for the therapeutic hour (50 mins).</p>
             <p>Discover the benefits in a safe space.</p>
           </article>
         </div>
 
-        <div className={styles.adults}>
-          <aside className={styles.outroImage}>
+        <div className={styles.adultsSection}>
+          <aside className={styles.endImageContainer}>
             <Image
               src="/images/bacp.jpg"
               alt="Talking therapy session for adults"
@@ -106,7 +104,7 @@ export default function Services() {
               className={styles.image}
             />
           </aside>
-          <article className={styles.adultsText}>
+          <article className={styles.adultTextContainer}>
             <h2>Talking Therapy Online or In-Person</h2>
             <p>£60 for the therapeutic hour (50 mins).</p>
             <p>Explore new perspectives and grow.</p>
