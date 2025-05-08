@@ -46,8 +46,11 @@ export default function LearnMore() {
   return (
     <div className={styles.page}>
       <main className={styles.main}>
-        <section className={styles.pageTop}>
+        <section className={styles.contentTop}>
+          <div className={styles.greeting}>
           <h1>Why Therapy?</h1>
+          </div>
+          <aside className={styles.imageContainer}>
           <Image
             src="/images/andreea.jpg"
             alt="Andreea Horhocea - Psychodynamic Psychotherapist"
@@ -55,9 +58,10 @@ export default function LearnMore() {
             width={300}
             className={styles.image}
           />
+          </aside>
         </section>
 
-        <section className={styles.intro}>
+        <section className={styles.contentMiddle}>
           <h2>Why do people seek therapy?</h2>
           <article className={styles.list}>
             <p>
@@ -80,7 +84,7 @@ export default function LearnMore() {
           </article>
         </section>
 
-        <section className={styles.outro}>
+        <section className={styles.contentEnd}>
           <h2>How can therapy help?</h2>
           <ol className={styles.list}>
             <li>

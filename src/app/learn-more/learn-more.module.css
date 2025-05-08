@@ -1,68 +1,59 @@
 /* Top Section */
-.pageTop {
+.greeting {
+  font-size: var(--font-size-large);
+  font-weight: bold;
+  text-align: center;
+  margin: var(--spacing-large);
+  
+}
+.contentTop {
+  box-sizing: border-box;
   display: flex;
-  flex-direction: row; /* Stack elements vertically */
-  justify-content: space-around; /* Center content vertically */
-  align-items: center; /* Center content horizontally */
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto; /* Center the section horizontally */
-  text-align: center; /* Center-align text */
-  padding: var(--spacing-medium); /* Add padding for spacing */
-  gap: var(--spacing-large); /* Add consistent spacing between child elements */
-  min-height: 100vh; /* Ensure full height for the section */
-  box-sizing: border-box; /* Include padding and border in width/height */
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: var(--spacing-xlarge);
+  gap: var(--spacing-large);
 }
 
-.pageTop h1 {
-  font-size: var(--font-size-logo);
-}
-
-.pageTop .image {
+.image {
   border-radius: 15px;
-  max-width: 100%;
-  height: auto;
-  flex-shrink: 0;
+}
+
+.greeting, .imageContainer {
+  flex: 1; /* Allow both items to take up equal space */
+  max-width: 50%; /* Ensure each item takes up half the row */
+  text-align: center; /* Center-align text inside the greeting */
+  box-sizing: border-box; /* Include padding and borders in width calculation */
+}
+
+.imageContainer {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+ 
 }
 
 /* Intro Section */
-.intro, .outro{
+.contentMiddle, .contentEnd{
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Center content vertically */
-  align-items: center; /* Center content horizontally */
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto; /* Center the section horizontally */
-  text-align: center; /* Center-align text */
-  padding: var(--spacing-large); /* Add padding for spacing */
-  gap: var(--spacing-large); /* Add spacing between child elements */
-  box-sizing: border-box;
+  align-items: center;
+  justify-content: space-around;
+  margin: var(--spacing-xlarge);
+  gap: var(--spacing-medium);
 }
 
-.intro h2, .outro h2 {
+.contentMiddle h2, .contentEnd h2 {
   text-align: center;
   margin-bottom: var(--spacing-large);
 }
 
-.intro .list p {
-  margin-top: var(--spacing-large);
-  margin-bottom: var(--spacing-medium);
-  text-align: center; 
-  line-height: 1.6;
-}
-
-
-.outro .list {
-  text-align: center; 
-  margin: 0;
-  padding: 0;
-}
 
 .list li {
   margin-top: var(--spacing-large);
   margin-bottom: var(--spacing-medium);
-  list-style-position: inside;
+  list-style: circle;
 }
 
 .list li::marker {
@@ -79,38 +70,31 @@
 
 /* iPad (Tablet) Styles */
 @media (max-width: 1024px) {
-  .pageTop {
-    flex-direction: column; 
-    padding: var(--spacing-medium);
-    gap: var(--spacing-medium);
+  .greeting {
+    margin: var(--spacing-large);
   }
 
-  .pageTop h1 {
-    font-size: var(--font-size-logo); 
-  }
-
-  .intro, .outro {
-    padding: var(--spacing-large);
-    margin: var(--spacing-medium);
-    gap: var(--spacing-medium); 
+  .contentTop, .contentMiddle, 
+  .contentEnd {
+    gap: var(--spacing-large);
+    margin: var(--spacing-large);
   }
 }
 
 /* Phone Styles */
 @media (max-width: 768px) {
-  .pageTop {
-    flex-direction: column; /* Stack elements vertically */
-    padding: var(--spacing-small);
-    gap: var(--spacing-small); /* Reduce spacing for smaller screens */
+  .contentTop, .contentMiddle, 
+  .contentEnd {
+    gap: var(--spacing-medium);
+    margin: var(--spacing-medium);
   }
 
-  .pageTop h1 {
-    font-size: var(--font-size-logo); /* Adjust font size for phones */
+  .contentTop {
+    flex-direction: column;
+  }
+ 
+  .greeting {
+    margin: var(--spacing-medium);
   }
 
-  .intro, .outro {
-    padding: var(--spacing-medium);
-    margin: var(--spacing-medium) auto;
-    gap: var(--spacing-medium); /* Reduce spacing between elements */
-  }
 }

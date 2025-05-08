@@ -59,7 +59,7 @@ export default function WhoISee() {
   return (
     <div className={styles.page}>
       {/* Page top */}
-      <main>
+      <main className={styles.main}>
         <div className={styles.greeting}>
         <h1>Who Do I Work With?</h1>
       </div>

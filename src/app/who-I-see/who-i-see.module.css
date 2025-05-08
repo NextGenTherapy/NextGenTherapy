@@ -1,8 +1,8 @@
 .greeting {
-  font-size: var(--font-size-large);
+  font-size: var(--font-size-medium);
   font-weight: bold;
   text-align: center;
-  margin: var(--spacing-xlarge);
+  margin-top: var(--spacing-xlarge);
 }
 
 
@@ -12,6 +12,7 @@
   justify-content: space-around;
   flex-direction: row;
   align-items: center;
+  margin-top: var(--spacing-xlarge);
 }
 
 .list {
@@ -25,9 +26,6 @@
   list-style: circle;
 }
 
-.imageContainer {
-  border-radius: 15px;
-}
 
 .imageContainer .image {
   width: 100%;
@@ -37,6 +35,7 @@
 .image {
   border-radius: 15px;
 }
+
 .photoGallery {
   display: flex;
   flex-wrap: wrap; /* Allow wrapping of images */
