@@ -1,2 +1,2 @@
-export const siteUrl = "http://localhost:3000";
+export const siteUrl = "https://next-gen-therapy.vercel.app";
 export const generateRobotsTxt = true;

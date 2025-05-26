@@ -20,15 +20,8 @@
    - Use an image optimizer (e.g., [Squoosh](https://squoosh.app/)) to reduce file size.
    - Ensure images are no larger than needed for their display size.
 
-4. **Use `placeholder="blur"` for gallery images if possible**
-   - In your gallery `<Image />` components, add `placeholder="blur"` and provide a `blurDataURL` or let Next.js generate it.
-
----
 
 ## [Accessibility]
-
-5. **Test color contrast and adjust if needed**
-   - Use tools like [WebAIM Contrast Checker](https://webaim.org/resources/contrastchecker/) to verify text/background contrast.
 
 6. **Add a skip-to-content link**
    - Add an anchor link at the top of your layout:
@@ -89,5 +82,7 @@
     - Add a `manifest.json` in `/public/` and link it in your layout’s `<head>`.
 
 ---
+
+16. **fix submit on contact form**
 
 **Work through each step, commit your changes, and redeploy to Vercel. Your site will be production-ready and follow best practices!**
