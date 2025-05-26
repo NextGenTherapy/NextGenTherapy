@@ -21,10 +21,10 @@
 }
 
 .greeting, .imageContainer {
-  flex: 1; /* Allow both items to take up equal space */
-  max-width: 50%; /* Ensure each item takes up half the row */
-  text-align: center; /* Center-align text inside the greeting */
-  box-sizing: border-box; /* Include padding and borders in width calculation */
+  flex: 1; 
+  max-width: 50%; 
+  text-align: center; 
+  box-sizing: border-box; 
 }
 
 .imageContainer {

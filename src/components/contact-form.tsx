@@ -10,16 +10,13 @@ export default function ContactForm() {
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    // Simulate form submission
     try {
-      // Place your actual form submission logic here (e.g., API call)
       setStatus("success");
     } catch {
       setStatus("error");
     }
   };
 
-  // Auto-grow textarea as user types
   const handleMessageInput = () => {
     const textarea = messageRef.current;
     if (textarea) {

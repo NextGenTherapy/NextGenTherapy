@@ -1,10 +1,10 @@
 :root {
-    --color-primary: #ffffff; /* Primary color (e.g., blue) */
-    --color-secondary: #2ecc71; /* Secondary color (e.g., green) */
-    --color-background: #fefae0;/* Background color (e.g., light gray) */
-    --color-text: #000000; /* Default text color */
+    --color-primary: #ffffff; 
+    --color-secondary: #2ecc71; 
+    --color-background: #fefae0;
+    --color-text: #000000; 
     --color-text-secondary: #ffffff;
-    --color-accent: #dbbfa4; /* Accent color (e.g., red) */
+    --color-accent: #dbbfa4; 
     --color-accent-hover: #dc8f70;
 
     /* header and footer colors*/

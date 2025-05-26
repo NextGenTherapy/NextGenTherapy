@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import "../styles/globals.css";
 import "../styles/variables.css";
-import { geistSans, geistMono } from "../styles/fonts"; 
 import Header from "../components/header";
 import Footer from "../components/footer";
 
@@ -70,7 +69,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           }}
         />
       </head>
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+      <body>
         <div className="layout-container">
           <Header />
           <div className="page">{children}</div>
@@ -79,4 +78,4 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </body>
     </html>
   );
-} 
+}

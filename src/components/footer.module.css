@@ -4,27 +4,27 @@
     padding: var(--spacing-large);
     width: 100%;
     margin-top: auto;
-    box-sizing: border-box; /* Include padding in the width calculation */
+    box-sizing: border-box; 
 }
 
 .footerContent {
     display: flex;
-    justify-content: space-between; /* Space items evenly */
-    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
-    gap: var(--spacing-large); /* Add spacing between items */
-    max-width: 1200px; /* Limit the width of the footer content */
-    margin: 0 auto; /* Center the content horizontally */
-    padding: 0 var(--spacing-medium); /* Add horizontal padding */
-    box-sizing: border-box; /* Include padding in the width calculation */
-    text-align: center; /* Center-align text */
+    justify-content: space-between; 
+    flex-wrap: wrap; 
+    gap: var(--spacing-large); 
+    max-width: 1200px; 
+    margin: 0 auto; 
+    padding: 0 var(--spacing-medium); 
+    box-sizing: border-box; 
+    text-align: center; 
 }
 
 .footerColumn {
     flex: 1;
-    min-width: 200px; /* Ensure columns have a minimum width */
-    padding: var(--spacing-small); /* Add padding inside each column */
-    box-sizing: border-box; /* Include padding in the width calculation */
-    text-align: center; /* Center-align text */
+    min-width: 200px; 
+    padding: var(--spacing-small);
+    box-sizing: border-box; 
+    text-align: center; 
 }
 
 .footerColumn h3 {
@@ -43,7 +43,7 @@ margin-bottom: var(--spacing-medium);
 }
 
 .footerColumn a {
-    color: var(--color-hf-text); /* Default footer text color */
+    color: var(--color-hf-text); 
     text-decoration: none;
 }
 
@@ -52,8 +52,8 @@ margin-bottom: var(--spacing-medium);
 }
 
 .footerColumn a span {
-    display: block; /* Ensure each line appears on a new line */
-    margin-bottom: var(--spacing-small); /* Add spacing between lines */
+    display: block; 
+    margin-bottom: var(--spacing-small); 
 }
 
 .socialLinks {
@@ -66,30 +66,30 @@ margin-bottom: var(--spacing-medium);
 /*Media queires for smaller screens */
 @media (max-width: 1024px) {
     .footerContent {
-        padding: var(--spacing-medium); /* Add padding around footer content */
-        gap: var(--spacing-medium); /* Ensure proper spacing between items */
+        padding: var(--spacing-medium); 
+        gap: var(--spacing-medium); 
     }
 
     .footerColumn {
-        min-width: 100%; /* Make each column take full width */
-        text-align: center; /* Center-align text */
+        min-width: 100%; 
+        text-align: center; 
     }
 }
 
 @media (max-width: 768px) {
     .footerContent {
-        flex-direction: column; /* Stack items vertically */
-        align-items: center; /* Center items */
-        gap: var(--spacing-medium); /* Add spacing between stacked items */
+        flex-direction: column; 
+        align-items: center; 
+        gap: var(--spacing-medium); 
     }
 
     .footerColumn {
-        min-width: 100%; /* Make each column take full width */
-        text-align: center; /* Center-align text */
+        min-width: 100%; 
+        text-align: center; 
     }
 
     .socialLinks {
-        flex-direction: row; /* Stack social links vertically */
-        gap: var(--spacing-small); /* Reduce spacing for smaller screens */
+        flex-direction: row; 
+        gap: var(--spacing-small); 
     }
 }

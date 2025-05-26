@@ -1,5 +1,5 @@
 .button {
-    display: inline-block; /* Ensure the button is displayed */
+    display: inline-block; 
     padding: 10px 20px;
     font-size: var(--font-size-medium);
     font-weight: bold;

@@ -59,11 +59,11 @@ export default function LearnMore() {
             className={styles.image}
           />
           </aside>
-        </section>
+        </section> 
 
         <section className={styles.contentMiddle}>
           <h2>Why do people seek therapy?</h2>
-          <article className={styles.list}>
+          <article>
             <p>
               Therapy can help when you&#39;re feeling anxious, overwhelmed, or
               struggling to manage emotions. It provides support for navigating

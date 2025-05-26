@@ -124,17 +124,17 @@
   .nav {
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Ensure space between logo and menu button */
-    padding: 0 var(--spacing-small); /* Adjust padding for smaller screens */
+    justify-content: space-between; 
+    padding: 0 var(--spacing-small); 
   }
 
   .logo {
-    margin-right: auto; /* Push the logo to the far left */
+    margin-right: auto; 
   }
 
-  .menuButton { /* Remove absolute positioning */
-    margin-left: auto; /* Push the menu button to the far right */
-    right: var(--spacing-small); /* Add spacing around the button */
+  .menuButton { 
+    margin-left: auto; 
+    right: var(--spacing-small); 
     padding: 0;
   }
 }

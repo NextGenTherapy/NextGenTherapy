@@ -1,5 +1,4 @@
 .greeting {
-  font-size: var(--font-size-medium);
   font-weight: bold;
   text-align: center;
   margin-top: var(--spacing-xlarge);
@@ -38,19 +37,19 @@
 
 .photoGallery {
   display: flex;
-  flex-wrap: wrap; /* Allow wrapping of images */
-  justify-content: center; /* Center images horizontally */
-  gap: var(--spacing-medium); /* Add spacing between images */
+  flex-wrap: wrap; 
+  justify-content: center; 
+  gap: var(--spacing-medium); 
   margin: var(--spacing-xlarge) auto;
   width: 100%;
-  max-width: 1200px; /* Limit the gallery width */
+  max-width: 1200px; 
 }
 
 .photoGallery .image {
   object-fit: cover;
-  width: calc(33.33% - var(--spacing-medium)); /* Default: 3 images per row */
-  max-width: 400px; /* Limit maximum width */
-  aspect-ratio: 4 / 3; /* Maintain aspect ratio */
+  width: calc(33.33% - var(--spacing-medium));
+  max-width: 400px; 
+  aspect-ratio: 4 / 3; 
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
@@ -159,7 +158,7 @@
   }
 
   .imageContainer {
-    order: -1; /* Move image to the top */
+    order: -1; 
   }
  
 .photoGallery {
@@ -167,7 +166,7 @@
 }
 
   .photoGallery .image {
-    width: calc(50% - var(--spacing-medium)); /* 2 images per row */
+    width: calc(50% - var(--spacing-medium));
   }
 
   .locationContent {
@@ -185,7 +184,7 @@
 /* Adjustments for screens smaller than 480px */
 @media (max-width: 480px) {
   .photoGallery .image {
-    width: 100%; /* Stack images vertically */
+    width: 100%; 
   }
 
   .locationIntro {

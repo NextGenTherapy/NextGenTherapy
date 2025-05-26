@@ -1,35 +1,35 @@
 /* Default Styling for buttonLinks */
   .buttonLinks {
     display: flex;
-    justify-content: space-around; /* Space buttons evenly */
-    align-items: center; /* Center buttons vertically */
-    flex-wrap: wrap; /* Allow buttons to wrap if needed */
-    gap: var(--spacing-medium); /* Add spacing between buttons */
-    margin: var(--spacing-large) auto; /* Center the button container */
-    width: 100%; /* Ensure the container spans the full width */
-    box-sizing: border-box; /* Include padding in width calculation */
+    justify-content: space-around;
+    align-items: center; 
+    flex-wrap: wrap; 
+    gap: var(--spacing-medium);
+    margin: var(--spacing-large) auto;
+    width: 100%; 
+    box-sizing: border-box; 
   }
   
   /* Media Query for Tablets (max-width: 768px) */
   @media (max-width: 768px) {
     .buttonLinks {
-      flex-direction: column; /* Stack buttons vertically */
-      justify-content: center; /* Center buttons vertically */
-      align-items: center; /* Center buttons horizontally */
-      gap: var(--spacing-medium); /* Maintain spacing between buttons */
-      margin: var(--spacing-large) auto; /* Center the button container */
-      width: 100%; /* Ensure the container spans the full width */
+      flex-direction: column; 
+      justify-content: center; 
+      align-items: center; 
+      gap: var(--spacing-medium); 
+      margin: var(--spacing-large) auto; 
+      width: 100%; 
     }
   }
   
   /* Media Query for Small Screens (max-width: 480px) */
   @media (max-width: 480px) {
     .buttonLinks {
-      flex-direction: column; /* Stack buttons vertically */
-      justify-content: center; /* Center buttons vertically */
-      align-items: center; /* Center buttons horizontally */
-      gap: var(--spacing-small); /* Reduce spacing between buttons */
-      margin: var(--spacing-medium) auto; /* Center the button container */
-      width: 100%; /* Ensure the container spans the full width */
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; 
+      gap: var(--spacing-small); 
+      margin: var(--spacing-medium) auto; 
+      width: 100%; 
     }
   }

@@ -2,9 +2,9 @@ import Link from "next/link";
 import styles from "./button.module.css";
 
 interface ButtonProps {
-  href?: string; // Optional: If provided, the button acts as a link
-  type?: "button" | "submit" | "reset"; // For form buttons
-  children: React.ReactNode; // Button content
+  href?: string; // 
+  type?: "button" | "submit" | "reset";
+  children: React.ReactNode;
 }
 
 export default function Button({ href, type = "button", children }: ButtonProps) {
@@ -16,12 +16,10 @@ export default function Button({ href, type = "button", children }: ButtonProps)
       subject
     )}&body=${encodeURIComponent(body)}`;
 
-    // Redirect to the mailto link
     window.location.href = mailtoLink;
   };
 
   if (href) {
-    // Render a link-styled button if `href` is provided
     return (
       <Link href={href} className={styles.button}>
         {children}

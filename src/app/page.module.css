@@ -1,5 +1,3 @@
-/* General Styles */
-
 /* Content Top Styles */
 .contentTop {
   /* Background color for the top section */
@@ -12,51 +10,46 @@
 }
 
 .imageLogoContainer {
-  /* Background image settings for the logo container */
   background-image: url("/images/logo.jpg");
-  background-size: contain; /* Ensure the image fits within the container */
+  background-size: contain;
   background-repeat: no-repeat;
-  background-position: center 115%; /* Position the image */
+  background-position: center 115%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100vh; /* Full viewport height */
+  height: 100vh;
   width: 100%;
-  transition: all 0.3s ease-in-out; /* Smooth transitions for changes */
+  transition: all 0.3s ease-in-out;
 }
 
 .imageText {
-  /* Styling for text inside the image logo container */
   text-align: center;
   color: var(--color-text-secondary);
   margin: var(--spacing-large);
 }
 
 .buttonLinksContainer {
-  /* Styling for the button links container */
   padding: var(--spacing-xlarge);
   display: flex;
-  flex-direction: row; /* Default layout: row */
-  justify-content: center; /* Center buttons horizontally */
-  align-items: center; /* Center buttons vertically */
-  gap: var(--spacing-xlarge); /* Add spacing between buttons */
+  flex-direction: row;
+  justify-content: center; 
+  align-items: center; 
+  gap: var(--spacing-xlarge); 
 }
 
 /* Content End Styles */
 .contentEnd {
-  /* Layout for the content end section */
   display: flex;
   justify-content: space-around;
   align-items: center;
-  flex-wrap: wrap; /* Allow wrapping for smaller screens */
-  gap: var(--spacing-large); /* Spacing between child elements */
+  flex-wrap: wrap; 
+  gap: var(--spacing-large);
   margin: var(--spacing-xlarge);
   box-sizing: border-box;
-  flex-direction: row; /* Default layout: row */
+  flex-direction: row; 
 }
 
 .greeting {
-  /* Styling for the greeting text */
   font-size: var(--font-size-large);
   font-weight: bold;
   text-align: center;
@@ -64,19 +57,16 @@
 }
 
 .textContainer {
-  /* Styling for the text container */
   flex: 1;
-  max-width: 50%; /* Default max width */
+  max-width: 50%; 
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-small); /* Spacing between child elements */
-  font-size: var(--font-size-medium);
+  gap: var(--spacing-small); 
 }
 
 .imageContainer {
-  /* Styling for the image container */
   flex: 1;
-  max-width: 50%; /* Default max width */
+  max-width: 50%; 
   display: flex;
   justify-content: center;
   align-items: center;
@@ -84,7 +74,6 @@
 }
 
 .image {
-  /* Styling for the image inside the container */
   border-radius: 15px;
   max-width: 100%;
   height: auto;
@@ -95,71 +84,71 @@
 /* Adjustments for screens smaller than 1030px */
 @media (max-width: 1030px) {
   .imageLogoContainer {
-    height: 68vh; /* Reduce height */
-    background-position: center; /* Center the background image */
+    height: 68vh;
+    background-position: center;
     padding: var(--spacing-large);
   }
 
   .buttonLinksContainer {
-    flex-direction: column; /* Stack buttons vertically */
+    flex-direction: column; 
     align-items: center;
     justify-content: center;
-    gap: var(--spacing-large); /* Adjust spacing */
+    gap: var(--spacing-large);
   }
 
   .greeting {
-    margin: var(--spacing-large); /* Adjust margin */
+    margin: var(--spacing-large);
   }
 
   .contentEnd {
-    gap: var(--spacing-large); /* Adjust spacing between elements */
-    margin: var(--spacing-large); /* Adjust margin */
+    gap: var(--spacing-large); 
+    margin: var(--spacing-large);
   }
 
   .textContainer {
-    max-width: 100%; /* Expand text container to full width */
+    max-width: 100%; 
   }
 }
 
 /* Adjustments for screens smaller than 768px */
 @media (max-width: 768px) {
   .imageLogoContainer {
-    height: 40vh; /* Further reduce height */
+    height: 40vh; 
     padding: var(--spacing-large);
   }
 
   .buttonLinksContainer {
-    gap: var(--spacing-medium); /* Adjust spacing */
+    gap: var(--spacing-medium); 
   }
 
   .greeting {
-    text-align: center; /* Center-align text */
-    margin: var(--spacing-large); /* Adjust margin */
+    text-align: center; 
+    margin: var(--spacing-large); 
   }
 
   .contentEnd {
-    gap: var(--spacing-medium); /* Adjust spacing between elements */
-    margin: var(--spacing-medium); /* Adjust margin */
+    gap: var(--spacing-medium); 
+    margin: var(--spacing-medium); 
     display: flex;
-    flex-direction: column; /* Stack elements vertically */
+    flex-direction: column;
     align-items: center;
   }
 
   .imageContainer {
-    max-width: 80%; /* Adjust max width */
+    max-width: 80%;
   }
 }
 
 /* Adjustments for screens smaller than 480px */
 @media (max-width: 480px) {
   .imageLogoContainer {
-    height: 35vh; /* Further reduce height */
-    max-width: 95%; /* Adjust max width */
+    height: 35vh; 
+    max-width: 95%; 
     padding: var(--spacing-large);
   }
   .buttonLinksContainer {
     display: flex;
-    flex-direction: column; /* Stack buttons vertically */
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: var(--spacing-medium);
@@ -171,18 +160,18 @@
 /* Adjustments for screens smaller than 470px */
 @media (max-width: 470px) {
   .imageLogoContainer {
-    height: 30vh; /* Further reduce height */
+    height: 30vh; 
   }
 }
 
 /* Adjustments for screens smaller than 360px */
 @media (max-width: 360px) {
   .imageLogoContainer {
-    display: none; /* Hide the image logo container */
+    display: none; 
   }
 
   .ContentTop {
-    background-color: var(--color-header-background); /* Fill the gap with background color */
+    background-color: var(--color-header-background);
     display: flex;
     justify-content: center;
     flex-direction: column;

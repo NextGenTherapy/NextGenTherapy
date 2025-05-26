@@ -23,18 +23,6 @@ export default function Footer() {
                                 <span>CO1 2JS</span>
                             </a>
                         </li>
-                        <li>
-                            <a
-                                href="https://www.google.com/maps?q=The+Henry+Centre,+Rochester+House,+145+New+London+Rd,+Chelmsford+CM2+0QT"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                <span>The Henry Centre, Rochester House,</span>
-                                <span>145 New London Rd,</span>
-                                <span>Chelmsford</span>
-                                <span>CM2 0QT</span>
-                            </a>
-                        </li>
                     </ul>
                 </div>
 
@@ -47,8 +35,6 @@ export default function Footer() {
                         <li>10am - 7pm</li>
                         <li>Friday</li>
                         <li>9am-2pm</li>
-                        <li>Saturday - Chelmsford</li>
-                        <li>9am - 3pm</li>
                     </ul>
                 </div>
 

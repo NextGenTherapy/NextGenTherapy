@@ -49,11 +49,11 @@ export default function AboutMe() {
   return (
     <div className={styles.page}>
       <main className={styles.main}>
+        <section className={styles.contentTop}>
         <div className={styles.greeting}>
         <h1>About Me</h1>
         </div>
-        <section className={styles.contentTop}>
-           <aside className={styles.topVideoContainer}>
+           <aside className={styles.imageContainer}>
             <Image
               src="/images/andreea.jpg"
               alt="Andreea Horhocea - Psychodynamic Psychotherapist"
@@ -61,9 +61,15 @@ export default function AboutMe() {
               width={300}
               className={styles.image}
             />
-          </aside>
-          <article className={styles.topTextContainer}>
-            <h3>Hi There,</h3>
+          </aside> 
+          </section>
+          
+          <section>
+            <article className={styles.textContainer}>
+            <div>
+            <h3>Hi There</h3>
+            </div>
+            <div>
             <p>I am Andreea. Lovely to meet you.</p>
             <p>
               I am a psychodynamic psychotherapist. I graduated a Masters in
@@ -73,6 +79,9 @@ export default function AboutMe() {
               many settings. I have experience within primary and secondary
               schools, charity sector as well as the NHS.
             </p>
+            </div>
+             
+            <div>
             <p>
               I understand the importance of finding the right therapist for
               you and how the process sometimes can be exhausting and
@@ -87,6 +96,9 @@ export default function AboutMe() {
               of British Association of Counselling and Psychotherapy (BACP)
               and I adhere by their framework.
             </p>
+            </div>
+            
+            <div>
             <p>
               I started my practice to offer you a space where you can
               comfortably and confidently explore your story. I believe that
@@ -96,11 +108,6 @@ export default function AboutMe() {
               Contrary to popular belief, therapy is not just for times of
               crisis but a valuable resource regardless of the stage of life.
             </p>
-          </article>
-        </section>
-
-        <section className={styles.contentEnd}>
-          <article className={styles.endTextContainer}>
             <p>
               After working under multiple organisations for the last few
               years, I realised that there is a greater need for support. I
@@ -108,6 +115,9 @@ export default function AboutMe() {
               more and more aware of the complexities of mental health and the
               impact it has on their daily lives.
             </p>
+            </div>
+            
+            <div>
             <p>
               I believe that once the struggle is identified it&rsquo;s important to
               be able to access support as quickly as possible and I aim to
@@ -140,6 +150,7 @@ export default function AboutMe() {
               therapeutic match, I am happy to help you in the search for a
               better fit for you.
             </p>
+            </div>
           </article>
         </section>
 
