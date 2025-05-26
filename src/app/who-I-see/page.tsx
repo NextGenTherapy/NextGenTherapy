@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     title: "Who I See - Next Generation Therapy",
     description:
       "Discover who Andreea Horhocea works with, including children, adults, and individuals facing anxiety, depression, trauma, and more. Learn about her therapy approach and locations.",
-    url: "http://localhost:3000/who-I-see",
+    url: "http://localhost:3000/who-i-see",
     images: [
       {
         url: "/images/andreea.jpg",
