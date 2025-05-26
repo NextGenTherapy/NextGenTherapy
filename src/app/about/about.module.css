@@ -80,6 +80,13 @@
     flex-direction: column;
   }
 
+  .imageContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+  }
  
   .greeting {
     margin: var(--spacing-medium);
