@@ -4,6 +4,7 @@ import "../styles/variables.css";
 import Header from "../components/header";
 import Footer from "../components/footer";
 import { Analytics } from "@vercel/analytics/next"
+import {  GoogleAnalytics } from '@next/third-parties/google'
 
 export const metadata: Metadata = {
   metadataBase: new URL("http://localhost:3000"), // Base URL for resolving relative URLs
@@ -39,6 +40,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en-GB">
       <head>
+        
       <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
         <link rel="icon" href="/favicon.ico" type="image/x-icon" />
         <link rel="canonical" href="http://localhost:3000" />
@@ -79,6 +81,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <Footer />
         </div>
       </body>
+      <GoogleAnalytics gaId="G-3528EDPEXW" />
     </html>
   );
 }
