@@ -162,7 +162,12 @@
   }
  
 .photoGallery {
-  margin: var(--spacing-medium);
+    margin: var(--spacing-medium);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
 }
 
   .photoGallery .image {

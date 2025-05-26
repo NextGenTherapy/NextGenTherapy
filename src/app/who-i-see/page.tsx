@@ -105,6 +105,8 @@ export default function WhoISee() {
               height={500}
               width={400}
               className={styles.image}
+              loading="lazy"
+              priority={index === 0}
             />
           ))}
         </section>
