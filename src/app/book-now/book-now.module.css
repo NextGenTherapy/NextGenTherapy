@@ -76,6 +76,7 @@
     justify-content: center; /* Center content horizontally */
     align-items: center
   }
+
 }
 
 @media (max-width: 768px) {
@@ -85,5 +86,9 @@
  .contentTop, .contentEnd, .contentMiddle {
     gap: var(--spacing-medium);
     margin: var(--spacing-medium);
+  }
+
+  .contentEnd {
+    padding-bottom: var(--spacing-large);
   }
 }

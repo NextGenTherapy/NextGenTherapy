@@ -1,0 +1,103 @@
+/* Contact Form Container */
+.contactForm {
+  max-width: 900px;
+  width: 600px;
+  margin: 0 auto;
+  padding: var(--spacing-large);
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.07);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-large);
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-small);
+  margin-bottom: var(--spacing-medium);
+}
+
+/* Label styling */
+.contactForm label {
+  font-weight: 600;
+}
+
+/* Input styling */
+.contactForm input {
+  width: 100%;
+  padding: var(--spacing-small);
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: var(--font-size-base);
+  box-sizing: border-box;
+  transition: border-color 0.2s, min-height 0.2s;
+  min-height: 40px;
+  resize: none;
+}
+
+.contactForm input:focus {
+  border-color: var(--color-accent, #dbbfa4);
+  outline: none;
+}
+
+/* Auto-grow textarea styling */
+.textareaAutoGrow {
+  min-height: 120px;
+  max-height: 400px;
+  width: 100%;
+  padding: var(--spacing-small);
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: var(--font-size-base);
+  box-sizing: border-box;
+  transition: border-color 0.2s, min-height 0.2s;
+  overflow-y: auto;
+  resize: none; /* Prevent manual resizing */
+}
+
+.textareaAutoGrow:focus {
+  border-color: var(--color-accent, #dbbfa4);
+  outline: none;
+}
+
+/* Button styling */
+.contactForm button {
+  background: var(--color-accent, #dbbfa4);
+  color: var(--color-text-secondary, #fff);
+  border: none;
+  border-radius: 6px;
+  padding: var(--spacing-medium) var(--spacing-large);
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.contactForm button:hover,
+.contactForm button:focus {
+  background: var(--color-accent-hover, #dc8f70);
+}
+
+/* Status messages */
+.statusSuccess {
+  color: #388e3c;
+  font-size: var(--font-size-base);
+  margin-bottom: var(--spacing-small);
+}
+
+.statusError {
+  color: #d32f2f;
+  font-size: var(--font-size-base);
+  margin-bottom: var(--spacing-small);
+}
+
+
+@media (max-width: 768px) {
+  .contactForm {
+    width: 100%;
+    max-width: 300px;
+    padding: var(--spacing-small);
+  }
+}
