@@ -63,8 +63,8 @@ export default function BookNow() {
           </article>
           <aside className={styles.topImageContainer}>
           <Image
-            src="/images/andreea.jpg"
-            alt="Therapy session illustration"
+            src="/images/book-now.jpg"
+            alt="A brain with thread being pulled to showing a therapist unravelling problems"
             width={300}
             height={300}
             className={styles.image}

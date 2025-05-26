@@ -52,8 +52,8 @@ export default function LearnMore() {
           </div>
           <aside className={styles.imageContainer}>
           <Image
-            src="/images/andreea.jpg"
-            alt="Andreea Horhocea - Psychodynamic Psychotherapist"
+            src="/images/learn-more.jpg"
+            alt="Visual of differnt words for stress, anxiety and depression"
             height={300}
             width={300}
             className={styles.image}

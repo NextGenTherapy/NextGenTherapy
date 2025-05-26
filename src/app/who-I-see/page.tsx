@@ -86,7 +86,7 @@ export default function WhoISee() {
           </article>
           <aside className={styles.imageContainer}>
             <Image
-              src="/images/who-i-see"
+              src="/images/who-i-see.jpg"
               alt="A therapist talking to a patient"
               height={400}
               width={300}

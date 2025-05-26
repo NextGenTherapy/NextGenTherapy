@@ -4,6 +4,7 @@ import styles from "./about.module.css";
 import buttonLinksStyles from "../../components/buttonLinks.module.css";
 import Button from "../../components/button";
 
+
 export const metadata: Metadata = {
   metadataBase: new URL("http://localhost:3000"),
   title: "About me - Next Generation Therapy",
@@ -52,7 +53,7 @@ export default function AboutMe() {
         <h1>About Me</h1>
         </div>
         <section className={styles.contentTop}>
-           <aside className={styles.topImageContainer}>
+           <aside className={styles.topVideoContainer}>
             <Image
               src="/images/andreea.jpg"
               alt="Andreea Horhocea - Psychodynamic Psychotherapist"
@@ -140,15 +141,6 @@ export default function AboutMe() {
               better fit for you.
             </p>
           </article>
-          <aside className={styles.endImageContainer}>
-            <Image
-              src="/images/bacp.jpg"
-              alt="BACP Logo - British Association of Counselling and Psychotherapy"
-              height={300}
-              width={300}
-              className={styles.image}
-            />
-          </aside>
         </section>
 
         <section className={buttonLinksStyles.buttonLinks}>

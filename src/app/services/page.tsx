@@ -67,7 +67,7 @@ export default function Services() {
           </article>
           <aside className={styles.topImageContainer}>
             <Image
-              src="/images/bacp.jpg"
+              src="/images/services.jpg"
               alt="Andreea Horhocea - Psychodynamic Psychotherapist"
               height={300}
               width={300}
@@ -80,7 +80,7 @@ export default function Services() {
         <div className={styles.childrenSection}>
         <aside className={styles.endImageContainer}>
             <Image
-              src="/images/bacp.jpg"
+              src="/images/child.jpg"
               alt="Play therapy session for children"
               height={300}
               width={300}
@@ -97,7 +97,7 @@ export default function Services() {
         <div className={styles.adultsSection}>
           <aside className={styles.endImageContainer}>
             <Image
-              src="/images/bacp.jpg"
+              src="/images/adult.jpg"
               alt="Talking therapy session for adults"
               height={300}
               width={300}
