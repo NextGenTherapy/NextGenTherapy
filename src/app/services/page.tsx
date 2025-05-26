@@ -71,6 +71,7 @@ export default function Services() {
               alt="Andreea Horhocea - Psychodynamic Psychotherapist"
               height={300}
               width={300}
+              priority
               className={styles.image}
             />
           </aside>

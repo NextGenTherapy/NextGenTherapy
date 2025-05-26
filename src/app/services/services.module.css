@@ -86,11 +86,6 @@
     margin: var(--spacing-medium);
   }
 
-  
-
-  .contentEnd {
-    margin-top: var(--spacing-xlarge);
-  }
   .adultTextContainer, .childTextContainer {
     text-align: center;
   }

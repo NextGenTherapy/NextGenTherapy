@@ -68,7 +68,7 @@ export default function BookNow() {
             width={300}
             height={300}
             className={styles.image}
-            loading="lazy"
+            priority
           />
         </aside>
           </section>

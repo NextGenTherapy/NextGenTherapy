@@ -66,6 +66,7 @@ export default function Home() {
               alt="Andreea Horhocea - Psychodynamic Psychotherapist"
               height={400}
               width={300}
+              priority
               className={styles.image}
             />
           </div>

@@ -56,6 +56,7 @@ export default function LearnMore() {
             alt="Visual of differnt words for stress, anxiety and depression"
             height={300}
             width={300}
+            priority
             className={styles.image}
           />
           </aside>
