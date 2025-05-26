@@ -47,12 +47,12 @@ export const metadata: Metadata = {
 
 // Image data for the photo gallery
 const images = [
-  { src: "/images/andreea.jpg", alt: "Andreea Horhocea - Image 1" },
-  { src: "/images/andreea.jpg", alt: "Andreea Horhocea - Image 2" },
-  { src: "/images/andreea.jpg", alt: "Andreea Horhocea - Image 3" },
-  { src: "/images/andreea.jpg", alt: "Andreea Horhocea - Image 4" },
-  { src: "/images/andreea.jpg", alt: "Andreea Horhocea - Image 5" },
-  { src: "/images/andreea.jpg", alt: "Andreea Horhocea - Image 6" },
+  { src: "/images/office.jpg", alt: "Picture of office with laptop" },
+  { src: "/images/doll-house.jpg", alt: "Picture of doll house for play therapy for children" },
+  { src: "/images/board-games.jpg", alt: "Picture of shelves including games for children to play with" },
+  { src: "/images/room-2.jpg", alt: "Picture of therapy room with sofa and arm chair" },
+  { src: "/images/room.jpg", alt: "Picture of therapy room with sofa and arm chair" },
+  { src: "/images/shelf.jpeg", alt: "Picture of shelf with plants on" },
 ];
 
 export default function WhoISee() {
@@ -86,8 +86,8 @@ export default function WhoISee() {
           </article>
           <aside className={styles.imageContainer}>
             <Image
-              src="/images/andreea.jpg"
-              alt="Andreea Horhocea - Psychodynamic Psychotherapist"
+              src="/images/who-i-see"
+              alt="A therapist talking to a patient"
               height={400}
               width={300}
               className={styles.image}
