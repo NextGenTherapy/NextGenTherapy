@@ -4,7 +4,7 @@ import "../styles/variables.css";
 import Header from "../components/header";
 import Footer from "../components/footer";
 import { Analytics } from "@vercel/analytics/next"
-import {  GoogleAnalytics } from '@next/third-parties/google'
+import { GoogleAnalytics } from '@next/third-parties/google'
 
 export const metadata: Metadata = {
   metadataBase: new URL("http://localhost:3000"), // Base URL for resolving relative URLs

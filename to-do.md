@@ -34,7 +34,7 @@
 
 
 14. **Integrate analytics and error monitoring if desired**
-    - Add Google Analytics, Plausible, or similar in your layout.
+    - change google analitcs to actual domain
     - Set up Sentry or LogRocket for error monitoring.
 
 

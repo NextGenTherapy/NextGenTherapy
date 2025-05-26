@@ -2,24 +2,14 @@ import Link from "next/link";
 import styles from "./button.module.css";
 
 interface ButtonProps {
-  href?: string; // 
-  type?: "button" | "submit" | "reset";
+  href?: string;
   children: React.ReactNode;
+  type?: "button" | "submit" | "reset";
 }
 
-export default function Button({ href, type = "button", children }: ButtonProps) {
-  const handleEmailSubmit = () => {
-    const email = "andreeahorhocea95@gmail.com";
-    const subject = "Contact Inquiry";
-    const body = "Hello, I would like to get in touch with you.";
-    const mailtoLink = `mailto:${email}?subject=${encodeURIComponent(
-      subject
-    )}&body=${encodeURIComponent(body)}`;
-
-    window.location.href = mailtoLink;
-  };
-
-  if (href) {
+export default function Button({ href, children, type = "button" }: ButtonProps) {
+  // Only allow internal navigation to prevent open redirects
+  if (href && href.startsWith("/")) {
     return (
       <Link href={href} className={styles.button}>
         {children}
@@ -27,13 +17,9 @@ export default function Button({ href, type = "button", children }: ButtonProps)
     );
   }
 
-  // Render a regular button for non-link cases
+  // Render a button (can be used as submit/reset/button)
   return (
-    <button
-      type={type}
-      onClick={type === "submit" ? handleEmailSubmit : undefined}
-      className={styles.button}
-    >
+    <button type={type} className={styles.button}>
       {children}
     </button>
   );
