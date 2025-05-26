@@ -38,8 +38,9 @@
 }
 
 .contactForm input:focus {
-  border-color: var(--color-accent, #dbbfa4);
-  outline: none;
+  border-color: var(--color-accent);
+  outline: 2px solid var(--color-accent-hover);
+  outline-offset: 2px;
 }
 
 /* Auto-grow textarea styling */
@@ -58,14 +59,15 @@
 }
 
 .textareaAutoGrow:focus {
-  border-color: var(--color-accent, #dbbfa4);
-  outline: none;
+  border-color: var(--color-accent);
+  outline: 2px solid var(--color-accent-hover);
+  outline-offset: 2px;
 }
 
 /* Button styling */
 .contactForm button {
-  background: var(--color-accent, #dbbfa4);
-  color: var(--color-text-secondary, #fff);
+  background: var(--color-accent);
+  color: var(--color-text-secondary);
   border: none;
   border-radius: 6px;
   padding: var(--spacing-medium) var(--spacing-large);
@@ -77,7 +79,7 @@
 
 .contactForm button:hover,
 .contactForm button:focus {
-  background: var(--color-accent-hover, #dc8f70);
+  background: var(--color-accent-hover);
 }
 
 /* Status messages */

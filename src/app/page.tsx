@@ -72,8 +72,7 @@ export default function Home() {
           </div>
           <div className={styles.textContainer}>
               <p>
-                A psychodynamic psychotherapist. I am offering 1-to-1 sessions in Colchester,
-                Chelmsford, and online.</p>
+                A psychodynamic psychotherapist. I am offering 1-to-1 sessions in Colchester and online.</p>
               <p>I work with people of any age who are looking to address
                 mental health-related challenges such as anxiety, depression, stress, eating
                 disorders, and more.</p>

@@ -3,6 +3,7 @@ import "../styles/globals.css";
 import "../styles/variables.css";
 import Header from "../components/header";
 import Footer from "../components/footer";
+import { Analytics } from "@vercel/analytics/next"
 
 export const metadata: Metadata = {
   metadataBase: new URL("http://localhost:3000"), // Base URL for resolving relative URLs
@@ -70,9 +71,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
       </head>
       <body>
+        <a href="#main-content" className="skip-link">Skip to content</a>
         <div className="layout-container">
           <Header />
           <div className="page">{children}</div>
+          <Analytics />
           <Footer />
         </div>
       </body>

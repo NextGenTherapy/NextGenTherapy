@@ -17,6 +17,9 @@
     background-color: var(--color-accent-hover);
   }
 
-  
+  .button:focus {
+  outline: 2px solid var(--color-accent-hover);
+  outline-offset: 2px;
+}
   
  
