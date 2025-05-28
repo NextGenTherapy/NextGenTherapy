@@ -5,8 +5,8 @@ import Link from "next/link";
 export default function Footer() {
     return (
         <footer className={styles.footer}>
-            <div className={styles.footerContent}>
-                <div className={styles.footerColumn}>
+            <section className={styles.footerContent}>
+                <section className={styles.footerColumn}>
                     <Link href="/book-now">
                         <h3>Location</h3>
                     </Link>
@@ -24,9 +24,9 @@ export default function Footer() {
                             </a>
                         </li>
                     </ul>
-                </div>
+                </section>
 
-                <div className={styles.footerColumn}>
+                <section className={styles.footerColumn}>
                     <Link href="/book-now">
                         <h3>Hours</h3>
                     </Link>
@@ -36,9 +36,9 @@ export default function Footer() {
                         <li>Friday</li>
                         <li>9am-2pm</li>
                     </ul>
-                </div>
+                </section>
 
-                <div className={styles.footerColumn}>
+                <section className={styles.footerColumn}>
                     <Link href="/book-now">
                         <h3>Contact me</h3>
                     </Link>
@@ -93,8 +93,13 @@ export default function Footer() {
                             />
                         </a>
                     </div>
-                </div>
-            </div>
+                </section>
+            </section>
+                   <div className={styles.privacyPolicy}>
+                     <Link href="/privacy-policy">
+                        <h3>Privacy Policy</h3>
+                     </Link>
+                     </div>
         </footer>
     );
 }

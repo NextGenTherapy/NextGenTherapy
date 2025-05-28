@@ -63,6 +63,11 @@ margin-bottom: var(--spacing-medium);
     margin-top: var(--spacing-large);
 }
 
+.privacyPolicy {
+    display: flex;
+    justify-content: center;
+}
+
 /*Media queires for smaller screens */
 @media (max-width: 1024px) {
     .footerContent {
