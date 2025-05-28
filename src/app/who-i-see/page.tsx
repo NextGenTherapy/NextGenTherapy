@@ -92,7 +92,6 @@ export default function WhoISee() {
               width={300}
               className={styles.image}
               priority
-              placeholder="blur"
             />
           </aside>
         </section>
@@ -107,9 +106,7 @@ export default function WhoISee() {
               height={500}
               width={400}
               className={styles.image}
-              loading="lazy"
               priority={index === 0}
-              placeholder="blur"
             />
           ))}
         </section>

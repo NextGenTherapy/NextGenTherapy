@@ -48,7 +48,7 @@ export default function Home() {
             </h1>
           </div>
           <div className={styles.buttonLinksContainer}>
-            <Button href="/learn-more">Learn More</Button>
+            <Button href="/therapy-101">Learn More</Button>
             <Button href="/services">Services</Button>
             <Button href="/book-now">Book Now</Button>
           </div>
