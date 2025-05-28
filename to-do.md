@@ -35,7 +35,5 @@
     - [ ] Test form submission and confirm email delivery via Resend.
     - [ ] (Optional) Verify your sender domain with Resend for best deliverability.
 
-10. **Add privacy policy and cookie consent if needed**
-    - [ ] Add legal pages if you collect user data or use analytics.
 
-**Work through each step, commit your changes, and redeploy to Vercel. Your site will be production-ready and follow best practices!**
+**Work through each step, commit your changes, and redeploy to Vercel. Your site will be production-ready and follow best practices!**s

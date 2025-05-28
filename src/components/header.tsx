@@ -62,7 +62,7 @@ export default function Header() {
           </li>
           <li className={styles.navItem}>
             <Link href="/learn-more" onClick={closeMenu}>
-              Learn More
+              Therapy 101
             </Link>
           </li>
           <li className={styles.navItem}>
