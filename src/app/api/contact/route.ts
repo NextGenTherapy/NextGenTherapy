@@ -1,28 +1,36 @@
 import { NextRequest, NextResponse } from "next/server";
-import nodemailer from "nodemailer";
+import { Resend } from "resend";
+
+// Ensure the API key is set in your environment variables on Vercel as RESEND_API_KEY
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(req: NextRequest) {
   try {
     const { firstName, lastName, email, message } = await req.json();
 
-    const transporter = nodemailer.createTransport({
-      service: "gmail",
-      auth: {
-        user: process.env["andreeatherapytoday@gmail.com"],
-        pass: process.env.CONTACT_EMAIL_PASS, // app password
-      },
-    });
+    // Basic validation (optional but recommended)
+    if (!firstName || !lastName || !email || !message) {
+      return NextResponse.json(
+        { success: false, error: "All fields are required." },
+        { status: 400 }
+      );
+    }
 
-    await transporter.sendMail({
-      from: email,
+    await resend.emails.send({
+      from: "Contact Form <onboarding@resend.dev>", // Use your verified sender for production
       to: "andreeatherapytoday@gmail.com",
       subject: `Contact Form Submission from ${firstName} ${lastName}`,
-      text: message,
       replyTo: email,
+      text: message,
     });
 
     return NextResponse.json({ success: true });
   } catch (error) {
-    return NextResponse.json({ success: false, error: (error as Error).message }, { status: 500 });
+    // Log error for debugging (optional)
+    console.error("Email send error:", error);
+    return NextResponse.json(
+      { success: false, error: "Failed to send email." },
+      { status: 500 }
+    );
   }
 }

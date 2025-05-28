@@ -16,7 +16,8 @@
     "next-sitemap": "^4.2.3",
     "nodemailer": "^7.0.3",
     "react": "^19.1.0",
-    "react-dom": "^19.1.0"
+    "react-dom": "^19.1.0",
+    "resend": "^4.5.1"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
