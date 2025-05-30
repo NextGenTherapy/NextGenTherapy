@@ -7,7 +7,7 @@ const ContentSecurityPolicy = `
   img-src 'self' data: https://www.google-analytics.com https://www.googletagmanager.com;
   font-src 'self';
   connect-src 'self' https://www.google-analytics.com https://vitals.vercel-insights.com;
-  frame-src 'none';
+  frame-src 'self' https://www.google.com https://www.google.co.uk https://www.google.com/maps https://maps.google.com;
   object-src 'none';
   base-uri 'self';
   form-action 'self';
