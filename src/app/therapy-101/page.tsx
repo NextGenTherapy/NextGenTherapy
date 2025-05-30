@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import styles from "./learn-more.module.css";
+import styles from "./therapy-101.module.css";
 import buttonLinksStyles from "../../components/buttonLinks.module.css";
 import Button from "../../components/button";
 

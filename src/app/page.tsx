@@ -49,7 +49,7 @@ export default function Home() {
             </h1>
           </div>
           <div className={styles.buttonLinksContainer}>
-            <ButtonHome href="/therapy-101" >Learn More</ButtonHome>
+            <ButtonHome href="/therapy-101" >Therapy 101</ButtonHome>
             <ButtonHome href="/services">Services</ButtonHome>
             <ButtonHome href="/book-now">Book Now</ButtonHome>
           </div>
