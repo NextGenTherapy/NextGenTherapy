@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("http://localhost:3000"),
   title: "Book Now - Next Generation Therapy",
   description:
-    "Book a therapy session with Andreea Horhocea, a psychodynamic psychotherapist offering services in Colchester, Chelmsford, and online.",
+    "Book a therapy session with Andreea Horhocea, a psychodynamic psychotherapist offering services in Colchester and online.",
   keywords: [
     "book therapy session",
     "psychodynamic psychotherapy",
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Book Now - Next Generation Therapy",
     description:
-      "Book a therapy session with Andreea Horhocea, a psychodynamic psychotherapist offering services in Colchester, Chelmsford, and online.",
+      "Book a therapy session with Andreea Horhocea, a psychodynamic psychotherapist offering services in Colchester and online.",
     url: "http://localhost:3000/book-now",
     images: [
       {

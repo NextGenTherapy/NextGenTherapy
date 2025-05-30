@@ -6,7 +6,7 @@
     text-align: center;
     text-decoration: none;
     color: white;
-    background-color: var(--color-button);
+    background-color: var(--color-button-home);
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -14,12 +14,11 @@
   }
   
   .button:hover {
-    background-color: var(--color-button-hover);
+    background-color: var(--color-button-home-hover);
   }
 
   .button:focus {
-  outline: 2px solid var(--color-button-hover);
+  outline: 2px solid var(--color-button-home-hover);
   outline-offset: 2px;
 }
   
- 

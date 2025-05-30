@@ -9,8 +9,8 @@ import { GoogleAnalytics } from '@next/third-parties/google'
 export const metadata: Metadata = {
   metadataBase: new URL("http://localhost:3000"), // Base URL for resolving relative URLs
   title: "Next Generation Therapy",
-  description: "Providing professional therapy and psychodynamic psychotherapist services for children, teenagers, young adults and adults. Specializing in mental health, personal growth, and emotional well-being in Colchester and Chelmsford. Contact us today.",
-  keywords: ["therapy", "psychotherapy", "mental health", "Colchester", "Chelmsford", "psychodynamic therapy", "personal growth", "emotional well-being", "online"], // Add relevant keywords
+  description: "Providing professional therapy and psychodynamic psychotherapist services for children, teenagers, young adults and adults. Specializing in mental health, personal growth, and emotional well-being in Colchester and online. Contact us today.",
+  keywords: ["therapy", "psychotherapy", "mental health", "Colchester", "online", "psychodynamic therapy", "personal growth", "emotional well-being", "online"], // Add relevant keywords
   openGraph: {
     title: "Next Generation Therapy",
     description: "Providing professional therapy and psychodynamic psychotherapist services for children, teenagers, young adults and adults.",

@@ -4,12 +4,21 @@
     --color-background: #fefae0;
     --color-text: #000000; 
     --color-text-secondary: #ffffff;
-    --color-accent: #dbbfa4; 
-    --color-accent-hover: #dc8f70;
+    --color-accent: #dc8f70;
+    --color-accent-hover: #000000;
 
     /* header and footer colors*/
     --color-header-background: #164B39;
     --color-header-text: #ffffff;
+
+    /* Button colors*/
+    --color-button: #164B39;
+    --color-button-hover: #d8995edc;
+    --color-button-accent: #dbbfa4; 
+   
+    --color-button-home: #DC7726;
+    --color-button-home-hover: #4A545D;
+    ; 
   
     /* Spacing Variables */
     --spacing-small: 12px;

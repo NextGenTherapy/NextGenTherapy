@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import styles from "./page.module.css";
-import Button from "../components/button";
+import ButtonHome from "../components/button-home";
+
 
 function getMetadata(): Metadata {
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
@@ -48,9 +49,9 @@ export default function Home() {
             </h1>
           </div>
           <div className={styles.buttonLinksContainer}>
-            <Button href="/therapy-101">Learn More</Button>
-            <Button href="/services">Services</Button>
-            <Button href="/book-now">Book Now</Button>
+            <ButtonHome href="/therapy-101" >Learn More</ButtonHome>
+            <ButtonHome href="/services">Services</ButtonHome>
+            <ButtonHome href="/book-now">Book Now</ButtonHome>
           </div>
         </section>
 
