@@ -16,15 +16,15 @@ export function middleware() {
       "object-src 'none';",
       "base-uri 'self';",
       "form-action 'self';",
-      "frame-ancestors 'none';" // Prevents all framing (clickjacking protection)
+      "frame-ancestors 'none';"
     ].join(' ')
   );
-
-  // Add X-Frame-Options header for clickjacking protection (legacy support)
   response.headers.set("X-Frame-Options", "DENY");
-
-  // Add Cross-Origin-Opener-Policy header for origin isolation
   response.headers.set("Cross-Origin-Opener-Policy", "same-origin");
 
   return response;
 }
+
+export const config = {
+  matcher: "/:path*",
+};
