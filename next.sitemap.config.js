@@ -1,2 +1,4 @@
-export const siteUrl = "https://next-gen-therapy.vercel.app";
-export const generateRobotsTxt = true;
+module.exports = {
+  siteUrl: "https://nextgentherapy.co.uk",
+  generateRobotsTxt: true,
+};
