@@ -5,7 +5,7 @@ import Header from "../components/header";
 import Footer from "../components/footer";
 import { Analytics } from "@vercel/analytics/next";
 import { GoogleAnalytics } from '@next/third-parties/google';
-import { headers } from "next/headers";
+
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://nextgentherapy.co.uk"),
@@ -41,9 +41,9 @@ export const metadata: Metadata = {
 };
 
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
-  // Get the nonce from the middleware header
-  const headersList = await headers();
-  const nonce = headersList.get("x-nonce") || "";
+  // Get the nonce from the middleware header (not needed for JSON-LD)
+  // const headersList = await headers();
+  // const nonce = headersList.get("x-nonce") || "";
 
   return (
     <html lang="en-GB">
@@ -52,7 +52,6 @@ export default async function RootLayout({ children }: { children: React.ReactNo
         <link rel="icon" href="/favicon.ico" type="image/x-icon" />
         <link rel="canonical" href="https://nextgentherapy.co.uk" />
         <script
-          nonce={nonce}
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
@@ -90,7 +89,8 @@ export default async function RootLayout({ children }: { children: React.ReactNo
         </div>
       </body>
       {/* Google Analytics script with nonce */}
-      <GoogleAnalytics gaId="G-3528EDPEXW" nonce={nonce} />
+      {/* If you want to use nonce for GoogleAnalytics, you can add it back here */}
+      <GoogleAnalytics gaId="G-3528EDPEXW" />
     </html>
   );
 }
