@@ -5,6 +5,7 @@ import Header from "../components/header";
 import Footer from "../components/footer";
 import { Analytics } from "@vercel/analytics/next";
 import { GoogleAnalytics } from '@next/third-parties/google';
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 
 export const metadata: Metadata = {
@@ -91,6 +92,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
       {/* Google Analytics script with nonce */}
       {/* If you want to use nonce for GoogleAnalytics, you can add it back here */}
       <GoogleAnalytics gaId="G-3528EDPEXW" />
+      <SpeedInsights />
     </html>
   );
 }
