@@ -14,7 +14,6 @@ export const metadata: Metadata = {
     "book therapy session",
     "psychodynamic psychotherapy",
     "therapy in Colchester",
-    "therapy in Chelmsford",
     "online therapy",
     "Andreea Horhocea",
   ],
@@ -37,7 +36,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Book Now - Next Generation Therapy",
     description:
-      "Book a therapy session with Andreea Horhocea, a psychodynamic psychotherapist offering services in Colchester, Chelmsford, and online.",
+      "Book a therapy session with Andreea Horhocea, a psychodynamic psychotherapist offering services in Colchester and online.",
     images: ["/images/book-now.jpg"],
   },
 };

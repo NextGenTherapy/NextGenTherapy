@@ -58,7 +58,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
               url: "https://nextgentherapy.co.uk",
               logo: "https://nextgentherapy.co.uk/images/default-social-share.jpg",
               description:
-                "Providing professional therapy and psychodynamic psychotherapist services for children, teenagers, young adults and adults. Specializing in mental health, personal growth, and emotional well-being in Colchester and Chelmsford.",
+                "Providing professional therapy and psychodynamic psychotherapist services for children, teenagers, young adults and adults. Specializing in mental health, personal growth, and emotional well-being in Colchester and Online.",
               address: {
                 "@type": "PostalAddress",
                 streetAddress: "Colchester Buisness Center, 1 George Williams Way",

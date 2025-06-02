@@ -18,7 +18,6 @@ export const metadata: Metadata = {
     "therapy for young people",
     "therapy for adults",
     "Colchester therapy",
-    "Chelmsford therapy",
     "online therapy",
   ],
   authors: [{ name: "Andreea Horhocea" }],

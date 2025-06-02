@@ -15,8 +15,6 @@
       NEXT_PUBLIC_SITE_URL=https://yourdomain.com
       ```
 
-6. **Update `next.sitemap.config.js` with your real site URL**
-    - [ ] Set `siteUrl: "https://yourdomain.com"` in the config.
 
 
 8. **Integrate analytics and error monitoring**
