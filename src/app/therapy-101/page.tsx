@@ -6,7 +6,7 @@ import Button from "../../components/button";
 
 // Page-specific metadata
 export const metadata: Metadata = {
-  metadataBase: new URL("http://localhost:3000"),
+  metadataBase: new URL("https://nextgentherapy.co.uk"),
   title: "Why Therapy - Next Generation Therapy",
   description:
     "Learn why therapy is important and how it can help you achieve personal growth and emotional well-being.",
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     title: "Why Therapy - Next Generation Therapy",
     description:
       "Learn why therapy is important and how it can help you achieve personal growth and emotional well-being.",
-    url: "http://localhost:3000/learn-more",
+    url: "https://nextgentherapy.co.uk/learn-more",
     images: [
       {
         url: "/images/andreea.jpg",

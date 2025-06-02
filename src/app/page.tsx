@@ -5,7 +5,7 @@ import ButtonHome from "../components/button-home";
 
 
 function getMetadata(): Metadata {
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://nextgentherapy.co.uk";
 
   return {
     metadataBase: new URL(siteUrl),

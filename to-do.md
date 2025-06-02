@@ -35,5 +35,11 @@
     - [ ] Test form submission and confirm email delivery via Resend.
     - [ ] (Optional) Verify your sender domain with Resend for best deliverability.
 
+10. **Enhance security with Content Security Policy (CSP)**
+    - [ ] Refactor code to eliminate all inline scripts and event handlers.
+    - [ ] Implement a nonce-based Content Security Policy for maximum XSS protection and Lighthouse compliance.
+        - This requires a custom server or advanced middleware to generate and inject nonces.
+        - See: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src#unsafe_inline_scripts
 
-**Work through each step, commit your changes, and redeploy to Vercel. Your site will be production-ready and follow best practices!**s
+
+**Work through each step, commit your changes, and redeploy to Vercel. Your site will be production-ready and follow best practices!**

@@ -7,14 +7,14 @@ import { Analytics } from "@vercel/analytics/next"
 import { GoogleAnalytics } from '@next/third-parties/google'
 
 export const metadata: Metadata = {
-  metadataBase: new URL("http://localhost:3000"), // Base URL for resolving relative URLs
+  metadataBase: new URL("https://nextgentherapy.co.uk"), // Base URL for resolving relative URLs
   title: "Next Generation Therapy",
   description: "Providing professional therapy and psychodynamic psychotherapist services for children, teenagers, young adults and adults. Specializing in mental health, personal growth, and emotional well-being in Colchester and online. Contact us today.",
   keywords: ["therapy", "psychotherapy", "mental health", "Colchester", "online", "psychodynamic therapy", "personal growth", "emotional well-being", "online"], // Add relevant keywords
   openGraph: {
     title: "Next Generation Therapy",
     description: "Providing professional therapy and psychodynamic psychotherapist services for children, teenagers, young adults and adults.",
-    url: "http://localhost:3000", // Localhost URL for development
+    url: "https://nextgentherapy.co.uk", // Localhost URL for development
     images: [
       {
         url: "../images/default-social-share.jpg", 
@@ -43,7 +43,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         
       <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
         <link rel="icon" href="/favicon.ico" type="image/x-icon" />
-        <link rel="canonical" href="http://localhost:3000" />
+        <link rel="canonical" href="https://nextgentherapy.co.uk" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -51,8 +51,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               "@context": "https://schema.org",
               "@type": "Organization",
               name: "Next Generation Therapy",
-              url: "http://localhost:3000",
-              logo: "http://localhost:3000/images/default-social-share.jpg",
+              url: "https://nextgentherapy.co.uk",
+              logo: "https://nextgentherapy.co.uk/images/default-social-share.jpg",
               description:
                 "Providing professional therapy and psychodynamic psychotherapist services for children, teenagers, young adults and adults. Specializing in mental health, personal growth, and emotional well-being in Colchester and Chelmsford.",
               address: {

@@ -6,7 +6,7 @@ import Button from "../../components/button";
 
 
 export const metadata: Metadata = {
-  metadataBase: new URL("http://localhost:3000"),
+  metadataBase: new URL("https://nextgentherapy.co.uk"),
   title: "About me - Next Generation Therapy",
   description:
     "Learn about Andreea Horhocea, a psychodynamic psychotherapist with extensive experience working with children, young people, and adults. Discover her approach to therapy, her qualifications, and her dedication to creating a safe and supportive space for personal growth.",
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     title: "About me - Next Generation Therapy",
     description:
       "Learn about Andreea Horhocea, a psychodynamic psychotherapist with extensive experience working with children, young people, and adults. Discover her approach to therapy, her qualifications, and her dedication to creating a safe and supportive space for personal growth.",
-    url: "http://localhost:3000/about",
+    url: "https://nextgentherapy.co.uk/about",
     images: [
       {
         url: "/images/andreea.jpg",

@@ -5,7 +5,7 @@ import buttonLinksStyles from "../../components/buttonLinks.module.css";
 import Button from "../../components/button";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("http://localhost:3000"),
+  metadataBase: new URL("https://nextgentherapy.co.uk"),
   title: "Services - Next Generation Therapy",
   description:
     "Explore the therapy services offered by Andreea Horhocea, including play therapy for children and talking therapy for adults. Sessions are available in-person in Colchester or online, tailored to help with anxiety, self-esteem, body image, relationships, and more.",
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     title: "Services - Next Generation Therapy",
     description:
       "Explore the therapy services offered by Andreea Horhocea, including play therapy for children and talking therapy for adults. Sessions are available in-person in Colchester or online, tailored to help with anxiety, self-esteem, body image, relationships, and more.",
-    url: "http://localhost:3000/services",
+    url: "https://nextgentherapy.co.uk/services",
     images: [
       {
         url: "/images/bacp.jpg",

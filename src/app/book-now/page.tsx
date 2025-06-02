@@ -6,7 +6,7 @@ import Button from "../../components/button";
 import ContactForm from "../../components/contact-form";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("http://localhost:3000"),
+  metadataBase: new URL("https://nextgentherapy.co.uk"),
   title: "Book Now - Next Generation Therapy",
   description:
     "Book a therapy session with Andreea Horhocea, a psychodynamic psychotherapist offering services in Colchester and online.",
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     title: "Book Now - Next Generation Therapy",
     description:
       "Book a therapy session with Andreea Horhocea, a psychodynamic psychotherapist offering services in Colchester and online.",
-    url: "http://localhost:3000/book-now",
+    url: "https://nextgentherapy.co.uk/book-now",
     images: [
       {
         url: "/images/book-now.jpg",
