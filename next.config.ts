@@ -2,7 +2,7 @@ import type { NextConfig } from "next";
 
 const ContentSecurityPolicy = `
   default-src 'self';
-  script-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://cdn.vercel-insights.com https://analytics.vercel.com https://polyfill.io;
+  script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://cdn.vercel-insights.com https://analytics.vercel.com https://polyfill.io;
   style-src 'self' 'unsafe-inline';
   img-src 'self' data: https://www.google-analytics.com https://www.googletagmanager.com;
   font-src 'self';
