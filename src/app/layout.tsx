@@ -3,48 +3,56 @@ import "../styles/globals.css";
 import "../styles/variables.css";
 import Header from "../components/header";
 import Footer from "../components/footer";
-import { Analytics } from "@vercel/analytics/next"
-import { GoogleAnalytics } from '@next/third-parties/google'
+import { Analytics } from "@vercel/analytics/next";
+import { GoogleAnalytics } from '@next/third-parties/google';
+import { headers } from "next/headers";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://nextgentherapy.co.uk"), // Base URL for resolving relative URLs
+  metadataBase: new URL("https://nextgentherapy.co.uk"),
   title: "Next Generation Therapy",
   description: "Providing professional therapy and psychodynamic psychotherapist services for children, teenagers, young adults and adults. Specializing in mental health, personal growth, and emotional well-being in Colchester and online. Contact us today.",
-  keywords: ["therapy", "psychotherapy", "mental health", "Colchester", "online", "psychodynamic therapy", "personal growth", "emotional well-being", "online"], // Add relevant keywords
+  keywords: [
+    "therapy", "psychotherapy", "mental health", "Colchester", "online",
+    "psychodynamic therapy", "personal growth", "emotional well-being", "online"
+  ],
   openGraph: {
     title: "Next Generation Therapy",
     description: "Providing professional therapy and psychodynamic psychotherapist services for children, teenagers, young adults and adults.",
-    url: "https://nextgentherapy.co.uk", // Localhost URL for development
+    url: "https://nextgentherapy.co.uk",
     images: [
       {
-        url: "../images/default-social-share.jpg", 
+        url: "../images/default-social-share.jpg",
         width: 1200,
         height: 630,
         alt: "Next Generation Therapy - A Safe Space for Growth and Self-Discovery",
       },
     ],
-    type: "website", 
-    locale: "en_GB", 
-    siteName: "Next Generation Therapy", 
+    type: "website",
+    locale: "en_GB",
+    siteName: "Next Generation Therapy",
   },
   twitter: {
     card: "summary_large_image",
     title: "Next Generation Therapy",
     description: "Providing professional therapy and psychodynamic psychotherapist services for children, teenagers, young adults and adults.",
-    images: ["../images/default-social-share.jpg"], 
+    images: ["../images/default-social-share.jpg"],
   },
-  robots: "index, follow", 
+  robots: "index, follow",
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default async function RootLayout({ children }: { children: React.ReactNode }) {
+  // Get the nonce from the middleware header
+  const headersList = await headers();
+  const nonce = headersList.get("x-nonce") || "";
+
   return (
     <html lang="en-GB">
       <head>
-        
-      <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
         <link rel="icon" href="/favicon.ico" type="image/x-icon" />
         <link rel="canonical" href="https://nextgentherapy.co.uk" />
         <script
+          nonce={nonce}
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
@@ -81,7 +89,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <Footer />
         </div>
       </body>
-      <GoogleAnalytics gaId="G-3528EDPEXW" />
+      {/* Google Analytics script with nonce */}
+      <GoogleAnalytics gaId="G-3528EDPEXW" nonce={nonce} />
     </html>
   );
 }
