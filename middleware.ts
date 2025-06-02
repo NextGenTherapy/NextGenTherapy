@@ -8,7 +8,7 @@ function generateNonce() {
 export function middleware() {
   const nonce = generateNonce();
 
-  // Store nonce in a cookie for use in your app (if needed)
+  // Store nonce in a header for use in your app
   const response = NextResponse.next();
   response.headers.set('x-nonce', nonce);
 
@@ -36,6 +36,7 @@ export function middleware() {
   response.headers.set('X-DNS-Prefetch-Control', 'on');
   response.headers.set('Strict-Transport-Security', 'max-age=63072000; includeSubDomains; preload');
   response.headers.set('Permissions-Policy', 'geolocation=(), microphone=()');
+  response.headers.set('Cross-Origin-Opener-Policy', 'same-origin'); // COOP header
 
   return response;
 }
