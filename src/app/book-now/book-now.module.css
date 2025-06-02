@@ -37,9 +37,6 @@
   gap: var(--spacing-large);
 }
 
-.contentMiddle li {
-  list-style: circle;
-}
 
 .hours, .location, .contact {
   display: flex;

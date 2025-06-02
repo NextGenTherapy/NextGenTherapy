@@ -76,30 +76,27 @@ export default function BookNow() {
           <section className={styles.contentMiddle}>
             <div className={styles.contact}>
             <h3>My Contact Details</h3>
-            <ul>
-              <li>
+              <p>
                 <a
                   href="mailto:andreeatherapytoday@gmail.com"
                   aria-label="Send an email to Andreea Therapy Today"
                 >
                   Email: andreeatherapytoday@gmail.com
                 </a>
-              </li>
-              <li>
+              </p>
+              <p>
                 <a
                   href="tel:07448036017"
                   aria-label="Call Andreea Therapy Today at 07448036017"
                 >
                   Phone: 07448036017
                 </a>
-              </li>
-            </ul>
+              </p>
             </div>
              
              <div className={styles.location}>
              <h3>Location</h3>
-             <ul>
-               <li>
+               <p>
                  <a href="https://www.google.com/maps?q=Colchester+Business+Centre,+1+George+Williams+Way,+Colchester+CO1+2JS"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -107,15 +104,12 @@ export default function BookNow() {
                   >
                     Colchester Business Centre, 1 George Williams Way, Colchester CO1 2JS
                   </a>
-               </li>
-             </ul>
+               </p>            
              </div>
             <div className={styles.hours}>
             <h3>Working Office Hours (More availability online)</h3>
-            <ul>
-              <li>Monday - Tuesday: 10am - 7pm</li>
-              <li>Friday: 9am - 2pm</li>
-            </ul>
+              <p>Monday - Tuesday: 10am - 7pm</p>
+              <p>Friday: 9am - 2pm</p>
             </div>
         </section>
 
