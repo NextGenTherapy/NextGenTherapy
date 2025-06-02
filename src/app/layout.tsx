@@ -42,10 +42,6 @@ export const metadata: Metadata = {
 };
 
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
-  // Get the nonce from the middleware header (not needed for JSON-LD)
-  // const headersList = await headers();
-  // const nonce = headersList.get("x-nonce") || "";
-
   return (
     <html lang="en-GB">
       <head>
@@ -89,8 +85,6 @@ export default async function RootLayout({ children }: { children: React.ReactNo
           <Footer />
         </div>
       </body>
-      {/* Google Analytics script with nonce */}
-      {/* If you want to use nonce for GoogleAnalytics, you can add it back here */}
       <GoogleAnalytics gaId="G-3528EDPEXW" />
       <SpeedInsights />
     </html>
