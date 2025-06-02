@@ -28,9 +28,17 @@
     --header-height: 100px;
     --footer-height: 200px;
   
-    /* Font Variables */
-    --font-family: 'Arial', sans-serif;
-    --font-size-base: 16px;
+    /* Font styling */
+    --font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
+    /* Font sizes */
+    --font-size-h1: 2.5rem;
+    --font-size-h2: 2rem;
+    --font-size-h3: 1.5rem;
+    --font-size-h4: 1.25rem;
+    --font-size-h5: 1rem;
+    --font-size-h6: 0.875rem;
+    --font-size-base: 1rem;
     --font-size-large: 20px;
     --font-size-logo: 35px;
   }

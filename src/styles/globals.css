@@ -15,6 +15,15 @@
   height: 100%;
 }
 
+/* Font sizes*/
+h1 { font-size: var(--font-size-h1); font-weight: bold; }
+h2 { font-size: var(--font-size-h2); font-weight: bold; }
+h3 { font-size: var(--font-size-h3); font-weight: bold; }
+h4 { font-size: var(--font-size-h4); font-weight: bold; }
+h5 { font-size: var(--font-size-h5); font-weight: bold; }
+h6 { font-size: var(--font-size-h6); font-weight: bold; }
+p, li { font-size: var(--font-size-base); }
+
 html,
 body {
   height: 100%;
@@ -40,10 +49,6 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh; 
-}
-
-p, li {
-  font-size: var(--font-size-base);
 }
 
 
