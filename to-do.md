@@ -1,7 +1,5 @@
 # Step-by-Step Guide to Finalize Your Next.js Website
 
-## [SEO]
-
 ## [Performance]
 
 3. **Compress and resize all images in `/public/images/`**

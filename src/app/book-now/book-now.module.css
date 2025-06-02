@@ -1,3 +1,7 @@
+.page li {
+margin-bottom: var(--spacing-medium);
+}
+
 .greeting {
   font-size: var(--font-size-large);
   font-weight: bold;
@@ -32,11 +36,25 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: flex-start;
+  align-items: stretch;
   margin: var(--spacing-xlarge);
   gap: var(--spacing-large);
+  list-style: none;
+}
+.contentMiddle li {
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
 
+.contentMiddle ul {
+  padding-left: 0;
+  margin: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
 .hours, .location, .contact {
   display: flex;
@@ -45,6 +63,7 @@
   justify-content: flex-start;
   width: 100%;
   text-align: center;
+  box-sizing: border-box;
 }
 
 .contentEnd {
