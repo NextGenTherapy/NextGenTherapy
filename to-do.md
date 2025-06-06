@@ -9,26 +9,14 @@
 
 ## [Deployment]
 
-5. **Set `NEXT_PUBLIC_SITE_URL` and other env variables for production**
-    - [ ] In Vercel or your `.env.production` file, set:
-      ```
-      NEXT_PUBLIC_SITE_URL=https://yourdomain.com
-      ```
-
-
-
+changes for andreea to be made in pictures 
+blog pages that she can do without needing to code.
+make email first.
 8. **Integrate analytics and error monitoring**
-    - [ ] Change Google Analytics to use your actual domain.
     - [ ] Set up Sentry or LogRocket for error monitoring.
 
 9. **Verify contact form works in production**
     - [ ] (Optional) Verify your sender domain with Resend for best deliverability.
-
-10. **Enhance security with Content Security Policy (CSP)**
-    - [ ] Refactor code to eliminate all inline scripts and event handlers.
-    - [ ] Implement a nonce-based Content Security Policy for maximum XSS protection and Lighthouse compliance.
-        - This requires a custom server or advanced middleware to generate and inject nonces.
-        - See: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src#unsafe_inline_scripts
 
 
 **Work through each step, commit your changes, and redeploy to Vercel. Your site will be production-ready and follow best practices!**
