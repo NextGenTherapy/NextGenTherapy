@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     url: "https://nextgentherapy.co.uk/services",
     images: [
       {
-        url: "/images/bacp.jpg",
+        url: "https://nextgentherapy.co.uk/images/default-social-share.jpg",
         width: 300,
         height: 300,
         alt: "Andreea Horhocea - Psychodynamic Psychotherapist",
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     title: "Services - Next Generation Therapy",
     description:
       "Explore the therapy services offered by Andreea Horhocea, including play therapy for children and talking therapy for adults.",
-    images: ["/images/bacp.jpg"],
+    images: ["https://nextgentherapy.co.uk/images/default-social-share.jpg"],
   },
 };
 

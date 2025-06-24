@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     url: "https://nextgentherapy.co.uk",
     images: [
       {
-        url: "../images/default-social-share.jpg",
+        url: "https://nextgentherapy.co.uk/images/default-social-share.jpg",
         width: 1200,
         height: 630,
         alt: "Next Generation Therapy - A Safe Space for Growth and Self-Discovery",
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     title: "Next Generation Therapy",
     description:
       "Providing professional therapy and psychodynamic psychotherapist services for children, teenagers, young adults and adults.",
-    images: ["../images/default-social-share.jpg"],
+    images: ["https://nextgentherapy.co.uk/images/default-social-share.jpg"],
   },
   robots: "index, follow",
 };

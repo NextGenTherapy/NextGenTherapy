@@ -20,7 +20,7 @@ function getMetadata(): Metadata {
       url: siteUrl,
       images: [
         {
-          url: "/images/default-social-share.jpg",
+          url: "https://nextgentherapy.co.uk/images/default-social-share.jpg",
           width: 1200,
           height: 630,
           alt: "Next Generation Therapy - A Safe Space for Growth and Self-Discovery",
@@ -32,7 +32,7 @@ function getMetadata(): Metadata {
       title: "Welcome to Next Generation Therapy",
       description:
         "Discover a safe space for growth and self-discovery with Andreea Horhocea.",
-      images: ["/images/default-social-share.jpg"],
+      images: ["https://nextgentherapy.co.uk/images/default-social-share.jpg"],
     },
   };
 }

@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     url: "https://nextgentherapy.co.uk/book-now",
     images: [
       {
-        url: "/images/book-now.jpg",
+        url: "https://nextgentherapy.co.uk/images/default-social-share.jpg",
         width: 500,
         height: 500,
         alt: "Therapy session illustration",
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     title: "Book Now - Next Generation Therapy",
     description:
       "Book a therapy session with Andreea Horhocea, a psychodynamic psychotherapist offering services in Colchester and online.",
-    images: ["/images/book-now.jpg"],
+    images: ["https://nextgentherapy.co.uk/images/default-social-share.jpg"],
   },
 };
 

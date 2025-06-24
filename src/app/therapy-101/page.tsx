@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     url: "https://nextgentherapy.co.uk/learn-more",
     images: [
       {
-        url: "/images/andreea.jpg",
+        url: "https://nextgentherapy.co.uk/images/default-social-share.jpg",
         width: 300,
         height: 300,
         alt: "Andreea Horhocea - Psychodynamic Psychotherapist",
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     title: "Why Therapy - Next Generation Therapy",
     description:
       "Learn why therapy is important and how it can help you achieve personal growth and emotional well-being.",
-    images: ["/images/andreea.jpg"],
+    images: ["https://nextgentherapy.co.uk/images/default-social-share.jpg"],
   },
 };
 
