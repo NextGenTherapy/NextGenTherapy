@@ -68,10 +68,9 @@ function getAllPosts() {
 export default async function BlogPostPage({
   params,
 }: {
-  params: { slug?: string };
+  params: { slug: string };
 }) {
   if (!params?.slug) {
-    // Show a loading state if slug is not yet available
     return <div>Loading...</div>;
   }
 
