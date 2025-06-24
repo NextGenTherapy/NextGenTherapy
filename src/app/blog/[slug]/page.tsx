@@ -1,3 +1,6 @@
+export const runtime = "nodejs";
+
+import type { Metadata } from "next";
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
@@ -6,6 +9,44 @@ import html from "remark-html";
 import Button from "@/components/button";
 import Link from "next/link";
 import styles from "../blog.module.css";
+
+// Dynamic metadata for each blog post
+export async function generateMetadata({
+  params,
+}: {
+  params: { slug: string };
+}): Promise<Metadata> {
+  const postsDir = path.join(process.cwd(), "src/content/blog");
+  const filePath = path.join(postsDir, `${params.slug}.md`);
+  if (!fs.existsSync(filePath)) {
+    return {
+      title: "Post not found - Next Generation Therapy",
+      description: "This blog post could not be found.",
+    };
+  }
+  const fileContent = fs.readFileSync(filePath, "utf-8");
+  const { data } = matter(fileContent);
+
+  return {
+    title:
+      data.title !== undefined
+        ? `${data.title} - Next Generation Therapy`
+        : "Blog Post - Next Generation Therapy",
+    description: data.summary || "",
+    openGraph: {
+      title: data.title,
+      description: data.summary || "",
+      url: `https://nextgentherapy.co.uk/blog/${params.slug}`,
+      type: "article",
+      publishedTime: data.date,
+    },
+    twitter: {
+      card: "summary",
+      title: data.title,
+      description: data.summary || "",
+    },
+  };
+}
 
 function getAllPosts() {
   const postsDir = path.join(process.cwd(), "src/content/blog");

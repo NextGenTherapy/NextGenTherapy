@@ -41,3 +41,6 @@ yarn-error.log*
 
 # to-do-list
 to-do.md
+
+# prettierignore
+.prettierignore
