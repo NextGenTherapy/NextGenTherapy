@@ -14,10 +14,11 @@ import styles from "../blog.module.css";
 export async function generateMetadata({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
+  const { slug } = await params;
   const postsDir = path.join(process.cwd(), "src/content/blog");
-  const filePath = path.join(postsDir, `${params.slug}.md`);
+  const filePath = path.join(postsDir, `${slug}.md`);
   if (!fs.existsSync(filePath)) {
     return {
       title: "Post not found - Next Generation Therapy",
@@ -36,7 +37,7 @@ export async function generateMetadata({
     openGraph: {
       title: data.title,
       description: data.summary || "",
-      url: `https://nextgentherapy.co.uk/blog/${params.slug}`,
+      url: `https://nextgentherapy.co.uk/blog/${slug}`,
       type: "article",
       publishedTime: data.date,
     },
@@ -68,24 +69,26 @@ function getAllPosts() {
 export default async function BlogPostPage({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }) {
-  if (!params?.slug) {
+  const { slug } = await params;
+
+  if (!slug) {
     return <div>Loading...</div>;
   }
 
   const posts = getAllPosts();
-  const currentIndex = posts.findIndex((post) => post.slug === params.slug);
+  const currentIndex = posts.findIndex((post) => post.slug === slug);
   const prevPost = posts[currentIndex + 1];
   const nextPost = posts[currentIndex - 1];
 
   const postsDir = path.join(process.cwd(), "src/content/blog");
-  const isValidSlug = /^[a-zA-Z0-9-_]+$/.test(params.slug);
+  const isValidSlug = /^[a-zA-Z0-9-_]+$/.test(slug);
   if (!isValidSlug) {
     return <div>Invalid post slug</div>;
   }
 
-  const filePath = path.join(postsDir, `${params.slug}.md`);
+  const filePath = path.join(postsDir, `${slug}.md`);
   if (!fs.existsSync(filePath)) {
     return <div>Post not found</div>;
   }
