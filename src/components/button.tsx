@@ -7,7 +7,11 @@ interface ButtonProps {
   type?: "button" | "submit" | "reset";
 }
 
-export default function Button({ href, children, type = "button" }: ButtonProps) {
+export default function Button({
+  href,
+  children,
+  type = "button",
+}: ButtonProps) {
   // Only allow internal navigation to prevent open redirects
   if (href && href.startsWith("/")) {
     return (

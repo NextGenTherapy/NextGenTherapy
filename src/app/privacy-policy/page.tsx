@@ -37,9 +37,7 @@ export default function PrivacyPolicy() {
 
         <h2 className={styles.sectionHeading}>How We Use Your Information</h2>
         <ul className={styles.list}>
-          <li>
-            To respond to your enquiries submitted via our contact form.
-          </li>
+          <li>To respond to your enquiries submitted via our contact form.</li>
           <li>To improve our website and services.</li>
           <li>To analyze website usage via Google Analytics.</li>
         </ul>
@@ -47,15 +45,15 @@ export default function PrivacyPolicy() {
         <h2 className={styles.sectionHeading}>Sharing Your Information</h2>
         <p>
           We do not sell or share your personal information with third parties
-          except as necessary to provide our services (for example, email delivery
-          via Resend) or as required by law.
+          except as necessary to provide our services (for example, email
+          delivery via Resend) or as required by law.
         </p>
 
         <h2 className={styles.sectionHeading}>Your Rights</h2>
         <ul className={styles.list}>
           <li>
-            You can request access to, correction of, or deletion of your personal
-            data by contacting us.
+            You can request access to, correction of, or deletion of your
+            personal data by contacting us.
           </li>
           <li>
             You can opt out of Google Analytics tracking using{" "}

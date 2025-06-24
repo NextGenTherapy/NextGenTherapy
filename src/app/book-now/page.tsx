@@ -54,13 +54,13 @@ export default function BookNow() {
             <h2>Ready to Take the First Step?</h2>
             <ul>
               <li>
-                If you&apos;re feeling ready to explore therapy or have questions about the process, I&apos;m here to help.
+                If you&apos;re feeling ready to explore therapy or have
+                questions about the process, I&apos;m here to help.
               </li>
+              <li>Reach out via the contact form below, email, or phone.</li>
               <li>
-                Reach out via the contact form below, email, or phone.
-              </li>
-              <li>
-                I aim to respond within 24 hours to schedule a brief consultation and discuss how we might work together.
+                I aim to respond within 24 hours to schedule a brief
+                consultation and discuss how we might work together.
               </li>
             </ul>
           </article>
@@ -109,7 +109,8 @@ export default function BookNow() {
                   rel="noopener noreferrer"
                   aria-label="View Colchester Business Centre on Google Maps"
                 >
-                  Colchester Business Centre, 1 George Williams Way, Colchester CO1 2JS
+                  Colchester Business Centre, 1 George Williams Way, Colchester
+                  CO1 2JS
                 </a>
               </li>
             </ul>
@@ -138,5 +139,3 @@ export default function BookNow() {
     </div>
   );
 }
-
-

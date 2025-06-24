@@ -6,7 +6,7 @@
   padding: var(--spacing-large);
   background: #fff;
   border-radius: 12px;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.07);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.07);
   display: flex;
   flex-direction: column;
   gap: var(--spacing-large);
@@ -32,7 +32,9 @@
   border-radius: 6px;
   font-size: var(--font-size-base);
   box-sizing: border-box;
-  transition: border-color 0.2s, min-height 0.2s;
+  transition:
+    border-color 0.2s,
+    min-height 0.2s;
   min-height: 40px;
   resize: none;
 }
@@ -53,7 +55,9 @@
   border-radius: 6px;
   font-size: var(--font-size-base);
   box-sizing: border-box;
-  transition: border-color 0.2s, min-height 0.2s;
+  transition:
+    border-color 0.2s,
+    min-height 0.2s;
   overflow-y: auto;
   resize: none; /* Prevent manual resizing */
 }
@@ -94,7 +98,6 @@
   font-size: var(--font-size-base);
   margin-bottom: var(--spacing-small);
 }
-
 
 @media (max-width: 768px) {
   .contactForm {

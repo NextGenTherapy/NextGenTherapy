@@ -1,5 +1,5 @@
 .page li {
-margin-bottom: var(--spacing-medium);
+  margin-bottom: var(--spacing-medium);
 }
 
 .greeting {
@@ -23,8 +23,7 @@ margin-bottom: var(--spacing-medium);
   border-radius: 15px;
 }
 
-
- .topImageContainer{
+.topImageContainer {
   object-fit: cover;
   width: 100%;
   height: 100%;
@@ -56,7 +55,9 @@ margin-bottom: var(--spacing-medium);
   align-items: center;
 }
 
-.hours, .location, .contact {
+.hours,
+.location,
+.contact {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -82,25 +83,28 @@ margin-bottom: var(--spacing-medium);
     margin: var(--spacing-large);
   }
 
-  .contentTop, .contentEnd, .contentMiddle {
+  .contentTop,
+  .contentEnd,
+  .contentMiddle {
     gap: var(--spacing-large);
     margin: var(--spacing-large);
     flex-direction: column;
-  } 
+  }
   .topImageContainer {
     order: -1;
-    display: flex; 
+    display: flex;
     justify-content: center;
-    align-items: center
+    align-items: center;
   }
-
 }
 
 @media (max-width: 768px) {
   .greeting {
     margin: var(--spacing-medium);
   }
- .contentTop, .contentEnd, .contentMiddle {
+  .contentTop,
+  .contentEnd,
+  .contentMiddle {
     gap: var(--spacing-medium);
     margin: var(--spacing-medium);
   }

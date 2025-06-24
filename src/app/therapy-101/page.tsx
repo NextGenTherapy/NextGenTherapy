@@ -48,19 +48,19 @@ export default function LearnMore() {
       <main className={styles.main}>
         <section className={styles.contentTop}>
           <div className={styles.greeting}>
-          <h1>Why Therapy?</h1>
+            <h1>Why Therapy?</h1>
           </div>
           <aside className={styles.imageContainer}>
-          <Image
-            src="/images/learn-more.jpg"
-            alt="Visual of differnt words for stress, anxiety and depression"
-            height={300}
-            width={300}
-            priority
-            className={styles.image}
-          />
+            <Image
+              src="/images/learn-more.jpg"
+              alt="Visual of differnt words for stress, anxiety and depression"
+              height={300}
+              width={300}
+              priority
+              className={styles.image}
+            />
           </aside>
-        </section> 
+        </section>
 
         <section className={styles.contentMiddle}>
           <h2>Why do people seek therapy?</h2>

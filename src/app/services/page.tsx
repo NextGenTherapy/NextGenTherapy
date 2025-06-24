@@ -50,19 +50,36 @@ export default function Services() {
     <div className={styles.page}>
       <main className={styles.main}>
         <div className={styles.greeting}>
-        <h1>Services Provided</h1>
-      </div>
+          <h1>Services Provided</h1>
+        </div>
 
         <section className={styles.contentTop}>
           <article className={styles.topTextContainer}>
             <h2>I offer therapy sessions tailored to help with:</h2>
             <ul>
-              <li>Anxiety & Overwhelm: Managing persistent worry and finding calm.</li>
-              <li>Self-Esteem & Confidence: Building a stronger sense of self-worth.</li>
-              <li>Body Image & Eating Concerns: Developing a healthier relationship with food and your body.</li>
-              <li>Relationship Patterns: Understanding and improving interpersonal dynamics.</li>
-              <li>Teenagers: Supporting them through the complexities of becoming who they want to be.</li>
-              <li>Sessions are available in-person in Colchester or online, providing flexibility to suit your lifestyle.</li>
+              <li>
+                Anxiety & Overwhelm: Managing persistent worry and finding calm.
+              </li>
+              <li>
+                Self-Esteem & Confidence: Building a stronger sense of
+                self-worth.
+              </li>
+              <li>
+                Body Image & Eating Concerns: Developing a healthier
+                relationship with food and your body.
+              </li>
+              <li>
+                Relationship Patterns: Understanding and improving interpersonal
+                dynamics.
+              </li>
+              <li>
+                Teenagers: Supporting them through the complexities of becoming
+                who they want to be.
+              </li>
+              <li>
+                Sessions are available in-person in Colchester or online,
+                providing flexibility to suit your lifestyle.
+              </li>
             </ul>
           </article>
           <aside className={styles.topImageContainer}>
@@ -78,39 +95,39 @@ export default function Services() {
         </section>
 
         <section className={styles.contentEnd}>
-        <div className={styles.childrenSection}>
-        <aside className={styles.endImageContainer}>
-            <Image
-              src="/images/child.jpg"
-              alt="Play therapy session for children"
-              height={300}
-              width={300}
-              className={styles.image}
-            />
-          </aside>
-          <article className={styles.childTextContainer}>
-            <h2>Play Therapy for Children</h2>
-            <p>£60 for the therapeutic hour (50 mins).</p>
-            <p>Discover the benefits in a safe space.</p>
-          </article>
-        </div>
+          <div className={styles.childrenSection}>
+            <aside className={styles.endImageContainer}>
+              <Image
+                src="/images/child.jpg"
+                alt="Play therapy session for children"
+                height={300}
+                width={300}
+                className={styles.image}
+              />
+            </aside>
+            <article className={styles.childTextContainer}>
+              <h2>Play Therapy for Children</h2>
+              <p>£60 for the therapeutic hour (50 mins).</p>
+              <p>Discover the benefits in a safe space.</p>
+            </article>
+          </div>
 
-        <div className={styles.adultsSection}>
-          <aside className={styles.endImageContainer}>
-            <Image
-              src="/images/adult.jpg"
-              alt="Talking therapy session for adults"
-              height={300}
-              width={300}
-              className={styles.image}
-            />
-          </aside>
-          <article className={styles.adultTextContainer}>
-            <h2>Talking Therapy Online or In-Person</h2>
-            <p>£60 for the therapeutic hour (50 mins).</p>
-            <p>Explore new perspectives and grow.</p>
-          </article>
-        </div>
+          <div className={styles.adultsSection}>
+            <aside className={styles.endImageContainer}>
+              <Image
+                src="/images/adult.jpg"
+                alt="Talking therapy session for adults"
+                height={300}
+                width={300}
+                className={styles.image}
+              />
+            </aside>
+            <article className={styles.adultTextContainer}>
+              <h2>Talking Therapy Online or In-Person</h2>
+              <p>£60 for the therapeutic hour (50 mins).</p>
+              <p>Explore new perspectives and grow.</p>
+            </article>
+          </div>
         </section>
 
         <section className={buttonLinksStyles.buttonLinks}>
@@ -122,5 +139,3 @@ export default function Services() {
     </div>
   );
 }
-
-

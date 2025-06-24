@@ -15,7 +15,6 @@
   box-sizing: border-box;
 }
 
-
 .menuButton {
   display: none;
   background: none;
@@ -88,7 +87,7 @@
 }
 
 /* Show the button and hide nav items on smaller screens */
-@media (max-width: 1024px) {
+@media (max-width: 1025px) {
   .menuButton {
     display: block;
   }
@@ -103,7 +102,7 @@
 }
 
 /* Inline navigation for larger screens */
-@media (min-width: 1025px) {
+@media (min-width: 1080px) {
   .navList {
     display: flex;
     flex-direction: row;
@@ -124,17 +123,17 @@
   .nav {
     display: flex;
     align-items: center;
-    justify-content: space-between; 
-    padding: 0 var(--spacing-small); 
+    justify-content: space-between;
+    padding: 0 var(--spacing-small);
   }
 
   .logo {
-    margin-right: auto; 
+    margin-right: auto;
   }
 
-  .menuButton { 
-    margin-left: auto; 
-    right: var(--spacing-small); 
+  .menuButton {
+    margin-left: auto;
+    right: var(--spacing-small);
     padding: 0;
   }
 }

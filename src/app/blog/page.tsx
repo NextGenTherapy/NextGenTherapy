@@ -1,30 +1,36 @@
-import { createClient } from '@sanity/client';
-import Image from 'next/image';
+import fs from "fs";
+import path from "path";
+import matter from "gray-matter";
+import Link from "next/link";
 import styles from "./blog.module.css";
 
-const client = createClient({
-  projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID!,
-  dataset: 'production',
-  useCdn: true,
-  apiVersion: '2023-01-01',
-});
-
-type Post = {
-  _id: string;
+type PostMeta = {
   title: string;
-  slug: { current: string };
+  date: string;
+  slug: string;
   summary?: string;
-  image?: string;
 };
 
-export default async function BlogPage() {
-  const posts: Post[] = await client.fetch(`*[_type == "post"] | order(_createdAt desc){
-    _id,
-    title,
-    slug,
-    summary,
-    "image": mainImage.asset->url
-  }`);
+function getPosts(): PostMeta[] {
+  const postsDir = path.join(process.cwd(), "src/content/blog");
+  const files = fs.readdirSync(postsDir);
+  return files
+    .map((filename) => {
+      const filePath = path.join(postsDir, filename);
+      const fileContent = fs.readFileSync(filePath, "utf-8");
+      const { data } = matter(fileContent);
+      return {
+        title: data.title,
+        date: data.date,
+        slug: filename.replace(/\.md$/, ""),
+        summary: data.summary || "",
+      };
+    })
+    .sort((a, b) => (a.date < b.date ? 1 : -1));
+}
+
+export default function BlogPage() {
+  const posts = getPosts();
   return (
     <div className={styles.page}>
       <section className={styles.greeting}>
@@ -32,21 +38,17 @@ export default async function BlogPage() {
       </section>
       <section className={styles.blogList}>
         {posts.map((post) => (
-          <a key={post._id} href={`/blog/${post.slug.current}`} className={styles.blogCard}>
-            <Image
-              src={post.image ?? "/placeholder.jpg"}
-              alt={post.title}
-              className={styles.blogImage}
-              width={600}
-              height={400}
-              style={{ objectFit: 'cover' }}
-            />
+          <Link
+            key={post.slug}
+            href={`/blog/${post.slug}`}
+            className={styles.blogCard}
+          >
             <div className={styles.blogContent}>
               <h2>{post.title}</h2>
-              {post.summary && <p>{post.summary}</p>}
+              <p>{post.summary}</p>
               <span className={styles.readMore}>Read more</span>
             </div>
-          </a>
+          </Link>
         ))}
       </section>
     </div>

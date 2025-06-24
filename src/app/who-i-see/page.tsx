@@ -48,10 +48,22 @@ export const metadata: Metadata = {
 // Image data for the photo gallery
 const images = [
   { src: "/images/office.jpg", alt: "Picture of office with laptop" },
-  { src: "/images/doll-house.jpg", alt: "Picture of doll house for play therapy for children" },
-  { src: "/images/board-games.jpg", alt: "Picture of shelves including games for children to play with" },
-  { src: "/images/room-2.jpg", alt: "Picture of therapy room with sofa and arm chair" },
-  { src: "/images/room.jpg", alt: "Picture of therapy room with sofa and arm chair" },
+  {
+    src: "/images/doll-house.jpg",
+    alt: "Picture of doll house for play therapy for children",
+  },
+  {
+    src: "/images/board-games.jpg",
+    alt: "Picture of shelves including games for children to play with",
+  },
+  {
+    src: "/images/room-2.jpg",
+    alt: "Picture of therapy room with sofa and arm chair",
+  },
+  {
+    src: "/images/room.jpg",
+    alt: "Picture of therapy room with sofa and arm chair",
+  },
   { src: "/images/shelf.jpeg", alt: "Picture of shelf with plants on" },
 ];
 
@@ -61,10 +73,9 @@ export default function WhoISee() {
       {/* Page top */}
       <main className={styles.main}>
         <div className={styles.greeting}>
-        <h1>Who Do I Work With?</h1>
-      </div>
+          <h1>Who Do I Work With?</h1>
+        </div>
 
-      
         {/* Intro Section */}
         <section className={styles.contentTop}>
           <article className={styles.list}>
@@ -112,10 +123,10 @@ export default function WhoISee() {
         </section>
 
         {/* Location Section */}
-          <div className={styles.locationIntro}>
-            <h2>Location & Working Hours for Colchester and online sessions.</h2>
-          </div>
-          <section className={styles.contentEnd}>
+        <div className={styles.locationIntro}>
+          <h2>Location & Working Hours for Colchester and online sessions.</h2>
+        </div>
+        <section className={styles.contentEnd}>
           <div className={styles.locationContent}>
             <div className={styles.centeredList}>
               <div>
@@ -127,7 +138,7 @@ export default function WhoISee() {
                 <ul>
                   <li>9am - 2pm</li>
                 </ul>
-            </div>
+              </div>
             </div>
             <aside className={styles.map}>
               <iframe

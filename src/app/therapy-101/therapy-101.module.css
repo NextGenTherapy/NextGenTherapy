@@ -20,22 +20,22 @@
   border-radius: 15px;
 }
 
-.greeting, .imageContainer {
-  flex: 1; 
-  max-width: 50%; 
-  text-align: center; 
-  box-sizing: border-box; 
+.greeting,
+.imageContainer {
+  flex: 1;
+  max-width: 50%;
+  text-align: center;
+  box-sizing: border-box;
 }
 
 .imageContainer {
   width: 100%;
   height: 100%;
   object-fit: cover;
- 
 }
 
-
-.contentMiddle, .contentEnd{
+.contentMiddle,
+.contentEnd {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -44,11 +44,11 @@
   gap: var(--spacing-medium);
 }
 
-.contentMiddle h2, .contentEnd h2 {
+.contentMiddle h2,
+.contentEnd h2 {
   text-align: center;
   margin-bottom: var(--spacing-large);
 }
-
 
 .list li {
   margin-top: var(--spacing-large);
@@ -65,7 +65,6 @@
   margin-bottom: var(--spacing-small);
 }
 
-
 /* Responsive Design */
 
 /* iPad (Tablet) Styles */
@@ -74,7 +73,8 @@
     margin: var(--spacing-large);
   }
 
-  .contentTop, .contentMiddle, 
+  .contentTop,
+  .contentMiddle,
   .contentEnd {
     gap: var(--spacing-large);
     margin: var(--spacing-large);
@@ -83,7 +83,8 @@
 
 /* Phone Styles */
 @media (max-width: 768px) {
-  .contentTop, .contentMiddle, 
+  .contentTop,
+  .contentMiddle,
   .contentEnd {
     gap: var(--spacing-medium);
     margin: var(--spacing-medium);
@@ -92,12 +93,12 @@
   .contentTop {
     flex-direction: column;
   }
- 
+
   .greeting {
     margin: var(--spacing-medium);
   }
 
-   .imageContainer {
+  .imageContainer {
     display: flex;
     justify-content: center;
     align-items: center;

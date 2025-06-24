@@ -1,35 +1,35 @@
 /* Default Styling for buttonLinks */
+.buttonLinks {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--spacing-medium);
+  margin: var(--spacing-large) auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Media Query for Tablets (max-width: 768px) */
+@media (max-width: 768px) {
   .buttonLinks {
-    display: flex;
-    justify-content: space-around;
-    align-items: center; 
-    flex-wrap: wrap; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     gap: var(--spacing-medium);
     margin: var(--spacing-large) auto;
-    width: 100%; 
-    box-sizing: border-box; 
+    width: 100%;
   }
-  
-  /* Media Query for Tablets (max-width: 768px) */
-  @media (max-width: 768px) {
-    .buttonLinks {
-      flex-direction: column; 
-      justify-content: center; 
-      align-items: center; 
-      gap: var(--spacing-medium); 
-      margin: var(--spacing-large) auto; 
-      width: 100%; 
-    }
+}
+
+/* Media Query for Small Screens (max-width: 480px) */
+@media (max-width: 480px) {
+  .buttonLinks {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: var(--spacing-small);
+    margin: var(--spacing-medium) auto;
+    width: 100%;
   }
-  
-  /* Media Query for Small Screens (max-width: 480px) */
-  @media (max-width: 480px) {
-    .buttonLinks {
-      flex-direction: column;
-      justify-content: center;
-      align-items: center; 
-      gap: var(--spacing-small); 
-      margin: var(--spacing-medium) auto; 
-      width: 100%; 
-    }
-  }
+}

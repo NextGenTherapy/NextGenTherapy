@@ -4,7 +4,7 @@
   padding: var(--spacing-large);
   background: #fff;
   border-radius: 12px;
-  box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.06);
   font-family: var(--font-family);
   color: var(--color-text);
 }

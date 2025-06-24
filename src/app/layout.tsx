@@ -4,21 +4,29 @@ import "../styles/variables.css";
 import Header from "../components/header";
 import Footer from "../components/footer";
 import { Analytics } from "@vercel/analytics/next";
-import { GoogleAnalytics } from '@next/third-parties/google';
+import { GoogleAnalytics } from "@next/third-parties/google";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://nextgentherapy.co.uk"),
   title: "Next Generation Therapy",
-  description: "Providing professional therapy and psychodynamic psychotherapist services for children, teenagers, young adults and adults. Specializing in mental health, personal growth, and emotional well-being in Colchester and online. Contact us today.",
+  description:
+    "Providing professional therapy and psychodynamic psychotherapist services for children, teenagers, young adults and adults. Specializing in mental health, personal growth, and emotional well-being in Colchester and online. Contact us today.",
   keywords: [
-    "therapy", "psychotherapy", "mental health", "Colchester", "online",
-    "psychodynamic therapy", "personal growth", "emotional well-being", "online"
+    "therapy",
+    "psychotherapy",
+    "mental health",
+    "Colchester",
+    "online",
+    "psychodynamic therapy",
+    "personal growth",
+    "emotional well-being",
+    "online",
   ],
   openGraph: {
     title: "Next Generation Therapy",
-    description: "Providing professional therapy and psychodynamic psychotherapist services for children, teenagers, young adults and adults.",
+    description:
+      "Providing professional therapy and psychodynamic psychotherapist services for children, teenagers, young adults and adults.",
     url: "https://nextgentherapy.co.uk",
     images: [
       {
@@ -35,17 +43,25 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Next Generation Therapy",
-    description: "Providing professional therapy and psychodynamic psychotherapist services for children, teenagers, young adults and adults.",
+    description:
+      "Providing professional therapy and psychodynamic psychotherapist services for children, teenagers, young adults and adults.",
     images: ["../images/default-social-share.jpg"],
   },
   robots: "index, follow",
 };
 
-export default async function RootLayout({ children }: { children: React.ReactNode }) {
+export default async function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="en-GB">
       <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1, viewport-fit=cover"
+        />
         <link rel="icon" href="/favicon.ico" type="image/x-icon" />
         <link rel="canonical" href="https://nextgentherapy.co.uk" />
         <script
@@ -61,7 +77,8 @@ export default async function RootLayout({ children }: { children: React.ReactNo
                 "Providing professional therapy and psychodynamic psychotherapist services for children, teenagers, young adults and adults. Specializing in mental health, personal growth, and emotional well-being in Colchester and Online.",
               address: {
                 "@type": "PostalAddress",
-                streetAddress: "Colchester Buisness Center, 1 George Williams Way",
+                streetAddress:
+                  "Colchester Buisness Center, 1 George Williams Way",
                 addressLocality: "Colchester",
                 addressRegion: "Essex",
                 postalCode: "CO1 2JS",
@@ -77,10 +94,14 @@ export default async function RootLayout({ children }: { children: React.ReactNo
         />
       </head>
       <body>
-        <a href="#main-content" className="skip-link">Skip to content</a>
+        <a href="#main-content" className="skip-link">
+          Skip to content
+        </a>
         <div className="layout-container">
           <Header />
-          <main id="main-content" className="page">{children}</main>
+          <main id="main-content" className="page">
+            {children}
+          </main>
           <Analytics />
           <Footer />
         </div>

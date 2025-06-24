@@ -22,7 +22,6 @@
   transition: all 0.3s ease-in-out;
 }
 
-
 .imageText {
   text-align: center;
   color: var(--color-text-secondary);
@@ -33,9 +32,9 @@
   padding: var(--spacing-xlarge);
   display: flex;
   flex-direction: row;
-  justify-content: center; 
-  align-items: center; 
-  gap: var(--spacing-xlarge); 
+  justify-content: center;
+  align-items: center;
+  gap: var(--spacing-xlarge);
 }
 
 /* Content End Styles */
@@ -43,11 +42,11 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  flex-wrap: wrap; 
+  flex-wrap: wrap;
   gap: var(--spacing-large);
   margin: var(--spacing-xlarge);
   box-sizing: border-box;
-  flex-direction: row; 
+  flex-direction: row;
 }
 
 .greeting {
@@ -59,15 +58,15 @@
 
 .textContainer {
   flex: 1;
-  max-width: 50%; 
+  max-width: 50%;
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-small); 
+  gap: var(--spacing-small);
 }
 
 .imageContainer {
   flex: 1;
-  max-width: 50%; 
+  max-width: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -91,7 +90,7 @@
   }
 
   .buttonLinksContainer {
-    flex-direction: column; 
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: var(--spacing-large);
@@ -102,34 +101,34 @@
   }
 
   .contentEnd {
-    gap: var(--spacing-large); 
+    gap: var(--spacing-large);
     margin: var(--spacing-large);
   }
 
   .textContainer {
-    max-width: 100%; 
+    max-width: 100%;
   }
 }
 
 /* Adjustments for screens smaller than 768px */
 @media (max-width: 768px) {
   .imageLogoContainer {
-    height: 40vh; 
+    height: 40vh;
     padding: var(--spacing-large);
   }
 
   .buttonLinksContainer {
-    gap: var(--spacing-medium); 
+    gap: var(--spacing-medium);
   }
 
   .greeting {
-    text-align: center; 
-    margin: var(--spacing-large); 
+    text-align: center;
+    margin: var(--spacing-large);
   }
 
   .contentEnd {
-    gap: var(--spacing-medium); 
-    margin: var(--spacing-medium); 
+    gap: var(--spacing-medium);
+    margin: var(--spacing-medium);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -143,8 +142,8 @@
 /* Adjustments for screens smaller than 480px */
 @media (max-width: 480px) {
   .imageLogoContainer {
-    height: 35vh; 
-    max-width: 95%; 
+    height: 35vh;
+    max-width: 95%;
     padding: var(--spacing-large);
   }
   .buttonLinksContainer {
@@ -154,21 +153,21 @@
     justify-content: center;
     gap: var(--spacing-medium);
     text-align: center;
-    width: 100%; 
+    width: 100%;
   }
 }
 
 /* Adjustments for screens smaller than 470px */
 @media (max-width: 470px) {
   .imageLogoContainer {
-    height: 30vh; 
+    height: 30vh;
   }
 }
 
 /* Adjustments for screens smaller than 360px */
 @media (max-width: 360px) {
   .imageLogoContainer {
-    display: none; 
+    display: none;
   }
 
   .ContentTop {

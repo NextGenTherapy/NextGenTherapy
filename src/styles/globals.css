@@ -1,5 +1,5 @@
 :root {
-  --color-header-background: #164B39;
+  --color-header-background: #164b39;
   --color-background: #fefae0;
   --color-text: #333333;
   --spacing-small: 8px;
@@ -9,20 +9,42 @@
   --header-height: 100px;
   --footer-height: 200px;
 }
-#root, #__next {
+#root,
+#__next {
   display: flex;
   flex-direction: column;
   height: 100%;
 }
 
 /* Font sizes*/
-h1 { font-size: var(--font-size-h1); font-weight: bold; }
-h2 { font-size: var(--font-size-h2); font-weight: bold; }
-h3 { font-size: var(--font-size-h3); font-weight: bold; }
-h4 { font-size: var(--font-size-h4); font-weight: bold; }
-h5 { font-size: var(--font-size-h5); font-weight: bold; }
-h6 { font-size: var(--font-size-h6); font-weight: bold; }
-p, li { font-size: var(--font-size-base); }
+h1 {
+  font-size: var(--font-size-h1);
+  font-weight: bold;
+}
+h2 {
+  font-size: var(--font-size-h2);
+  font-weight: bold;
+}
+h3 {
+  font-size: var(--font-size-h3);
+  font-weight: bold;
+}
+h4 {
+  font-size: var(--font-size-h4);
+  font-weight: bold;
+}
+h5 {
+  font-size: var(--font-size-h5);
+  font-weight: bold;
+}
+h6 {
+  font-size: var(--font-size-h6);
+  font-weight: bold;
+}
+p,
+li {
+  font-size: var(--font-size-base);
+}
 
 html,
 body {
@@ -32,14 +54,14 @@ body {
   overflow-x: hidden;
   margin: 0;
   padding: 0;
-  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  box-sizing: border-box;  
+  box-sizing: border-box;
 }
 .page {
-  background-color: var(--color-background); 
-  flex: 1; 
+  background-color: var(--color-background);
+  flex: 1;
   padding: 0;
   display: flex;
   flex-direction: column;
@@ -48,9 +70,8 @@ body {
 .layout-container {
   display: flex;
   flex-direction: column;
-  min-height: 100vh; 
+  min-height: 100vh;
 }
-
 
 a {
   color: inherit;
@@ -67,7 +88,7 @@ a:focus {
 }
 
 button {
-  -webkit-appearance: none; 
+  -webkit-appearance: none;
   appearance: none;
   margin: 0;
 }
@@ -97,4 +118,3 @@ button {
   height: auto;
   outline: 2px solid var(--color-accent);
 }
-

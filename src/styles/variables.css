@@ -1,44 +1,43 @@
 :root {
-    --color-primary: #ffffff; 
-    --color-secondary: #2ecc71; 
-    --color-background: #fefae0;
-    --color-text: #000000; 
-    --color-text-secondary: #ffffff;
-    --color-accent: #dc8f70;
-    --color-accent-hover: #000000;
+  --color-primary: #ffffff;
+  --color-secondary: #2ecc71;
+  --color-background: #fefae0;
+  --color-text: #000000;
+  --color-text-secondary: #ffffff;
+  --color-accent: #dc8f70;
+  --color-accent-hover: #000000;
 
-    /* header and footer colors*/
-    --color-header-background: #164B39;
-    --color-header-text: #ffffff;
+  /* header and footer colors*/
+  --color-header-background: #164b39;
+  --color-header-text: #ffffff;
 
-    /* Button colors*/
-    --color-button: #164B39;
-    --color-button-hover: #d8995edc;
-    --color-button-accent: #dbbfa4; 
-   
-    --color-button-home: #DC7726;
-    --color-button-home-hover: #4A545D;
-    ; 
-  
-    /* Spacing Variables */
-    --spacing-small: 12px;
-    --spacing-medium: 20px;
-    --spacing-large: 30px;
-    --spacing-xlarge: 200px;
-    --header-height: 100px;
-    --footer-height: 200px;
-  
-    /* Font styling */
-    --font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    
-    /* Font sizes */
-    --font-size-h1: 2.5rem;
-    --font-size-h2: 2rem;
-    --font-size-h3: 1.5rem;
-    --font-size-h4: 1.25rem;
-    --font-size-h5: 1rem;
-    --font-size-h6: 0.875rem;
-    --font-size-base: 1rem;
-    --font-size-large: 20px;
-    --font-size-logo: 35px;
-  }
+  /* Button colors*/
+  --color-button: #164b39;
+  --color-button-hover: #d8995edc;
+  --color-button-accent: #dbbfa4;
+
+  --color-button-home: #dc7726;
+  --color-button-home-hover: #4a545d;
+  /* Spacing Variables */
+  --spacing-small: 12px;
+  --spacing-medium: 20px;
+  --spacing-large: 30px;
+  --spacing-xlarge: 200px;
+  --header-height: 100px;
+  --footer-height: 200px;
+
+  /* Font styling */
+  --font-family:
+    "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+
+  /* Font sizes */
+  --font-size-h1: 2.5rem;
+  --font-size-h2: 2rem;
+  --font-size-h3: 1.5rem;
+  --font-size-h4: 1.25rem;
+  --font-size-h5: 1rem;
+  --font-size-h6: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-large: 20px;
+  --font-size-logo: 35px;
+}

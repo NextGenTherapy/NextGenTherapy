@@ -13,10 +13,12 @@ export default function ContactForm() {
     setStatus("idle");
     const form = event.currentTarget;
     const formData = {
-      firstName: (form.elements.namedItem("firstName") as HTMLInputElement).value,
+      firstName: (form.elements.namedItem("firstName") as HTMLInputElement)
+        .value,
       lastName: (form.elements.namedItem("lastName") as HTMLInputElement).value,
       email: (form.elements.namedItem("email") as HTMLInputElement).value,
-      message: (form.elements.namedItem("message") as HTMLTextAreaElement).value,
+      message: (form.elements.namedItem("message") as HTMLTextAreaElement)
+        .value,
     };
 
     try {
@@ -48,10 +50,14 @@ export default function ContactForm() {
   return (
     <form className={styles.contactForm} onSubmit={handleSubmit}>
       {status === "success" && (
-        <div className={styles.statusSuccess}>Thank you! Your message has been sent.</div>
+        <div className={styles.statusSuccess}>
+          Thank you! Your message has been sent.
+        </div>
       )}
       {status === "error" && (
-        <div className={styles.statusError}>Sorry, something went wrong. Please try again.</div>
+        <div className={styles.statusError}>
+          Sorry, something went wrong. Please try again.
+        </div>
       )}
       <div className={styles.formGroup}>
         <label htmlFor="firstName">First Name</label>

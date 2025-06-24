@@ -5,7 +5,6 @@
   margin: var(--spacing-xlarge);
 }
 
-
 .contentTop {
   box-sizing: border-box;
   display: flex;
@@ -15,15 +14,15 @@
   margin: var(--spacing-xlarge);
   gap: var(--spacing-xlarge);
 }
- 
+
 .topTextContainer li {
   list-style: circle;
- margin-bottom: var(--spacing-medium);
- }
+  margin-bottom: var(--spacing-medium);
+}
 
- .topTextContainer h2 {
+.topTextContainer h2 {
   text-align: center;
- }
+}
 
 .contentEnd {
   box-sizing: border-box;
@@ -39,13 +38,15 @@
   border-radius: 15px;
 }
 
- .topTextContainer, .childTextContainer, .adultTextContainer  {
+.topTextContainer,
+.childTextContainer,
+.adultTextContainer {
   text-align: left;
-  width: 100%
- }
+  width: 100%;
+}
 
-
- .topImageContainer, .endImageContainer {
+.topImageContainer,
+.endImageContainer {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -55,7 +56,6 @@
   min-width: 200px;
 }
 
-
 /* Responsive Design */
 
 /* iPad (Tablet) Styles */
@@ -64,7 +64,8 @@
     margin: var(--spacing-large);
   }
 
-  .contentTop, .contentEnd {
+  .contentTop,
+  .contentEnd {
     flex-direction: column;
     gap: var(--spacing-large);
     margin: var(--spacing-large);
@@ -73,7 +74,7 @@
     order: -1;
     display: flex; /* Enable flexbox for centering */
     justify-content: center; /* Center content horizontally */
-    align-items: center
+    align-items: center;
   }
 }
 
@@ -81,20 +82,14 @@
   .greeting {
     margin: var(--spacing-medium);
   }
- .contentTop, .contentEnd {
+  .contentTop,
+  .contentEnd {
     gap: var(--spacing-medium);
     margin: var(--spacing-medium);
   }
 
-  .adultTextContainer, .childTextContainer {
+  .adultTextContainer,
+  .childTextContainer {
     text-align: center;
   }
 }
-
-
-
-
-
-
-
-
