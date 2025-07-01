@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import styles from "./page.module.scss";
-import ButtonHome from "../components/ui/button-home";
 
 function getMetadata(): Metadata {
   const siteUrl =
@@ -46,17 +46,6 @@ export default function Home() {
         {/* ContentTop Section */}
         <section className={styles.contentTop}>
           <div className={styles.imageLogoContainer}></div>
-          <div className={styles.imageText}>
-            <h1>
-              Come explore a new path to healing with a safe space for growth
-              and self-discovery!
-            </h1>
-          </div>
-          <div className={styles.buttonLinksContainer}>
-            <ButtonHome href="/about-therapy">About Therapy</ButtonHome>
-            <ButtonHome href="/services">Services</ButtonHome>
-            <ButtonHome href="/book-now">Book Now</ButtonHome>
-          </div>
         </section>
 
         {/* ContentEnd Section */}
@@ -76,27 +65,27 @@ export default function Home() {
               />
             </div>
             <div className={styles.textContainer}>
-              <div className={styles.introCard}>
+              <Link href="/about" className={styles.introCard}>
                 <h3>About Me</h3>
                 <p>
                   A psychodynamic psychotherapist offering 1-to-1 sessions in
                   Colchester and online.
                 </p>
-              </div>
-              <div className={styles.servicesCard}>
+              </Link>
+              <Link href="/services" className={styles.servicesCard}>
                 <h3>Who I Help</h3>
                 <p>
                   I work with people of any age addressing mental health challenges
                   such as anxiety, depression, stress, eating disorders, and more.
                 </p>
-              </div>
-              <div className={styles.approachCard}>
+              </Link>
+              <Link href="/services" className={styles.approachCard}>
                 <h3>My Approach</h3>
                 <p>
                   I focus on creating a safe, compassionate, and supportive
                   environment where you can achieve meaningful and lasting change.
                 </p>
-              </div>
+              </Link>
             </div>
           </div>
         </section>
