@@ -1,10 +1,8 @@
-/* Safari-specific fixes for local development */
-/* Ensure CSS custom properties are processed correctly in Safari */
+/* Variables are now centralized in variables.scss */
 *, *::before, *::after {
   box-sizing: border-box;
 }
 
-/* Variables are now centralized in variables.scss */
 #root,
 #__next {
   display: flex;
@@ -148,4 +146,12 @@ body {
   color: #000000 !important; /* Fallback for Safari */
 }
 
-/* Ensure variables load first */
+/* Safari fallback styles - these should always work */
+body {
+  background-color: #fefae0; /* Fallback */
+  background-color: var(--color-background);
+  color: #000000; /* Fallback */
+  color: var(--color-text-primary);
+}
+
+/* Safari-specific fixes for local development */
