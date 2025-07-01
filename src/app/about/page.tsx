@@ -43,6 +43,28 @@ export const metadata: Metadata = {
   },
 };
 
+// Therapy room images for gallery
+const therapyRoomImages = [
+  { src: "/images/office.jpg", alt: "Picture of office with laptop" },
+  {
+    src: "/images/doll-house.jpg",
+    alt: "Picture of doll house for play therapy for children",
+  },
+  {
+    src: "/images/board-games.jpg",
+    alt: "Picture of shelves including games for children to play with",
+  },
+  {
+    src: "/images/room-2.jpg",
+    alt: "Picture of therapy room with sofa and arm chair",
+  },
+  {
+    src: "/images/room.jpg",
+    alt: "Picture of therapy room with sofa and arm chair",
+  },
+  { src: "/images/shelf.jpeg", alt: "Picture of shelf with plants on" },
+];
+
 export default function AboutMe() {
   return (
     <div className={styles.page}>
@@ -156,6 +178,25 @@ export default function AboutMe() {
               </p>
             </div>
           </article>
+        </section>
+
+        {/* Therapy Room Gallery */}
+        <section className={styles.gallerySection}>
+          <h2>My Therapy Environment</h2>
+          <div className={styles.therapyGallery}>
+            {therapyRoomImages.map((image, index) => (
+              <div key={index} className={styles.galleryItem}>
+                <Image
+                  src={image.src}
+                  alt={image.alt}
+                  height={300}
+                  width={400}
+                  className={styles.galleryImage}
+                  priority={index < 2}
+                />
+              </div>
+            ))}
+          </div>
         </section>
 
         <section className={buttonLinksStyles.buttonLinks}>
