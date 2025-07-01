@@ -136,24 +136,42 @@
   border-radius: var(--border-radius-large);
 }
 
-/* Responsive Design */
+/* Enhanced Responsive Design */
+@media (max-width: 1200px) {
+  .therapyGallery {
+    gap: var(--spacing-medium);
+  }
+}
+
 @media (max-width: 1024px) {
   .main {
-    padding: 0 var(--spacing-medium);
+    padding: 0 var(--spacing-large);
   }
   
   .imageContainer .image {
-    max-width: 350px;
+    max-width: 400px;
     height: auto;
   }
   
   .therapyGallery {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 1fr);
+    gap: var(--spacing-medium);
+  }
+  
+  .introSection,
+  .approachSection,
+  .philosophySection,
+  .practiceSection {
+    padding: var(--spacing-large);
   }
 }
 
 @media (max-width: 768px) {
+  .main {
+    padding: 0 var(--spacing-medium);
+  }
+  
   .heroSection {
     padding: var(--spacing-large) 0;
   }
@@ -182,7 +200,7 @@
   .therapyGallery {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(6, 1fr);
-    gap: var(--spacing-small);
+    gap: var(--spacing-medium);
   }
   
   .galleryImage {
@@ -195,8 +213,32 @@
     padding: 0 var(--spacing-small);
   }
   
+  .heroSection {
+    padding: var(--spacing-medium) 0;
+  }
+  
+  .greeting h1 {
+    font-size: var(--font-size-h4);
+  }
+  
   .imageContainer .image {
     max-width: 250px;
     height: auto;
+  }
+  
+  .introSection,
+  .approachSection,
+  .philosophySection,
+  .practiceSection {
+    padding: var(--spacing-small);
+    margin-bottom: var(--spacing-small);
+  }
+  
+  .therapyGallery {
+    gap: var(--spacing-small);
+  }
+  
+  .galleryImage {
+    height: 180px;
   }
 }

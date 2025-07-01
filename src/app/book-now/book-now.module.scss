@@ -176,14 +176,20 @@
   100% { transform: rotate(360deg); }
 }
 
-/* Responsive Design */
+/* Enhanced Responsive Design */
+@media (max-width: 1200px) {
+  .contactInfo {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-medium);
+  }
+}
+
 @media (max-width: 1024px) {
   .main {
-    padding: 0 var(--spacing-medium);
+    padding: 0 var(--spacing-large);
   }
   
-  .contentTop,
-  .contentMiddle {
+  .contentTop {
     flex-direction: column;
     gap: var(--spacing-large);
   }
@@ -191,6 +197,7 @@
   .topImageContainer {
     order: -1;
     flex: none;
+    max-width: 400px;
   }
   
   .contentEnd {
@@ -199,6 +206,10 @@
 }
 
 @media (max-width: 768px) {
+  .main {
+    padding: 0 var(--spacing-medium);
+  }
+  
   .greeting {
     padding: var(--spacing-large) 0;
     
@@ -209,23 +220,56 @@
   
   .contentTop,
   .contentMiddle {
-    gap: var(--spacing-medium);
-    margin: var(--spacing-medium) 0;
+    gap: var(--spacing-large);
+    margin: var(--spacing-large) 0;
   }
   
   .contentEnd {
-    padding-bottom: var(--spacing-large);
-    margin: var(--spacing-medium) 0;
+    margin: var(--spacing-large) 0;
   }
   
   .contactInfo {
     grid-template-columns: 1fr;
     gap: var(--spacing-medium);
   }
+  
+  .topImageContainer {
+    max-width: 300px;
+  }
+  
+  .contactCard,
+  .locationCard,
+  .hoursCard {
+    padding: var(--spacing-medium);
+  }
 }
 
 @media (max-width: 480px) {
   .main {
     padding: 0 var(--spacing-small);
+  }
+  
+  .greeting {
+    padding: var(--spacing-medium) 0;
+    
+    h1 {
+      font-size: var(--font-size-h4);
+    }
+  }
+  
+  .contentTop,
+  .contentMiddle,
+  .contentEnd {
+    margin: var(--spacing-medium) 0;
+  }
+  
+  .topImageContainer {
+    max-width: 250px;
+  }
+  
+  .contactCard,
+  .locationCard,
+  .hoursCard {
+    padding: var(--spacing-small);
   }
 }

@@ -246,13 +246,24 @@
 }
 
 /* Responsive Design */
+@media (max-width: 1200px) {
+  .contentGrid {
+    gap: var(--spacing-large);
+  }
+  
+  .servicesList {
+    gap: var(--spacing-medium);
+  }
+}
+
 @media (max-width: 1024px) {
   .main {
-    padding: 0 var(--spacing-medium);
+    padding: 0 var(--spacing-large);
   }
   
   .servicesOverview .contentGrid {
     flex-direction: column-reverse;
+    gap: var(--spacing-large);
   }
 
   .contentEnd {
@@ -262,10 +273,7 @@
 
   .imageContainer {
     flex: none;
-  }
-  
-  .topImageContainer {
-    order: -1;
+    max-width: 400px;
   }
   
   .childrenSection,
@@ -273,12 +281,13 @@
     flex-direction: column;
     text-align: center;
     gap: var(--spacing-large);
-    padding: var(--spacing-medium);
+    padding: var(--spacing-large);
   }
   
   .endImageContainer {
     order: -1;
     flex: none;
+    max-width: 300px;
   }
   
   .faqSection {
@@ -287,10 +296,15 @@
   
   .faqContainer {
     max-width: 100%;
+    padding: 0 var(--spacing-medium);
   }
 }
 
 @media (max-width: 768px) {
+  .main {
+    padding: 0 var(--spacing-medium);
+  }
+  
   .greeting {
     padding: var(--spacing-large) 0;
     
@@ -299,9 +313,8 @@
     }
   }
   
-  .contentTop,
+  .servicesOverview,
   .contentEnd {
-    gap: var(--spacing-large);
     margin: var(--spacing-large) 0;
   }
   
@@ -314,32 +327,72 @@
     }
   }
   
-  .clientList,
   .servicesList {
     flex-direction: column;
     gap: var(--spacing-medium);
   }
   
+  .childrenSection,
+  .adultsSection {
+    padding: var(--spacing-medium);
+    gap: var(--spacing-medium);
+  }
+  
   .faqSection {
-    margin: var(--spacing-medium) 0;
+    margin: var(--spacing-large) 0;
   }
   
   .faqItem {
     padding: var(--spacing-medium);
+    margin-bottom: var(--spacing-medium);
   }
   
   .faqContainer h2 {
-    font-size: var(--font-size-medium);
+    font-size: var(--font-size-h3);
     margin-bottom: var(--spacing-large);
   }
   
   .faqItem h3 {
-    font-size: var(--font-size-base);
+    font-size: var(--font-size-medium);
   }
 }
 
 @media (max-width: 480px) {
   .main {
     padding: 0 var(--spacing-small);
+  }
+  
+  .greeting {
+    padding: var(--spacing-medium) 0;
+    
+    h1 {
+      font-size: var(--font-size-h4);
+    }
+  }
+  
+  .imageContainer,
+  .endImageContainer {
+    max-width: 250px;
+  }
+  
+  .childrenSection,
+  .adultsSection {
+    padding: var(--spacing-small);
+  }
+  
+  .faqContainer {
+    padding: 0 var(--spacing-small);
+  }
+  
+  .faqItem {
+    padding: var(--spacing-small);
+  }
+  
+  .faqContainer h2 {
+    font-size: var(--font-size-h4);
+  }
+  
+  .faqItem h3 {
+    font-size: var(--font-size-base);
   }
 }

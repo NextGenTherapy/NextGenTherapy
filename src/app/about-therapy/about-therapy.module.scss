@@ -187,10 +187,17 @@
   min-height: 300px;
 }
 
-/* Responsive Design */
+/* Enhanced Responsive Design */
+@media (max-width: 1200px) {
+  .benefitsGrid {
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: var(--spacing-medium);
+  }
+}
+
 @media (max-width: 1024px) {
   .main {
-    padding: 0 var(--spacing-medium);
+    padding: 0 var(--spacing-large);
   }
 
   .contentGrid {
@@ -200,10 +207,11 @@
 
   .imageContainer {
     flex: none;
+    max-width: 400px;
   }
 
   .benefitsGrid {
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: var(--spacing-medium);
   }
 
@@ -214,10 +222,16 @@
 
   .hoursContainer {
     flex: none;
+    max-width: 400px;
+    margin: 0 auto;
   }
 }
 
 @media (max-width: 768px) {
+  .main {
+    padding: 0 var(--spacing-medium);
+  }
+  
   .heroSection {
     padding: var(--spacing-large) 0;
   }
@@ -230,18 +244,49 @@
     font-size: var(--font-size-base);
   }
 
+  .whyTherapySection,
+  .howTherapyHelpsSection,
+  .locationSection {
+    margin: var(--spacing-large) 0;
+  }
+
   .benefitsGrid {
     grid-template-columns: 1fr;
+    gap: var(--spacing-medium);
   }
 
   .benefitCard {
     padding: var(--spacing-medium);
+  }
+  
+  .imageContainer {
+    max-width: 300px;
   }
 }
 
 @media (max-width: 480px) {
   .main {
     padding: 0 var(--spacing-small);
+  }
+  
+  .heroSection {
+    padding: var(--spacing-medium) 0;
+  }
+
+  .greeting h1 {
+    font-size: var(--font-size-h4);
+  }
+  
+  .imageContainer {
+    max-width: 250px;
+  }
+  
+  .benefitCard {
+    padding: var(--spacing-small);
+  }
+  
+  .hours {
+    padding: var(--spacing-medium);
   }
 
   .map {
