@@ -107,7 +107,7 @@
 }
 
 .menuButton[aria-expanded="true"] .hamburgerIcon span:nth-child(1) {
-  transform: rotate(45deg) translate(6px, 6px);
+  transform: rotate(45deg) translate(var(--transform-translate-small), var(--transform-translate-small));
 }
 
 .menuButton[aria-expanded="true"] .hamburgerIcon span:nth-child(2) {
@@ -115,18 +115,18 @@
 }
 
 .menuButton[aria-expanded="true"] .hamburgerIcon span:nth-child(3) {
-  transform: rotate(-45deg) translate(6px, -6px);
+  transform: rotate(-45deg) translate(var(--transform-translate-small), calc(-1 * var(--transform-translate-small)));
 }
 
 /* Focus indicators */
 .menuButton:focus {
-  outline: 2px solid var(--color-accent);
-  outline-offset: 2px;
+  outline: var(--outline-width) solid var(--color-accent);
+  outline-offset: var(--outline-offset);
 }
 
 .navItem a:focus {
-  outline: 2px solid var(--color-accent);
-  outline-offset: 2px;
+  outline: var(--outline-width) solid var(--color-accent);
+  outline-offset: var(--outline-offset);
   border-radius: 4px;
 }
 

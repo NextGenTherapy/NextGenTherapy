@@ -70,7 +70,7 @@
 
 /* Footer bottom section */
 .footerBottom {
-  border-top: 1px solid var(--color-border-light);
+  border-top: var(--border-width) solid var(--color-border-light);
   padding-top: var(--spacing-medium);
   margin-top: var(--spacing-large);
   display: flex;
