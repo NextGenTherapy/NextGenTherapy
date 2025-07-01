@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import dynamic from "next/dynamic";
-import styles from "./book-now.module.css";
-import buttonLinksStyles from "../../components/buttonLinks.module.css";
+import styles from "./book-now.module.scss";
+import buttonLinksStyles from "../../components/buttonLinks.module.scss";
 import Button from "../../components/button";
 
 // Dynamically import ContactForm for better performance

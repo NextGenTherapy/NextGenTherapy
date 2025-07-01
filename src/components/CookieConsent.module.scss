@@ -1,0 +1,98 @@
+.cookieConsent {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--color-primary);
+  border-top: 3px solid var(--color-accent);
+  box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  padding: var(--spacing-medium);
+
+  .content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-small);
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    h3 {
+      margin: 0;
+      font-size: var(--font-size-h4);
+      color: var(--color-text-primary);
+    }
+
+    p {
+      margin: 0;
+      font-size: var(--font-size-base);
+      color: var(--color-text-primary);
+      flex: 1;
+    }
+  }
+
+  .buttons {
+    display: flex;
+    gap: var(--spacing-small);
+    flex-wrap: wrap;
+
+    button {
+      padding: var(--spacing-small) var(--spacing-medium);
+      border: none;
+      border-radius: var(--border-radius);
+      font-size: var(--font-size-base);
+      font-weight: 600;
+      cursor: pointer;
+      transition: all var(--transition-fast);
+      font-family: var(--font-family);
+    }
+  }
+
+  .acceptBtn {
+    background: var(--color-accent);
+    color: var(--color-text-secondary);
+
+    &:hover {
+      background: var(--color-accent-hover);
+    }
+  }
+
+  .declineBtn {
+    background: transparent;
+    color: var(--color-text-primary);
+    border: 1px solid var(--color-accent);
+
+    &:hover {
+      background: var(--color-accent);
+      color: var(--color-text-secondary);
+    }
+  }
+
+  .learnMore {
+    font-size: var(--font-size-small) !important;
+    
+    a {
+      color: var(--color-accent);
+      text-decoration: underline;
+      
+      &:hover {
+        color: var(--color-accent-hover);
+      }
+    }
+  }
+
+  @media (max-width: 767px) {
+    .content {
+      text-align: center;
+    }
+
+    .buttons {
+      justify-content: center;
+    }
+  }
+}

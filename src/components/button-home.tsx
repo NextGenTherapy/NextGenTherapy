@@ -1,5 +1,5 @@
 import Link from "next/link";
-import styles from "./button-home.module.css";
+import styles from "./button-home.module.scss";
 
 interface ButtonProps {
   href: string;

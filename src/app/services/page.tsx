@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import styles from "./services.module.css";
-import buttonLinksStyles from "../../components/buttonLinks.module.css";
+import styles from "./services.module.scss";
+import buttonLinksStyles from "../../components/buttonLinks.module.scss";
 import Button from "../../components/button";
 
 export const metadata: Metadata = {

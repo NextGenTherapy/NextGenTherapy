@@ -1,0 +1,159 @@
+/* Contact Form Container */
+.contactForm {
+  max-width: 900px;
+  width: 600px;
+  margin: 0 auto;
+  padding: var(--spacing-large);
+  background: var(--color-primary);
+  border-radius: var(--border-radius-large);
+  box-shadow: var(--box-shadow);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-large);
+  transition: box-shadow var(--transition-normal);
+
+  &:hover {
+    box-shadow: var(--box-shadow-hover);
+  }
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-small);
+  margin-bottom: var(--spacing-medium);
+}
+
+/* Label styling */
+.contactForm label {
+  font-weight: 600;
+  color: var(--color-text-primary);
+  font-size: var(--font-size-base);
+}
+
+/* Input styling */
+.contactForm input {
+  width: 100%;
+  padding: var(--spacing-small);
+  border: 1px solid #ccc;
+  border-radius: var(--border-radius);
+  font-size: var(--font-size-base);
+  box-sizing: border-box;
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+  min-height: 40px;
+  resize: none;
+  font-family: var(--font-family);
+
+  &:focus {
+    border-color: var(--color-accent);
+    outline: 2px solid var(--color-accent-hover);
+    outline-offset: 2px;
+  }
+}
+
+/* Auto-grow textarea styling */
+.textareaAutoGrow {
+  min-height: 120px;
+  max-height: 400px;
+  width: 100%;
+  padding: var(--spacing-small);
+  border: 1px solid #ccc;
+  border-radius: var(--border-radius);
+  font-size: var(--font-size-base);
+  box-sizing: border-box;
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+  overflow-y: auto;
+  resize: none;
+  font-family: var(--font-family);
+
+  &:focus {
+    border-color: var(--color-accent);
+    outline: 2px solid var(--color-accent-hover);
+    outline-offset: 2px;
+  }
+}
+
+/* Button styling */
+.contactForm button {
+  background: var(--color-accent);
+  color: var(--color-text-secondary);
+  border: none;
+  border-radius: var(--border-radius);
+  padding: var(--spacing-medium) var(--spacing-large);
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  cursor: pointer;
+  transition: background var(--transition-fast);
+  font-family: var(--font-family);
+
+  &:hover,
+  &:focus {
+    background: var(--color-accent-hover);
+  }
+
+  &:disabled {
+    background: #cccccc;
+    color: #666666;
+    cursor: not-allowed;
+
+    &:hover {
+      background: #cccccc;
+    }
+  }
+}
+
+/* Status messages */
+.statusSuccess {
+  color: var(--color-success);
+  font-size: var(--font-size-base);
+  margin-bottom: var(--spacing-small);
+  padding: var(--spacing-small);
+  background-color: var(--color-success-bg);
+  border: 1px solid var(--color-success);
+  border-radius: var(--border-radius);
+}
+
+.statusError {
+  color: var(--color-error);
+  font-size: var(--font-size-base);
+  margin-bottom: var(--spacing-small);
+  padding: var(--spacing-small);
+  background-color: var(--color-error-bg);
+  border: 1px solid var(--color-error);
+  border-radius: var(--border-radius);
+}
+
+.statusLoading {
+  color: var(--color-info);
+  font-size: var(--font-size-base);
+  margin-bottom: var(--spacing-small);
+  padding: var(--spacing-small);
+  background-color: var(--color-info-bg);
+  border: 1px solid var(--color-info);
+  border-radius: var(--border-radius);
+}
+
+/* Form validation states */
+.inputError {
+  border-color: var(--color-error) !important;
+  background-color: var(--color-error-bg);
+
+  &:focus {
+    outline-color: var(--color-error) !important;
+  }
+}
+
+.errorMessage {
+  color: var(--color-error);
+  font-size: var(--font-size-small);
+  margin-top: var(--spacing-xs);
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .contactForm {
+    width: 100%;
+    max-width: 300px;
+    padding: var(--spacing-small);
+  }
+}

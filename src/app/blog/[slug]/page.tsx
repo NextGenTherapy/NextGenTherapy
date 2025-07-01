@@ -8,7 +8,7 @@ import { remark } from "remark";
 import html from "remark-html";
 import Button from "@/components/button";
 import Link from "next/link";
-import styles from "../blog.module.css";
+import styles from "../blog.module.scss";
 
 // Dynamic metadata for each blog post
 export async function generateMetadata({

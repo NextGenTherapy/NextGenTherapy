@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import styles from "./page.module.css";
+import styles from "./page.module.scss";
 import ButtonHome from "../components/button-home";
 
 function getMetadata(): Metadata {

@@ -1,4 +1,4 @@
-import styles from "./footer.module.css";
+import styles from "./footer.module.scss";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -89,10 +89,15 @@ export default function Footer() {
           </div>
         </section>
       </section>
-      <div className={styles.privacyPolicy}>
-        <Link href="/privacy-policy">
-          <h3>Privacy Policy</h3>
-        </Link>
+      
+      <div className={styles.footerBottom}>
+        <div className={styles.legalLinks}>
+          <Link href="/privacy-policy">Privacy Policy</Link>
+          <Link href="/terms">Terms of Service</Link>
+        </div>
+        <div className={styles.copyright}>
+          <p>&copy; {new Date().getFullYear()} Next Generation Therapy. All rights reserved.</p>
+        </div>
       </div>
     </footer>
   );

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import styles from "./therapy-101.module.css";
-import buttonLinksStyles from "../../components/buttonLinks.module.css";
+import styles from "./therapy-101.module.scss";
+import buttonLinksStyles from "../../components/buttonLinks.module.scss";
 import Button from "../../components/button";
 
 // Page-specific metadata

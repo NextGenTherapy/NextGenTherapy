@@ -1,4 +1,4 @@
-import styles from "./privacy-policy.module.css";
+import styles from "./privacy-policy.module.scss";
 
 export default function PrivacyPolicy() {
   return (

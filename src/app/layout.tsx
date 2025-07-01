@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
-import "../styles/globals.css";
-import "../styles/variables.css";
+import "../styles/globals.scss";
+import "../styles/variables.scss";
 import Header from "../components/header";
 import Footer from "../components/footer";
 import ErrorBoundary from "../components/ErrorBoundary";
+import CookieConsent from "../components/CookieConsent";
 import { Analytics } from "@vercel/analytics/next";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { SpeedInsights } from "@vercel/speed-insights/next";
@@ -107,6 +108,7 @@ export default async function RootLayout({
           </ErrorBoundary>
           <Analytics />
           <Footer />
+          <CookieConsent />
         </div>
       </body>
       <GoogleAnalytics gaId="G-3528EDPEXW" />

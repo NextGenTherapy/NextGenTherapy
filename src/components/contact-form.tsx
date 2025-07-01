@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useRef } from "react";
-import styles from "./contact-form.module.css";
+import styles from "./contact-form.module.scss";
 import Button from "./button";
 
 interface FormErrors {
