@@ -54,7 +54,7 @@ body {
   box-sizing: border-box;
 }
 .page {
-  background-color: var(--color-background);
+  background: var(--color-background-gradient);
   flex: 1;
   padding: 0;
   display: flex;
