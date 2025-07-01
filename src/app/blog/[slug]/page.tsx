@@ -10,6 +10,18 @@ import Button from "../../../components/ui/button";
 import Link from "next/link";
 import styles from "../blog.module.scss";
 
+// Generate static params for all blog posts (for sitemap)
+export async function generateStaticParams() {
+  const postsDir = path.join(process.cwd(), "src/content/blog");
+  const files = fs.readdirSync(postsDir);
+
+  return files
+    .filter((filename) => filename.endsWith(".md"))
+    .map((filename) => ({
+      slug: filename.replace(/\.md$/, ""),
+    }));
+}
+
 // Dynamic metadata for each blog post
 export async function generateMetadata({
   params,
@@ -34,18 +46,42 @@ export async function generateMetadata({
         ? `${data.title} - Next Generation Therapy`
         : "Blog Post - Next Generation Therapy",
     description: data.summary || "",
+    keywords: [
+      "therapy",
+      "mental health",
+      "psychotherapy",
+      "emotional well-being",
+      "therapy blog",
+      "professional therapy",
+      data.category === "professional" ? "professional therapy insights" : "personal therapy thoughts",
+    ],
+    alternates: {
+      canonical: `https://nextgentherapy.co.uk/blog/${slug}`,
+    },
     openGraph: {
       title: data.title,
       description: data.summary || "",
       url: `https://nextgentherapy.co.uk/blog/${slug}`,
       type: "article",
       publishedTime: data.date,
+      authors: ["Andreea"],
+      section: data.category === "professional" ? "Professional Thoughts" : "Personal Thoughts",
+      images: [
+        {
+          url: "https://nextgentherapy.co.uk/images/default-social-share.jpg",
+          width: 1200,
+          height: 630,
+          alt: data.title,
+        },
+      ],
     },
     twitter: {
-      card: "summary",
+      card: "summary_large_image",
       title: data.title,
       description: data.summary || "",
+      images: ["https://nextgentherapy.co.uk/images/default-social-share.jpg"],
     },
+    robots: "index, follow",
   };
 }
 
@@ -57,13 +93,13 @@ function getAllPosts() {
       const filePath = path.join(postsDir, filename);
       const fileContent = fs.readFileSync(filePath, "utf-8");
       const { data } = matter(fileContent);
-      
+
       // Add error handling for missing frontmatter
       if (!data.title || !data.date) {
         console.warn(`Missing frontmatter in ${filename}`);
         return null;
       }
-      
+
       return {
         slug: filename.replace(/\.md$/, ""),
         title: data.title,
@@ -109,34 +145,80 @@ export default async function BlogPostPage({
   const processedContent = await remark().use(html).process(content);
   const contentHtml = processedContent.toString();
 
+  // JSON-LD structured data for blog posts
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: data.title,
+    description: data.summary || "",
+    author: {
+      "@type": "Person",
+      name: "Andreea",
+      url: "https://nextgentherapy.co.uk/about",
+    },
+    publisher: {
+      "@type": "Organization", 
+      name: "Next Generation Therapy",
+      url: "https://nextgentherapy.co.uk",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://nextgentherapy.co.uk/images/default-social-share.jpg",
+      },
+    },
+    datePublished: data.date,
+    dateModified: data.date,
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": `https://nextgentherapy.co.uk/blog/${slug}`,
+    },
+    image: {
+      "@type": "ImageObject",
+      url: "https://nextgentherapy.co.uk/images/default-social-share.jpg",
+      width: 1200,
+      height: 630,
+    },
+    articleSection: data.category === "professional" ? "Professional Thoughts" : "Personal Thoughts",
+    keywords: data.category === "professional" 
+      ? "therapy, mental health, professional insights, psychotherapy" 
+      : "therapy, personal thoughts, mental health, emotional well-being",
+  };
+
   return (
     <div className={styles.page}>
-      <article className={styles.blogContent}>
-        <h1>{data.title}</h1>
-        <p>
-          <em>{data.date}</em>
-        </p>
-        <div dangerouslySetInnerHTML={{ __html: contentHtml }} />
-        <div className={styles.buttonNav}>
-          {prevPost ? (
-            <Link href={`/blog/${prevPost.slug}`}>
-              <Button>← Previous</Button>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(structuredData),
+        }}
+      />
+      <div className={styles.main}>
+        <article className={styles.blogContent}>
+          <h1>{data.title}</h1>
+          <p>
+            <em>{data.date}</em>
+          </p>
+          <div dangerouslySetInnerHTML={{ __html: contentHtml }} />
+          <div className={styles.buttonNav}>
+            {prevPost ? (
+              <Link href={`/blog/${prevPost.slug}`}>
+                <Button>← Previous</Button>
+              </Link>
+            ) : (
+              <span />
+            )}
+            <Link href="/blog">
+              <Button>Back to Blog</Button>
             </Link>
-          ) : (
-            <span />
-          )}
-          <Link href="/blog">
-            <Button>Back to Blog</Button>
-          </Link>
-          {nextPost ? (
-            <Link href={`/blog/${nextPost.slug}`}>
-              <Button>Next →</Button>
-            </Link>
-          ) : (
-            <span />
-          )}
-        </div>
-      </article>
+            {nextPost ? (
+              <Link href={`/blog/${nextPost.slug}`}>
+                <Button>Next →</Button>
+              </Link>
+            ) : (
+              <span />
+            )}
+          </div>
+        </article>
+      </div>
     </div>
   );
 }

@@ -20,6 +20,10 @@ export const metadata: Metadata = {
     "online therapy",
   ],
   authors: [{ name: "Andreea Horhocea" }],
+  alternates: {
+    canonical: "https://nextgentherapy.co.uk/about",
+  },
+  robots: "index, follow",
   openGraph: {
     title: "About me - Next Generation Therapy",
     description:

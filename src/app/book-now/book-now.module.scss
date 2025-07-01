@@ -34,7 +34,7 @@
   display: flex;
   align-items: center;
   gap: var(--spacing-xxlarge);
-  margin: var(--spacing-large) 0;
+  margin: var(--spacing-section) 0;
   
   article {
     flex: 1;
@@ -136,7 +136,7 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  margin: var(--spacing-xlarge) 0;
+  margin: var(--spacing-section) 0;
   
   h2 {
     color: var(--color-accent);

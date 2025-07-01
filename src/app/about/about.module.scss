@@ -31,7 +31,7 @@
 .imageSection {
   display: flex;
   justify-content: center;
-  margin: var(--spacing-large) 0;
+  margin: var(--spacing-section) 0;
 }
 
 .imageContainer {
@@ -47,7 +47,7 @@
 
 /* Content Section */
 .contentSection {
-  margin: var(--spacing-xlarge) 0;
+  margin: var(--spacing-section) 0;
 }
 
 .textContainer {
@@ -97,7 +97,7 @@
 
 /* Therapy Room Gallery */
 .gallerySection {
-  margin: var(--spacing-xlarge) 0;
+  margin: var(--spacing-section) 0;
   text-align: center;
   
   h2 {
@@ -194,7 +194,7 @@
   }
   
   .contentSection {
-    margin: var(--spacing-large) 0;
+    margin: var(--spacing-section) 0;
   }
   
   .therapyGallery {

@@ -1,12 +1,36 @@
 import styles from "./privacy-policy.module.scss";
 import LegalNavigation from "../../components/layout/legal-navigation";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Privacy Policy - Next Generation Therapy",
+  description:
+    "Privacy policy for Next Generation Therapy. Learn how we collect, use, and protect your personal information when using our therapy services.",
+  robots: "index, follow",
+  alternates: {
+    canonical: "https://nextgentherapy.co.uk/privacy-policy",
+  },
+  openGraph: {
+    title: "Privacy Policy - Next Generation Therapy",
+    description:
+      "Privacy policy for Next Generation Therapy. Learn how we collect, use, and protect your personal information.",
+    url: "https://nextgentherapy.co.uk/privacy-policy",
+    type: "website",
+  },
+  twitter: {
+    card: "summary",
+    title: "Privacy Policy - Next Generation Therapy",
+    description:
+      "Privacy policy for Next Generation Therapy. Learn how we collect, use, and protect your personal information.",
+  },
+};
 
 export default function PrivacyPolicy() {
   return (
     <div className={styles.page}>
       <main className={styles.privacyPolicy}>
         <LegalNavigation currentPage="privacy" />
-        
+
         <h1 className={styles.heading}>Privacy Policy</h1>
         <p className={styles.updated}>
           <strong>Last updated: 28 May 2025</strong>
@@ -83,7 +107,7 @@ export default function PrivacyPolicy() {
             andreeatherapytoday@gmail.com
           </a>
         </p>
-        
+
         <LegalNavigation currentPage="privacy" />
       </main>
     </div>
