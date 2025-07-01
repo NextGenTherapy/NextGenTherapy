@@ -68,55 +68,65 @@
 
 /* Information Section */
 .contentMiddle {
-  display: flex;
-  justify-content: center;
-  align-items: stretch;
   margin: var(--spacing-xlarge) 0;
-  gap: var(--spacing-large);
-  
-  ul {
-    padding-left: 0;
-    margin: 0;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    list-style: none;
-    
-    li {
-      display: flex;
-      justify-content: center;
-      width: 100%;
-    }
-  }
 }
 
-.hours,
-.location,
-.contact {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  width: 100%;
-  text-align: center;
-  box-sizing: border-box;
+.contactInfo {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-large);
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.contactCard,
+.locationCard,
+.hoursCard {
   background: rgba(255, 255, 255, 0.8);
   border: 1px solid var(--color-accent-light);
   border-radius: var(--border-radius-large);
   padding: var(--spacing-large);
   box-shadow: var(--box-shadow);
+  transition: var(--transition-normal);
+  text-align: center;
+  
+  &:hover {
+    box-shadow: var(--box-shadow-hover);
+    transform: translateY(-2px);
+  }
   
   h3 {
     color: var(--color-accent);
-    font-size: var(--font-size-medium);
+    font-size: var(--font-size-h3);
     margin-bottom: var(--spacing-medium);
     font-weight: 600;
   }
   
-  p, ul {
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  li {
+    margin-bottom: var(--spacing-small);
     color: var(--color-text-primary);
     line-height: 1.6;
+    
+    &:last-child {
+      margin-bottom: 0;
+    }
+    
+    a {
+      color: var(--color-accent);
+      text-decoration: none;
+      transition: var(--transition-fast);
+      
+      &:hover {
+        color: var(--color-accent-hover);
+        text-decoration: underline;
+      }
+    }
   }
 }
 
@@ -208,10 +218,9 @@
     margin: var(--spacing-medium) 0;
   }
   
-  .hours,
-  .location,
-  .contact {
-    padding: var(--spacing-medium);
+  .contactInfo {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-medium);
   }
 }
 

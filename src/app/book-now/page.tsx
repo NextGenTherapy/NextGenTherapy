@@ -82,51 +82,54 @@ export default function BookNow() {
         </section>
 
         <section className={styles.contentMiddle}>
-          <div className={styles.contact}>
-            <h3>My Contact Details</h3>
-            <ul>
-              <li>
-                <a
-                  href="mailto:andreeatherapytoday@gmail.com"
-                  aria-label="Send an email to Andreea Therapy Today"
-                >
-                  Email: andreeatherapytoday@gmail.com
-                </a>
-              </li>
-              <li>
-                <a
-                  href="tel:07448036017"
-                  aria-label="Call Andreea Therapy Today at 07448036017"
-                >
-                  Phone: 07448036017
-                </a>
-              </li>
-            </ul>
-          </div>
+          <div className={styles.contactInfo}>
+            <div className={styles.contactCard}>
+              <h3>My Contact Details</h3>
+              <ul>
+                <li>
+                  <a
+                    href="mailto:andreeatherapytoday@gmail.com"
+                    aria-label="Send an email to Andreea Therapy Today"
+                  >
+                    Email: andreeatherapytoday@gmail.com
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="tel:07448036017"
+                    aria-label="Call Andreea Therapy Today at 07448036017"
+                  >
+                    Phone: 07448036017
+                  </a>
+                </li>
+              </ul>
+            </div>
 
-          <div className={styles.location}>
-            <h3>Location</h3>
-            <ul>
-              <li>
-                <a
-                  href="https://www.google.com/maps?q=Colchester+Business+Centre,+1+George+Williams+Way,+Colchester+CO1+2JS"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="View Colchester Business Centre on Google Maps"
-                >
-                  Colchester Business Centre, 1 George Williams Way, Colchester
-                  CO1 2JS
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div className={styles.hours}>
-            <h3>Working Office Hours</h3>
-            <ul>
-              <li>Monday - Tuesday: 10am - 7pm</li>
-              <li>Friday: 9am - 2pm</li>
-              <li>More availability online</li>
-            </ul>
+            <div className={styles.locationCard}>
+              <h3>Location</h3>
+              <ul>
+                <li>
+                  <a
+                    href="https://www.google.com/maps?q=Colchester+Business+Centre,+1+George+Williams+Way,+Colchester+CO1+2JS"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="View Colchester Business Centre on Google Maps"
+                  >
+                    Colchester Business Centre, 1 George Williams Way, Colchester
+                    CO1 2JS
+                  </a>
+                </li>
+              </ul>
+            </div>
+            
+            <div className={styles.hoursCard}>
+              <h3>Working Office Hours</h3>
+              <ul>
+                <li>Monday - Tuesday: 10am - 7pm</li>
+                <li>Friday: 9am - 2pm</li>
+                <li>More availability online</li>
+              </ul>
+            </div>
           </div>
         </section>
 

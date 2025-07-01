@@ -79,45 +79,49 @@ export default function Services() {
           <h1>Services Provided</h1>
         </div>
 
-        <section className={styles.contentTop}>
-          <article className={styles.topTextContainer}>
-            <h2>I offer therapy sessions tailored to help with:</h2>
-            <ul>
-              <li>
-                Anxiety & Overwhelm: Managing persistent worry and finding calm.
-              </li>
-              <li>
-                Self-Esteem & Confidence: Building a stronger sense of
-                self-worth.
-              </li>
-              <li>
-                Body Image & Eating Concerns: Developing a healthier
-                relationship with food and your body.
-              </li>
-              <li>
-                Relationship Patterns: Understanding and improving interpersonal
-                dynamics.
-              </li>
-              <li>
-                Teenagers: Supporting them through the complexities of becoming
-                who they want to be.
-              </li>
-              <li>
-                Sessions are available in-person in Colchester or online,
-                providing flexibility to suit your lifestyle.
-              </li>
-            </ul>
-          </article>
-          <aside className={styles.topImageContainer}>
-            <Image
-              src="/images/services.jpg"
-              alt="Andreea Horhocea - Psychodynamic Psychotherapist"
-              height={300}
-              width={300}
-              priority
-              className={styles.image}
-            />
-          </aside>
+        <section className={styles.servicesOverview}>
+          <div className={styles.contentGrid}>
+            <article className={styles.textContent}>
+              <h2>Who I Work With & What I Help With</h2>
+              <p>I offer therapy sessions tailored to support a diverse range of clients and concerns. Sessions are available in-person in Colchester or online, providing flexibility to suit your lifestyle.</p>
+              
+              <div className={styles.servicesList}>
+                <div className={styles.listColumn}>
+                  <h3>Who I Support</h3>
+                  <ul>
+                    <li>Children and young people</li>
+                    <li>Adults experiencing anxiety</li>
+                    <li>Clients dealing with depression</li>
+                    <li>Individuals who have suffered abuse</li>
+                    <li>Trauma survivors</li>
+                    <li>People grieving or experiencing loss</li>
+                    <li>LGBTQ+ individuals and couples</li>
+                  </ul>
+                </div>
+                <div className={styles.listColumn}>
+                  <h3>Areas I Help With</h3>
+                  <ul>
+                    <li>Anxiety & overwhelm</li>
+                    <li>Self-esteem & confidence</li>
+                    <li>Body image & eating concerns</li>
+                    <li>Relationship patterns</li>
+                    <li>Identity issues & life transitions</li>
+                    <li>ADD/ADHD related struggles</li>
+                    <li>Neurodiversity support</li>
+                  </ul>
+                </div>
+              </div>
+            </article>
+            <aside className={styles.imageContainer}>
+              <Image
+                src="/images/who-i-see.jpg"
+                alt="A therapist talking to a patient"
+                height={400}
+                width={300}
+                className={styles.image}
+              />
+            </aside>
+          </div>
         </section>
 
         <section className={styles.contentEnd}>
@@ -133,8 +137,18 @@ export default function Services() {
             </aside>
             <article className={styles.childTextContainer}>
               <h2>Play Therapy for Children</h2>
-              <p>£60 for the therapeutic hour (50 mins).</p>
-              <p>Discover the benefits in a safe space.</p>
+              <p><strong>£60 for the therapeutic hour (50 mins)</strong></p>
+              <p>
+                Play therapy provides children with a natural way to express their 
+                feelings and work through challenges. Using toys, games, and creative 
+                activities, children can explore difficult emotions in a safe, 
+                supportive environment.
+              </p>
+              <p>
+                This approach is particularly effective for children who may struggle 
+                to articulate their feelings verbally, helping them develop emotional 
+                resilience and coping strategies.
+              </p>
             </article>
           </div>
 
@@ -150,8 +164,17 @@ export default function Services() {
             </aside>
             <article className={styles.adultTextContainer}>
               <h2>Talking Therapy Online or In-Person</h2>
-              <p>£60 for the therapeutic hour (50 mins).</p>
-              <p>Explore new perspectives and grow.</p>
+              <p><strong>£60 for the therapeutic hour (50 mins)</strong></p>
+              <p>
+                Individual therapy sessions designed to help you explore your thoughts, 
+                feelings, and experiences in a confidential, non-judgmental space. 
+                Whether online or in-person, sessions are tailored to your unique needs.
+              </p>
+              <p>
+                Together, we&apos;ll work to understand patterns, develop coping strategies, 
+                and support your journey toward greater self-awareness and emotional 
+                well-being.
+              </p>
             </article>
           </div>
         </section>
@@ -164,10 +187,10 @@ export default function Services() {
               <h3>What should I expect in my first session?</h3>
               <p>
                 Your first session is an opportunity for us to get to know each other. 
-                I'll ask about what brought you to therapy, your goals, and any concerns 
-                you might have. We'll discuss confidentiality, how therapy works, and 
-                answer any questions you have. There's no pressure to share more than 
-                you're comfortable with.
+                I&apos;ll ask about what brought you to therapy, your goals, and any concerns 
+                you might have. We&apos;ll discuss confidentiality, how therapy works, and 
+                answer any questions you have. There&apos;s no pressure to share more than 
+                you&apos;re comfortable with.
               </p>
             </div>
 
@@ -186,7 +209,7 @@ export default function Services() {
               <p>
                 Yes, everything discussed in our sessions is strictly confidential. 
                 I follow professional guidelines that protect your privacy. The only 
-                exceptions would be if there's a risk of serious harm to yourself or 
+                exceptions would be if there&apos;s a risk of serious harm to yourself or 
                 others, which I would discuss with you first whenever possible.
               </p>
             </div>
@@ -196,8 +219,8 @@ export default function Services() {
               <p>
                 The number of sessions varies for each person and depends on your individual 
                 goals and circumstances. Some people find benefit in just a few sessions, 
-                while others prefer longer-term support. We'll regularly review your 
-                progress together and you're free to end therapy whenever you feel ready.
+                while others prefer longer-term support. We&apos;ll regularly review your 
+                progress together and you&apos;re free to end therapy whenever you feel ready.
               </p>
             </div>
 
@@ -212,7 +235,7 @@ export default function Services() {
             </div>
 
             <div className={styles.faqItem}>
-              <h3>What's the difference between play therapy and talking therapy?</h3>
+              <h3>What&apos;s the difference between play therapy and talking therapy?</h3>
               <p>
                 Play therapy is designed specifically for children and uses toys, games, 
                 and creative activities as the primary way of communication. Children 
@@ -225,19 +248,19 @@ export default function Services() {
             <div className={styles.faqItem}>
               <h3>How do I know if therapy is right for me?</h3>
               <p>
-                If you're struggling with your mental health, feeling stuck, or want 
-                to understand yourself better, therapy can help. You don't need to be 
-                in crisis to benefit from therapy. It's a space for personal growth, 
+                If you&apos;re struggling with your mental health, feeling stuck, or want 
+                to understand yourself better, therapy can help. You don&apos;t need to be 
+                in crisis to benefit from therapy. It&apos;s a space for personal growth, 
                 developing coping strategies, and improving your overall well-being.
               </p>
             </div>
 
             <div className={styles.faqItem}>
-              <h3>What if I don't know what to talk about?</h3>
+              <h3>What if I don&apos;t know what to talk about?</h3>
               <p>
-                That's completely normal and absolutely fine. I'm here to help guide 
+                That&apos;s completely normal and absolutely fine. I&apos;m here to help guide 
                 our conversations and create a safe space for you to explore your 
-                thoughts and feelings. Many people worry about this, but you'll find 
+                thoughts and feelings. Many people worry about this, but you&apos;ll find 
                 that once we start talking, things naturally emerge.
               </p>
             </div>

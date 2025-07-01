@@ -60,36 +60,44 @@ export default function Home() {
         </section>
 
         {/* ContentEnd Section */}
-
-        <div className={styles.greeting}>
-          <h2>Hi! I am Andreea Horhocea.</h2>
-        </div>
         <section className={styles.contentEnd}>
-          <div className={styles.imageContainer}>
-            <Image
-              src="/images/andreea.jpg"
-              alt="Andreea Horhocea - Psychodynamic Psychotherapist"
-              height={400}
-              width={300}
-              priority
-              className={styles.image}
-            />
+          <div className={styles.greeting}>
+            <h2>Hi! I am Andreea Horhocea.</h2>
           </div>
-          <div className={styles.textContainer}>
-            <p>
-              A psychodynamic psychotherapist. I am offering 1-to-1 sessions in
-              Colchester and online.
-            </p>
-            <p>
-              I work with people of any age who are looking to address mental
-              health-related challenges such as anxiety, depression, stress,
-              eating disorders, and more.
-            </p>
-            <p>
-              I focus on creating a safe, compassionate, and supportive
-              environment where you can feel comfortable to achieve a meaningful
-              and lasting change.
-            </p>
+          <div className={styles.aboutContainer}>
+            <div className={styles.imageContainer}>
+              <Image
+                src="/images/andreea.jpg"
+                alt="Andreea Horhocea - Psychodynamic Psychotherapist"
+                height={400}
+                width={300}
+                priority
+                className={styles.image}
+              />
+            </div>
+            <div className={styles.textContainer}>
+              <div className={styles.introCard}>
+                <h3>About Me</h3>
+                <p>
+                  A psychodynamic psychotherapist offering 1-to-1 sessions in
+                  Colchester and online.
+                </p>
+              </div>
+              <div className={styles.servicesCard}>
+                <h3>Who I Help</h3>
+                <p>
+                  I work with people of any age addressing mental health challenges
+                  such as anxiety, depression, stress, eating disorders, and more.
+                </p>
+              </div>
+              <div className={styles.approachCard}>
+                <h3>My Approach</h3>
+                <p>
+                  I focus on creating a safe, compassionate, and supportive
+                  environment where you can achieve meaningful and lasting change.
+                </p>
+              </div>
+            </div>
           </div>
         </section>
       </main>

@@ -7,14 +7,14 @@
   border-top: var(--border-width-thick) solid var(--color-accent);
   box-shadow: var(--box-shadow-reverse);
   z-index: 1000;
-  padding: var(--spacing-medium);
+  padding: var(--spacing-large) var(--spacing-medium);
 
   .content {
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    gap: var(--spacing-small);
+    gap: var(--spacing-medium);
 
     @media (min-width: 768px) {
       flex-direction: row;
@@ -38,7 +38,7 @@
 
   .buttons {
     display: flex;
-    gap: var(--spacing-small);
+    gap: var(--spacing-medium);
     flex-wrap: wrap;
 
     button {

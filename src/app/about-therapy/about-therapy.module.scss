@@ -57,13 +57,11 @@
 }
 
 /* Section Styles */
-.whyTherapySection,
-.whoIWorkWithSection {
+.whyTherapySection {
   margin: var(--spacing-xlarge) 0;
 }
 
-.whyTherapySection h2,
-.whoIWorkWithSection h2 {
+.whyTherapySection h2 {
   font-size: var(--font-size-h2);
   color: var(--color-accent);
   margin-bottom: var(--spacing-medium);
@@ -73,41 +71,6 @@
   line-height: 1.6;
   margin-bottom: var(--spacing-medium);
   color: var(--color-text-primary);
-}
-
-/* Client List Styling */
-.clientList {
-  display: flex;
-  gap: var(--spacing-large);
-}
-
-.listColumn {
-  flex: 1;
-}
-
-.listColumn ul {
-  list-style: none;
-  padding: 0;
-}
-
-.listColumn li {
-  padding: var(--spacing-small) 0;
-  border-bottom: 1px solid var(--color-accent-light);
-  color: var(--color-text-primary);
-  position: relative;
-  padding-left: var(--spacing-medium);
-}
-
-.listColumn li:before {
-  content: "✓";
-  color: var(--color-accent);
-  font-weight: bold;
-  position: absolute;
-  left: 0;
-}
-
-.listColumn li:last-child {
-  border-bottom: none;
 }
 
 /* How Therapy Helps Section */
@@ -155,44 +118,6 @@
   color: var(--color-text-primary);
   line-height: 1.6;
   margin: 0;
-}
-
-/* Photo Gallery Section */
-.photoGallerySection {
-  margin: var(--spacing-xlarge) 0;
-  text-align: center;
-}
-
-.photoGallerySection h2 {
-  font-size: var(--font-size-h2);
-  color: var(--color-accent);
-  margin-bottom: var(--spacing-large);
-}
-
-.photoGallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: var(--spacing-medium);
-  margin-top: var(--spacing-large);
-}
-
-.photoWrapper {
-  overflow: hidden;
-  border-radius: var(--border-radius-large);
-  box-shadow: var(--box-shadow);
-  transition: var(--transition-normal);
-}
-
-.photoWrapper:hover {
-  transform: translateY(-2px);
-  box-shadow: var(--box-shadow-hover);
-}
-
-.galleryImage {
-  width: 100%;
-  height: 250px;
-  object-fit: cover;
-  border-radius: var(--border-radius-large);
 }
 
 /* Location Section */
@@ -273,21 +198,12 @@
     gap: var(--spacing-large);
   }
 
-  .whoIWorkWithSection .contentGrid {
-    flex-direction: column-reverse;
-  }
-
   .imageContainer {
     flex: none;
   }
 
   .benefitsGrid {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: var(--spacing-medium);
-  }
-
-  .clientList {
-    flex-direction: column;
     gap: var(--spacing-medium);
   }
 
@@ -318,15 +234,6 @@
     grid-template-columns: 1fr;
   }
 
-  .photoGallery {
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: var(--spacing-small);
-  }
-
-  .galleryImage {
-    height: 200px;
-  }
-
   .benefitCard {
     padding: var(--spacing-medium);
   }
@@ -335,10 +242,6 @@
 @media (max-width: 480px) {
   .main {
     padding: 0 var(--spacing-small);
-  }
-
-  .photoGallery {
-    grid-template-columns: 1fr;
   }
 
   .map {

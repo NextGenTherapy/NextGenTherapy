@@ -47,27 +47,7 @@ export const metadata: Metadata = {
   },
 };
 
-// Image data for the photo gallery
-const images = [
-  { src: "/images/office.jpg", alt: "Picture of office with laptop" },
-  {
-    src: "/images/doll-house.jpg",
-    alt: "Picture of doll house for play therapy for children",
-  },
-  {
-    src: "/images/board-games.jpg",
-    alt: "Picture of shelves including games for children to play with",
-  },
-  {
-    src: "/images/room-2.jpg",
-    alt: "Picture of therapy room with sofa and arm chair",
-  },
-  {
-    src: "/images/room.jpg",
-    alt: "Picture of therapy room with sofa and arm chair",
-  },
-  { src: "/images/shelf.jpeg", alt: "Picture of shelf with plants on" },
-];
+
 
 export default function AboutTherapy() {
   const structuredData = {
@@ -106,7 +86,7 @@ export default function AboutTherapy() {
               <article className={styles.textContent}>
                 <h2>Why do people seek therapy?</h2>
                 <p>
-                  Therapy can help when you're feeling anxious, overwhelmed, or
+                  Therapy can help when you&apos;re feeling anxious, overwhelmed, or
                   struggling to manage emotions. It provides support for navigating
                   challenges in relationships, fostering meaningful connections, and
                   improving communication.
@@ -136,46 +116,6 @@ export default function AboutTherapy() {
             </div>
           </section>
 
-          {/* Who I Work With Section */}
-          <section className={styles.whoIWorkWithSection}>
-            <div className={styles.contentGrid}>
-              <aside className={styles.imageContainer}>
-                <Image
-                  src="/images/who-i-see.jpg"
-                  alt="A therapist talking to a patient"
-                  height={400}
-                  width={300}
-                  className={styles.image}
-                />
-              </aside>
-              <article className={styles.textContent}>
-                <h2>Who I Work With</h2>
-                <div className={styles.clientList}>
-                  <div className={styles.listColumn}>
-                    <ul>
-                      <li>Children and young people</li>
-                      <li>Adults experiencing anxiety</li>
-                      <li>Clients dealing with depression</li>
-                      <li>Individuals who have suffered abuse</li>
-                      <li>Trauma survivors</li>
-                      <li>People grieving or experiencing loss</li>
-                    </ul>
-                  </div>
-                  <div className={styles.listColumn}>
-                    <ul>
-                      <li>Individuals with eating disorders</li>
-                      <li>Clients facing identity issues</li>
-                      <li>People with low self-esteem</li>
-                      <li>Clients experiencing emotional distress</li>
-                      <li>ADD/ADHD related struggles</li>
-                      <li>Neurodiversity support</li>
-                    </ul>
-                  </div>
-                </div>
-              </article>
-            </div>
-          </section>
-
           {/* How Therapy Helps Section */}
           <section className={styles.howTherapyHelpsSection}>
             <h2>How Can Therapy Help?</h2>
@@ -191,7 +131,7 @@ export default function AboutTherapy() {
               <div className={styles.benefitCard}>
                 <h3>Coping with Life Transitions</h3>
                 <p>
-                  Whether it's starting a new job, moving, marriage, divorce, or
+                  Whether it&apos;s starting a new job, moving, marriage, divorce, or
                   retirement, therapy provides support and guidance during changes.
                 </p>
               </div>
@@ -223,25 +163,6 @@ export default function AboutTherapy() {
                   care, helping prevent more severe issues from developing.
                 </p>
               </div>
-            </div>
-          </section>
-
-          {/* Photo Gallery Section */}
-          <section className={styles.photoGallerySection}>
-            <h2>My Therapy Environment</h2>
-            <div className={styles.photoGallery}>
-              {images.map((image, index) => (
-                <div key={index} className={styles.photoWrapper}>
-                  <Image
-                    src={image.src}
-                    alt={image.alt}
-                    height={500}
-                    width={400}
-                    className={styles.galleryImage}
-                    priority={index < 2}
-                  />
-                </div>
-              ))}
             </div>
           </section>
 
