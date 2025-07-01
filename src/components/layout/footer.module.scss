@@ -48,7 +48,7 @@
 }
 
 .footerColumn a:hover {
-  color: var(--color-accent);
+  color: var(--color-accent-hover);
 }
 
 .footerColumn a span {
@@ -97,14 +97,13 @@
   }
 
   a {
-    color: var(--color-text-primary);
+    color: var(--color-accent);
     text-decoration: none;
     font-size: var(--font-size-small);
     transition: color var(--transition-fast);
 
     &:hover {
-      color: var(--color-accent);
-      text-decoration: underline;
+      color: var(--color-accent-hover);
     }
   }
 }
@@ -130,7 +129,6 @@
 
   &:hover, &:focus {
     color: var(--color-accent-hover);
-    text-decoration: underline;
   }
 }
 

@@ -51,6 +51,10 @@
   line-height: var(--header-height);
 }
 
+.logo a:hover h1 {
+  color: var(--color-header-accent-hover);
+}
+
 .navList {
   display: none;
   flex-direction: column;
@@ -83,7 +87,7 @@
 }
 
 .navItem a:hover {
-  color: var(--color-accent);
+  color: var(--color-header-accent-hover);
 }
 
 /* Hamburger menu icon */
@@ -125,8 +129,7 @@
 }
 
 .navItem a:focus {
-  outline: var(--outline-width) solid var(--color-accent);
-  outline-offset: var(--outline-offset);
+  outline: none;
   border-radius: 4px;
 }
 
