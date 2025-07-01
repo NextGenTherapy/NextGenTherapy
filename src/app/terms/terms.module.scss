@@ -27,15 +27,18 @@
   p {
     line-height: 1.6;
     margin-bottom: var(--spacing-medium);
+    color: var(--color-text-primary);
   }
 
   ul {
     margin: var(--spacing-medium) 0;
     padding-left: var(--spacing-large);
+    color: var(--color-text-primary);
 
     li {
       margin-bottom: var(--spacing-xs);
       line-height: 1.5;
+      color: var(--color-text-primary);
     }
   }
 

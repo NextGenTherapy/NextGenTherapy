@@ -17,10 +17,10 @@
 }
 
 .backButton {
-  background: var(--color-secondary);
+  background: var(--color-button);
   
   &:hover, &:focus {
-    background: var(--color-accent);
+    background: var(--color-button-hover);
   }
 }
 

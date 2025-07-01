@@ -5,7 +5,7 @@
   align-items: stretch;
   background-color: var(--color-header-background);
   height: calc(var(--header-height) + env(safe-area-inset-top, 20px));
-  color: var(--color-header-text);
+  color: var(--color-text-secondary);
   position: relative;
   top: 0;
   left: 0;
@@ -19,7 +19,7 @@
   display: none;
   background: none;
   border: none;
-  color: var(--color-header-text);
+  color: var(--color-text-secondary);
   font-size: var(--font-size-logo);
   cursor: pointer;
   z-index: 1001;
@@ -47,7 +47,7 @@
 .logo h1 {
   font-size: var(--font-size-logo);
   margin: 0;
-  color: var(--color-header-text);
+  color: var(--color-text-secondary);
   line-height: var(--header-height);
 }
 
@@ -59,7 +59,7 @@
   padding: var(--spacing-medium);
   width: 100%;
   background-color: var(--color-header-background);
-  color: var(--color-header-text);
+  color: var(--color-text-secondary);
   gap: var(--spacing-medium);
   box-sizing: border-box;
   position: absolute;
@@ -76,7 +76,7 @@
 
 .navItem a {
   text-decoration: none;
-  color: var(--color-header-text);
+  color: var(--color-text-secondary);
   font-size: var(--font-size-large);
   transition: color 0.3s ease;
   max-width: 100%;
@@ -100,7 +100,7 @@
   display: block;
   height: 2px;
   width: 100%;
-  background-color: var(--color-header-text);
+  background-color: var(--color-text-secondary);
   border-radius: 1px;
   transition: all 0.3s ease;
   transform-origin: center;
