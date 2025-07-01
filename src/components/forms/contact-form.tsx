@@ -2,49 +2,14 @@
 
 import React, { useState, useRef } from "react";
 import styles from "./contact-form.module.scss";
-import Button from "./button";
-
-interface FormErrors {
-  firstName?: string;
-  lastName?: string;
-  email?: string;
-  message?: string;
-}
+import Button from "../ui/button";
+import { ContactFormData, FormErrors, LoadingState } from "../../types";
+import { validateContactForm } from "../../lib/utils";
 
 export default function ContactForm() {
-  const [status, setStatus] = useState<"idle" | "success" | "error" | "loading">("idle");
+  const [status, setStatus] = useState<LoadingState>("idle");
   const [errors, setErrors] = useState<FormErrors>({});
   const messageRef = useRef<HTMLTextAreaElement>(null);
-
-  const validateForm = (formData: {
-    firstName: string;
-    lastName: string;
-    email: string;
-    message: string;
-  }): FormErrors => {
-    const newErrors: FormErrors = {};
-
-    // Name validation
-    if (formData.firstName.trim().length < 2) {
-      newErrors.firstName = "First name must be at least 2 characters long";
-    }
-    if (formData.lastName.trim().length < 2) {
-      newErrors.lastName = "Last name must be at least 2 characters long";
-    }
-
-    // Email validation
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(formData.email.trim())) {
-      newErrors.email = "Please enter a valid email address";
-    }
-
-    // Message validation
-    if (formData.message.trim().length < 10) {
-      newErrors.message = "Message must be at least 10 characters long";
-    }
-
-    return newErrors;
-  };
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -52,17 +17,15 @@ export default function ContactForm() {
     setErrors({});
     
     const form = event.currentTarget;
-    const formData = {
-      firstName: (form.elements.namedItem("firstName") as HTMLInputElement)
-        .value,
+    const formData: ContactFormData = {
+      firstName: (form.elements.namedItem("firstName") as HTMLInputElement).value,
       lastName: (form.elements.namedItem("lastName") as HTMLInputElement).value,
       email: (form.elements.namedItem("email") as HTMLInputElement).value,
-      message: (form.elements.namedItem("message") as HTMLTextAreaElement)
-        .value,
+      message: (form.elements.namedItem("message") as HTMLTextAreaElement).value,
     };
 
     // Client-side validation
-    const validationErrors = validateForm(formData);
+    const validationErrors = validateContactForm(formData);
     if (Object.keys(validationErrors).length > 0) {
       setErrors(validationErrors);
       return;

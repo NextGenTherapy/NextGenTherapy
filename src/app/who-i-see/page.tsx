@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import styles from "./who-i-see.module.scss";
-import buttonLinksStyles from "../../components/buttonLinks.module.scss";
-import Button from "../../components/button";
+import buttonLinksStyles from "../../components/ui/buttonLinks.module.scss";
+import Button from "../../components/ui/button";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://nextgentherapy.co.uk"),

@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import "../styles/globals.scss";
 import "../styles/variables.scss";
-import Header from "../components/header";
-import Footer from "../components/footer";
+import Header from "../components/layout/header";
+import Footer from "../components/layout/footer";
 import ErrorBoundary from "../components/ErrorBoundary";
-import CookieConsent from "../components/CookieConsent";
+import CookieConsent from "../components/layout/CookieConsent";
 import { Analytics } from "@vercel/analytics/next";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { SpeedInsights } from "@vercel/speed-insights/next";

@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import styles from "./therapy-101.module.scss";
-import buttonLinksStyles from "../../components/buttonLinks.module.scss";
-import Button from "../../components/button";
+import buttonLinksStyles from "../../components/ui/buttonLinks.module.scss";
+import Button from "../../components/ui/button";
 
 // Page-specific metadata
 export const metadata: Metadata = {

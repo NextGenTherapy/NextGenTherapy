@@ -6,7 +6,7 @@ import path from "path";
 import matter from "gray-matter";
 import { remark } from "remark";
 import html from "remark-html";
-import Button from "@/components/button";
+import Button from "../../../components/ui/button";
 import Link from "next/link";
 import styles from "../blog.module.scss";
 

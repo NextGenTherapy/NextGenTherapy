@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import styles from "./page.module.scss";
-import ButtonHome from "../components/button-home";
+import ButtonHome from "../components/ui/button-home";
 
 function getMetadata(): Metadata {
   const siteUrl =

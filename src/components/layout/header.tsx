@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
-import Button from "./button";
+import Button from "../ui/button";
 import styles from "./header.module.scss";
 
 export default function Header() {

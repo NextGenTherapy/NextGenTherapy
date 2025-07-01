@@ -2,11 +2,11 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import dynamic from "next/dynamic";
 import styles from "./book-now.module.scss";
-import buttonLinksStyles from "../../components/buttonLinks.module.scss";
-import Button from "../../components/button";
+import buttonLinksStyles from "../../components/ui/buttonLinks.module.scss";
+import Button from "../../components/ui/button";
 
 // Dynamically import ContactForm for better performance
-const ContactForm = dynamic(() => import("../../components/contact-form"), {
+const ContactForm = dynamic(() => import("../../components/forms/contact-form"), {
   loading: () => <div className={styles.formLoading}>Loading contact form...</div>,
 });
 
