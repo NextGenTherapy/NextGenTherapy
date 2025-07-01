@@ -156,6 +156,94 @@ export default function Services() {
           </div>
         </section>
 
+        <section className={styles.faqSection}>
+          <div className={styles.faqContainer}>
+            <h2>Frequently Asked Questions</h2>
+            
+            <div className={styles.faqItem}>
+              <h3>What should I expect in my first session?</h3>
+              <p>
+                Your first session is an opportunity for us to get to know each other. 
+                I'll ask about what brought you to therapy, your goals, and any concerns 
+                you might have. We'll discuss confidentiality, how therapy works, and 
+                answer any questions you have. There's no pressure to share more than 
+                you're comfortable with.
+              </p>
+            </div>
+
+            <div className={styles.faqItem}>
+              <h3>How long are therapy sessions?</h3>
+              <p>
+                Each therapy session lasts 50 minutes (the therapeutic hour). This gives 
+                us enough time to explore your thoughts and feelings while maintaining 
+                healthy boundaries. Sessions are scheduled weekly, though frequency can 
+                be adjusted based on your individual needs.
+              </p>
+            </div>
+
+            <div className={styles.faqItem}>
+              <h3>Is everything I say confidential?</h3>
+              <p>
+                Yes, everything discussed in our sessions is strictly confidential. 
+                I follow professional guidelines that protect your privacy. The only 
+                exceptions would be if there's a risk of serious harm to yourself or 
+                others, which I would discuss with you first whenever possible.
+              </p>
+            </div>
+
+            <div className={styles.faqItem}>
+              <h3>How many sessions will I need?</h3>
+              <p>
+                The number of sessions varies for each person and depends on your individual 
+                goals and circumstances. Some people find benefit in just a few sessions, 
+                while others prefer longer-term support. We'll regularly review your 
+                progress together and you're free to end therapy whenever you feel ready.
+              </p>
+            </div>
+
+            <div className={styles.faqItem}>
+              <h3>Do you offer online sessions?</h3>
+              <p>
+                Yes, I offer both in-person sessions in Colchester and secure online 
+                sessions via video call. Online therapy can be just as effective as 
+                in-person sessions and offers flexibility for those with busy schedules 
+                or who prefer the comfort of their own space.
+              </p>
+            </div>
+
+            <div className={styles.faqItem}>
+              <h3>What's the difference between play therapy and talking therapy?</h3>
+              <p>
+                Play therapy is designed specifically for children and uses toys, games, 
+                and creative activities as the primary way of communication. Children 
+                often express themselves more naturally through play than words. Talking 
+                therapy for adults and teenagers focuses on verbal communication to 
+                explore thoughts, feelings, and experiences.
+              </p>
+            </div>
+
+            <div className={styles.faqItem}>
+              <h3>How do I know if therapy is right for me?</h3>
+              <p>
+                If you're struggling with your mental health, feeling stuck, or want 
+                to understand yourself better, therapy can help. You don't need to be 
+                in crisis to benefit from therapy. It's a space for personal growth, 
+                developing coping strategies, and improving your overall well-being.
+              </p>
+            </div>
+
+            <div className={styles.faqItem}>
+              <h3>What if I don't know what to talk about?</h3>
+              <p>
+                That's completely normal and absolutely fine. I'm here to help guide 
+                our conversations and create a safe space for you to explore your 
+                thoughts and feelings. Many people worry about this, but you'll find 
+                that once we start talking, things naturally emerge.
+              </p>
+            </div>
+          </div>
+        </section>
+
         <section className={buttonLinksStyles.buttonLinks}>
           <Button href="/who-i-see">Who I See</Button>
           <Button href="/about">About Me</Button>

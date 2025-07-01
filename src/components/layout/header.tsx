@@ -69,8 +69,13 @@ export default function Header() {
             </Link>
           </li>
           <li className={styles.navItem}>
-            <Link href="/therapy-101" onClick={closeMenu}>
-              Therapy 101
+            <Link href="/about" onClick={closeMenu}>
+              About Me
+            </Link>
+          </li>
+          <li className={styles.navItem}>
+            <Link href="/services" onClick={closeMenu}>
+              Services
             </Link>
           </li>
           <li className={styles.navItem}>
@@ -79,18 +84,18 @@ export default function Header() {
             </Link>
           </li>
           <li className={styles.navItem}>
-            <Link href="/about" onClick={closeMenu}>
-              About Me
+            <Link href="/therapy-101" onClick={closeMenu}>
+              Therapy 101
             </Link>
           </li>
+          {/* <li className={styles.navItem}>
+            <Link href="/resources" onClick={closeMenu}>
+              Resources
+            </Link>
+          </li> */}
           <li className={styles.navItem}>
             <Link href="/blog" onClick={closeMenu}>
               Blog
-            </Link>
-          </li>
-          <li className={styles.navItem}>
-            <Link href="/services" onClick={closeMenu}>
-              Services
             </Link>
           </li>
           <li className={styles.navItem}>
