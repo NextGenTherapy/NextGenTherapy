@@ -54,7 +54,7 @@ body {
   box-sizing: border-box;
 }
 .page {
-  background: var(--color-background-gradient);
+  background: transparent;
   flex: 1;
   padding: 0;
   display: flex;
@@ -65,6 +65,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  background: var(--color-background);
 }
 
 a {
@@ -149,7 +150,7 @@ body {
 /* Safari fallback styles - these should always work */
 body {
   background-color: #fefae0; /* Fallback */
-  background-color: var(--color-background);
+  background: var(--color-background);
   color: #000000; /* Fallback */
   color: var(--color-text-primary);
 }
