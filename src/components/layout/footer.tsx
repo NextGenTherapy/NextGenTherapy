@@ -97,6 +97,17 @@ export default function Footer() {
         </div>
         <div className={styles.copyright}>
           <p>&copy; {new Date().getFullYear()} Next Generation Therapy. All rights reserved.</p>
+          <p className={styles.developer}>
+            Developed by{" "}
+            <a 
+              href="https://lstevens.dev" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className={styles.developerLink}
+            >
+              Luke Stevens
+            </a>
+          </p>
         </div>
       </div>
     </footer>

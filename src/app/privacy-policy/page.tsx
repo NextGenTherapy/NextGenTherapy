@@ -1,9 +1,12 @@
 import styles from "./privacy-policy.module.scss";
+import LegalNavigation from "../../components/layout/legal-navigation";
 
 export default function PrivacyPolicy() {
   return (
     <div className={styles.page}>
       <main className={styles.privacyPolicy}>
+        <LegalNavigation currentPage="privacy" />
+        
         <h1 className={styles.heading}>Privacy Policy</h1>
         <p className={styles.updated}>
           <strong>Last updated: 28 May 2025</strong>
@@ -80,6 +83,8 @@ export default function PrivacyPolicy() {
             andreeatherapytoday@gmail.com
           </a>
         </p>
+        
+        <LegalNavigation currentPage="privacy" />
       </main>
     </div>
   );

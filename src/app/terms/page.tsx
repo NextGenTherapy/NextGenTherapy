@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import styles from "./terms.module.scss";
+import LegalNavigation from "../../components/layout/legal-navigation";
 
 export const metadata: Metadata = {
   title: "Terms of Service - Next Generation Therapy",
@@ -10,6 +11,8 @@ export default function Terms() {
   return (
     <div className={styles.page}>
       <main className={styles.terms}>
+        <LegalNavigation currentPage="terms" />
+        
         <h1>Terms of Service</h1>
         <p><strong>Last updated: January 1, 2025</strong></p>
 
@@ -73,6 +76,8 @@ export default function Terms() {
             our contact form or at the address provided on our website.
           </p>
         </section>
+        
+        <LegalNavigation currentPage="terms" />
       </main>
     </div>
   );

@@ -1,0 +1,77 @@
+.navigationContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: var(--spacing-large) 0;
+  padding: var(--spacing-medium);
+  background: var(--color-primary);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  gap: var(--spacing-medium);
+}
+
+.navigationButtons {
+  display: flex;
+  gap: var(--spacing-medium);
+  align-items: center;
+}
+
+.backButton {
+  background: var(--color-secondary);
+  
+  &:hover, &:focus {
+    background: var(--color-accent);
+  }
+}
+
+.switchLink {
+  text-decoration: none;
+}
+
+.switchButton {
+  background: var(--color-accent);
+  
+  &:hover, &:focus {
+    background: var(--color-accent-hover);
+  }
+}
+
+.homeLink {
+  text-decoration: none;
+}
+
+.homeButton {
+  background: var(--color-button);
+  
+  &:hover, &:focus {
+    background: var(--color-button-hover);
+  }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .navigationContainer {
+    flex-direction: column;
+    gap: var(--spacing-small);
+  }
+  
+  .navigationButtons {
+    flex-direction: column;
+    width: 100%;
+    gap: var(--spacing-small);
+  }
+  
+  .backButton,
+  .switchButton,
+  .homeButton {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .navigationContainer {
+    margin: var(--spacing-medium) 0;
+    padding: var(--spacing-small);
+  }
+}
