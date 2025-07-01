@@ -84,6 +84,7 @@
     box-shadow: var(--box-shadow-hover);
     transform: translateY(-2px);
     text-decoration: none;
+    border-color: var(--color-accent);
   }
   
   &:focus-visible {
@@ -96,6 +97,12 @@
     font-size: var(--font-size-h3);
     margin-bottom: var(--spacing-medium);
     font-weight: 600;
+    transition: var(--transition-normal);
+  }
+  
+  &:hover h3,
+  &:focus h3 {
+    color: var(--color-accent-hover);
   }
   
   p {

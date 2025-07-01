@@ -79,7 +79,7 @@ export default function Home() {
                   such as anxiety, depression, stress, eating disorders, and more.
                 </p>
               </Link>
-              <Link href="/services" className={styles.approachCard}>
+              <Link href="/blog#professional-thoughts" className={styles.approachCard}>
                 <h3>My Approach</h3>
                 <p>
                   I focus on creating a safe, compassionate, and supportive

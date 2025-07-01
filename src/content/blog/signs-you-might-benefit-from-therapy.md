@@ -62,10 +62,10 @@ Before exploring the signs that therapy might be helpful, let's address some com
 
 **Therapy might help with:**
 - Feeling overwhelmed by parenting responsibilities
-- Difficulty managing your child's behavior
+- Difficulty managing your child's behaviour
 - Family conflicts or tension
 - Blended family adjustments
-- Concerns about your child's emotional or behavioral development
+- Concerns about your child's emotional or behavioural development
 
 ### Work and Social Situations
 
@@ -118,9 +118,9 @@ Before exploring the signs that therapy might be helpful, let's address some com
 - Feeling like your past is affecting your present relationships
 - Recurring nightmares or flashbacks
 - Difficulty trusting others due to past experiences
-- Patterns of behavior that seem connected to past trauma
+- Patterns of behaviour that seem connected to past trauma
 
-## Physical and Behavioral Signs
+## Physical and Behavioural Signs
 
 ### Changes in Sleep and Appetite
 
@@ -131,10 +131,10 @@ Before exploring the signs that therapy might be helpful, let's address some com
 - Physical symptoms without medical cause (headaches, stomach issues)
 - Increased illness or lowered immunity
 
-### Behavioral Changes
+### Behavioural Changes
 
 **Consider therapy if:**
-- You're engaging in risky or self-destructive behaviors
+- You're engaging in risky or self-destructive behaviours
 - You've increased your use of alcohol, drugs, or other substances
 - You're withdrawing from friends and family
 - You've lost motivation for things that used to matter to you
@@ -147,7 +147,7 @@ Before exploring the signs that therapy might be helpful, let's address some com
 **Take it seriously when:**
 - Multiple people express worry about you
 - Friends or family suggest you might benefit from therapy
-- People comment on changes in your behavior or mood
+- People comment on changes in your behaviour or mood
 - Your relationships are suffering due to your mental state
 - Others are afraid to approach you about certain topics
 
@@ -177,11 +177,11 @@ Before exploring the signs that therapy might be helpful, let's address some com
 ### Children and Adolescents
 
 **Signs a young person might benefit from therapy:**
-- Sudden changes in behavior or academic performance
+- Sudden changes in behaviour or academic performance
 - Withdrawal from friends and activities
 - Excessive worry or fear
 - Difficulty adjusting to changes (new school, divorce, etc.)
-- Aggressive or disruptive behavior
+- Aggressive or disruptive behaviour
 - Regression in developmental milestones
 
 ### Adults
@@ -224,7 +224,7 @@ Before exploring the signs that therapy might be helpful, let's address some com
 
 ### Finding the Right Therapist
 
-- Look for someone who specializes in your areas of concern
+- Look for someone who specialises in your areas of concern
 - Consider whether you prefer a specific therapeutic approach
 - Think about practical factors (location, insurance, scheduling)
 - Don't be afraid to meet with a few therapists to find the right fit
@@ -244,4 +244,4 @@ The fact that you're reading this and considering therapy shows self-awareness a
 
 Seeking therapy is an act of courage and self-care. It's an investment in your mental health, your relationships, and your overall quality of life. You deserve support, understanding, and the tools to live your best life.
 
-If you recognize yourself in any of these signs, consider reaching out to a mental health professional. Your future self will thank you for taking this important step toward healing and growth.
+If you recognise yourself in any of these signs, consider reaching out to a mental health professional. Your future self will thank you for taking this important step toward healing and growth.

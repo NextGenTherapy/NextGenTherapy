@@ -19,27 +19,27 @@ Therapeutic approaches are different frameworks and techniques that therapists u
 
 **My Primary Approach**
 
-Psychodynamic therapy, which I specialize in, focuses on:
-- **Unconscious patterns**: Exploring how past experiences influence current behavior
+Psychodynamic therapy, which I specialise in, focuses on:
+- **Unconscious patterns**: Exploring how past experiences influence current behaviour
 - **Therapeutic relationship**: Using our relationship as a tool for understanding other relationships
-- **Defense mechanisms**: Understanding how you protect yourself psychologically
+- **Defence mechanisms**: Understanding how you protect yourself psychologically
 - **Insight and understanding**: Developing deeper self-awareness
 
 **Best for**: Deep personal exploration, relationship issues, recurring patterns, trauma processing
 
-### Cognitive Behavioral Therapy (CBT)
+### Cognitive Behavioural Therapy (CBT)
 
 CBT focuses on:
 - **Thought patterns**: Identifying and changing negative thinking
-- **Behavioral changes**: Modifying actions to improve mood and functioning
+- **Behavioural changes**: Modifying actions to improve mood and functioning
 - **Present focus**: Concentrating on current problems rather than past events
 - **Practical tools**: Learning specific coping strategies and techniques
 
-**Best for**: Anxiety, depression, phobias, specific behavioral issues
+**Best for**: Anxiety, depression, phobias, specific behavioural issues
 
-### Humanistic/Person-Centered Therapy
+### Humanistic/Person-Centred Therapy
 
-This approach emphasizes:
+This approach emphasises:
 - **Self-acceptance**: Developing unconditional positive regard for yourself
 - **Personal growth**: Focusing on your potential and capacity for change
 - **Client-led**: You guide the direction of therapy
@@ -55,9 +55,9 @@ Systemic therapy looks at:
 - **System changes**: Helping entire family units function better
 - **Contextual understanding**: Seeing problems within relationship contexts
 
-**Best for**: Family conflicts, relationship issues, children's behavioral problems
+**Best for**: Family conflicts, relationship issues, children's behavioural problems
 
-## Specialized Approaches
+## Specialised Approaches
 
 ### Trauma-Informed Therapy
 
@@ -77,7 +77,7 @@ Especially for children:
 - **Non-directive**: Allowing children to lead and express themselves naturally
 - **Family involvement**: Often includes work with parents and caregivers
 
-**Best for**: Children's emotional and behavioral difficulties, trauma in children
+**Best for**: Children's emotional and behavioural difficulties, trauma in children
 
 ### Mindfulness-Based Approaches
 
@@ -116,7 +116,7 @@ Consider these factors:
 - **Symptom relief**: CBT might be most efficient for specific symptoms
 - **Deep understanding**: Psychodynamic approaches offer profound insight
 - **Relationship improvement**: Systemic approaches focus on interpersonal dynamics
-- **Personal growth**: Humanistic approaches emphasize self-actualization
+- **Personal growth**: Humanistic approaches emphasise self-actualisation
 
 ### Your Situation
 - **Time constraints**: Some approaches are shorter-term, others are open-ended

@@ -50,7 +50,7 @@ As a parent or caregiver, you are:
 **Emotional support:**
 - Validate your child's feelings without trying to "fix" everything
 - Maintain routines and consistency to provide security
-- Be patient with behavioral changes as your child processes their experiences
+- Be patient with behavioural changes as your child processes their experiences
 - Celebrate small victories and progress
 
 **Practical support:**
@@ -77,7 +77,7 @@ As a parent or caregiver, you are:
 
 **Information sharing:**
 - Provide relevant background information
-- Share observations about your child's behavior at home
+- Share observations about your child's behaviour at home
 - Communicate any significant changes in your child's life
 - Ask questions about how you can support the therapeutic work
 
@@ -103,10 +103,10 @@ As a parent or caregiver, you are:
 - Offer small incentives for attendance while addressing underlying concerns
 - Work with the therapist to understand and address the resistance
 
-### Behavioral Changes During Therapy
+### Behavioural Changes During Therapy
 
 It's common for children to experience:
-- **Temporary increase in difficult behaviors**: As they process emotions
+- **Temporary increase in difficult behaviours**: As they process emotions
 - **Emotional ups and downs**: Working through issues can bring up strong feelings
 - **Changes in sleep or appetite**: Processing can affect physical wellbeing
 - **Testing boundaries**: As they work through relationship dynamics
@@ -128,7 +128,7 @@ It's common for children to experience:
 **Special considerations:**
 - Play is their primary language of communication
 - They may express therapy experiences through play at home
-- Regression in behavior is common and usually temporary
+- Regression in behaviour is common and usually temporary
 - They need extra reassurance about your love and support
 
 **How to help:**
@@ -172,7 +172,7 @@ Contact the therapist if you notice:
 - Expressions of self-harm or harm to others
 - Complete withdrawal from family and friends
 - Persistent sleep or eating disturbances
-- Severe behavioral changes that don't improve over time
+- Severe behavioural changes that don't improve over time
 
 ## Long-term Support
 

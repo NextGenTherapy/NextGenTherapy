@@ -23,7 +23,7 @@
 }
 
 .homeLink {
-  color: var(--color-button-home);
+  color: var(--color-accent);
   font-weight: bold;
   text-decoration: underline;
   font-size: var(--font-size-large);
@@ -36,7 +36,7 @@
 
 .homeLink:hover,
 .homeLink:focus {
-  background: var(--color-button-home-hover);
+  background: var(--color-accent-hover);
   color: var(--color-primary);
   text-decoration: none;
 }

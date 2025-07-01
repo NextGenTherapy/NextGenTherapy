@@ -38,7 +38,7 @@ Your first therapy session is primarily about getting to know each other and est
 - Key life events that have shaped you
 - Current challenges you're facing
 - Relationships that are important to you
-- Patterns you've noticed in your thoughts, feelings, or behaviors
+- Patterns you've noticed in your thoughts, feelings, or behaviours
 
 ### Your Questions
 - Concerns about the therapeutic process

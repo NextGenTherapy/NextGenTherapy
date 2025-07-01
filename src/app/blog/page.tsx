@@ -69,13 +69,15 @@ function BlogSection({
   title,
   posts,
   emptyMessage,
+  id,
 }: {
   title: string;
   posts: PostMeta[];
   emptyMessage: string;
+  id?: string;
 }) {
   return (
-    <section className={styles.blogSection}>
+    <section className={styles.blogSection} id={id}>
       <h2 className={styles.sectionTitle}>{title}</h2>
       {posts.length > 0 ? (
         <div className={styles.blogList}>
@@ -121,15 +123,17 @@ export default function BlogPage() {
 
       <div className={styles.main}>
         <BlogSection
-          title="Personal Thoughts"
-          posts={personalPosts}
-          emptyMessage="No personal posts yet. Check back soon for my personal reflections and experiences."
-        />
-
-        <BlogSection
           title="Professional Thoughts"
           posts={professionalPosts}
           emptyMessage="No professional posts yet. I'll be sharing insights about therapy, mental health practices, and professional developments soon."
+          id="professional-thoughts"
+        />
+
+        <BlogSection
+          title="Personal Thoughts"
+          posts={personalPosts}
+          emptyMessage="No personal posts yet. Check back soon for my personal reflections and experiences."
+          id="personal-thoughts"
         />
       </div>
     </div>

@@ -83,7 +83,7 @@ It's completely normal to experience anxiety between therapy sessions. In fact, 
 - Set a timer for 10-15 minutes
 - Write whatever comes to mind
 - Don't worry about grammar or making sense
-- This helps externalize anxious thoughts
+- This helps externalise anxious thoughts
 
 **Structured journaling:**
 - What am I feeling right now?
@@ -102,7 +102,7 @@ It's completely normal to experience anxiety between therapy sessions. In fact, 
 - Take a walk, especially in nature
 - Do gentle yoga or stretching
 - Dance to music you enjoy
-- Clean or organize (productive movement can be soothing)
+- Clean or organise (productive movement can be soothing)
 
 **Exercise benefits:**
 - Releases endorphins (natural mood boosters)
@@ -229,7 +229,7 @@ Contact your therapist or seek immediate help if you experience:
 
 Managing anxiety between sessions is a skill that develops over time. Be patient with yourself as you learn what works best for you. Every time you successfully cope with anxiety using these tools, you're building confidence in your ability to handle difficult emotions.
 
-Your anxiety doesn't define you, and you have more strength and resilience than you might realize. Each time you use these strategies, you're proving to yourself that you can handle difficult moments and that you're actively participating in your own healing.
+Your anxiety doesn't define you, and you have more strength and resilience than you might realise. Each time you use these strategies, you're proving to yourself that you can handle difficult moments and that you're actively participating in your own healing.
 
 The work you do between sessions is just as important as the work you do during therapy. You're learning to become your own therapist, developing the skills and confidence to navigate life's challenges with greater ease and self-compassion.
 
