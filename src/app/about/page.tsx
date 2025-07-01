@@ -47,28 +47,32 @@ export default function AboutMe() {
   return (
     <div className={styles.page}>
       <main className={styles.main}>
-        <section className={styles.contentTop}>
+        {/* Hero Section */}
+        <section className={styles.heroSection}>
           <div className={styles.greeting}>
             <h1>About Me</h1>
           </div>
-          <aside className={styles.imageContainer}>
+        </section>
+
+        {/* Image Section */}
+        <section className={styles.imageSection}>
+          <div className={styles.imageContainer}>
             <Image
               src="/images/andreea.jpg"
               alt="Andreea Horhocea - Psychodynamic Psychotherapist"
-              height={300}
-              width={300}
+              height={400}
+              width={400}
               priority
               className={styles.image}
             />
-          </aside>
+          </div>
         </section>
 
-        <section>
+        {/* Content Section */}
+        <section className={styles.contentSection}>
           <article className={styles.textContainer}>
-            <div>
+            <div className={styles.introSection}>
               <h3>Hi There</h3>
-            </div>
-            <div>
               <p>I am Andreea. Lovely to meet you.</p>
               <p>
                 I am a psychodynamic psychotherapist. I graduated a Masters in
@@ -80,7 +84,7 @@ export default function AboutMe() {
               </p>
             </div>
 
-            <div>
+            <div className={styles.approachSection}>
               <p>
                 I understand the importance of finding the right therapist for
                 you and how the process sometimes can be exhausting and
@@ -97,7 +101,7 @@ export default function AboutMe() {
               </p>
             </div>
 
-            <div>
+            <div className={styles.philosophySection}>
               <p>
                 I started my practice to offer you a space where you can
                 comfortably and confidently explore your story. I believe that
@@ -116,7 +120,7 @@ export default function AboutMe() {
               </p>
             </div>
 
-            <div>
+            <div className={styles.practiceSection}>
               <p>
                 I believe that once the struggle is identified it&rsquo;s
                 important to be able to access support as quickly as possible

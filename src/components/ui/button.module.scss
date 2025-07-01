@@ -1,3 +1,5 @@
+/* Button Component Styles */
+
 .button {
   display: inline-block;
   padding: var(--spacing-small) var(--spacing-medium);
@@ -8,17 +10,17 @@
   color: var(--color-text-secondary);
   background-color: var(--color-button);
   border: none;
-  border-radius: 5px;
+  border-radius: var(--border-radius);
   cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.button:hover {
-  background-color: var(--color-button-hover) !important;
-  color: var(--color-text-secondary) !important;
-}
-
-.button:focus {
-  outline: var(--outline-width) solid var(--color-button-hover);
-  outline-offset: var(--outline-offset);
+  transition: var(--transition-normal);
+  
+  &:hover {
+    background-color: var(--color-button-hover) !important;
+    color: var(--color-text-secondary) !important;
+  }
+  
+  &:focus {
+    outline: var(--outline-width) solid var(--color-button-hover);
+    outline-offset: var(--outline-offset);
+  }
 }
