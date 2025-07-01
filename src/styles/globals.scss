@@ -1,3 +1,9 @@
+/* Safari-specific fixes for local development */
+/* Ensure CSS custom properties are processed correctly in Safari */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 /* Variables are now centralized in variables.scss */
 #root,
 #__next {
@@ -135,3 +141,11 @@ button {
   white-space: nowrap;
   border: 0;
 }
+
+/* Debug styles for Safari */
+body {
+  background-color: #fefae0 !important; /* Fallback for Safari */
+  color: #000000 !important; /* Fallback for Safari */
+}
+
+/* Ensure variables load first */

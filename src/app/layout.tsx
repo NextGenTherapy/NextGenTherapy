@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import "../styles/globals.scss";
 import "../styles/variables.scss";
+import "../styles/globals.scss";
 import Header from "../components/layout/header";
 import Footer from "../components/layout/footer";
 import ErrorBoundary from "../components/layout/ErrorBoundary";
@@ -64,6 +64,10 @@ export default async function RootLayout({
           name="viewport"
           content="width=device-width, initial-scale=1, viewport-fit=cover"
         />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
         <link rel="icon" href="/favicon.ico" type="image/x-icon" />
         <link rel="canonical" href="https://nextgentherapy.co.uk" />
         <script
