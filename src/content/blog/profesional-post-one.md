@@ -1,6 +1,6 @@
 ---
 title: "The Importance of Therapeutic Boundaries"
-date: "2025-07-01"
+date: "01-07-2025"
 summary: "Exploring why clear boundaries are essential for effective therapy and client wellbeing."
 category: "professional"
 ---
