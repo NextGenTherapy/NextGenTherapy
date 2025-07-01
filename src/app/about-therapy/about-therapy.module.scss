@@ -15,7 +15,7 @@
 /* Hero Section */
 .heroSection {
   text-align: center;
-  padding: var(--spacing-xlarge) 0 var(--spacing-large);
+  padding: var(--spacing-section) 0 var(--spacing-large);
 }
 
 .greeting h1 {
@@ -36,7 +36,7 @@
 .contentGrid {
   display: flex;
   align-items: center;
-  gap: var(--spacing-xlarge);
+  gap: var(--spacing-xxlarge);
   margin: var(--spacing-large) 0;
 }
 
@@ -58,7 +58,7 @@
 
 /* Section Styles */
 .whyTherapySection {
-  margin: var(--spacing-xlarge) 0;
+  margin: var(--spacing-section) 0;
 }
 
 .whyTherapySection h2 {
@@ -75,7 +75,7 @@
 
 /* How Therapy Helps Section */
 .howTherapyHelpsSection {
-  margin: var(--spacing-xlarge) 0;
+  margin: var(--spacing-section) 0;
   text-align: center;
 }
 
@@ -122,7 +122,7 @@
 
 /* Location Section */
 .locationSection {
-  margin: var(--spacing-xlarge) 0;
+  margin: var(--spacing-section) 0;
 }
 
 .locationIntro {
@@ -143,7 +143,7 @@
 
 .locationContent {
   display: flex;
-  gap: var(--spacing-xlarge);
+  gap: var(--spacing-xxlarge);
   align-items: flex-start;
 }
 

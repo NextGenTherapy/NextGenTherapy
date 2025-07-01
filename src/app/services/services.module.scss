@@ -15,7 +15,7 @@
 /* Hero Section */
 .greeting {
   text-align: center;
-  padding: var(--spacing-xlarge) 0 var(--spacing-large);
+  padding: var(--spacing-section) 0 var(--spacing-large);
   
   h1 {
     font-size: var(--font-size-h1);
@@ -27,15 +27,15 @@
 
 /* Content Sections */
 .servicesOverview {
-  margin: var(--spacing-xlarge) 0;
+  margin: var(--spacing-section) 0;
 }
 
 .contentEnd {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin: var(--spacing-xlarge) 0;
-  gap: var(--spacing-xlarge);
+  margin: var(--spacing-section) 0;
+  gap: var(--spacing-xxlarge);
 }
 
 /* Services Overview Section */
@@ -183,7 +183,7 @@
 .adultsSection {
   display: flex;
   align-items: center;
-  gap: var(--spacing-xlarge);
+  gap: var(--spacing-xxlarge);
   padding: var(--spacing-large);
   background: rgba(255, 255, 255, 0.6);
   border-radius: var(--border-radius-large);
@@ -198,7 +198,7 @@
 
 /* FAQ Section */
 .faqSection {
-  margin: var(--spacing-xlarge) 0;
+  margin: var(--spacing-section) 0;
   padding: var(--spacing-large) 0;
 }
 

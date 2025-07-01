@@ -34,10 +34,19 @@
 
   /* Spacing Variables */
   --spacing-xs: 4px;
-  --spacing-small: 12px;
-  --spacing-medium: 20px;
-  --spacing-large: 30px;
-  --spacing-xlarge: 200px;
+  --spacing-small: 8px;
+  --spacing-medium: 12px;
+  --spacing-large: 20px;
+  --spacing-xlarge: 30px;
+  --spacing-xxlarge: 40px;
+  --spacing-section: 60px;
+  --spacing-hero: 80px;
+
+  /* Responsive Breakpoints */
+  --breakpoint-mobile: 480px;
+  --breakpoint-tablet: 768px;
+  --breakpoint-desktop: 1024px;
+  --breakpoint-large: 1200px;
   
   /* Transform and Animation Values */
   --transform-translate-small: 6px;

@@ -19,7 +19,7 @@
 /* Hero Section */
 .greeting {
   text-align: center;
-  padding: var(--spacing-xlarge) 0 var(--spacing-large);
+  padding: var(--spacing-section) 0 var(--spacing-large);
   
   h1 {
     font-size: var(--font-size-h1);
@@ -33,7 +33,7 @@
 .contentTop {
   display: flex;
   align-items: center;
-  gap: var(--spacing-xlarge);
+  gap: var(--spacing-xxlarge);
   margin: var(--spacing-large) 0;
   
   article {
@@ -68,7 +68,7 @@
 
 /* Information Section */
 .contentMiddle {
-  margin: var(--spacing-xlarge) 0;
+  margin: var(--spacing-section) 0;
 }
 
 .contactInfo {
