@@ -16,6 +16,20 @@ const ContentSecurityPolicy = `
 `.replace(/\n/g, "");
 
 const nextConfig: NextConfig = {
+  async redirects() {
+    return [
+      {
+        source: '/therapy-101',
+        destination: '/about-therapy',
+        permanent: true,
+      },
+      {
+        source: '/who-i-see',
+        destination: '/about-therapy',
+        permanent: true,
+      },
+    ];
+  },
   async headers() {
     return [
       {

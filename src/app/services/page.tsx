@@ -245,7 +245,7 @@ export default function Services() {
         </section>
 
         <section className={buttonLinksStyles.buttonLinks}>
-          <Button href="/who-i-see">Who I See</Button>
+          <Button href="/about-therapy">About Therapy</Button>
           <Button href="/about">About Me</Button>
           <Button href="/book-now">Book Now</Button>
         </section>

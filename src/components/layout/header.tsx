@@ -79,13 +79,8 @@ export default function Header() {
             </Link>
           </li>
           <li className={styles.navItem}>
-            <Link href="/who-i-see" onClick={closeMenu}>
-              Who I See
-            </Link>
-          </li>
-          <li className={styles.navItem}>
-            <Link href="/therapy-101" onClick={closeMenu}>
-              Therapy 101
+            <Link href="/about-therapy" onClick={closeMenu}>
+              About Therapy
             </Link>
           </li>
           {/* <li className={styles.navItem}>
