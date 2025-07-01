@@ -1,9 +1,14 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import dynamic from "next/dynamic";
 import styles from "./book-now.module.css";
 import buttonLinksStyles from "../../components/buttonLinks.module.css";
 import Button from "../../components/button";
-import ContactForm from "../../components/contact-form";
+
+// Dynamically import ContactForm for better performance
+const ContactForm = dynamic(() => import("../../components/contact-form"), {
+  loading: () => <div className={styles.formLoading}>Loading contact form...</div>,
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://nextgentherapy.co.uk"),

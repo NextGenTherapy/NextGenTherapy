@@ -78,3 +78,16 @@
   display: flex;
   justify-content: center;
 }
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+  color: var(--color-text);
+}
+
+.button:focus-visible {
+  outline: 2px solid var(--color-header-background);
+  outline-offset: 2px;
+}

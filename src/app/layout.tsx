@@ -3,6 +3,7 @@ import "../styles/globals.css";
 import "../styles/variables.css";
 import Header from "../components/header";
 import Footer from "../components/footer";
+import ErrorBoundary from "../components/ErrorBoundary";
 import { Analytics } from "@vercel/analytics/next";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { SpeedInsights } from "@vercel/speed-insights/next";
@@ -99,9 +100,11 @@ export default async function RootLayout({
         </a>
         <div className="layout-container">
           <Header />
-          <main id="main-content" className="page">
-            {children}
-          </main>
+          <ErrorBoundary>
+            <main id="main-content" className="page">
+              {children}
+            </main>
+          </ErrorBoundary>
           <Analytics />
           <Footer />
         </div>

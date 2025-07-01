@@ -57,13 +57,21 @@ function getAllPosts() {
       const filePath = path.join(postsDir, filename);
       const fileContent = fs.readFileSync(filePath, "utf-8");
       const { data } = matter(fileContent);
+      
+      // Add error handling for missing frontmatter
+      if (!data.title || !data.date) {
+        console.warn(`Missing frontmatter in ${filename}`);
+        return null;
+      }
+      
       return {
         slug: filename.replace(/\.md$/, ""),
         title: data.title,
         date: data.date,
       };
     })
-    .sort((a, b) => (a.date < b.date ? 1 : -1));
+    .filter(Boolean) // Remove null entries
+    .sort((a, b) => (a!.date < b!.date ? 1 : -1));
 }
 
 export default async function BlogPostPage({
@@ -74,11 +82,15 @@ export default async function BlogPostPage({
   const { slug } = await params;
 
   if (!slug) {
-    return <div>Loading...</div>;
+    return (
+      <div className={styles.loading}>
+        <p>Loading post...</p>
+      </div>
+    );
   }
 
   const posts = getAllPosts();
-  const currentIndex = posts.findIndex((post) => post.slug === slug);
+  const currentIndex = posts.findIndex((post) => post!.slug === slug);
   const prevPost = posts[currentIndex + 1];
   const nextPost = posts[currentIndex - 1];
 

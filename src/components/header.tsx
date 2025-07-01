@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
+import Button from "./button";
 import styles from "./header.module.css";
 
 export default function Header() {
@@ -40,17 +41,24 @@ export default function Header() {
         </div>
 
         {/* Hamburger Menu Button */}
-        <button
+        <Button
           type="button"
           className={styles.menuButton}
           onClick={toggleMenu}
-          aria-label="Toggle navigation menu"
+          aria-label={isMenuOpen ? "Close navigation menu" : "Open navigation menu"}
+          aria-expanded={isMenuOpen ? "true" : "false"}
+          aria-controls="main-navigation"
         >
-          ☰
-        </button>
+          <span className={styles.hamburgerIcon}>
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+        </Button>
 
         {/* Navigation List */}
         <ul
+          id="main-navigation"
           className={`${styles.navList} ${
             isMenuOpen ? styles.navListOpen : ""
           }`}

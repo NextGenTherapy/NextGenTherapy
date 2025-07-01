@@ -46,8 +46,34 @@ export const metadata: Metadata = {
 };
 
 export default function Services() {
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Psychodynamic Psychotherapy Services",
+    "provider": {
+      "@type": "Person",
+      "name": "Andreea Horhocea",
+      "jobTitle": "Psychodynamic Psychotherapist"
+    },
+    "serviceType": ["Play Therapy for Children", "Talking Therapy for Adults"],
+    "areaServed": ["Colchester", "Online"],
+    "description": "Professional therapy services including play therapy for children and talking therapy for adults, addressing anxiety, self-esteem, body image, and relationship issues.",
+    "offers": [
+      {
+        "@type": "Offer",
+        "name": "Individual Therapy Session",
+        "description": "50-minute individual therapy sessions available in-person or online"
+      }
+    ]
+  };
+
   return (
-    <div className={styles.page}>
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
+      <div className={styles.page}>
       <main className={styles.main}>
         <div className={styles.greeting}>
           <h1>Services Provided</h1>
@@ -137,5 +163,6 @@ export default function Services() {
         </section>
       </main>
     </div>
+    </>
   );
 }

@@ -8,14 +8,49 @@ This project provides information about therapy services, blog articles, and a c
 ## 🚀 Features
 
 - **Next.js 15 App Router** with dynamic routing
-- **TypeScript** for type safety
+- **TypeScript** for type safety and reliability
 - **SEO optimized** with dynamic metadata, Open Graph, and Twitter cards
 - **Responsive design** using CSS Modules
 - **Blog** powered by Markdown files
-- **Contact form** with Resend email integration
+- **Contact form** with enhanced validation and security
 - **Google Analytics** and Vercel Speed Insights
 - **Automatic sitemap generation** for SEO
 - **Image optimization** and accessibility best practices
+- **Error boundaries** for robust error handling
+- **Security features** including rate limiting and input sanitization
+- **Performance optimizations** with dynamic imports and loading states
+
+## ✅ Recent Improvements (2025-01-01)
+
+### Performance
+- ✅ Dynamic imports for heavy components (contact form)
+- ✅ Loading states with animated spinners
+- ✅ Optimized image loading with Next.js Image component
+
+### Security
+- ✅ Rate limiting on contact form API (10 requests per 15 minutes)
+- ✅ Enhanced input validation and sanitization
+- ✅ XSS protection and secure headers
+
+### Accessibility
+- ✅ Comprehensive keyboard navigation support
+- ✅ Screen reader compatibility with proper ARIA attributes
+- ✅ Focus management and visual indicators
+- ✅ Skip links for better navigation
+- ✅ Support for reduced motion preferences
+- ✅ High contrast mode support
+
+### User Experience
+- ✅ Enhanced contact form with real-time validation
+- ✅ Better error messages and feedback
+- ✅ Loading states for form submission
+- ✅ Animated hamburger menu for mobile
+
+### SEO & Technical
+- ✅ Structured data (JSON-LD) for services
+- ✅ Global error boundaries
+- ✅ Improved meta tags and social sharing
+- ✅ Better TypeScript configurations
 
 ---
 

@@ -1,0 +1,14 @@
+.errorBoundary {
+  padding: 2rem;
+  text-align: center;
+  color: var(--color-text);
+}
+
+.errorBoundary h2 {
+  color: var(--color-header-background);
+  margin-bottom: var(--spacing-medium);
+}
+
+.errorBoundary p {
+  margin: 0;
+}
