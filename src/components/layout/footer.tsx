@@ -7,7 +7,7 @@ export default function Footer() {
     <footer className={styles.footer}>
       <section className={styles.footerContent}>
         <section className={styles.footerColumn}>
-          <Link href="/book-now">
+          <Link href="/book-now#location">
             <h3>Location</h3>
           </Link>
           <ul>
@@ -27,7 +27,7 @@ export default function Footer() {
         </section>
 
         <section className={styles.footerColumn}>
-          <Link href="/book-now">
+          <Link href="/book-now#working-hours">
             <h3>Hours</h3>
           </Link>
           <ul className="weekday">

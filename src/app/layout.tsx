@@ -85,6 +85,15 @@ export default async function RootLayout({
           name="viewport"
           content="width=device-width, initial-scale=1, viewport-fit=cover"
         />
+        {/* iPhone/Safari status bar styling */}
+        <meta name="theme-color" content="#164b39" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="mobile-web-app-capable" content="yes" />
+        {/* Additional mobile browser theme colors */}
+        <meta name="msapplication-TileColor" content="#164b39" />
+        <meta name="msapplication-navbutton-color" content="#164b39" />
+        
         <link rel="icon" href="/favicon.ico" type="image/x-icon" />
         <link rel="canonical" href="https://nextgentherapy.co.uk" />
         <script
@@ -205,7 +214,7 @@ export default async function RootLayout({
           <CookieConsent />
         </div>
       </body>
-      <GoogleAnalytics gaId="G-3528EDPEXW" />
+      <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID || "G-3528EDPEXW"} />
       <SpeedInsights />
     </html>
   );
