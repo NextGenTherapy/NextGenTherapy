@@ -1,35 +1,30 @@
-/* Default Styling for buttonLinks */
+/* Responsive ButtonLinks Component */
 .buttonLinks {
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
   gap: var(--spacing-medium);
   margin: var(--spacing-large) auto;
   width: 100%;
+  max-width: 600px;
   box-sizing: border-box;
+  padding: 0 var(--container-padding-mobile);
 }
 
-/* Media Query for Tablets (max-width: 768px) */
-@media (max-width: 768px) {
+@media (min-width: 768px) {
   .buttonLinks {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: var(--spacing-medium);
-    margin: var(--spacing-large) auto;
-    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 0 var(--container-padding-tablet);
+    max-width: 800px;
   }
 }
 
-/* Media Query for Small Screens (max-width: 480px) */
-@media (max-width: 480px) {
+@media (min-width: 1024px) {
   .buttonLinks {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: var(--spacing-small);
-    margin: var(--spacing-medium) auto;
-    width: 100%;
+    padding: 0 var(--container-padding-desktop);
+    max-width: 1000px;
   }
 }

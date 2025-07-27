@@ -4,12 +4,27 @@
   background: var(--color-background);
   min-height: 100vh;
   padding-bottom: var(--spacing-large);
+  width: 100%;
 }
 
 .main {
-  max-width: 1200px;
+  max-width: var(--container-width-desktop);
   margin: 0 auto;
-  padding: 0 var(--spacing-medium);
+  padding: 0 var(--container-padding-mobile);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+  .main {
+    padding: 0 var(--container-padding-tablet);
+  }
+}
+
+@media (min-width: 1024px) {
+  .main {
+    padding: 0 var(--container-padding-desktop);
+  }
 }
 
 /* Hero Section */

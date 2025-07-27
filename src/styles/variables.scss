@@ -30,15 +30,23 @@
   --color-disabled: #cccccc;
   --color-disabled-text: #666666;
 
-  /* Spacing Variables */
+  /* Spacing Variables - Mobile First */
   --spacing-xs: 4px;
   --spacing-small: 8px;
   --spacing-medium: 12px;
-  --spacing-large: 20px;
-  --spacing-xlarge: 30px;
-  --spacing-xxlarge: 40px;
-  --spacing-section: 120px;
-  --spacing-hero: 140px;
+  --spacing-large: 16px;
+  --spacing-xlarge: 24px;
+  --spacing-xxlarge: 32px;
+  --spacing-section: 60px;
+  --spacing-hero: 80px;
+
+  /* Container Widths */
+  --container-width-mobile: 100%;
+  --container-width-tablet: 90%;
+  --container-width-desktop: 1200px;
+  --container-padding-mobile: 16px;
+  --container-padding-tablet: 24px;
+  --container-padding-desktop: 32px;
 
   /* Responsive Breakpoints */
   --breakpoint-mobile: 480px;
@@ -58,7 +66,7 @@
   --border-radius: 6px;
   --border-radius-large: 12px;
 
-  /* Typography */
+  /* Typography - Mobile First */
   --font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   --font-size-small: 0.875rem;
   --font-size-base: 1rem;
@@ -66,11 +74,11 @@
   --font-size-large: 1.25rem;
   --font-size-h6: 0.875rem;
   --font-size-h5: 1rem;
-  --font-size-h4: 1.25rem;
-  --font-size-h3: 1.5rem;
-  --font-size-h2: 2rem;
-  --font-size-h1: 2.5rem;
-  --font-size-logo: 2.188rem;
+  --font-size-h4: 1.125rem;
+  --font-size-h3: 1.25rem;
+  --font-size-h2: 1.5rem;
+  --font-size-h1: 2rem;
+  --font-size-logo: 1.75rem;
 
   /* Transitions and Animations */
   --transition-fast: 0.2s ease;
@@ -78,4 +86,41 @@
   --box-shadow: 0 4px 16px rgba(0, 0, 0, 0.07);
   --box-shadow-hover: 0 6px 20px rgba(0, 0, 0, 0.1);
   --box-shadow-reverse: 0 -4px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Typography and Spacing */
+@media (min-width: 768px) {
+  :root {
+    /* Tablet and up spacing */
+    --spacing-large: 20px;
+    --spacing-xlarge: 30px;
+    --spacing-xxlarge: 40px;
+    --spacing-section: 80px;
+    --spacing-hero: 100px;
+    
+    /* Typography scaling */
+    --font-size-h4: 1.25rem;
+    --font-size-h3: 1.5rem;
+    --font-size-h2: 1.75rem;
+    --font-size-h1: 2.25rem;
+    --font-size-logo: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  :root {
+    /* Desktop spacing */
+    --spacing-large: 24px;
+    --spacing-xlarge: 36px;
+    --spacing-xxlarge: 48px;
+    --spacing-section: 120px;
+    --spacing-hero: 140px;
+    
+    /* Desktop typography */
+    --font-size-h4: 1.5rem;
+    --font-size-h3: 1.75rem;
+    --font-size-h2: 2rem;
+    --font-size-h1: 2.5rem;
+    --font-size-logo: 2.25rem;
+  }
 }

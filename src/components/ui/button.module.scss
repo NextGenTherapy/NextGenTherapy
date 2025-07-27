@@ -3,7 +3,7 @@
 .button {
   display: inline-block;
   padding: var(--spacing-small) var(--spacing-medium);
-  font-size: var(--font-size-medium);
+  font-size: var(--font-size-small);
   font-weight: bold;
   text-align: center;
   text-decoration: none;
@@ -13,6 +13,8 @@
   border-radius: var(--border-radius);
   cursor: pointer;
   transition: var(--transition-normal);
+  min-width: 120px;
+  box-sizing: border-box;
   
   &:hover {
     background-color: var(--color-button-hover) !important;
@@ -22,5 +24,20 @@
   &:focus {
     outline: var(--outline-width) solid var(--color-button-hover);
     outline-offset: var(--outline-offset);
+  }
+}
+
+@media (min-width: 768px) {
+  .button {
+    padding: var(--spacing-medium) var(--spacing-large);
+    font-size: var(--font-size-base);
+    min-width: 140px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .button {
+    font-size: var(--font-size-medium);
+    min-width: 160px;
   }
 }

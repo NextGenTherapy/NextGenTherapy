@@ -4,12 +4,27 @@
   background: var(--color-background);
   min-height: 100vh;
   padding-bottom: var(--spacing-large);
+  width: 100%;
 }
 
 .main {
-  max-width: 1200px;
+  max-width: var(--container-width-desktop);
   margin: 0 auto;
-  padding: 0 var(--spacing-medium);
+  padding: 0 var(--container-padding-mobile);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+  .main {
+    padding: 0 var(--container-padding-tablet);
+  }
+}
+
+@media (min-width: 1024px) {
+  .main {
+    padding: 0 var(--container-padding-desktop);
+  }
 }
 
 /* Hero Section */
@@ -18,36 +33,62 @@
   padding: var(--spacing-section) 0 var(--spacing-large);
 }
 
-.greeting {
-  h1 {
-    font-size: var(--font-size-h1);
-    font-weight: bold;
-    color: var(--color-accent);
-    margin-bottom: var(--spacing-small);
-  }
+.greeting h1 {
+  font-size: var(--font-size-h1);
+  font-weight: bold;
+  color: var(--color-accent);
+  margin-bottom: var(--spacing-small);
 }
 
 /* Image Section */
 .imageSection {
   display: flex;
   justify-content: center;
-  margin: var(--spacing-section) 0;
+  margin: var(--spacing-large) 0;
+}
+
+@media (min-width: 768px) {
+  .imageSection {
+    margin: var(--spacing-section) 0;
+  }
 }
 
 .imageContainer {
   display: flex;
   justify-content: center;
   align-items: center;
-  
-  .image {
-    border-radius: var(--border-radius-large);
-    box-shadow: var(--box-shadow);
+  width: 100%;
+  max-width: 250px;
+}
+
+@media (min-width: 768px) {
+  .imageContainer {
+    max-width: 350px;
   }
+}
+
+@media (min-width: 1024px) {
+  .imageContainer {
+    max-width: 400px;
+  }
+}
+
+.imageContainer .image {
+  border-radius: var(--border-radius-large);
+  box-shadow: var(--box-shadow);
+  width: 100%;
+  height: auto;
 }
 
 /* Content Section */
 .contentSection {
-  margin: var(--spacing-section) 0;
+  margin: var(--spacing-large) 0;
+}
+
+@media (min-width: 768px) {
+  .contentSection {
+    margin: var(--spacing-section) 0;
+  }
 }
 
 .textContainer {
@@ -60,11 +101,11 @@
 .approachSection,
 .philosophySection,
 .practiceSection {
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.9);
   border: 1px solid var(--color-accent-light);
   border-radius: var(--border-radius-large);
-  padding: var(--spacing-large);
-  margin-bottom: var(--spacing-large);
+  padding: var(--spacing-medium);
+  margin-bottom: var(--spacing-medium);
   box-shadow: var(--box-shadow);
   transition: var(--transition-normal);
   
@@ -79,15 +120,16 @@
   
   h3 {
     color: var(--color-accent);
-    font-size: var(--font-size-h3);
-    margin-bottom: var(--spacing-medium);
+    font-size: var(--font-size-h4);
+    margin-bottom: var(--spacing-small);
     font-weight: 600;
   }
   
   p {
     line-height: 1.6;
-    margin-bottom: var(--spacing-medium);
+    margin-bottom: var(--spacing-small);
     color: var(--color-text-primary);
+    font-size: var(--font-size-small);
     
     &:last-child {
       margin-bottom: 0;
@@ -95,26 +137,72 @@
   }
 }
 
+@media (min-width: 768px) {
+  .introSection,
+  .approachSection,
+  .philosophySection,
+  .practiceSection {
+    padding: var(--spacing-large);
+    margin-bottom: var(--spacing-large);
+    
+    h3 {
+      font-size: var(--font-size-h3);
+      margin-bottom: var(--spacing-medium);
+    }
+    
+    p {
+      font-size: var(--font-size-base);
+      margin-bottom: var(--spacing-medium);
+    }
+  }
+}
+
 /* Therapy Room Gallery */
 .gallerySection {
-  margin: var(--spacing-section) 0;
+  margin: var(--spacing-large) 0;
   text-align: center;
-  
-  h2 {
+}
+
+@media (min-width: 768px) {
+  .gallerySection {
+    margin: var(--spacing-section) 0;
+  }
+}
+
+.gallerySection h2 {
+  font-size: var(--font-size-h3);
+  color: var(--color-accent);
+  margin-bottom: var(--spacing-medium);
+  font-weight: 600;
+}
+
+@media (min-width: 768px) {
+  .gallerySection h2 {
     font-size: var(--font-size-h2);
-    color: var(--color-accent);
     margin-bottom: var(--spacing-large);
-    font-weight: 600;
   }
 }
 
 .therapyGallery {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: 1fr;
   gap: var(--spacing-medium);
-  max-width: 1000px;
+  max-width: 800px;
   margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .therapyGallery {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 900px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .therapyGallery {
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 1000px;
+  }
 }
 
 .galleryItem {
@@ -124,121 +212,34 @@
   transition: var(--transition-normal);
   
   &:hover {
-    transform: translateY(-4px);
+    transform: translateY(-2px);
     box-shadow: var(--box-shadow-hover);
+  }
+}
+
+@media (min-width: 768px) {
+  .galleryItem:hover {
+    transform: translateY(-4px);
   }
 }
 
 .galleryImage {
   width: 100%;
-  height: 250px;
+  height: 200px;
   object-fit: cover;
   border-radius: var(--border-radius-large);
 }
 
-/* Enhanced Responsive Design */
-@media (max-width: 1200px) {
-  .therapyGallery {
-    gap: var(--spacing-medium);
-  }
-}
-
-@media (max-width: 1024px) {
-  .main {
-    padding: 0 var(--spacing-large);
-  }
-  
-  .imageContainer .image {
-    max-width: 400px;
-    height: auto;
-  }
-  
-  .therapyGallery {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    gap: var(--spacing-medium);
-  }
-  
-  .introSection,
-  .approachSection,
-  .philosophySection,
-  .practiceSection {
-    padding: var(--spacing-large);
-  }
-}
-
-@media (max-width: 768px) {
-  .main {
-    padding: 0 var(--spacing-medium);
-  }
-  
-  .heroSection {
-    padding: var(--spacing-large) 0;
-  }
-  
-  .greeting h1 {
-    font-size: var(--font-size-h3);
-  }
-  
-  .imageContainer .image {
-    max-width: 300px;
-    height: auto;
-  }
-  
-  .introSection,
-  .approachSection,
-  .philosophySection,
-  .practiceSection {
-    padding: var(--spacing-medium);
-    margin-bottom: var(--spacing-medium);
-  }
-  
-  .contentSection {
-    margin: var(--spacing-section) 0;
-  }
-  
-  .therapyGallery {
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(6, 1fr);
-    gap: var(--spacing-medium);
-  }
-  
+@media (min-width: 768px) {
   .galleryImage {
-    height: 200px;
+    height: 220px;
   }
 }
 
-@media (max-width: 480px) {
-  .main {
-    padding: 0 var(--spacing-small);
-  }
-  
-  .heroSection {
-    padding: var(--spacing-medium) 0;
-  }
-  
-  .greeting h1 {
-    font-size: var(--font-size-h4);
-  }
-  
-  .imageContainer .image {
-    max-width: 250px;
-    height: auto;
-  }
-  
-  .introSection,
-  .approachSection,
-  .philosophySection,
-  .practiceSection {
-    padding: var(--spacing-small);
-    margin-bottom: var(--spacing-small);
-  }
-  
-  .therapyGallery {
-    gap: var(--spacing-small);
-  }
-  
+@media (min-width: 1024px) {
   .galleryImage {
-    height: 180px;
+    height: 250px;
   }
 }
+
+

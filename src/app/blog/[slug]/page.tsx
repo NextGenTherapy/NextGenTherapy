@@ -192,7 +192,7 @@ export default async function BlogPostPage({
         }}
       />
       <div className={styles.main}>
-        <article className={styles.blogContent}>
+        <article className={styles.blogPostContent}>
           <h1>{data.title}</h1>
           <p>
             <em>{data.date}</em>
