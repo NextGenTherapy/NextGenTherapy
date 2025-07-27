@@ -1,8 +1,9 @@
 ---
-title: "Preparing for Your First Therapy Session"
+title: "How to Prepare for Your First Therapy Session | Colchester Therapist Guide"
 date: "2025-07-01"
-summary: "A practical guide to help you feel prepared and confident before attending your first therapy session."
+summary: "Expert guide from BACP therapist on preparing for your first therapy session. What to expect, questions to ask, and tips to feel confident. Professional advice from Colchester psychotherapist."
 category: "professional"
+keywords: "first therapy session, therapy preparation, what to expect therapy, therapy tips, Colchester therapist advice, psychotherapy guide"
 ---
 
 Starting therapy can feel both exciting and nerve-wracking. It's completely normal to feel a mix of emotions as you approach your first session. Here's a practical guide to help you prepare and make the most of this important step in your mental health journey.

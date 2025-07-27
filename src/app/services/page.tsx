@@ -6,27 +6,47 @@ import Button from "../../components/ui/button";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://nextgentherapy.co.uk"),
-  title: "Services - Next Generation Therapy",
+  title: "Therapy Services Colchester | Play Therapy & Adult Counselling",
   description:
-    "Explore the therapy services offered by Andreea Horhocea, including play therapy for children and talking therapy for adults. Sessions are available in-person in Colchester or online, tailored to help with anxiety, self-esteem, body image, relationships, and more.",
+    "Professional therapy services in Colchester & online. Play therapy for children, psychodynamic therapy for adults. Anxiety, depression, relationships, body image support. £60 per session.",
   keywords: [
-    "therapy services",
-    "play therapy for children",
-    "talking therapy for adults",
-    "anxiety support",
-    "self-esteem therapy",
-    "body image therapy",
+    "therapy services Colchester",
+    "play therapy children Colchester",
+    "adult therapy Colchester",
+    "psychodynamic therapy services",
+    "anxiety therapy Colchester",
+    "depression counselling Essex",
     "relationship therapy",
-    "Colchester therapy",
-    "online therapy",
-    "Andreea Horhocea",
+    "body image therapy",
+    "self-esteem counselling",
+    "online therapy UK",
+    "therapy sessions £60",
+    "BACP therapy services",
+    "professional counselling Colchester"
   ],
   authors: [{ name: "Andreea Horhocea" }],
+  alternates: {
+    canonical: "https://nextgentherapy.co.uk/services",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   openGraph: {
-    title: "Services - Next Generation Therapy",
+    title: "Therapy Services Colchester | Play Therapy & Adult Counselling",
     description:
-      "Explore the therapy services offered by Andreea Horhocea, including play therapy for children and talking therapy for adults. Sessions are available in-person in Colchester or online, tailored to help with anxiety, self-esteem, body image, relationships, and more.",
+      "Professional therapy services in Colchester & online. Play therapy for children, psychodynamic therapy for adults. Anxiety, depression, relationships, body image support.",
     url: "https://nextgentherapy.co.uk/services",
+    siteName: "Next Generation Therapy",
+    locale: "en_GB",
+    type: "website",
     images: [
       {
         url: "https://nextgentherapy.co.uk/images/default-social-share.jpg",
@@ -114,7 +134,7 @@ export default function Services() {
             </article>
             <aside className={styles.imageContainer}>
               <Image
-                src="/images/who-i-see.jpg"
+                src="/images/services.jpg"
                 alt="A therapist talking to a patient"
                 height={400}
                 width={300}

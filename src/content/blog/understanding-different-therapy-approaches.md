@@ -1,8 +1,9 @@
 ---
-title: "Understanding Different Therapy Approaches"
+title: "Different Types of Therapy Explained | Psychodynamic vs CBT Guide"
 date: "2025-07-01"
-summary: "An overview of various therapeutic approaches to help you understand which might be the best fit for your needs."
+summary: "Complete guide to therapy approaches: psychodynamic, CBT, humanistic & more. Expert psychotherapist explains which therapy type suits you best. Professional therapy advice Colchester."
 category: "professional"
+keywords: "types of therapy, psychodynamic therapy, CBT therapy, therapy approaches, which therapy is best, therapy comparison, Colchester psychotherapy"
 ---
 
 Choosing the right therapeutic approach can feel overwhelming with so many options available. Understanding the different types of therapy can help you make an informed decision about what might work best for your unique situation and goals.

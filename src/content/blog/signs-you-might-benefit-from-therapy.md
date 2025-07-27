@@ -1,8 +1,9 @@
 ---
-title: "Signs You Might Benefit from Therapy"
+title: "Signs You Might Benefit from Therapy | When to Seek Professional Help"
 date: "2025-07-01"
-summary: "Recognizing when it might be time to seek therapeutic support and understanding how therapy can help in various life situations."
+summary: "Recognizing when therapy might help: emotional signs, relationship struggles & life transitions. Expert guidance from BACP therapist on when to seek professional mental health support."
 category: "professional"
+keywords: "when to seek therapy, signs need therapy, mental health help, therapy benefits, professional counselling, when to get help, therapy readiness, mental health support"
 ---
 
 Deciding to start therapy can feel like a big step, and many people wonder whether their struggles are "serious enough" to warrant professional support. The truth is, therapy isn't just for crisis situations—it's a valuable tool for personal growth, emotional wellbeing, and navigating life's challenges at any stage.

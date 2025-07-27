@@ -6,29 +6,47 @@ import Button from "../../components/ui/button";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://nextgentherapy.co.uk"),
-  title: "About Therapy - Next Generation Therapy",
+  title: "What is Therapy? Benefits & Process | Colchester Therapist",
   description:
-    "Learn about therapy, who it's for, and how it can help. Discover what to expect and see who Andreea Horhocea works with in Colchester and online.",
+    "Learn about psychodynamic therapy benefits, who it helps, and what to expect. Professional guidance for anxiety, depression, relationships & personal growth in Colchester & online.",
   keywords: [
-    "about therapy",
-    "therapy information",
-    "who needs therapy",
+    "what is therapy",
     "therapy benefits",
-    "therapy for children",
-    "therapy for adults",
-    "anxiety therapy",
-    "depression therapy",
-    "psychodynamic therapy",
-    "Colchester therapy",
-    "online therapy",
-    "Andreea Horhocea",
+    "psychodynamic therapy explained",
+    "who needs therapy",
+    "therapy process Colchester",
+    "mental health benefits",
+    "anxiety therapy help",
+    "depression therapy benefits",
+    "relationship therapy process",
+    "child therapy benefits",
+    "therapy expectations",
+    "therapy myths debunked",
+    "Colchester therapy information"
   ],
   authors: [{ name: "Andreea Horhocea" }],
+  alternates: {
+    canonical: "https://nextgentherapy.co.uk/about-therapy",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   openGraph: {
-    title: "About Therapy - Next Generation Therapy",
+    title: "What is Therapy? Benefits & Process | Colchester Therapist",
     description:
-      "Learn about therapy, who it's for, and how it can help. Discover what to expect and see who Andreea Horhocea works with in Colchester and online.",
+      "Learn about psychodynamic therapy benefits, who it helps, and what to expect. Professional guidance for anxiety, depression, relationships & personal growth.",
     url: "https://nextgentherapy.co.uk/about-therapy",
+    siteName: "Next Generation Therapy",
+    locale: "en_GB",
+    type: "website",
     images: [
       {
         url: "https://nextgentherapy.co.uk/images/default-social-share.jpg",
@@ -161,6 +179,38 @@ export default function AboutTherapy() {
                 <p>
                   Like physical health, mental health benefits from preventative
                   care, helping prevent more severe issues from developing.
+                </p>
+              </div>
+              <div className={styles.benefitCard}>
+                <h3>Addressing Subclinical Issues</h3>
+                <p>
+                  Many people experience subclinical issues that aren&apos;t severe enough 
+                  to qualify as a mental disorder but still affect quality of life, such 
+                  as mild anxiety or low self-esteem.
+                </p>
+              </div>
+              <div className={styles.benefitCard}>
+                <h3>Support for Chronic Conditions</h3>
+                <p>
+                  For those with chronic mental health conditions, ongoing therapy 
+                  provides continuous support and management strategies to maintain 
+                  stability and improve quality of life.
+                </p>
+              </div>
+              <div className={styles.benefitCard}>
+                <h3>Fostering Positive Habits</h3>
+                <p>
+                  Therapists can assist in developing and maintaining positive habits 
+                  and routines, such as exercise, mindfulness, and healthy eating, 
+                  which contribute to overall well-being.
+                </p>
+              </div>
+              <div className={styles.benefitCard}>
+                <h3>Empowerment & Confidence</h3>
+                <p>
+                  Therapy empowers individuals by giving them tools to handle various 
+                  life situations confidently, fostering a sense of control and 
+                  competence that enhances overall life satisfaction.
                 </p>
               </div>
             </div>

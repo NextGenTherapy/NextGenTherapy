@@ -1,5 +1,10 @@
 ---
-title: "I didn’t become a therapist because…"
+title: "Why I Became a Therapist | Living with an Overactive Mind & Inner Critic"
+date: "10-04-25"
+summary: "Personal insights from a BACP therapist on becoming a therapist despite having an overactive mind and inner critic. How vulnerability led to professional calling in mental health."
+category: "personal"
+keywords: "becoming a therapist, overactive mind, inner critic, therapy journey, mental health professional, vulnerability in therapy, therapist motivation, self-compassion"
+---itle: "I didn’t become a therapist because…"
 date: "10-04-25"
 summary: "Why I became a therapist, and what it means to live with an overactive mind and inner critic."
 ---

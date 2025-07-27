@@ -1,8 +1,9 @@
 ---
-title: "Supporting a Child Through Therapy"
+title: "Supporting Your Child Through Therapy | Parent's Guide to Child Therapy"
 date: "2025-07-01"
-summary: "Guidance for parents and caregivers on how to support their child's therapeutic journey and create a healing environment at home."
+summary: "Essential guidance for parents supporting their child's therapy journey. Expert advice on creating a healing environment at home and working with child therapists."
 category: "professional"
+keywords: "child therapy support, parenting during therapy, supporting child therapy, child counselling guide, parent therapy advice, family therapy support, child mental health"
 ---
 
 When a child begins therapy, parents and caregivers play a crucial role in their healing journey. Your support, understanding, and involvement can significantly impact the effectiveness of your child's therapeutic experience. Here's how you can best support your child through this important process.

@@ -12,22 +12,46 @@ const ContactForm = dynamic(() => import("../../components/forms/contact-form"),
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://nextgentherapy.co.uk"),
-  title: "Book Now - Next Generation Therapy",
+  title: "Book Therapy Session Colchester | Contact Andreea Horhocea",
   description:
-    "Book a therapy session with Andreea Horhocea, a psychodynamic psychotherapist offering services in Colchester and online.",
+    "Book therapy with BACP registered psychotherapist Andreea Horhocea. £60 sessions in Colchester or online. Free 15-min consultation. Contact today for anxiety, depression & relationship support.",
   keywords: [
-    "book therapy session",
-    "psychodynamic psychotherapy",
-    "therapy in Colchester",
-    "online therapy",
-    "Andreea Horhocea",
+    "book therapy session Colchester",
+    "contact therapist Colchester",
+    "therapy appointment booking",
+    "Andreea Horhocea contact",
+    "psychotherapy booking Colchester",
+    "online therapy booking UK",
+    "therapy consultation free",
+    "anxiety therapy appointment",
+    "depression counselling booking",
+    "relationship therapy contact",
+    "BACP therapist booking",
+    "therapy prices £60"
   ],
   authors: [{ name: "Andreea Horhocea" }],
+  alternates: {
+    canonical: "https://nextgentherapy.co.uk/book-now",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   openGraph: {
-    title: "Book Now - Next Generation Therapy",
+    title: "Book Therapy Session Colchester | Contact Andreea Horhocea",
     description:
-      "Book a therapy session with Andreea Horhocea, a psychodynamic psychotherapist offering services in Colchester and online.",
+      "Book therapy with BACP registered psychotherapist Andreea Horhocea. £60 sessions in Colchester or online. Free 15-min consultation.",
     url: "https://nextgentherapy.co.uk/book-now",
+    siteName: "Next Generation Therapy",
+    locale: "en_GB",
+    type: "website",
     images: [
       {
         url: "https://nextgentherapy.co.uk/images/default-social-share.jpg",
@@ -52,13 +76,23 @@ export default function BookNow() {
       <main className={styles.main}>
         <section className={styles.greeting}>
           <h1>Let the Journey Begin… Enquiry Form</h1>
+          <div className={styles.heroImageContainer}>
+            <Image
+              src="/images/book-now.jpg"
+              alt="A brain with thread being pulled to showing a therapist unravelling problems"
+              width={600}
+              height={400}
+              className={styles.heroImage}
+              priority
+            />
+          </div>
         </section>
 
         <section className={styles.contentTop}>
           <article>
             <h2>Ready to Take the First Step?</h2>
             <div className={styles.consultationOffer}>
-              <h3>✨ Free 15-Minute Consultation Available</h3>
+              <h3>Free 15-Minute Consultation Available</h3>
               <p>
                 Not sure if therapy is right for you? I offer a brief, no-obligation 
                 consultation to discuss your needs and answer any questions about the process.
@@ -76,16 +110,6 @@ export default function BookNow() {
               </li>
             </ul>
           </article>
-          <aside className={styles.topImageContainer}>
-            <Image
-              src="/images/book-now.jpg"
-              alt="A brain with thread being pulled to showing a therapist unravelling problems"
-              width={300}
-              height={300}
-              className={styles.image}
-              priority
-            />
-          </aside>
         </section>
 
         {/* Trust Signals & Credentials */}

@@ -6,36 +6,55 @@ import styles from "./blog.module.scss";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Blog - Next Generation Therapy",
+  metadataBase: new URL("https://nextgentherapy.co.uk"),
+  title: "Therapy Blog | Mental Health Insights from Colchester Therapist",
   description:
-    "Read personal and professional thoughts on therapy, mental health, and emotional well-being. Insights from a qualified psychodynamic psychotherapist in Colchester.",
+    "Expert therapy insights & mental health advice from BACP registered psychotherapist Andreea Horhocea. Professional guidance on anxiety, depression, relationships & therapy approaches.",
   keywords: [
-    "therapy blog",
-    "mental health blog",
+    "therapy blog Colchester",
+    "mental health blog UK",
     "psychotherapy insights",
-    "therapy thoughts",
-    "professional therapy advice",
-    "personal therapy reflections",
-    "Colchester therapist blog",
+    "therapy advice blog",
+    "anxiety therapy tips",
+    "depression help blog",
+    "relationship therapy insights",
     "psychodynamic therapy blog",
+    "BACP therapist blog",
+    "professional therapy advice",
+    "mental health guidance",
+    "therapy approaches explained"
   ],
+  authors: [{ name: "Andreea Horhocea" }],
   alternates: {
     canonical: "https://nextgentherapy.co.uk/blog",
   },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   openGraph: {
-    title: "Blog - Next Generation Therapy",
+    title: "Therapy Blog | Mental Health Insights from Colchester Therapist",
     description:
-      "Read personal and professional thoughts on therapy, mental health, and emotional well-being from a qualified psychotherapist.",
+      "Expert therapy insights & mental health advice from BACP registered psychotherapist Andreea Horhocea. Professional guidance on anxiety, depression & relationships.",
     url: "https://nextgentherapy.co.uk/blog",
+    siteName: "Next Generation Therapy",
+    locale: "en_GB",
     type: "website",
   },
   twitter: {
-    card: "summary",
-    title: "Blog - Next Generation Therapy",
+    card: "summary_large_image",
+    title: "Therapy Blog | Mental Health Insights from Colchester Therapist",
     description:
-      "Read personal and professional thoughts on therapy, mental health, and emotional well-being from a qualified psychotherapist.",
+      "Expert therapy insights & mental health advice from BACP registered psychotherapist Andreea Horhocea.",
+    images: ["https://nextgentherapy.co.uk/images/default-social-share.jpg"],
   },
-  robots: "index, follow",
 };
 
 type PostMeta = {

@@ -5,8 +5,58 @@ import LegalNavigation from "../../components/layout/legal-navigation";
 import Button from "../../components/ui/button";
 
 export const metadata: Metadata = {
-  title: "Terms of Service - Next Generation Therapy",
-  description: "Terms of service and conditions of use for Next Generation Therapy website and services.",
+  metadataBase: new URL("https://nextgentherapy.co.uk"),
+  title: "Terms of Service | Next Generation Therapy Colchester | Therapy Terms",
+  description: "Terms of service and conditions for Next Generation Therapy Colchester website and professional psychotherapy services. BACP therapist terms and conditions.",
+  keywords: [
+    "terms of service therapy",
+    "therapy terms conditions",
+    "therapist terms service",
+    "therapy agreement terms",
+    "counselling terms conditions",
+    "therapy service terms Colchester",
+    "psychotherapy terms",
+    "BACP therapy terms",
+    "therapeutic terms agreement",
+    "therapy website terms"
+  ],
+  authors: [{ name: "Andreea Horhocea" }],
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  alternates: {
+    canonical: "https://nextgentherapy.co.uk/terms",
+  },
+  openGraph: {
+    title: "Terms of Service | Next Generation Therapy Colchester",
+    description: "Terms of service and conditions for Next Generation Therapy Colchester website and professional psychotherapy services.",
+    url: "https://nextgentherapy.co.uk/terms",
+    siteName: "Next Generation Therapy",
+    locale: "en_GB",
+    type: "website",
+    images: [
+      {
+        url: "https://nextgentherapy.co.uk/images/default-social-share.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Terms of Service - Next Generation Therapy Colchester",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Terms of Service | Next Generation Therapy Colchester",
+    description: "Terms of service and conditions for Next Generation Therapy Colchester professional psychotherapy services.",
+    images: ["https://nextgentherapy.co.uk/images/default-social-share.jpg"],
+  },
 };
 
 export default function Terms() {
@@ -72,7 +122,95 @@ export default function Terms() {
         </section>
 
         <section>
-          <h2 className={styles.sectionHeading}>6. Contact Information</h2>
+          <h2 className={styles.sectionHeading}>6. Emergency Mental Health Support</h2>
+          <p>
+            For mental health emergencies outside of our office hours, please contact:
+          </p>
+          <ul className={styles.list}>
+            <li>
+              <strong>NHS 111:</strong> Call 111 or visit{" "}
+              <a 
+                href="https://111.nhs.uk/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className={styles.link}
+              >
+                111.nhs.uk
+              </a>
+            </li>
+            <li>
+              <strong>Samaritans:</strong> Call 116 123 (free, 24/7) or visit{" "}
+              <a 
+                href="https://www.samaritans.org/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className={styles.link}
+              >
+                samaritans.org
+              </a>
+            </li>
+            <li>
+              <strong>PAPYRUS (under 35s):</strong> Call 0800 068 4141 or visit{" "}
+              <a 
+                href="https://www.papyrus-uk.org/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className={styles.link}
+              >
+                papyrus-uk.org
+              </a>
+            </li>
+            <li>
+              <strong>Shout Crisis Text Line:</strong> Text SHOUT to 85258 or visit{" "}
+              <a 
+                href="https://giveusashout.org/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className={styles.link}
+              >
+                giveusashout.org
+              </a>
+            </li>
+            <li>
+              <strong>Mind:</strong> Call 0300 123 3393 or visit{" "}
+              <a 
+                href="https://www.mind.org.uk/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className={styles.link}
+              >
+                mind.org.uk
+              </a>
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 className={styles.sectionHeading}>7. Governing Law and Jurisdiction</h2>
+          <p>
+            These terms are governed by English law. Any disputes will be subject to the 
+            exclusive jurisdiction of the courts of England and Wales.
+          </p>
+        </section>
+
+        <section>
+          <h2 className={styles.sectionHeading}>8. Consumer Rights</h2>
+          <p>
+            Your statutory rights under the Consumer Rights Act 2015 and other applicable 
+            consumer protection legislation are not affected by these terms.
+          </p>
+        </section>
+
+        <section>
+          <h2 className={styles.sectionHeading}>9. Professional Standards</h2>
+          <p>
+            Services are provided in accordance with the British Association for 
+            Counselling and Psychotherapy (BACP) guidelines and professional standards.
+          </p>
+        </section>
+
+        <section>
+          <h2 className={styles.sectionHeading}>10. Contact Information</h2>
           <p>
             If you have any questions about these Terms of Service, please contact us through 
             our contact form or at the address provided on our website.

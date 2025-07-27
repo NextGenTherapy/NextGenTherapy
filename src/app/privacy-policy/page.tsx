@@ -5,25 +5,60 @@ import Button from "../../components/ui/button";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy - Next Generation Therapy",
+  metadataBase: new URL("https://nextgentherapy.co.uk"),
+  title: "Privacy Policy | Next Generation Therapy Colchester | Data Protection",
   description:
-    "Privacy policy for Next Generation Therapy. Learn how we collect, use, and protect your personal information when using our therapy services.",
-  robots: "index, follow",
+    "Privacy policy for Next Generation Therapy Colchester. Learn how BACP therapist Andreea Horhocea collects, uses, and protects your personal information in therapy services.",
+  keywords: [
+    "privacy policy therapy",
+    "data protection therapy",
+    "confidentiality therapy",
+    "GDPR compliance therapy",
+    "therapy privacy Colchester",
+    "therapist data protection",
+    "client confidentiality",
+    "therapy information security",
+    "BACP privacy standards",
+    "therapeutic confidentiality"
+  ],
+  authors: [{ name: "Andreea Horhocea" }],
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   alternates: {
     canonical: "https://nextgentherapy.co.uk/privacy-policy",
   },
   openGraph: {
-    title: "Privacy Policy - Next Generation Therapy",
+    title: "Privacy Policy | Next Generation Therapy Colchester",
     description:
-      "Privacy policy for Next Generation Therapy. Learn how we collect, use, and protect your personal information.",
+      "Privacy policy for Next Generation Therapy Colchester. Learn how we collect, use, and protect your personal information in therapy services.",
     url: "https://nextgentherapy.co.uk/privacy-policy",
+    siteName: "Next Generation Therapy",
+    locale: "en_GB",
     type: "website",
+    images: [
+      {
+        url: "https://nextgentherapy.co.uk/images/default-social-share.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Privacy Policy - Next Generation Therapy Colchester",
+      },
+    ],
   },
   twitter: {
-    card: "summary",
-    title: "Privacy Policy - Next Generation Therapy",
+    card: "summary_large_image",
+    title: "Privacy Policy | Next Generation Therapy Colchester",
     description:
-      "Privacy policy for Next Generation Therapy. Learn how we collect, use, and protect your personal information.",
+      "Privacy policy for Next Generation Therapy Colchester. Learn how we protect your personal information in therapy services.",
+    images: ["https://nextgentherapy.co.uk/images/default-social-share.jpg"],
   },
 };
 
@@ -64,6 +99,48 @@ export default function PrivacyPolicy() {
           </li>
         </ul>
 
+        <h2 className={styles.sectionHeading}>Data Controller</h2>
+        <p>
+          Next Generation Therapy is registered with the Information Commissioner&apos;s Office (ICO).
+          The data controller is Andreea Horhocea, Next Generation Therapy.
+        </p>
+
+        <h2 className={styles.sectionHeading}>Legal Basis for Processing</h2>
+        <ul className={styles.list}>
+          <li>
+            <strong>Contact Forms:</strong> Your consent when you submit the form.
+          </li>
+          <li>
+            <strong>Analytics:</strong> Legitimate interest in improving our website and services.
+          </li>
+        </ul>
+
+        <h2 className={styles.sectionHeading}>Data Retention</h2>
+        <p>
+          We retain your personal data in accordance with GDPR requirements:
+        </p>
+        <ul className={styles.list}>
+          <li>
+            <strong>Contact form emails:</strong> Kept according to GDPR guidelines and deleted when no longer necessary.
+          </li>
+          <li>
+            <strong>Analytics data:</strong> Retained according to Google Analytics and Vercel Analytics policies.
+          </li>
+        </ul>
+
+        <h2 className={styles.sectionHeading}>Third-Party Data Processors</h2>
+        <ul className={styles.list}>
+          <li>
+            <strong>Resend:</strong> Email delivery service for contact form submissions.
+          </li>
+          <li>
+            <strong>Google Analytics:</strong> Website usage analytics (anonymized data).
+          </li>
+          <li>
+            <strong>Vercel:</strong> Website hosting and performance analytics.
+          </li>
+        </ul>
+
         <h2 className={styles.sectionHeading}>How We Use Your Information</h2>
         <ul className={styles.list}>
           <li>To respond to your enquiries submitted via our contact form.</li>
@@ -79,10 +156,25 @@ export default function PrivacyPolicy() {
         </p>
 
         <h2 className={styles.sectionHeading}>Your Rights</h2>
+        <p>Under UK GDPR, you have the following rights:</p>
         <ul className={styles.list}>
           <li>
-            You can request access to, correction of, or deletion of your
-            personal data by contacting us.
+            <strong>Right to access:</strong> You can request access to your personal data.
+          </li>
+          <li>
+            <strong>Right to rectification:</strong> You can request correction of inaccurate data.
+          </li>
+          <li>
+            <strong>Right to erasure:</strong> You can request deletion of your personal data.
+          </li>
+          <li>
+            <strong>Right to restrict processing:</strong> You can request we limit how we use your data.
+          </li>
+          <li>
+            <strong>Right to data portability:</strong> You can request your data in a portable format.
+          </li>
+          <li>
+            <strong>Right to object:</strong> You can object to processing based on legitimate interests.
           </li>
           <li>
             You can opt out of Google Analytics tracking using{" "}
@@ -97,6 +189,35 @@ export default function PrivacyPolicy() {
             .
           </li>
         </ul>
+
+        <h2 className={styles.sectionHeading}>How to Exercise Your Rights</h2>
+        <p>
+          To exercise any of your rights, please contact us at:{" "}
+          <a
+            href="mailto:andreeatherapytoday@gmail.com"
+            className={styles.link}
+          >
+            andreeatherapytoday@gmail.com
+          </a>
+        </p>
+        <p>
+          We will respond to your request within one month in accordance with GDPR requirements.
+        </p>
+
+        <h2 className={styles.sectionHeading}>Complaints</h2>
+        <p>
+          If you have concerns about how we handle your personal data, you can contact the 
+          Information Commissioner&apos;s Office (ICO) at{" "}
+          <a
+            href="https://ico.org.uk/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.link}
+          >
+            ico.org.uk
+          </a>{" "}
+          or call 0303 123 1113.
+        </p>
 
         <h2 className={styles.sectionHeading}>Contact Us</h2>
         <p>

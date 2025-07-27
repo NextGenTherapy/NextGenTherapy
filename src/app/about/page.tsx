@@ -6,29 +6,46 @@ import Button from "../../components/ui/button";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://nextgentherapy.co.uk"),
-  title: "About me - Next Generation Therapy",
+  title: "About Andreea Horhocea | Psychodynamic Therapist Colchester",
   description:
-    "Learn about Andreea Horhocea, a psychodynamic psychotherapist with extensive experience working with children, young people, and adults. Discover her approach to therapy, her qualifications, and her dedication to creating a safe and supportive space for personal growth.",
+    "Meet Andreea Horhocea, BACP registered psychodynamic psychotherapist in Colchester. Master's degree, 6+ years experience with children, adults & families. Specializing in anxiety, depression & relationship issues.",
   keywords: [
-    "psychodynamic psychotherapy",
-    "Andreea Horhocea",
-    "mental health",
-    "therapy for children",
-    "therapy for young people",
-    "therapy for adults",
-    "Colchester therapy",
-    "online therapy",
+    "Andreea Horhocea therapist",
+    "psychodynamic psychotherapy Colchester",
+    "BACP registered therapist",
+    "therapy qualifications Essex",
+    "experienced therapist Colchester",
+    "Master's psychotherapy",
+    "child therapy specialist",
+    "family therapy Colchester",
+    "anxiety therapist",
+    "depression counsellor",
+    "relationship therapy",
+    "online therapy UK"
   ],
   authors: [{ name: "Andreea Horhocea" }],
   alternates: {
     canonical: "https://nextgentherapy.co.uk/about",
   },
-  robots: "index, follow",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   openGraph: {
-    title: "About me - Next Generation Therapy",
+    title: "About Andreea Horhocea | Psychodynamic Therapist Colchester",
     description:
-      "Learn about Andreea Horhocea, a psychodynamic psychotherapist with extensive experience working with children, young people, and adults. Discover her approach to therapy, her qualifications, and her dedication to creating a safe and supportive space for personal growth.",
+      "Meet Andreea Horhocea, BACP registered psychodynamic psychotherapist in Colchester. Master's degree, 6+ years experience with children, adults & families.",
     url: "https://nextgentherapy.co.uk/about",
+    siteName: "Next Generation Therapy",
+    locale: "en_GB",
+    type: "profile",
     images: [
       {
         url: "https://nextgentherapy.co.uk/images/default-social-share.jpg",
@@ -99,86 +116,72 @@ export default function AboutMe() {
           <article className={styles.textContainer}>
             <div className={styles.introSection}>
               <h3>Hi There</h3>
-              <p>I am Andreea. Lovely to meet you.</p>
+              <p>It&apos;s lovely to meet you, and I&apos;m really glad you&apos;re here.</p>
               <p>
-                I am a psychodynamic psychotherapist. I graduated a Masters in
-                Psychodynamic Psychotherapy and a BA in Criminology and Social
-                Psychology rewarded by University of Essex. I have been working
-                with children, young people and adults for the last 6 years in
-                many settings. I have experience within primary and secondary
-                schools, charity sector as well as the NHS.
+                I&apos;m a psychodynamic psychotherapist with a Master&apos;s degree in
+                Psychodynamic Psychotherapy and a background in Criminology and Social
+                Psychology, both awarded by the University of Essex. Over the past six years,
+                I&apos;ve worked with children, young people, and adults across schools, charities,
+                the NHS, and private practice.
               </p>
             </div>
 
             <div className={styles.approachSection}>
               <p>
-                I understand the importance of finding the right therapist for
-                you and how the process sometimes can be exhausting and
-                frustrating. Whether it&apos;s your first time looking for
-                therapy or you have tried different places so far, I hope to
-                make your journey as smooth as possible.
+                I know how overwhelming it can be to find the right therapist — especially when
+                you&apos;re already feeling vulnerable or stuck. Whether you&apos;re exploring therapy for
+                the first time or have tried it before, my aim is to make the process feel simple,
+                supportive, and respectful from the very start.
               </p>
               <p>
-                At the moment, I am also working with YMCA Trinity supporting
-                young people in schools. I have experience delivering groups to
-                young people as well as parents/carers. I am a registered member
-                of British Association of Counselling and Psychotherapy (BACP)
-                and I adhere by their framework.
+                Alongside my private practice, I currently work with YMCA Trinity, supporting
+                young people in schools and delivering groups for both students and parents/carers.
+                I&apos;m a registered member of the British Association for Counselling and Psychotherapy
+                (BACP) and I work in accordance with their ethical framework.
               </p>
             </div>
 
             <div className={styles.philosophySection}>
+              <h3>My Approach</h3>
               <p>
-                I started my practice to offer you a space where you can
-                comfortably and confidently explore your story. I believe that
-                every story has a unique twist and I would love to hear yours.
+                I created this space to offer a therapeutic experience where you can feel safe,
+                seen, and understood — a space where your story matters.
               </p>
               <p>
-                Contrary to popular belief, therapy is not just for times of
-                crisis but a valuable resource regardless of the stage of life.
+                Therapy isn&apos;t just for when everything falls apart. It can be a powerful space
+                for self-reflection, growth, and healing at any stage of life. Many of my clients
+                come to me when they feel anxious, lost in relationships, critical of themselves,
+                or disconnected from who they are. Some struggle with food, body image, or
+                people-pleasing. Others carry a deep sense of not feeling &quot;enough.&quot;
               </p>
               <p>
-                After working under multiple organisations for the last few
-                years, I realised that there is a greater need for support. I
-                have noticed that children, young people and adults have become
-                more and more aware of the complexities of mental health and the
-                impact it has on their daily lives.
+                Whatever brings you here — you&apos;re welcome.
+              </p>
+              <p>
+                I offer open-ended therapy, which means we go at your pace. There&apos;s no pressure
+                to share more than you&apos;re ready to. Our work together is grounded in building a
+                strong, authentic connection. I believe this relationship is at the heart of healing.
+              </p>
+              <p>
+                When working with children, I use creative tools and play-based approaches to help
+                them safely express big or confusing emotions. With teens and adults, I draw from
+                psychodynamic understanding while also weaving in mindfulness and helpful coping
+                strategies tailored to you.
               </p>
             </div>
 
             <div className={styles.practiceSection}>
+              <h3>A Place to Begin</h3>
               <p>
-                I believe that once the struggle is identified it&rsquo;s
-                important to be able to access support as quickly as possible
-                and I aim to offer an initial session within a week of first
-                contact.
+                What I&apos;ve learned from working across different systems is that the need for mental
+                health support is growing — and that people are becoming more aware of the emotional
+                weight they carry day to day. That&apos;s why I aim to offer an initial session within
+                one week of your enquiry. I want to make accessing support feel doable, not daunting.
               </p>
               <p>
-                Working on an open-ended basis allows me to connect with you,
-                unrestricted by deadlines and minimizes the pressure of having
-                to explore everything too quickly. We work at your pace and
-                there is no expectation for you to share more than you feel
-                comfortable with at any point.
-              </p>
-              <p>
-                My main priority is creating a therapeutic relationship where
-                you feel able to be seen, heard and respected. I am a warm,
-                welcoming person and I understand how daunting it can be to look
-                for a practitioner to share your experience with.
-              </p>
-              <p>
-                With little ones, I always use resources and play to connect
-                with them on a playful manner which will allow us to explore
-                painful or challenging emotions later on. I am drawing from
-                psychodynamic psychotherapy approaches while also encouraging
-                mindfulness and sometimes suggesting coping strategies that may
-                be beneficial from case to case.
-              </p>
-              <p>
-                You will always be the person in charge and if you believe that
-                my approach is not right for you or we are not the right
-                therapeutic match, I am happy to help you in the search for a
-                better fit for you.
+                If it turns out I&apos;m not the right fit for you, I&apos;ll do my best to help you find
+                someone who is. Because ultimately, you deserve to feel safe, respected, and heard
+                — no matter where you are in your journey.
               </p>
             </div>
           </article>

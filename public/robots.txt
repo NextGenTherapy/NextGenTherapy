@@ -1,9 +1,24 @@
-# *
+# Robots.txt for Next Generation Therapy
 User-agent: *
 Allow: /
+
+# Important pages for SEO
+Allow: /about
+Allow: /services  
+Allow: /about-therapy
+Allow: /book-now
+Allow: /blog
+Allow: /blog/*
+
+# Legal pages
+Allow: /privacy-policy
+Allow: /terms
 
 # Host
 Host: https://nextgentherapy.co.uk
 
 # Sitemaps
 Sitemap: https://nextgentherapy.co.uk/sitemap.xml
+
+# Crawl delay (helps with server performance)
+Crawl-delay: 1

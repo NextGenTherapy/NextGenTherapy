@@ -25,19 +25,34 @@
     font-size: var(--font-size-h1);
     font-weight: bold;
     color: var(--color-accent);
-    margin-bottom: var(--spacing-small);
+    margin-bottom: var(--spacing-large);
+  }
+}
+
+.heroImageContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 600px;
+  
+  .heroImage {
+    border-radius: var(--border-radius-large);
+    box-shadow: var(--box-shadow);
+    width: 100%;
+    height: auto;
+    object-fit: cover;
   }
 }
 
 /* Content Sections */
 .contentTop {
-  display: flex;
-  align-items: center;
-  gap: var(--spacing-xxlarge);
   margin: var(--spacing-section) 0;
   
   article {
-    flex: 1;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
     
     h2 {
       color: var(--color-accent);
@@ -50,23 +65,16 @@
       color: var(--color-text-primary);
       margin-bottom: var(--spacing-medium);
     }
+    
+    ul {
+      text-align: left;
+      max-width: 600px;
+      margin: 0 auto;
+    }
   }
 }
 
-.topImageContainer {
-  flex: 0 0 300px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-width: 200px;
-  
-  .image {
-    border-radius: var(--border-radius-large);
-    box-shadow: var(--box-shadow);
-  }
-}
-
-/* Information Section */
+/* Form and Details Section */
 .contentMiddle {
   margin: var(--spacing-section) 0;
 }
@@ -182,7 +190,6 @@
   padding: var(--spacing-medium);
   border-radius: var(--border-radius-large);
   margin: var(--spacing-medium) 0;
-  border-left: 4px solid var(--color-accent);
   
   h3 {
     color: var(--color-accent);
@@ -298,6 +305,35 @@
 
 /* Responsive updates for new sections */
 @media (max-width: 768px) {
+  .greeting {
+    padding: var(--spacing-large) 0;
+    
+    h1 {
+      font-size: var(--font-size-h2);
+    }
+  }
+  
+  .heroImageContainer {
+    margin: var(--spacing-large) 0;
+    padding: 0 var(--spacing-medium);
+    
+    .heroImage {
+      width: 100%;
+      max-width: 400px;
+    }
+  }
+  
+  .contentTop {
+    margin: var(--spacing-large) 0;
+    padding: 0 var(--spacing-medium);
+    
+    article {
+      h2 {
+        font-size: var(--font-size-h3);
+      }
+    }
+  }
+  
   .trustContainer {
     grid-template-columns: 1fr;
     gap: var(--spacing-large);

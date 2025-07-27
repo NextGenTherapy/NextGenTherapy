@@ -13,7 +13,13 @@ const sanitizeInput = (input: string): string => {
 };
 
 // Ensure the API key is set in your environment variables on Vercel as RESEND_API_KEY
-const resend = new Resend(process.env.RESEND_API_KEY);
+const resendApiKey = process.env.RESEND_API_KEY;
+
+if (!resendApiKey) {
+  console.error("RESEND_API_KEY environment variable is not set");
+}
+
+const resend = resendApiKey ? new Resend(resendApiKey) : null;
 
 export async function POST(req: NextRequest) {
   try {
@@ -58,6 +64,15 @@ export async function POST(req: NextRequest) {
       );
     }
 
+    // Check if resend is properly initialized
+    if (!resend) {
+      console.error("Resend not initialized - missing API key");
+      return NextResponse.json(
+        { success: false, error: "Email service not configured." },
+        { status: 500 }
+      );
+    }
+
     // Sanitize inputs
     const sanitizedFirstName = sanitizeInput(firstName);
     const sanitizedLastName = sanitizeInput(lastName);
@@ -65,11 +80,22 @@ export async function POST(req: NextRequest) {
     const sanitizedMessage = sanitizeInput(message);
 
     await resend.emails.send({
-      from: "Contact Form <luke@lstevens.dev>",
-      to: "luke@lstevens.dev",
-      subject: `Contact Form Submission from ${sanitizedFirstName} ${sanitizedLastName} <${sanitizedEmail}>`,
+      from: "Contact Form <noreply@nextgentherapy.co.uk>",
+      to: "andreeatherapytoday@gmail.com",
+      subject: `New Contact Form Submission from ${sanitizedFirstName} ${sanitizedLastName}`,
       replyTo: sanitizedEmail,
-      text: `From: ${sanitizedFirstName} ${sanitizedLastName} <${sanitizedEmail}>\n\n${sanitizedMessage}`,
+      html: `
+        <h3>New Contact Form Submission</h3>
+        <p><strong>From:</strong> ${sanitizedFirstName} ${sanitizedLastName}</p>
+        <p><strong>Email:</strong> ${sanitizedEmail}</p>
+        <p><strong>Message:</strong></p>
+        <div style="background-color: #f5f5f5; padding: 15px; border-radius: 5px; margin: 10px 0;">
+          ${sanitizedMessage.replace(/\n/g, '<br>')}
+        </div>
+        <hr>
+        <p><em>Reply directly to this email to respond to ${sanitizedFirstName}</em></p>
+      `,
+      text: `New Contact Form Submission\n\nFrom: ${sanitizedFirstName} ${sanitizedLastName}\nEmail: ${sanitizedEmail}\n\nMessage:\n${sanitizedMessage}\n\n---\nReply directly to this email to respond to ${sanitizedFirstName}`,
     });
 
     return NextResponse.json({ success: true });
