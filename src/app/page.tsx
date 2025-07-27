@@ -43,17 +43,25 @@ export default function Home() {
   return (
     <div className={styles.page}>
       <main>
-        {/* ContentTop Section */}
-        <section className={styles.contentTop}>
-          <div className={styles.imageLogoContainer}></div>
+        {/* Logo Section at Top */}
+        <section className={styles.logoSection}>
+          <div className={styles.logoContainer}>
+            <div className={styles.logoImage}></div>
+          </div>
         </section>
 
-        {/* ContentEnd Section */}
-        <section className={styles.contentEnd}>
+        {/* Content Section */}
+        <section className={styles.contentSection}>
           <div className={styles.greeting}>
-            <h2>Hi! I am Andreea Horhocea.</h2>
+            <h1>Hi! I am Andreea Horhocea.</h1>
+            <p className={styles.subtitle}>
+              A psychodynamic psychotherapist offering 1-to-1 sessions in
+              Colchester and online.
+            </p>
           </div>
-          <div className={styles.aboutContainer}>
+
+          {/* Image under greeting - centered */}
+          <div className={styles.imageSection}>
             <div className={styles.imageContainer}>
               <Image
                 src="/images/andreea.jpg"
@@ -64,23 +72,26 @@ export default function Home() {
                 className={styles.image}
               />
             </div>
-            <div className={styles.textContainer}>
+          </div>
+
+          {/* Cards Container */}
+          <div className={styles.aboutContainer}>
+            <div className={styles.cardsContainer}>
               <Link href="/about" className={styles.introCard}>
-                <h3>About Me</h3>
+                <h2>About Me</h2>
                 <p>
-                  A psychodynamic psychotherapist offering 1-to-1 sessions in
-                  Colchester and online.
+                  Learn about my background, qualifications, and approach to therapy.
                 </p>
               </Link>
               <Link href="/services" className={styles.servicesCard}>
-                <h3>Who I Help</h3>
+                <h2>Who I Help</h2>
                 <p>
                   I work with people of any age addressing mental health challenges
                   such as anxiety, depression, stress, eating disorders, and more.
                 </p>
               </Link>
               <Link href="/blog#professional-thoughts" className={styles.approachCard}>
-                <h3>My Approach</h3>
+                <h2>My Approach</h2>
                 <p>
                   I focus on creating a safe, compassionate, and supportive
                   environment where you can achieve meaningful and lasting change.

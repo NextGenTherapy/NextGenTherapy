@@ -1,45 +1,36 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import Button from "./button";
-import styles from "./scroll-to-top.module.scss";
-
 export default function ScrollToTop() {
-  const [isVisible, setIsVisible] = useState(false);
-
-  const toggleVisibility = () => {
-    if (window.pageYOffset > 300) {
-      setIsVisible(true);
-    } else {
-      setIsVisible(false);
-    }
+  const handleClick = () => {
+    // Simple working scroll to top
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
   };
-
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  };
-
-  useEffect(() => {
-    window.addEventListener("scroll", toggleVisibility);
-    return () => {
-      window.removeEventListener("scroll", toggleVisibility);
-    };
-  }, []);
 
   return (
-    <div className={`${styles.scrollToTop} ${isVisible ? styles.visible : ""}`}>
-      <Button
-        type="button"
-        onClick={scrollToTop}
-        className={styles.scrollButton}
-        aria-label="Scroll to top of page"
-        title="Scroll to top"
-      >
-        <span className={styles.arrow}>↑</span>
-      </Button>
-    </div>
+    <button
+      onClick={handleClick}
+      style={{
+        position: "fixed",
+        bottom: "30px",
+        right: "30px",
+        width: "50px",
+        height: "50px",
+        borderRadius: "50%",
+        backgroundColor: "#164b39",
+        color: "white",
+        border: "none",
+        cursor: "pointer",
+        fontSize: "20px",
+        fontWeight: "bold",
+        zIndex: 999999,
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        boxShadow: "0 4px 12px rgba(0, 0, 0, 0.25)"
+      }}
+    >
+      ↑
+    </button>
   );
 }

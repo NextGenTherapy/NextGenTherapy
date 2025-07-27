@@ -1,7 +1,6 @@
 'use client';
 
 import React from 'react';
-import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import Button from '../ui/button';
 import styles from './legal-navigation.module.scss';
@@ -29,25 +28,21 @@ export default function LegalNavigation({ currentPage }: LegalNavigationProps) {
       <div className={styles.navigationButtons}>
         <Button 
           onClick={handleGoBack}
-          className={styles.backButton}
           aria-label="Go back to previous page"
+          type="button"
         >
           ← Back
         </Button>
         
-        <Link href={otherPageUrl} className={styles.switchLink}>
-          <Button className={styles.switchButton}>
-            View {otherPageTitle} →
-          </Button>
-        </Link>
+        <Button href={otherPageUrl}>
+          View {otherPageTitle} →
+        </Button>
       </div>
       
       <div className={styles.homeLink}>
-        <Link href="/">
-          <Button className={styles.homeButton}>
-            🏠 Home
-          </Button>
-        </Link>
+        <Button href="/">
+          🏠 Home
+        </Button>
       </div>
     </div>
   );

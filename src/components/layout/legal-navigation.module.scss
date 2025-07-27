@@ -4,7 +4,7 @@
   align-items: center;
   margin: var(--spacing-large) 0;
   padding: var(--spacing-medium);
-  background: var(--color-primary);
+  background: var(--color-header-background);
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   gap: var(--spacing-medium);
@@ -16,36 +16,8 @@
   align-items: center;
 }
 
-.backButton {
-  background: var(--color-button);
-  
-  &:hover, &:focus {
-    background: var(--color-button-hover);
-  }
-}
-
-.switchLink {
-  text-decoration: none;
-}
-
-.switchButton {
-  background: var(--color-accent);
-  
-  &:hover, &:focus {
-    background: var(--color-accent-hover);
-  }
-}
-
 .homeLink {
-  text-decoration: none;
-}
-
-.homeButton {
-  background: var(--color-button);
-  
-  &:hover, &:focus {
-    background: var(--color-button-hover);
-  }
+  display: flex;
 }
 
 /* Responsive design */
@@ -61,11 +33,16 @@
     gap: var(--spacing-small);
   }
   
-  .backButton,
-  .switchButton,
-  .homeButton {
+  .homeLink {
+    width: 100%;
+  }
+  
+  /* Make buttons full width on mobile */
+  .navigationButtons :global(.button),
+  .homeLink :global(.button) {
     width: 100%;
     text-align: center;
+    justify-content: center;
   }
 }
 

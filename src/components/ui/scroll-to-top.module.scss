@@ -1,82 +1,46 @@
-.scrollToTop {
+.scrollToTopContainer {
   position: fixed;
-  bottom: var(--spacing-large);
-  right: var(--spacing-large);
+  bottom: 30px;
+  right: 30px;
   z-index: 1000;
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(20px);
-  transition: all var(--transition-normal);
-  pointer-events: none;
 }
 
-.visible {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
-  pointer-events: all;
-}
-
-.scrollButton {
+.scrollToTopButton {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background-color: var(--color-primary);
-  color: var(--color-text-light);
+  background-color: var(--color-button);
+  color: var(--color-text-secondary);
   border: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   cursor: pointer;
-  transition: all var(--transition-normal);
-  box-shadow: var(--box-shadow);
-  font-size: var(--font-size-medium);
-  line-height: 1;
-  padding: 0;
-}
-
-@media (min-width: 768px) {
-  .scrollButton {
-    width: 60px;
-    height: 60px;
-    font-size: var(--font-size-large);
-  }
-}
-
-.scrollButton:hover {
-  background-color: var(--color-primary-hover);
-  transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-}
-
-.scrollButton:focus {
-  outline: var(--outline-width) solid var(--color-accent);
-  outline-offset: var(--outline-offset);
-}
-
-.scrollButton:active {
-  transform: translateY(0);
-}
-
-.arrow {
-  font-weight: bold;
-  font-size: 1.2em;
-  line-height: 1;
   display: flex;
   align-items: center;
   justify-content: center;
+  font-size: 20px;
+  font-weight: bold;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  transition: all 0.3s ease;
 }
 
-/* Mobile positioning adjustments */
-@media (max-width: 767px) {
-  .scrollToTop {
-    bottom: calc(var(--spacing-large) + env(safe-area-inset-bottom, 0));
-    right: var(--spacing-medium);
+.scrollToTopButton:hover {
+  background-color: var(--color-button-hover);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+}
+
+.scrollToTopButton:active {
+  transform: translateY(-1px);
+}
+
+@media (max-width: 768px) {
+  .scrollToTopContainer {
+    bottom: 20px;
+    right: 20px;
   }
   
-  .scrollButton {
-    width: 45px;
-    height: 45px;
-    font-size: var(--font-size-base);
+  .scrollToTopButton {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
   }
 }

@@ -43,9 +43,9 @@ export async function generateMetadata({
   return {
     title:
       data.title !== undefined
-        ? `${data.title} - Next Generation Therapy`
+        ? `${data.title} - Next Generation Therapy Blog`
         : "Blog Post - Next Generation Therapy",
-    description: data.summary || "",
+    description: data.summary || "Professional insights and guidance from Next Generation Therapy to support your mental health and wellbeing journey.",
     keywords: [
       "therapy",
       "mental health",
@@ -53,35 +53,54 @@ export async function generateMetadata({
       "emotional well-being",
       "therapy blog",
       "professional therapy",
+      "psychodynamic therapy",
+      "anxiety support",
+      "depression help",
+      "self-esteem",
+      "therapy insights",
       data.category === "professional" ? "professional therapy insights" : "personal therapy thoughts",
+      "Andreea Horhocea",
+      "Colchester therapy",
+      "online therapy",
     ],
     alternates: {
       canonical: `https://nextgentherapy.co.uk/blog/${slug}`,
     },
+    authors: [{ name: "Andreea Horhocea", url: "https://nextgentherapy.co.uk/about" }],
     openGraph: {
       title: data.title,
-      description: data.summary || "",
+      description: data.summary || "Professional insights and guidance from Next Generation Therapy to support your mental health and wellbeing journey.",
       url: `https://nextgentherapy.co.uk/blog/${slug}`,
       type: "article",
       publishedTime: data.date,
-      authors: ["Andreea"],
-      section: data.category === "professional" ? "Professional Thoughts" : "Personal Thoughts",
+      modifiedTime: data.date,
+      authors: ["Andreea Horhocea"],
+      section: data.category === "professional" ? "Professional Insights" : "Personal Reflections",
+      tags: [
+        "therapy",
+        "mental health",
+        "psychotherapy",
+        "emotional wellbeing",
+        data.category === "professional" ? "professional insights" : "personal thoughts",
+      ],
       images: [
         {
           url: "https://nextgentherapy.co.uk/images/default-social-share.jpg",
           width: 1200,
           height: 630,
-          alt: data.title,
+          alt: `${data.title} - Next Generation Therapy Blog`,
         },
       ],
     },
     twitter: {
       card: "summary_large_image",
       title: data.title,
-      description: data.summary || "",
+      description: data.summary || "Professional insights and guidance from Next Generation Therapy.",
       images: ["https://nextgentherapy.co.uk/images/default-social-share.jpg"],
+      creator: "@nextgentherapy",
+      site: "@nextgentherapy",
     },
-    robots: "index, follow",
+    robots: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
   };
 }
 
@@ -150,11 +169,17 @@ export default async function BlogPostPage({
     "@context": "https://schema.org",
     "@type": "BlogPosting",
     headline: data.title,
-    description: data.summary || "",
+    description: data.summary || "Professional insights and guidance from Next Generation Therapy to support your mental health and wellbeing journey.",
     author: {
       "@type": "Person",
-      name: "Andreea",
+      name: "Andreea Horhocea",
       url: "https://nextgentherapy.co.uk/about",
+      jobTitle: "Psychodynamic Psychotherapist",
+      worksFor: {
+        "@type": "Organization",
+        name: "Next Generation Therapy",
+        url: "https://nextgentherapy.co.uk",
+      },
     },
     publisher: {
       "@type": "Organization", 
@@ -163,6 +188,8 @@ export default async function BlogPostPage({
       logo: {
         "@type": "ImageObject",
         url: "https://nextgentherapy.co.uk/images/default-social-share.jpg",
+        width: 1200,
+        height: 630,
       },
     },
     datePublished: data.date,
@@ -176,11 +203,28 @@ export default async function BlogPostPage({
       url: "https://nextgentherapy.co.uk/images/default-social-share.jpg",
       width: 1200,
       height: 630,
+      alt: `${data.title} - Next Generation Therapy Blog`,
     },
-    articleSection: data.category === "professional" ? "Professional Thoughts" : "Personal Thoughts",
-    keywords: data.category === "professional" 
-      ? "therapy, mental health, professional insights, psychotherapy" 
-      : "therapy, personal thoughts, mental health, emotional well-being",
+    articleSection: data.category === "professional" ? "Professional Insights" : "Personal Reflections",
+    keywords: [
+      "therapy",
+      "mental health",
+      "psychotherapy",
+      "emotional wellbeing",
+      "anxiety support",
+      "depression help",
+      "self-esteem",
+      data.category === "professional" ? "professional insights" : "personal thoughts",
+      "Colchester therapy",
+      "online therapy",
+    ].join(", "),
+    about: {
+      "@type": "Thing",
+      name: "Mental Health and Therapy",
+      description: "Professional therapy services and mental health support",
+    },
+    inLanguage: "en-GB",
+    isAccessibleForFree: true,
   };
 
   return (

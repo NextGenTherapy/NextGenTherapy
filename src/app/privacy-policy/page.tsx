@@ -1,5 +1,7 @@
 import styles from "./privacy-policy.module.scss";
+import buttonLinksStyles from "../../components/ui/buttonLinks.module.scss";
 import LegalNavigation from "../../components/layout/legal-navigation";
+import Button from "../../components/ui/button";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -109,6 +111,12 @@ export default function PrivacyPolicy() {
         </p>
 
         <LegalNavigation currentPage="privacy" />
+
+        <section className={buttonLinksStyles.buttonLinks}>
+          <Button href="/terms">Terms of Service</Button>
+          <Button href="/about">About</Button>
+          <Button href="/book-now">Book Now</Button>
+        </section>
       </main>
     </div>
   );

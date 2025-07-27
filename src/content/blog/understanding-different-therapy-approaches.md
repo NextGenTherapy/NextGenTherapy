@@ -5,8 +5,6 @@ summary: "An overview of various therapeutic approaches to help you understand w
 category: "professional"
 ---
 
-# Understanding Different Therapy Approaches
-
 Choosing the right therapeutic approach can feel overwhelming with so many options available. Understanding the different types of therapy can help you make an informed decision about what might work best for your unique situation and goals.
 
 ## What Are Therapeutic Approaches?

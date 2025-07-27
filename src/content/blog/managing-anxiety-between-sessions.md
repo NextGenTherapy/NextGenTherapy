@@ -5,8 +5,6 @@ summary: "Practical strategies and tools to help manage anxiety and difficult em
 category: "professional"
 ---
 
-# Managing Anxiety Between Sessions
-
 Therapy sessions provide a safe space to explore and work through anxiety, but what happens when you're faced with anxious thoughts and feelings between appointments? Learning to manage anxiety between sessions is a crucial part of your therapeutic journey and ongoing wellbeing.
 
 ## Understanding Anxiety Between Sessions

@@ -121,7 +121,7 @@
 
 /* Button styling */
 .contactForm button {
-  background: var(--color-accent);
+  background: var(--color-button);
   color: var(--color-text-secondary);
   border: none;
   border-radius: var(--border-radius);
@@ -136,7 +136,7 @@
 
   &:hover,
   &:focus {
-    background: var(--color-accent-hover);
+    background: var(--color-button-hover);
   }
 
   &:disabled {
@@ -155,7 +155,7 @@
     font-size: var(--font-size-base);
     min-height: 48px;
     width: auto;
-    align-self: flex-start;
+    align-self: center;
     min-width: 200px;
   }
 }

@@ -5,8 +5,6 @@ summary: "Guidance for parents and caregivers on how to support their child's th
 category: "professional"
 ---
 
-# Supporting a Child Through Therapy
-
 When a child begins therapy, parents and caregivers play a crucial role in their healing journey. Your support, understanding, and involvement can significantly impact the effectiveness of your child's therapeutic experience. Here's how you can best support your child through this important process.
 
 ## Understanding Your Role

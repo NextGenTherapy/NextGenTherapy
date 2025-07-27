@@ -5,8 +5,6 @@ summary: "A practical guide to help you feel prepared and confident before atten
 category: "professional"
 ---
 
-# Preparing for Your First Therapy Session
-
 Starting therapy can feel both exciting and nerve-wracking. It's completely normal to feel a mix of emotions as you approach your first session. Here's a practical guide to help you prepare and make the most of this important step in your mental health journey.
 
 ## What to Expect in Your First Session
