@@ -6,9 +6,7 @@
   background-color: var(--color-header-background);
   min-height: var(--header-height);
   color: var(--color-text-secondary);
-  position: relative;
-  top: 0;
-  left: 0;
+  position: static;
   z-index: 1000;
   width: 100%;
   padding-top: env(safe-area-inset-top, 0);

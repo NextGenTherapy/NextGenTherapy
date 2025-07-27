@@ -84,7 +84,7 @@ export default function Footer() {
               rel="noopener noreferrer"
               title="Visit our BACP page"
             >
-              <Image src="/images/bacp.png" alt="BACP" width={40} height={40} />
+              <Image src="/images/bacp.jpg" alt="BACP" width={40} height={40} />
             </a>
           </div>
         </section>

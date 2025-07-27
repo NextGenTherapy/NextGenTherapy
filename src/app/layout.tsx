@@ -3,6 +3,7 @@ import "../styles/variables.scss";
 import "../styles/globals.scss";
 import Header from "../components/layout/header";
 import Footer from "../components/layout/footer";
+import ScrollToTop from "../components/ui/scroll-to-top";
 import ErrorBoundary from "../components/layout/ErrorBoundary";
 import CookieConsent from "../components/layout/CookieConsent";
 import { Analytics } from "@vercel/analytics/next";
@@ -108,6 +109,7 @@ export default async function RootLayout({
           </ErrorBoundary>
           <Analytics />
           <Footer />
+          <ScrollToTop />
           <CookieConsent />
         </div>
       </body>
