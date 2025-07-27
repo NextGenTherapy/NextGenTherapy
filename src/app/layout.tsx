@@ -7,8 +7,8 @@ import ScrollToTop from "../components/ui/scroll-to-top";
 import ErrorBoundary from "../components/layout/ErrorBoundary";
 import CookieConsent from "../components/layout/CookieConsent";
 import { Analytics } from "@vercel/analytics/next";
-import { GoogleAnalytics } from "@next/third-parties/google";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import ConditionalAnalytics from "../components/layout/ConditionalAnalytics";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://nextgentherapy.co.uk"),
@@ -103,7 +103,7 @@ export default async function RootLayout({
               "@context": "https://schema.org",
               "@graph": [
                 {
-                  "@type": "Organization",
+                  "@type": ["Organization", "LocalBusiness", "MedicalBusiness"],
                   "@id": "https://nextgentherapy.co.uk/#organization",
                   name: "Next Generation Therapy",
                   url: "https://nextgentherapy.co.uk",
@@ -122,6 +122,11 @@ export default async function RootLayout({
                     postalCode: "CO1 2JS",
                     addressCountry: "GB"
                   },
+                  geo: {
+                    "@type": "GeoCoordinates",
+                    latitude: 51.8959,
+                    longitude: 0.8919
+                  },
                   contactPoint: {
                     "@type": "ContactPoint",
                     telephone: "+44-7448-036017",
@@ -129,6 +134,26 @@ export default async function RootLayout({
                     email: "andreeatherapytoday@gmail.com",
                     availableLanguage: "English"
                   },
+                  openingHoursSpecification: [
+                    {
+                      "@type": "OpeningHoursSpecification",
+                      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                      opens: "09:00",
+                      closes: "18:00"
+                    }
+                  ],
+                  priceRange: "££",
+                  areaServed: [
+                    {
+                      "@type": "City",
+                      name: "Colchester"
+                    },
+                    {
+                      "@type": "AdministrativeArea",
+                      name: "Essex"
+                    }
+                  ],
+                  serviceType: "Psychodynamic Psychotherapy",
                   sameAs: [
                     "https://www.bacp.co.uk/"
                   ]
@@ -214,7 +239,7 @@ export default async function RootLayout({
           <CookieConsent />
         </div>
       </body>
-      <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID || "G-3528EDPEXW"} />
+      <ConditionalAnalytics />
       <SpeedInsights />
     </html>
   );

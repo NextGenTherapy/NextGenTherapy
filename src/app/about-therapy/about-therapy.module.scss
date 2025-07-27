@@ -178,6 +178,8 @@
 
 .mapContainer {
   flex: 1;
+  margin: 0 auto;
+  max-width: 100%;
 }
 
 .map {
@@ -225,6 +227,12 @@
     max-width: 400px;
     margin: 0 auto;
   }
+
+  .mapContainer {
+    margin: 0 auto;
+    max-width: 600px;
+    width: 100%;
+  }
 }
 
 @media (max-width: 768px) {
@@ -262,6 +270,12 @@
   .imageContainer {
     max-width: 300px;
   }
+
+  .mapContainer {
+    margin: 0 auto;
+    max-width: 100%;
+    padding: 0;
+  }
 }
 
 @media (max-width: 480px) {
@@ -291,5 +305,11 @@
 
   .map {
     min-height: 250px;
+  }
+
+  .mapContainer {
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
   }
 }

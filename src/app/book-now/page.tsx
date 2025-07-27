@@ -206,15 +206,15 @@ export default function BookNow() {
               {/* Google Maps Embed */}
               <div className={styles.mapContainer}>
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2453.9876!2d0.8967!3d51.8908!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTHCsDUzJzI3LjEiTiAwwrA1Myc0OC4xIkU!5e0!3m2!1sen!2suk!4v1640995200000!5m2!1sen!2suk"
+                  src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2462.624902209368!2d0.9056014!3d51.8860592!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d905d138eb59f9%3A0xcba6bcd08ff9a10!2sAndreea%20Horhocea%20Next%20Generation%20Counselling%20%26%20Psychotherapy!5e0!3m2!1sen!2suk!4v1743611123198!5m2!1sen!2suk"
                   width="100%"
                   height="300"
                   style={{ border: 0 }}
                   allowFullScreen
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
-                  title="Colchester Business Centre Location Map"
-                  aria-label="Google Maps showing location of Colchester Business Centre at 1 George Williams Way, Colchester CO1 2JS"
+                  title="Next Generation Therapy Location Map"
+                  aria-label="Google Maps showing location of Next Generation Therapy at Colchester Business Centre, 1 George Williams Way, Colchester CO1 2JS"
                 ></iframe>
               </div>
             </div>
