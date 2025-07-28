@@ -39,7 +39,7 @@ export default function Footer() {
         </section>
 
         <section className={styles.footerColumn}>
-          <Link href="/book-now">
+          <Link href="/book-now#contact-form">
             <h3>Contact me</h3>
           </Link>
           <p>
@@ -59,7 +59,7 @@ export default function Footer() {
               title="Visit our Facebook page"
             >
               <Image
-                src="/images/facebook.png"
+                src="/images/facebook-opt.png"
                 alt="Facebook"
                 width={40}
                 height={40}
@@ -72,7 +72,7 @@ export default function Footer() {
               title="Visit our Instagram page"
             >
               <Image
-                src="/images/instagram.png"
+                src="/images/instagram-opt.png"
                 alt="Instagram"
                 width={40}
                 height={40}

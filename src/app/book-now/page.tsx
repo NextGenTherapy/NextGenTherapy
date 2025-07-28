@@ -78,7 +78,7 @@ export default function BookNow() {
           <h1>Let the Journey Begin… Enquiry Form</h1>
           <div className={styles.heroImageContainer}>
             <Image
-              src="/images/book-now.jpg"
+              src="/images/book-now.JPG"
               alt="A brain with thread being pulled to showing a therapist unravelling problems"
               width={600}
               height={400}
@@ -230,7 +230,7 @@ export default function BookNow() {
           </div>
         </section>
 
-        <section className={styles.contentEnd}>
+        <section className={styles.contentEnd} id="contact-form">
           <h2>Contact Form</h2>
           <ContactForm />
         </section>

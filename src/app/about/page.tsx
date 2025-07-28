@@ -66,24 +66,24 @@ export const metadata: Metadata = {
 
 // Therapy room images for gallery
 const therapyRoomImages = [
-  { src: "/images/office.jpg", alt: "Picture of office with laptop" },
+  { src: "/images/office-opt.jpg", alt: "Picture of office with laptop" },
   {
-    src: "/images/doll-house.jpg",
+    src: "/images/doll-house-opt.jpg",
     alt: "Picture of doll house for play therapy for children",
   },
   {
-    src: "/images/board-games.jpg",
+    src: "/images/board-games-opt.jpg",
     alt: "Picture of shelves including games for children to play with",
   },
   {
-    src: "/images/room-2.jpg",
+    src: "/images/room-2-opt.jpg",
     alt: "Picture of therapy room with sofa and arm chair",
   },
   {
-    src: "/images/room.jpg",
+    src: "/images/room-opt.jpg",
     alt: "Picture of therapy room with sofa and arm chair",
   },
-  { src: "/images/shelf.jpeg", alt: "Picture of shelf with plants on" },
+  { src: "/images/shelf-opt.jpeg", alt: "Picture of shelf with plants on" },
 ];
 
 export default function AboutMe() {

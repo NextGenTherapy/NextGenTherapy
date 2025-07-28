@@ -179,7 +179,7 @@
 /* Image Containers */
 .topImageContainer,
 .endImageContainer {
-  flex: 0 0 300px;
+  flex: 0 0 250px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -187,9 +187,9 @@
   .image {
     border-radius: var(--border-radius-large);
     box-shadow: var(--box-shadow);
-    width: 100%;
-    height: auto;
-    max-width: 300px;
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
   }
 }
 
@@ -324,7 +324,7 @@
     padding: var(--spacing-large) 0;
     
     h1 {
-      font-size: var(--font-size-h3);
+      font-size: var(--font-size-h1);
     }
   }
   
@@ -381,7 +381,7 @@
     padding: var(--spacing-medium) 0;
     
     h1 {
-      font-size: var(--font-size-h4);
+      font-size: var(--font-size-h2);
     }
   }
   

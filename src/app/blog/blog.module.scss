@@ -36,7 +36,7 @@
     font-size: var(--font-size-h1);
     font-weight: bold;
     color: var(--color-accent);
-    margin-bottom: var(--spacing-medium);
+    margin-bottom: var(--spacing-small);
   }
   
   .subtitle {
@@ -422,15 +422,24 @@
 }
 
 .buttonNav :global(a),
-.buttonNav :global(button) {
+.buttonNav :global(button),
+.buttonNav span {
   width: 100%;
   display: flex;
   justify-content: center;
+  flex: 1;
+  max-width: 200px;
 }
 
 @media (min-width: 768px) {
   .buttonNav :global(a),
-  .buttonNav :global(button) {
+  .buttonNav :global(button),
+  .buttonNav span {
+    flex: 1;
+    max-width: 200px;
+  }
+  
+  .buttonNav span:empty {
     flex: 1;
     max-width: 200px;
   }

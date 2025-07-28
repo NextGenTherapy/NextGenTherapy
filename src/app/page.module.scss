@@ -72,23 +72,21 @@
 
 .greeting {
   text-align: center;
-  margin-bottom: var(--spacing-large);
+  padding: var(--spacing-section) 0 var(--spacing-large);
   
   h1 {
     font-size: var(--font-size-h1);
     font-weight: bold;
     color: var(--color-accent);
-    margin: 0 0 var(--spacing-medium) 0;
+    margin: 0 0 var(--spacing-small) 0;
     font-family: var(--font-family);
   }
   
   .subtitle {
-    font-size: var(--font-size-h2);
-    color: var(--color-accent) !important;
+    font-size: var(--font-size-medium);
+    color: var(--color-text-primary);
     margin: 0;
-    font-weight: bold;
-    font-family: var(--font-family);
-    font-style: normal;
+    opacity: 0.8;
   }
 }
 
@@ -307,13 +305,13 @@
 
 .greeting {
   text-align: center;
-  padding: var(--spacing-section) 0;
+  padding: var(--spacing-section) 0 var(--spacing-large);
   
   h1 {
     font-size: var(--font-size-h1);
     font-weight: bold;
     color: var(--color-accent);
-    margin: 0 0 var(--spacing-medium) 0;
+    margin: 0 0 var(--spacing-small) 0;
   }
   
   .subtitle {

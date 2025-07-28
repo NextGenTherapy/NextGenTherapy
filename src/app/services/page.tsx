@@ -150,8 +150,8 @@ export default function Services() {
               <Image
                 src="/images/child.jpg"
                 alt="Play therapy session for children"
-                height={300}
-                width={300}
+                height={250}
+                width={250}
                 className={styles.image}
               />
             </aside>
@@ -175,10 +175,10 @@ export default function Services() {
           <div className={styles.adultsSection}>
             <aside className={styles.endImageContainer}>
               <Image
-                src="/images/adult.jpg"
+                src="/images/adult.JPG"
                 alt="Talking therapy session for adults"
-                height={300}
-                width={300}
+                height={250}
+                width={250}
                 className={styles.image}
               />
             </aside>

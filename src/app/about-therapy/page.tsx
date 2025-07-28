@@ -96,42 +96,42 @@ export default function AboutTherapy() {
                 Understanding how therapy works and who it can help
               </p>
             </div>
+            
+            {/* Image Section */}
+            <div className={styles.imageContainer}>
+              <Image
+                src="/images/learn-more.jpg"
+                alt="Visual representation of stress, anxiety and depression concepts"
+                height={400}
+                width={600}
+                priority
+                className={styles.image}
+              />
+            </div>
           </section>
 
           {/* Why Therapy Section */}
           <section className={styles.whyTherapySection}>
-            <div className={styles.contentGrid}>
-              <article className={styles.textContent}>
-                <h2>Why do people seek therapy?</h2>
-                <p>
-                  Therapy can help when you&apos;re feeling anxious, overwhelmed, or
-                  struggling to manage emotions. It provides support for navigating
-                  challenges in relationships, fostering meaningful connections, and
-                  improving communication.
-                </p>
-                <p>
-                  It offers a space for self-reflection, helping you rediscover your
-                  values, process significant life events, and adapt to major
-                  transitions like career changes or loss.
-                </p>
-                <p>
-                  Therapy is a valuable tool for addressing unhealthy coping
-                  mechanisms, building self-confidence, and fostering a healthier
-                  relationship with yourself. It provides a safe, non-judgmental
-                  environment to explore feelings and grow emotionally.
-                </p>
-              </article>
-              <aside className={styles.imageContainer}>
-                <Image
-                  src="/images/learn-more.jpg"
-                  alt="Visual representation of stress, anxiety and depression concepts"
-                  height={300}
-                  width={300}
-                  priority
-                  className={styles.image}
-                />
-              </aside>
-            </div>
+            <article className={styles.textContent}>
+              <h2>Why do people seek therapy?</h2>
+              <p>
+                Therapy can help when you&apos;re feeling anxious, overwhelmed, or
+                struggling to manage emotions. It provides support for navigating
+                challenges in relationships, fostering meaningful connections, and
+                improving communication.
+              </p>
+              <p>
+                It offers a space for self-reflection, helping you rediscover your
+                values, process significant life events, and adapt to major
+                transitions like career changes or loss.
+              </p>
+              <p>
+                Therapy is a valuable tool for addressing unhealthy coping
+                mechanisms, building self-confidence, and fostering a healthier
+                relationship with yourself. It provides a safe, non-judgmental
+                environment to explore feelings and grow emotionally.
+              </p>
+            </article>
           </section>
 
           {/* How Therapy Helps Section */}

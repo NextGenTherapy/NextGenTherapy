@@ -25,7 +25,7 @@
     font-size: var(--font-size-h1);
     font-weight: bold;
     color: var(--color-accent);
-    margin-bottom: var(--spacing-large);
+    margin-bottom: var(--spacing-small);
   }
 }
 
@@ -324,7 +324,7 @@
     padding: var(--spacing-large) 0;
     
     h1 {
-      font-size: var(--font-size-h2);
+      font-size: var(--font-size-h1);
     }
   }
   
@@ -452,7 +452,7 @@
     padding: var(--spacing-medium) 0;
     
     h1 {
-      font-size: var(--font-size-h4);
+      font-size: var(--font-size-h2);
     }
   }
   

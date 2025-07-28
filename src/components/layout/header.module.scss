@@ -46,11 +46,20 @@
   z-index: 1001;
   padding: var(--spacing-small);
   line-height: 1;
+  position: absolute;
+  right: var(--container-padding-mobile);
+}
+
+@media (min-width: 768px) {
+  .menuButton {
+    right: var(--container-padding-tablet);
+  }
 }
 
 @media (min-width: 1024px) {
   .menuButton {
     display: none;
+    position: static;
   }
 }
 
