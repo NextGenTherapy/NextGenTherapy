@@ -175,7 +175,7 @@ export default function Services() {
           <div className={styles.adultsSection}>
             <aside className={styles.endImageContainer}>
               <Image
-                src="/images/adult.JPG"
+                src="/images/adult.jpg"
                 alt="Talking therapy session for adults"
                 height={250}
                 width={250}

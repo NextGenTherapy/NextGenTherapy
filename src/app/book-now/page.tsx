@@ -78,7 +78,7 @@ export default function BookNow() {
           <h1>Let the Journey Begin… Enquiry Form</h1>
           <div className={styles.heroImageContainer}>
             <Image
-              src="/images/book-now.JPG"
+              src="/images/book-now.jpg"
               alt="A brain with thread being pulled to showing a therapist unravelling problems"
               width={600}
               height={400}
