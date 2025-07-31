@@ -10,7 +10,7 @@ import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://nextgentherapy.co.uk"),
+  metadataBase: new URL("https://www.nextgentherapy.co.uk"),
   title: {
     default: "Next Generation Therapy | Professional Therapy Services Colchester",
     template: "%s | Next Generation Therapy"
@@ -50,13 +50,13 @@ export const metadata: Metadata = {
     title: "Next Generation Therapy | Professional Therapy Services Colchester",
     description:
       "Professional psychodynamic therapy in Colchester & online with BACP registered therapist Andreea Horhocea. Expert help for anxiety, depression & relationships.",
-    url: "https://nextgentherapy.co.uk",
+    url: "https://www.nextgentherapy.co.uk",
     siteName: "Next Generation Therapy",
     locale: "en_GB",
     type: "website",
     images: [
       {
-        url: "https://nextgentherapy.co.uk/images/default-social-share.jpg",
+        url: "https://www.nextgentherapy.co.uk/images/default-social-share.jpg",
         width: 1200,
         height: 630,
         alt: "Next Generation Therapy - Professional Therapy Services Colchester",
@@ -68,7 +68,7 @@ export const metadata: Metadata = {
     title: "Next Generation Therapy | Professional Therapy Services Colchester",
     description:
       "Professional psychodynamic therapy in Colchester & online with BACP registered therapist Andreea Horhocea.",
-    images: ["https://nextgentherapy.co.uk/images/default-social-share.jpg"],
+    images: ["https://www.nextgentherapy.co.uk/images/default-social-share.jpg"],
   },
 };
 
@@ -102,12 +102,12 @@ export default async function RootLayout({
               "@graph": [
                 {
                   "@type": ["Organization", "LocalBusiness", "MedicalBusiness"],
-                  "@id": "https://nextgentherapy.co.uk/#organization",
+                  "@id": "https://www.nextgentherapy.co.uk/#organization",
                   name: "Next Generation Therapy",
-                  url: "https://nextgentherapy.co.uk",
+                  url: "https://www.nextgentherapy.co.uk",
                   logo: {
                     "@type": "ImageObject",
-                    url: "https://nextgentherapy.co.uk/images/logo.jpg",
+                    url: "https://www.nextgentherapy.co.uk/images/logo.jpg",
                     width: 400,
                     height: 400
                   },
@@ -158,14 +158,14 @@ export default async function RootLayout({
                 },
                 {
                   "@type": "Person",
-                  "@id": "https://nextgentherapy.co.uk/#person",
+                  "@id": "https://www.nextgentherapy.co.uk/#person",
                   name: "Andreea Horhocea",
                   jobTitle: "Psychodynamic Psychotherapist",
                   worksFor: {
-                    "@id": "https://nextgentherapy.co.uk/#organization"
+                    "@id": "https://www.nextgentherapy.co.uk/#organization"
                   },
                   description: "BACP registered psychodynamic psychotherapist with Master's degree and 6+ years experience working with children, adults and families.",
-                  url: "https://nextgentherapy.co.uk/about",
+                  url: "https://www.nextgentherapy.co.uk/about",
                   knowsAbout: [
                     "Psychodynamic Therapy",
                     "Anxiety Treatment",
@@ -177,10 +177,10 @@ export default async function RootLayout({
                 },
                 {
                   "@type": "ProfessionalService",
-                  "@id": "https://nextgentherapy.co.uk/#service",
+                  "@id": "https://www.nextgentherapy.co.uk/#service",
                   name: "Psychodynamic Therapy Services",
                   provider: {
-                    "@id": "https://nextgentherapy.co.uk/#organization"
+                    "@id": "https://www.nextgentherapy.co.uk/#organization"
                   },
                   serviceType: "Mental Health Therapy",
                   areaServed: [

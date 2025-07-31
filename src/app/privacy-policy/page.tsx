@@ -5,7 +5,7 @@ import Button from "../../components/ui/button";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://nextgentherapy.co.uk"),
+  metadataBase: new URL("https://www.nextgentherapy.co.uk"),
   title: "Privacy Policy | Next Generation Therapy Colchester | Data Protection",
   description:
     "Privacy policy for Next Generation Therapy Colchester. Learn how BACP therapist Andreea Horhocea collects, uses, and protects your personal information in therapy services.",
@@ -34,19 +34,19 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: "https://nextgentherapy.co.uk/privacy-policy",
+    canonical: "https://www.nextgentherapy.co.uk/privacy-policy",
   },
   openGraph: {
     title: "Privacy Policy | Next Generation Therapy Colchester",
     description:
       "Privacy policy for Next Generation Therapy Colchester. Learn how we collect, use, and protect your personal information in therapy services.",
-    url: "https://nextgentherapy.co.uk/privacy-policy",
+    url: "https://www.nextgentherapy.co.uk/privacy-policy",
     siteName: "Next Generation Therapy",
     locale: "en_GB",
     type: "website",
     images: [
       {
-        url: "https://nextgentherapy.co.uk/images/default-social-share.jpg",
+        url: "https://www.nextgentherapy.co.uk/images/default-social-share.jpg",
         width: 1200,
         height: 630,
         alt: "Privacy Policy - Next Generation Therapy Colchester",
@@ -58,7 +58,7 @@ export const metadata: Metadata = {
     title: "Privacy Policy | Next Generation Therapy Colchester",
     description:
       "Privacy policy for Next Generation Therapy Colchester. Learn how we protect your personal information in therapy services.",
-    images: ["https://nextgentherapy.co.uk/images/default-social-share.jpg"],
+    images: ["https://www.nextgentherapy.co.uk/images/default-social-share.jpg"],
   },
 };
 

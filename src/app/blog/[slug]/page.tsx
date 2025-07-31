@@ -64,13 +64,13 @@ export async function generateMetadata({
       "online therapy",
     ],
     alternates: {
-      canonical: `https://nextgentherapy.co.uk/blog/${slug}`,
+      canonical: `https://www.nextgentherapy.co.uk/blog/${slug}`,
     },
-    authors: [{ name: "Andreea Horhocea", url: "https://nextgentherapy.co.uk/about" }],
+    authors: [{ name: "Andreea Horhocea", url: "https://www.nextgentherapy.co.uk/about" }],
     openGraph: {
       title: data.title,
       description: data.summary || "Professional insights and guidance from Next Generation Therapy to support your mental health and wellbeing journey.",
-      url: `https://nextgentherapy.co.uk/blog/${slug}`,
+      url: `https://www.nextgentherapy.co.uk/blog/${slug}`,
       type: "article",
       publishedTime: data.date,
       modifiedTime: data.date,
@@ -85,7 +85,7 @@ export async function generateMetadata({
       ],
       images: [
         {
-          url: "https://nextgentherapy.co.uk/images/default-social-share.jpg",
+          url: "https://www.nextgentherapy.co.uk/images/default-social-share.jpg",
           width: 1200,
           height: 630,
           alt: `${data.title} - Next Generation Therapy Blog`,
@@ -96,7 +96,7 @@ export async function generateMetadata({
       card: "summary_large_image",
       title: data.title,
       description: data.summary || "Professional insights and guidance from Next Generation Therapy.",
-      images: ["https://nextgentherapy.co.uk/images/default-social-share.jpg"],
+      images: ["https://www.nextgentherapy.co.uk/images/default-social-share.jpg"],
       creator: "@nextgentherapy",
       site: "@nextgentherapy",
     },
@@ -173,21 +173,21 @@ export default async function BlogPostPage({
     author: {
       "@type": "Person",
       name: "Andreea Horhocea",
-      url: "https://nextgentherapy.co.uk/about",
+      url: "https://www.nextgentherapy.co.uk/about",
       jobTitle: "Psychodynamic Psychotherapist",
       worksFor: {
         "@type": "Organization",
         name: "Next Generation Therapy",
-        url: "https://nextgentherapy.co.uk",
+        url: "https://www.nextgentherapy.co.uk",
       },
     },
     publisher: {
       "@type": "Organization", 
       name: "Next Generation Therapy",
-      url: "https://nextgentherapy.co.uk",
+      url: "https://www.nextgentherapy.co.uk",
       logo: {
         "@type": "ImageObject",
-        url: "https://nextgentherapy.co.uk/images/default-social-share.jpg",
+        url: "https://www.nextgentherapy.co.uk/images/default-social-share.jpg",
         width: 1200,
         height: 630,
       },
@@ -196,11 +196,11 @@ export default async function BlogPostPage({
     dateModified: data.date,
     mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": `https://nextgentherapy.co.uk/blog/${slug}`,
+      "@id": `https://www.nextgentherapy.co.uk/blog/${slug}`,
     },
     image: {
       "@type": "ImageObject",
-      url: "https://nextgentherapy.co.uk/images/default-social-share.jpg",
+      url: "https://www.nextgentherapy.co.uk/images/default-social-share.jpg",
       width: 1200,
       height: 630,
       alt: `${data.title} - Next Generation Therapy Blog`,

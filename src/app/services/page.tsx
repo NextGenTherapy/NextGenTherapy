@@ -5,7 +5,7 @@ import buttonLinksStyles from "../../components/ui/buttonLinks.module.scss";
 import Button from "../../components/ui/button";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://nextgentherapy.co.uk"),
+  metadataBase: new URL("https://www.nextgentherapy.co.uk"),
   title: "Therapy Services Colchester | Play Therapy & Adult Counselling",
   description:
     "Professional therapy services in Colchester & online. Play therapy for children, psychodynamic therapy for adults. Anxiety, depression, relationships, body image support. £60 per session.",
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Andreea Horhocea" }],
   alternates: {
-    canonical: "https://nextgentherapy.co.uk/services",
+    canonical: "https://www.nextgentherapy.co.uk/services",
   },
   robots: {
     index: true,
@@ -43,13 +43,13 @@ export const metadata: Metadata = {
     title: "Therapy Services Colchester | Play Therapy & Adult Counselling",
     description:
       "Professional therapy services in Colchester & online. Play therapy for children, psychodynamic therapy for adults. Anxiety, depression, relationships, body image support.",
-    url: "https://nextgentherapy.co.uk/services",
+    url: "https://www.nextgentherapy.co.uk/services",
     siteName: "Next Generation Therapy",
     locale: "en_GB",
     type: "website",
     images: [
       {
-        url: "https://nextgentherapy.co.uk/images/default-social-share.jpg",
+        url: "https://www.nextgentherapy.co.uk/images/default-social-share.jpg",
         width: 300,
         height: 300,
         alt: "Andreea Horhocea - Psychodynamic Psychotherapist",
@@ -61,7 +61,7 @@ export const metadata: Metadata = {
     title: "Services - Next Generation Therapy",
     description:
       "Explore the therapy services offered by Andreea Horhocea, including play therapy for children and talking therapy for adults.",
-    images: ["https://nextgentherapy.co.uk/images/default-social-share.jpg"],
+    images: ["https://www.nextgentherapy.co.uk/images/default-social-share.jpg"],
   },
 };
 

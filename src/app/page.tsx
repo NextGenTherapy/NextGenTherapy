@@ -4,10 +4,8 @@ import Link from "next/link";
 import styles from "./page.module.scss";
 
 function getMetadata(): Metadata {
-  const siteUrl =
-    process.env.NEXT_PUBLIC_SITE_URL || "https://nextgentherapy.co.uk";
-
-  return {
+const siteUrl = 
+  process.env.NEXT_PUBLIC_SITE_URL || "https://www.nextgentherapy.co.uk";  return {
     metadataBase: new URL(siteUrl),
     title: "Professional Therapy Services Colchester | Next Generation Therapy",
     description:
@@ -37,7 +35,7 @@ function getMetadata(): Metadata {
       type: "website",
       images: [
         {
-          url: "https://nextgentherapy.co.uk/images/default-social-share.jpg",
+          url: "https://www.nextgentherapy.co.uk/images/default-social-share.jpg",
           width: 1200,
           height: 630,
           alt: "Next Generation Therapy - Professional Therapy Services in Colchester",
@@ -49,7 +47,7 @@ function getMetadata(): Metadata {
       title: "Professional Therapy Services Colchester | Next Generation Therapy",
       description:
         "Professional psychodynamic therapy in Colchester & online. Expert help for anxiety, depression, relationships & personal growth.",
-      images: ["https://nextgentherapy.co.uk/images/default-social-share.jpg"],
+      images: ["https://www.nextgentherapy.co.uk/images/default-social-share.jpg"],
     },
     alternates: {
       canonical: siteUrl,

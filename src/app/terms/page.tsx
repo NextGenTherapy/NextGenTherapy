@@ -5,7 +5,7 @@ import LegalNavigation from "../../components/layout/legal-navigation";
 import Button from "../../components/ui/button";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://nextgentherapy.co.uk"),
+  metadataBase: new URL("https://www.nextgentherapy.co.uk"),
   title: "Terms of Service | Next Generation Therapy Colchester | Therapy Terms",
   description: "Terms of service and conditions for Next Generation Therapy Colchester website and professional psychotherapy services. BACP therapist terms and conditions.",
   keywords: [
@@ -33,18 +33,18 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: "https://nextgentherapy.co.uk/terms",
+    canonical: "https://www.nextgentherapy.co.uk/terms",
   },
   openGraph: {
     title: "Terms of Service | Next Generation Therapy Colchester",
     description: "Terms of service and conditions for Next Generation Therapy Colchester website and professional psychotherapy services.",
-    url: "https://nextgentherapy.co.uk/terms",
+    url: "https://www.nextgentherapy.co.uk/terms",
     siteName: "Next Generation Therapy",
     locale: "en_GB",
     type: "website",
     images: [
       {
-        url: "https://nextgentherapy.co.uk/images/default-social-share.jpg",
+        url: "https://www.nextgentherapy.co.uk/images/default-social-share.jpg",
         width: 1200,
         height: 630,
         alt: "Terms of Service - Next Generation Therapy Colchester",
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Terms of Service | Next Generation Therapy Colchester",
     description: "Terms of service and conditions for Next Generation Therapy Colchester professional psychotherapy services.",
-    images: ["https://nextgentherapy.co.uk/images/default-social-share.jpg"],
+    images: ["https://www.nextgentherapy.co.uk/images/default-social-share.jpg"],
   },
 };
 

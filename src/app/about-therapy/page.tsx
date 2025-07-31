@@ -5,7 +5,7 @@ import buttonLinksStyles from "../../components/ui/buttonLinks.module.scss";
 import Button from "../../components/ui/button";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://nextgentherapy.co.uk"),
+  metadataBase: new URL("https://www.nextgentherapy.co.uk"),
   title: "What is Therapy? Benefits & Process | Colchester Therapist",
   description:
     "Learn about psychodynamic therapy benefits, who it helps, and what to expect. Professional guidance for anxiety, depression, relationships & personal growth in Colchester & online.",
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Andreea Horhocea" }],
   alternates: {
-    canonical: "https://nextgentherapy.co.uk/about-therapy",
+    canonical: "https://www.nextgentherapy.co.uk/about-therapy",
   },
   robots: {
     index: true,
@@ -43,13 +43,13 @@ export const metadata: Metadata = {
     title: "What is Therapy? Benefits & Process | Colchester Therapist",
     description:
       "Learn about psychodynamic therapy benefits, who it helps, and what to expect. Professional guidance for anxiety, depression, relationships & personal growth.",
-    url: "https://nextgentherapy.co.uk/about-therapy",
+    url: "https://www.nextgentherapy.co.uk/about-therapy",
     siteName: "Next Generation Therapy",
     locale: "en_GB",
     type: "website",
     images: [
       {
-        url: "https://nextgentherapy.co.uk/images/default-social-share.jpg",
+        url: "https://www.nextgentherapy.co.uk/images/default-social-share.jpg",
         width: 300,
         height: 300,
         alt: "Andreea Horhocea - Psychodynamic Psychotherapist",
@@ -61,7 +61,7 @@ export const metadata: Metadata = {
     title: "About Therapy - Next Generation Therapy",
     description:
       "Learn about therapy, who it's for, and how it can help. Discover what to expect and see who Andreea Horhocea works with.",
-    images: ["https://nextgentherapy.co.uk/images/default-social-share.jpg"],
+    images: ["https://www.nextgentherapy.co.uk/images/default-social-share.jpg"],
   },
 };
 

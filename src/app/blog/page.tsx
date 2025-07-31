@@ -6,7 +6,7 @@ import styles from "./blog.module.scss";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://nextgentherapy.co.uk"),
+  metadataBase: new URL("https://www.nextgentherapy.co.uk"),
   title: "Therapy Blog | Mental Health Insights from Colchester Therapist",
   description:
     "Expert therapy insights & mental health advice from BACP registered psychotherapist Andreea Horhocea. Professional guidance on anxiety, depression, relationships & therapy approaches.",
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Andreea Horhocea" }],
   alternates: {
-    canonical: "https://nextgentherapy.co.uk/blog",
+    canonical: "https://www.nextgentherapy.co.uk/blog",
   },
   robots: {
     index: true,
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     title: "Therapy Blog | Mental Health Insights from Colchester Therapist",
     description:
       "Expert therapy insights & mental health advice from BACP registered psychotherapist Andreea Horhocea. Professional guidance on anxiety, depression & relationships.",
-    url: "https://nextgentherapy.co.uk/blog",
+    url: "https://www.nextgentherapy.co.uk/blog",
     siteName: "Next Generation Therapy",
     locale: "en_GB",
     type: "website",
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
     title: "Therapy Blog | Mental Health Insights from Colchester Therapist",
     description:
       "Expert therapy insights & mental health advice from BACP registered psychotherapist Andreea Horhocea.",
-    images: ["https://nextgentherapy.co.uk/images/default-social-share.jpg"],
+    images: ["https://www.nextgentherapy.co.uk/images/default-social-share.jpg"],
   },
 };
 
