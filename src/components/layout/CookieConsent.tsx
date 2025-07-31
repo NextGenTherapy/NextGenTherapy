@@ -16,23 +16,6 @@ export default function CookieConsent() {
   const acceptCookies = () => {
     localStorage.setItem('cookie-consent', 'accepted');
     setShowConsent(false);
-    // Enable analytics tracking
-    if (typeof window !== 'undefined') {
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      const gtag = (window as any).gtag;
-      if (gtag) {
-        // Re-enable Google Analytics
-        gtag('config', 'G-3528EDPEXW', {
-          send_page_view: true,
-          anonymize_ip: true
-        });
-        // Send a page view event
-        gtag('event', 'page_view', {
-          page_title: document.title,
-          page_location: window.location.href
-        });
-      }
-    }
   };
 
   const declineCookies = () => {
@@ -57,9 +40,8 @@ export default function CookieConsent() {
       <div className={styles.content}>
         <h3>We use cookies</h3>
         <p>
-          We use essential cookies for website functionality and analytics cookies 
-          (Google Analytics, Vercel Analytics) to understand how you use our site 
-          and improve our services.
+          We use essential cookies to make our site work. We&apos;d also like to use analytics cookies 
+          to understand how you use our services and to make improvements.
         </p>
         <div className={styles.buttons}>
           <button onClick={acceptCookies} className={styles.acceptBtn}>

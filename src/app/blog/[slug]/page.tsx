@@ -43,28 +43,26 @@ export async function generateMetadata({
   return {
     title:
       data.title !== undefined
-        ? `${data.title} | Next Generation Therapy`
+        ? `${data.title} - Next Generation Therapy Blog`
         : "Blog Post - Next Generation Therapy",
     description: data.summary || "Professional insights and guidance from Next Generation Therapy to support your mental health and wellbeing journey.",
-    keywords: data.keywords ? 
-      [...data.keywords.split(", "), "therapy", "mental health", "psychotherapy", "Andreea Horhocea", "Colchester therapy", "BACP therapist"] :
-      [
-        "therapy",
-        "mental health", 
-        "psychotherapy",
-        "emotional well-being",
-        "therapy blog",
-        "professional therapy",
-        "psychodynamic therapy",
-        "anxiety support",
-        "depression help",
-        "self-esteem",
-        "therapy insights",
-        data.category === "professional" ? "professional therapy insights" : "personal therapy thoughts",
-        "Andreea Horhocea",
-        "Colchester therapy",
-        "online therapy",
-      ],
+    keywords: [
+      "therapy",
+      "mental health",
+      "psychotherapy",
+      "emotional well-being",
+      "therapy blog",
+      "professional therapy",
+      "psychodynamic therapy",
+      "anxiety support",
+      "depression help",
+      "self-esteem",
+      "therapy insights",
+      data.category === "professional" ? "professional therapy insights" : "personal therapy thoughts",
+      "Andreea Horhocea",
+      "Colchester therapy",
+      "online therapy",
+    ],
     alternates: {
       canonical: `https://nextgentherapy.co.uk/blog/${slug}`,
     },
@@ -208,31 +206,18 @@ export default async function BlogPostPage({
       alt: `${data.title} - Next Generation Therapy Blog`,
     },
     articleSection: data.category === "professional" ? "Professional Insights" : "Personal Reflections",
-    keywords: data.keywords ? 
-      data.keywords.split(", ").concat([
-        "therapy",
-        "mental health",
-        "psychotherapy",
-        "emotional wellbeing",
-        "anxiety support",
-        "depression help",
-        "self-esteem",
-        data.category === "professional" ? "professional insights" : "personal thoughts",
-        "Colchester therapy",
-        "online therapy",
-      ]).join(", ") :
-      [
-        "therapy",
-        "mental health",
-        "psychotherapy",
-        "emotional wellbeing",
-        "anxiety support",
-        "depression help",
-        "self-esteem",
-        data.category === "professional" ? "professional insights" : "personal thoughts",
-        "Colchester therapy",
-        "online therapy",
-      ].join(", "),
+    keywords: [
+      "therapy",
+      "mental health",
+      "psychotherapy",
+      "emotional wellbeing",
+      "anxiety support",
+      "depression help",
+      "self-esteem",
+      data.category === "professional" ? "professional insights" : "personal thoughts",
+      "Colchester therapy",
+      "online therapy",
+    ].join(", "),
     about: {
       "@type": "Thing",
       name: "Mental Health and Therapy",

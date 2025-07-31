@@ -8,7 +8,6 @@ import ErrorBoundary from "../components/layout/ErrorBoundary";
 import CookieConsent from "../components/layout/CookieConsent";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import ConditionalAnalytics from "../components/layout/ConditionalAnalytics";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://nextgentherapy.co.uk"),
@@ -95,7 +94,6 @@ export default async function RootLayout({
         <meta name="msapplication-navbutton-color" content="#164b39" />
         
         <link rel="icon" href="/favicon.ico" type="image/x-icon" />
-        <link rel="canonical" href="https://nextgentherapy.co.uk" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -239,7 +237,6 @@ export default async function RootLayout({
           <CookieConsent />
         </div>
       </body>
-      <ConditionalAnalytics />
       <SpeedInsights />
     </html>
   );

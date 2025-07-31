@@ -11,7 +11,7 @@ const ContactForm = dynamic(() => import("../../components/forms/contact-form"),
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://nextgentherapy.co.uk"),
+  metadataBase: new URL("https://www.nextgentherapy.co.uk"),
   title: "Book Therapy Session Colchester | Contact Andreea Horhocea",
   description:
     "Book therapy with BACP registered psychotherapist Andreea Horhocea. £60 sessions in Colchester or online. Free 15-min consultation. Contact today for anxiety, depression & relationship support.",
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Andreea Horhocea" }],
   alternates: {
-    canonical: "https://nextgentherapy.co.uk/book-now",
+    canonical: "https://www.nextgentherapy.co.uk/book-now",
   },
   robots: {
     index: true,
@@ -48,13 +48,13 @@ export const metadata: Metadata = {
     title: "Book Therapy Session Colchester | Contact Andreea Horhocea",
     description:
       "Book therapy with BACP registered psychotherapist Andreea Horhocea. £60 sessions in Colchester or online. Free 15-min consultation.",
-    url: "https://nextgentherapy.co.uk/book-now",
+    url: "https://www.nextgentherapy.co.uk/book-now",
     siteName: "Next Generation Therapy",
     locale: "en_GB",
     type: "website",
     images: [
       {
-        url: "https://nextgentherapy.co.uk/images/default-social-share.jpg",
+        url: "https://www.nextgentherapy.co.uk/images/default-social-share.jpg",
         width: 500,
         height: 500,
         alt: "Therapy session illustration",
@@ -66,7 +66,7 @@ export const metadata: Metadata = {
     title: "Book Now - Next Generation Therapy",
     description:
       "Book a therapy session with Andreea Horhocea, a psychodynamic psychotherapist offering services in Colchester and online.",
-    images: ["https://nextgentherapy.co.uk/images/default-social-share.jpg"],
+    images: ["https://www.nextgentherapy.co.uk/images/default-social-share.jpg"],
   },
 };
 
