@@ -1,5 +1,8 @@
 ---
 title: "Understanding Anxiety: The Hidden Weight"
+date: "2025-05-15"
+summary: "Anxiety isn't always visible. Here's what it can really feel like—and how therapy can help."
+---itle: "Understanding Anxiety: The Hidden Weight"
 date: "15-05-2025"
 summary: "Anxiety isn’t always visible. Here’s what it can really feel like—and how therapy can help."
 ---
