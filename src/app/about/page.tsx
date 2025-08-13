@@ -10,12 +10,16 @@ export const metadata: Metadata = {
   description:
     "Meet Andreea Horhocea, BACP registered psychodynamic psychotherapist in Colchester. Master's degree, 6+ years experience with children, adults & families. Specializing in anxiety, depression & relationship issues.",
   keywords: [
+    "psychodynamic therapist Colchester",
+    "Colchester psychodynamic therapist", 
+    "psychodynamic therapy Colchester",
     "Andreea Horhocea therapist",
     "psychodynamic psychotherapy Colchester",
     "BACP registered therapist",
     "therapy qualifications Essex",
     "experienced therapist Colchester",
     "Master's psychotherapy",
+    "psychodynamic counsellor Colchester",
     "child therapy specialist",
     "family therapy Colchester",
     "anxiety therapist",
@@ -93,7 +97,7 @@ export default function AboutMe() {
         {/* Hero Section */}
         <section className={styles.heroSection}>
           <div className={styles.greeting}>
-            <h1>About Me</h1>
+            <h1>About Me - Psychodynamic Therapist in Colchester</h1>
           </div>
         </section>
 

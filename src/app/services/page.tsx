@@ -6,23 +6,30 @@ import Button from "../../components/ui/button";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.nextgentherapy.co.uk"),
-  title: "Therapy Services Colchester | Play Therapy & Adult Counselling",
+  title: "Colchester Therapist | Professional Therapy Services | Andreea Horhocea",
   description:
-    "Professional therapy services in Colchester & online. Play therapy for children, psychodynamic therapy for adults. Anxiety, depression, relationships, body image support. £60 per session.",
+    "Experienced Colchester therapist offering professional therapy services. Specialising in anxiety, depression, trauma & more. In-person & online sessions available. Book your consultation today.",
   keywords: [
+    "therapist Colchester",
+    "Colchester therapist",
+    "therapy Colchester",
+    "psychotherapist Colchester",
+    "counsellor Colchester",
     "therapy services Colchester",
     "play therapy children Colchester",
     "adult therapy Colchester",
     "psychodynamic therapy services",
     "anxiety therapy Colchester",
     "depression counselling Essex",
-    "relationship therapy",
+    "relationship therapy Colchester",
     "body image therapy",
     "self-esteem counselling",
     "online therapy UK",
     "therapy sessions £60",
     "BACP therapy services",
-    "professional counselling Colchester"
+    "professional counselling Colchester",
+    "therapist near me",
+    "Colchester psychotherapy"
   ],
   authors: [{ name: "Andreea Horhocea" }],
   alternates: {
@@ -96,24 +103,24 @@ export default function Services() {
       <div className={styles.page}>
       <main className={styles.main}>
         <div className={styles.greeting}>
-          <h1>Services Provided</h1>
+          <h1>Colchester Therapist - Professional Therapy Services</h1>
         </div>
 
         <section className={styles.servicesOverview}>
           <div className={styles.contentGrid}>
             <article className={styles.textContent}>
               <h2>Who I Work With & What I Help With</h2>
-              <p>I offer therapy sessions tailored to support a diverse range of clients and concerns. Sessions are available in-person in Colchester or online, providing flexibility to suit your lifestyle.</p>
+              <p>As a qualified therapist in Colchester, I offer professional therapy sessions tailored to support a diverse range of clients and concerns. Whether you're looking for a therapist in Colchester for face-to-face sessions or prefer online therapy, I provide flexible, compassionate support to suit your lifestyle and needs.</p>
               
               <div className={styles.servicesList}>
                 <div className={styles.listColumn}>
                   <h3>Who I Support</h3>
                   <ul>
-                    <li>Children and young people</li>
+                    <li>Children and young people seeking therapy in Colchester</li>
                     <li>Adults experiencing anxiety</li>
                     <li>Clients dealing with depression</li>
                     <li>Individuals who have suffered abuse</li>
-                    <li>Trauma survivors</li>
+                    <li>Trauma survivors needing specialist therapist support</li>
                     <li>People grieving or experiencing loss</li>
                     <li>LGBTQ+ individuals and couples</li>
                   </ul>
@@ -156,10 +163,10 @@ export default function Services() {
               />
             </aside>
             <article className={styles.childTextContainer}>
-              <h2>Play Therapy for Children</h2>
+              <h2>Play Therapy for Children in Colchester</h2>
               <p><strong>£60 for the therapeutic hour (50 mins)</strong></p>
               <p>
-                Play therapy provides children with a natural way to express their 
+                As a qualified play therapist in Colchester, I provide children with a natural way to express their 
                 feelings and work through challenges. Using toys, games, and creative 
                 activities, children can explore difficult emotions in a safe, 
                 supportive environment.
@@ -183,12 +190,12 @@ export default function Services() {
               />
             </aside>
             <article className={styles.adultTextContainer}>
-              <h2>Talking Therapy Online or In-Person</h2>
+              <h2>Adult Therapy in Colchester - Online & In-Person</h2>
               <p><strong>£60 for the therapeutic hour (50 mins)</strong></p>
               <p>
-                Individual therapy sessions designed to help you explore your thoughts, 
+                As an experienced therapist in Colchester, I offer individual therapy sessions designed to help you explore your thoughts, 
                 feelings, and experiences in a confidential, non-judgmental space. 
-                Whether online or in-person, sessions are tailored to your unique needs.
+                Whether you prefer online or in-person sessions in Colchester, therapy is tailored to your unique needs.
               </p>
               <p>
                 Together, we&apos;ll work to understand patterns, develop coping strategies, 
@@ -204,9 +211,9 @@ export default function Services() {
             <h2>Frequently Asked Questions</h2>
             
             <div className={styles.faqItem}>
-              <h3>What should I expect in my first session?</h3>
+              <h3>What should I expect in my first therapy session in Colchester?</h3>
               <p>
-                Your first session is an opportunity for us to get to know each other. 
+                Your first session with me as your Colchester therapist is an opportunity for us to get to know each other. 
                 I&apos;ll ask about what brought you to therapy, your goals, and any concerns 
                 you might have. We&apos;ll discuss confidentiality, how therapy works, and 
                 answer any questions you have. There&apos;s no pressure to share more than 
@@ -245,9 +252,9 @@ export default function Services() {
             </div>
 
             <div className={styles.faqItem}>
-              <h3>Do you offer online sessions?</h3>
+              <h3>Do you offer online therapy sessions as a Colchester therapist?</h3>
               <p>
-                Yes, I offer both in-person sessions in Colchester and secure online 
+                Yes, as a qualified therapist in Colchester, I offer both in-person sessions at my Colchester practice and secure online 
                 sessions via video call. Online therapy can be just as effective as 
                 in-person sessions and offers flexibility for those with busy schedules 
                 or who prefer the comfort of their own space.

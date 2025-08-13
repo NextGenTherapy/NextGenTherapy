@@ -7,10 +7,14 @@ function getMetadata(): Metadata {
 const siteUrl = 
   process.env.NEXT_PUBLIC_SITE_URL || "https://www.nextgentherapy.co.uk";  return {
     metadataBase: new URL(siteUrl),
-    title: "Professional Therapy Services Colchester | Next Generation Therapy",
+    title: "Colchester Counsellor | Professional Therapy Services | Next Generation Therapy",
     description:
-      "Professional psychodynamic therapy in Colchester & online. Expert help for anxiety, depression, relationships & personal growth. Experienced BACP registered therapist Andreea Horhocea.",
+      "Experienced counsellor in Colchester offering professional psychodynamic therapy in Colchester & online. Expert help for anxiety, depression, relationships & personal growth. BACP registered.",
     keywords: [
+      "counsellor Colchester",
+      "Colchester counsellor", 
+      "counselling Colchester",
+      "counsellor near me",
       "therapy Colchester",
       "psychotherapy Colchester",
       "psychodynamic therapy",
@@ -82,9 +86,9 @@ export default function Home() {
         {/* Content Section */}
         <section className={styles.contentSection}>
           <div className={styles.greeting}>
-            <h1>Hi! I am Andreea Horhocea.</h1>
+            <h1>Hi! I am Andreea Horhocea - Counsellor in Colchester.</h1>
             <p className={styles.subtitle}>
-              A psychodynamic psychotherapist offering 1-to-1 sessions in
+              A qualified counsellor and psychodynamic psychotherapist offering 1-to-1 sessions in
               Colchester and online.
             </p>
           </div>

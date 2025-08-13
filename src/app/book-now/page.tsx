@@ -12,12 +12,17 @@ const ContactForm = dynamic(() => import("../../components/forms/contact-form"),
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.nextgentherapy.co.uk"),
-  title: "Book Therapy Session Colchester | Contact Andreea Horhocea",
+  title: "Book Therapist Colchester | Schedule Therapy Session | Andreea Horhocea",
   description:
-    "Book therapy with BACP registered psychotherapist Andreea Horhocea. £60 sessions in Colchester or online. Free 15-min consultation. Contact today for anxiety, depression & relationship support.",
+    "Book therapist in Colchester. Schedule therapy session with BACP registered psychotherapist Andreea Horhocea. £60 sessions in Colchester or online. Free 15-min consultation available.",
   keywords: [
-    "book therapy session Colchester",
+    "book therapist Colchester",
+    "book therapy session Colchester", 
+    "schedule therapist Colchester",
+    "therapy appointment Colchester",
     "contact therapist Colchester",
+    "therapist booking Colchester",
+    "book counsellor Colchester",
     "therapy appointment booking",
     "Andreea Horhocea contact",
     "psychotherapy booking Colchester",
@@ -75,7 +80,7 @@ export default function BookNow() {
     <div className={styles.page}>
       <main className={styles.main}>
         <section className={styles.greeting}>
-          <h1>Let the Journey Begin… Enquiry Form</h1>
+          <h1>Book a Therapist in Colchester - Let the Journey Begin</h1>
           <div className={styles.heroImageContainer}>
             <Image
               src="/images/book-now.jpg"

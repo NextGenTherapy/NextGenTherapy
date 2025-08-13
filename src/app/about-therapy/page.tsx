@@ -6,15 +6,19 @@ import Button from "../../components/ui/button";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.nextgentherapy.co.uk"),
-  title: "What is Therapy? Benefits & Process | Colchester Therapist",
+  title: "Therapy Colchester | What is Therapy? Benefits & Process | Professional Support",
   description:
-    "Learn about psychodynamic therapy benefits, who it helps, and what to expect. Professional guidance for anxiety, depression, relationships & personal growth in Colchester & online.",
+    "Professional therapy in Colchester & online. Learn about psychodynamic therapy benefits, who it helps, and what to expect. Expert guidance for anxiety, depression, relationships & personal growth.",
   keywords: [
+    "therapy Colchester",
+    "Colchester therapy",
+    "therapy near me", 
     "what is therapy",
     "therapy benefits",
     "psychodynamic therapy explained",
     "who needs therapy",
     "therapy process Colchester",
+    "professional therapy Colchester",
     "mental health benefits",
     "anxiety therapy help",
     "depression therapy benefits",
@@ -91,9 +95,9 @@ export default function AboutTherapy() {
           {/* Hero Section */}
           <section className={styles.heroSection}>
             <div className={styles.greeting}>
-              <h1>About Therapy</h1>
+              <h1>Professional Therapy in Colchester - Understanding How Therapy Works</h1>
               <p className={styles.subtitle}>
-                Understanding how therapy works and who it can help
+                Discover the benefits of therapy and how it can help you in Colchester and online
               </p>
             </div>
             
