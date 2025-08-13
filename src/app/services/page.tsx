@@ -110,7 +110,7 @@ export default function Services() {
           <div className={styles.contentGrid}>
             <article className={styles.textContent}>
               <h2>Who I Work With & What I Help With</h2>
-              <p>As a qualified therapist in Colchester, I offer professional therapy sessions tailored to support a diverse range of clients and concerns. Whether you're looking for a therapist in Colchester for face-to-face sessions or prefer online therapy, I provide flexible, compassionate support to suit your lifestyle and needs.</p>
+              <p>As a qualified therapist in Colchester, I offer professional therapy sessions tailored to support a diverse range of clients and concerns. Whether you&apos;re looking for a therapist in Colchester for face-to-face sessions or prefer online therapy, I provide flexible, compassionate support to suit your lifestyle and needs.</p>
               
               <div className={styles.servicesList}>
                 <div className={styles.listColumn}>
