@@ -124,4 +124,47 @@
 
 ---
 
+## 🚀 GOOGLE SEARCH CONSOLE - IMMEDIATE ACTION REQUIRED
+
+### **URLs to Submit for Re-indexing (Priority Order):**
+
+**Step 1: Submit These URLs in Google Search Console → URL Inspection Tool → "Request Indexing"**
+
+1. **PRIORITY 1 (Submit First):**
+   - `https://www.nextgentherapy.co.uk/services` 
+     **(Currently Page 6 for "Colchester therapist" - highest potential for quick wins)**
+
+2. **PRIORITY 2 (Submit Next):**
+   - `https://www.nextgentherapy.co.uk/` 
+     **(Homepage - new "Counsellor Colchester" targeting)**
+   - `https://www.nextgentherapy.co.uk/about-therapy` 
+     **(New "Therapy Colchester" broad keyword targeting)**
+
+3. **PRIORITY 3 (Submit Last):**
+   - `https://www.nextgentherapy.co.uk/about` 
+     **(Enhanced "Psychodynamic therapist" targeting)**
+   - `https://www.nextgentherapy.co.uk/book-now` 
+     **(New "Book therapist Colchester" targeting)**
+
+### **How to Submit:**
+1. **Login to Google Search Console:** [search.google.com/search-console](https://search.google.com/search-console)
+2. **Select:** www.nextgentherapy.co.uk property
+3. **URL Inspection Tool:** Paste each URL above
+4. **Click:** "Request Indexing" for each URL
+5. **Submit Sitemap:** Go to Sitemaps → Add `https://www.nextgentherapy.co.uk/sitemap.xml`
+
+### **Expected Timeline:**
+- **Re-crawling:** 1-3 days after submission
+- **Ranking Updates:** 2-7 days after re-indexing
+- **First Results:** Check rankings starting August 16-20, 2025
+
+### **Monitor These Keywords Weekly:**
+- ✅ "Colchester therapist" (Services page - move from Page 6)
+- ✅ "Counsellor Colchester" (Homepage)
+- ✅ "Therapy Colchester" (About Therapy page)
+- ✅ "Psychodynamic therapist Colchester" (About page)
+- ✅ "Book therapist Colchester" (Book Now page)
+
+---
+
 *Last Updated: August 13, 2025 - All optimizations completed and deployed*
