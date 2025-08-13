@@ -87,15 +87,15 @@ export default function PrivacyPolicy() {
             include in your message.
           </li>
           <li>
-            <strong>Usage Data:</strong> We use Google Analytics to collect
+            <strong>Usage Data:</strong> We use Google Analytics and Vercel Analytics to collect
             anonymized data about how visitors use our site (such as pages
             visited, device type, and general location). This data does not
-            personally identify you.
+            personally identify you and is only collected with your consent.
           </li>
           <li>
             <strong>Cookies:</strong> We use cookies to improve your experience
             and for analytics purposes. You can control cookies through your
-            browser settings.
+            browser settings and our cookie consent banner.
           </li>
         </ul>
 
@@ -111,7 +111,7 @@ export default function PrivacyPolicy() {
             <strong>Contact Forms:</strong> Your consent when you submit the form.
           </li>
           <li>
-            <strong>Analytics:</strong> Legitimate interest in improving our website and services.
+            <strong>Analytics:</strong> Your explicit consent through our cookie consent banner. We only process analytics data when you have specifically agreed to it.
           </li>
         </ul>
 
@@ -134,10 +134,13 @@ export default function PrivacyPolicy() {
             <strong>Resend:</strong> Email delivery service for contact form submissions.
           </li>
           <li>
-            <strong>Google Analytics:</strong> Website usage analytics (anonymized data).
+            <strong>Google Analytics:</strong> Website usage analytics (anonymized data) - only activated with your consent.
           </li>
           <li>
-            <strong>Vercel:</strong> Website hosting and performance analytics.
+            <strong>Vercel Analytics:</strong> Website performance and usage analytics - only activated with your consent.
+          </li>
+          <li>
+            <strong>Vercel:</strong> Website hosting and infrastructure services.
           </li>
         </ul>
 
@@ -176,8 +179,19 @@ export default function PrivacyPolicy() {
           <li>
             <strong>Right to object:</strong> You can object to processing based on legitimate interests.
           </li>
+        </ul>
+
+        <h2 className={styles.sectionHeading}>Analytics and Cookie Controls</h2>
+        <p>You have full control over analytics tracking:</p>
+        <ul className={styles.list}>
           <li>
-            You can opt out of Google Analytics tracking using{" "}
+            <strong>Cookie Consent Banner:</strong> You can accept or decline analytics cookies when you first visit our site.
+          </li>
+          <li>
+            <strong>Browser Settings:</strong> You can disable cookies entirely through your browser settings.
+          </li>
+          <li>
+            <strong>Google Analytics Opt-out:</strong> You can opt out of Google Analytics tracking using{" "}
             <a
               href="https://tools.google.com/dlpage/gaoptout"
               target="_blank"
@@ -187,6 +201,9 @@ export default function PrivacyPolicy() {
               this browser add-on
             </a>
             .
+          </li>
+          <li>
+            <strong>Clear Your Choice:</strong> You can clear your browser&apos;s local storage to reset your cookie preferences.
           </li>
         </ul>
 

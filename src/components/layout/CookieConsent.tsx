@@ -16,11 +16,15 @@ export default function CookieConsent() {
   const acceptCookies = () => {
     localStorage.setItem('cookie-consent', 'accepted');
     setShowConsent(false);
+    // Dispatch custom event for same-tab updates
+    window.dispatchEvent(new CustomEvent('cookie-consent-changed'));
   };
 
   const declineCookies = () => {
     localStorage.setItem('cookie-consent', 'declined');
     setShowConsent(false);
+    // Dispatch custom event for same-tab updates
+    window.dispatchEvent(new CustomEvent('cookie-consent-changed'));
     // Disable analytics
     if (typeof window !== 'undefined') {
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -41,7 +45,7 @@ export default function CookieConsent() {
         <h3>We use cookies</h3>
         <p>
           We use essential cookies to make our site work. We&apos;d also like to use analytics cookies 
-          to understand how you use our services and to make improvements.
+          from Google Analytics and Vercel Analytics to understand how you use our services and to make improvements.
         </p>
         <div className={styles.buttons}>
           <button onClick={acceptCookies} className={styles.acceptBtn}>

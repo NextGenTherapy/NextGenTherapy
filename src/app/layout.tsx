@@ -6,8 +6,8 @@ import Footer from "../components/layout/footer";
 import ScrollToTop from "../components/ui/scroll-to-top";
 import ErrorBoundary from "../components/layout/ErrorBoundary";
 import CookieConsent from "../components/layout/CookieConsent";
-import { Analytics } from "@vercel/analytics/next";
-import { SpeedInsights } from "@vercel/speed-insights/next";
+import ConditionalAnalytics from "../components/layout/ConditionalAnalytics";
+import ConditionalVercelAnalytics from "../components/layout/ConditionalVercelAnalytics";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.nextgentherapy.co.uk"),
@@ -231,13 +231,13 @@ export default async function RootLayout({
               {children}
             </main>
           </ErrorBoundary>
-          <Analytics />
+          <ConditionalVercelAnalytics />
+          <ConditionalAnalytics />
           <Footer />
           <ScrollToTop />
           <CookieConsent />
         </div>
       </body>
-      <SpeedInsights />
     </html>
   );
 }
