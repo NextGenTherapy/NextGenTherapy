@@ -56,3 +56,5 @@ to-do.md
 
 # SEO roadmap (private)
 seo-roadmap.md
+# Documentation files (keep README.md in root)
+docs/*.md
