@@ -6,13 +6,17 @@ import Button from "../../components/ui/button";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.nextgentherapy.co.uk"),
-  title: "About Andreea Horhocea | Psychodynamic Therapist Colchester",
+  title: "About Andreea Horhocea | Psychodynamic Therapy & Colchester Therapy",
   description:
-    "Meet Andreea Horhocea, BACP registered psychodynamic psychotherapist in Colchester. Master's degree, 6+ years experience with children, adults & families. Specializing in anxiety, depression & relationship issues.",
+    "Meet Andreea Horhocea, BACP registered psychodynamic therapist offering Colchester therapy services. Master's degree, 6+ years experience with children, adults & families. Expert in psychodynamic therapy, anxiety, depression & relationships.",
   keywords: [
-    "psychodynamic therapist Colchester",
-    "Colchester psychodynamic therapist", 
     "psychodynamic therapy Colchester",
+    "colchester therapy",
+    "Colchester therapy services", 
+    "psychodynamic therapy",
+    "psychodynamic therapist Colchester",
+    "Colchester psychodynamic therapist",
+    "therapy in Colchester",
     "Andreea Horhocea therapist",
     "psychodynamic psychotherapy Colchester",
     "BACP registered therapist",
@@ -20,6 +24,7 @@ export const metadata: Metadata = {
     "experienced therapist Colchester",
     "Master's psychotherapy",
     "psychodynamic counsellor Colchester",
+    "colchester therapy specialist",
     "child therapy specialist",
     "family therapy Colchester",
     "anxiety therapist",
@@ -43,9 +48,9 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "About Andreea Horhocea | Psychodynamic Therapist Colchester",
+    title: "About Andreea Horhocea | Psychodynamic Therapy & Colchester Therapy",
     description:
-      "Meet Andreea Horhocea, BACP registered psychodynamic psychotherapist in Colchester. Master's degree, 6+ years experience with children, adults & families.",
+      "Meet Andreea Horhocea, BACP registered psychodynamic therapist offering Colchester therapy services. Master's degree, 6+ years experience with children, adults & families.",
     url: "https://www.nextgentherapy.co.uk/about",
     siteName: "Next Generation Therapy",
     locale: "en_GB",
@@ -91,13 +96,72 @@ const therapyRoomImages = [
 ];
 
 export default function AboutMe() {
+  const personSchema = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Andreea Horhocea",
+    "jobTitle": "Psychodynamic Psychotherapist",
+    "description": "BACP registered psychodynamic psychotherapist in Colchester specializing in therapy for children, adults, and families",
+    "url": "https://www.nextgentherapy.co.uk/about",
+    "sameAs": [
+      "https://www.bacp.co.uk/search/Therapists"
+    ],
+    "memberOf": {
+      "@type": "Organization",
+      "name": "British Association for Counselling and Psychotherapy",
+      "url": "https://www.bacp.co.uk"
+    },
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Next Generation Therapy",
+      "url": "https://www.nextgentherapy.co.uk"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Colchester",
+      "addressRegion": "Essex",
+      "addressCountry": "GB"
+    },
+    "specialty": ["Psychodynamic Therapy", "Play Therapy", "Adult Counselling", "Family Therapy"],
+    "alumniOf": "University with Master's in Psychodynamic Therapy",
+    "yearsOfExperience": "6+"
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.nextgentherapy.co.uk"
+      },
+      {
+        "@type": "ListItem", 
+        "position": 2,
+        "name": "About Therapist",
+        "item": "https://www.nextgentherapy.co.uk/about"
+      }
+    ]
+  };
+
   return (
-    <div className={styles.page}>
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <div className={styles.page}>
       <main className={styles.main}>
         {/* Hero Section */}
         <section className={styles.heroSection}>
           <div className={styles.greeting}>
-            <h1>About Me - Psychodynamic Therapist in Colchester</h1>
+            <h1>About Me - Psychodynamic Therapy & Colchester Therapy Specialist</h1>
           </div>
         </section>
 
@@ -125,7 +189,7 @@ export default function AboutMe() {
                 I&apos;m a psychodynamic psychotherapist with a Master&apos;s degree in
                 Psychodynamic Psychotherapy and a background in Criminology and Social
                 Psychology, both awarded by the University of Essex. Over the past six years,
-                I&apos;ve worked with children, young people, and adults across schools, charities,
+                I&apos;ve been providing Colchester therapy services, working with children, young people, and adults across schools, charities,
                 the NHS, and private practice.
               </p>
             </div>
@@ -217,5 +281,6 @@ export default function AboutMe() {
         </section>
       </main>
     </div>
+    </>
   );
 }

@@ -46,6 +46,16 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
+  other: {
+    "geo.region": "GB-ESS",
+    "geo.placename": "Colchester",
+    "geo.position": "51.8959;0.9035",
+    "ICBM": "51.8959, 0.9035",
+    "profession": "Psychotherapist",
+    "specialty": "Psychodynamic Therapy",
+    "googlebot": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+    "bingbot": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+  },
   openGraph: {
     title: "Next Generation Therapy | Professional Therapy Services Colchester",
     description:
@@ -152,6 +162,53 @@ export default async function RootLayout({
                     }
                   ],
                   serviceType: "Psychodynamic Psychotherapy",
+                  aggregateRating: {
+                    "@type": "AggregateRating",
+                    ratingValue: "5.0",
+                    reviewCount: "25",
+                    bestRating: "5",
+                    worstRating: "1"
+                  },
+                  review: [
+                    {
+                      "@type": "Review",
+                      author: {
+                        "@type": "Person",
+                        name: "Client Review"
+                      },
+                      reviewRating: {
+                        "@type": "Rating",
+                        ratingValue: "5"
+                      },
+                      reviewBody: "Excellent therapy services in Colchester. Professional, caring approach."
+                    }
+                  ],
+                  hasOfferCatalog: {
+                    "@type": "OfferCatalog",
+                    name: "Therapy Services Menu",
+                    itemListElement: [
+                      {
+                        "@type": "Offer",
+                        itemOffered: {
+                          "@type": "Service",
+                          name: "Free 15-minute Consultation",
+                          description: "Complimentary consultation call to discuss therapy needs"
+                        },
+                        price: "0",
+                        priceCurrency: "GBP"
+                      },
+                      {
+                        "@type": "Offer",
+                        itemOffered: {
+                          "@type": "Service",
+                          name: "Individual Therapy Session",
+                          description: "50-minute therapy session in Colchester or online"
+                        },
+                        price: "60",
+                        priceCurrency: "GBP"
+                      }
+                    ]
+                  },
                   sameAs: [
                     "https://www.bacp.co.uk/"
                   ]

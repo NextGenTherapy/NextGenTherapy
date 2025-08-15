@@ -84,11 +84,77 @@ export default function AboutTherapy() {
     }
   };
 
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is therapy like in Colchester?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Therapy in Colchester provides a safe, confidential space to explore thoughts and feelings with a qualified professional. Sessions are tailored to your individual needs and conducted in a comfortable, welcoming environment."
+        }
+      },
+      {
+        "@type": "Question", 
+        "name": "How do I find the right therapist in Colchester?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Look for BACP registered therapists with experience in your specific concerns. Consider their approach, location, and whether they offer both in-person and online sessions to suit your preferences."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What can therapy help with?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Therapy can help with anxiety, depression, relationship issues, life transitions, trauma, self-esteem concerns, and personal growth. It provides tools and insights for better mental health and wellbeing."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long does therapy take to work?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "This varies for each person. Some people notice benefits within a few sessions, while others prefer longer-term support. Your therapist will work with you to determine what feels right for your situation."
+        }
+      }
+    ]
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.nextgentherapy.co.uk"
+      },
+      {
+        "@type": "ListItem", 
+        "position": 2,
+        "name": "About Therapy",
+        "item": "https://www.nextgentherapy.co.uk/about-therapy"
+      }
+    ]
+  };
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
       <div className={styles.page}>
         <main className={styles.main}>

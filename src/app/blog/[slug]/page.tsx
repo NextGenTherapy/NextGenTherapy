@@ -206,6 +206,8 @@ export default async function BlogPostPage({
       alt: `${data.title} - Next Generation Therapy Blog`,
     },
     articleSection: data.category === "professional" ? "Professional Insights" : "Personal Reflections",
+    wordCount: content.split(/\s+/).length,
+    timeRequired: `PT${Math.ceil(content.split(/\s+/).length / 200)}M`,
     keywords: [
       "therapy",
       "mental health",

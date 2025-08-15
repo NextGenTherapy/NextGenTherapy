@@ -9,7 +9,7 @@ const siteUrl =
     metadataBase: new URL(siteUrl),
     title: "Colchester Counsellor | Professional Therapy Services | Next Generation Therapy",
     description:
-      "Experienced counsellor in Colchester offering professional psychodynamic therapy in Colchester & online. Expert help for anxiety, depression, relationships & personal growth. BACP registered.",
+      "Book therapy in Colchester today! Experienced counsellor offering anxiety & depression support. BACP registered therapist. Free 15-min consultation. Call now to start your journey!",
     keywords: [
       "counsellor Colchester",
       "Colchester counsellor", 
@@ -73,8 +73,42 @@ const siteUrl =
 export const metadata = getMetadata();
 
 export default function Home() {
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": ["PsychologicalService", "LocalBusiness"],
+    "name": "Next Generation Therapy",
+    "description": "Professional psychodynamic therapy services in Colchester and online",
+    "provider": {
+      "@type": "Person",
+      "name": "Andreea Horhocea",
+      "jobTitle": "BACP Registered Psychodynamic Psychotherapist",
+      "memberOf": {
+        "@type": "Organization", 
+        "name": "British Association for Counselling and Psychotherapy",
+        "url": "https://www.bacp.co.uk"
+      }
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Colchester",
+      "addressRegion": "Essex",
+      "addressCountry": "GB"
+    },
+    "areaServed": ["Colchester", "Essex", "United Kingdom"],
+    "serviceType": ["Psychodynamic Therapy", "Play Therapy", "Adult Counselling"],
+    "priceRange": "££",
+    "url": "https://www.nextgentherapy.co.uk",
+    "telephone": "+44-XXX-XXX-XXXX",
+    "email": "info@nextgentherapy.co.uk"
+  };
+
   return (
-    <div className={styles.page}>
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
+      <div className={styles.page}>
       <main>
         {/* Logo Section at Top */}
         <section className={styles.logoSection}>
@@ -98,7 +132,7 @@ export default function Home() {
             <div className={styles.imageContainer}>
               <Image
                 src="/images/andreea.jpg"
-                alt="Andreea Horhocea - Psychodynamic Psychotherapist"
+                alt="Andreea Horhocea - BACP registered psychodynamic therapist in Colchester offering professional counselling services"
                 height={400}
                 width={300}
                 priority
@@ -135,5 +169,6 @@ export default function Home() {
         </section>
       </main>
     </div>
+    </>
   );
 }

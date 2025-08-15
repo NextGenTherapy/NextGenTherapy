@@ -411,3 +411,186 @@
     font-size: var(--font-size-base);
   }
 }
+
+/* New SEO Enhancement Sections */
+.professionalIntro {
+  font-size: var(--font-size-large);
+  color: var(--color-text-secondary);
+  text-align: center;
+  margin-bottom: var(--spacing-medium);
+  font-style: italic;
+  line-height: 1.6;
+}
+
+.locationCoverage {
+  margin: var(--spacing-section) 0;
+  padding: var(--spacing-large);
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: var(--border-radius-large);
+  box-shadow: var(--box-shadow);
+  
+  h2 {
+    text-align: center;
+    color: var(--color-accent);
+    margin-bottom: var(--spacing-large);
+    font-size: var(--font-size-h2);
+  }
+}
+
+.coverageGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-large);
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.inPersonServices,
+.onlineServices {
+  background: white;
+  padding: var(--spacing-large);
+  border-radius: var(--border-radius-medium);
+  box-shadow: var(--box-shadow);
+  transition: var(--transition-normal);
+  
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--box-shadow-hover);
+  }
+  
+  h3 {
+    color: var(--color-accent);
+    margin-bottom: var(--spacing-medium);
+    font-size: var(--font-size-h4);
+  }
+  
+  p {
+    margin-bottom: var(--spacing-medium);
+    line-height: 1.6;
+    color: var(--color-text-primary);
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    
+    li {
+      padding: var(--spacing-small) 0;
+      border-bottom: 1px solid var(--color-border-light);
+      position: relative;
+      padding-left: var(--spacing-medium);
+      
+      &:before {
+        content: "✓";
+        color: var(--color-accent);
+        font-weight: bold;
+        position: absolute;
+        left: 0;
+      }
+      
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+  }
+}
+
+.credentialsSection {
+  margin: var(--spacing-section) 0;
+  padding: var(--spacing-large);
+  background: linear-gradient(135deg, rgba(43, 92, 230, 0.05), rgba(43, 92, 230, 0.1));
+  border-radius: var(--border-radius-large);
+  
+  h2 {
+    text-align: center;
+    color: var(--color-accent);
+    margin-bottom: var(--spacing-large);
+    font-size: var(--font-size-h2);
+  }
+}
+
+.credentialsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--spacing-large);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.credential {
+  background: white;
+  padding: var(--spacing-large);
+  border-radius: var(--border-radius-medium);
+  text-align: center;
+  box-shadow: var(--box-shadow);
+  transition: var(--transition-normal);
+  
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--box-shadow-hover);
+  }
+  
+  h3 {
+    color: var(--color-accent);
+    margin-bottom: var(--spacing-medium);
+    font-size: var(--font-size-h4);
+  }
+  
+  p {
+    line-height: 1.6;
+    color: var(--color-text-primary);
+  }
+}
+
+.therapyFaq {
+  margin: var(--spacing-section) 0;
+  padding: var(--spacing-large);
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: var(--border-radius-large);
+  box-shadow: var(--box-shadow);
+  
+  h2 {
+    text-align: center;
+    color: var(--color-accent);
+    margin-bottom: var(--spacing-large);
+    font-size: var(--font-size-h2);
+  }
+}
+
+@media (max-width: 768px) {
+  .coverageGrid,
+  .credentialsGrid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-medium);
+  }
+  
+  .professionalIntro {
+    font-size: var(--font-size-medium);
+  }
+  
+  .locationCoverage,
+  .credentialsSection,
+  .therapyFaq {
+    padding: var(--spacing-medium);
+    margin: var(--spacing-large) 0;
+  }
+  
+  .inPersonServices,
+  .onlineServices,
+  .credential {
+    padding: var(--spacing-medium);
+  }
+}
+
+@media (max-width: 480px) {
+  .locationCoverage,
+  .credentialsSection,
+  .therapyFaq {
+    padding: var(--spacing-small);
+  }
+  
+  .coverageGrid,
+  .credentialsGrid {
+    gap: var(--spacing-small);
+  }
+}

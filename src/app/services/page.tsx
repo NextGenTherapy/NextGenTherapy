@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://www.nextgentherapy.co.uk"),
   title: "Colchester Therapist | Professional Therapy Services | Andreea Horhocea",
   description:
-    "Experienced Colchester therapist offering professional therapy services. Specialising in anxiety, depression, trauma & more. In-person & online sessions available. Book your consultation today.",
+    "Find Colchester therapist for anxiety, depression & trauma! Professional therapy services in-person & online. £60 sessions, free consultation. Book your therapist today - call now!",
   keywords: [
     "therapist Colchester",
     "Colchester therapist",
@@ -94,15 +94,41 @@ export default function Services() {
     ]
   };
 
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.nextgentherapy.co.uk"
+      },
+      {
+        "@type": "ListItem", 
+        "position": 2,
+        "name": "Therapy Services",
+        "item": "https://www.nextgentherapy.co.uk/services"
+      }
+    ]
+  };
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <div className={styles.page}>
       <main className={styles.main}>
         <div className={styles.greeting}>
+          <p className={styles.professionalIntro}>
+            Experienced therapist serving Colchester and surrounding Essex areas. Offering both in-person therapy sessions in Colchester and secure online therapy across the UK.
+          </p>
           <h1>Colchester Therapist - Professional Therapy Services</h1>
         </div>
 
@@ -110,7 +136,7 @@ export default function Services() {
           <div className={styles.contentGrid}>
             <article className={styles.textContent}>
               <h2>Who I Work With & What I Help With</h2>
-              <p>As a qualified therapist in Colchester, I offer professional therapy sessions tailored to support a diverse range of clients and concerns. Whether you&apos;re looking for a therapist in Colchester for face-to-face sessions or prefer online therapy, I provide flexible, compassionate support to suit your lifestyle and needs.</p>
+              <p>As a qualified therapist in Colchester, I offer professional therapy sessions tailored to support a diverse range of clients and concerns. Whether you&apos;re looking for mental health support in Colchester for face-to-face sessions or prefer online emotional wellbeing therapy, I provide flexible, compassionate psychological therapy to suit your lifestyle and needs.</p>
               
               <div className={styles.servicesList}>
                 <div className={styles.listColumn}>
@@ -290,6 +316,67 @@ export default function Services() {
                 thoughts and feelings. Many people worry about this, but you&apos;ll find 
                 that once we start talking, things naturally emerge.
               </p>
+            </div>
+          </div>
+        </section>
+
+        <section className={styles.locationCoverage}>
+          <h2>Therapy Coverage Areas</h2>
+          <div className={styles.coverageGrid}>
+            <div className={styles.inPersonServices}>
+              <h3>In-Person Therapy in Colchester</h3>
+              <p>Face-to-face therapy sessions available in central Colchester. Easily accessible location with parking available.</p>
+              <ul>
+                <li>Central Colchester location</li>
+                <li>Confidential, welcoming therapy room</li>
+                <li>Flexible appointment times</li>
+                <li>Easy access from surrounding areas</li>
+              </ul>
+            </div>
+            <div className={styles.onlineServices}>
+              <h3>Online Therapy Sessions</h3>
+              <p>Secure video therapy sessions for clients across Essex and the UK who prefer online support.</p>
+              <ul>
+                <li>Same quality of care as in-person</li>
+                <li>Flexible scheduling options</li>
+                <li>No travel required</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section className={styles.credentialsSection}>
+          <h2>Why Choose Our Colchester Therapy Practice</h2>
+          <div className={styles.credentialsGrid}>
+            <div className={styles.credential}>
+              <h3>BACP Registered</h3>
+              <p>Fully registered therapist following professional ethical guidelines and continuing professional development.</p>
+            </div>
+            <div className={styles.credential}>
+              <h3>Local Expertise</h3>
+              <p>Understanding of local community mental health needs and resources available in the Colchester and Essex area. How does therapy work locally? I know the area well.</p>
+            </div>
+            <div className={styles.credential}>
+              <h3>Specialized Training</h3>
+              <p>Training in psychodynamic therapy, play therapy, and working with diverse client needs.</p>
+            </div>
+          </div>
+        </section>
+
+        <section className={styles.therapyFaq}>
+          <h2>Common Questions About Therapy Services</h2>
+          <div className={styles.faqContainer}>
+            <div className={styles.faqItem}>
+              <h3>What makes your therapy approach unique?</h3>
+              <p>I use psychodynamic therapy principles combined with a warm, non-judgmental approach tailored to each client&apos;s individual needs and circumstances.</p>
+            </div>
+            <div className={styles.faqItem}>
+              <h3>How do I know if therapy is right for me?</h3>
+              <p>Therapy can help with anxiety, depression, relationship issues, life transitions, and personal growth. A free 15-minute consultation can help determine if we&apos;re a good fit.</p>
+            </div>
+            <div className={styles.faqItem}>
+              <h3>What&apos;s the difference between in-person and online therapy?</h3>
+              <p>Both offer the same therapeutic benefits. In-person sessions provide physical presence, while online therapy offers convenience and accessibility from your own space.</p>
             </div>
           </div>
         </section>

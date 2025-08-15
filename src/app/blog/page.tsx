@@ -130,8 +130,64 @@ export default function BlogPage() {
     (post) => post.category === "professional"
   );
 
+  const blogSchema = {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "name": "Next Generation Therapy Blog",
+    "description": "Professional therapy insights and mental health guidance from BACP registered psychotherapist",
+    "url": "https://www.nextgentherapy.co.uk/blog",
+    "author": {
+      "@type": "Person",
+      "name": "Andreea Horhocea",
+      "@id": "https://www.nextgentherapy.co.uk/about"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Next Generation Therapy",
+      "url": "https://www.nextgentherapy.co.uk"
+    },
+    "blogPost": allPosts.map(post => ({
+      "@type": "BlogPosting",
+      "headline": post.title,
+      "url": `https://www.nextgentherapy.co.uk/blog/${post.slug}`,
+      "datePublished": post.date,
+      "author": {
+        "@type": "Person",
+        "name": "Andreea Horhocea"
+      }
+    }))
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.nextgentherapy.co.uk"
+      },
+      {
+        "@type": "ListItem", 
+        "position": 2,
+        "name": "Therapy Blog",
+        "item": "https://www.nextgentherapy.co.uk/blog"
+      }
+    ]
+  };
+
   return (
-    <div className={styles.page}>
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(blogSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <div className={styles.page}>
       <section className={styles.greeting}>
         <h1>Blog</h1>
         <p className={styles.subtitle}>
@@ -156,5 +212,6 @@ export default function BlogPage() {
         />
       </div>
     </div>
+    </>
   );
 }

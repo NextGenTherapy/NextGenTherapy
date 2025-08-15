@@ -2,8 +2,24 @@
 User-agent: *
 Allow: /
 
+# Bing specific
+User-agent: bingbot
+Allow: /
+Crawl-delay: 1
+
+# Enhanced directives
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+# Block unnecessary crawling
+Disallow: /api/
+Disallow: /_next/
+Disallow: /.*\?
+
 # Host
 Host: https://www.nextgentherapy.co.uk
 
 # Sitemaps
 Sitemap: https://www.nextgentherapy.co.uk/sitemap.xml
+Sitemap: https://www.nextgentherapy.co.uk/sitemap-0.xml

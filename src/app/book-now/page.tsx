@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://www.nextgentherapy.co.uk"),
   title: "Book Therapist Colchester | Schedule Therapy Session | Andreea Horhocea",
   description:
-    "Book therapist in Colchester. Schedule therapy session with BACP registered psychotherapist Andreea Horhocea. £60 sessions in Colchester or online. Free 15-min consultation available.",
+    "Ready to book therapy? Schedule your session now! Colchester therapist available today. £60 sessions, free consultation. Don't wait - start your healing journey. Contact us immediately!",
   keywords: [
     "book therapist Colchester",
     "book therapy session Colchester", 
@@ -76,15 +76,72 @@ export const metadata: Metadata = {
 };
 
 export default function BookNow() {
+  const bookingSchema = {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "name": "Book Therapy Session",
+    "description": "Schedule a therapy session with BACP registered therapist in Colchester",
+    "url": "https://www.nextgentherapy.co.uk/book-now",
+    "provider": {
+      "@type": "Person",
+      "name": "Andreea Horhocea",
+      "jobTitle": "Psychodynamic Psychotherapist"
+    },
+    "offers": [
+      {
+        "@type": "Offer",
+        "name": "Free Consultation",
+        "description": "Free 15-minute consultation available",
+        "price": "0",
+        "priceCurrency": "GBP"
+      },
+      {
+        "@type": "Offer",
+        "name": "Therapy Session",
+        "description": "Individual therapy session",
+        "price": "60",
+        "priceCurrency": "GBP"
+      }
+    ]
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.nextgentherapy.co.uk"
+      },
+      {
+        "@type": "ListItem", 
+        "position": 2,
+        "name": "Book Therapy Session",
+        "item": "https://www.nextgentherapy.co.uk/book-now"
+      }
+    ]
+  };
+
   return (
-    <div className={styles.page}>
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(bookingSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <div className={styles.page}>
       <main className={styles.main}>
         <section className={styles.greeting}>
           <h1>Book a Therapist in Colchester - Let the Journey Begin</h1>
           <div className={styles.heroImageContainer}>
             <Image
               src="/images/book-now.jpg"
-              alt="A brain with thread being pulled to showing a therapist unravelling problems"
+              alt="Book therapy session in Colchester - professional counselling and mental health support available"
               width={600}
               height={400}
               className={styles.heroImage}
@@ -247,5 +304,6 @@ export default function BookNow() {
         </section>
       </main>
     </div>
+    </>
   );
 }
