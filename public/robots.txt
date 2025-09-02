@@ -1,25 +1,38 @@
-# *
+# Professional Therapy Services - Next Generation Therapy
+# Local Business: Colchester, Essex, UK
+# BACP Registered Psychodynamic Psychotherapist
+
+# All search engines
 User-agent: *
 Allow: /
 
-# Bing specific
+# Google specific
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+# Bing specific  
 User-agent: bingbot
 Allow: /
 Crawl-delay: 1
 
-# Enhanced directives
-User-agent: Googlebot
-Allow: /
-Crawl-delay: 0
+# High-priority pages for local SEO
+Allow: /services
+Allow: /pricing  
+Allow: /location
+Allow: /book-now
+Allow: /about
+Allow: /faq
+Allow: /blog/
 
 # Block unnecessary crawling
 Disallow: /api/
 Disallow: /_next/
 Disallow: /.*\?
 
-# Host
+# Host declaration
 Host: https://www.nextgentherapy.co.uk
 
-# Sitemaps
+# Sitemap locations
 Sitemap: https://www.nextgentherapy.co.uk/sitemap.xml
 Sitemap: https://www.nextgentherapy.co.uk/sitemap-0.xml

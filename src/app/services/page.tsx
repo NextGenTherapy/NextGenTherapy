@@ -123,13 +123,57 @@ export default function Services() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "MedicalOrganization",
+            "name": "Next Generation Therapy",
+            "description": "Professional psychodynamic therapy services in Colchester, Essex",
+            "url": "https://www.nextgentherapy.co.uk/services",
+            "medicalSpecialty": [
+              "Psychotherapy",
+              "Mental Health Counseling",
+              "Anxiety Treatment",
+              "Depression Treatment"
+            ],
+            "serviceOffered": [
+              {
+                "@type": "MedicalProcedure",
+                "name": "Individual Psychodynamic Therapy",
+                "description": "One-to-one therapy sessions using psychodynamic approach for adults",
+                "procedureType": "Psychotherapy"
+              },
+              {
+                "@type": "MedicalProcedure", 
+                "name": "Child Therapy",
+                "description": "Specialized therapy services for children and young people",
+                "procedureType": "Child Psychology"
+              },
+              {
+                "@type": "MedicalProcedure",
+                "name": "Online Therapy",
+                "description": "Remote therapy sessions via secure video call",
+                "procedureType": "Telepsychology"
+              }
+            ],
+            "provider": {
+              "@type": "Person",
+              "name": "Andreea Horhocea",
+              "jobTitle": "BACP Registered Psychodynamic Psychotherapist",
+              "hasCredential": "BACP Registration"
+            }
+          })
+        }}
+      />
       <div className={styles.page}>
       <main className={styles.main}>
         <div className={styles.greeting}>
+          <h1>Colchester Therapist - Professional Therapy Services</h1>
           <p className={styles.professionalIntro}>
             Experienced therapist serving Colchester and surrounding Essex areas. Offering both in-person therapy sessions in Colchester and secure online therapy across the UK.
           </p>
-          <h1>Colchester Therapist - Professional Therapy Services</h1>
         </div>
 
         <section className={styles.servicesOverview}>

@@ -7,7 +7,7 @@ export default function Footer() {
     <footer className={styles.footer}>
       <section className={styles.footerContent}>
         <section className={styles.footerColumn}>
-          <Link href="/book-now#location">
+          <Link href="/location">
             <h3>Location</h3>
           </Link>
           <ul>
@@ -91,6 +91,14 @@ export default function Footer() {
       </section>
       
       <div className={styles.footerBottom}>
+        <div className={styles.quickLinks}>
+          <Link href="/services">Therapy Services</Link>
+          <Link href="/pricing">Pricing</Link>
+          <Link href="/faq">FAQ</Link>
+          <Link href="/testimonials">Trust & Care</Link>
+          <Link href="/about">About Andreea</Link>
+          <Link href="/location">Location</Link>
+        </div>
         <div className={styles.legalLinks}>
           <Link href="/privacy-policy">Privacy Policy</Link>
           <Link href="/terms">Terms of Service</Link>

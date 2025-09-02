@@ -83,19 +83,9 @@ export default function Header() {
               About Therapy
             </Link>
           </li>
-          {/* <li className={styles.navItem}>
-            <Link href="/resources" onClick={closeMenu}>
-              Resources
-            </Link>
-          </li> */}
           <li className={styles.navItem}>
             <Link href="/blog" onClick={closeMenu}>
               Blog
-            </Link>
-          </li>
-          <li className={styles.navItem}>
-            <Link href="/faq" onClick={closeMenu}>
-              FAQ
             </Link>
           </li>
           <li className={styles.navItem}>

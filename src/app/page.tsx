@@ -90,7 +90,7 @@ export default function Home() {
             <h1>Hi! I am Andreea Horhocea - Counsellor in Colchester.</h1>
             <p className={styles.subtitle}>
               A qualified counsellor and psychodynamic psychotherapist offering 1-to-1 sessions in
-              Colchester and online.
+              Colchester and online. <Link href="/faq">View common therapy questions</Link> or <Link href="/services">explore our therapy services</Link>.
             </p>
           </div>
 
