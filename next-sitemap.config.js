@@ -14,6 +14,7 @@ module.exports = {
     if (path === '/') priority = 1.0;
     if (path === '/services') priority = 0.95;  // Boost services page (Page 6 → Page 1-3)
     if (path === '/book-now') priority = 0.9;
+    if (path === '/faq') priority = 0.85;  // High priority for FAQ page
     if (path === '/about') priority = 0.85;
     if (path === '/about-therapy') priority = 0.8;
     if (path === '/blog') priority = 0.75;

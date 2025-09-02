@@ -54,7 +54,8 @@ export const metadata: Metadata = {
     "profession": "Psychotherapist",
     "specialty": "Psychodynamic Therapy",
     "googlebot": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
-    "bingbot": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+    "bingbot": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+    "google-site-verification": "[GET_FROM_SEARCH_CONSOLE]"
   },
   openGraph: {
     title: "Next Generation Therapy | Professional Therapy Services Colchester",
