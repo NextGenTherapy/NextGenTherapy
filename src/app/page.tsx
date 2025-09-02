@@ -73,41 +73,8 @@ const siteUrl =
 export const metadata = getMetadata();
 
 export default function Home() {
-  const structuredData = {
-    "@context": "https://schema.org",
-    "@type": ["PsychologicalService", "LocalBusiness"],
-    "name": "Next Generation Therapy",
-    "description": "Professional psychodynamic therapy services in Colchester and online",
-    "provider": {
-      "@type": "Person",
-      "name": "Andreea Horhocea",
-      "jobTitle": "BACP Registered Psychodynamic Psychotherapist",
-      "memberOf": {
-        "@type": "Organization", 
-        "name": "British Association for Counselling and Psychotherapy",
-        "url": "https://www.bacp.co.uk"
-      }
-    },
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Colchester",
-      "addressRegion": "Essex",
-      "addressCountry": "GB"
-    },
-    "areaServed": ["Colchester", "Essex", "United Kingdom"],
-    "serviceType": ["Psychodynamic Therapy", "Play Therapy", "Adult Counselling"],
-    "priceRange": "££",
-    "url": "https://www.nextgentherapy.co.uk",
-    "telephone": "+44-XXX-XXX-XXXX",
-    "email": "info@nextgentherapy.co.uk"
-  };
-
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-      />
       <div className={styles.page}>
       <main>
         {/* Logo Section at Top */}
