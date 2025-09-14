@@ -84,6 +84,42 @@ export default function AboutTherapy() {
     }
   };
 
+  const courseSchema = {
+    "@context": "https://schema.org",
+    "@type": "Course",
+    "name": "Understanding Psychodynamic Therapy",
+    "description": "Comprehensive guide to therapy benefits, process, and what to expect from professional psychodynamic therapy in Colchester",
+    "provider": {
+      "@type": "Person",
+      "name": "Andreea Horhocea",
+      "jobTitle": "BACP Registered Psychodynamic Psychotherapist",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Next Generation Therapy"
+      }
+    },
+    "educationalLevel": "Beginner",
+    "about": [
+      "Psychodynamic Therapy",
+      "Mental Health Benefits",
+      "Therapy Process",
+      "Personal Growth"
+    ],
+    "teaches": [
+      "What therapy involves",
+      "Benefits of psychodynamic approach",
+      "How to prepare for therapy",
+      "Understanding therapeutic relationship"
+    ],
+    "courseMode": "Online",
+    "isAccessibleForFree": true,
+    "inLanguage": "en-GB",
+    "audience": {
+      "@type": "Audience",
+      "audienceType": "People considering therapy"
+    }
+  };
+
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -147,6 +183,10 @@ export default function AboutTherapy() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }}
       />
       <script
         type="application/ld+json"

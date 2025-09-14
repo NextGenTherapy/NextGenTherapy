@@ -55,7 +55,7 @@ export const metadata: Metadata = {
     "specialty": "Psychodynamic Therapy",
     "googlebot": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
     "bingbot": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
-    "google-site-verification": "[GET_FROM_SEARCH_CONSOLE]"
+    "google-site-verification": "P2NojIbNyYheM5XtqaNmtH5Cpp1ugkxcaddXxjZF4Dc"
   },
   openGraph: {
     title: "Next Generation Therapy | Professional Therapy Services Colchester",
@@ -110,6 +110,7 @@ export default async function RootLayout({
         <meta name="business-category" content="Mental Health Service" />
         
         <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+        <link rel="manifest" href="/manifest.json" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

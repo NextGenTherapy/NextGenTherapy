@@ -105,10 +105,65 @@ export default function Services() {
         "item": "https://www.nextgentherapy.co.uk"
       },
       {
-        "@type": "ListItem", 
+        "@type": "ListItem",
         "position": 2,
         "name": "Therapy Services",
         "item": "https://www.nextgentherapy.co.uk/services"
+      }
+    ]
+  };
+
+  const servicesFAQSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What should I expect in my first therapy session in Colchester?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Your first session with me as your Colchester therapist is an opportunity for us to get to know each other. I'll ask about what brought you to therapy, your goals, and any concerns you might have. We'll discuss confidentiality, how therapy works, and answer any questions you have. There's no pressure to share more than you're comfortable with."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long are therapy sessions?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Each therapy session lasts 50 minutes (the therapeutic hour). This gives us enough time to explore your thoughts and feelings while maintaining healthy boundaries. Sessions are scheduled weekly, though frequency can be adjusted based on your individual needs."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is everything I say confidential?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, everything discussed in our sessions is strictly confidential. I follow professional guidelines that protect your privacy. The only exceptions would be if there's a risk of serious harm to yourself or others, which I would discuss with you first whenever possible."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you offer online therapy sessions as a Colchester therapist?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, as a qualified therapist in Colchester, I offer both in-person sessions at my Colchester practice and secure online sessions via video call. Online therapy can be just as effective as in-person sessions and offers flexibility for those with busy schedules or who prefer the comfort of their own space."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What's the difference between play therapy and talking therapy?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Play therapy is designed specifically for children and uses toys, games, and creative activities as the primary way of communication. Children often express themselves more naturally through play than words. Talking therapy for adults and teenagers focuses on verbal communication to explore thoughts, feelings, and experiences."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I know if therapy is right for me?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "If you're struggling with your mental health, feeling stuck, or want to understand yourself better, therapy can help. You don't need to be in crisis to benefit from therapy. It's a space for personal growth, developing coping strategies, and improving your overall well-being."
+        }
       }
     ]
   };
@@ -122,6 +177,10 @@ export default function Services() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(servicesFAQSchema) }}
       />
       <script
         type="application/ld+json"

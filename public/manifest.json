@@ -1,0 +1,32 @@
+{
+  "name": "Next Generation Therapy Colchester",
+  "short_name": "NGT Colchester",
+  "description": "Professional psychodynamic therapy in Colchester & online with BACP registered therapist Andreea Horhocea",
+  "theme_color": "#164b39",
+  "background_color": "#ffffff",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "en-GB",
+  "categories": ["health", "lifestyle", "medical"],
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "/images/logo.jpg",
+      "sizes": "192x192",
+      "type": "image/jpeg",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/images/logo.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg",
+      "purpose": "any"
+    }
+  ]
+}

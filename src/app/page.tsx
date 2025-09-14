@@ -73,8 +73,33 @@ const siteUrl =
 export const metadata = getMetadata();
 
 export default function Home() {
+  const homePageSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Professional Therapy Services Colchester | Next Generation Therapy",
+    "description": "BACP registered psychodynamic therapist offering professional counselling in Colchester & online. Expert help for anxiety, depression, relationships & personal growth.",
+    "url": "https://www.nextgentherapy.co.uk",
+    "mainEntity": {
+      "@type": "LocalBusiness",
+      "name": "Next Generation Therapy"
+    },
+    "primaryImageOfPage": {
+      "@type": "ImageObject",
+      "url": "https://www.nextgentherapy.co.uk/images/andreea.jpg"
+    },
+    "lastReviewed": "2025-09-14",
+    "reviewedBy": {
+      "@type": "Person",
+      "name": "Andreea Horhocea"
+    }
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(homePageSchema) }}
+      />
       <div className={styles.page}>
       <main>
         {/* Logo Section at Top */}
