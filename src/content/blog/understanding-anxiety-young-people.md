@@ -6,8 +6,6 @@ category: "professional"
 keywords: "anxiety young people, teenage anxiety, adolescent anxiety, youth mental health, anxiety therapy, young person anxiety support, teen anxiety help"
 ---
 
-# Understanding Anxiety in Young People: More Than Just Nerves
-
 ## Breaking Down the Walls of Worry
 
 When I meet with young people in my Colchester practice, anxiety often shows up long before they do. It arrives in the form of school avoidance, sleepless nights, or that constant knot in their stomach that they can't quite explain. If you're a parent reading this, you might recognize these signs. If you're a young person yourself, you might be feeling seen for the first time.

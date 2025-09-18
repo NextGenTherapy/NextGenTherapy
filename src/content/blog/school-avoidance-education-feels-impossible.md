@@ -6,8 +6,6 @@ category: "professional"
 keywords: "school avoidance, school refusal, EBSA, emotionally based school avoidance, school anxiety, education anxiety, school phobia, attendance issues"
 ---
 
-# School Avoidance: When Education Feels Impossible
-
 ## Beyond Truancy: Understanding Emotionally Based School Avoidance
 
 In my therapy room in Colchester, I've sat with countless families facing a situation that feels impossible: their bright, capable young person simply cannot make it through the school doors. This isn't about skipping lessons to hang out with friends or a lack of motivation. This is about a young person whose entire nervous system goes into overdrive at the thought of school.

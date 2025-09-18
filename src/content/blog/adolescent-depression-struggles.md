@@ -6,8 +6,6 @@ category: "professional"
 keywords: "adolescent depression, teenage depression, youth depression, teen mental health, depression therapy, young person depression, adolescent mood disorders"
 ---
 
-# When Adolescent Struggles Become Something More
-
 "I just feel empty all the time." This is how a sixteen-year-old once described their experience during our first session in my Colchester practice. Her parents had initially dismissed her struggles as "typical teenager behaviour," but something deeper was happening. What they were witnessing wasn't just adolescent moodiness—it was depression.
 
 Depression in young people is often misunderstood, partly because we expect teenagers to be moody, emotional, and unpredictable. While mood fluctuations are indeed a normal part of adolescent development, persistent low mood that interferes with daily functioning requires attention and support.
