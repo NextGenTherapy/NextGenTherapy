@@ -31,8 +31,8 @@ Disallow: /_next/
 Disallow: /.*\?
 
 # Host declaration
-Host: https://www.nextgentherapy.co.uk
+Host: https://nextgentherapy.co.uk
 
 # Sitemap locations
-Sitemap: https://www.nextgentherapy.co.uk/sitemap.xml
-Sitemap: https://www.nextgentherapy.co.uk/sitemap-0.xml
+Sitemap: https://nextgentherapy.co.uk/sitemap.xml
+Sitemap: https://nextgentherapy.co.uk/sitemap-0.xml

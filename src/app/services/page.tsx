@@ -5,35 +5,35 @@ import buttonLinksStyles from "../../components/ui/buttonLinks.module.scss";
 import Button from "../../components/ui/button";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.nextgentherapy.co.uk"),
-  title: "Colchester Therapist | Professional Therapy Services | Andreea Horhocea",
+  metadataBase: new URL("https://nextgentherapy.co.uk"),
+  title: "Counsellor Colchester | Professional Counselling Services | BACP Registered",
   description:
-    "Find Colchester therapist for anxiety, depression & trauma! Professional therapy services in-person & online. £60 sessions, free consultation. Book your therapist today - call now!",
+    "Professional counsellor in Colchester offering expert counselling services. BACP registered support for anxiety, depression, relationships & personal growth. Book consultation today.",
   keywords: [
-    "therapist Colchester",
-    "Colchester therapist",
-    "therapy Colchester",
-    "psychotherapist Colchester",
     "counsellor Colchester",
-    "therapy services Colchester",
-    "play therapy children Colchester",
-    "adult therapy Colchester",
-    "psychodynamic therapy services",
-    "anxiety therapy Colchester",
-    "depression counselling Essex",
-    "relationship therapy Colchester",
-    "body image therapy",
-    "self-esteem counselling",
-    "online therapy UK",
-    "therapy sessions £60",
-    "BACP therapy services",
-    "professional counselling Colchester",
-    "therapist near me",
-    "Colchester psychotherapy"
+    "counselling services Colchester",
+    "professional counsellor Colchester",
+    "BACP counsellor Essex",
+    "registered counsellor Colchester",
+    "qualified counsellor Essex",
+    "mental health counsellor Colchester",
+    "anxiety counsellor Colchester",
+    "depression counsellor Essex",
+    "relationship counsellor Colchester",
+    "child counsellor Colchester",
+    "psychodynamic counsellor",
+    "online counsellor UK",
+    "therapy services Essex",
+    "mental health support Essex",
+    "counselling sessions £60",
+    "BACP registered counsellor",
+    "counsellor near me Essex",
+    "Colchester counselling services",
+    "certified counsellor Essex"
   ],
   authors: [{ name: "Andreea Horhocea" }],
   alternates: {
-    canonical: "https://www.nextgentherapy.co.uk/services",
+    canonical: "https://nextgentherapy.co.uk/services",
   },
   robots: {
     index: true,
@@ -50,15 +50,15 @@ export const metadata: Metadata = {
     title: "Therapy Services Colchester | Play Therapy & Adult Counselling",
     description:
       "Professional therapy services in Colchester & online. Play therapy for children, psychodynamic therapy for adults. Anxiety, depression, relationships, body image support.",
-    url: "https://www.nextgentherapy.co.uk/services",
+    url: "https://nextgentherapy.co.uk/services",
     siteName: "Next Generation Therapy",
     locale: "en_GB",
     type: "website",
     images: [
       {
-        url: "https://www.nextgentherapy.co.uk/images/default-social-share.jpg",
-        width: 300,
-        height: 300,
+        url: "https://nextgentherapy.co.uk/images/default-social-share.jpg",
+        width: 1200,
+        height: 630,
         alt: "Andreea Horhocea - Psychodynamic Psychotherapist",
       },
     ],
@@ -68,7 +68,7 @@ export const metadata: Metadata = {
     title: "Services - Next Generation Therapy",
     description:
       "Explore the therapy services offered by Andreea Horhocea, including play therapy for children and talking therapy for adults.",
-    images: ["https://www.nextgentherapy.co.uk/images/default-social-share.jpg"],
+    images: ["https://nextgentherapy.co.uk/images/default-social-share.jpg"],
   },
 };
 
@@ -102,13 +102,13 @@ export default function Services() {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://www.nextgentherapy.co.uk"
+        "item": "https://nextgentherapy.co.uk"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Therapy Services",
-        "item": "https://www.nextgentherapy.co.uk/services"
+        "item": "https://nextgentherapy.co.uk/services"
       }
     ]
   };
@@ -190,7 +190,7 @@ export default function Services() {
             "@type": "MedicalOrganization",
             "name": "Next Generation Therapy",
             "description": "Professional psychodynamic therapy services in Colchester, Essex",
-            "url": "https://www.nextgentherapy.co.uk/services",
+            "url": "https://nextgentherapy.co.uk/services",
             "medicalSpecialty": [
               "Psychotherapy",
               "Mental Health Counseling",

@@ -2,9 +2,9 @@ export default function LocalBusinessSchema() {
   const localBusinessSchema = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    "@id": "https://www.nextgentherapy.co.uk/#localbusiness",
+    "@id": "https://nextgentherapy.co.uk/#localbusiness",
     "name": "Next Generation Therapy",
-    "image": "https://www.nextgentherapy.co.uk/images/office.jpg",
+    "image": "https://nextgentherapy.co.uk/images/office.jpg",
     "description": "Professional psychodynamic therapy services in Colchester, Essex. BACP registered therapist offering individual therapy for anxiety, depression, relationships and personal growth.",
     "address": {
       "@type": "PostalAddress",
@@ -19,7 +19,7 @@ export default function LocalBusinessSchema() {
       "latitude": 51.8959,
       "longitude": 0.9035
     },
-    "url": "https://www.nextgentherapy.co.uk",
+    "url": "https://nextgentherapy.co.uk",
     "telephone": "+447448036017",
     "email": "andreeatherapytoday@gmail.com",
     "openingHoursSpecification": [

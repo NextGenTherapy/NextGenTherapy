@@ -6,27 +6,29 @@ import styles from "./blog.module.scss";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.nextgentherapy.co.uk"),
-  title: "Therapy Blog | Mental Health Insights from Colchester Therapist",
+  metadataBase: new URL("https://nextgentherapy.co.uk"),
+  title: "Mental Health Blog | Expert Guidance & Support | Professional Insights",
   description:
-    "Expert therapy insights & mental health advice from BACP registered psychotherapist Andreea Horhocea. Professional guidance on anxiety, depression, relationships & therapy approaches.",
+    "Expert mental health guidance & support from BACP registered professional. Mental health advice, coping strategies, and insights for better wellbeing. Professional mental health blog.",
   keywords: [
-    "therapy blog Colchester",
-    "mental health blog UK",
-    "psychotherapy insights",
-    "therapy advice blog",
-    "anxiety therapy tips",
-    "depression help blog",
-    "relationship therapy insights",
-    "psychodynamic therapy blog",
-    "BACP therapist blog",
-    "professional therapy advice",
-    "mental health guidance",
-    "therapy approaches explained"
+    "mental health guidance UK",
+    "mental health blog Colchester",
+    "mental health support blog",
+    "mental health advice UK",
+    "mental health tips Essex",
+    "professional mental health guidance",
+    "mental health insights blog",
+    "mental health wellbeing blog",
+    "mental health expert advice",
+    "mental health coping strategies",
+    "mental health awareness blog",
+    "mental health education UK",
+    "BACP mental health guidance",
+    "mental health professional blog"
   ],
   authors: [{ name: "Andreea Horhocea" }],
   alternates: {
-    canonical: "https://www.nextgentherapy.co.uk/blog",
+    canonical: "https://nextgentherapy.co.uk/blog",
   },
   robots: {
     index: true,
@@ -43,7 +45,7 @@ export const metadata: Metadata = {
     title: "Therapy Blog | Mental Health Insights from Colchester Therapist",
     description:
       "Expert therapy insights & mental health advice from BACP registered psychotherapist Andreea Horhocea. Professional guidance on anxiety, depression & relationships.",
-    url: "https://www.nextgentherapy.co.uk/blog",
+    url: "https://nextgentherapy.co.uk/blog",
     siteName: "Next Generation Therapy",
     locale: "en_GB",
     type: "website",
@@ -53,7 +55,7 @@ export const metadata: Metadata = {
     title: "Therapy Blog | Mental Health Insights from Colchester Therapist",
     description:
       "Expert therapy insights & mental health advice from BACP registered psychotherapist Andreea Horhocea.",
-    images: ["https://www.nextgentherapy.co.uk/images/default-social-share.jpg"],
+    images: ["https://nextgentherapy.co.uk/images/default-social-share.jpg"],
   },
 };
 
@@ -135,21 +137,21 @@ export default function BlogPage() {
     "@type": "Blog",
     "name": "Next Generation Therapy Blog",
     "description": "Professional therapy insights and mental health guidance from BACP registered psychotherapist",
-    "url": "https://www.nextgentherapy.co.uk/blog",
+    "url": "https://nextgentherapy.co.uk/blog",
     "author": {
       "@type": "Person",
       "name": "Andreea Horhocea",
-      "@id": "https://www.nextgentherapy.co.uk/about"
+      "@id": "https://nextgentherapy.co.uk/about"
     },
     "publisher": {
       "@type": "Organization",
       "name": "Next Generation Therapy",
-      "url": "https://www.nextgentherapy.co.uk"
+      "url": "https://nextgentherapy.co.uk"
     },
     "blogPost": allPosts.map(post => ({
       "@type": "BlogPosting",
       "headline": post.title,
-      "url": `https://www.nextgentherapy.co.uk/blog/${post.slug}`,
+      "url": `https://nextgentherapy.co.uk/blog/${post.slug}`,
       "datePublished": post.date,
       "author": {
         "@type": "Person",
@@ -166,13 +168,13 @@ export default function BlogPage() {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://www.nextgentherapy.co.uk"
+        "item": "https://nextgentherapy.co.uk"
       },
       {
         "@type": "ListItem", 
         "position": 2,
         "name": "Therapy Blog",
-        "item": "https://www.nextgentherapy.co.uk/blog"
+        "item": "https://nextgentherapy.co.uk/blog"
       }
     ]
   };

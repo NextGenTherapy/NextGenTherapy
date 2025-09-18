@@ -5,32 +5,33 @@ import buttonLinksStyles from "../../components/ui/buttonLinks.module.scss";
 import Button from "../../components/ui/button";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.nextgentherapy.co.uk"),
-  title: "Therapy Colchester | What is Therapy? Benefits & Process | Professional Support",
+  metadataBase: new URL("https://nextgentherapy.co.uk"),
+  title: "Psychodynamic Therapy Explained | What to Expect | Benefits & Process",
   description:
-    "Professional therapy in Colchester & online. Learn about psychodynamic therapy benefits, who it helps, and what to expect. Expert guidance for anxiety, depression, relationships & personal growth.",
+    "Learn about psychodynamic therapy in Colchester. Understand what psychodynamic therapy is, how it works, benefits & what to expect. Expert guidance on this effective therapy approach.",
   keywords: [
-    "therapy Colchester",
-    "Colchester therapy",
-    "therapy near me", 
-    "what is therapy",
-    "therapy benefits",
     "psychodynamic therapy explained",
-    "who needs therapy",
-    "therapy process Colchester",
-    "professional therapy Colchester",
-    "mental health benefits",
-    "anxiety therapy help",
-    "depression therapy benefits",
-    "relationship therapy process",
-    "child therapy benefits",
-    "therapy expectations",
-    "therapy myths debunked",
-    "Colchester therapy information"
+    "what is psychodynamic therapy",
+    "psychodynamic therapy benefits",
+    "psychodynamic therapy process",
+    "psychodynamic therapy Colchester",
+    "how psychodynamic therapy works",
+    "psychodynamic therapy approach",
+    "psychodynamic therapy techniques",
+    "psychodynamic therapy effectiveness",
+    "psychodynamic therapy vs CBT",
+    "understanding psychodynamic therapy",
+    "psychodynamic therapy theory",
+    "psychodynamic therapy examples",
+    "psychodynamic therapy sessions",
+    "psychodynamic therapy goals",
+    "psychodynamic therapy methods",
+    "learn psychodynamic therapy",
+    "psychodynamic therapy education"
   ],
   authors: [{ name: "Andreea Horhocea" }],
   alternates: {
-    canonical: "https://www.nextgentherapy.co.uk/about-therapy",
+    canonical: "https://nextgentherapy.co.uk/about-therapy",
   },
   robots: {
     index: true,
@@ -47,13 +48,13 @@ export const metadata: Metadata = {
     title: "What is Therapy? Benefits & Process | Colchester Therapist",
     description:
       "Learn about psychodynamic therapy benefits, who it helps, and what to expect. Professional guidance for anxiety, depression, relationships & personal growth.",
-    url: "https://www.nextgentherapy.co.uk/about-therapy",
+    url: "https://nextgentherapy.co.uk/about-therapy",
     siteName: "Next Generation Therapy",
     locale: "en_GB",
     type: "website",
     images: [
       {
-        url: "https://www.nextgentherapy.co.uk/images/default-social-share.jpg",
+        url: "https://nextgentherapy.co.uk/images/default-social-share.jpg",
         width: 300,
         height: 300,
         alt: "Andreea Horhocea - Psychodynamic Psychotherapist",
@@ -65,7 +66,7 @@ export const metadata: Metadata = {
     title: "About Therapy - Next Generation Therapy",
     description:
       "Learn about therapy, who it's for, and how it can help. Discover what to expect and see who Andreea Horhocea works with.",
-    images: ["https://www.nextgentherapy.co.uk/images/default-social-share.jpg"],
+    images: ["https://nextgentherapy.co.uk/images/default-social-share.jpg"],
   },
 };
 
@@ -167,13 +168,13 @@ export default function AboutTherapy() {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://www.nextgentherapy.co.uk"
+        "item": "https://nextgentherapy.co.uk"
       },
       {
         "@type": "ListItem", 
         "position": 2,
         "name": "About Therapy",
-        "item": "https://www.nextgentherapy.co.uk/about-therapy"
+        "item": "https://nextgentherapy.co.uk/about-therapy"
       }
     ]
   };

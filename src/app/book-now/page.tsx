@@ -11,32 +11,33 @@ const ContactForm = dynamic(() => import("../../components/forms/contact-form"),
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.nextgentherapy.co.uk"),
-  title: "Book Therapist Colchester | Schedule Therapy Session | Andreea Horhocea",
+  metadataBase: new URL("https://nextgentherapy.co.uk"),
+  title: "Book Counsellor Colchester | Schedule Your Session Today | Contact",
   description:
-    "Ready to book therapy? Schedule your session now! Colchester therapist available today. £60 sessions, free consultation. Don't wait - start your healing journey. Contact us immediately!",
+    "Ready to book your counsellor? Schedule your session with BACP registered counsellor in Colchester. £60 sessions, free consultation available. Contact today to get started!",
   keywords: [
-    "book therapist Colchester",
-    "book therapy session Colchester", 
-    "schedule therapist Colchester",
-    "therapy appointment Colchester",
-    "contact therapist Colchester",
-    "therapist booking Colchester",
     "book counsellor Colchester",
-    "therapy appointment booking",
-    "Andreea Horhocea contact",
-    "psychotherapy booking Colchester",
-    "online therapy booking UK",
-    "therapy consultation free",
-    "anxiety therapy appointment",
-    "depression counselling booking",
-    "relationship therapy contact",
-    "BACP therapist booking",
-    "therapy prices £60"
+    "book counselling session Essex",
+    "schedule counsellor appointment",
+    "counselling appointment Colchester",
+    "contact counsellor Colchester",
+    "counsellor booking Essex",
+    "book psychotherapist Colchester",
+    "mental health appointment",
+    "BACP counsellor booking",
+    "counselling consultation free",
+    "anxiety counsellor appointment",
+    "depression counsellor booking",
+    "relationship counsellor contact",
+    "psychotherapy booking Essex",
+    "online counsellor booking UK",
+    "counselling session £60",
+    "Andreea Horhocea counsellor",
+    "mental health counsellor booking"
   ],
   authors: [{ name: "Andreea Horhocea" }],
   alternates: {
-    canonical: "https://www.nextgentherapy.co.uk/book-now",
+    canonical: "https://nextgentherapy.co.uk/book-now",
   },
   robots: {
     index: true,
@@ -53,13 +54,13 @@ export const metadata: Metadata = {
     title: "Book Therapy Session Colchester | Contact Andreea Horhocea",
     description:
       "Book therapy with BACP registered psychotherapist Andreea Horhocea. £60 sessions in Colchester or online. Free 15-min consultation.",
-    url: "https://www.nextgentherapy.co.uk/book-now",
+    url: "https://nextgentherapy.co.uk/book-now",
     siteName: "Next Generation Therapy",
     locale: "en_GB",
     type: "website",
     images: [
       {
-        url: "https://www.nextgentherapy.co.uk/images/default-social-share.jpg",
+        url: "https://nextgentherapy.co.uk/images/default-social-share.jpg",
         width: 500,
         height: 500,
         alt: "Therapy session illustration",
@@ -71,7 +72,7 @@ export const metadata: Metadata = {
     title: "Book Now - Next Generation Therapy",
     description:
       "Book a therapy session with Andreea Horhocea, a psychodynamic psychotherapist offering services in Colchester and online.",
-    images: ["https://www.nextgentherapy.co.uk/images/default-social-share.jpg"],
+    images: ["https://nextgentherapy.co.uk/images/default-social-share.jpg"],
   },
 };
 
@@ -81,7 +82,7 @@ export default function BookNow() {
     "@type": "ContactPage",
     "name": "Book Therapy Session",
     "description": "Schedule a therapy session with BACP registered therapist in Colchester",
-    "url": "https://www.nextgentherapy.co.uk/book-now",
+    "url": "https://nextgentherapy.co.uk/book-now",
     "provider": {
       "@type": "Person",
       "name": "Andreea Horhocea",
@@ -113,13 +114,13 @@ export default function BookNow() {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://www.nextgentherapy.co.uk"
+        "item": "https://nextgentherapy.co.uk"
       },
       {
         "@type": "ListItem", 
         "position": 2,
         "name": "Book Therapy Session",
-        "item": "https://www.nextgentherapy.co.uk/book-now"
+        "item": "https://nextgentherapy.co.uk/book-now"
       }
     ]
   };

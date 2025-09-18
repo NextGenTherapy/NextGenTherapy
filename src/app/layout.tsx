@@ -8,29 +8,41 @@ import ErrorBoundary from "../components/layout/ErrorBoundary";
 import CookieConsent from "../components/layout/CookieConsent";
 import ConditionalAnalytics from "../components/layout/ConditionalAnalytics";
 import ConditionalVercelAnalytics from "../components/layout/ConditionalVercelAnalytics";
+import WebVitalsReporter from "../components/layout/WebVitalsReporter";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.nextgentherapy.co.uk"),
+  metadataBase: new URL("https://nextgentherapy.co.uk"),
   title: {
-    default: "Next Generation Therapy | Professional Therapy Services Colchester",
+    default: "Next Generation Therapy | Counsellor & Psychotherapist Colchester",
     template: "%s | Next Generation Therapy"
   },
   description:
-    "Professional psychodynamic therapy in Colchester & online with BACP registered therapist Andreea Horhocea. Expert help for anxiety, depression, relationships & personal growth. Book today.",
+    "Professional counsellor & psychotherapist in Colchester & online. BACP registered mental health counsellor Andreea Horhocea. Expert help for anxiety, depression, relationships. Book today.",
   keywords: [
+    "counsellor Colchester",
+    "psychotherapist Colchester",
+    "mental health counsellor Colchester",
+    "BACP therapist Colchester",
+    "BACP counsellor Essex",
+    "psychodynamic counsellor",
+    "registered counsellor Colchester",
+    "qualified therapist Colchester",
+    "certified counsellor Essex",
+    "registered therapist Colchester",
+    "qualified counsellor Essex",
     "therapy Colchester",
+    "counsellor Essex",
+    "online counsellor UK",
+    "depression counsellor Colchester",
+    "anxiety counsellor Colchester",
+    "relationship counsellor Essex",
+    "child counsellor Colchester",
+    "play therapist Essex",
+    "mental health support Essex",
     "psychotherapy Essex",
-    "mental health support",
+    "professional counselling Colchester",
     "BACP registered therapist",
-    "psychodynamic therapy",
-    "anxiety therapy",
-    "depression counselling",
-    "relationship therapy",
-    "online therapy UK",
-    "Andreea Horhocea",
-    "professional counselling",
-    "child therapy",
-    "play therapy"
+    "Andreea Horhocea counsellor"
   ],
   authors: [{ name: "Andreea Horhocea" }],
   creator: "Andreea Horhocea",
@@ -61,13 +73,13 @@ export const metadata: Metadata = {
     title: "Next Generation Therapy | Professional Therapy Services Colchester",
     description:
       "Professional psychodynamic therapy in Colchester & online with BACP registered therapist Andreea Horhocea. Expert help for anxiety, depression & relationships.",
-    url: "https://www.nextgentherapy.co.uk",
+    url: "https://nextgentherapy.co.uk",
     siteName: "Next Generation Therapy",
     locale: "en_GB",
     type: "website",
     images: [
       {
-        url: "https://www.nextgentherapy.co.uk/images/default-social-share.jpg",
+        url: "https://nextgentherapy.co.uk/images/default-social-share.jpg",
         width: 1200,
         height: 630,
         alt: "Next Generation Therapy - Professional Therapy Services Colchester",
@@ -79,7 +91,7 @@ export const metadata: Metadata = {
     title: "Next Generation Therapy | Professional Therapy Services Colchester",
     description:
       "Professional psychodynamic therapy in Colchester & online with BACP registered therapist Andreea Horhocea.",
-    images: ["https://www.nextgentherapy.co.uk/images/default-social-share.jpg"],
+    images: ["https://nextgentherapy.co.uk/images/default-social-share.jpg"],
   },
 };
 
@@ -105,7 +117,7 @@ export default async function RootLayout({
         <meta name="msapplication-navbutton-color" content="#164b39" />
         
         {/* Google Business Profile Integration */}
-        <meta name="google-business-verification" content="[YOUR_GOOGLE_BUSINESS_VERIFICATION_CODE]" />
+        <meta name="google-business-verification" content="P2NojIbNyYheM5XtqaNmtH5Cpp1ugkxcaddXxjZF4Dc" />
         <meta name="business-type" content="Health & Medical" />
         <meta name="business-category" content="Mental Health Service" />
         
@@ -119,12 +131,12 @@ export default async function RootLayout({
               "@graph": [
                 {
                   "@type": ["Organization", "LocalBusiness", "MedicalBusiness"],
-                  "@id": "https://www.nextgentherapy.co.uk/#organization",
+                  "@id": "https://nextgentherapy.co.uk/#organization",
                   name: "Next Generation Therapy",
-                  url: "https://www.nextgentherapy.co.uk",
+                  url: "https://nextgentherapy.co.uk",
                   logo: {
                     "@type": "ImageObject",
-                    url: "https://www.nextgentherapy.co.uk/images/logo.jpg",
+                    url: "https://nextgentherapy.co.uk/images/logo.jpg",
                     width: 400,
                     height: 400
                   },
@@ -140,7 +152,7 @@ export default async function RootLayout({
                   geo: {
                     "@type": "GeoCoordinates",
                     latitude: 51.8959,
-                    longitude: 0.8919
+                    longitude: 0.9035
                   },
                   contactPoint: {
                     "@type": "ContactPoint",
@@ -169,27 +181,6 @@ export default async function RootLayout({
                     }
                   ],
                   serviceType: "Psychodynamic Psychotherapy",
-                  aggregateRating: {
-                    "@type": "AggregateRating",
-                    ratingValue: "5.0",
-                    reviewCount: "25",
-                    bestRating: "5",
-                    worstRating: "1"
-                  },
-                  review: [
-                    {
-                      "@type": "Review",
-                      author: {
-                        "@type": "Person",
-                        name: "Client Review"
-                      },
-                      reviewRating: {
-                        "@type": "Rating",
-                        ratingValue: "5"
-                      },
-                      reviewBody: "Excellent therapy services in Colchester. Professional, caring approach."
-                    }
-                  ],
                   hasOfferCatalog: {
                     "@type": "OfferCatalog",
                     name: "Therapy Services Menu",
@@ -222,14 +213,14 @@ export default async function RootLayout({
                 },
                 {
                   "@type": "Person",
-                  "@id": "https://www.nextgentherapy.co.uk/#person",
+                  "@id": "https://nextgentherapy.co.uk/#person",
                   name: "Andreea Horhocea",
                   jobTitle: "Psychodynamic Psychotherapist",
                   worksFor: {
-                    "@id": "https://www.nextgentherapy.co.uk/#organization"
+                    "@id": "https://nextgentherapy.co.uk/#organization"
                   },
                   description: "BACP registered psychodynamic psychotherapist with Master's degree and 6+ years experience working with children, adults and families.",
-                  url: "https://www.nextgentherapy.co.uk/about",
+                  url: "https://nextgentherapy.co.uk/about",
                   knowsAbout: [
                     "Psychodynamic Therapy",
                     "Anxiety Treatment",
@@ -241,10 +232,10 @@ export default async function RootLayout({
                 },
                 {
                   "@type": "ProfessionalService",
-                  "@id": "https://www.nextgentherapy.co.uk/#service",
+                  "@id": "https://nextgentherapy.co.uk/#service",
                   name: "Psychodynamic Therapy Services",
                   provider: {
-                    "@id": "https://www.nextgentherapy.co.uk/#organization"
+                    "@id": "https://nextgentherapy.co.uk/#organization"
                   },
                   serviceType: "Mental Health Therapy",
                   areaServed: [
@@ -297,6 +288,7 @@ export default async function RootLayout({
           </ErrorBoundary>
           <ConditionalVercelAnalytics />
           <ConditionalAnalytics />
+          <WebVitalsReporter />
           <Footer />
           <ScrollToTop />
           <CookieConsent />

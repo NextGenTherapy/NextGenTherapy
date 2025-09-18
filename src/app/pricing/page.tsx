@@ -2,31 +2,40 @@ import { Metadata } from "next";
 import styles from "./pricing.module.scss";
 import Link from "next/link";
 
-const siteUrl = "https://www.nextgentherapy.co.uk";
+const siteUrl = "https://nextgentherapy.co.uk";
 
 export const metadata: Metadata = {
-  title: "Therapy Pricing Colchester | £60 per Session | Free Consultation",
+  title: "Psychotherapy Costs Colchester | £60 Sessions | Professional Fees",
   description:
-    "Transparent therapy pricing: £60 per 50-minute session with BACP registered therapist in Colchester. Free consultation available.",
+    "Transparent psychotherapy costs: £60 per 50-minute session with BACP registered psychotherapist in Colchester. Professional psychotherapy pricing Essex. Free consultation available.",
   keywords: [
-    "therapy prices Colchester",
-    "counselling costs Essex",
-    "£60 therapy session",
-    "affordable therapy Colchester",
-    "therapy session prices",
-    "psychotherapy costs"
+    "psychotherapy costs Colchester",
+    "psychotherapist fees Essex",
+    "psychotherapy session costs",
+    "psychotherapy pricing Colchester",
+    "psychotherapist prices Essex",
+    "BACP psychotherapist fees",
+    "£60 psychotherapy session",
+    "professional psychotherapy costs",
+    "psychotherapy fees Essex",
+    "psychotherapist session fees",
+    "psychotherapy pricing UK",
+    "affordable psychotherapy Colchester",
+    "psychotherapy consultation fees",
+    "psychodynamic therapy costs",
+    "private psychotherapy fees"
   ],
   openGraph: {
-    title: "Therapy Pricing Colchester | £60 per Session",
+    title: "Psychotherapy Costs Colchester | £60 Sessions",
     description:
-      "Transparent therapy pricing: £60 per 50-minute session with BACP registered therapist in Colchester. Free consultation available.",
+      "Transparent psychotherapy costs: £60 per 50-minute session with BACP registered psychotherapist in Colchester. Free consultation available.",
     url: `${siteUrl}/pricing`,
     siteName: "Next Generation Therapy",
     locale: "en_GB",
     type: "website",
     images: [
       {
-        url: "https://www.nextgentherapy.co.uk/images/default-social-share.jpg",
+        url: "https://nextgentherapy.co.uk/images/default-social-share.jpg",
         width: 1200,
         height: 630,
         alt: "Therapy Pricing Colchester | Next Generation Therapy",
@@ -38,7 +47,7 @@ export const metadata: Metadata = {
     title: "Therapy Pricing Colchester | £60 per Session",
     description:
       "Transparent therapy pricing: £60 per 50-minute session with BACP registered therapist.",
-    images: ["https://www.nextgentherapy.co.uk/images/default-social-share.jpg"],
+    images: ["https://nextgentherapy.co.uk/images/default-social-share.jpg"],
   },
   alternates: {
     canonical: `${siteUrl}/pricing`,

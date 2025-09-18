@@ -3,7 +3,7 @@ const path = require('path');
 const matter = require('gray-matter');
 
 module.exports = {
-  siteUrl: "https://www.nextgentherapy.co.uk",
+  siteUrl: "https://nextgentherapy.co.uk",
   generateRobotsTxt: false, // We have our own custom robots.txt
   changefreq: 'weekly',
   priority: 0.7,

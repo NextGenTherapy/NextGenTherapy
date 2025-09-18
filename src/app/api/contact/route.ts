@@ -48,16 +48,22 @@ export async function POST(req: NextRequest) {
 
     const { firstName, lastName, email, message } = await req.json();
 
-    // Enhanced validation
-    if (!firstName || !lastName || !email || !message) {
+    // Sanitize inputs first
+    const sanitizedFirstName = sanitizeInput(firstName || '');
+    const sanitizedLastName = sanitizeInput(lastName || '');
+    const sanitizedEmail = sanitizeInput(email || '');
+    const sanitizedMessage = sanitizeInput(message || '');
+
+    // Enhanced validation on sanitized inputs
+    if (!sanitizedFirstName || !sanitizedLastName || !sanitizedEmail || !sanitizedMessage) {
       return NextResponse.json(
         { success: false, error: "All fields are required." },
         { status: 400 },
       );
     }
 
-    // Validate email format
-    if (!emailRegex.test(email)) {
+    // Validate email format on sanitized email
+    if (!emailRegex.test(sanitizedEmail)) {
       return NextResponse.json(
         { success: false, error: "Please enter a valid email address." },
         { status: 400 }
@@ -72,12 +78,6 @@ export async function POST(req: NextRequest) {
         { status: 500 }
       );
     }
-
-    // Sanitize inputs
-    const sanitizedFirstName = sanitizeInput(firstName);
-    const sanitizedLastName = sanitizeInput(lastName);
-    const sanitizedEmail = sanitizeInput(email);
-    const sanitizedMessage = sanitizeInput(message);
 
     await resend.emails.send({
       from: "Contact Form <noreply@nextgentherapy.co.uk>",

@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import Script from 'next/script';
 
 declare global {
@@ -10,18 +10,36 @@ declare global {
 }
 
 export default function ConditionalAnalytics() {
+  const [consentAccepted, setConsentAccepted] = useState(false);
+
   useEffect(() => {
     const consent = localStorage.getItem('cookie-consent');
-    
+    setConsentAccepted(consent === 'accepted');
+
     if (consent === 'accepted' && typeof window !== 'undefined') {
       // Initialize Google Analytics dataLayer
       window.dataLayer = window.dataLayer || [];
     }
+
+    // Listen for consent changes
+    const handleStorageChange = () => {
+      const updatedConsent = localStorage.getItem('cookie-consent');
+      setConsentAccepted(updatedConsent === 'accepted');
+
+      if (updatedConsent === 'accepted' && typeof window !== 'undefined') {
+        window.dataLayer = window.dataLayer || [];
+      }
+    };
+
+    // Custom event for same-tab localStorage changes
+    window.addEventListener('cookie-consent-changed', handleStorageChange);
+
+    return () => {
+      window.removeEventListener('cookie-consent-changed', handleStorageChange);
+    };
   }, []);
 
-  const consent = typeof window !== 'undefined' ? localStorage.getItem('cookie-consent') : null;
-
-  if (consent !== 'accepted') {
+  if (!consentAccepted) {
     return null;
   }
 

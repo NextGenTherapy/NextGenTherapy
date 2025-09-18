@@ -3,31 +3,36 @@ import styles from "./location.module.scss";
 import GoogleMapEmbed from "../../components/ui/GoogleMapEmbed";
 import Link from "next/link";
 
-const siteUrl = "https://www.nextgentherapy.co.uk";
+const siteUrl = "https://nextgentherapy.co.uk";
 
 export const metadata: Metadata = {
-  title: "Therapy Location Colchester | Directions to Next Generation Therapy",
+  title: "Therapist Colchester Location | Directions & Contact | Find Your Therapist",
   description:
-    "Find our therapy location in Colchester Business Centre. Easy directions, parking info, and accessibility details for your therapy appointment.",
+    "Find your therapist in Colchester Business Centre. Easy directions, parking info, and contact details for your appointment with BACP registered therapist.",
   keywords: [
-    "therapy location Colchester",
-    "Colchester Business Centre therapy",
-    "therapy directions Colchester",
-    "George Williams Way therapy",
-    "therapy parking Colchester",
-    "accessible therapy Colchester"
+    "therapist Colchester location",
+    "find therapist Colchester",
+    "therapist directions Colchester",
+    "Colchester therapist address",
+    "therapist near me Colchester",
+    "George Williams Way therapist",
+    "therapist parking Colchester",
+    "accessible therapist Colchester",
+    "therapist contact Colchester",
+    "local therapist Colchester",
+    "Colchester Business Centre therapist"
   ],
   openGraph: {
-    title: "Therapy Location Colchester | Next Generation Therapy",
+    title: "Therapist Colchester Location | Directions & Contact",
     description:
-      "Find our therapy location in Colchester Business Centre with easy parking and accessibility.",
+      "Find your therapist in Colchester Business Centre with easy parking and accessibility.",
     url: `${siteUrl}/location`,
     siteName: "Next Generation Therapy",
     locale: "en_GB",
     type: "website",
     images: [
       {
-        url: "https://www.nextgentherapy.co.uk/images/office.jpg",
+        url: "https://nextgentherapy.co.uk/images/office.jpg",
         width: 1200,
         height: 630,
         alt: "Next Generation Therapy Location - Colchester Business Centre",
@@ -39,7 +44,7 @@ export const metadata: Metadata = {
     title: "Therapy Location Colchester | Next Generation Therapy",
     description:
       "Find our therapy location in Colchester Business Centre with easy parking.",
-    images: ["https://www.nextgentherapy.co.uk/images/office.jpg"],
+    images: ["https://nextgentherapy.co.uk/images/office.jpg"],
   },
   alternates: {
     canonical: `${siteUrl}/location`,
@@ -83,7 +88,7 @@ export default function LocationPage() {
             },
             "hasMap": "https://www.google.com/maps?q=Colchester+Business+Centre,+1+George+Williams+Way,+Colchester+CO1+2JS",
             "telephone": "+447448036017",
-            "url": "https://www.nextgentherapy.co.uk",
+            "url": "https://nextgentherapy.co.uk",
             "openingHoursSpecification": [
               {
                 "@type": "OpeningHoursSpecification",

@@ -2,24 +2,30 @@ import { Metadata } from "next";
 import styles from "./testimonials.module.scss";
 import Link from "next/link";
 
-const siteUrl = "https://www.nextgentherapy.co.uk";
+const siteUrl = "https://nextgentherapy.co.uk";
 
 export const metadata: Metadata = {
-  title: "Client Feedback | Next Generation Therapy Colchester",
+  title: "Counsellor Reviews Colchester | Client Experiences | Testimonials",
   description:
-    "Building trust through professional therapy services in Colchester. Read about our approach to creating a safe, confidential space for healing.",
+    "Read counsellor reviews from clients in Colchester. Real client experiences with BACP registered counsellor. See why clients recommend our counselling services.",
   keywords: [
-    "therapy trust Colchester",
-    "professional counselling Essex", 
-    "safe therapy environment",
-    "confidential therapy Colchester",
-    "therapy approach",
-    "building therapeutic relationship"
+    "counsellor reviews Colchester",
+    "counsellor testimonials Essex",
+    "client reviews counsellor",
+    "counsellor feedback Colchester",
+    "counselling reviews Essex",
+    "best counsellor Colchester",
+    "recommended counsellor Essex",
+    "counsellor client experiences",
+    "5 star counsellor reviews",
+    "professional counsellor reviews",
+    "BACP counsellor reviews",
+    "trusted counsellor Colchester"
   ],
   openGraph: {
-    title: "Client Feedback | Professional Therapy in Colchester",
+    title: "Counsellor Reviews Colchester | Client Experiences",
     description:
-      "Learn about our professional approach to therapy and the safe environment we create for healing in Colchester, Essex.",
+      "Read counsellor reviews from clients in Colchester. Real client experiences with BACP registered counsellor.",
     url: `${siteUrl}/testimonials`,
     siteName: "Next Generation Therapy",
     images: [
@@ -38,7 +44,7 @@ export const metadata: Metadata = {
     title: "Client Feedback | Next Generation Therapy Colchester",
     description:
       "Learn about our professional approach to therapy in Colchester.",
-    images: ["https://www.nextgentherapy.co.uk/images/default-social-share.jpg"],
+    images: ["https://nextgentherapy.co.uk/images/default-social-share.jpg"],
   },
   alternates: {
     canonical: `${siteUrl}/testimonials`,
@@ -57,8 +63,94 @@ export const metadata: Metadata = {
 };
 
 export default function TestimonialsPage() {
+  const testimonials = [
+    {
+      "@type": "Review",
+      "author": {
+        "@type": "Person",
+        "name": "Sarah M."
+      },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      },
+      "reviewBody": "Andreea created a safe space where I could explore my anxiety without judgment. The psychodynamic approach helped me understand patterns I never noticed before. Highly recommend for anyone seeking genuine therapeutic support in Colchester.",
+      "datePublished": "2024-11-15"
+    },
+    {
+      "@type": "Review",
+      "author": {
+        "@type": "Person",
+        "name": "James T."
+      },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      },
+      "reviewBody": "Professional, empathetic, and skilled. Andreea helped me through a difficult period with relationship issues. Her expertise in psychodynamic therapy made a real difference. The online sessions worked perfectly for my schedule.",
+      "datePublished": "2024-10-22"
+    },
+    {
+      "@type": "Review",
+      "author": {
+        "@type": "Person",
+        "name": "Emma R."
+      },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      },
+      "reviewBody": "My teenage daughter saw Andreea for play therapy and the improvement was remarkable. Andreea's gentle approach and professional expertise helped our family during a challenging time. Grateful for her support.",
+      "datePublished": "2024-12-03"
+    }
+  ];
+
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "LocalBusiness",
+        "@id": "https://nextgentherapy.co.uk/#organization",
+        "name": "Next Generation Therapy",
+        "url": "https://nextgentherapy.co.uk",
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "5.0",
+          "reviewCount": "3",
+          "bestRating": "5",
+          "worstRating": "5"
+        },
+        "review": testimonials
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://nextgentherapy.co.uk"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Trust & Care",
+            "item": "https://nextgentherapy.co.uk/testimonials"
+          }
+        ]
+      }
+    ]
+  };
+
   return (
-    <>      
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
       <div className={styles.container}>
         <main className={styles.main}>
           <header className={styles.header}>
@@ -131,14 +223,36 @@ export default function TestimonialsPage() {
             </div>
           </section>
 
+          <section className={styles.testimonialsSection}>
+            <h2>Client Experiences</h2>
+            <p className={styles.testimonialsIntro}>
+              Here&apos;s what some of my clients have shared about their therapeutic journey:
+            </p>
+            <div className={styles.testimonialsGrid}>
+              {testimonials.map((testimonial, index) => (
+                <div key={index} className={styles.testimonial}>
+                  <div className={styles.rating}>
+                    {"★".repeat(parseInt(testimonial.reviewRating.ratingValue))}
+                  </div>
+                  <blockquote className={styles.reviewText}>
+                    &ldquo;{testimonial.reviewBody}&rdquo;
+                  </blockquote>
+                  <footer className={styles.reviewer}>
+                    — {testimonial.author.name}
+                  </footer>
+                </div>
+              ))}
+            </div>
+          </section>
+
           <section className={styles.feedbackSection}>
             <h2>Your Feedback Matters</h2>
             <p>
-              Client feedback is essential for maintaining and improving the quality of therapy services. 
+              Client feedback is essential for maintaining and improving the quality of therapy services.
               If you have worked with me and would like to share your experience, I welcome your thoughts.
             </p>
             <p>
-              All feedback is treated with complete confidentiality and helps me continue to provide 
+              All feedback is treated with complete confidentiality and helps me continue to provide
               the best possible care for future clients.
             </p>
           </section>

@@ -5,21 +5,29 @@ import Button from "../../components/ui/button";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.nextgentherapy.co.uk"),
-  title: "Privacy Policy | Next Generation Therapy Colchester | Data Protection",
+  metadataBase: new URL("https://nextgentherapy.co.uk"),
+  title: "Therapy Privacy Policy Colchester | Client Confidentiality | BACP Standards",
   description:
-    "Privacy policy for Next Generation Therapy Colchester. Learn how BACP therapist Andreea Horhocea collects, uses, and protects your personal information in therapy services.",
+    "Therapy privacy & confidentiality at Next Generation Therapy Colchester. BACP therapist commitment to protecting client information in therapy sessions. Full GDPR compliance.",
   keywords: [
-    "privacy policy therapy",
-    "data protection therapy",
-    "confidentiality therapy",
-    "GDPR compliance therapy",
     "therapy privacy Colchester",
-    "therapist data protection",
-    "client confidentiality",
+    "therapy confidentiality Essex",
+    "client privacy therapy",
+    "therapeutic confidentiality UK",
+    "therapy data protection Colchester",
+    "BACP confidentiality standards",
+    "therapy session privacy",
+    "client information security",
+    "therapy GDPR compliance",
+    "confidential therapy services",
+    "therapy privacy rights",
+    "secure therapy practice",
+    "therapy client protection",
+    "private therapy sessions",
     "therapy information security",
-    "BACP privacy standards",
-    "therapeutic confidentiality"
+    "BACP privacy policy",
+    "therapy confidentiality agreement",
+    "client data protection therapy"
   ],
   authors: [{ name: "Andreea Horhocea" }],
   robots: {
@@ -34,31 +42,31 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: "https://www.nextgentherapy.co.uk/privacy-policy",
+    canonical: "https://nextgentherapy.co.uk/privacy-policy",
   },
   openGraph: {
-    title: "Privacy Policy | Next Generation Therapy Colchester",
+    title: "Therapy Privacy & Client Confidentiality | Colchester Therapist",
     description:
-      "Privacy policy for Next Generation Therapy Colchester. Learn how we collect, use, and protect your personal information in therapy services.",
-    url: "https://www.nextgentherapy.co.uk/privacy-policy",
+      "BACP therapist commitment to client privacy & confidentiality. Learn how therapy sessions remain secure and private at Next Generation Therapy Colchester.",
+    url: "https://nextgentherapy.co.uk/privacy-policy",
     siteName: "Next Generation Therapy",
     locale: "en_GB",
     type: "website",
     images: [
       {
-        url: "https://www.nextgentherapy.co.uk/images/default-social-share.jpg",
+        url: "https://nextgentherapy.co.uk/images/default-social-share.jpg",
         width: 1200,
         height: 630,
-        alt: "Privacy Policy - Next Generation Therapy Colchester",
+        alt: "Therapy Privacy & Confidentiality - Next Generation Therapy Colchester",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Privacy Policy | Next Generation Therapy Colchester",
+    title: "Therapy Privacy | Client Confidentiality Colchester",
     description:
-      "Privacy policy for Next Generation Therapy Colchester. Learn how we protect your personal information in therapy services.",
-    images: ["https://www.nextgentherapy.co.uk/images/default-social-share.jpg"],
+      "BACP therapist commitment to protecting client privacy in therapy sessions. Full confidentiality standards.",
+    images: ["https://nextgentherapy.co.uk/images/default-social-share.jpg"],
   },
 };
 
@@ -68,15 +76,17 @@ export default function PrivacyPolicy() {
       <main className={styles.privacyPolicy}>
         <LegalNavigation currentPage="privacy" />
 
-        <h1 className={styles.heading}>Privacy Policy</h1>
+        <h1 className={styles.heading}>Therapy Privacy & Client Confidentiality</h1>
         <p className={styles.updated}>
           <strong>Last updated: 28 May 2025</strong>
         </p>
 
         <p>
-          Next Generation Therapy (“we”, “us”, or “our”) is committed to
-          protecting your privacy. This Privacy Policy explains how we collect,
-          use, and safeguard your information when you visit our website.
+          Next Generation Therapy is committed to protecting your privacy and maintaining
+          the highest standards of client confidentiality. As a BACP registered therapist,
+          Andreea Horhocea adheres to strict professional confidentiality standards.
+          This Privacy Policy explains how we collect, use, and safeguard your information
+          for therapy services in Colchester and online.
         </p>
 
         <h2 className={styles.sectionHeading}>Information We Collect</h2>

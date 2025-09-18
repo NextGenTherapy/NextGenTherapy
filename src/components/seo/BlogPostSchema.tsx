@@ -18,7 +18,7 @@ export default function BlogPostSchema({
   author = "Andreea Horhocea",
   tags = []
 }: BlogPostSchemaProps) {
-  const url = `https://www.nextgentherapy.co.uk/blog/${slug}`;
+  const url = `https://nextgentherapy.co.uk/blog/${slug}`;
   
   const articleSchema = {
     "@context": "https://schema.org",
@@ -32,15 +32,15 @@ export default function BlogPostSchema({
       "@type": "Person",
       "name": author,
       "jobTitle": "BACP Registered Psychodynamic Psychotherapist",
-      "url": "https://www.nextgentherapy.co.uk/about"
+      "url": "https://nextgentherapy.co.uk/about"
     },
     "publisher": {
       "@type": "Organization",
       "name": "Next Generation Therapy",
-      "url": "https://www.nextgentherapy.co.uk",
+      "url": "https://nextgentherapy.co.uk",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://www.nextgentherapy.co.uk/images/logo.jpg",
+        "url": "https://nextgentherapy.co.uk/images/logo.jpg",
         "width": 400,
         "height": 400
       }
@@ -49,7 +49,7 @@ export default function BlogPostSchema({
       "@type": "WebPage",
       "@id": url
     },
-    "image": "https://www.nextgentherapy.co.uk/images/default-social-share.jpg",
+    "image": "https://nextgentherapy.co.uk/images/default-social-share.jpg",
     "keywords": tags.length > 0 ? tags.join(", ") : "therapy, mental health, Colchester, psychodynamic therapy",
     "about": {
       "@type": "Thing",

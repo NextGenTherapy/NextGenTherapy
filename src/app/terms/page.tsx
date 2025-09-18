@@ -5,20 +5,28 @@ import LegalNavigation from "../../components/layout/legal-navigation";
 import Button from "../../components/ui/button";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.nextgentherapy.co.uk"),
-  title: "Terms of Service | Next Generation Therapy Colchester | Therapy Terms",
-  description: "Terms of service and conditions for Next Generation Therapy Colchester website and professional psychotherapy services. BACP therapist terms and conditions.",
+  metadataBase: new URL("https://nextgentherapy.co.uk"),
+  title: "Counselling Terms & Conditions Colchester | Service Agreement | BACP Standards",
+  description: "Counselling terms & conditions for Next Generation Therapy Colchester. Professional counselling service agreement with BACP registered counsellor. Terms of service.",
   keywords: [
-    "terms of service therapy",
-    "therapy terms conditions",
-    "therapist terms service",
-    "therapy agreement terms",
-    "counselling terms conditions",
-    "therapy service terms Colchester",
-    "psychotherapy terms",
-    "BACP therapy terms",
-    "therapeutic terms agreement",
-    "therapy website terms"
+    "counselling terms conditions Colchester",
+    "counselling service agreement Essex",
+    "counsellor terms conditions",
+    "counselling terms service",
+    "professional counselling terms",
+    "BACP counselling standards",
+    "counselling agreement terms",
+    "counselling service terms Colchester",
+    "counsellor service conditions",
+    "counselling terms contract",
+    "professional counselling agreement",
+    "counselling service policy",
+    "counsellor terms service Essex",
+    "counselling conditions UK",
+    "BACP counsellor terms",
+    "counselling service standards",
+    "professional counsellor terms",
+    "counselling terms website"
   ],
   authors: [{ name: "Andreea Horhocea" }],
   robots: {
@@ -33,29 +41,29 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: "https://www.nextgentherapy.co.uk/terms",
+    canonical: "https://nextgentherapy.co.uk/terms",
   },
   openGraph: {
-    title: "Terms of Service | Next Generation Therapy Colchester",
-    description: "Terms of service and conditions for Next Generation Therapy Colchester website and professional psychotherapy services.",
-    url: "https://www.nextgentherapy.co.uk/terms",
+    title: "Counselling Terms & Conditions | Professional Service Agreement Colchester",
+    description: "Professional counselling service terms & conditions with BACP registered counsellor in Colchester. Clear service agreement.",
+    url: "https://nextgentherapy.co.uk/terms",
     siteName: "Next Generation Therapy",
     locale: "en_GB",
     type: "website",
     images: [
       {
-        url: "https://www.nextgentherapy.co.uk/images/default-social-share.jpg",
+        url: "https://nextgentherapy.co.uk/images/default-social-share.jpg",
         width: 1200,
         height: 630,
-        alt: "Terms of Service - Next Generation Therapy Colchester",
+        alt: "Counselling Terms & Conditions - Next Generation Therapy Colchester",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Terms of Service | Next Generation Therapy Colchester",
-    description: "Terms of service and conditions for Next Generation Therapy Colchester professional psychotherapy services.",
-    images: ["https://www.nextgentherapy.co.uk/images/default-social-share.jpg"],
+    title: "Counselling Terms & Conditions | Professional Service Agreement",
+    description: "Professional counselling service terms with BACP registered counsellor in Colchester. Clear service standards.",
+    images: ["https://nextgentherapy.co.uk/images/default-social-share.jpg"],
   },
 };
 
@@ -65,15 +73,17 @@ export default function Terms() {
       <main className={styles.terms}>
         <LegalNavigation currentPage="terms" />
         
-        <h1 className={styles.heading}>Terms of Service</h1>
+        <h1 className={styles.heading}>Counselling Terms & Conditions</h1>
         <p className={styles.updated}><strong>Last updated: January 1, 2025</strong></p>
 
         <section>
-          <h2 className={styles.sectionHeading}>1. Acceptance of Terms</h2>
+          <h2 className={styles.sectionHeading}>1. Acceptance of Counselling Terms</h2>
           <p>
-            By accessing and using this website, you accept and agree to be bound by the terms 
-            and conditions of this agreement. If you do not agree to abide by the above, please 
-            do not use this service.
+            By accessing this website and engaging with Next Generation Therapy counselling services,
+            you accept and agree to be bound by these counselling terms and conditions. These terms
+            apply to all counselling services provided by BACP registered counsellor Andreea Horhocea
+            in Colchester and online. If you do not agree to these counselling terms, please do not
+            use this service.
           </p>
         </section>
 
@@ -93,12 +103,13 @@ export default function Terms() {
         </section>
 
         <section>
-          <h2 className={styles.sectionHeading}>3. Professional Services Disclaimer</h2>
+          <h2 className={styles.sectionHeading}>3. Professional Counselling Services Disclaimer</h2>
           <p>
-            Next Generation Therapy provides professional psychotherapy services. The information 
-            on this website is for general informational purposes only and does not constitute 
-            medical or therapeutic advice. Always consult with a qualified healthcare professional 
-            for specific concerns.
+            Next Generation Therapy provides professional counselling services through BACP registered
+            counsellor Andreea Horhocea. The information on this website is for general informational
+            purposes only and does not constitute medical or counselling advice. Always consult with
+            a qualified healthcare professional or registered counsellor for specific concerns.
+            All counselling services are provided in accordance with BACP professional standards.
           </p>
         </section>
 

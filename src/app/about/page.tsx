@@ -3,38 +3,40 @@ import Image from "next/image";
 import styles from "./about.module.scss";
 import buttonLinksStyles from "../../components/ui/buttonLinks.module.scss";
 import Button from "../../components/ui/button";
+// Schema components available for future use
+// import PersonSchema from "../../components/seo/PersonSchema";
+// import BreadcrumbSchema from "../../components/seo/BreadcrumbSchema";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.nextgentherapy.co.uk"),
-  title: "About Andreea Horhocea | Psychodynamic Therapy & Colchester Therapy",
+  metadataBase: new URL("https://nextgentherapy.co.uk"),
+  title: "About Andreea | Psychodynamic Therapist Colchester | BACP Registered",
   description:
-    "Meet Andreea Horhocea, BACP registered psychodynamic therapist offering Colchester therapy services. Master's degree, 6+ years experience with children, adults & families. Expert in psychodynamic therapy, anxiety, depression & relationships.",
+    "Meet psychodynamic therapist Andreea Horhocea in Colchester. BACP registered with Master's degree & 6+ years experience. Specialist in psychodynamic therapy for anxiety, depression & relationships.",
   keywords: [
-    "psychodynamic therapy Colchester",
-    "colchester therapy",
-    "Colchester therapy services", 
-    "psychodynamic therapy",
     "psychodynamic therapist Colchester",
-    "Colchester psychodynamic therapist",
-    "therapy in Colchester",
-    "Andreea Horhocea therapist",
-    "psychodynamic psychotherapy Colchester",
-    "BACP registered therapist",
-    "therapy qualifications Essex",
-    "experienced therapist Colchester",
-    "Master's psychotherapy",
-    "psychodynamic counsellor Colchester",
-    "colchester therapy specialist",
-    "child therapy specialist",
-    "family therapy Colchester",
-    "anxiety therapist",
-    "depression counsellor",
-    "relationship therapy",
-    "online therapy UK"
+    "psychodynamic therapy specialist",
+    "meet psychodynamic therapist",
+    "qualified psychodynamic therapist Essex",
+    "BACP psychodynamic therapist",
+    "experienced psychodynamic therapist",
+    "psychodynamic therapist background",
+    "about Andreea Horhocea therapist",
+    "psychodynamic therapy expert",
+    "professional psychodynamic therapist",
+    "registered psychodynamic therapist",
+    "psychodynamic therapist qualifications",
+    "anxiety psychodynamic therapist",
+    "depression psychodynamic therapy",
+    "relationship psychodynamic therapist",
+    "child psychodynamic therapist",
+    "psychodynamic therapy approach",
+    "psychodynamic therapist Essex",
+    "online psychodynamic therapy",
+    "Master's psychodynamic therapy"
   ],
   authors: [{ name: "Andreea Horhocea" }],
   alternates: {
-    canonical: "https://www.nextgentherapy.co.uk/about",
+    canonical: "https://nextgentherapy.co.uk/about",
   },
   robots: {
     index: true,
@@ -51,13 +53,13 @@ export const metadata: Metadata = {
     title: "About Andreea Horhocea | Psychodynamic Therapy & Colchester Therapy",
     description:
       "Meet Andreea Horhocea, BACP registered psychodynamic therapist offering Colchester therapy services. Master's degree, 6+ years experience with children, adults & families.",
-    url: "https://www.nextgentherapy.co.uk/about",
+    url: "https://nextgentherapy.co.uk/about",
     siteName: "Next Generation Therapy",
     locale: "en_GB",
     type: "profile",
     images: [
       {
-        url: "https://www.nextgentherapy.co.uk/images/default-social-share.jpg",
+        url: "https://nextgentherapy.co.uk/images/default-social-share.jpg",
         width: 300,
         height: 300,
         alt: "Andreea Horhocea - Psychodynamic Psychotherapist",
@@ -69,7 +71,7 @@ export const metadata: Metadata = {
     title: "About me - Next Generation Therapy",
     description:
       "Learn about Andreea Horhocea, a psychodynamic psychotherapist with extensive experience working with children, young people, and adults.",
-    images: ["https://www.nextgentherapy.co.uk/images/default-social-share.jpg"],
+    images: ["https://nextgentherapy.co.uk/images/default-social-share.jpg"],
   },
 };
 
@@ -102,7 +104,7 @@ export default function AboutMe() {
     "name": "Andreea Horhocea",
     "jobTitle": "Psychodynamic Psychotherapist",
     "description": "BACP registered psychodynamic psychotherapist in Colchester specializing in therapy for children, adults, and families",
-    "url": "https://www.nextgentherapy.co.uk/about",
+    "url": "https://nextgentherapy.co.uk/about",
     "sameAs": [
       "https://www.bacp.co.uk/search/Therapists"
     ],
@@ -114,7 +116,7 @@ export default function AboutMe() {
     "worksFor": {
       "@type": "Organization",
       "name": "Next Generation Therapy",
-      "url": "https://www.nextgentherapy.co.uk"
+      "url": "https://nextgentherapy.co.uk"
     },
     "address": {
       "@type": "PostalAddress",
@@ -135,13 +137,13 @@ export default function AboutMe() {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://www.nextgentherapy.co.uk"
+        "item": "https://nextgentherapy.co.uk"
       },
       {
         "@type": "ListItem", 
         "position": 2,
         "name": "About Therapist",
-        "item": "https://www.nextgentherapy.co.uk/about"
+        "item": "https://nextgentherapy.co.uk/about"
       }
     ]
   };

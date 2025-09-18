@@ -3,27 +3,30 @@ import styles from "./faq.module.scss";
 import Button from "../../components/ui/button";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.nextgentherapy.co.uk"),
-  title: "FAQ - Therapy Questions Answered | Colchester Therapist | Next Generation Therapy",
+  metadataBase: new URL("https://nextgentherapy.co.uk"),
+  title: "Therapy FAQ Colchester | Common Questions Answered | BACP Therapist",
   description:
-    "Common therapy questions answered by BACP registered therapist in Colchester. Learn about therapy process, costs, what to expect & how therapy can help. Book consultation today!",
+    "Common therapy questions answered by BACP registered therapist in Colchester. Learn about therapy process, costs, what to expect from therapy sessions. Book consultation today!",
   keywords: [
     "therapy questions Colchester",
-    "therapy FAQ Colchester",
-    "therapy cost Colchester", 
+    "therapy FAQ Essex",
+    "therapy costs Colchester",
     "what to expect therapy",
     "therapy process explained",
     "therapist questions Colchester",
-    "anxiety therapy questions",
+    "mental health therapy questions",
     "therapy help questions",
-    "psychodynamic therapy FAQ",
+    "therapy FAQ answered",
     "BACP therapist questions",
-    "counselling questions answered",
-    "therapy appointment questions"
+    "therapy appointment questions",
+    "therapy session questions",
+    "anxiety therapy questions",
+    "depression therapy FAQ",
+    "therapy consultation questions"
   ],
   authors: [{ name: "Andreea Horhocea" }],
   alternates: {
-    canonical: "https://www.nextgentherapy.co.uk/faq",
+    canonical: "https://nextgentherapy.co.uk/faq",
   },
   robots: {
     index: true,
@@ -40,13 +43,13 @@ export const metadata: Metadata = {
     title: "FAQ - Therapy Questions Answered | Colchester Therapist",
     description:
       "Common therapy questions answered by BACP registered therapist in Colchester. Learn about costs, process & what to expect.",
-    url: "https://www.nextgentherapy.co.uk/faq",
+    url: "https://nextgentherapy.co.uk/faq",
     siteName: "Next Generation Therapy",
     locale: "en_GB",
     type: "website",
     images: [
       {
-        url: "https://www.nextgentherapy.co.uk/images/default-social-share.jpg",
+        url: "https://nextgentherapy.co.uk/images/default-social-share.jpg",
         width: 1200,
         height: 630,
         alt: "FAQ - Therapy Questions Answered | Next Generation Therapy",
@@ -120,13 +123,13 @@ export default function FAQ() {
             "@type": "ListItem",
             "position": 1,
             "name": "Home",
-            "item": "https://www.nextgentherapy.co.uk"
+            "item": "https://nextgentherapy.co.uk"
           },
           {
             "@type": "ListItem", 
             "position": 2,
             "name": "FAQ",
-            "item": "https://www.nextgentherapy.co.uk/faq"
+            "item": "https://nextgentherapy.co.uk/faq"
           }
         ]
       }
