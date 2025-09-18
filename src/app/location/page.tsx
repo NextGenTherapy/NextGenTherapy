@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import styles from "./location.module.scss";
 import GoogleMapEmbed from "../../components/ui/GoogleMapEmbed";
-import Link from "next/link";
+import Button from "../../components/ui/button";
 
 const siteUrl = "https://nextgentherapy.co.uk";
 
@@ -174,16 +174,18 @@ export default function LocationPage() {
 
               <div className={styles.contactCard}>
                 <h2>Contact</h2>
-                <p>
-                  <strong>Phone:</strong> <a href="tel:+447448036017">+44 7448 036017</a>
-                </p>
-                <p>
-                  <strong>Email:</strong> <a href="mailto:andreeatherapytoday@gmail.com">andreeatherapytoday@gmail.com</a>
-                </p>
+                <div className={styles.contactInfo}>
+                  <p>
+                    <strong>Phone:</strong> <a href="tel:+447448036017">+44 7448 036017</a>
+                  </p>
+                  <p>
+                    <strong>Email:</strong> <a href="mailto:andreeatherapytoday@gmail.com">andreeatherapytoday@gmail.com</a>
+                  </p>
+                </div>
                 <div className={styles.contactButtons}>
-                  <Link href="/book-now" className={styles.bookButton}>
+                  <Button href="/book-now">
                     Book Appointment
-                  </Link>
+                  </Button>
                 </div>
               </div>
             </div>

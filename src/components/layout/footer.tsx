@@ -95,7 +95,7 @@ export default function Footer() {
           <Link href="/services">Therapy Services</Link>
           <Link href="/pricing">Pricing</Link>
           <Link href="/faq">FAQ</Link>
-          <Link href="/testimonials">Trust & Care</Link>
+          <Link href="/trust">Trust & Care</Link>
           <Link href="/about">About Andreea</Link>
           <Link href="/location">Location</Link>
         </div>

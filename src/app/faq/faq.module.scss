@@ -1,15 +1,26 @@
 /* FAQ Page Styles */
 .page {
   min-height: 100vh;
-  padding: var(--spacing-large) var(--spacing-medium);
-  max-width: 1200px;
+  max-width: var(--container-width-desktop);
   margin: 0 auto;
+  padding: 0 var(--container-padding-mobile);
+}
+
+@media (min-width: 768px) {
+  .page {
+    padding: 0 var(--container-padding-tablet);
+  }
+}
+
+@media (min-width: 1024px) {
+  .page {
+    padding: 0 var(--container-padding-desktop);
+  }
 }
 
 .hero {
   text-align: center;
-  margin-bottom: var(--spacing-xlarge);
-  padding: var(--spacing-xlarge) 0;
+  padding: var(--spacing-section) 0 var(--spacing-large);
 }
 
 .hero h1 {
