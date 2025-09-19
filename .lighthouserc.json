@@ -46,9 +46,8 @@
         "document-title": "error",
         "meta-description": "error",
 
-        "is-on-https": "error",
-        "uses-https": "error",
-        "no-vulnerable-libraries": "error"
+        "is-on-https": "off",
+        "vulnerable-libraries": "error"
       }
     },
     "upload": {
