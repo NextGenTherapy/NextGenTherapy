@@ -78,13 +78,13 @@
 - Verify SEO health via Google Search Console
 
 ## SEO Monitoring
-- Google Search Console: www.nextgentherapy.co.uk (primary)
+- Google Search Console: nextgentherapy.co.uk (primary)
 - Site verification: P2NojIbNyYheM5XtqaNmtH5Cpp1ugkxcaddXxjZF4Dc
 - Sitemap: `/sitemap.xml` (auto-generated)
 - Schema validation: Use Google Rich Results Test
 
 ## Local Development
-- Domain: www.nextgentherapy.co.uk (canonical)
+- Domain: nextgentherapy.co.uk (canonical)
 - Environment variables in `.env.local`
 - SSL certificates auto-managed by Vercel
 - DNS managed via Vercel nameservers
