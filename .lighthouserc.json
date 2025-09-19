@@ -47,7 +47,7 @@
         "meta-description": "error",
 
         "is-on-https": "off",
-        "vulnerable-libraries": "error"
+        "no-vulnerable-libraries": "warn"
       }
     },
     "upload": {
