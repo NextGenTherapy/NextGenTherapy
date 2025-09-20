@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import type { NextRequest } from "next/server";
 
 function generateNonce() {
   return Buffer.from(crypto.getRandomValues(new Uint8Array(16))).toString(
@@ -6,7 +7,8 @@ function generateNonce() {
   );
 }
 
-export function middleware() {
+export function middleware(request: NextRequest) {
+  // Generate nonce for CSP
   const nonce = generateNonce();
   const response = NextResponse.next();
   response.headers.set("x-nonce", nonce);
@@ -14,5 +16,14 @@ export function middleware() {
 }
 
 export const config = {
-  matcher: "/:path*",
+  matcher: [
+    /*
+     * Match all request paths except for the ones starting with:
+     * - api (API routes)
+     * - _next/static (static files)
+     * - _next/image (image optimization files)
+     * - favicon.ico, robots.txt, sitemap.xml (static files)
+     */
+    '/((?!api|_next/static|_next/image|favicon.ico|robots.txt|sitemap.xml).*)',
+  ],
 };

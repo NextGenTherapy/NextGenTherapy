@@ -18,6 +18,18 @@ const ContentSecurityPolicy = `
 const nextConfig: NextConfig = {
   async redirects() {
     return [
+      // www to non-www redirect (highest priority for SEO)
+      {
+        source: '/:path*',
+        has: [
+          {
+            type: 'host',
+            value: 'www.nextgentherapy.co.uk',
+          },
+        ],
+        destination: 'https://nextgentherapy.co.uk/:path*',
+        permanent: true,
+      },
       // Legacy page redirects
       {
         source: '/therapy-101',
