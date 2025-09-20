@@ -29,6 +29,12 @@ const nextConfig: NextConfig = {
         destination: '/about-therapy',
         permanent: true,
       },
+      // Testimonials redirects to trust page
+      {
+        source: '/testimonials',
+        destination: '/trust',
+        permanent: true,
+      },
     ];
   },
   async headers() {

@@ -7,8 +7,11 @@ export function middleware(request: NextRequest) {
 
   // Redirect www to non-www
   if (host.startsWith('www.')) {
-    url.host = host.replace('www.', '');
-    return NextResponse.redirect(url, { status: 301 });
+    const newHost = host.replace('www.', '');
+    const redirectUrl = new URL(request.url);
+    redirectUrl.host = newHost;
+    redirectUrl.protocol = 'https:';
+    return NextResponse.redirect(redirectUrl, { status: 301 });
   }
 
   // Add canonical header for all responses
