@@ -12,6 +12,9 @@ import WebVitalsReporter from "../components/layout/WebVitalsReporter";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://nextgentherapy.co.uk"),
+  alternates: {
+    canonical: "/",
+  },
   title: {
     default: "Next Generation Therapy | Counsellor & Psychotherapist Colchester",
     template: "%s | Next Generation Therapy"
@@ -120,7 +123,7 @@ export default async function RootLayout({
         <meta name="google-business-verification" content="P2NojIbNyYheM5XtqaNmtH5Cpp1ugkxcaddXxjZF4Dc" />
         <meta name="business-type" content="Health & Medical" />
         <meta name="business-category" content="Mental Health Service" />
-        
+
         <link rel="icon" href="/favicon.ico" type="image/x-icon" />
         <link rel="manifest" href="/manifest.json" />
         <script

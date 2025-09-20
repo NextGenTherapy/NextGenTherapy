@@ -1,15 +1,15 @@
 {
   "redirects": [
     {
-      "source": "/:path(.*)",
+      "source": "/(.*)",
       "has": [
         {
           "type": "host",
           "value": "www.nextgentherapy.co.uk"
         }
       ],
-      "destination": "https://nextgentherapy.co.uk/:path",
-      "permanent": true
+      "destination": "https://nextgentherapy.co.uk/$1",
+      "statusCode": 301
     }
   ]
 }
