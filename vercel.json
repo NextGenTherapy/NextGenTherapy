@@ -1,15 +1,27 @@
 {
   "redirects": [
     {
-      "source": "/(.*)",
+      "source": "/:path*",
       "has": [
         {
           "type": "host",
           "value": "www.nextgentherapy.co.uk"
         }
       ],
-      "destination": "https://nextgentherapy.co.uk/$1",
+      "destination": "https://nextgentherapy.co.uk/:path*",
+      "permanent": true,
       "statusCode": 301
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "x-canonical-host",
+          "value": "https://nextgentherapy.co.uk"
+        }
+      ]
     }
   ]
 }
