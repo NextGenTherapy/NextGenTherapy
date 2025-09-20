@@ -20,6 +20,10 @@
         {
           "key": "x-canonical-host",
           "value": "https://nextgentherapy.co.uk"
+        },
+        {
+          "key": "x-redirect-config",
+          "value": "301-permanent"
         }
       ]
     }
