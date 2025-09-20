@@ -30,9 +30,11 @@ Disallow: /api/
 Disallow: /_next/
 Disallow: /.*\?
 
-# Host declaration
+# Canonical host declaration (non-www)
 Host: https://nextgentherapy.co.uk
 
-# Sitemap locations
+# Sitemap locations (always use non-www)
 Sitemap: https://nextgentherapy.co.uk/sitemap.xml
 Sitemap: https://nextgentherapy.co.uk/sitemap-0.xml
+
+# Note: www.nextgentherapy.co.uk redirects to nextgentherapy.co.uk
