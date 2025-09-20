@@ -6,8 +6,8 @@ import Button from "../../components/ui/button";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://nextgentherapy.co.uk"),
-  title: "Counselling Terms & Conditions Colchester | Service Agreement | BACP Standards",
-  description: "Counselling terms & conditions for Next Generation Therapy Colchester. Professional counselling service agreement with BACP registered counsellor. Terms of service.",
+  title: "Terms & Conditions | Counselling Service Colchester",
+  description: "Terms & conditions for counselling service in Colchester. Professional service agreement with BACP registered counsellor.",
   keywords: [
     "counselling terms conditions Colchester",
     "counselling service agreement Essex",

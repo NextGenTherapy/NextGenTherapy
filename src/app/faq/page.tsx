@@ -4,9 +4,9 @@ import Button from "../../components/ui/button";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://nextgentherapy.co.uk"),
-  title: "Therapy FAQ Colchester | Common Questions Answered | BACP Therapist",
+  title: "Therapy FAQ Colchester | Common Questions | BACP Therapist",
   description:
-    "Common therapy questions answered by BACP registered therapist in Colchester. Learn about therapy process, costs, what to expect from therapy sessions. Book consultation today!",
+    "Common therapy questions answered by BACP registered therapist in Colchester. Learn about therapy process, costs, what to expect. Book consultation today!",
   keywords: [
     "therapy questions Colchester",
     "therapy FAQ Essex",

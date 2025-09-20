@@ -4,12 +4,14 @@ import Link from "next/link";
 import styles from "./page.module.scss";
 
 function getMetadata(): Metadata {
-const siteUrl = 
-  process.env.NEXT_PUBLIC_SITE_URL || "https://nextgentherapy.co.uk";  return {
+  const siteUrl =
+    process.env.NEXT_PUBLIC_SITE_URL || "https://nextgentherapy.co.uk";
+
+  return {
     metadataBase: new URL(siteUrl),
-    title: "Therapy Colchester | BACP Registered Therapist | Next Generation Therapy",
+    title: "Colchester Therapist | BACP Registered | Next Generation",
     description:
-      "Professional therapy in Colchester & online. BACP registered therapist Andreea Horhocea offering anxiety, depression & relationship therapy. Free 15-min consultation. Book therapy today!",
+      "Professional therapy in Colchester & online. BACP registered therapist offering anxiety, depression & relationship therapy. Free consultation. Book today!",
     keywords: [
       "therapy Colchester",
       "therapist Colchester",
@@ -105,9 +107,13 @@ export default function Home() {
       <div className={styles.page}>
       <main>
         {/* Logo Section at Top */}
-        <section className={styles.logoSection}>
+        <section className={styles.logoSection} aria-label="Next Generation Therapy branding">
           <div className={styles.logoContainer}>
-            <div className={styles.logoImage}></div>
+            <div
+              className={styles.logoImage}
+              role="img"
+              aria-label="Next Generation Therapy logo - Professional therapy services in Colchester"
+            ></div>
           </div>
         </section>
 

@@ -6,9 +6,9 @@ import Button from "../../components/ui/button";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://nextgentherapy.co.uk"),
-  title: "Psychodynamic Therapy Explained | What to Expect | Benefits & Process",
+  title: "Psychodynamic Therapy Explained | What to Expect",
   description:
-    "Learn about psychodynamic therapy in Colchester. Understand what psychodynamic therapy is, how it works, benefits & what to expect. Expert guidance on this effective therapy approach.",
+    "Learn about psychodynamic therapy in Colchester. Understand what it is, how it works, benefits & what to expect. Expert guidance on this approach.",
   keywords: [
     "psychodynamic therapy explained",
     "what is psychodynamic therapy",

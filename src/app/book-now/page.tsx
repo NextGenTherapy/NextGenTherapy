@@ -12,9 +12,9 @@ const ContactForm = dynamic(() => import("../../components/forms/contact-form"),
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://nextgentherapy.co.uk"),
-  title: "Book Counsellor Colchester | Schedule Your Session Today | Contact",
+  title: "Book Counsellor Colchester | Schedule Your Session | Contact",
   description:
-    "Ready to book your counsellor? Schedule your session with BACP registered counsellor in Colchester. £60 sessions, free consultation available. Contact today to get started!",
+    "Ready to book your counsellor? Schedule your session with BACP registered counsellor in Colchester. £60 sessions, free consultation available.",
   keywords: [
     "book counsellor Colchester",
     "book counselling session Essex",

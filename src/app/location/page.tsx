@@ -6,9 +6,9 @@ import Button from "../../components/ui/button";
 const siteUrl = "https://nextgentherapy.co.uk";
 
 export const metadata: Metadata = {
-  title: "Therapist Colchester Location | Directions & Contact | Find Your Therapist",
+  title: "Colchester Therapist Location | Directions & Contact",
   description:
-    "Find your therapist in Colchester Business Centre. Easy directions, parking info, and contact details for your appointment with BACP registered therapist.",
+    "Find your therapist in Colchester Business Centre. Easy directions, parking info, and contact details for your appointment.",
   keywords: [
     "therapist Colchester location",
     "find therapist Colchester",

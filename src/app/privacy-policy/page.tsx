@@ -6,9 +6,9 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://nextgentherapy.co.uk"),
-  title: "Therapy Privacy Policy Colchester | Client Confidentiality | BACP Standards",
+  title: "Privacy Policy | Therapy Confidentiality Colchester",
   description:
-    "Therapy privacy & confidentiality at Next Generation Therapy Colchester. BACP therapist commitment to protecting client information in therapy sessions. Full GDPR compliance.",
+    "Therapy privacy & confidentiality in Colchester. BACP therapist commitment to protecting client information. Full GDPR compliance.",
   keywords: [
     "therapy privacy Colchester",
     "therapy confidentiality Essex",

@@ -6,9 +6,9 @@ import Button from "../../components/ui/button";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://nextgentherapy.co.uk"),
-  title: "Counsellor Colchester | Professional Counselling Services | BACP Registered",
+  title: "Counsellor Colchester | BACP Professional Services",
   description:
-    "Professional counsellor in Colchester offering expert counselling services. BACP registered support for anxiety, depression, relationships & personal growth. Book consultation today.",
+    "Professional counsellor in Colchester offering expert services. BACP registered support for anxiety, depression, relationships. Book consultation today.",
   keywords: [
     "counsellor Colchester",
     "counselling services Colchester",

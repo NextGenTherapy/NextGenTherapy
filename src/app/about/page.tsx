@@ -9,9 +9,9 @@ import Button from "../../components/ui/button";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://nextgentherapy.co.uk"),
-  title: "About Andreea | Psychodynamic Therapist Colchester | BACP Registered",
+  title: "About Andreea | BACP Psychodynamic Therapist Colchester",
   description:
-    "Meet psychodynamic therapist Andreea Horhocea in Colchester. BACP registered with Master's degree & 6+ years experience. Specialist in psychodynamic therapy for anxiety, depression & relationships.",
+    "Meet psychodynamic therapist Andreea Horhocea in Colchester. BACP registered with Master's degree & 6+ years experience. Anxiety, depression & relationships.",
   keywords: [
     "psychodynamic therapist Colchester",
     "psychodynamic therapy specialist",

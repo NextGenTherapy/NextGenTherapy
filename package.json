@@ -21,7 +21,11 @@
     "test:visual": "playwright test visual-regression.spec.ts",
     "test:perf": "npm run perf:check",
     "monitor:health": "node monitoring/health-monitor.js",
-    "monitor:test": "node -e \"console.log('Testing monitoring system...'); require('./monitoring/health-monitor.js').runHealthChecks().then(success => { console.log('Monitor test:', success ? 'PASSED' : 'FAILED'); process.exit(success ? 0 : 1); })\""
+    "monitor:test": "node -e \"console.log('Testing monitoring system...'); require('./monitoring/health-monitor.js').runHealthChecks().then(success => { console.log('Monitor test:', success ? 'PASSED' : 'FAILED'); process.exit(success ? 0 : 1); })\"",
+    "backup:create": "node scripts/backup-strategy.js backup",
+    "backup:verify": "node scripts/backup-strategy.js verify",
+    "backup:report": "node scripts/backup-strategy.js report",
+    "backup:cleanup": "node scripts/backup-strategy.js cleanup"
   },
   "dependencies": {
     "@next/third-parties": "^15.4.0-canary.51",
@@ -39,6 +43,7 @@
     "remark-html": "^16.0.1",
     "resend": "^4.5.1",
     "sass": "^1.89.2",
+    "validator": "^13.15.15",
     "web-vitals": "^5.1.0"
   },
   "devDependencies": {
@@ -54,6 +59,7 @@
     "@types/nodemailer": "^6.4.17",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "@types/validator": "^13.15.3",
     "chrome-launcher": "^1.2.0",
     "eslint": "^9",
     "eslint-config-next": "15.2.4",

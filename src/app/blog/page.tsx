@@ -7,9 +7,9 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://nextgentherapy.co.uk"),
-  title: "Mental Health Blog | Expert Guidance & Support | Professional Insights",
+  title: "Mental Health Blog | Expert Guidance & Professional Tips",
   description:
-    "Expert mental health guidance & support from BACP registered professional. Mental health advice, coping strategies, and insights for better wellbeing. Professional mental health blog.",
+    "Expert mental health guidance & support from BACP registered professional. Mental health advice, coping strategies, and insights for better wellbeing.",
   keywords: [
     "mental health guidance UK",
     "mental health blog Colchester",

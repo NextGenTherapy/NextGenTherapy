@@ -5,9 +5,9 @@ import Link from "next/link";
 const siteUrl = "https://nextgentherapy.co.uk";
 
 export const metadata: Metadata = {
-  title: "Trust & Care | Professional Standards | BACP Registered Counsellor Colchester",
+  title: "Trust & Care | BACP Registered Counsellor Colchester",
   description:
-    "Professional counsellor in Colchester committed to trust and care. BACP registered with highest ethical standards. Safe, confidential therapy environment.",
+    "Professional counsellor in Colchester committed to trust and care. BACP registered with highest ethical standards. Safe therapy environment.",
   keywords: [
     "trusted counsellor Colchester",
     "professional standards counsellor",

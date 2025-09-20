@@ -5,9 +5,9 @@ import Link from "next/link";
 const siteUrl = "https://nextgentherapy.co.uk";
 
 export const metadata: Metadata = {
-  title: "Psychotherapy Costs Colchester | £60 Sessions | Professional Fees",
+  title: "Psychotherapy Costs Colchester | £60 Sessions | Fees",
   description:
-    "Transparent psychotherapy costs: £60 per 50-minute session with BACP registered psychotherapist in Colchester. Professional psychotherapy pricing Essex. Free consultation available.",
+    "Transparent psychotherapy costs: £60 per 50-minute session with BACP registered psychotherapist in Colchester. Free consultation available.",
   keywords: [
     "psychotherapy costs Colchester",
     "psychotherapist fees Essex",

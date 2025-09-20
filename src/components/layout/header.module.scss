@@ -63,15 +63,16 @@
   }
 }
 
-.logo h1 {
+.logo div {
   font-size: var(--font-size-logo);
   margin: 0;
   color: var(--color-text-secondary);
   line-height: 1.2;
   padding: var(--spacing-small) 0;
+  font-weight: bold;
 }
 
-.logo a:hover h1 {
+.logo a:hover div {
   color: var(--color-header-accent-hover);
 }
 

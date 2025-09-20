@@ -13,6 +13,13 @@ export default function Header() {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const handleMenuKeyDown = (event: React.KeyboardEvent) => {
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault();
+      toggleMenu();
+    }
+  };
+
   const closeMenu = () => {
     setIsMenuOpen(false);
   };
@@ -24,11 +31,19 @@ export default function Header() {
       }
     };
 
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Escape' && isMenuOpen) {
+        closeMenu();
+      }
+    };
+
     document.addEventListener("mousedown", handleClickOutside);
+    document.addEventListener("keydown", handleKeyDown);
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener("keydown", handleKeyDown);
     };
-  }, []);
+  }, [isMenuOpen]);
 
   return (
     <header className={styles.header}>
@@ -36,7 +51,7 @@ export default function Header() {
         {/* Logo */}
         <div className={styles.logo}>
           <Link href="/">
-            <h1>NextGenTherapy</h1>
+            <div>NextGenTherapy</div>
           </Link>
         </div>
 
@@ -45,6 +60,7 @@ export default function Header() {
           type="button"
           className={styles.menuButton}
           onClick={toggleMenu}
+          onKeyDown={handleMenuKeyDown}
           aria-label={isMenuOpen ? "Close navigation menu" : "Open navigation menu"}
           aria-expanded={isMenuOpen ? "true" : "false"}
           aria-controls="main-navigation"

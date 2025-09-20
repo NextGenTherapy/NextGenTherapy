@@ -16,8 +16,8 @@
   --color-button: #164b39;
   --color-button-hover: #4a6b7a;
 
-  /* Status Colors */
-  --color-success: #388e3c;
+  /* Status Colors - WCAG 2.1 AA Compliant */
+  --color-success: #2e7d32;
   --color-success-bg: #e8f5e8;
   --color-error: #d32f2f;
   --color-error-bg: #ffeaea;
@@ -28,7 +28,7 @@
   --color-border: #ccc;
   --color-border-light: rgba(0, 0, 0, 0.2);
   --color-disabled: #cccccc;
-  --color-disabled-text: #666666;
+  --color-disabled-text: #595959;
 
   /* Spacing Variables - Mobile First */
   --spacing-xs: 4px;
