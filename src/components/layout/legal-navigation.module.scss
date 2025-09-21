@@ -26,17 +26,17 @@
     flex-direction: column;
     gap: var(--spacing-small);
   }
-  
+
   .navigationButtons {
     flex-direction: column;
     width: 100%;
     gap: var(--spacing-small);
   }
-  
+
   .homeLink {
     width: 100%;
   }
-  
+
   /* Make buttons full width on mobile */
   .navigationButtons :global(.button),
   .homeLink :global(.button) {

@@ -6,7 +6,11 @@ import Header from '../../src/components/layout/header';
 // Mock Next.js components
 jest.mock('next/link', () => {
   return function MockLink({ children, href, ...props }: any) {
-    return <a href={href} {...props}>{children}</a>;
+    return (
+      <a href={href} {...props}>
+        {children}
+      </a>
+    );
   };
 });
 
@@ -47,10 +51,10 @@ describe('Header Component', () => {
       { name: 'Services', href: '/services' },
       { name: 'About Therapy', href: '/about-therapy' },
       { name: 'Blog', href: '/blog' },
-      { name: 'Book Now', href: '/book-now' }
+      { name: 'Book Now', href: '/book-now' },
     ];
 
-    expectedLinks.forEach(link => {
+    expectedLinks.forEach((link) => {
       const linkElement = screen.getByRole('link', { name: link.name });
       expect(linkElement).toBeInTheDocument();
       expect(linkElement).toHaveAttribute('href', link.href);

@@ -18,7 +18,7 @@ const colors = {
   red: '\x1b[31m',
   blue: '\x1b[34m',
   reset: '\x1b[0m',
-  bold: '\x1b[1m'
+  bold: '\x1b[1m',
 };
 
 function log(message, color = colors.reset) {
@@ -26,15 +26,15 @@ function log(message, color = colors.reset) {
 }
 
 function logResult(metric, value, budget, status) {
-  const statusColor = status === 'PASS' ? colors.green :
-                     status === 'WARN' ? colors.yellow : colors.red;
+  const statusColor =
+    status === 'PASS' ? colors.green : status === 'WARN' ? colors.yellow : colors.red;
   const unit = ['CLS'].includes(metric) ? '' : 'ms';
   log(`  ${metric}: ${value}${unit} (budget: ${budget}${unit}) [${status}]`, statusColor);
 }
 
 async function runLighthouse(url, options = {}) {
   const chrome = await chromeLauncher.launch({
-    chromeFlags: ['--headless', '--no-sandbox', '--disable-dev-shm-usage']
+    chromeFlags: ['--headless', '--no-sandbox', '--disable-dev-shm-usage'],
   });
 
   const opts = {
@@ -42,7 +42,7 @@ async function runLighthouse(url, options = {}) {
     output: 'json',
     onlyCategories: ['performance'],
     port: chrome.port,
-    ...options
+    ...options,
   };
 
   try {
@@ -89,7 +89,7 @@ function extractMetrics(lhResult) {
     TTFB: Math.round(audits['server-response-time']?.numericValue || 0),
     speedIndex: Math.round(audits['speed-index']?.numericValue || 0),
     totalBlockingTime: Math.round(audits['total-blocking-time']?.numericValue || 0),
-    performanceScore: Math.round((lhResult.lhr.categories.performance?.score || 0) * 100)
+    performanceScore: Math.round((lhResult.lhr.categories.performance?.score || 0) * 100),
   };
 }
 
@@ -108,9 +108,9 @@ function generateReport(results) {
     results,
     summary: {
       totalPages: results.length,
-      passed: results.filter(r => r.issues.length === 0).length,
-      failed: results.filter(r => r.issues.length > 0).length
-    }
+      passed: results.filter((r) => r.issues.length === 0).length,
+      failed: results.filter((r) => r.issues.length > 0).length,
+    },
   };
 
   fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
@@ -149,7 +149,7 @@ async function checkPerformance() {
 
       if (issues.length > 0) {
         log(`\n⚠️  Issues found:`, colors.yellow);
-        issues.forEach(issue => log(`  • ${issue}`, colors.yellow));
+        issues.forEach((issue) => log(`  • ${issue}`, colors.yellow));
       } else {
         log(`\n✅ All metrics within budget!`, colors.green);
       }
@@ -160,16 +160,15 @@ async function checkPerformance() {
         metrics,
         budgetResults,
         issues,
-        performanceScore: metrics.performanceScore
+        performanceScore: metrics.performanceScore,
       });
-
     } catch (error) {
       log(`\n❌ Error auditing ${page.name}: ${error.message}`, colors.red);
       results.push({
         page: page.name,
         url: page.url,
         error: error.message,
-        issues: [`Failed to audit: ${error.message}`]
+        issues: [`Failed to audit: ${error.message}`],
       });
     }
   }

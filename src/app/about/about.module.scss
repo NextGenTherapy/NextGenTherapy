@@ -108,29 +108,29 @@
   margin-bottom: var(--spacing-medium);
   box-shadow: var(--box-shadow);
   transition: var(--transition-normal);
-  
+
   &:hover {
     box-shadow: var(--box-shadow-hover);
     transform: translateY(-2px);
   }
-  
+
   &:last-child {
     margin-bottom: 0;
   }
-  
+
   h3 {
     color: var(--color-accent);
     font-size: var(--font-size-h4);
     margin-bottom: var(--spacing-small);
     font-weight: 600;
   }
-  
+
   p {
     line-height: 1.6;
     margin-bottom: var(--spacing-small);
     color: var(--color-text-primary);
     font-size: var(--font-size-small);
-    
+
     &:last-child {
       margin-bottom: 0;
     }
@@ -144,12 +144,12 @@
   .practiceSection {
     padding: var(--spacing-large);
     margin-bottom: var(--spacing-large);
-    
+
     h3 {
       font-size: var(--font-size-h3);
       margin-bottom: var(--spacing-medium);
     }
-    
+
     p {
       font-size: var(--font-size-base);
       margin-bottom: var(--spacing-medium);
@@ -210,7 +210,7 @@
   border-radius: var(--border-radius-large);
   box-shadow: var(--box-shadow);
   transition: var(--transition-normal);
-  
+
   &:hover {
     transform: translateY(-2px);
     box-shadow: var(--box-shadow-hover);
@@ -241,5 +241,3 @@
     height: 250px;
   }
 }
-
-

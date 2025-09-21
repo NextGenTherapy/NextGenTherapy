@@ -31,7 +31,7 @@
 .greeting {
   text-align: center;
   padding: var(--spacing-section) 0 var(--spacing-large);
-  
+
   h1 {
     font-size: var(--font-size-h1);
     font-weight: bold;
@@ -102,7 +102,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  
+
   .image {
     border-radius: var(--border-radius-large);
     box-shadow: var(--box-shadow);
@@ -127,7 +127,7 @@
 }
 
 .listColumn li:before {
-  content: "✓";
+  content: '✓';
   color: var(--color-accent);
   font-weight: bold;
   position: absolute;
@@ -144,29 +144,29 @@
 .adultTextContainer {
   flex: 1;
   min-width: 0; /* Prevents flex overflow */
-  
+
   h2 {
     color: var(--color-accent);
     font-size: var(--font-size-h2);
     margin-bottom: var(--spacing-medium);
     line-height: 1.3;
   }
-  
+
   p {
     line-height: 1.6;
     color: var(--color-text-primary);
     margin-bottom: var(--spacing-medium);
-    
+
     &:last-child {
       margin-bottom: 0;
     }
-    
+
     strong {
       color: var(--color-accent);
       font-weight: 600;
     }
   }
-  
+
   ul {
     li {
       list-style: circle;
@@ -183,7 +183,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  
+
   .image {
     border-radius: var(--border-radius-large);
     box-shadow: var(--box-shadow);
@@ -204,11 +204,122 @@
   border-radius: var(--border-radius-large);
   box-shadow: var(--box-shadow);
   transition: var(--transition-normal);
-  
+
   &:hover {
     box-shadow: var(--box-shadow-hover);
     transform: translateY(-2px);
   }
+}
+
+/* Age Specific Services Section */
+.ageSpecificServices {
+  margin: var(--spacing-section) 0;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: var(--border-radius-large);
+  box-shadow: var(--box-shadow);
+  transition: var(--transition-normal);
+
+  &:hover {
+    box-shadow: var(--box-shadow-hover);
+    transform: translateY(-2px);
+  }
+}
+
+.ageServicesContainer {
+  padding: var(--spacing-large);
+  text-align: center;
+}
+
+.ageServicesContainer h2 {
+  font-size: var(--font-size-h2);
+  color: var(--color-accent);
+  margin-bottom: var(--spacing-medium);
+}
+
+.ageIntro {
+  font-size: var(--font-size-large);
+  color: var(--color-text-primary);
+  max-width: 800px;
+  margin: 0 auto var(--spacing-large);
+  line-height: var(--line-height-body);
+}
+
+.ageServicesGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-medium);
+  margin-top: var(--spacing-large);
+}
+
+@media (min-width: 768px) {
+  .ageServicesGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .ageServicesGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-large);
+  }
+}
+
+.ageServiceCard {
+  background: rgba(255, 255, 255, 0.8);
+  padding: var(--spacing-large);
+  border-radius: var(--border-radius-large);
+  box-shadow: var(--box-shadow);
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  transition: var(--transition-normal);
+
+  &:hover {
+    box-shadow: var(--box-shadow-hover);
+    transform: translateY(-2px);
+  }
+}
+
+.ageServiceCard h3 {
+  font-size: var(--font-size-h3);
+  color: var(--color-accent);
+  margin-bottom: var(--spacing-small);
+}
+
+.ageServiceCard p {
+  font-size: var(--font-size-body);
+  line-height: var(--line-height-body);
+  color: var(--color-text-primary);
+  margin-bottom: var(--spacing-small);
+  flex-grow: 1;
+}
+
+.ageServiceCard ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 var(--spacing-medium) 0;
+}
+
+.ageServiceCard li {
+  padding: var(--spacing-small) 0;
+  border-bottom: 1px solid var(--color-accent-light);
+  font-size: var(--font-size-body);
+  color: var(--color-text-primary);
+  position: relative;
+  padding-left: var(--spacing-medium);
+
+  &:before {
+    content: '✓';
+    color: var(--color-accent);
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+  }
+}
+
+.ageServiceCard li:last-child {
+  border-bottom: none;
 }
 
 /* FAQ Section */
@@ -220,7 +331,7 @@
 .faqContainer {
   max-width: 800px;
   margin: 0 auto;
-  
+
   h2 {
     text-align: center;
     font-size: var(--font-size-h2);
@@ -238,12 +349,12 @@
   margin-bottom: var(--spacing-medium);
   box-shadow: var(--box-shadow);
   transition: var(--transition-normal);
-  
+
   &:hover {
     box-shadow: var(--box-shadow-hover);
     transform: translateY(-2px);
   }
-  
+
   h3 {
     color: var(--color-accent);
     font-size: var(--font-size-medium);
@@ -251,7 +362,7 @@
     margin-bottom: var(--spacing-small);
     line-height: 1.4;
   }
-  
+
   p {
     color: var(--color-text-primary);
     line-height: 1.6;
@@ -265,7 +376,7 @@
   .contentGrid {
     gap: var(--spacing-large);
   }
-  
+
   .servicesList {
     gap: var(--spacing-medium);
   }
@@ -275,7 +386,7 @@
   .main {
     padding: 0 var(--spacing-large);
   }
-  
+
   .servicesOverview .contentGrid {
     flex-direction: column-reverse;
     gap: var(--spacing-large);
@@ -290,7 +401,7 @@
     flex: none;
     max-width: 400px;
   }
-  
+
   .childrenSection,
   .adultsSection {
     flex-direction: column;
@@ -298,17 +409,17 @@
     gap: var(--spacing-large);
     padding: var(--spacing-large);
   }
-  
+
   .endImageContainer {
     order: -1;
     flex: none;
     max-width: 300px;
   }
-  
+
   .faqSection {
     margin: var(--spacing-section) 0;
   }
-  
+
   .faqContainer {
     max-width: 100%;
     padding: 0 var(--spacing-medium);
@@ -319,54 +430,54 @@
   .main {
     padding: 0 var(--spacing-medium);
   }
-  
+
   .greeting {
     padding: var(--spacing-large) 0;
-    
+
     h1 {
       font-size: var(--font-size-h1);
     }
   }
-  
+
   .servicesOverview,
   .contentEnd {
     margin: var(--spacing-section) 0;
   }
-  
+
   .childTextContainer,
   .adultTextContainer {
     text-align: center;
-    
+
     h2 {
       font-size: var(--font-size-h3);
     }
   }
-  
+
   .servicesList {
     flex-direction: column;
     gap: var(--spacing-medium);
   }
-  
+
   .childrenSection,
   .adultsSection {
     padding: var(--spacing-medium);
     gap: var(--spacing-medium);
   }
-  
+
   .faqSection {
     margin: var(--spacing-section) 0;
   }
-  
+
   .faqItem {
     padding: var(--spacing-medium);
     margin-bottom: var(--spacing-medium);
   }
-  
+
   .faqContainer h2 {
     font-size: var(--font-size-h3);
     margin-bottom: var(--spacing-large);
   }
-  
+
   .faqItem h3 {
     font-size: var(--font-size-medium);
   }
@@ -376,37 +487,37 @@
   .main {
     padding: 0 var(--spacing-small);
   }
-  
+
   .greeting {
     padding: var(--spacing-medium) 0;
-    
+
     h1 {
       font-size: var(--font-size-h2);
     }
   }
-  
+
   .imageContainer,
   .endImageContainer {
     max-width: 250px;
   }
-  
+
   .childrenSection,
   .adultsSection {
     padding: var(--spacing-small);
   }
-  
+
   .faqContainer {
     padding: 0 var(--spacing-small);
   }
-  
+
   .faqItem {
     padding: var(--spacing-small);
   }
-  
+
   .faqContainer h2 {
     font-size: var(--font-size-h4);
   }
-  
+
   .faqItem h3 {
     font-size: var(--font-size-base);
   }
@@ -428,7 +539,7 @@
   background: rgba(255, 255, 255, 0.8);
   border-radius: var(--border-radius-large);
   box-shadow: var(--box-shadow);
-  
+
   h2 {
     text-align: center;
     color: var(--color-accent);
@@ -452,42 +563,42 @@
   border-radius: var(--border-radius-medium);
   box-shadow: var(--box-shadow);
   transition: var(--transition-normal);
-  
+
   &:hover {
     transform: translateY(-2px);
     box-shadow: var(--box-shadow-hover);
   }
-  
+
   h3 {
     color: var(--color-accent);
     margin-bottom: var(--spacing-medium);
     font-size: var(--font-size-h4);
   }
-  
+
   p {
     margin-bottom: var(--spacing-medium);
     line-height: 1.6;
     color: var(--color-text-primary);
   }
-  
+
   ul {
     list-style: none;
     padding: 0;
-    
+
     li {
       padding: var(--spacing-small) 0;
       border-bottom: 1px solid var(--color-border-light);
       position: relative;
       padding-left: var(--spacing-medium);
-      
+
       &:before {
-        content: "✓";
+        content: '✓';
         color: var(--color-accent);
         font-weight: bold;
         position: absolute;
         left: 0;
       }
-      
+
       &:last-child {
         border-bottom: none;
       }
@@ -498,9 +609,16 @@
 .credentialsSection {
   margin: var(--spacing-section) 0;
   padding: var(--spacing-large);
-  background: linear-gradient(135deg, rgba(43, 92, 230, 0.05), rgba(43, 92, 230, 0.1));
+  background: rgba(255, 255, 255, 0.6);
   border-radius: var(--border-radius-large);
-  
+  box-shadow: var(--box-shadow);
+  transition: var(--transition-normal);
+
+  &:hover {
+    box-shadow: var(--box-shadow-hover);
+    transform: translateY(-2px);
+  }
+
   h2 {
     text-align: center;
     color: var(--color-accent);
@@ -524,18 +642,18 @@
   text-align: center;
   box-shadow: var(--box-shadow);
   transition: var(--transition-normal);
-  
+
   &:hover {
     transform: translateY(-3px);
     box-shadow: var(--box-shadow-hover);
   }
-  
+
   h3 {
     color: var(--color-accent);
     margin-bottom: var(--spacing-medium);
     font-size: var(--font-size-h4);
   }
-  
+
   p {
     line-height: 1.6;
     color: var(--color-text-primary);
@@ -548,7 +666,7 @@
   background: rgba(255, 255, 255, 0.9);
   border-radius: var(--border-radius-large);
   box-shadow: var(--box-shadow);
-  
+
   h2 {
     text-align: center;
     color: var(--color-accent);
@@ -563,18 +681,18 @@
     grid-template-columns: 1fr;
     gap: var(--spacing-medium);
   }
-  
+
   .professionalIntro {
     font-size: var(--font-size-medium);
   }
-  
+
   .locationCoverage,
   .credentialsSection,
   .therapyFaq {
     padding: var(--spacing-medium);
     margin: var(--spacing-large) 0;
   }
-  
+
   .inPersonServices,
   .onlineServices,
   .credential {
@@ -588,9 +706,634 @@
   .therapyFaq {
     padding: var(--spacing-small);
   }
-  
+
   .coverageGrid,
   .credentialsGrid {
     gap: var(--spacing-small);
+  }
+}
+
+/* Parent Support Page Styles */
+.servicesContainer {
+  background: var(--color-background);
+  min-height: 100vh;
+  padding-bottom: var(--spacing-large);
+}
+
+/* Hero Section */
+.heroSection {
+  background: linear-gradient(135deg, rgba(43, 92, 230, 0.05), rgba(43, 92, 230, 0.1));
+  padding: var(--spacing-xlarge) 0;
+  text-align: center;
+}
+
+.heroContent {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-medium);
+}
+
+.pageTitle {
+  font-size: var(--font-size-h1);
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-medium);
+  font-weight: bold;
+}
+
+.heroSubtitle {
+  font-size: var(--font-size-large);
+  color: var(--color-text-secondary);
+  line-height: var(--line-height-heading);
+  margin: 0;
+}
+
+/* Service Introduction */
+.serviceIntro {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--spacing-xlarge) var(--spacing-medium);
+}
+
+.introContent {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.introContent h2 {
+  font-size: var(--font-size-h2);
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-large);
+}
+
+.introContent p {
+  font-size: var(--font-size-body);
+  line-height: var(--line-height-body);
+  color: var(--color-text-primary);
+  margin-bottom: var(--spacing-medium);
+  text-align: left;
+}
+
+/* Service Details */
+.serviceDetails {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--spacing-xlarge) var(--spacing-medium);
+}
+
+.serviceDetails h2 {
+  font-size: var(--font-size-h2);
+  color: var(--color-primary);
+  text-align: center;
+  margin-bottom: var(--spacing-xlarge);
+}
+
+.detailsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: var(--spacing-large);
+}
+
+.detailCard {
+  background: var(--color-surface);
+  padding: var(--spacing-large);
+  border-radius: var(--border-radius);
+  border: 1px solid var(--color-border);
+  transition: var(--transition-normal);
+}
+
+.detailCard:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--box-shadow-hover);
+}
+
+.detailCard h3 {
+  font-size: var(--font-size-h3);
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-medium);
+}
+
+.detailCard p {
+  font-size: var(--font-size-body);
+  line-height: var(--line-height-body);
+  color: var(--color-text-primary);
+  margin: 0;
+}
+
+/* Concerns Section */
+.concernsSection {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--spacing-xlarge) var(--spacing-medium);
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: var(--border-radius-large);
+}
+
+.concernsSection h2 {
+  font-size: var(--font-size-h2);
+  color: var(--color-primary);
+  text-align: center;
+  margin-bottom: var(--spacing-xlarge);
+}
+
+.concernsList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-large);
+}
+
+.concernItem {
+  background: var(--color-background);
+  padding: var(--spacing-large);
+  border-radius: var(--border-radius);
+  border: 1px solid var(--color-border);
+  transition: var(--transition-normal);
+}
+
+.concernItem:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--box-shadow);
+}
+
+.concernItem h3 {
+  font-size: var(--font-size-h4);
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-medium);
+  font-style: italic;
+}
+
+.concernItem p {
+  font-size: var(--font-size-body);
+  line-height: var(--line-height-body);
+  color: var(--color-text-primary);
+  margin: 0;
+}
+
+/* Age Guidance Section */
+.ageGuidanceSection {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--spacing-xlarge) var(--spacing-medium);
+}
+
+.ageGuidanceSection h2 {
+  font-size: var(--font-size-h2);
+  color: var(--color-primary);
+  text-align: center;
+  margin-bottom: var(--spacing-xlarge);
+}
+
+.ageGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-large);
+}
+
+.ageCard {
+  background: var(--color-surface);
+  padding: var(--spacing-large);
+  border-radius: var(--border-radius);
+  border: 1px solid var(--color-border);
+  display: flex;
+  flex-direction: column;
+  transition: var(--transition-normal);
+}
+
+.ageCard:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--box-shadow-hover);
+}
+
+.ageCard h3 {
+  font-size: var(--font-size-h3);
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-medium);
+}
+
+.ageCard ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 var(--spacing-medium) 0;
+  flex-grow: 1;
+}
+
+.ageCard li {
+  padding: var(--spacing-xs) 0;
+  border-bottom: 1px solid var(--color-border-light);
+  position: relative;
+  padding-left: var(--spacing-medium);
+  font-size: var(--font-size-body);
+  color: var(--color-text-primary);
+}
+
+.ageCard li:before {
+  content: '•';
+  color: var(--color-primary);
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+.ageCard li:last-child {
+  border-bottom: none;
+}
+
+.ageLink {
+  color: var(--color-primary);
+  text-decoration: none;
+  font-weight: 600;
+  padding: var(--spacing-small) 0;
+  border-top: 1px solid var(--color-border);
+  transition: var(--transition-normal);
+}
+
+.ageLink:hover {
+  color: var(--color-primary-dark);
+}
+
+/* Self Care Section */
+.selfCareSection {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--spacing-xlarge) var(--spacing-medium);
+  background: linear-gradient(135deg, rgba(43, 92, 230, 0.05), rgba(43, 92, 230, 0.1));
+  border-radius: var(--border-radius-large);
+}
+
+.selfCareSection h2 {
+  font-size: var(--font-size-h2);
+  color: var(--color-primary);
+  text-align: center;
+  margin-bottom: var(--spacing-xlarge);
+}
+
+.selfCareContent {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.selfCareContent p {
+  font-size: var(--font-size-body);
+  line-height: var(--line-height-body);
+  color: var(--color-text-primary);
+  margin-bottom: var(--spacing-large);
+  text-align: center;
+}
+
+.selfCareStrategies {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--spacing-large);
+}
+
+.selfCareCard {
+  background: var(--color-background);
+  padding: var(--spacing-large);
+  border-radius: var(--border-radius);
+  border: 1px solid var(--color-border);
+  text-align: center;
+  transition: var(--transition-normal);
+}
+
+.selfCareCard:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--box-shadow);
+}
+
+.selfCareCard h3 {
+  font-size: var(--font-size-h4);
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-medium);
+}
+
+.selfCareCard p {
+  font-size: var(--font-size-body);
+  line-height: var(--line-height-body);
+  color: var(--color-text-primary);
+  margin: 0;
+  text-align: left;
+}
+
+/* Approach Section */
+.approachSection {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--spacing-xlarge) var(--spacing-medium);
+}
+
+.approachSection h2 {
+  font-size: var(--font-size-h2);
+  color: var(--color-primary);
+  text-align: center;
+  margin-bottom: var(--spacing-large);
+}
+
+.approachContent {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.approachContent p {
+  font-size: var(--font-size-body);
+  line-height: var(--line-height-body);
+  color: var(--color-text-primary);
+  margin-bottom: var(--spacing-large);
+  text-align: center;
+}
+
+.approachList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.approachList li {
+  padding: var(--spacing-medium) 0;
+  border-bottom: 1px solid var(--color-border-light);
+  position: relative;
+  padding-left: var(--spacing-large);
+  font-size: var(--font-size-body);
+  line-height: var(--line-height-body);
+  color: var(--color-text-primary);
+}
+
+.approachList li:before {
+  content: '✓';
+  color: var(--color-primary);
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+  top: var(--spacing-medium);
+}
+
+.approachList li:last-child {
+  border-bottom: none;
+}
+
+.approachList strong {
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+/* When to Seek Section */
+.whenToSeekSection {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--spacing-xlarge) var(--spacing-medium);
+}
+
+.whenToSeekSection h2 {
+  font-size: var(--font-size-h2);
+  color: var(--color-primary);
+  text-align: center;
+  margin-bottom: var(--spacing-medium);
+}
+
+.whenToSeekSection > p {
+  font-size: var(--font-size-large);
+  color: var(--color-text-primary);
+  text-align: center;
+  margin-bottom: var(--spacing-xlarge);
+}
+
+.warningSignsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--spacing-large);
+}
+
+.warningCard {
+  background: var(--color-surface);
+  padding: var(--spacing-large);
+  border-radius: var(--border-radius);
+  border: 1px solid var(--color-border);
+  text-align: center;
+  transition: var(--transition-normal);
+}
+
+.warningCard:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--box-shadow-hover);
+}
+
+.warningCard h3 {
+  font-size: var(--font-size-h4);
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-medium);
+}
+
+.warningCard p {
+  font-size: var(--font-size-body);
+  line-height: var(--line-height-body);
+  color: var(--color-text-primary);
+  margin: 0;
+}
+
+/* CTA Section */
+.ctaSection {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--spacing-xlarge) var(--spacing-medium);
+  background: linear-gradient(135deg, rgba(43, 92, 230, 0.1), rgba(43, 92, 230, 0.05));
+  border-radius: var(--border-radius-large);
+  text-align: center;
+}
+
+.ctaContent h2 {
+  font-size: var(--font-size-h2);
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-large);
+}
+
+.ctaContent p {
+  font-size: var(--font-size-large);
+  line-height: var(--line-height-body);
+  color: var(--color-text-primary);
+  margin-bottom: var(--spacing-xlarge);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ctaButtons {
+  display: flex;
+  gap: var(--spacing-medium);
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: var(--spacing-large);
+}
+
+.primaryButton {
+  background: var(--color-primary);
+  color: white;
+  padding: var(--spacing-medium) var(--spacing-large);
+  border-radius: var(--border-radius);
+  text-decoration: none;
+  font-weight: 600;
+  transition: var(--transition-normal);
+}
+
+.primaryButton:hover {
+  background: var(--color-primary-dark);
+  transform: translateY(-2px);
+}
+
+.secondaryButton {
+  background: transparent;
+  color: var(--color-primary);
+  padding: var(--spacing-medium) var(--spacing-large);
+  border: 2px solid var(--color-primary);
+  border-radius: var(--border-radius);
+  text-decoration: none;
+  font-weight: 600;
+  transition: var(--transition-normal);
+}
+
+.secondaryButton:hover {
+  background: var(--color-primary);
+  color: white;
+  transform: translateY(-2px);
+}
+
+.contactNote {
+  font-size: var(--font-size-small);
+  color: var(--color-text-secondary);
+  margin: 0;
+  font-style: italic;
+}
+
+/* Related Services */
+.relatedSection {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--spacing-xlarge) var(--spacing-medium);
+}
+
+.relatedSection h2 {
+  font-size: var(--font-size-h2);
+  color: var(--color-primary);
+  text-align: center;
+  margin-bottom: var(--spacing-xlarge);
+}
+
+.relatedGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-large);
+}
+
+.relatedCard {
+  background: var(--color-surface);
+  padding: var(--spacing-large);
+  border-radius: var(--border-radius);
+  border: 1px solid var(--color-border);
+  text-decoration: none;
+  transition: var(--transition-normal);
+  display: block;
+}
+
+.relatedCard:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--box-shadow-hover);
+}
+
+.relatedCard h3 {
+  font-size: var(--font-size-h4);
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-medium);
+}
+
+.relatedCard p {
+  font-size: var(--font-size-body);
+  line-height: var(--line-height-body);
+  color: var(--color-text-primary);
+  margin: 0;
+}
+
+/* Responsive Design for Parent Support */
+@media (max-width: 1024px) {
+  .detailsGrid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+
+  .ageGrid,
+  .selfCareStrategies,
+  .warningSignsGrid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .heroSection {
+    padding: var(--spacing-large) 0;
+  }
+
+  .pageTitle {
+    font-size: var(--font-size-h2);
+  }
+
+  .heroSubtitle {
+    font-size: var(--font-size-medium);
+  }
+
+  .serviceIntro,
+  .serviceDetails,
+  .concernsSection,
+  .ageGuidanceSection,
+  .selfCareSection,
+  .approachSection,
+  .whenToSeekSection,
+  .ctaSection,
+  .relatedSection {
+    padding: var(--spacing-large) var(--spacing-medium);
+  }
+
+  .detailsGrid,
+  .ageGrid,
+  .selfCareStrategies,
+  .warningSignsGrid,
+  .relatedGrid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-medium);
+  }
+
+  .ctaButtons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .primaryButton,
+  .secondaryButton {
+    min-width: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .heroContent,
+  .introContent,
+  .selfCareContent,
+  .approachContent {
+    padding: 0 var(--spacing-small);
+  }
+
+  .detailCard,
+  .concernItem,
+  .ageCard,
+  .selfCareCard,
+  .warningCard,
+  .relatedCard {
+    padding: var(--spacing-medium);
+  }
+
+  .serviceIntro,
+  .serviceDetails,
+  .concernsSection,
+  .ageGuidanceSection,
+  .selfCareSection,
+  .approachSection,
+  .whenToSeekSection,
+  .ctaSection,
+  .relatedSection {
+    padding: var(--spacing-medium) var(--spacing-small);
   }
 }

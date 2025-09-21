@@ -27,7 +27,9 @@ test.describe('Contact Form', () => {
 
     // Form should prevent submission with empty fields (HTML5 validation)
     const firstNameField = page.getByLabel(/first name/i);
-    const isValid = await firstNameField.evaluate((input: HTMLInputElement) => input.validity.valid);
+    const isValid = await firstNameField.evaluate(
+      (input: HTMLInputElement) => input.validity.valid
+    );
     expect(isValid).toBe(false);
   });
 
@@ -36,7 +38,11 @@ test.describe('Contact Form', () => {
     await page.getByLabel(/first name/i).fill('John');
     await page.getByLabel(/last name/i).fill('Doe');
     await page.getByLabel(/email/i).fill('john.doe@example.com');
-    await page.getByLabel(/message/i).fill('This is a test message for the contact form. It has sufficient length to pass validation.');
+    await page
+      .getByLabel(/message/i)
+      .fill(
+        'This is a test message for the contact form. It has sufficient length to pass validation.'
+      );
 
     // Mock the API response
     await page.route('/api/contact', async (route) => {
@@ -113,7 +119,7 @@ test.describe('Contact Form', () => {
     // Mock slow API response
     await page.route('/api/contact', async (route) => {
       // Delay response to test loading state
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      await new Promise((resolve) => setTimeout(resolve, 1000));
       await route.fulfill({
         status: 200,
         contentType: 'application/json',

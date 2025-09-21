@@ -18,13 +18,13 @@ const pages = [
   { name: 'About Therapy', url: '/about-therapy' },
   { name: 'Blog', url: '/blog' },
   { name: 'Privacy Policy', url: '/privacy-policy' },
-  { name: 'Terms', url: '/terms' }
+  { name: 'Terms', url: '/terms' },
 ];
 
 const viewports = [
   { name: 'Desktop', width: 1920, height: 1080 },
   { name: 'Tablet', width: 768, height: 1024 },
-  { name: 'Mobile', width: 375, height: 812 }
+  { name: 'Mobile', width: 375, height: 812 },
 ];
 
 // Test each page across different viewports
@@ -35,7 +35,7 @@ for (const page of pages) {
         viewport: { width: viewport.width, height: viewport.height },
         // Consistent font rendering
         deviceScaleFactor: 1,
-        hasTouch: viewport.name === 'Mobile'
+        hasTouch: viewport.name === 'Mobile',
       });
 
       const browserPage = await context.newPage();
@@ -44,7 +44,7 @@ for (const page of pages) {
         // Navigate to page
         await browserPage.goto(page.url, {
           waitUntil: 'networkidle',
-          timeout: 10000
+          timeout: 10000,
         });
 
         // Wait for any lazy-loaded content
@@ -67,7 +67,7 @@ for (const page of pages) {
               -webkit-font-smoothing: none;
               -moz-osx-font-smoothing: none;
             }
-          `
+          `,
         });
 
         // Take full page screenshot
@@ -76,7 +76,7 @@ for (const page of pages) {
           {
             fullPage: true,
             threshold: 0.3,
-            maxDiffPixels: 1000
+            maxDiffPixels: 1000,
           }
         );
 
@@ -87,11 +87,10 @@ for (const page of pages) {
             {
               clip: { x: 0, y: 0, width: viewport.width, height: 600 },
               threshold: 0.2,
-              maxDiffPixels: 500
+              maxDiffPixels: 500,
             }
           );
         }
-
       } finally {
         await context.close();
       }
@@ -102,10 +101,11 @@ for (const page of pages) {
 test.describe('Component Visual Regression', () => {
   test('Header consistency across pages', async ({ browser }) => {
     const context = await browser.newContext({
-      viewport: { width: 1920, height: 1080 }
+      viewport: { width: 1920, height: 1080 },
     });
 
-    for (const page of pages.slice(0, 3)) { // Test first 3 pages
+    for (const page of pages.slice(0, 3)) {
+      // Test first 3 pages
       const browserPage = await context.newPage();
 
       try {
@@ -127,10 +127,11 @@ test.describe('Component Visual Regression', () => {
 
   test('Footer consistency across pages', async ({ browser }) => {
     const context = await browser.newContext({
-      viewport: { width: 1920, height: 1080 }
+      viewport: { width: 1920, height: 1080 },
     });
 
-    for (const page of pages.slice(0, 3)) { // Test first 3 pages
+    for (const page of pages.slice(0, 3)) {
+      // Test first 3 pages
       const browserPage = await context.newPage();
 
       try {
@@ -160,7 +161,7 @@ test.describe('Component Visual Regression', () => {
     for (let i = 0; i < Math.min(buttonCount, 3); i++) {
       const button = primaryButtons.nth(i);
       await expect(button).toHaveScreenshot(`button-primary-${i}.png`, {
-        threshold: 0.1
+        threshold: 0.1,
       });
     }
   });
@@ -177,22 +178,24 @@ test.describe('Form Visual Regression', () => {
 
     // Initial state
     await expect(form).toHaveScreenshot('contact-form-initial.png', {
-      threshold: 0.2
+      threshold: 0.2,
     });
 
     // Focus state
     await page.locator('input[name="name"]').focus();
     await expect(form).toHaveScreenshot('contact-form-focused.png', {
-      threshold: 0.2
+      threshold: 0.2,
     });
 
     // Filled state
     await page.locator('input[name="name"]').fill('Test User');
     await page.locator('input[name="email"]').fill('test@example.com');
-    await page.locator('textarea[name="message"]').fill('Test message for visual regression testing');
+    await page
+      .locator('textarea[name="message"]')
+      .fill('Test message for visual regression testing');
 
     await expect(form).toHaveScreenshot('contact-form-filled.png', {
-      threshold: 0.2
+      threshold: 0.2,
     });
   });
 });
@@ -200,7 +203,7 @@ test.describe('Form Visual Regression', () => {
 test.describe('Responsive Design Visual Tests', () => {
   test('Mobile navigation menu', async ({ browser }) => {
     const context = await browser.newContext({
-      viewport: { width: 375, height: 812 }
+      viewport: { width: 375, height: 812 },
     });
 
     const page = await context.newPage();
@@ -210,17 +213,19 @@ test.describe('Responsive Design Visual Tests', () => {
 
       // Mobile menu closed
       await expect(page.locator('header')).toHaveScreenshot('mobile-nav-closed.png', {
-        threshold: 0.1
+        threshold: 0.1,
       });
 
       // Open mobile menu
-      const menuButton = page.locator('button[aria-label*="menu"], .mobile-menu-toggle, [data-testid="mobile-menu-toggle"]');
+      const menuButton = page.locator(
+        'button[aria-label*="menu"], .mobile-menu-toggle, [data-testid="mobile-menu-toggle"]'
+      );
       if (await menuButton.isVisible()) {
         await menuButton.click();
 
         // Mobile menu open
         await expect(page.locator('header')).toHaveScreenshot('mobile-nav-open.png', {
-          threshold: 0.2
+          threshold: 0.2,
         });
       }
     } finally {
@@ -234,12 +239,12 @@ test.describe('Responsive Design Visual Tests', () => {
       { name: 'Small Desktop', width: 1024, height: 768 },
       { name: 'Tablet Portrait', width: 768, height: 1024 },
       { name: 'Mobile Large', width: 414, height: 896 },
-      { name: 'Mobile Small', width: 320, height: 568 }
+      { name: 'Mobile Small', width: 320, height: 568 },
     ];
 
     for (const breakpoint of breakpoints) {
       const context = await browser.newContext({
-        viewport: { width: breakpoint.width, height: breakpoint.height }
+        viewport: { width: breakpoint.width, height: breakpoint.height },
       });
 
       const page = await context.newPage();
@@ -263,7 +268,7 @@ test.describe('Dark Mode Visual Tests', () => {
   test('Dark mode compatibility check', async ({ browser }) => {
     const context = await browser.newContext({
       viewport: { width: 1920, height: 1080 },
-      colorScheme: 'dark'
+      colorScheme: 'dark',
     });
 
     const page = await context.newPage();
@@ -274,7 +279,7 @@ test.describe('Dark Mode Visual Tests', () => {
       // Take screenshot with dark mode preference
       await expect(page).toHaveScreenshot('homepage-dark-mode.png', {
         fullPage: true,
-        threshold: 0.3
+        threshold: 0.3,
       });
     } finally {
       await context.close();
@@ -286,14 +291,14 @@ test.describe('Dark Mode Visual Tests', () => {
 test.describe('Performance Visual Impact', () => {
   test('Image loading states', async ({ page }) => {
     // Block images to test loading states
-    await page.route('**/*.{jpg,jpeg,png,gif,webp}', route => route.abort());
+    await page.route('**/*.{jpg,jpeg,png,gif,webp}', (route) => route.abort());
 
     await page.goto('/', { waitUntil: 'networkidle' });
 
     // Screenshot with images blocked (should show alt text/placeholders)
     await expect(page).toHaveScreenshot('images-blocked.png', {
       fullPage: true,
-      threshold: 0.5
+      threshold: 0.5,
     });
   });
 });

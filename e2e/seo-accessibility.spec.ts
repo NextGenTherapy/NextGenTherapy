@@ -52,7 +52,7 @@ test.describe('SEO and Accessibility', () => {
       let lastLevel = 0;
 
       for (const heading of headings) {
-        const tagName = await heading.evaluate(el => el.tagName.toLowerCase());
+        const tagName = await heading.evaluate((el) => el.tagName.toLowerCase());
         const currentLevel = parseInt(tagName.charAt(1));
 
         if (lastLevel > 0) {
@@ -149,9 +149,10 @@ test.describe('SEO and Accessibility', () => {
       const title = await link.getAttribute('title');
 
       // Links should have accessible names
-      const hasAccessibleName = (text && text.trim().length > 0) ||
-                               (ariaLabel && ariaLabel.trim().length > 0) ||
-                               (title && title.trim().length > 0);
+      const hasAccessibleName =
+        (text && text.trim().length > 0) ||
+        (ariaLabel && ariaLabel.trim().length > 0) ||
+        (title && title.trim().length > 0);
 
       expect(hasAccessibleName).toBe(true);
     }
@@ -172,7 +173,7 @@ test.describe('SEO and Accessibility', () => {
       if (id) {
         // Check if there's a label with matching 'for' attribute
         const label = page.locator(`label[for="${id}"]`);
-        const hasLabel = await label.count() > 0;
+        const hasLabel = (await label.count()) > 0;
         const hasAriaLabel = ariaLabel && ariaLabel.trim().length > 0;
 
         expect(hasLabel || hasAriaLabel).toBe(true);
@@ -222,10 +223,9 @@ test.describe('SEO and Accessibility', () => {
     await page.waitForLoadState('networkidle');
 
     // Filter out expected warnings (like act warnings which are test-related)
-    const criticalErrors = errors.filter(error =>
-      !error.includes('act(') &&
-      !error.includes('Warning:') &&
-      !error.includes('DevTools')
+    const criticalErrors = errors.filter(
+      (error) =>
+        !error.includes('act(') && !error.includes('Warning:') && !error.includes('DevTools')
     );
 
     expect(criticalErrors).toHaveLength(0);

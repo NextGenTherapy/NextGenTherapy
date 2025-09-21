@@ -13,8 +13,8 @@ export default defineConfig({
     // Visual comparison settings
     toHaveScreenshot: {
       threshold: 0.2,
-      maxDiffPixels: 100
-    }
+      maxDiffPixels: 100,
+    },
   },
   fullyParallel: true,
   forbidOnly: !!process.env.CI,
@@ -23,7 +23,7 @@ export default defineConfig({
   reporter: [
     ['html'],
     ['json', { outputFile: 'test-results/results.json' }],
-    ['junit', { outputFile: 'test-results/results.xml' }]
+    ['junit', { outputFile: 'test-results/results.xml' }],
   ],
   use: {
     baseURL: process.env.BASE_URL || 'http://localhost:3000',
@@ -37,34 +37,34 @@ export default defineConfig({
         '--font-render-hinting=none',
         '--disable-skia-runtime-opts',
         '--disable-font-subpixel-positioning',
-        '--disable-lcd-text'
-      ]
-    }
+        '--disable-lcd-text',
+      ],
+    },
   },
 
   projects: [
     // Desktop browsers
     {
       name: 'chromium',
-      use: { ...devices['Desktop Chrome'] }
+      use: { ...devices['Desktop Chrome'] },
     },
     {
       name: 'firefox',
-      use: { ...devices['Desktop Firefox'] }
+      use: { ...devices['Desktop Firefox'] },
     },
     {
       name: 'webkit',
-      use: { ...devices['Desktop Safari'] }
+      use: { ...devices['Desktop Safari'] },
     },
 
     // Mobile devices
     {
       name: 'Mobile Chrome',
-      use: { ...devices['Pixel 5'] }
+      use: { ...devices['Pixel 5'] },
     },
     {
       name: 'Mobile Safari',
-      use: { ...devices['iPhone 12'] }
+      use: { ...devices['iPhone 12'] },
     },
 
     // Tablet
@@ -72,8 +72,8 @@ export default defineConfig({
       name: 'Tablet',
       use: {
         ...devices['iPad Pro'],
-        viewport: { width: 1024, height: 768 }
-      }
+        viewport: { width: 1024, height: 768 },
+      },
     },
 
     // Visual regression specific project
@@ -82,9 +82,9 @@ export default defineConfig({
       testMatch: /visual-regression\.spec\.ts/,
       use: {
         ...devices['Desktop Chrome'],
-        viewport: { width: 1920, height: 1080 }
-      }
-    }
+        viewport: { width: 1920, height: 1080 },
+      },
+    },
   ],
 
   webServer: {
@@ -93,7 +93,7 @@ export default defineConfig({
     reuseExistingServer: !process.env.CI,
     timeout: 120 * 1000,
     env: {
-      NODE_ENV: 'test'
-    }
-  }
+      NODE_ENV: 'test',
+    },
+  },
 });

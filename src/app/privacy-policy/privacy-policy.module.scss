@@ -83,8 +83,9 @@
   text-decoration: underline;
   transition: var(--transition-normal);
   font-family: var(--font-family);
-  
-  &:hover, &:focus {
+
+  &:hover,
+  &:focus {
     color: var(--color-accent-hover);
   }
 }
@@ -111,11 +112,11 @@
   .privacyPolicy {
     padding: var(--spacing-medium);
   }
-  
+
   .heading {
     font-size: var(--font-size-h2);
   }
-  
+
   .sectionHeading {
     font-size: var(--font-size-h4);
   }
@@ -125,7 +126,7 @@
   .privacyPolicy {
     padding: var(--spacing-small);
   }
-  
+
   .list {
     padding-left: var(--spacing-medium);
   }

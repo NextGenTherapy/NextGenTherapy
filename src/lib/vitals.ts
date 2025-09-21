@@ -11,7 +11,7 @@ const THRESHOLDS = {
   FID: { good: 100, needsImprovement: 300 },
   CLS: { good: 0.1, needsImprovement: 0.25 },
   FCP: { good: 1800, needsImprovement: 3000 },
-  TTFB: { good: 800, needsImprovement: 1800 }
+  TTFB: { good: 800, needsImprovement: 1800 },
 } as const;
 
 type MetricName = keyof typeof THRESHOLDS;
@@ -45,7 +45,7 @@ function sendToAnalytics(metric: WebVitalMetric) {
     console.log(`[Dev] Core Web Vital: ${metric.name}`, {
       value: metric.value,
       rating: metric.rating,
-      id: metric.id
+      id: metric.id,
     });
     return;
   }
@@ -59,8 +59,8 @@ function sendToAnalytics(metric: WebVitalMetric) {
       value: Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value),
       custom_map: {
         metric_rating: metric.rating,
-        metric_delta: metric.delta
-      }
+        metric_delta: metric.delta,
+      },
     });
   }
 
@@ -71,7 +71,7 @@ function sendToAnalytics(metric: WebVitalMetric) {
       metric: metric.name,
       value: metric.value,
       rating: metric.rating,
-      page: window.location.pathname
+      page: window.location.pathname,
     });
   }
 
@@ -81,7 +81,7 @@ function sendToAnalytics(metric: WebVitalMetric) {
       value: metric.value,
       threshold: THRESHOLDS[metric.name].needsImprovement,
       page: window.location.pathname,
-      userAgent: navigator.userAgent
+      userAgent: navigator.userAgent,
     });
   }
 }
@@ -99,7 +99,7 @@ export function initWebVitals() {
       const webVitalMetric: WebVitalMetric = {
         ...metric,
         name: 'LCP' as MetricName,
-        rating: getMetricRating('LCP', metric.value)
+        rating: getMetricRating('LCP', metric.value),
       };
       sendToAnalytics(webVitalMetric);
     });
@@ -109,7 +109,7 @@ export function initWebVitals() {
       const webVitalMetric: WebVitalMetric = {
         ...metric,
         name: 'FID' as MetricName,
-        rating: getMetricRating('FID', metric.value)
+        rating: getMetricRating('FID', metric.value),
       };
       sendToAnalytics(webVitalMetric);
     });
@@ -119,7 +119,7 @@ export function initWebVitals() {
       const webVitalMetric: WebVitalMetric = {
         ...metric,
         name: 'CLS' as MetricName,
-        rating: getMetricRating('CLS', metric.value)
+        rating: getMetricRating('CLS', metric.value),
       };
       sendToAnalytics(webVitalMetric);
     });
@@ -129,7 +129,7 @@ export function initWebVitals() {
       const webVitalMetric: WebVitalMetric = {
         ...metric,
         name: 'FCP' as MetricName,
-        rating: getMetricRating('FCP', metric.value)
+        rating: getMetricRating('FCP', metric.value),
       };
       sendToAnalytics(webVitalMetric);
     });
@@ -139,7 +139,7 @@ export function initWebVitals() {
       const webVitalMetric: WebVitalMetric = {
         ...metric,
         name: 'TTFB' as MetricName,
-        rating: getMetricRating('TTFB', metric.value)
+        rating: getMetricRating('TTFB', metric.value),
       };
       sendToAnalytics(webVitalMetric);
     });
@@ -162,7 +162,7 @@ export function reportWebVitals(metric: { name: string; value: number; [key: str
     delta: 0,
     entries: [],
     id: '',
-    navigationType: 'navigate'
+    navigationType: 'navigate',
   };
   sendToAnalytics(webVitalMetric);
 }
@@ -181,10 +181,11 @@ export function usePerformanceMonitoring(componentName: string) {
     const renderTime = performance.now() - startTime;
 
     // Log slow components
-    if (renderTime > 16) { // More than one frame (60fps)
+    if (renderTime > 16) {
+      // More than one frame (60fps)
       console.warn(`Slow component render: ${componentName}`, {
         renderTime: Math.round(renderTime),
-        page: window.location.pathname
+        page: window.location.pathname,
       });
     }
   }, 0);

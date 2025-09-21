@@ -132,8 +132,8 @@ describe('BreadcrumbSchema Component', () => {
   it('generates breadcrumbs with custom items', () => {
     usePathname.mockReturnValue('/custom-page');
     const customItems = [
-      { name: "Home", url: "https://nextgentherapy.co.uk" },
-      { name: "Custom Page Title", url: "https://nextgentherapy.co.uk/custom-page" }
+      { name: 'Home', url: 'https://nextgentherapy.co.uk' },
+      { name: 'Custom Page Title', url: 'https://nextgentherapy.co.uk/custom-page' },
     ];
     const { container } = render(<BreadcrumbSchema items={customItems} />);
     const scriptTag = container.querySelector('script[type="application/ld+json"]');

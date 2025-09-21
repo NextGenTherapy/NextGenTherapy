@@ -22,21 +22,21 @@ const BACKUP_CONFIG = {
     'tsconfig.json',
     '.env.local.example',
     'README.md',
-    'CLAUDE.md'
+    'CLAUDE.md',
   ],
 
   // Backup destinations
   destinations: {
     local: './backups/',
     remote: process.env.BACKUP_REMOTE_PATH || '',
-    cloud: process.env.BACKUP_CLOUD_BUCKET || ''
+    cloud: process.env.BACKUP_CLOUD_BUCKET || '',
   },
 
   // Retention policy
   retention: {
-    daily: 7,    // Keep 7 daily backups
-    weekly: 4,   // Keep 4 weekly backups
-    monthly: 12  // Keep 12 monthly backups
+    daily: 7, // Keep 7 daily backups
+    weekly: 4, // Keep 4 weekly backups
+    monthly: 12, // Keep 12 monthly backups
   },
 
   // Compliance settings
@@ -44,8 +44,8 @@ const BACKUP_CONFIG = {
     encryption: true,
     compression: true,
     checksums: true,
-    auditLog: true
-  }
+    auditLog: true,
+  },
 };
 
 // Logging utility
@@ -103,7 +103,6 @@ async function createLocalBackup() {
     }
 
     return backupPath;
-
   } catch (error) {
     log(`Backup creation failed: ${error.message}`, 'ERROR');
     throw error;
@@ -119,19 +118,20 @@ function cleanupOldBackups() {
   }
 
   try {
-    const files = fs.readdirSync(backupDir)
-      .filter(file => file.endsWith('.tar.gz'))
-      .map(file => ({
+    const files = fs
+      .readdirSync(backupDir)
+      .filter((file) => file.endsWith('.tar.gz'))
+      .map((file) => ({
         name: file,
         path: path.join(backupDir, file),
-        stat: fs.statSync(path.join(backupDir, file))
+        stat: fs.statSync(path.join(backupDir, file)),
       }))
       .sort((a, b) => b.stat.mtime - a.stat.mtime);
 
     // Keep only the number specified in retention policy
     const filesToDelete = files.slice(BACKUP_CONFIG.retention.daily);
 
-    filesToDelete.forEach(file => {
+    filesToDelete.forEach((file) => {
       fs.unlinkSync(file.path);
       // Also remove checksum file if it exists
       const checksumFile = `${file.path}.sha256`;
@@ -144,7 +144,6 @@ function cleanupOldBackups() {
     if (filesToDelete.length > 0) {
       log(`Cleaned up ${filesToDelete.length} old backup(s)`);
     }
-
   } catch (error) {
     log(`Cleanup failed: ${error.message}`, 'ERROR');
   }
@@ -171,7 +170,6 @@ function verifyBackup(backupPath) {
     log('Backup archive is readable');
 
     return true;
-
   } catch (error) {
     log(`Backup verification failed: ${error.message}`, 'ERROR');
     return false;
@@ -184,9 +182,10 @@ function generateBackupReport() {
   const reportPath = path.join(backupDir, 'backup-report.json');
 
   try {
-    const backups = fs.readdirSync(backupDir)
-      .filter(file => file.endsWith('.tar.gz'))
-      .map(file => {
+    const backups = fs
+      .readdirSync(backupDir)
+      .filter((file) => file.endsWith('.tar.gz'))
+      .map((file) => {
         const filePath = path.join(backupDir, file);
         const stat = fs.statSync(filePath);
         return {
@@ -194,7 +193,7 @@ function generateBackupReport() {
           size: stat.size,
           created: stat.birthtime,
           modified: stat.mtime,
-          hasChecksum: fs.existsSync(`${filePath}.sha256`)
+          hasChecksum: fs.existsSync(`${filePath}.sha256`),
         };
       })
       .sort((a, b) => b.created - a.created);
@@ -206,14 +205,13 @@ function generateBackupReport() {
       oldestBackup: backups.length > 0 ? backups[backups.length - 1].created : null,
       newestBackup: backups.length > 0 ? backups[0].created : null,
       backups: backups,
-      config: BACKUP_CONFIG
+      config: BACKUP_CONFIG,
     };
 
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     log(`Backup report generated: ${reportPath}`);
 
     return report;
-
   } catch (error) {
     log(`Report generation failed: ${error.message}`, 'ERROR');
     return null;
@@ -224,7 +222,9 @@ function generateBackupReport() {
 async function performBackup() {
   try {
     log('=== Starting Automated Backup Process ===');
-    log(`Backup strategy: ${BACKUP_CONFIG.retention.daily} daily, ${BACKUP_CONFIG.retention.weekly} weekly, ${BACKUP_CONFIG.retention.monthly} monthly`);
+    log(
+      `Backup strategy: ${BACKUP_CONFIG.retention.daily} daily, ${BACKUP_CONFIG.retention.weekly} weekly, ${BACKUP_CONFIG.retention.monthly} monthly`
+    );
 
     // Create backup
     const backupPath = await createLocalBackup();
@@ -249,7 +249,6 @@ async function performBackup() {
     }
 
     return { success: true, backupPath, report };
-
   } catch (error) {
     log(`Backup process failed: ${error.message}`, 'ERROR');
     return { success: false, error: error.message };
@@ -275,7 +274,6 @@ async function restoreFromBackup(backupPath) {
     log(`To restore manually: tar -xzf "${backupPath}" -C /`);
 
     return { success: true, restorePoint: restorePointPath };
-
   } catch (error) {
     log(`Restore failed: ${error.message}`, 'ERROR');
     return { success: false, error: error.message };
@@ -341,5 +339,5 @@ module.exports = {
   restoreFromBackup,
   verifyBackup,
   generateBackupReport,
-  cleanupOldBackups
+  cleanupOldBackups,
 };

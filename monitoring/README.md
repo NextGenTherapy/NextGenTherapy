@@ -13,16 +13,19 @@ Comprehensive monitoring system for Next Generation Therapy website using Resend
 ## Setup
 
 1. **Environment Variables**:
+
    ```bash
    RESEND_API_KEY=your_resend_api_key_here
    ```
 
 2. **Install Dependencies**:
+
    ```bash
    npm install  # Resend is already included
    ```
 
 3. **Test Monitoring**:
+
    ```bash
    npm run monitor:health
    ```
@@ -42,6 +45,7 @@ Comprehensive monitoring system for Next Generation Therapy website using Resend
 ## Configuration
 
 Edit `monitoring/alerts.config.js` to:
+
 - Add/remove health check endpoints
 - Modify alert thresholds
 - Update notification emails
@@ -63,6 +67,7 @@ tail -f logs/monitor.log
 ## Resend Integration
 
 The system uses Resend for reliable email delivery:
+
 - Professional email templates
 - Proper sender authentication
 - Rate limiting compliance
@@ -71,6 +76,7 @@ The system uses Resend for reliable email delivery:
 ## Alert Configuration
 
 Alerts are configured with severity levels and escalation rules:
+
 - Critical alerts repeat every 30 minutes
 - High alerts escalate after 15 minutes
 - All alerts include actionable information

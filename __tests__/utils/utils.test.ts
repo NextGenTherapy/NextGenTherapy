@@ -19,7 +19,7 @@ describe('Utility Functions', () => {
         'user@domain-name.com',
       ];
 
-      validEmails.forEach(email => {
+      validEmails.forEach((email) => {
         expect(isValidEmail(email)).toBe(true);
       });
     });
@@ -38,7 +38,7 @@ describe('Utility Functions', () => {
         'user@domain.',
       ];
 
-      invalidEmails.forEach(email => {
+      invalidEmails.forEach((email) => {
         expect(isValidEmail(email)).toBe(false);
       });
     });
@@ -194,7 +194,10 @@ describe('Utility Functions', () => {
       });
 
       it('accepts longer messages', () => {
-        const data = { ...validData, message: 'This is a much longer message that should definitely pass validation.' };
+        const data = {
+          ...validData,
+          message: 'This is a much longer message that should definitely pass validation.',
+        };
         const errors = validateContactForm(data);
         expect(errors.message).toBeUndefined();
       });

@@ -15,12 +15,12 @@
   transition: var(--transition-normal);
   min-width: 120px;
   box-sizing: border-box;
-  
+
   &:hover {
     background-color: var(--color-button-hover) !important;
     color: var(--color-text-secondary) !important;
   }
-  
+
   &:focus {
     outline: var(--outline-width) solid var(--color-button-hover);
     outline-offset: var(--outline-offset);

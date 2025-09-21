@@ -29,4 +29,4 @@ export interface ApiResponse<T = unknown> {
   errors?: Record<string, string>;
 }
 
-export type LoadingState = "idle" | "loading" | "success" | "error";
+export type LoadingState = 'idle' | 'loading' | 'success' | 'error';

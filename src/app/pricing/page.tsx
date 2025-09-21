@@ -1,53 +1,53 @@
-import { Metadata } from "next";
-import styles from "./pricing.module.scss";
-import Link from "next/link";
+import { Metadata } from 'next';
+import styles from './pricing.module.scss';
+import Link from 'next/link';
 
-const siteUrl = "https://nextgentherapy.co.uk";
+const siteUrl = 'https://nextgentherapy.co.uk';
 
 export const metadata: Metadata = {
-  title: "Psychotherapy Costs Colchester | £60 Sessions | Fees",
+  title: 'Psychotherapy Costs Colchester | £60 Sessions | Fees',
   description:
-    "Transparent psychotherapy costs: £60 per 50-minute session with BACP registered psychotherapist in Colchester. Free consultation available.",
+    'Transparent psychotherapy costs: £60 per 50-minute session with BACP registered psychotherapist in Colchester. Free consultation available.',
   keywords: [
-    "psychotherapy costs Colchester",
-    "psychotherapist fees Essex",
-    "psychotherapy session costs",
-    "psychotherapy pricing Colchester",
-    "psychotherapist prices Essex",
-    "BACP psychotherapist fees",
-    "£60 psychotherapy session",
-    "professional psychotherapy costs",
-    "psychotherapy fees Essex",
-    "psychotherapist session fees",
-    "psychotherapy pricing UK",
-    "affordable psychotherapy Colchester",
-    "psychotherapy consultation fees",
-    "psychodynamic therapy costs",
-    "private psychotherapy fees"
+    'psychotherapy costs Colchester',
+    'psychotherapist fees Essex',
+    'psychotherapy session costs',
+    'psychotherapy pricing Colchester',
+    'psychotherapist prices Essex',
+    'BACP psychotherapist fees',
+    '£60 psychotherapy session',
+    'professional psychotherapy costs',
+    'psychotherapy fees Essex',
+    'psychotherapist session fees',
+    'psychotherapy pricing UK',
+    'affordable psychotherapy Colchester',
+    'psychotherapy consultation fees',
+    'psychodynamic therapy costs',
+    'private psychotherapy fees',
   ],
   openGraph: {
-    title: "Psychotherapy Costs Colchester | £60 Sessions",
+    title: 'Psychotherapy Costs Colchester | £60 Sessions',
     description:
-      "Transparent psychotherapy costs: £60 per 50-minute session with BACP registered psychotherapist in Colchester. Free consultation available.",
+      'Transparent psychotherapy costs: £60 per 50-minute session with BACP registered psychotherapist in Colchester. Free consultation available.',
     url: `${siteUrl}/pricing`,
-    siteName: "Next Generation Therapy",
-    locale: "en_GB",
-    type: "website",
+    siteName: 'Next Generation Therapy',
+    locale: 'en_GB',
+    type: 'website',
     images: [
       {
-        url: "https://nextgentherapy.co.uk/images/default-social-share.jpg",
+        url: 'https://nextgentherapy.co.uk/images/default-social-share.jpg',
         width: 1200,
         height: 630,
-        alt: "Therapy Pricing Colchester | Next Generation Therapy",
+        alt: 'Therapy Pricing Colchester | Next Generation Therapy',
       },
     ],
   },
   twitter: {
-    card: "summary_large_image",
-    title: "Therapy Pricing Colchester | £60 per Session",
+    card: 'summary_large_image',
+    title: 'Therapy Pricing Colchester | £60 per Session',
     description:
-      "Transparent therapy pricing: £60 per 50-minute session with BACP registered therapist.",
-    images: ["https://nextgentherapy.co.uk/images/default-social-share.jpg"],
+      'Transparent therapy pricing: £60 per 50-minute session with BACP registered therapist.',
+    images: ['https://nextgentherapy.co.uk/images/default-social-share.jpg'],
   },
   alternates: {
     canonical: `${siteUrl}/pricing`,
@@ -58,9 +58,9 @@ export const metadata: Metadata = {
     googleBot: {
       index: true,
       follow: true,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
     },
   },
 };
@@ -72,22 +72,22 @@ export default function Pricing() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Offer",
-            "name": "Therapy Session",
-            "description": "Professional psychodynamic therapy sessions in Colchester, Essex",
-            "price": "60",
-            "priceCurrency": "GBP",
-            "availability": "https://schema.org/InStock",
-            "seller": {
-              "@type": "LocalBusiness",
-              "name": "Next Generation Therapy",
-              "url": "https://nextgenerationtherapy.co.uk"
-            }
-          })
+            '@context': 'https://schema.org',
+            '@type': 'Offer',
+            name: 'Therapy Session',
+            description: 'Professional psychodynamic therapy sessions in Colchester, Essex',
+            price: '60',
+            priceCurrency: 'GBP',
+            availability: 'https://schema.org/InStock',
+            seller: {
+              '@type': 'LocalBusiness',
+              name: 'Next Generation Therapy',
+              url: 'https://nextgenerationtherapy.co.uk',
+            },
+          }),
         }}
       />
-      
+
       <div className={styles.page}>
         <div className={styles.main}>
           <section className={styles.hero}>
@@ -107,7 +107,7 @@ export default function Pricing() {
                   <span className={styles.duration}>per session</span>
                 </div>
                 <p className={styles.sessionLength}>50-minute sessions</p>
-                
+
                 <div className={styles.included}>
                   <h3>What&apos;s Included:</h3>
                   <ul>
@@ -123,8 +123,8 @@ export default function Pricing() {
                 <div className={styles.consultation}>
                   <h3>Free Initial Consultation</h3>
                   <p>
-                    Before booking your first session, I offer a free 15-20 minute consultation 
-                    to discuss your needs and answer any questions you may have about therapy.
+                    Before booking your first session, I offer a free 15-20 minute consultation to
+                    discuss your needs and answer any questions you may have about therapy.
                   </p>
                 </div>
 
@@ -149,8 +149,8 @@ export default function Pricing() {
                 <div className={styles.cancellation}>
                   <h4>Cancellation Policy</h4>
                   <p>
-                    Please provide at least 24 hours notice for cancellations. 
-                    Late cancellations may be subject to the full session fee.
+                    Please provide at least 24 hours notice for cancellations. Late cancellations
+                    may be subject to the full session fee.
                   </p>
                 </div>
               </div>
@@ -159,13 +159,14 @@ export default function Pricing() {
             <section className={styles.valueSection}>
               <h3>Investment in Your Wellbeing</h3>
               <p>
-                Therapy is an investment in your mental health and overall wellbeing. Each session 
-                provides a dedicated space for you to explore your thoughts and feelings with a 
-                qualified professional who is committed to supporting your journey towards healing and growth.
+                Therapy is an investment in your mental health and overall wellbeing. Each session
+                provides a dedicated space for you to explore your thoughts and feelings with a
+                qualified professional who is committed to supporting your journey towards healing
+                and growth.
               </p>
               <p>
-                As a BACP registered psychodynamic psychotherapist, I bring years of training and 
-                experience to help you understand patterns in your life and develop healthier ways 
+                As a BACP registered psychodynamic psychotherapist, I bring years of training and
+                experience to help you understand patterns in your life and develop healthier ways
                 of coping with challenges.
               </p>
             </section>

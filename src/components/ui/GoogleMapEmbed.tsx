@@ -17,7 +17,8 @@ export default function GoogleMapEmbed({ className }: GoogleMapEmbedProps) {
         aria-label="Map showing location of Next Generation Therapy at Colchester Business Centre"
       />
       <p style={{ fontSize: '0.875rem', color: '#666', marginTop: '0.5rem', textAlign: 'center' }}>
-        <strong>Our Location:</strong> Colchester Business Centre, 1 George Williams Way, Colchester CO1 2JS
+        <strong>Our Location:</strong> Colchester Business Centre, 1 George Williams Way, Colchester
+        CO1 2JS
       </p>
     </div>
   );

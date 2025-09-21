@@ -5,7 +5,11 @@ import Footer from '../../src/components/layout/footer';
 // Mock Next.js components
 jest.mock('next/link', () => {
   return function MockLink({ children, href, ...props }: any) {
-    return <a href={href} {...props}>{children}</a>;
+    return (
+      <a href={href} {...props}>
+        {children}
+      </a>
+    );
   };
 });
 
@@ -48,7 +52,10 @@ describe('Footer Component', () => {
       render(<Footer />);
 
       const mapsLink = screen.getByRole('link', { name: /colchester business centre/i });
-      expect(mapsLink).toHaveAttribute('href', 'https://www.google.com/maps?q=Colchester+Business+Centre,+1+George+Williams+Way,+Colchester+CO1+2JS');
+      expect(mapsLink).toHaveAttribute(
+        'href',
+        'https://www.google.com/maps?q=Colchester+Business+Centre,+1+George+Williams+Way,+Colchester+CO1+2JS'
+      );
       expect(mapsLink).toHaveAttribute('target', '_blank');
       expect(mapsLink).toHaveAttribute('rel', 'noopener noreferrer');
     });
@@ -98,7 +105,10 @@ describe('Footer Component', () => {
       render(<Footer />);
 
       const facebookLink = screen.getByRole('link', { name: 'Facebook' });
-      expect(facebookLink).toHaveAttribute('href', 'https://www.facebook.com/share/16dg5gpZRo/?mibextid=wwXIfr');
+      expect(facebookLink).toHaveAttribute(
+        'href',
+        'https://www.facebook.com/share/16dg5gpZRo/?mibextid=wwXIfr'
+      );
       expect(facebookLink).toHaveAttribute('target', '_blank');
       expect(facebookLink).toHaveAttribute('rel', 'noopener noreferrer');
       expect(facebookLink).toHaveAttribute('title', 'Visit our Facebook page');
@@ -113,7 +123,10 @@ describe('Footer Component', () => {
       render(<Footer />);
 
       const instagramLink = screen.getByRole('link', { name: 'Instagram' });
-      expect(instagramLink).toHaveAttribute('href', 'https://www.instagram.com/nextgentherapycolchester?igsh=MWx2N2g0NnI0eTVveQ%3D%3D&utm_source=qr');
+      expect(instagramLink).toHaveAttribute(
+        'href',
+        'https://www.instagram.com/nextgentherapycolchester?igsh=MWx2N2g0NnI0eTVveQ%3D%3D&utm_source=qr'
+      );
       expect(instagramLink).toHaveAttribute('target', '_blank');
       expect(instagramLink).toHaveAttribute('rel', 'noopener noreferrer');
       expect(instagramLink).toHaveAttribute('title', 'Visit our Instagram page');
@@ -126,7 +139,10 @@ describe('Footer Component', () => {
       render(<Footer />);
 
       const bacpLink = screen.getByRole('link', { name: 'BACP' });
-      expect(bacpLink).toHaveAttribute('href', 'https://www.bacp.co.uk/therapists/385976/andreea-horhocea/london-e16');
+      expect(bacpLink).toHaveAttribute(
+        'href',
+        'https://www.bacp.co.uk/therapists/385976/andreea-horhocea/london-e16'
+      );
       expect(bacpLink).toHaveAttribute('target', '_blank');
       expect(bacpLink).toHaveAttribute('rel', 'noopener noreferrer');
       expect(bacpLink).toHaveAttribute('title', 'Visit our BACP page');
@@ -149,10 +165,10 @@ describe('Footer Component', () => {
         { name: 'FAQ', href: '/faq' },
         { name: 'Trust & Care', href: '/testimonials' },
         { name: 'About Andreea', href: '/about' },
-        { name: 'Location', href: '/location' }
+        { name: 'Location', href: '/location' },
       ];
 
-      expectedQuickLinks.forEach(link => {
+      expectedQuickLinks.forEach((link) => {
         const linkElement = quickLinksSection?.querySelector(`a[href="${link.href}"]`);
         expect(linkElement).toBeInTheDocument();
         expect(linkElement).toHaveTextContent(link.name);
@@ -177,7 +193,9 @@ describe('Footer Component', () => {
       render(<Footer />);
 
       const currentYear = new Date().getFullYear();
-      const copyrightText = screen.getByText(`© ${currentYear} Next Generation Therapy. All rights reserved.`);
+      const copyrightText = screen.getByText(
+        `© ${currentYear} Next Generation Therapy. All rights reserved.`
+      );
       expect(copyrightText).toBeInTheDocument();
     });
 
@@ -205,7 +223,7 @@ describe('Footer Component', () => {
       const headings = screen.getAllByRole('heading', { level: 3 });
       expect(headings).toHaveLength(3);
 
-      const headingTexts = headings.map(h => h.textContent);
+      const headingTexts = headings.map((h) => h.textContent);
       expect(headingTexts).toContain('Location');
       expect(headingTexts).toContain('Hours');
       expect(headingTexts).toContain('Contact me');
@@ -226,11 +244,11 @@ describe('Footer Component', () => {
       render(<Footer />);
 
       // Get all external links (target="_blank")
-      const externalLinks = screen.getAllByRole('link').filter(link =>
-        link.getAttribute('target') === '_blank'
-      );
+      const externalLinks = screen
+        .getAllByRole('link')
+        .filter((link) => link.getAttribute('target') === '_blank');
 
-      externalLinks.forEach(link => {
+      externalLinks.forEach((link) => {
         expect(link).toHaveAttribute('rel', 'noopener noreferrer');
       });
 

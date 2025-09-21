@@ -3,7 +3,7 @@ const path = require('path');
 const matter = require('gray-matter');
 
 module.exports = {
-  siteUrl: "https://nextgentherapy.co.uk",
+  siteUrl: 'https://nextgentherapy.co.uk',
   generateRobotsTxt: false, // We have our own custom robots.txt
   changefreq: 'weekly',
   priority: 0.7,
@@ -12,17 +12,17 @@ module.exports = {
     // Set strategic priority for SEO optimization
     let priority = 0.7;
     if (path === '/') priority = 1.0;
-    if (path === '/services') priority = 0.95;  // Boost services page (Page 6 → Page 1-3)
+    if (path === '/services') priority = 0.95; // Boost services page (Page 6 → Page 1-3)
     if (path === '/book-now') priority = 0.9;
-    if (path === '/pricing') priority = 0.9;  // High priority for commercial intent
+    if (path === '/pricing') priority = 0.9; // High priority for commercial intent
     if (path === '/faq') priority = 0.85;
-    if (path === '/testimonials') priority = 0.85;  // Social proof for conversions
-    if (path === '/location') priority = 0.8;  // Local SEO importance
+    if (path === '/testimonials') priority = 0.85; // Social proof for conversions
+    if (path === '/location') priority = 0.8; // Local SEO importance
     if (path === '/about') priority = 0.85;
     if (path === '/about-therapy') priority = 0.8;
     if (path === '/blog') priority = 0.75;
     if (path.startsWith('/blog/')) priority = 0.7;
-    
+
     return {
       loc: path,
       changefreq: config.changefreq,
@@ -32,19 +32,19 @@ module.exports = {
   },
   additionalPaths: async (config) => {
     const result = [];
-    
+
     // Add blog posts to sitemap with optimized metadata
     try {
       const postsDir = path.join(process.cwd(), 'src/content/blog');
       const files = fs.readdirSync(postsDir);
-      
-      files.forEach(filename => {
+
+      files.forEach((filename) => {
         if (filename.endsWith('.md')) {
           const filePath = path.join(postsDir, filename);
           const fileContent = fs.readFileSync(filePath, 'utf-8');
           const { data } = matter(fileContent);
           const slug = filename.replace(/\.md$/, '');
-          
+
           result.push({
             loc: `/blog/${slug}`,
             changefreq: 'monthly',
@@ -56,7 +56,7 @@ module.exports = {
     } catch (error) {
       console.warn('Error generating blog post sitemap entries:', error);
     }
-    
+
     return result;
   },
 };

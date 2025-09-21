@@ -9,7 +9,7 @@ describe('BlogPostSchema Component', () => {
     slug: 'understanding-anxiety-therapy',
     publishedAt: '2025-01-15',
     modifiedAt: '2025-01-16',
-    tags: ['therapy', 'anxiety', 'mental health']
+    tags: ['therapy', 'anxiety', 'mental health'],
   };
 
   it('renders without crashing', () => {
@@ -73,7 +73,7 @@ describe('BlogPostSchema Component', () => {
       '@type': 'Person',
       name: 'Andreea Horhocea',
       jobTitle: 'BACP Registered Psychodynamic Psychotherapist',
-      url: 'https://nextgentherapy.co.uk/about'
+      url: 'https://nextgentherapy.co.uk/about',
     });
   });
 
@@ -90,8 +90,8 @@ describe('BlogPostSchema Component', () => {
         '@type': 'ImageObject',
         url: 'https://nextgentherapy.co.uk/images/logo.jpg',
         width: 400,
-        height: 400
-      }
+        height: 400,
+      },
     });
   });
 
@@ -110,7 +110,7 @@ describe('BlogPostSchema Component', () => {
 
     expect(jsonData.mainEntityOfPage).toEqual({
       '@type': 'WebPage',
-      '@id': 'https://nextgentherapy.co.uk/blog/understanding-anxiety-therapy'
+      '@id': 'https://nextgentherapy.co.uk/blog/understanding-anxiety-therapy',
     });
   });
 
@@ -137,7 +137,7 @@ describe('BlogPostSchema Component', () => {
     const propsWithDifferentSlug = {
       ...mockProps,
       slug: 'depression-therapy-techniques',
-      title: 'Depression Therapy Techniques'
+      title: 'Depression Therapy Techniques',
     };
 
     const { container } = render(<BlogPostSchema {...propsWithDifferentSlug} />);
@@ -151,14 +151,17 @@ describe('BlogPostSchema Component', () => {
   it('handles long titles appropriately', () => {
     const propsWithLongTitle = {
       ...mockProps,
-      title: 'A Very Long Title About Understanding Complex Anxiety Therapy Approaches and Treatment Methods'
+      title:
+        'A Very Long Title About Understanding Complex Anxiety Therapy Approaches and Treatment Methods',
     };
 
     const { container } = render(<BlogPostSchema {...propsWithLongTitle} />);
     const scriptTag = container.querySelector('script[type="application/ld+json"]');
     const jsonData = JSON.parse(scriptTag?.textContent || '{}');
 
-    expect(jsonData.headline).toBe('A Very Long Title About Understanding Complex Anxiety Therapy Approaches and Treatment Methods');
+    expect(jsonData.headline).toBe(
+      'A Very Long Title About Understanding Complex Anxiety Therapy Approaches and Treatment Methods'
+    );
   });
 
   it('validates JSON structure', () => {
@@ -206,7 +209,7 @@ describe('BlogPostSchema Component', () => {
     const propsWithSpecialChars = {
       ...mockProps,
       slug: 'self-esteem-therapy-tips',
-      title: 'Self-Esteem & Therapy Tips'
+      title: 'Self-Esteem & Therapy Tips',
     };
 
     const { container } = render(<BlogPostSchema {...propsWithSpecialChars} />);

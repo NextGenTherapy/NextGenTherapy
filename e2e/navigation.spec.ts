@@ -151,9 +151,10 @@ test.describe('Site Navigation', () => {
     const pageContent = await page.textContent('body');
 
     // Should either show 404 content or redirect to valid page
-    const is404 = pageContent?.includes('404') ||
-                  pageContent?.includes('not found') ||
-                  pageContent?.includes('page not found');
+    const is404 =
+      pageContent?.includes('404') ||
+      pageContent?.includes('not found') ||
+      pageContent?.includes('page not found');
 
     const hasValidContent = await page.getByRole('heading', { level: 1 }).isVisible();
 

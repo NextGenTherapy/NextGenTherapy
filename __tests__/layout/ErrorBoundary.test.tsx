@@ -64,7 +64,9 @@ describe('ErrorBoundary Component', () => {
       );
 
       expect(screen.getByText('Something went wrong')).toBeInTheDocument();
-      expect(screen.getByText(/we're sorry, but something unexpected happened/i)).toBeInTheDocument();
+      expect(
+        screen.getByText(/we're sorry, but something unexpected happened/i)
+      ).toBeInTheDocument();
       expect(screen.getByText(/please try refreshing the page/i)).toBeInTheDocument();
     });
 
@@ -216,32 +218,21 @@ describe('ErrorBoundary Component', () => {
 
   describe('Edge Cases', () => {
     it('handles null children', () => {
-      render(
-        <ErrorBoundary>
-          {null}
-        </ErrorBoundary>
-      );
+      render(<ErrorBoundary>{null}</ErrorBoundary>);
 
       // Should render without error
       expect(screen.queryByText('Something went wrong')).not.toBeInTheDocument();
     });
 
     it('handles undefined children', () => {
-      render(
-        <ErrorBoundary>
-          {undefined}
-        </ErrorBoundary>
-      );
+      render(<ErrorBoundary>{undefined}</ErrorBoundary>);
 
       // Should render without error
       expect(screen.queryByText('Something went wrong')).not.toBeInTheDocument();
     });
 
     it('handles empty children', () => {
-      render(
-        <ErrorBoundary>
-        </ErrorBoundary>
-      );
+      render(<ErrorBoundary></ErrorBoundary>);
 
       // Should render without error
       expect(screen.queryByText('Something went wrong')).not.toBeInTheDocument();
@@ -286,7 +277,7 @@ describe('ErrorBoundary Component', () => {
       expect(spy).toHaveBeenCalledWith(
         expect.any(Error),
         expect.objectContaining({
-          componentStack: expect.any(String)
+          componentStack: expect.any(String),
         })
       );
 

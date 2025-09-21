@@ -31,7 +31,7 @@ export default function CookieConsent() {
       const gtag = (window as any).gtag;
       if (gtag) {
         gtag('config', 'G-3528EDPEXW', {
-          send_page_view: false
+          send_page_view: false,
         });
       }
     }
@@ -44,8 +44,9 @@ export default function CookieConsent() {
       <div className={styles.content}>
         <h3>We use cookies</h3>
         <p>
-          We use essential cookies to make our site work. We&apos;d also like to use analytics cookies 
-          from Google Analytics and Vercel Analytics to understand how you use our services and to make improvements.
+          We use essential cookies to make our site work. We&apos;d also like to use analytics
+          cookies from Google Analytics and Vercel Analytics to understand how you use our services
+          and to make improvements.
         </p>
         <div className={styles.buttons}>
           <button onClick={acceptCookies} className={styles.acceptBtn}>

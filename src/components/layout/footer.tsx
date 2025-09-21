@@ -1,6 +1,6 @@
-import styles from "./footer.module.scss";
-import Image from "next/image";
-import Link from "next/link";
+import styles from './footer.module.scss';
+import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Footer() {
   return (
@@ -43,10 +43,7 @@ export default function Footer() {
             <h3>Contact me</h3>
           </Link>
           <p>
-            Email:{" "}
-            <a href="mailto:andreeatherapytoday@gmail.com">
-              andreeatherapytoday@gmail.com
-            </a>
+            Email: <a href="mailto:andreeatherapytoday@gmail.com">andreeatherapytoday@gmail.com</a>
           </p>
           <p>
             Phone: <a href="tel:+447448036017">+447448036017</a>
@@ -58,12 +55,7 @@ export default function Footer() {
               rel="noopener noreferrer"
               title="Visit our Facebook page"
             >
-              <Image
-                src="/images/facebook-opt.png"
-                alt="Facebook"
-                width={40}
-                height={40}
-              />
+              <Image src="/images/facebook-opt.png" alt="Facebook" width={40} height={40} />
             </a>
             <a
               href="https://www.instagram.com/nextgentherapycolchester?igsh=MWx2N2g0NnI0eTVveQ%3D%3D&utm_source=qr"
@@ -71,12 +63,7 @@ export default function Footer() {
               rel="noopener noreferrer"
               title="Visit our Instagram page"
             >
-              <Image
-                src="/images/instagram-opt.png"
-                alt="Instagram"
-                width={40}
-                height={40}
-              />
+              <Image src="/images/instagram-opt.png" alt="Instagram" width={40} height={40} />
             </a>
             <a
               href="https://www.bacp.co.uk/therapists/385976/andreea-horhocea/london-e16"
@@ -89,7 +76,7 @@ export default function Footer() {
           </div>
         </section>
       </section>
-      
+
       <div className={styles.footerBottom}>
         <div className={styles.quickLinks}>
           <Link href="/services">Therapy Services</Link>
@@ -106,10 +93,10 @@ export default function Footer() {
         <div className={styles.copyright}>
           <p>&copy; {new Date().getFullYear()} Next Generation Therapy. All rights reserved.</p>
           <p className={styles.developer}>
-            Developed by{" "}
-            <a 
-              href="https://lstevens.dev" 
-              target="_blank" 
+            Developed by{' '}
+            <a
+              href="https://lstevens.dev"
+              target="_blank"
               rel="noopener noreferrer"
               className={styles.developerLink}
             >

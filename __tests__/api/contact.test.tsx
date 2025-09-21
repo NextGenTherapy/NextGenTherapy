@@ -5,18 +5,22 @@ import { POST } from '../../src/app/api/contact/route';
 jest.mock('resend', () => ({
   Resend: jest.fn().mockImplementation(() => ({
     emails: {
-      send: jest.fn()
-    }
-  }))
+      send: jest.fn(),
+    },
+  })),
 }));
 
 // Mock rate limiting - using a simple mock since rateLimiter might not exist
 const mockRateLimit = jest.fn();
-jest.mock('../../src/lib/rateLimiter', () => ({
-  rateLimiter: {
-    check: mockRateLimit
-  }
-}), { virtual: true });
+jest.mock(
+  '../../src/lib/rateLimiter',
+  () => ({
+    rateLimiter: {
+      check: mockRateLimit,
+    },
+  }),
+  { virtual: true }
+);
 
 // Mock console methods to avoid noise in tests
 const originalConsoleError = console.error;
@@ -52,8 +56,8 @@ describe('Contact API Route', () => {
       method,
       headers: new Headers({
         'content-type': 'application/json',
-        'x-forwarded-for': '127.0.0.1'
-      })
+        'x-forwarded-for': '127.0.0.1',
+      }),
     } as unknown as NextRequest;
   };
 
@@ -61,13 +65,13 @@ describe('Contact API Route', () => {
     const validContactData = {
       name: 'John Doe',
       email: 'john@example.com',
-      message: 'Hello, I would like to book a session.'
+      message: 'Hello, I would like to book a session.',
     };
 
     it('successfully sends email with valid data', async () => {
       mockResend.emails.send.mockResolvedValue({
         data: { id: 'email-123' },
-        error: null
+        error: null,
       });
 
       const request = createMockRequest(validContactData);
@@ -81,14 +85,14 @@ describe('Contact API Route', () => {
         from: 'noreply@nextgentherapy.co.uk',
         to: 'andreeatherapytoday@gmail.com',
         subject: 'New Contact Form Submission',
-        html: expect.stringContaining('John Doe')
+        html: expect.stringContaining('John Doe'),
       });
     });
 
     it('handles missing required fields', async () => {
       const incompleteData = {
         name: 'John Doe',
-        email: 'john@example.com'
+        email: 'john@example.com',
         // missing message
       };
 
@@ -104,7 +108,7 @@ describe('Contact API Route', () => {
     it('validates email format', async () => {
       const invalidEmailData = {
         ...validContactData,
-        email: 'invalid-email'
+        email: 'invalid-email',
       };
 
       const request = createMockRequest(invalidEmailData);
@@ -121,7 +125,7 @@ describe('Contact API Route', () => {
         success: false,
         limit: 5,
         remaining: 0,
-        reset: Date.now() + 900000
+        reset: Date.now() + 900000,
       });
 
       const request = createMockRequest(validContactData);
@@ -136,7 +140,7 @@ describe('Contact API Route', () => {
     it('handles Resend API errors', async () => {
       mockResend.emails.send.mockResolvedValue({
         data: null,
-        error: { message: 'API Error' }
+        error: { message: 'API Error' },
       });
 
       const request = createMockRequest(validContactData);
@@ -164,12 +168,12 @@ describe('Contact API Route', () => {
       const dataWithHtml = {
         name: '<script>alert("hack")</script>John Doe',
         email: 'john@example.com',
-        message: '<img src="x" onerror="alert(1)">Hello'
+        message: '<img src="x" onerror="alert(1)">Hello',
       };
 
       mockResend.emails.send.mockResolvedValue({
         data: { id: 'email-123' },
-        error: null
+        error: null,
       });
 
       const request = createMockRequest(dataWithHtml);
@@ -180,7 +184,7 @@ describe('Contact API Route', () => {
         from: 'noreply@nextgentherapy.co.uk',
         to: 'andreeatherapytoday@gmail.com',
         subject: 'New Contact Form Submission',
-        html: expect.not.stringContaining('<script>')
+        html: expect.not.stringContaining('<script>'),
       });
     });
 
@@ -190,8 +194,8 @@ describe('Contact API Route', () => {
         method: 'POST',
         headers: new Headers({
           'content-type': 'application/json',
-          'x-forwarded-for': '127.0.0.1'
-        })
+          'x-forwarded-for': '127.0.0.1',
+        }),
       } as unknown as NextRequest;
 
       const response = await POST(request);
@@ -214,7 +218,7 @@ describe('Contact API Route', () => {
     it('generates proper email content', async () => {
       mockResend.emails.send.mockResolvedValue({
         data: { id: 'email-123' },
-        error: null
+        error: null,
       });
 
       const request = createMockRequest(validContactData);
@@ -241,13 +245,13 @@ describe('Contact API Route', () => {
     it('calls rate limiter with correct parameters', async () => {
       mockResend.emails.send.mockResolvedValue({
         data: { id: 'email-123' },
-        error: null
+        error: null,
       });
 
       const request = createMockRequest({
         name: 'John Doe',
         email: 'john@example.com',
-        message: 'Hello'
+        message: 'Hello',
       });
 
       await POST(request);

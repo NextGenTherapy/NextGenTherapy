@@ -1,19 +1,23 @@
-import { NextRequest, NextResponse } from "next/server";
-import { Resend } from "resend";
-import validator from "validator";
+import { NextRequest, NextResponse } from 'next/server';
+import { Resend } from 'resend';
+import validator from 'validator';
 
 // Rate limiting with automatic cleanup
 const rateLimitMap = new Map<string, { count: number; resetTime: number }>();
 
 // Cleanup old rate limit entries every 30 minutes
-const cleanupInterval = setInterval(() => {
-  const now = Date.now();
-  for (const [ip, data] of rateLimitMap.entries()) {
-    if (now >= data.resetTime + (30 * 60 * 1000)) { // Extra 30 min buffer
-      rateLimitMap.delete(ip);
+const cleanupInterval = setInterval(
+  () => {
+    const now = Date.now();
+    for (const [ip, data] of rateLimitMap.entries()) {
+      if (now >= data.resetTime + 30 * 60 * 1000) {
+        // Extra 30 min buffer
+        rateLimitMap.delete(ip);
+      }
     }
-  }
-}, 30 * 60 * 1000);
+  },
+  30 * 60 * 1000
+);
 
 // Cleanup on process termination
 process.on('SIGTERM', () => {
@@ -21,12 +25,12 @@ process.on('SIGTERM', () => {
   rateLimitMap.clear();
 });
 
-
 // Comprehensive input sanitization for healthcare compliance
 const sanitizeInput = (input: string): string => {
   if (!input || typeof input !== 'string') return '';
 
-  return validator.escape(input.trim())
+  return validator
+    .escape(input.trim())
     .replace(/javascript:/gi, '')
     .replace(/on\w+=/gi, '')
     .replace(/data:/gi, '')
@@ -43,7 +47,7 @@ const sanitizeForPlainText = (input: string): string => {
 const resendApiKey = process.env.RESEND_API_KEY;
 
 if (!resendApiKey) {
-  console.error("RESEND_API_KEY environment variable is not set");
+  console.error('RESEND_API_KEY environment variable is not set');
 }
 
 const resend = resendApiKey ? new Resend(resendApiKey) : null;
@@ -60,14 +64,17 @@ export async function POST(req: NextRequest) {
       const rateLimitData = rateLimitMap.get(ip);
       if (rateLimitData && now < rateLimitData.resetTime && rateLimitData.count >= maxRequests) {
         return NextResponse.json(
-          { success: false, error: "Too many requests. Please try again later." },
+          { success: false, error: 'Too many requests. Please try again later.' },
           { status: 429 }
         );
       }
       if (rateLimitData && now >= rateLimitData.resetTime) {
         rateLimitMap.set(ip, { count: 1, resetTime: now + windowMs });
       } else if (rateLimitData) {
-        rateLimitMap.set(ip, { count: rateLimitData.count + 1, resetTime: rateLimitData.resetTime });
+        rateLimitMap.set(ip, {
+          count: rateLimitData.count + 1,
+          resetTime: rateLimitData.resetTime,
+        });
       }
     } else {
       rateLimitMap.set(ip, { count: 1, resetTime: now + windowMs });
@@ -84,15 +91,15 @@ export async function POST(req: NextRequest) {
     // Enhanced validation on sanitized inputs
     if (!sanitizedFirstName || !sanitizedLastName || !sanitizedEmail || !sanitizedMessage) {
       return NextResponse.json(
-        { success: false, error: "All fields are required." },
-        { status: 400 },
+        { success: false, error: 'All fields are required.' },
+        { status: 400 }
       );
     }
 
     // Validate email format with library validation
     if (!validator.isEmail(sanitizedEmail)) {
       return NextResponse.json(
-        { success: false, error: "Please enter a valid email address." },
+        { success: false, error: 'Please enter a valid email address.' },
         { status: 400 }
       );
     }
@@ -100,30 +107,30 @@ export async function POST(req: NextRequest) {
     // Additional length and content validation
     if (sanitizedFirstName.length > 50 || sanitizedLastName.length > 50) {
       return NextResponse.json(
-        { success: false, error: "Name fields are too long." },
+        { success: false, error: 'Name fields are too long.' },
         { status: 400 }
       );
     }
 
     if (sanitizedMessage.length > 5000) {
       return NextResponse.json(
-        { success: false, error: "Message is too long. Please keep it under 5000 characters." },
+        { success: false, error: 'Message is too long. Please keep it under 5000 characters.' },
         { status: 400 }
       );
     }
 
     // Check if resend is properly initialized
     if (!resend) {
-      console.error("Resend not initialized - missing API key");
+      console.error('Resend not initialized - missing API key');
       return NextResponse.json(
-        { success: false, error: "Email service not configured." },
+        { success: false, error: 'Email service not configured.' },
         { status: 500 }
       );
     }
 
     await resend.emails.send({
-      from: "Contact Form <noreply@nextgentherapy.co.uk>",
-      to: "andreeatherapytoday@gmail.com",
+      from: 'Contact Form <noreply@nextgentherapy.co.uk>',
+      to: 'andreeatherapytoday@gmail.com',
       subject: `New Contact Form Submission from ${sanitizedFirstName} ${sanitizedLastName}`,
       replyTo: sanitizedEmail,
       html: `
@@ -144,10 +151,7 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ success: true });
   } catch (error) {
     // Log error for debugging (optional)
-    console.error("Email send error:", error);
-    return NextResponse.json(
-      { success: false, error: "Failed to send email." },
-      { status: 500 },
-    );
+    console.error('Email send error:', error);
+    return NextResponse.json({ success: false, error: 'Failed to send email.' }, { status: 500 });
   }
 }

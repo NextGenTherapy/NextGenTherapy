@@ -1,10 +1,13 @@
 ---
-title: "Understanding Anxiety: The Hidden Weight"
-date: "2025-05-15"
+title: 'Understanding Anxiety: The Hidden Weight'
+date: '2025-05-15'
 summary: "Anxiety isn't always visible. Here's what it can really feel like—and how therapy can help."
----itle: "Understanding Anxiety: The Hidden Weight"
+---
+
+itle: "Understanding Anxiety: The Hidden Weight"
 date: "15-05-2025"
 summary: "Anxiety isn’t always visible. Here’s what it can really feel like—and how therapy can help."
+
 ---
 
 Anxiety is often misunderstood. It doesn’t always look like panic attacks or visible distress. Sometimes, it hides behind a composed face, a busy schedule, or a long to-do list. Whether you experience occasional worry or persistent unease, anxiety can feel like you’re carrying an invisible weight that others can’t see but you can never put down.

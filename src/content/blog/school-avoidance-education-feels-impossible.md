@@ -1,9 +1,9 @@
 ---
-title: "School Avoidance: When Education Feels Impossible"
-date: "2025-09-18"
-summary: "Understanding emotionally based school avoidance (EBSA) - beyond truancy to the genuine emotional distress that prevents young people from attending school. Professional insights and support strategies."
-category: "professional"
-keywords: "school avoidance, school refusal, EBSA, emotionally based school avoidance, school anxiety, education anxiety, school phobia, attendance issues"
+title: 'School Avoidance: When Education Feels Impossible'
+date: '2025-09-18'
+summary: 'Understanding emotionally based school avoidance (EBSA) - beyond truancy to the genuine emotional distress that prevents young people from attending school. Professional insights and support strategies from Colchester therapist.'
+category: 'professional'
+keywords: 'school avoidance Colchester, school refusal therapy Essex, EBSA therapy, emotionally based school avoidance, school anxiety therapy Colchester, education anxiety support, school phobia therapy, attendance issues help Colchester, school refusal specialist Essex'
 ---
 
 ## Beyond Truancy: Understanding Emotionally Based School Avoidance
@@ -131,4 +131,4 @@ While school avoidance can feel overwhelming for families, recovery is absolutel
 
 The key is understanding that this isn't a battle to be won, but a young person's distress signal that needs to be heard and responded to with compassion and expertise. With the right support, what begins as avoidance can become a pathway to deeper self-understanding and resilience.
 
-If you're supporting a young person through school avoidance, please know that you're not alone, and there is help available. The journey may be longer than you hoped, but with patience, understanding, and appropriate support, your young person can find their way back to learning and growth.
+If you're supporting a young person through school avoidance, please know that you're not alone, and there is help available. Specialized [school anxiety therapy](/school-anxiety-therapy) can provide the understanding and support your family needs during this challenging time. For younger children experiencing school difficulties, [child therapy](/child-therapy) offers age-appropriate support, while [teenage therapy](/teenage-therapy) provides the confidential space teenagers need to work through their school-related struggles. The journey may be longer than you hoped, but with patience, understanding, and appropriate support, your young person can find their way back to learning and growth.

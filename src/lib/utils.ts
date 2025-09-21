@@ -30,19 +30,19 @@ export function validateContactForm(data: {
   const errors: Record<string, string> = {};
 
   if (data.firstName.trim().length < 2) {
-    errors.firstName = "First name must be at least 2 characters long";
+    errors.firstName = 'First name must be at least 2 characters long';
   }
 
   if (data.lastName.trim().length < 2) {
-    errors.lastName = "Last name must be at least 2 characters long";
+    errors.lastName = 'Last name must be at least 2 characters long';
   }
 
   if (!isValidEmail(data.email)) {
-    errors.email = "Please enter a valid email address";
+    errors.email = 'Please enter a valid email address';
   }
 
   if (data.message.trim().length < 10) {
-    errors.message = "Message must be at least 10 characters long";
+    errors.message = 'Message must be at least 10 characters long';
   }
 
   return errors;
@@ -56,7 +56,7 @@ export function formatDate(dateString: string): string {
   return date.toLocaleDateString('en-GB', {
     year: 'numeric',
     month: 'long',
-    day: 'numeric'
+    day: 'numeric',
   });
 }
 

@@ -112,7 +112,7 @@
     text-align: left;
     box-shadow: none;
   }
-  
+
   .navListOpen {
     display: flex;
     flex-direction: row;
@@ -182,16 +182,18 @@
   transform-origin: center;
 }
 
-.menuButton[aria-expanded="true"] .hamburgerIcon span:nth-child(1) {
-  transform: rotate(45deg) translate(var(--transform-translate-small), var(--transform-translate-small));
+.menuButton[aria-expanded='true'] .hamburgerIcon span:nth-child(1) {
+  transform: rotate(45deg)
+    translate(var(--transform-translate-small), var(--transform-translate-small));
 }
 
-.menuButton[aria-expanded="true"] .hamburgerIcon span:nth-child(2) {
+.menuButton[aria-expanded='true'] .hamburgerIcon span:nth-child(2) {
   opacity: 0;
 }
 
-.menuButton[aria-expanded="true"] .hamburgerIcon span:nth-child(3) {
-  transform: rotate(-45deg) translate(var(--transform-translate-small), calc(-1 * var(--transform-translate-small)));
+.menuButton[aria-expanded='true'] .hamburgerIcon span:nth-child(3) {
+  transform: rotate(-45deg)
+    translate(var(--transform-translate-small), calc(-1 * var(--transform-translate-small)));
 }
 
 /* Focus indicators */
@@ -204,5 +206,3 @@
   outline: var(--outline-width) solid var(--color-accent);
   outline-offset: var(--outline-offset);
 }
-
-

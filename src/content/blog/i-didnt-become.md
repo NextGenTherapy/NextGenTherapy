@@ -1,7 +1,7 @@
 ---
 title: "I didn't become a therapist because…"
-date: "2025-04-10"
-summary: "Why I became a therapist, and what it means to live with an overactive mind and inner critic."
+date: '2025-04-10'
+summary: 'Why I became a therapist, and what it means to live with an overactive mind and inner critic.'
 ---
 
 I didn't become a therapist because I had it all figured out, actually very far from it. BUT I became one because I knew what it feels like to be stuck inside your own head, unable to express all the things that you're thinking or feeling, often being in a loop of overthinking unable to see a way out and often criticising the smallest actions or reactions. I also remember that growing up I was made to believe that being vulnerable meant weakness and that no matter the circumstances I had to do it all, alone and failure was not an option. As you probably have guessed by now I am not a follower of these beliefs anymore but I am sure I am not the only person who had these experiences and this mindset.

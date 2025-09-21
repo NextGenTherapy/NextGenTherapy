@@ -1,11 +1,11 @@
-import Link from "next/link";
-import styles from "./button.module.scss";
-import { ButtonHTMLAttributes } from "react";
+import Link from 'next/link';
+import styles from './button.module.scss';
+import { ButtonHTMLAttributes } from 'react';
 
 interface ButtonProps extends Omit<ButtonHTMLAttributes<HTMLButtonElement>, 'type'> {
   href?: string;
   children: React.ReactNode;
-  type?: "button" | "submit" | "reset";
+  type?: 'button' | 'submit' | 'reset';
   disabled?: boolean;
   onClick?: () => void;
   className?: string;
@@ -14,14 +14,14 @@ interface ButtonProps extends Omit<ButtonHTMLAttributes<HTMLButtonElement>, 'typ
 export default function Button({
   href,
   children,
-  type = "button",
+  type = 'button',
   disabled = false,
   onClick,
   className,
   ...restProps
 }: ButtonProps) {
   // Only allow internal navigation to prevent open redirects
-  if (href && href.startsWith("/")) {
+  if (href && href.startsWith('/')) {
     return (
       <Link href={href} className={className || styles.button}>
         {children}
@@ -31,9 +31,9 @@ export default function Button({
 
   // Render a button (can be used as submit/reset/button)
   return (
-    <button 
-      type={type} 
-      className={className || styles.button} 
+    <button
+      type={type}
+      className={className || styles.button}
       disabled={disabled}
       onClick={onClick}
       {...restProps}

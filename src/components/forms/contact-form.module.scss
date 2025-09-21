@@ -68,7 +68,9 @@
   border-radius: var(--border-radius);
   font-size: var(--font-size-small);
   box-sizing: border-box;
-  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+  transition:
+    border-color var(--transition-fast),
+    box-shadow var(--transition-fast);
   min-height: 44px;
   resize: none;
   font-family: var(--font-family);
@@ -98,7 +100,9 @@
   border-radius: var(--border-radius);
   font-size: var(--font-size-small);
   box-sizing: border-box;
-  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+  transition:
+    border-color var(--transition-fast),
+    box-shadow var(--transition-fast);
   overflow-y: auto;
   resize: none;
   font-family: var(--font-family);

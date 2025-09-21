@@ -23,16 +23,19 @@ This project provides information about therapy services, blog articles, and a c
 ## ✅ Recent Improvements (2025-01-01)
 
 ### Performance
+
 - ✅ Dynamic imports for heavy components (contact form)
 - ✅ Loading states with animated spinners
 - ✅ Optimized image loading with Next.js Image component
 
 ### Security
+
 - ✅ Rate limiting on contact form API (10 requests per 15 minutes)
 - ✅ Enhanced input validation and sanitization
 - ✅ XSS protection and secure headers
 
 ### Accessibility
+
 - ✅ Comprehensive keyboard navigation support
 - ✅ Screen reader compatibility with proper ARIA attributes
 - ✅ Focus management and visual indicators
@@ -41,12 +44,14 @@ This project provides information about therapy services, blog articles, and a c
 - ✅ High contrast mode support
 
 ### User Experience
+
 - ✅ Enhanced contact form with real-time validation
 - ✅ Better error messages and feedback
 - ✅ Loading states for form submission
 - ✅ Animated hamburger menu for mobile
 
 ### SEO & Technical
+
 - ✅ Structured data (JSON-LD) for services
 - ✅ Global error boundaries
 - ✅ Improved meta tags and social sharing
@@ -102,6 +107,7 @@ public/
 ## 🛠️ Getting Started
 
 1. **Install dependencies:**
+
    ```sh
    npm install
    ```
@@ -113,6 +119,7 @@ public/
      ```
 
 3. **Run the development server:**
+
    ```sh
    npm run dev
    ```
@@ -160,4 +167,4 @@ MIT
 
 ---
 
-*Built and maintained by [Luke Stevens](https://www.linkedin.com/in/luke-stevens-a117bab5/)
+\*Built and maintained by [Luke Stevens](https://www.linkedin.com/in/luke-stevens-a117bab5/)

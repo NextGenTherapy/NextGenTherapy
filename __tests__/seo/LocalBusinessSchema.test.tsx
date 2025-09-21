@@ -40,7 +40,7 @@ describe('LocalBusinessSchema Component', () => {
       addressLocality: 'Colchester',
       addressRegion: 'Essex',
       postalCode: 'CO1 2JS',
-      addressCountry: 'GB'
+      addressCountry: 'GB',
     });
   });
 
@@ -52,7 +52,7 @@ describe('LocalBusinessSchema Component', () => {
     expect(jsonData.geo).toEqual({
       '@type': 'GeoCoordinates',
       latitude: 51.8959,
-      longitude: 0.9035
+      longitude: 0.9035,
     });
   });
 
@@ -95,9 +95,9 @@ describe('LocalBusinessSchema Component', () => {
       geoMidpoint: {
         '@type': 'GeoCoordinates',
         latitude: 51.8959,
-        longitude: 0.9035
+        longitude: 0.9035,
       },
-      geoRadius: '50000'
+      geoRadius: '50000',
     });
   });
 

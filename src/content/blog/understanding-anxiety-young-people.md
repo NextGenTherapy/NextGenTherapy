@@ -1,9 +1,9 @@
 ---
-title: "Understanding Anxiety in Young People: More Than Just Nerves"
-date: "2025-09-18"
-summary: "Professional insights into anxiety in young people - recognizing signs, understanding triggers, and providing effective support. Expert guidance on when anxiety needs professional intervention."
-category: "professional"
-keywords: "anxiety young people, teenage anxiety, adolescent anxiety, youth mental health, anxiety therapy, young person anxiety support, teen anxiety help"
+title: 'Understanding Anxiety in Young People: More Than Just Nerves'
+date: '2025-09-18'
+summary: 'Professional insights into anxiety in young people - recognizing signs, understanding triggers, and providing effective support. Expert guidance from Colchester therapist on when anxiety needs professional intervention.'
+category: 'professional'
+keywords: 'anxiety young people Colchester, teenage anxiety Essex, adolescent anxiety therapy, youth mental health Colchester, anxiety therapy teenagers, young person anxiety support, teen anxiety help Colchester, youth therapist Essex, teenage therapy Colchester, adolescent counselling'
 ---
 
 ## Breaking Down the Walls of Worry
@@ -81,7 +81,7 @@ School anxiety is particularly complex because education is mandatory, yet for s
 - Trauma responses to past school experiences
 - Perfectionism and fear of making mistakes
 
-Working with school anxiety requires patience, understanding, and often collaboration with educational settings. The goal isn't always immediate return to full-time education, but rather building the young person's capacity to engage with learning in a way that feels safe and sustainable.
+Working with school anxiety requires patience, understanding, and often collaboration with educational settings. The goal isn't always immediate return to full-time education, but rather building the young person's capacity to engage with learning in a way that feels safe and sustainable. If your child is struggling with school-related anxiety, [school anxiety therapy](/school-anxiety-therapy) provides specialized support for these challenging situations.
 
 ## The Path Forward
 
@@ -89,4 +89,4 @@ Recovery from anxiety isn't linear. There will be good days and difficult days, 
 
 In my practice in Colchester and online, I've witnessed remarkable transformations when young people are given the space to explore their inner world without judgment. Anxiety, while challenging, can also be a gateway to deeper self-understanding and authentic connection with others.
 
-If you're a young person reading this, please know that seeking help isn't a sign of weakness—it's a sign of wisdom. If you're a parent, trust your instincts about your child's needs, and know that support is available.
+If you're a young person reading this, please know that seeking help isn't a sign of weakness—it's a sign of wisdom. You can learn more about [teenage therapy support](/teenage-therapy) or explore how [young adult therapy](/young-adult-therapy) can help with anxiety challenges. If you're a parent, trust your instincts about your child's needs—[child therapy](/child-therapy) can provide the specialized support your child needs to manage anxiety effectively.

@@ -1,61 +1,64 @@
-import type { Metadata } from "next";
-import Image from "next/image";
-import Link from "next/link";
-import styles from "./page.module.scss";
+import type { Metadata } from 'next';
+import Image from 'next/image';
+import Link from 'next/link';
+import styles from './page.module.scss';
 
 function getMetadata(): Metadata {
-  const siteUrl =
-    process.env.NEXT_PUBLIC_SITE_URL || "https://nextgentherapy.co.uk";
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://nextgentherapy.co.uk';
 
   return {
     metadataBase: new URL(siteUrl),
-    title: "Colchester Therapist | BACP Registered | Next Generation",
+    title: 'Colchester Therapist | BACP Registered | Next Generation',
     description:
-      "Professional therapy in Colchester & online. BACP registered therapist offering anxiety, depression & relationship therapy. Free consultation. Book today!",
+      'Professional therapy in Colchester & online. BACP registered therapist offering anxiety, depression & relationship therapy for all ages. Specialising in young people & families. Free consultation.',
     keywords: [
-      "therapy Colchester",
-      "therapist Colchester",
-      "therapy sessions Colchester",
-      "BACP therapist Essex",
-      "registered therapist Colchester",
-      "qualified therapist Essex",
-      "professional therapy Colchester",
-      "therapy Colchester Essex",
-      "online therapy UK",
-      "depression therapy Colchester",
-      "anxiety therapy Colchester",
-      "relationship therapy Essex",
-      "child therapy Colchester",
-      "mental health therapy Essex",
-      "therapy services Colchester",
-      "Andreea Horhocea therapist",
-      "therapist near me Essex",
-      "therapy appointments Colchester"
+      'therapy Colchester',
+      'therapist Colchester',
+      'therapy sessions Colchester',
+      'BACP therapist Essex',
+      'registered therapist Colchester',
+      'qualified therapist Essex',
+      'professional therapy Colchester',
+      'therapy Colchester Essex',
+      'online therapy UK',
+      'depression therapy Colchester',
+      'anxiety therapy Colchester',
+      'relationship therapy Essex',
+      'child therapy Colchester',
+      'teenage therapy Colchester',
+      'young adult therapy',
+      'mental health therapy Essex',
+      'therapy services Colchester',
+      'Andreea Horhocea therapist',
+      'therapist near me Essex',
+      'therapy appointments Colchester',
+      'family therapy support',
+      'psychodynamic therapy',
     ],
-    authors: [{ name: "Andreea Horhocea" }],
+    authors: [{ name: 'Andreea Horhocea' }],
     openGraph: {
-      title: "Therapy Colchester | BACP Registered Therapist",
+      title: 'Therapy Colchester | BACP Registered Therapist',
       description:
-        "Professional therapy in Colchester & online. Expert help for anxiety, depression, relationships & personal growth. BACP registered therapist.",
+        'Professional therapy in Colchester & online. Expert help for anxiety, depression, relationships & personal growth. Specialising in young people & families. BACP registered therapist.',
       url: siteUrl,
-      siteName: "Next Generation Therapy",
-      locale: "en_GB",
-      type: "website",
+      siteName: 'Next Generation Therapy',
+      locale: 'en_GB',
+      type: 'website',
       images: [
         {
-          url: "https://nextgentherapy.co.uk/images/default-social-share.jpg",
+          url: 'https://nextgentherapy.co.uk/images/default-social-share.jpg',
           width: 1200,
           height: 630,
-          alt: "Next Generation Therapy - Professional Therapy Services in Colchester",
+          alt: 'Next Generation Therapy - Professional Therapy Services in Colchester',
         },
       ],
     },
     twitter: {
-      card: "summary_large_image",
-      title: "Professional Therapy Services Colchester | Next Generation Therapy",
+      card: 'summary_large_image',
+      title: 'Professional Therapy Services Colchester | Next Generation Therapy',
       description:
-        "Professional psychodynamic therapy in Colchester & online. Expert help for anxiety, depression, relationships & personal growth.",
-      images: ["https://nextgentherapy.co.uk/images/default-social-share.jpg"],
+        'Professional psychodynamic therapy in Colchester & online. Expert help for anxiety, depression, relationships & personal growth. Specialising in young people.',
+      images: ['https://nextgentherapy.co.uk/images/default-social-share.jpg'],
     },
     alternates: {
       canonical: siteUrl,
@@ -66,9 +69,9 @@ function getMetadata(): Metadata {
       googleBot: {
         index: true,
         follow: true,
-        "max-video-preview": -1,
-        "max-image-preview": "large",
-        "max-snippet": -1,
+        'max-video-preview': -1,
+        'max-image-preview': 'large',
+        'max-snippet': -1,
       },
     },
   };
@@ -78,24 +81,25 @@ export const metadata = getMetadata();
 
 export default function Home() {
   const homePageSchema = {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "Professional Therapy Services Colchester | Next Generation Therapy",
-    "description": "BACP registered psychodynamic therapist offering professional counselling in Colchester & online. Expert help for anxiety, depression, relationships & personal growth.",
-    "url": "https://nextgentherapy.co.uk",
-    "mainEntity": {
-      "@type": "LocalBusiness",
-      "name": "Next Generation Therapy"
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    name: 'Professional Therapy Services Colchester | Next Generation Therapy',
+    description:
+      'BACP registered psychodynamic therapist offering professional counselling in Colchester & online. Expert help for anxiety, depression, relationships & personal growth.',
+    url: 'https://nextgentherapy.co.uk',
+    mainEntity: {
+      '@type': 'LocalBusiness',
+      name: 'Next Generation Therapy',
     },
-    "primaryImageOfPage": {
-      "@type": "ImageObject",
-      "url": "https://nextgentherapy.co.uk/images/andreea.jpg"
+    primaryImageOfPage: {
+      '@type': 'ImageObject',
+      url: 'https://nextgentherapy.co.uk/images/andreea.jpg',
     },
-    "lastReviewed": "2025-09-14",
-    "reviewedBy": {
-      "@type": "Person",
-      "name": "Andreea Horhocea"
-    }
+    lastReviewed: '2025-09-14',
+    reviewedBy: {
+      '@type': 'Person',
+      name: 'Andreea Horhocea',
+    },
   };
 
   return (
@@ -105,70 +109,72 @@ export default function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(homePageSchema) }}
       />
       <div className={styles.page}>
-      <main>
-        {/* Logo Section at Top */}
-        <section className={styles.logoSection} aria-label="Next Generation Therapy branding">
-          <div className={styles.logoContainer}>
-            <div
-              className={styles.logoImage}
-              role="img"
-              aria-label="Next Generation Therapy logo - Professional therapy services in Colchester"
-            ></div>
-          </div>
-        </section>
-
-        {/* Content Section */}
-        <section className={styles.contentSection}>
-          <div className={styles.greeting}>
-            <h1>Hi! I am Andreea Horhocea - Therapist in Colchester.</h1>
-            <p className={styles.subtitle}>
-              A BACP registered therapist offering professional therapy sessions in
-              Colchester and online. <Link href="/faq">View common therapy questions</Link> or <Link href="/services">explore our therapy services</Link>.
-            </p>
-          </div>
-
-          {/* Image under greeting - centered */}
-          <div className={styles.imageSection}>
-            <div className={styles.imageContainer}>
-              <Image
-                src="/images/andreea.jpg"
-                alt="Andreea Horhocea - BACP registered counsellor and psychotherapist in Colchester offering professional mental health counselling services"
-                height={400}
-                width={300}
-                priority
-                className={styles.image}
-              />
+        <main>
+          {/* Logo Section at Top */}
+          <section className={styles.logoSection} aria-label="Next Generation Therapy branding">
+            <div className={styles.logoContainer}>
+              <div
+                className={styles.logoImage}
+                role="img"
+                aria-label="Next Generation Therapy logo - Professional therapy services in Colchester"
+              ></div>
             </div>
-          </div>
+          </section>
 
-          {/* Cards Container */}
-          <div className={styles.aboutContainer}>
-            <div className={styles.cardsContainer}>
-              <Link href="/about" className={styles.introCard}>
-                <h2>About Me</h2>
-                <p>
-                  Learn about my background, qualifications, and approach to therapy.
-                </p>
-              </Link>
-              <Link href="/services" className={styles.servicesCard}>
-                <h2>Who I Help</h2>
-                <p>
-                  I work with people of any age addressing mental health challenges
-                  such as anxiety, depression, stress, eating disorders, and more.
-                </p>
-              </Link>
-              <Link href="/blog#professional-thoughts" className={styles.approachCard}>
-                <h2>My Approach</h2>
-                <p>
-                  I focus on creating a safe, compassionate, and supportive
-                  environment where you can achieve meaningful and lasting change.
-                </p>
-              </Link>
+          {/* Content Section */}
+          <section className={styles.contentSection}>
+            <div className={styles.greeting}>
+              <h1>Hi! I&apos;m Andreea Horhocea - Therapist in Colchester.</h1>
+              <p className={styles.subtitle}>
+                A BACP registered therapist offering professional therapy sessions in Colchester and
+                online. I work with people of all ages, with particular expertise in supporting
+                young people and families through life&apos;s challenges.{' '}
+                <Link href="/faq">View common therapy questions</Link> or{' '}
+                <Link href="/services">explore our therapy services</Link>.
+              </p>
             </div>
-          </div>
-        </section>
-      </main>
-    </div>
+
+            {/* Image under greeting - centered */}
+            <div className={styles.imageSection}>
+              <div className={styles.imageContainer}>
+                <Image
+                  src="/images/andreea.jpg"
+                  alt="Andreea Horhocea - BACP registered counsellor and psychotherapist in Colchester offering professional mental health counselling services"
+                  height={400}
+                  width={300}
+                  priority
+                  className={styles.image}
+                />
+              </div>
+            </div>
+
+            {/* Cards Container */}
+            <div className={styles.aboutContainer}>
+              <div className={styles.cardsContainer}>
+                <Link href="/about" className={styles.introCard}>
+                  <h2>About Me</h2>
+                  <p>Learn about my background, qualifications, and approach to therapy.</p>
+                </Link>
+                <Link href="/services" className={styles.servicesCard}>
+                  <h2>Who I Help</h2>
+                  <p>
+                    I work with people of all ages addressing mental health challenges such as
+                    anxiety, depression, stress, relationship difficulties, and life transitions. I
+                    have particular expertise with young people and families.
+                  </p>
+                </Link>
+                <Link href="/blog#professional-thoughts" className={styles.approachCard}>
+                  <h2>My Approach</h2>
+                  <p>
+                    I focus on creating a safe, compassionate, and supportive environment where you
+                    can achieve meaningful and lasting change.
+                  </p>
+                </Link>
+              </div>
+            </div>
+          </section>
+        </main>
+      </div>
     </>
   );
 }

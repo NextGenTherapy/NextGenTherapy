@@ -31,14 +31,14 @@
 .greeting {
   text-align: center;
   padding: var(--spacing-section) 0 var(--spacing-large);
-  
+
   h1 {
     font-size: var(--font-size-h1);
     font-weight: bold;
     color: var(--color-accent);
     margin-bottom: var(--spacing-small);
   }
-  
+
   .subtitle {
     font-size: var(--font-size-medium);
     color: var(--color-text-primary);
@@ -51,7 +51,7 @@
 /* Blog Sections */
 .blogSection {
   margin-bottom: var(--spacing-section);
-  
+
   &:last-child {
     margin-bottom: 0;
   }
@@ -97,21 +97,21 @@
   text-decoration: none;
   transition: var(--transition-normal);
   cursor: pointer;
-  
+
   &:hover,
   &:focus {
     box-shadow: var(--box-shadow-hover);
     transform: translateY(-2px);
-    
+
     .blogContent h3 {
       color: var(--color-accent-hover);
     }
-    
+
     .readMore {
       color: var(--color-accent-hover);
     }
   }
-  
+
   &:focus-visible {
     outline: 2px solid var(--color-accent);
     outline-offset: 2px;
@@ -121,7 +121,7 @@
 @media (min-width: 768px) {
   .blogCard {
     min-height: 320px;
-    
+
     &:hover,
     &:focus {
       transform: translateY(-4px) scale(1.01);
@@ -143,7 +143,7 @@
   flex-direction: column;
   flex: 1 1 auto;
   padding: var(--spacing-medium);
-  
+
   h3 {
     font-size: var(--font-size-h4);
     color: var(--color-accent);
@@ -151,7 +151,7 @@
     line-height: 1.3;
     transition: color var(--transition-normal);
   }
-  
+
   p {
     color: var(--color-text-primary);
     line-height: 1.6;
@@ -164,12 +164,12 @@
 @media (min-width: 768px) {
   .blogContent {
     padding: var(--spacing-large);
-    
+
     h3 {
       font-size: var(--font-size-h3);
       margin-bottom: var(--spacing-medium);
     }
-    
+
     p {
       font-size: var(--font-size-base);
       margin-bottom: var(--spacing-medium);
@@ -202,7 +202,7 @@
   background: rgba(255, 255, 255, 0.5);
   border-radius: var(--border-radius-large);
   border: 1px solid var(--color-accent-light);
-  
+
   p {
     color: var(--color-text-primary);
     font-style: italic;
@@ -438,7 +438,7 @@
     flex: 1;
     max-width: 200px;
   }
-  
+
   .buttonNav span:empty {
     flex: 1;
     max-width: 200px;
@@ -450,5 +450,3 @@
   outline: 2px solid var(--color-accent);
   outline-offset: 2px;
 }
-
-

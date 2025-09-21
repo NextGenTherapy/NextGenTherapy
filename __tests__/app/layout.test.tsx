@@ -31,7 +31,9 @@ jest.mock('../../src/components/layout/ConditionalAnalytics', () => {
 });
 
 jest.mock('../../src/components/layout/ConditionalVercelAnalytics', () => {
-  const MockConditionalVercelAnalytics = () => <div data-testid="conditional-vercel-analytics">Vercel Analytics</div>;
+  const MockConditionalVercelAnalytics = () => (
+    <div data-testid="conditional-vercel-analytics">Vercel Analytics</div>
+  );
   MockConditionalVercelAnalytics.displayName = 'MockConditionalVercelAnalytics';
   return MockConditionalVercelAnalytics;
 });
@@ -64,7 +66,9 @@ jest.mock('../../src/components/layout/CookieConsent', () => {
 
 // Mock ErrorBoundary component
 jest.mock('../../src/components/layout/ErrorBoundary', () => {
-  const MockErrorBoundary = ({ children }: { children: React.ReactNode }) => <div data-testid="error-boundary">{children}</div>;
+  const MockErrorBoundary = ({ children }: { children: React.ReactNode }) => (
+    <div data-testid="error-boundary">{children}</div>
+  );
   MockErrorBoundary.displayName = 'MockErrorBoundary';
   return MockErrorBoundary;
 });
@@ -78,96 +82,56 @@ describe('Layout Component', () => {
   });
 
   it('renders without crashing', () => {
-    render(
-      <Layout>
-        {mockChildren}
-      </Layout>
-    );
+    render(<Layout>{mockChildren}</Layout>);
     expect(screen.getByTestId('child-content')).toBeInTheDocument();
   });
 
   it('includes proper HTML structure', () => {
-    const { container } = render(
-      <Layout>
-        {mockChildren}
-      </Layout>
-    );
+    const { container } = render(<Layout>{mockChildren}</Layout>);
 
     const htmlElement = container.querySelector('html');
     expect(htmlElement).toHaveAttribute('lang', 'en');
   });
 
   it('renders header component', () => {
-    render(
-      <Layout>
-        {mockChildren}
-      </Layout>
-    );
+    render(<Layout>{mockChildren}</Layout>);
     expect(screen.getByTestId('header')).toBeInTheDocument();
   });
 
   it('renders footer component', () => {
-    render(
-      <Layout>
-        {mockChildren}
-      </Layout>
-    );
+    render(<Layout>{mockChildren}</Layout>);
     expect(screen.getByTestId('footer')).toBeInTheDocument();
   });
 
   it('renders scroll to top component', () => {
-    render(
-      <Layout>
-        {mockChildren}
-      </Layout>
-    );
+    render(<Layout>{mockChildren}</Layout>);
     expect(screen.getByTestId('scroll-to-top')).toBeInTheDocument();
   });
 
   it('renders cookie consent component', () => {
-    render(
-      <Layout>
-        {mockChildren}
-      </Layout>
-    );
+    render(<Layout>{mockChildren}</Layout>);
     expect(screen.getByTestId('cookie-consent')).toBeInTheDocument();
   });
 
   it('renders analytics components', () => {
-    render(
-      <Layout>
-        {mockChildren}
-      </Layout>
-    );
+    render(<Layout>{mockChildren}</Layout>);
     expect(screen.getByTestId('conditional-analytics')).toBeInTheDocument();
     expect(screen.getByTestId('conditional-vercel-analytics')).toBeInTheDocument();
   });
 
   it('wraps content in error boundary', () => {
-    render(
-      <Layout>
-        {mockChildren}
-      </Layout>
-    );
+    render(<Layout>{mockChildren}</Layout>);
     expect(screen.getByTestId('error-boundary')).toBeInTheDocument();
   });
 
   it('renders children content', () => {
-    render(
-      <Layout>
-        {mockChildren}
-      </Layout>
-    );
+    render(<Layout>{mockChildren}</Layout>);
     expect(screen.getByTestId('child-content')).toBeInTheDocument();
     expect(screen.getByText('Test Content')).toBeInTheDocument();
   });
 
   it('has proper viewport meta tag setup', () => {
-    render(
-      <Layout>
-        {mockChildren}
-      </Layout>
-    );
+    render(<Layout>{mockChildren}</Layout>);
 
     // Check that the layout renders without viewport errors
     // Viewport meta is handled by Next.js metadata API
@@ -175,11 +139,7 @@ describe('Layout Component', () => {
   });
 
   it('includes proper SEO meta tags structure', () => {
-    render(
-      <Layout>
-        {mockChildren}
-      </Layout>
-    );
+    render(<Layout>{mockChildren}</Layout>);
 
     // The layout should render properly with SEO structure
     expect(screen.getByTestId('child-content')).toBeInTheDocument();
@@ -198,11 +158,7 @@ describe('Layout Component', () => {
   });
 
   it('maintains accessibility structure', () => {
-    const { container } = render(
-      <Layout>
-        {mockChildren}
-      </Layout>
-    );
+    const { container } = render(<Layout>{mockChildren}</Layout>);
 
     // Check for proper landmark structure
     expect(container.querySelector('header')).toBeInTheDocument();

@@ -34,7 +34,7 @@ jest.mock('../../src/components/ui/button', () => {
 jest.mock('../../src/components/seo/LocalBusinessSchema', () => {
   const MockLocalBusinessSchema = () => (
     <script type="application/ld+json" data-testid="local-business-schema">
-      {JSON.stringify({ "@type": "LocalBusiness" })}
+      {JSON.stringify({ '@type': 'LocalBusiness' })}
     </script>
   );
   MockLocalBusinessSchema.displayName = 'MockLocalBusinessSchema';
@@ -44,7 +44,7 @@ jest.mock('../../src/components/seo/LocalBusinessSchema', () => {
 jest.mock('../../src/components/seo/BreadcrumbSchema', () => {
   const MockBreadcrumbSchema = () => (
     <script type="application/ld+json" data-testid="breadcrumb-schema">
-      {JSON.stringify({ "@type": "BreadcrumbList" })}
+      {JSON.stringify({ '@type': 'BreadcrumbList' })}
     </script>
   );
   MockBreadcrumbSchema.displayName = 'MockBreadcrumbSchema';
@@ -64,7 +64,9 @@ describe('HomePage Component', () => {
   it('displays the main heading', () => {
     render(<HomePage />);
     expect(screen.getByRole('heading', { level: 1 })).toBeInTheDocument();
-    expect(screen.getByText(/Hi! I am Andreea Horhocea - Therapist in Colchester/)).toBeInTheDocument();
+    expect(
+      screen.getByText(/Hi! I am Andreea Horhocea - Therapist in Colchester/)
+    ).toBeInTheDocument();
   });
 
   it('displays the hero image', () => {
@@ -145,7 +147,7 @@ describe('HomePage Component', () => {
 
     // Check for alt text on images
     const images = container.querySelectorAll('img');
-    images.forEach(img => {
+    images.forEach((img) => {
       expect(img).toHaveAttribute('alt');
       expect(img.getAttribute('alt')).not.toBe('');
     });

@@ -15,7 +15,9 @@ describe('GoogleMapEmbed Component', () => {
 
     it('renders iframe element', () => {
       render(<GoogleMapEmbed />);
-      const iframe = screen.getByTitle('Next Generation Therapy Location - Colchester Business Centre');
+      const iframe = screen.getByTitle(
+        'Next Generation Therapy Location - Colchester Business Centre'
+      );
       expect(iframe).toBeInTheDocument();
       expect(iframe.tagName.toLowerCase()).toBe('iframe');
     });
@@ -32,16 +34,21 @@ describe('GoogleMapEmbed Component', () => {
   describe('Iframe Attributes', () => {
     it('has correct Google Maps embed URL', () => {
       render(<GoogleMapEmbed />);
-      const iframe = screen.getByTitle('Next Generation Therapy Location - Colchester Business Centre');
+      const iframe = screen.getByTitle(
+        'Next Generation Therapy Location - Colchester Business Centre'
+      );
 
-      const expectedSrcPattern = /^https:\/\/www\.google\.com\/maps\/embed\?pb=.*colchester.*business.*centre/i;
+      const expectedSrcPattern =
+        /^https:\/\/www\.google\.com\/maps\/embed\?pb=.*colchester.*business.*centre/i;
       expect(iframe).toHaveAttribute('src');
       expect(iframe.getAttribute('src')).toMatch(expectedSrcPattern);
     });
 
     it('has proper dimensions', () => {
       render(<GoogleMapEmbed />);
-      const iframe = screen.getByTitle('Next Generation Therapy Location - Colchester Business Centre');
+      const iframe = screen.getByTitle(
+        'Next Generation Therapy Location - Colchester Business Centre'
+      );
 
       expect(iframe).toHaveAttribute('width', '100%');
       expect(iframe).toHaveAttribute('height', '300');
@@ -49,7 +56,9 @@ describe('GoogleMapEmbed Component', () => {
 
     it('has proper security and performance attributes', () => {
       render(<GoogleMapEmbed />);
-      const iframe = screen.getByTitle('Next Generation Therapy Location - Colchester Business Centre');
+      const iframe = screen.getByTitle(
+        'Next Generation Therapy Location - Colchester Business Centre'
+      );
 
       expect(iframe).toHaveAttribute('allowFullScreen');
       expect(iframe).toHaveAttribute('loading', 'lazy');
@@ -58,7 +67,9 @@ describe('GoogleMapEmbed Component', () => {
 
     it('has proper styling', () => {
       render(<GoogleMapEmbed />);
-      const iframe = screen.getByTitle('Next Generation Therapy Location - Colchester Business Centre');
+      const iframe = screen.getByTitle(
+        'Next Generation Therapy Location - Colchester Business Centre'
+      );
 
       const style = iframe.style;
       expect(style.border).toBe('0px');
@@ -69,16 +80,26 @@ describe('GoogleMapEmbed Component', () => {
   describe('Accessibility', () => {
     it('has descriptive title attribute', () => {
       render(<GoogleMapEmbed />);
-      const iframe = screen.getByTitle('Next Generation Therapy Location - Colchester Business Centre');
+      const iframe = screen.getByTitle(
+        'Next Generation Therapy Location - Colchester Business Centre'
+      );
 
-      expect(iframe).toHaveAttribute('title', 'Next Generation Therapy Location - Colchester Business Centre');
+      expect(iframe).toHaveAttribute(
+        'title',
+        'Next Generation Therapy Location - Colchester Business Centre'
+      );
     });
 
     it('has descriptive aria-label', () => {
       render(<GoogleMapEmbed />);
-      const iframe = screen.getByLabelText('Map showing location of Next Generation Therapy at Colchester Business Centre');
+      const iframe = screen.getByLabelText(
+        'Map showing location of Next Generation Therapy at Colchester Business Centre'
+      );
 
-      expect(iframe).toHaveAttribute('aria-label', 'Map showing location of Next Generation Therapy at Colchester Business Centre');
+      expect(iframe).toHaveAttribute(
+        'aria-label',
+        'Map showing location of Next Generation Therapy at Colchester Business Centre'
+      );
     });
 
     it('provides text alternative for map content', () => {
@@ -86,7 +107,9 @@ describe('GoogleMapEmbed Component', () => {
 
       // The location text serves as a text alternative for users who cannot see the map
       expect(screen.getByText(/our location:/i)).toBeInTheDocument();
-      expect(screen.getByText(/colchester business centre, 1 george williams way, colchester co1 2js/i)).toBeInTheDocument();
+      expect(
+        screen.getByText(/colchester business centre, 1 george williams way, colchester co1 2js/i)
+      ).toBeInTheDocument();
     });
   });
 
@@ -142,14 +165,18 @@ describe('GoogleMapEmbed Component', () => {
   describe('Performance Optimization', () => {
     it('uses lazy loading for iframe', () => {
       render(<GoogleMapEmbed />);
-      const iframe = screen.getByTitle('Next Generation Therapy Location - Colchester Business Centre');
+      const iframe = screen.getByTitle(
+        'Next Generation Therapy Location - Colchester Business Centre'
+      );
 
       expect(iframe).toHaveAttribute('loading', 'lazy');
     });
 
     it('has proper referrer policy for privacy', () => {
       render(<GoogleMapEmbed />);
-      const iframe = screen.getByTitle('Next Generation Therapy Location - Colchester Business Centre');
+      const iframe = screen.getByTitle(
+        'Next Generation Therapy Location - Colchester Business Centre'
+      );
 
       expect(iframe).toHaveAttribute('referrerPolicy', 'no-referrer-when-downgrade');
     });
@@ -158,24 +185,30 @@ describe('GoogleMapEmbed Component', () => {
   describe('Map Functionality', () => {
     it('allows full screen mode', () => {
       render(<GoogleMapEmbed />);
-      const iframe = screen.getByTitle('Next Generation Therapy Location - Colchester Business Centre');
+      const iframe = screen.getByTitle(
+        'Next Generation Therapy Location - Colchester Business Centre'
+      );
 
       expect(iframe).toHaveAttribute('allowFullScreen');
     });
 
     it('contains expected location coordinates in URL', () => {
       render(<GoogleMapEmbed />);
-      const iframe = screen.getByTitle('Next Generation Therapy Location - Colchester Business Centre');
+      const iframe = screen.getByTitle(
+        'Next Generation Therapy Location - Colchester Business Centre'
+      );
       const src = iframe.getAttribute('src');
 
       // Check for Colchester-area coordinates (roughly 51.8958747, 0.9013397)
       expect(src).toMatch(/51\.89/); // Latitude
-      expect(src).toMatch(/0\.90/);  // Longitude
+      expect(src).toMatch(/0\.90/); // Longitude
     });
 
     it('embeds correct business location', () => {
       render(<GoogleMapEmbed />);
-      const iframe = screen.getByTitle('Next Generation Therapy Location - Colchester Business Centre');
+      const iframe = screen.getByTitle(
+        'Next Generation Therapy Location - Colchester Business Centre'
+      );
       const src = iframe.getAttribute('src');
 
       // Check that the URL contains references to the business location
@@ -220,11 +253,15 @@ describe('GoogleMapEmbed Component', () => {
     it('renders consistently across multiple renders', () => {
       const { rerender } = render(<GoogleMapEmbed />);
 
-      expect(screen.getByTitle('Next Generation Therapy Location - Colchester Business Centre')).toBeInTheDocument();
+      expect(
+        screen.getByTitle('Next Generation Therapy Location - Colchester Business Centre')
+      ).toBeInTheDocument();
 
       rerender(<GoogleMapEmbed className="test" />);
 
-      expect(screen.getByTitle('Next Generation Therapy Location - Colchester Business Centre')).toBeInTheDocument();
+      expect(
+        screen.getByTitle('Next Generation Therapy Location - Colchester Business Centre')
+      ).toBeInTheDocument();
     });
   });
 });

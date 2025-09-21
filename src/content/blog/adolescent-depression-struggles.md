@@ -1,9 +1,9 @@
 ---
-title: "When Adolescent Struggles Become Something More"
-date: "2025-09-18"
-summary: "Understanding depression in young people - recognizing signs beyond typical teenage moodiness. Professional insights into supporting adolescents through depression and when to seek help."
-category: "professional"
-keywords: "adolescent depression, teenage depression, youth depression, teen mental health, depression therapy, young person depression, adolescent mood disorders"
+title: 'When Adolescent Struggles Become Something More'
+date: '2025-09-18'
+summary: 'Understanding depression in young people - recognizing signs beyond typical teenage moodiness. Professional insights from Colchester therapist into supporting adolescents through depression and when to seek help.'
+category: 'professional'
+keywords: 'adolescent depression Colchester, teenage depression Essex, youth depression therapy, teen mental health Colchester, depression therapy teenagers, young person depression, adolescent mood disorders, teen depression help Colchester, youth therapist Essex, teenage therapy depression'
 ---
 
 "I just feel empty all the time." This is how a sixteen-year-old once described their experience during our first session in my Colchester practice. Her parents had initially dismissed her struggles as "typical teenager behaviour," but something deeper was happening. What they were witnessing wasn't just adolescent moodiness—it was depression.
@@ -148,4 +148,4 @@ Depression can feel hopeless, both for young people experiencing it and their fa
 
 What matters most is that they don't face this alone. Whether through therapy, family support, peer connections, or professional intervention, recovery is possible when young people feel understood, supported, and given the time and space they need to heal.
 
-If you're a young person reading this and recognising yourself in these descriptions, please know that your struggles are valid, help is available, and this difficult period doesn't define who you are or what your future holds. If you're supporting someone through youth depression, remember that your patience, understanding, and willingness to seek appropriate help can make all the difference.
+If you're a young person reading this and recognising yourself in these descriptions, please know that your struggles are valid, help is available, and this difficult period doesn't define who you are or what your future holds. [Teenage therapy](/teenage-therapy) provides a confidential space to work through depression, while [young adult therapy](/young-adult-therapy) can help with the unique challenges of emerging adulthood. If you're supporting someone through youth depression, remember that your patience, understanding, and willingness to seek appropriate help can make all the difference. For parents of younger children showing signs of depression, [child therapy](/child-therapy) offers specialized, age-appropriate support.

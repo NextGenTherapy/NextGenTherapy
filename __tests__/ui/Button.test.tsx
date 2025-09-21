@@ -6,7 +6,11 @@ import Button from '../../src/components/ui/button';
 // Mock Next.js components
 jest.mock('next/link', () => {
   return function MockLink({ children, href, className, ...props }: any) {
-    return <a href={href} className={className} {...props}>{children}</a>;
+    return (
+      <a href={href} className={className} {...props}>
+        {children}
+      </a>
+    );
   };
 });
 
@@ -116,7 +120,11 @@ describe('Button Component', () => {
       const handleClick = jest.fn();
       const user = userEvent.setup();
 
-      render(<Button onClick={handleClick} disabled>Disabled Button</Button>);
+      render(
+        <Button onClick={handleClick} disabled>
+          Disabled Button
+        </Button>
+      );
 
       const button = screen.getByRole('button');
       await user.click(button);
@@ -153,7 +161,11 @@ describe('Button Component', () => {
     });
 
     it('applies custom className to link when href provided', () => {
-      render(<Button href="/test" className="custom-link">Link Style</Button>);
+      render(
+        <Button href="/test" className="custom-link">
+          Link Style
+        </Button>
+      );
 
       const link = screen.getByRole('link');
       expect(link).toHaveClass('custom-link');
@@ -170,11 +182,7 @@ describe('Button Component', () => {
   describe('HTML Attributes', () => {
     it('passes through additional HTML attributes to button', () => {
       render(
-        <Button
-          data-testid="custom-button"
-          aria-label="Custom button label"
-          title="Button title"
-        >
+        <Button data-testid="custom-button" aria-label="Custom button label" title="Button title">
           Button with attributes
         </Button>
       );
@@ -186,7 +194,11 @@ describe('Button Component', () => {
     });
 
     it('does not pass through type attribute to Next.js Link', () => {
-      render(<Button href="/test" type="submit">Link Button</Button>);
+      render(
+        <Button href="/test" type="submit">
+          Link Button
+        </Button>
+      );
 
       const link = screen.getByRole('link');
       expect(link).not.toHaveAttribute('type');
@@ -248,10 +260,10 @@ describe('Button Component', () => {
         'data:text/html,<script>alert("xss")</script>',
         '../external',
         './external',
-        'external.com'
+        'external.com',
       ];
 
-      externalUrls.forEach(url => {
+      externalUrls.forEach((url) => {
         const { unmount } = render(<Button href={url}>External</Button>);
         expect(screen.queryByRole('link')).not.toBeInTheDocument();
         expect(screen.getByRole('button')).toBeInTheDocument();
@@ -299,7 +311,7 @@ describe('Button Component', () => {
 
   describe('Form Integration', () => {
     it('works as submit button in forms', () => {
-      const handleSubmit = jest.fn(e => e.preventDefault());
+      const handleSubmit = jest.fn((e) => e.preventDefault());
 
       render(
         <form onSubmit={handleSubmit}>

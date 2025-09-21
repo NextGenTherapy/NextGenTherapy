@@ -1,9 +1,9 @@
-"use client";
+'use client';
 
-import { useState, useEffect, useRef } from "react";
-import Link from "next/link";
-import Button from "../ui/button";
-import styles from "./header.module.scss";
+import { useState, useEffect, useRef } from 'react';
+import Link from 'next/link';
+import Button from '../ui/button';
+import styles from './header.module.scss';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -37,11 +37,11 @@ export default function Header() {
       }
     };
 
-    document.addEventListener("mousedown", handleClickOutside);
-    document.addEventListener("keydown", handleKeyDown);
+    document.addEventListener('mousedown', handleClickOutside);
+    document.addEventListener('keydown', handleKeyDown);
     return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-      document.removeEventListener("keydown", handleKeyDown);
+      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener('keydown', handleKeyDown);
     };
   }, [isMenuOpen]);
 
@@ -61,8 +61,8 @@ export default function Header() {
           className={styles.menuButton}
           onClick={toggleMenu}
           onKeyDown={handleMenuKeyDown}
-          aria-label={isMenuOpen ? "Close navigation menu" : "Open navigation menu"}
-          aria-expanded={isMenuOpen ? "true" : "false"}
+          aria-label={isMenuOpen ? 'Close navigation menu' : 'Open navigation menu'}
+          aria-expanded={isMenuOpen ? 'true' : 'false'}
           aria-controls="main-navigation"
         >
           <span className={styles.hamburgerIcon}>
@@ -75,9 +75,7 @@ export default function Header() {
         {/* Navigation List */}
         <ul
           id="main-navigation"
-          className={`${styles.navList} ${
-            isMenuOpen ? styles.navListOpen : ""
-          }`}
+          className={`${styles.navList} ${isMenuOpen ? styles.navListOpen : ''}`}
         >
           <li className={styles.navItem}>
             <Link href="/" onClick={closeMenu}>

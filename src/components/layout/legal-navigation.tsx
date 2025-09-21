@@ -26,23 +26,15 @@ export default function LegalNavigation({ currentPage }: LegalNavigationProps) {
   return (
     <div className={styles.navigationContainer}>
       <div className={styles.navigationButtons}>
-        <Button 
-          onClick={handleGoBack}
-          aria-label="Go back to previous page"
-          type="button"
-        >
+        <Button onClick={handleGoBack} aria-label="Go back to previous page" type="button">
           ← Back
         </Button>
-        
-        <Button href={otherPageUrl}>
-          View {otherPageTitle} →
-        </Button>
+
+        <Button href={otherPageUrl}>View {otherPageTitle} →</Button>
       </div>
-      
+
       <div className={styles.homeLink}>
-        <Button href="/">
-          🏠 Home
-        </Button>
+        <Button href="/">🏠 Home</Button>
       </div>
     </div>
   );

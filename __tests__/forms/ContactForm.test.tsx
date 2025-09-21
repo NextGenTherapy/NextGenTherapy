@@ -100,7 +100,10 @@ describe('ContactForm Component', () => {
       await user.type(screen.getByLabelText(/first name/i), 'John');
       await user.type(screen.getByLabelText(/last name/i), 'Doe');
       await user.type(screen.getByLabelText(/email/i), 'john@example.com');
-      await user.type(screen.getByLabelText(/message/i), 'This is a valid message with sufficient length for testing purposes.');
+      await user.type(
+        screen.getByLabelText(/message/i),
+        'This is a valid message with sufficient length for testing purposes.'
+      );
 
       const submitButton = screen.getByRole('button', { name: /send/i });
 
@@ -135,7 +138,10 @@ describe('ContactForm Component', () => {
       await user.type(screen.getByLabelText(/first name/i), 'John');
       await user.type(screen.getByLabelText(/last name/i), 'Doe');
       await user.type(screen.getByLabelText(/email/i), 'john@example.com');
-      await user.type(screen.getByLabelText(/message/i), 'This is a valid message with sufficient length.');
+      await user.type(
+        screen.getByLabelText(/message/i),
+        'This is a valid message with sufficient length.'
+      );
 
       const submitButton = screen.getByRole('button', { name: /send/i });
 
@@ -144,7 +150,9 @@ describe('ContactForm Component', () => {
       });
 
       await waitFor(() => {
-        expect(screen.getByText('Thank you! Your message has been sent successfully.')).toBeInTheDocument();
+        expect(
+          screen.getByText('Thank you! Your message has been sent successfully.')
+        ).toBeInTheDocument();
       });
 
       // Form should be reset
@@ -205,7 +213,9 @@ describe('ContactForm Component', () => {
       await user.click(submitButton);
 
       await waitFor(() => {
-        expect(screen.getByText('Sorry, something went wrong. Please try again.')).toBeInTheDocument();
+        expect(
+          screen.getByText('Sorry, something went wrong. Please try again.')
+        ).toBeInTheDocument();
       });
     });
 
@@ -225,7 +235,9 @@ describe('ContactForm Component', () => {
       await user.click(submitButton);
 
       await waitFor(() => {
-        expect(screen.getByText('Sorry, something went wrong. Please try again.')).toBeInTheDocument();
+        expect(
+          screen.getByText('Sorry, something went wrong. Please try again.')
+        ).toBeInTheDocument();
       });
     });
   });
@@ -243,7 +255,10 @@ describe('ContactForm Component', () => {
         writable: true,
       });
 
-      await user.type(textarea, 'This is a long message that should cause the textarea to grow in height automatically when the content exceeds the default height.');
+      await user.type(
+        textarea,
+        'This is a long message that should cause the textarea to grow in height automatically when the content exceeds the default height.'
+      );
 
       // Check that style.height is set to scrollHeight
       expect(textarea.style.height).toBe('150px');
@@ -280,7 +295,9 @@ describe('ContactForm Component', () => {
 
       await waitFor(() => {
         const successMessage = screen.getByRole('alert');
-        expect(successMessage).toHaveTextContent('Thank you! Your message has been sent successfully.');
+        expect(successMessage).toHaveTextContent(
+          'Thank you! Your message has been sent successfully.'
+        );
       });
     });
 
@@ -350,7 +367,9 @@ describe('ContactForm Component', () => {
       await user.click(submitButton);
 
       await waitFor(() => {
-        expect(screen.getByText('Sorry, something went wrong. Please try again.')).toBeInTheDocument();
+        expect(
+          screen.getByText('Sorry, something went wrong. Please try again.')
+        ).toBeInTheDocument();
       });
     });
   });

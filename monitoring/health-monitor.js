@@ -15,7 +15,7 @@ const colors = {
   yellow: '\x1b[33m',
   red: '\x1b[31m',
   blue: '\x1b[34m',
-  reset: '\x1b[0m'
+  reset: '\x1b[0m',
 };
 
 function log(message, color = colors.reset) {
@@ -27,7 +27,7 @@ function log(message, color = colors.reset) {
 const resendApiKey = process.env.RESEND_API_KEY;
 
 if (!resendApiKey) {
-  console.error("RESEND_API_KEY environment variable is not set");
+  console.error('RESEND_API_KEY environment variable is not set');
 }
 
 const resend = resendApiKey ? new Resend(resendApiKey) : null;
@@ -61,7 +61,7 @@ async function sendAlert(alert) {
       to: config.notifications.emails,
       subject: emailSubject,
       text: emailBody,
-      html: emailBody.replace(/\n/g, '<br>')
+      html: emailBody.replace(/\n/g, '<br>'),
     });
 
     log(`✉️  Alert email sent: ${alert.name}`, colors.blue);
@@ -77,43 +77,48 @@ function checkUrl(healthCheck) {
   return new Promise((resolve) => {
     const startTime = Date.now();
 
-    const req = https.request(healthCheck.url, {
-      method: healthCheck.method || 'GET',
-      timeout: healthCheck.timeout || 10000
-    }, (res) => {
-      const responseTime = Date.now() - startTime;
-      let data = '';
+    const req = https.request(
+      healthCheck.url,
+      {
+        method: healthCheck.method || 'GET',
+        timeout: healthCheck.timeout || 10000,
+      },
+      (res) => {
+        const responseTime = Date.now() - startTime;
+        let data = '';
 
-      res.on('data', (chunk) => {
-        data += chunk;
-      });
+        res.on('data', (chunk) => {
+          data += chunk;
+        });
 
-      res.on('end', () => {
-        const result = {
-          url: healthCheck.url,
-          status: res.statusCode,
-          responseTime,
-          success: res.statusCode === (healthCheck.expectedStatus || 200),
-          contentMatch: healthCheck.expectedContent ?
-            data.includes(healthCheck.expectedContent) : true
-        };
+        res.on('end', () => {
+          const result = {
+            url: healthCheck.url,
+            status: res.statusCode,
+            responseTime,
+            success: res.statusCode === (healthCheck.expectedStatus || 200),
+            contentMatch: healthCheck.expectedContent
+              ? data.includes(healthCheck.expectedContent)
+              : true,
+          };
 
-        if (!result.success) {
-          result.error = `HTTP ${res.statusCode} - Expected ${healthCheck.expectedStatus || 200}`;
-        } else if (!result.contentMatch) {
-          result.error = `Content mismatch - Expected "${healthCheck.expectedContent}"`;
-        }
+          if (!result.success) {
+            result.error = `HTTP ${res.statusCode} - Expected ${healthCheck.expectedStatus || 200}`;
+          } else if (!result.contentMatch) {
+            result.error = `Content mismatch - Expected "${healthCheck.expectedContent}"`;
+          }
 
-        resolve(result);
-      });
-    });
+          resolve(result);
+        });
+      }
+    );
 
     req.on('error', (error) => {
       resolve({
         url: healthCheck.url,
         success: false,
         error: error.message,
-        responseTime: Date.now() - startTime
+        responseTime: Date.now() - startTime,
       });
     });
 
@@ -123,7 +128,7 @@ function checkUrl(healthCheck) {
         url: healthCheck.url,
         success: false,
         error: 'Request timeout',
-        responseTime: healthCheck.timeout
+        responseTime: healthCheck.timeout,
       });
     });
 
@@ -148,13 +153,13 @@ function checkSSL(domain) {
           valid: true,
           expiryDate,
           daysUntilExpiry,
-          issuer: cert.issuer?.CN || 'Unknown'
+          issuer: cert.issuer?.CN || 'Unknown',
         });
       } else {
         resolve({
           domain,
           valid: false,
-          error: 'No certificate found'
+          error: 'No certificate found',
         });
       }
     });
@@ -163,7 +168,7 @@ function checkSSL(domain) {
       resolve({
         domain,
         valid: false,
-        error: error.message
+        error: error.message,
       });
     });
 
@@ -194,7 +199,7 @@ async function runHealthChecks() {
         severity: 'CRITICAL',
         url: healthCheck.url,
         details: result.error,
-        actionRequired: 'Check server status and investigate immediately'
+        actionRequired: 'Check server status and investigate immediately',
       });
     }
   }
@@ -214,14 +219,14 @@ async function runHealthChecks() {
           name: 'SSL Certificate Expiry',
           severity: 'CRITICAL',
           details: `SSL certificate expires in ${sslResult.daysUntilExpiry} days`,
-          actionRequired: 'Renew SSL certificate immediately'
+          actionRequired: 'Renew SSL certificate immediately',
         });
       } else if (sslResult.daysUntilExpiry <= warningDays) {
         alerts.push({
           name: 'SSL Certificate Expiry',
           severity: 'HIGH',
           details: `SSL certificate expires in ${sslResult.daysUntilExpiry} days`,
-          actionRequired: 'Plan SSL certificate renewal'
+          actionRequired: 'Plan SSL certificate renewal',
         });
       } else {
         log(`✅ SSL Certificate: Valid until ${sslResult.expiryDate.toDateString()}`, colors.green);
@@ -231,7 +236,7 @@ async function runHealthChecks() {
         name: 'SSL Certificate',
         severity: 'CRITICAL',
         details: sslResult.error,
-        actionRequired: 'Fix SSL certificate configuration'
+        actionRequired: 'Fix SSL certificate configuration',
       });
     }
   }

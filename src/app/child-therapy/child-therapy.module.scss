@@ -1,0 +1,520 @@
+/* Child Therapy Page Styles */
+
+.page {
+  background: var(--color-background);
+  min-height: 100vh;
+  padding-bottom: var(--spacing-large);
+  width: 100%;
+}
+
+.main {
+  max-width: var(--container-width-desktop);
+  margin: 0 auto;
+  padding: 0 var(--container-padding-mobile);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+  .main {
+    padding: 0 var(--container-padding-tablet);
+  }
+}
+
+@media (min-width: 1024px) {
+  .main {
+    padding: 0 var(--container-padding-desktop);
+  }
+}
+
+/* Hero Section */
+.heroSection {
+  text-align: center;
+  padding: var(--spacing-section) 0 var(--spacing-large);
+}
+
+.heroSection h1 {
+  font-size: var(--font-size-h1);
+  font-weight: bold;
+  color: var(--color-accent);
+  margin-bottom: var(--spacing-small);
+}
+
+.subtitle {
+  font-size: var(--font-size-large);
+  color: var(--color-text-primary);
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+@media (min-width: 768px) {
+  .subtitle {
+    font-size: var(--font-size-xl);
+  }
+}
+
+/* Content Sections */
+.contentSection {
+  margin: var(--spacing-large) 0;
+}
+
+@media (min-width: 768px) {
+  .contentSection {
+    margin: var(--spacing-section) 0;
+  }
+}
+
+.textContainer {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Text Content Sections */
+.introduction,
+.whenToConsider,
+.approach,
+.commonConcerns,
+.parentSupport,
+.practicalInfo,
+.callToAction {
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid var(--color-accent-light);
+  border-radius: var(--border-radius-large);
+  padding: var(--spacing-medium);
+  margin-bottom: var(--spacing-medium);
+  box-shadow: var(--box-shadow);
+  transition: var(--transition-normal);
+
+  &:hover {
+    box-shadow: var(--box-shadow-hover);
+    transform: translateY(-2px);
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  h2 {
+    color: var(--color-accent);
+    font-size: var(--font-size-h4);
+    margin-bottom: var(--spacing-small);
+    font-weight: 600;
+  }
+
+  p {
+    line-height: 1.6;
+    margin-bottom: var(--spacing-small);
+    color: var(--color-text-primary);
+    font-size: var(--font-size-small);
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .introduction,
+  .whenToConsider,
+  .approach,
+  .commonConcerns,
+  .parentSupport,
+  .practicalInfo,
+  .callToAction {
+    padding: var(--spacing-large);
+    margin-bottom: var(--spacing-large);
+
+    h2 {
+      font-size: var(--font-size-h3);
+      margin-bottom: var(--spacing-medium);
+    }
+
+    p {
+      font-size: var(--font-size-base);
+      margin-bottom: var(--spacing-medium);
+    }
+  }
+}
+
+/* Symptoms Grid */
+.symptomsGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-medium);
+  margin-top: var(--spacing-medium);
+}
+
+@media (min-width: 768px) {
+  .symptomsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .symptomsGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.symptomCategory {
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid var(--color-accent-light);
+  border-radius: var(--border-radius-large);
+  padding: var(--spacing-medium);
+  margin-bottom: var(--spacing-medium);
+  box-shadow: var(--box-shadow);
+  transition: var(--transition-normal);
+
+  &:hover {
+    box-shadow: var(--box-shadow-hover);
+    transform: translateY(-2px);
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  h3 {
+    color: var(--color-accent);
+    font-size: var(--font-size-h4);
+    margin-bottom: var(--spacing-small);
+    font-weight: 600;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  li {
+    padding: var(--spacing-xs) 0;
+    border-bottom: 1px solid var(--color-accent-light);
+    font-size: var(--font-size-small);
+    color: var(--color-text-primary);
+    position: relative;
+    padding-left: var(--spacing-medium);
+
+    &:before {
+      content: '•';
+      color: var(--color-accent);
+      position: absolute;
+      left: 0;
+      font-weight: bold;
+    }
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .symptomCategory {
+    padding: var(--spacing-large);
+    margin-bottom: var(--spacing-large);
+
+    h3 {
+      font-size: var(--font-size-h3);
+      margin-bottom: var(--spacing-medium);
+    }
+
+    li {
+      font-size: var(--font-size-base);
+      margin-bottom: var(--spacing-small);
+    }
+  }
+}
+
+/* Approach Points */
+.approachPoints {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-medium);
+  margin-top: var(--spacing-medium);
+}
+
+@media (min-width: 768px) {
+  .approachPoints {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .approachPoints {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.point {
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid var(--color-accent-light);
+  border-radius: var(--border-radius-large);
+  padding: var(--spacing-medium);
+  margin-bottom: var(--spacing-medium);
+  box-shadow: var(--box-shadow);
+  transition: var(--transition-normal);
+
+  &:hover {
+    box-shadow: var(--box-shadow-hover);
+    transform: translateY(-2px);
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  h3 {
+    color: var(--color-accent);
+    font-size: var(--font-size-h4);
+    margin-bottom: var(--spacing-small);
+    font-weight: 600;
+  }
+
+  p {
+    line-height: 1.6;
+    margin-bottom: var(--spacing-small);
+    color: var(--color-text-primary);
+    font-size: var(--font-size-small);
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .point {
+    padding: var(--spacing-large);
+    margin-bottom: var(--spacing-large);
+
+    h3 {
+      font-size: var(--font-size-h3);
+      margin-bottom: var(--spacing-medium);
+    }
+
+    p {
+      font-size: var(--font-size-base);
+      margin-bottom: var(--spacing-medium);
+    }
+  }
+}
+
+/* Concerns Grid */
+.concernsGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-medium);
+  margin-top: var(--spacing-medium);
+}
+
+@media (min-width: 768px) {
+  .concernsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .concernsGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.concern {
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid var(--color-accent-light);
+  border-radius: var(--border-radius-large);
+  padding: var(--spacing-medium);
+  margin-bottom: var(--spacing-medium);
+  box-shadow: var(--box-shadow);
+  transition: var(--transition-normal);
+
+  &:hover {
+    box-shadow: var(--box-shadow-hover);
+    transform: translateY(-2px);
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  h3 {
+    color: var(--color-accent);
+    font-size: var(--font-size-h4);
+    margin-bottom: var(--spacing-small);
+    font-weight: 600;
+  }
+
+  p {
+    line-height: 1.6;
+    margin-bottom: var(--spacing-small);
+    color: var(--color-text-primary);
+    font-size: var(--font-size-small);
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .concern {
+    padding: var(--spacing-large);
+    margin-bottom: var(--spacing-large);
+
+    h3 {
+      font-size: var(--font-size-h3);
+      margin-bottom: var(--spacing-medium);
+    }
+
+    p {
+      font-size: var(--font-size-base);
+      margin-bottom: var(--spacing-medium);
+    }
+  }
+}
+
+/* Parent Resources */
+.parentResources {
+  margin-top: var(--spacing-medium);
+  text-align: center;
+}
+
+.resourceLink {
+  display: inline-block;
+  padding: var(--spacing-small) var(--spacing-medium);
+  background: var(--color-secondary);
+  color: var(--color-text);
+  text-decoration: none;
+  border-radius: var(--border-radius);
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.resourceLink:hover {
+  background: var(--color-secondary-hover);
+}
+
+/* Expectations List */
+.expectationsList {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-medium);
+  margin-top: var(--spacing-medium);
+}
+
+@media (min-width: 768px) {
+  .expectationsList {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.expectation {
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid var(--color-accent-light);
+  border-radius: var(--border-radius-large);
+  padding: var(--spacing-medium);
+  margin-bottom: var(--spacing-medium);
+  box-shadow: var(--box-shadow);
+  transition: var(--transition-normal);
+
+  &:hover {
+    box-shadow: var(--box-shadow-hover);
+    transform: translateY(-2px);
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  h3 {
+    color: var(--color-accent);
+    font-size: var(--font-size-h4);
+    margin-bottom: var(--spacing-small);
+    font-weight: 600;
+  }
+
+  p {
+    line-height: 1.6;
+    margin-bottom: var(--spacing-small);
+    color: var(--color-text-primary);
+    font-size: var(--font-size-small);
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .expectation {
+    padding: var(--spacing-large);
+    margin-bottom: var(--spacing-large);
+
+    h3 {
+      font-size: var(--font-size-h3);
+      margin-bottom: var(--spacing-medium);
+    }
+
+    p {
+      font-size: var(--font-size-base);
+      margin-bottom: var(--spacing-medium);
+    }
+  }
+}
+
+/* Call to Action */
+.ctaButtons {
+  display: flex;
+  gap: var(--spacing-medium);
+  justify-content: center;
+  margin: var(--spacing-medium) 0;
+  flex-wrap: wrap;
+}
+
+.primaryButton,
+.secondaryButton {
+  padding: var(--spacing-small) var(--spacing-large);
+  border-radius: var(--border-radius);
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  min-width: 150px;
+  text-align: center;
+}
+
+.primaryButton {
+  background: var(--color-primary);
+  color: white;
+}
+
+.primaryButton:hover {
+  background: var(--color-primary-hover);
+}
+
+.secondaryButton {
+  background: var(--color-secondary);
+  color: var(--color-text-primary);
+  border: 1px solid var(--color-border);
+}
+
+.secondaryButton:hover {
+  background: var(--color-secondary-hover);
+}
+
+.contactNote {
+  margin-top: var(--spacing-medium);
+  font-size: var(--font-size-small);
+  color: var(--color-text-primary);
+  line-height: 1.6;
+}
+
+.contactNote a {
+  color: var(--color-accent);
+  text-decoration: none;
+  margin: 0 var(--spacing-xs);
+}
+
+.contactNote a:hover {
+  text-decoration: underline;
+}

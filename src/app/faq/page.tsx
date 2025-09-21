@@ -1,32 +1,32 @@
-import type { Metadata } from "next";
-import styles from "./faq.module.scss";
-import Button from "../../components/ui/button";
+import type { Metadata } from 'next';
+import styles from './faq.module.scss';
+import Button from '../../components/ui/button';
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://nextgentherapy.co.uk"),
-  title: "Therapy FAQ Colchester | Common Questions | BACP Therapist",
+  metadataBase: new URL('https://nextgentherapy.co.uk'),
+  title: 'Therapy FAQ Colchester | Common Questions | BACP Therapist',
   description:
-    "Common therapy questions answered by BACP registered therapist in Colchester. Learn about therapy process, costs, what to expect. Book consultation today!",
+    'Common therapy questions answered by BACP registered therapist in Colchester. Learn about therapy process, costs, what to expect. Book consultation today!',
   keywords: [
-    "therapy questions Colchester",
-    "therapy FAQ Essex",
-    "therapy costs Colchester",
-    "what to expect therapy",
-    "therapy process explained",
-    "therapist questions Colchester",
-    "mental health therapy questions",
-    "therapy help questions",
-    "therapy FAQ answered",
-    "BACP therapist questions",
-    "therapy appointment questions",
-    "therapy session questions",
-    "anxiety therapy questions",
-    "depression therapy FAQ",
-    "therapy consultation questions"
+    'therapy questions Colchester',
+    'therapy FAQ Essex',
+    'therapy costs Colchester',
+    'what to expect therapy',
+    'therapy process explained',
+    'therapist questions Colchester',
+    'mental health therapy questions',
+    'therapy help questions',
+    'therapy FAQ answered',
+    'BACP therapist questions',
+    'therapy appointment questions',
+    'therapy session questions',
+    'anxiety therapy questions',
+    'depression therapy FAQ',
+    'therapy consultation questions',
   ],
-  authors: [{ name: "Andreea Horhocea" }],
+  authors: [{ name: 'Andreea Horhocea' }],
   alternates: {
-    canonical: "https://nextgentherapy.co.uk/faq",
+    canonical: 'https://nextgentherapy.co.uk/faq',
   },
   robots: {
     index: true,
@@ -34,25 +34,25 @@ export const metadata: Metadata = {
     googleBot: {
       index: true,
       follow: true,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
     },
   },
   openGraph: {
-    title: "FAQ - Therapy Questions Answered | Colchester Therapist",
+    title: 'FAQ - Therapy Questions Answered | Colchester Therapist',
     description:
-      "Common therapy questions answered by BACP registered therapist in Colchester. Learn about costs, process & what to expect.",
-    url: "https://nextgentherapy.co.uk/faq",
-    siteName: "Next Generation Therapy",
-    locale: "en_GB",
-    type: "website",
+      'Common therapy questions answered by BACP registered therapist in Colchester. Learn about costs, process & what to expect.',
+    url: 'https://nextgentherapy.co.uk/faq',
+    siteName: 'Next Generation Therapy',
+    locale: 'en_GB',
+    type: 'website',
     images: [
       {
-        url: "https://nextgentherapy.co.uk/images/default-social-share.jpg",
+        url: 'https://nextgentherapy.co.uk/images/default-social-share.jpg',
         width: 1200,
         height: 630,
-        alt: "FAQ - Therapy Questions Answered | Next Generation Therapy",
+        alt: 'FAQ - Therapy Questions Answered | Next Generation Therapy',
       },
     ],
   },
@@ -61,79 +61,89 @@ export const metadata: Metadata = {
 export default function FAQ() {
   const faqData = [
     {
-      question: "How much does therapy cost in Colchester?",
-      answer: "Individual therapy sessions are £60 for 50 minutes. I also offer a free 15-minute consultation call to discuss your needs and see if we're a good fit to work together."
+      question: 'How much does therapy cost in Colchester?',
+      answer:
+        "Individual therapy sessions are £60 for 50 minutes. I also offer a free 15-minute consultation call to discuss your needs and see if we're a good fit to work together.",
     },
     {
-      question: "Do you offer online therapy sessions?",
-      answer: "Yes, I offer both in-person sessions in Colchester and online therapy sessions via secure video calls. Online therapy can be just as effective as face-to-face sessions."
+      question: 'Do you offer online therapy sessions?',
+      answer:
+        'Yes, I offer both in-person sessions in Colchester and online therapy sessions via secure video calls. Online therapy can be just as effective as face-to-face sessions.',
     },
     {
-      question: "What should I expect in my first therapy session?",
-      answer: "Your first session will focus on getting to know you and understanding what brings you to therapy. We'll discuss your goals, background, and I'll explain how I work. It's completely confidential and there's no pressure."
+      question: 'What should I expect in my first therapy session?',
+      answer:
+        "Your first session will focus on getting to know you and understanding what brings you to therapy. We'll discuss your goals, background, and I'll explain how I work. It's completely confidential and there's no pressure.",
     },
     {
-      question: "How long does therapy take to work?",
-      answer: "This varies for everyone. Some people notice changes after a few sessions, while others benefit from longer-term work. We'll regularly review your progress and goals together."
+      question: 'How long does therapy take to work?',
+      answer:
+        "This varies for everyone. Some people notice changes after a few sessions, while others benefit from longer-term work. We'll regularly review your progress and goals together.",
     },
     {
-      question: "What is psychodynamic therapy?",
-      answer: "Psychodynamic therapy explores how your past experiences and unconscious thoughts influence your current relationships and life patterns. It helps you gain insight and make lasting changes."
+      question: 'What is psychodynamic therapy?',
+      answer:
+        'Psychodynamic therapy explores how your past experiences and unconscious thoughts influence your current relationships and life patterns. It helps you gain insight and make lasting changes.',
     },
     {
-      question: "Are you qualified and registered?",
-      answer: "Yes, I'm BACP (British Association for Counselling and Psychotherapy) registered with a Master's degree in psychodynamic psychotherapy. I have 6+ years experience working with children, adults and families."
+      question: 'Are you qualified and registered?',
+      answer:
+        "Yes, I'm BACP (British Association for Counselling and Psychotherapy) registered with a Master's degree in psychodynamic psychotherapy. I have 6+ years experience working with children, adults and families.",
     },
     {
-      question: "What issues do you help with?",
-      answer: "I work with anxiety, depression, relationship difficulties, self-esteem issues, eating disorders, body image concerns, trauma, and life transitions. Both children and adults are welcome."
+      question: 'What issues do you help with?',
+      answer:
+        'I work with anxiety, depression, relationship difficulties, self-esteem issues, eating disorders, body image concerns, trauma, and life transitions. Both children and adults are welcome.',
     },
     {
-      question: "Is therapy confidential?",
-      answer: "Yes, everything we discuss is strictly confidential. The only exceptions are if there's a risk of serious harm to yourself or others, which I would discuss with you first."
+      question: 'Is therapy confidential?',
+      answer:
+        "Yes, everything we discuss is strictly confidential. The only exceptions are if there's a risk of serious harm to yourself or others, which I would discuss with you first.",
     },
     {
-      question: "How do I book a therapy session in Colchester?",
-      answer: "You can book through the contact form on my website, call me directly, or email. I respond within 24 hours and offer a free consultation call to answer any questions."
+      question: 'How do I book a therapy session in Colchester?',
+      answer:
+        'You can book through the contact form on my website, call me directly, or email. I respond within 24 hours and offer a free consultation call to answer any questions.',
     },
     {
-      question: "Do you work with children?",
-      answer: "Yes, I specialize in child therapy using play therapy techniques. I work with children experiencing anxiety, emotional difficulties, behavioural concerns, and family changes."
-    }
+      question: 'Do you work with children?',
+      answer:
+        'Yes, I specialize in child therapy using play therapy techniques. I work with children experiencing anxiety, emotional difficulties, behavioural concerns, and family changes.',
+    },
   ];
 
   const structuredData = {
-    "@context": "https://schema.org",
-    "@graph": [
+    '@context': 'https://schema.org',
+    '@graph': [
       {
-        "@type": "FAQPage",
-        "mainEntity": faqData.map(faq => ({
-          "@type": "Question",
-          "name": faq.question,
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": faq.answer
-          }
-        }))
+        '@type': 'FAQPage',
+        mainEntity: faqData.map((faq) => ({
+          '@type': 'Question',
+          name: faq.question,
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: faq.answer,
+          },
+        })),
       },
       {
-        "@type": "BreadcrumbList",
-        "itemListElement": [
+        '@type': 'BreadcrumbList',
+        itemListElement: [
           {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Home",
-            "item": "https://nextgentherapy.co.uk"
+            '@type': 'ListItem',
+            position: 1,
+            name: 'Home',
+            item: 'https://nextgentherapy.co.uk',
           },
           {
-            "@type": "ListItem", 
-            "position": 2,
-            "name": "FAQ",
-            "item": "https://nextgentherapy.co.uk/faq"
-          }
-        ]
-      }
-    ]
+            '@type': 'ListItem',
+            position: 2,
+            name: 'FAQ',
+            item: 'https://nextgentherapy.co.uk/faq',
+          },
+        ],
+      },
+    ],
   };
 
   return (
@@ -147,7 +157,8 @@ export default function FAQ() {
           <section className={styles.hero}>
             <h1>Frequently Asked Questions</h1>
             <p className={styles.subtitle}>
-              Common questions about therapy in Colchester answered by BACP registered psychotherapist Andreea Horhocea
+              Common questions about therapy in Colchester answered by BACP registered
+              psychotherapist Andreea Horhocea
             </p>
           </section>
 
@@ -165,7 +176,8 @@ export default function FAQ() {
           <section className={styles.callToAction}>
             <h2>Still Have Questions?</h2>
             <p>
-              Book a free 15-minute consultation call to discuss your specific needs and learn how therapy can help you.
+              Book a free 15-minute consultation call to discuss your specific needs and learn how
+              therapy can help you.
             </p>
             <div className={styles.buttonGroup}>
               <Button href="/book-now">Book Free Consultation</Button>

@@ -34,7 +34,7 @@ const iconSizes = [
   { size: 96, name: 'icon-96x96.png' },
   { size: 144, name: 'icon-144x144.png' },
   { size: 192, name: 'icon-192x192.png' },
-  { size: 512, name: 'icon-512x512.png' }
+  { size: 512, name: 'icon-512x512.png' },
 ];
 
 // Create icons directory if it doesn't exist

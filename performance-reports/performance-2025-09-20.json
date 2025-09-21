@@ -5,49 +5,37 @@
       "page": "Homepage",
       "url": "/",
       "error": "lighthouse is not a function",
-      "issues": [
-        "Failed to audit: lighthouse is not a function"
-      ]
+      "issues": ["Failed to audit: lighthouse is not a function"]
     },
     {
       "page": "Book Now",
       "url": "/book-now",
       "error": "lighthouse is not a function",
-      "issues": [
-        "Failed to audit: lighthouse is not a function"
-      ]
+      "issues": ["Failed to audit: lighthouse is not a function"]
     },
     {
       "page": "Services",
       "url": "/services",
       "error": "lighthouse is not a function",
-      "issues": [
-        "Failed to audit: lighthouse is not a function"
-      ]
+      "issues": ["Failed to audit: lighthouse is not a function"]
     },
     {
       "page": "About",
       "url": "/about",
       "error": "lighthouse is not a function",
-      "issues": [
-        "Failed to audit: lighthouse is not a function"
-      ]
+      "issues": ["Failed to audit: lighthouse is not a function"]
     },
     {
       "page": "Pricing",
       "url": "/pricing",
       "error": "lighthouse is not a function",
-      "issues": [
-        "Failed to audit: lighthouse is not a function"
-      ]
+      "issues": ["Failed to audit: lighthouse is not a function"]
     },
     {
       "page": "FAQ",
       "url": "/faq",
       "error": "lighthouse is not a function",
-      "issues": [
-        "Failed to audit: lighthouse is not a function"
-      ]
+      "issues": ["Failed to audit: lighthouse is not a function"]
     }
   ],
   "summary": {
