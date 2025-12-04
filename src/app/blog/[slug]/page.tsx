@@ -6,6 +6,7 @@ import path from 'path';
 import matter from 'gray-matter';
 import { remark } from 'remark';
 import html from 'remark-html';
+import { notFound } from 'next/navigation';
 import Button from '../../../components/ui/button';
 import Link from 'next/link';
 import styles from '../blog.module.scss';
@@ -30,12 +31,13 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { slug } = await params;
   const postsDir = path.join(process.cwd(), 'src/content/blog');
+  const isValidSlug = /^[a-zA-Z0-9-_]+$/.test(slug);
+  if (!isValidSlug) {
+    notFound();
+  }
   const filePath = path.join(postsDir, `${slug}.md`);
   if (!fs.existsSync(filePath)) {
-    return {
-      title: 'Post not found - Next Generation Therapy',
-      description: 'This blog post could not be found.',
-    };
+    notFound();
   }
   const fileContent = fs.readFileSync(filePath, 'utf-8');
   const { data } = matter(fileContent);
@@ -155,12 +157,12 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
   const postsDir = path.join(process.cwd(), 'src/content/blog');
   const isValidSlug = /^[a-zA-Z0-9-_]+$/.test(slug);
   if (!isValidSlug) {
-    return <div>Invalid post slug</div>;
+    notFound();
   }
 
   const filePath = path.join(postsDir, `${slug}.md`);
   if (!fs.existsSync(filePath)) {
-    return <div>Post not found</div>;
+    notFound();
   }
   const fileContent = fs.readFileSync(filePath, 'utf-8');
   const { data, content } = matter(fileContent);

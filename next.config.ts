@@ -47,6 +47,43 @@ const nextConfig: NextConfig = {
         destination: '/trust',
         permanent: true,
       },
+      // Old blog post redirects (GSC indexed URLs that no longer exist)
+      {
+        source: '/blog/5-common-myths-about-body-image-and-eating-habits',
+        destination: '/blog',
+        permanent: true,
+      },
+      {
+        source: '/blog/understanding-psychodynamic-therapy',
+        destination: '/blog/understanding-different-therapy-approaches',
+        permanent: true,
+      },
+      {
+        source: '/blog/managing-anxiety-between-sessions',
+        destination: '/blog/understanding-anxiety-young-people',
+        permanent: true,
+      },
+      // Legacy paths from old site structure
+      {
+        source: '/why-people-seek-therapy',
+        destination: '/blog/signs-you-might-benefit-from-therapy',
+        permanent: true,
+      },
+      {
+        source: '/thoughts/:path*',
+        destination: '/blog',
+        permanent: true,
+      },
+      {
+        source: '/therapy101',
+        destination: '/about-therapy',
+        permanent: true,
+      },
+      {
+        source: '/reviews-2',
+        destination: '/trust',
+        permanent: true,
+      },
     ];
   },
   async headers() {
