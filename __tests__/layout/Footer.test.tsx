@@ -163,7 +163,7 @@ describe('Footer Component', () => {
         { name: 'Therapy Services', href: '/services' },
         { name: 'Pricing', href: '/pricing' },
         { name: 'FAQ', href: '/faq' },
-        { name: 'Trust & Care', href: '/testimonials' },
+        { name: 'Trust & Care', href: '/trust' },
         { name: 'About Andreea', href: '/about' },
         { name: 'Location', href: '/location' },
       ];

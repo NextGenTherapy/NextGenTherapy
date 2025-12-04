@@ -200,8 +200,8 @@ describe('Header Component', () => {
     // Should have navigation element
     expect(screen.getByRole('navigation')).toBeInTheDocument();
 
-    // Should have h1 for logo
-    expect(screen.getByRole('heading', { level: 1 })).toBeInTheDocument();
+    // Should have logo link
+    expect(screen.getByRole('link', { name: /nextgentherapy/i })).toBeInTheDocument();
 
     // Should have unordered list for navigation
     expect(screen.getByRole('list')).toBeInTheDocument();
