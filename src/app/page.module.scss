@@ -11,7 +11,10 @@
   background-color: var(--color-header-background);
   display: flex;
   justify-content: center;
+  flex-direction: column;
   align-items: center;
+  box-sizing: border-box;
+  width: 100%;
   min-height: 40vh;
   padding: var(--spacing-large);
 }
@@ -23,12 +26,26 @@
   }
 }
 
+@media (min-width: 1024px) {
+  .logoSection {
+    min-height: 60vh;
+  }
+}
+
 .logoContainer {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
   height: 100%;
+  padding: var(--spacing-large);
+  box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+  .logoContainer {
+    padding: var(--spacing-xlarge);
+  }
 }
 
 .logoImage {
@@ -40,6 +57,7 @@
   height: 100%;
   min-height: 200px;
   max-width: 400px;
+  transition: var(--transition-normal);
 }
 
 @media (min-width: 768px) {
@@ -70,9 +88,10 @@
   }
 }
 
+/* Greeting Section */
 .greeting {
   text-align: center;
-  padding: var(--spacing-section) 0 var(--spacing-large);
+  padding: var(--spacing-large) 0 var(--spacing-large);
 
   h1 {
     font-size: var(--font-size-h1);
@@ -86,18 +105,31 @@
     font-size: var(--font-size-medium);
     color: var(--color-text-primary);
     margin: 0;
-    opacity: 0.8;
+    line-height: 1.6;
+
+    a {
+      color: var(--color-accent);
+      text-decoration: underline;
+
+      &:hover,
+      &:focus {
+        color: var(--color-accent-hover);
+      }
+    }
   }
 }
 
 @media (min-width: 768px) {
-  .greeting h1 {
-    font-size: var(--font-size-h1);
-  }
+  .greeting {
+    padding: var(--spacing-section) 0 var(--spacing-large);
 
-  .greeting .subtitle {
-    font-size: var(--font-size-h1);
-    color: var(--color-accent) !important;
+    h1 {
+      font-size: var(--font-size-h1);
+    }
+
+    .subtitle {
+      font-size: var(--font-size-large);
+    }
   }
 }
 
@@ -131,12 +163,14 @@
   }
 }
 
-/* About Container - Just for cards now */
+/* About Container */
 .aboutContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
+  max-width: var(--container-width-desktop);
+  margin: 0 auto;
 }
 
 /* Cards Container */
@@ -162,6 +196,7 @@
   }
 }
 
+/* Card Styles */
 .introCard,
 .servicesCard,
 .approachCard {
@@ -185,235 +220,6 @@
     text-decoration: none;
     border-color: var(--color-accent);
     background: white;
-  }
-
-  &:focus-visible {
-    outline: 2px solid var(--color-accent);
-    outline-offset: 2px;
-  }
-
-  h2 {
-    color: var(--color-accent);
-    font-size: var(--font-size-h3);
-    margin-bottom: var(--spacing-medium);
-    font-weight: 600;
-    transition: var(--transition-normal);
-  }
-
-  &:hover h2,
-  &:focus h2 {
-    color: var(--color-accent-hover);
-  }
-
-  p {
-    line-height: 1.6;
-    margin: 0;
-    color: var(--color-text-primary);
-    font-size: var(--font-size-base);
-  }
-}
-
-@media (min-width: 768px) {
-  .introCard,
-  .servicesCard,
-  .approachCard {
-    padding: var(--spacing-xlarge);
-
-    h2 {
-      font-size: var(--font-size-h2);
-    }
-
-    p {
-      font-size: var(--font-size-medium);
-    }
-  }
-}
-
-/* Logo Section */
-.logoSection {
-  background-color: var(--color-header-background);
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  box-sizing: border-box;
-  width: 100%;
-  min-height: 50vh;
-}
-
-@media (min-width: 768px) {
-  .logoSection {
-    min-height: 60vh;
-  }
-}
-
-@media (min-width: 1024px) {
-  .logoSection {
-    min-height: 70vh;
-  }
-}
-
-.logoContainer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  padding: var(--spacing-large);
-  box-sizing: border-box;
-}
-
-.logoImage {
-  background-image: url('/images/logo.jpg');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  width: 100%;
-  height: 100%;
-  min-height: 300px;
-  transition: var(--transition-normal);
-}
-
-@media (min-width: 768px) {
-  .logoContainer {
-    padding: var(--spacing-xlarge);
-  }
-
-  .logoImage {
-    min-height: 400px;
-  }
-}
-
-/* Content Section */
-.contentSection {
-  padding: 0 var(--container-padding-mobile) var(--spacing-section);
-  width: 100%;
-  box-sizing: border-box;
-}
-
-@media (min-width: 768px) {
-  .contentSection {
-    padding: 0 var(--container-padding-tablet) var(--spacing-section);
-  }
-}
-
-@media (min-width: 1024px) {
-  .contentSection {
-    padding: 0 var(--container-padding-desktop) var(--spacing-section);
-  }
-}
-
-.greeting {
-  text-align: center;
-  padding: var(--spacing-section) 0 var(--spacing-large);
-
-  h1 {
-    font-size: var(--font-size-h1);
-    font-weight: bold;
-    color: var(--color-accent);
-    margin: 0 0 var(--spacing-small) 0;
-  }
-
-  .subtitle {
-    font-size: var(--font-size-large);
-    color: var(--color-text-secondary);
-    margin: 0;
-    font-style: italic;
-  }
-}
-
-@media (min-width: 768px) {
-  .greeting h1 {
-    font-size: var(--font-size-h1);
-  }
-
-  .greeting .subtitle {
-    font-size: var(--font-size-xlarge);
-  }
-}
-
-.aboutContainer {
-  max-width: var(--container-width-desktop);
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: var(--spacing-large);
-}
-
-@media (min-width: 1024px) {
-  .aboutContainer {
-    flex-direction: row;
-    align-items: flex-start;
-    gap: var(--spacing-xxlarge);
-  }
-}
-
-.imageContainer {
-  flex: 0 0 auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  max-width: 300px;
-
-  .image {
-    border-radius: var(--border-radius-large);
-    box-shadow: var(--box-shadow);
-    width: 100%;
-    height: auto;
-  }
-}
-
-@media (min-width: 768px) {
-  .imageContainer {
-    max-width: 350px;
-  }
-}
-
-@media (min-width: 1024px) {
-  .imageContainer {
-    flex: 0 0 350px;
-    order: 2;
-  }
-}
-
-/* Cards Container */
-.cardsContainer {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: var(--spacing-large);
-  width: 100%;
-}
-
-@media (min-width: 1024px) {
-  .cardsContainer {
-    order: 1;
-  }
-}
-
-.introCard,
-.servicesCard,
-.approachCard {
-  background: rgba(255, 255, 255, 0.95);
-  border: 1px solid var(--color-accent-light);
-  border-radius: var(--border-radius-large);
-  padding: var(--spacing-large);
-  box-shadow: var(--box-shadow);
-  transition: var(--transition-normal);
-  text-decoration: none;
-  color: inherit;
-  display: block;
-  cursor: pointer;
-
-  &:hover,
-  &:focus {
-    box-shadow: var(--box-shadow-hover);
-    transform: translateY(-2px);
-    text-decoration: none;
-    border-color: var(--color-accent);
-    background: rgba(255, 255, 255, 1);
   }
 
   &:focus-visible {
