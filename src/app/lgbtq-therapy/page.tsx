@@ -4,25 +4,116 @@ import Link from 'next/link';
 import buttonStyles from '../../components/ui/button.module.scss';
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://nextgentherapy.co.uk'),
   title: 'LGBTQ+ Therapy | Inclusive Support & Identity Affirmation | Colchester',
   description:
     'Inclusive, affirming therapy for LGBTQ+ individuals in Colchester. Safe space for identity exploration, coming out support, and mental health care for the LGBTQ+ community.',
-  keywords:
-    'LGBTQ therapy Colchester, gay therapy Essex, transgender therapy, queer counselling Colchester, coming out support, LGBTQ+ mental health, gender identity therapy, inclusive therapy Colchester, LGBTQ+ counselling Essex, affirming therapy',
+  keywords: [
+    'LGBTQ therapy Colchester',
+    'gay therapy Essex',
+    'transgender therapy',
+    'queer counselling Colchester',
+    'coming out support',
+    'LGBTQ+ mental health',
+    'gender identity therapy',
+    'inclusive therapy Colchester',
+    'LGBTQ+ counselling Essex',
+    'affirming therapy',
+  ],
+  authors: [{ name: 'Andreea Horhocea' }],
+  alternates: {
+    canonical: 'https://nextgentherapy.co.uk/lgbtq-therapy',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
   openGraph: {
     title: 'LGBTQ+ Therapy | Inclusive Support & Identity Affirmation',
     description:
       'Inclusive, affirming therapy for LGBTQ+ individuals in Colchester. Safe space for identity exploration and mental health support.',
     type: 'website',
     url: 'https://nextgentherapy.co.uk/lgbtq-therapy',
+    siteName: 'Next Generation Therapy',
+    locale: 'en_GB',
+    images: [
+      {
+        url: 'https://nextgentherapy.co.uk/images/default-social-share.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'LGBTQ+ Inclusive Therapy - Next Generation Therapy',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'LGBTQ+ Therapy | Inclusive Support & Identity Affirmation',
+    description:
+      'Inclusive, affirming therapy for LGBTQ+ individuals in Colchester. Safe space for identity exploration and mental health support.',
+    images: ['https://nextgentherapy.co.uk/images/default-social-share.jpg'],
   },
 };
 
 export default function LGBTQTherapyPage() {
+  const structuredData = {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    name: 'LGBTQ+ Inclusive Therapy',
+    provider: {
+      '@type': 'Person',
+      name: 'Andreea Horhocea',
+      jobTitle: 'Psychodynamic Psychotherapist',
+    },
+    serviceType: 'LGBTQ+ Affirming Therapy',
+    areaServed: ['Colchester', 'Essex', 'Online'],
+    description:
+      'Inclusive, affirming therapy for LGBTQ+ individuals. Safe space for identity exploration, coming out support, and mental health care for the LGBTQ+ community.',
+  };
+
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://nextgentherapy.co.uk',
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Services',
+        item: 'https://nextgentherapy.co.uk/services',
+      },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: 'LGBTQ+ Therapy',
+        item: 'https://nextgentherapy.co.uk/lgbtq-therapy',
+      },
+    ],
+  };
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        {/* Hero Section */}
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <div className={styles.page}>
+        <main className={styles.main}>
+          {/* Hero Section */}
         <section className={styles.heroSection}>
           <div className={styles.heroContent}>
             <h1 className={styles.pageTitle}>LGBTQ+ Inclusive Therapy</h1>
@@ -507,7 +598,8 @@ export default function LGBTQTherapyPage() {
             </Link>
           </div>
         </section>
-      </main>
-    </div>
+        </main>
+      </div>
+    </>
   );
 }

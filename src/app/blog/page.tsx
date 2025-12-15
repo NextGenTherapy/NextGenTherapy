@@ -49,6 +49,14 @@ export const metadata: Metadata = {
     siteName: 'Next Generation Therapy',
     locale: 'en_GB',
     type: 'website',
+    images: [
+      {
+        url: 'https://nextgentherapy.co.uk/images/default-social-share.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Mental Health Blog - Next Generation Therapy',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',

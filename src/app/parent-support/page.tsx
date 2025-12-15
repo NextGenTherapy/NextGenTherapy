@@ -4,25 +4,115 @@ import buttonStyles from '../../components/ui/button.module.scss';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Parent Support and Guidance | Supporting Your Child&apos;s Mental Health | Colchester',
+  metadataBase: new URL('https://nextgentherapy.co.uk'),
+  title: "Parent Support and Guidance | Supporting Your Child's Mental Health | Colchester",
   description:
-    'Expert guidance for parents navigating their child&apos;s mental health journey. Support for families dealing with anxiety, depression, school avoidance, and behavioral challenges in Colchester.',
-  keywords:
-    'parent support Colchester, child mental health guidance, family therapy support Essex, parenting anxious child, supporting child therapy, parent counselling Colchester, family mental health support, child psychology guidance Essex',
+    "Expert guidance for parents navigating their child's mental health journey. Support for families dealing with anxiety, depression, school avoidance, and behavioral challenges in Colchester.",
+  keywords: [
+    'parent support Colchester',
+    'child mental health guidance',
+    'family therapy support Essex',
+    'parenting anxious child',
+    'supporting child therapy',
+    'parent counselling Colchester',
+    'family mental health support',
+    'child psychology guidance Essex',
+  ],
+  authors: [{ name: 'Andreea Horhocea' }],
+  alternates: {
+    canonical: 'https://nextgentherapy.co.uk/parent-support',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
   openGraph: {
-    title: 'Parent Support and Guidance | Supporting Your Child&apos;s Mental Health',
+    title: "Parent Support and Guidance | Supporting Your Child's Mental Health",
     description:
-      'Expert guidance for parents navigating their child&apos;s mental health journey in Colchester.',
+      "Expert guidance for parents navigating their child's mental health journey in Colchester.",
     type: 'website',
     url: 'https://nextgentherapy.co.uk/parent-support',
+    siteName: 'Next Generation Therapy',
+    locale: 'en_GB',
+    images: [
+      {
+        url: 'https://nextgentherapy.co.uk/images/default-social-share.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Parent Support and Guidance - Next Generation Therapy',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: "Parent Support and Guidance | Supporting Your Child's Mental Health",
+    description:
+      "Expert guidance for parents navigating their child's mental health journey in Colchester.",
+    images: ['https://nextgentherapy.co.uk/images/default-social-share.jpg'],
   },
 };
 
 export default function ParentSupportPage() {
+  const structuredData = {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    name: 'Parent Support and Guidance',
+    provider: {
+      '@type': 'Person',
+      name: 'Andreea Horhocea',
+      jobTitle: 'Psychodynamic Psychotherapist',
+    },
+    serviceType: 'Parent Guidance and Support',
+    areaServed: ['Colchester', 'Essex', 'Online'],
+    description:
+      "Expert guidance for parents navigating their child's mental health journey. Support for families dealing with anxiety, depression, school avoidance, and behavioral challenges.",
+  };
+
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://nextgentherapy.co.uk',
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Services',
+        item: 'https://nextgentherapy.co.uk/services',
+      },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: 'Parent Support',
+        item: 'https://nextgentherapy.co.uk/parent-support',
+      },
+    ],
+  };
+
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        {/* Hero Section */}
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <div className={styles.page}>
+        <main className={styles.main}>
+          {/* Hero Section */}
         <section className={styles.heroSection}>
           <div className={styles.heroContent}>
             <h1 className={styles.pageTitle}>Parent Support and Guidance</h1>
@@ -417,7 +507,8 @@ export default function ParentSupportPage() {
             </Link>
           </div>
         </section>
-      </main>
-    </div>
+        </main>
+      </div>
+    </>
   );
 }

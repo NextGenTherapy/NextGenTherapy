@@ -56,6 +56,13 @@ export const metadata: Metadata = {
       },
     ],
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Therapy FAQ | Common Questions Answered | Colchester',
+    description:
+      'Common therapy questions answered by BACP registered therapist in Colchester. Learn about costs, process & what to expect.',
+    images: ['https://nextgentherapy.co.uk/images/default-social-share.jpg'],
+  },
 };
 
 export default function FAQ() {

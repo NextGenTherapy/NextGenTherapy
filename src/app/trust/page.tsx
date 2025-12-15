@@ -5,7 +5,9 @@ import Link from 'next/link';
 const siteUrl = 'https://nextgentherapy.co.uk';
 
 export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
   title: 'Trust & Care | BACP Registered Counsellor Colchester',
+  authors: [{ name: 'Andreea Horhocea' }],
   description:
     'Professional counsellor in Colchester committed to trust and care. BACP registered with highest ethical standards. Safe therapy environment.',
   keywords: [
@@ -30,7 +32,7 @@ export const metadata: Metadata = {
     siteName: 'Next Generation Therapy',
     images: [
       {
-        url: '/images/default-social-share.jpg',
+        url: 'https://nextgentherapy.co.uk/images/default-social-share.jpg',
         width: 1200,
         height: 630,
         alt: 'Professional therapy approach in Colchester',

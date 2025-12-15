@@ -6,7 +6,9 @@ import Button from '../../components/ui/button';
 const siteUrl = 'https://nextgentherapy.co.uk';
 
 export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
   title: 'Colchester Therapist Location | Directions & Contact',
+  authors: [{ name: 'Andreea Horhocea' }],
   description:
     'Find your therapist in Colchester Business Centre. Easy directions, parking info, and contact details for your appointment.',
   keywords: [

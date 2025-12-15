@@ -61,9 +61,9 @@ export const metadata: Metadata = {
     images: [
       {
         url: 'https://nextgentherapy.co.uk/images/default-social-share.jpg',
-        width: 500,
-        height: 500,
-        alt: 'Therapy session illustration',
+        width: 1200,
+        height: 630,
+        alt: 'Book Therapy Session - Next Generation Therapy Colchester',
       },
     ],
   },

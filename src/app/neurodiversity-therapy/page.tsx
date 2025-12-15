@@ -4,25 +4,117 @@ import Link from 'next/link';
 import buttonStyles from '../../components/ui/button.module.scss';
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://nextgentherapy.co.uk'),
   title: 'Neurodiversity Therapy | ADHD, Autism & SEN Support | Colchester',
   description:
     'Specialist therapy for neurodivergent children, teenagers, and young adults in Colchester. Expert support for ADHD, autism, and other neurodivergent conditions with SEN school experience.',
-  keywords:
-    'neurodiversity therapy Colchester, ADHD therapy Essex, autism therapy Colchester, SEN therapy support, neurodivergent children therapy, ADHD counselling Colchester, autism support Essex, sensory processing therapy, executive function support, neurodiversity counselling',
+  keywords: [
+    'neurodiversity therapy Colchester',
+    'ADHD therapy Essex',
+    'autism therapy Colchester',
+    'SEN therapy support',
+    'neurodivergent children therapy',
+    'ADHD counselling Colchester',
+    'autism support Essex',
+    'sensory processing therapy',
+    'executive function support',
+    'neurodiversity counselling',
+  ],
+  authors: [{ name: 'Andreea Horhocea' }],
+  alternates: {
+    canonical: 'https://nextgentherapy.co.uk/neurodiversity-therapy',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
   openGraph: {
     title: 'Neurodiversity Therapy | ADHD, Autism & SEN Support',
     description:
       'Specialist therapy for neurodivergent children, teenagers, and young adults in Colchester with SEN school experience.',
     type: 'website',
     url: 'https://nextgentherapy.co.uk/neurodiversity-therapy',
+    siteName: 'Next Generation Therapy',
+    locale: 'en_GB',
+    images: [
+      {
+        url: 'https://nextgentherapy.co.uk/images/default-social-share.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Neurodiversity Therapy - Next Generation Therapy',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Neurodiversity Therapy | ADHD, Autism & SEN Support',
+    description:
+      'Specialist therapy for neurodivergent children, teenagers, and young adults in Colchester with SEN school experience.',
+    images: ['https://nextgentherapy.co.uk/images/default-social-share.jpg'],
   },
 };
 
 export default function NeurodiversityTherapyPage() {
+  const structuredData = {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    name: 'Neurodiversity Therapy & SEN Support',
+    provider: {
+      '@type': 'Person',
+      name: 'Andreea Horhocea',
+      jobTitle: 'Psychodynamic Psychotherapist',
+    },
+    serviceType: ['ADHD Therapy', 'Autism Support', 'SEN Support'],
+    areaServed: ['Colchester', 'Essex', 'Online'],
+    description:
+      'Specialist therapy for neurodivergent children, teenagers, and young adults. Expert support for ADHD, autism, and other neurodivergent conditions with SEN school experience.',
+  };
+
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://nextgentherapy.co.uk',
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Services',
+        item: 'https://nextgentherapy.co.uk/services',
+      },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: 'Neurodiversity Therapy',
+        item: 'https://nextgentherapy.co.uk/neurodiversity-therapy',
+      },
+    ],
+  };
+
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        {/* Hero Section */}
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <div className={styles.page}>
+        <main className={styles.main}>
+          {/* Hero Section */}
         <section className={styles.heroSection}>
           <div className={styles.heroContent}>
             <h1 className={styles.pageTitle}>Neurodiversity Therapy & SEN Support</h1>
@@ -473,7 +565,8 @@ export default function NeurodiversityTherapyPage() {
             </Link>
           </div>
         </section>
-      </main>
-    </div>
+        </main>
+      </div>
+    </>
   );
 }

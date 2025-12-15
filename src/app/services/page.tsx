@@ -450,6 +450,25 @@ export default function Services() {
                     Learn More About LGBTQ+ Support
                   </Link>
                 </div>
+
+                <div className={styles.ageServiceCard}>
+                  <h3>Parent Support & Guidance</h3>
+                  <p>
+                    Expert guidance for parents navigating their child&apos;s mental health journey.
+                    Support for families dealing with anxiety, depression, school avoidance, and
+                    behavioral challenges.
+                  </p>
+                  <ul>
+                    <li>Understanding your child&apos;s experience</li>
+                    <li>Communication strategies</li>
+                    <li>Managing your own emotions</li>
+                    <li>Creating supportive environments</li>
+                    <li>Working with schools and professionals</li>
+                  </ul>
+                  <Link href="/parent-support" className={buttonStyles.button}>
+                    Learn More About Parent Support
+                  </Link>
+                </div>
               </div>
             </div>
           </section>

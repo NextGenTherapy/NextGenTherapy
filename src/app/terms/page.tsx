@@ -71,10 +71,54 @@ export const metadata: Metadata = {
 };
 
 export default function Terms() {
+  const structuredData = {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    name: 'Terms & Conditions',
+    description:
+      'Terms & conditions for counselling service at Next Generation Therapy. Professional service agreement with BACP registered counsellor.',
+    url: 'https://nextgentherapy.co.uk/terms',
+    publisher: {
+      '@type': 'Organization',
+      name: 'Next Generation Therapy',
+      url: 'https://nextgentherapy.co.uk',
+    },
+    inLanguage: 'en-GB',
+    dateModified: '2025-01-01',
+  };
+
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://nextgentherapy.co.uk',
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Terms & Conditions',
+        item: 'https://nextgentherapy.co.uk/terms',
+      },
+    ],
+  };
+
   return (
-    <div className={styles.page}>
-      <main className={styles.terms}>
-        <LegalNavigation currentPage="terms" />
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <div className={styles.page}>
+        <main className={styles.terms}>
+          <LegalNavigation currentPage="terms" />
 
         <h1 className={styles.heading}>Counselling Terms & Conditions</h1>
         <p className={styles.updated}>
@@ -240,7 +284,8 @@ export default function Terms() {
           <Button href="/about">About</Button>
           <Button href="/book-now">Book Now</Button>
         </section>
-      </main>
-    </div>
+        </main>
+      </div>
+    </>
   );
 }

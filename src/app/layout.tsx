@@ -112,6 +112,12 @@ export default async function RootLayout({ children }: { children: React.ReactNo
         <meta name="msapplication-TileColor" content="#164b39" />
         <meta name="msapplication-navbutton-color" content="#164b39" />
 
+        {/* DNS Prefetch for faster external resource loading */}
+        <link rel="dns-prefetch" href="https://www.google-analytics.com" />
+        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+        <link rel="preconnect" href="https://www.google-analytics.com" />
+        <link rel="preconnect" href="https://www.googletagmanager.com" />
+
         {/* Google Business Profile Integration */}
         <meta
           name="google-business-verification"

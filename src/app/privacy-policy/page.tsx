@@ -71,10 +71,54 @@ export const metadata: Metadata = {
 };
 
 export default function PrivacyPolicy() {
+  const structuredData = {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    name: 'Privacy Policy',
+    description:
+      'Therapy privacy & confidentiality policy for Next Generation Therapy. BACP therapist commitment to protecting client information.',
+    url: 'https://nextgentherapy.co.uk/privacy-policy',
+    publisher: {
+      '@type': 'Organization',
+      name: 'Next Generation Therapy',
+      url: 'https://nextgentherapy.co.uk',
+    },
+    inLanguage: 'en-GB',
+    dateModified: '2025-01-01',
+  };
+
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://nextgentherapy.co.uk',
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Privacy Policy',
+        item: 'https://nextgentherapy.co.uk/privacy-policy',
+      },
+    ],
+  };
+
   return (
-    <div className={styles.page}>
-      <main className={styles.privacyPolicy}>
-        <LegalNavigation currentPage="privacy" />
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <div className={styles.page}>
+        <main className={styles.privacyPolicy}>
+          <LegalNavigation currentPage="privacy" />
 
         <h1 className={styles.heading}>Therapy Privacy & Client Confidentiality</h1>
         <p className={styles.updated}>
@@ -266,7 +310,8 @@ export default function PrivacyPolicy() {
           <Button href="/about">About</Button>
           <Button href="/book-now">Book Now</Button>
         </section>
-      </main>
-    </div>
+        </main>
+      </div>
+    </>
   );
 }

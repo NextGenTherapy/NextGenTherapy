@@ -30,6 +30,9 @@ Disallow: /api/
 Disallow: /_next/
 Disallow: /.*\?
 
+# Block technical files from indexing
+Disallow: /manifest.json
+
 # Canonical host declaration (non-www)
 Host: https://nextgentherapy.co.uk
 

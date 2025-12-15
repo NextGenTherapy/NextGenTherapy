@@ -101,8 +101,25 @@ const nextConfig: NextConfig = {
             key: 'Strict-Transport-Security',
             value: 'max-age=63072000; includeSubDomains; preload',
           },
-          { key: 'Permissions-Policy', value: 'geolocation=(), microphone=()' },
+          { key: 'Permissions-Policy', value: 'geolocation=(), microphone()' },
         ],
+      },
+      // Prevent indexing of technical files
+      {
+        source: '/manifest.json',
+        headers: [{ key: 'X-Robots-Tag', value: 'noindex, nofollow' }],
+      },
+      {
+        source: '/sitemap.xml',
+        headers: [{ key: 'X-Robots-Tag', value: 'noindex, nofollow' }],
+      },
+      {
+        source: '/sitemap-0.xml',
+        headers: [{ key: 'X-Robots-Tag', value: 'noindex, nofollow' }],
+      },
+      {
+        source: '/robots.txt',
+        headers: [{ key: 'X-Robots-Tag', value: 'noindex, nofollow' }],
       },
     ];
   },

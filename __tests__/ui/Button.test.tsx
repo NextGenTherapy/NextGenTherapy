@@ -1,11 +1,19 @@
+import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import '@testing-library/jest-dom';
 import Button from '../../src/components/ui/button';
 
+interface MockLinkProps {
+  children: React.ReactNode;
+  href: string;
+  className?: string;
+  [key: string]: unknown;
+}
+
 // Mock Next.js components
 jest.mock('next/link', () => {
-  return function MockLink({ children, href, className, ...props }: any) {
+  return function MockLink({ children, href, className, ...props }: MockLinkProps) {
     return (
       <a href={href} className={className} {...props}>
         {children}
@@ -328,7 +336,8 @@ describe('Button Component', () => {
     it('works as reset button in forms', () => {
       render(
         <form>
-          <input defaultValue="test" />
+          <label htmlFor="test-input">Test Input</label>
+          <input id="test-input" defaultValue="test" />
           <Button type="reset">Reset Form</Button>
         </form>
       );

@@ -43,6 +43,7 @@ export async function generateMetadata({
   const { data } = matter(fileContent);
 
   return {
+    metadataBase: new URL('https://nextgentherapy.co.uk'),
     title:
       data.title !== undefined
         ? `${data.title} - Next Generation Therapy Blog`
@@ -109,7 +110,17 @@ export async function generateMetadata({
       creator: '@nextgentherapy',
       site: '@nextgentherapy',
     },
-    robots: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1',
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-video-preview': -1,
+        'max-image-preview': 'large',
+        'max-snippet': -1,
+      },
+    },
   };
 }
 

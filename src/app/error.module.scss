@@ -1,0 +1,33 @@
+.errorContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  padding: var(--spacing-xlarge);
+  background: var(--color-background);
+}
+
+.errorContent {
+  text-align: center;
+  max-width: 500px;
+}
+
+.errorTitle {
+  font-size: var(--font-size-h1);
+  color: var(--color-header-background);
+  margin-bottom: var(--spacing-large);
+}
+
+.errorMessage {
+  color: var(--color-text-primary);
+  margin-bottom: var(--spacing-large);
+  font-size: var(--font-size-large);
+  line-height: 1.6;
+}
+
+.errorActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-medium);
+  justify-content: center;
+}

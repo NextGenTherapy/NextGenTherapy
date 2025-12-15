@@ -4,26 +4,141 @@ import buttonStyles from '../../components/ui/button.module.scss';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://nextgentherapy.co.uk'),
   title:
     'Youth & Family Therapy FAQ | Common Questions About Child, Teen & Young Adult Therapy | Colchester',
   description:
     'Answers to frequently asked questions about child therapy, teenage therapy, and young adult therapy. Expert guidance for families considering therapy in Colchester, Essex.',
-  keywords:
-    'child therapy FAQ Colchester, teenage therapy questions Essex, young adult therapy FAQ, family therapy questions, therapy for children FAQ, teen therapy FAQ Colchester, youth therapy questions Essex',
+  keywords: [
+    'child therapy FAQ Colchester',
+    'teenage therapy questions Essex',
+    'young adult therapy FAQ',
+    'family therapy questions',
+    'therapy for children FAQ',
+    'teen therapy FAQ Colchester',
+    'youth therapy questions Essex',
+  ],
+  authors: [{ name: 'Andreea Horhocea' }],
+  alternates: {
+    canonical: 'https://nextgentherapy.co.uk/youth-family-faq',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
   openGraph: {
     title: 'Youth & Family Therapy FAQ | Common Questions About Therapy for Young People',
     description:
       'Answers to frequently asked questions about therapy for children, teenagers, and young adults in Colchester.',
     type: 'website',
     url: 'https://nextgentherapy.co.uk/youth-family-faq',
+    siteName: 'Next Generation Therapy',
+    locale: 'en_GB',
+    images: [
+      {
+        url: 'https://nextgentherapy.co.uk/images/default-social-share.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Youth & Family Therapy FAQ - Next Generation Therapy',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Youth & Family Therapy FAQ | Common Questions About Therapy for Young People',
+    description:
+      'Answers to frequently asked questions about therapy for children, teenagers, and young adults in Colchester.',
+    images: ['https://nextgentherapy.co.uk/images/default-social-share.jpg'],
   },
 };
 
 export default function YouthFamilyFAQPage() {
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: 'What age groups do you work with?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'I work with children from age 5 through young adults up to age 25. Each age group has different needs: play-based therapy for younger children (5-12), talking therapy for teenagers (13-18), and specialized support for young adults (18-25) navigating independence and life transitions.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'How do I know if my child needs therapy?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: "Consider therapy if your child is experiencing persistent difficulties that interfere with daily life, such as anxiety that prevents school attendance, behavioral changes lasting more than a few weeks, difficulty processing a traumatic event, or expressing feelings of hopelessness. Trust your parental instincts - if you're concerned, it's worth exploring.",
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Will my teenager actually talk to a therapist?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: "Many teenagers are initially reluctant but often engage once they feel heard and respected. I focus on building rapport, respecting their autonomy, and ensuring they don't feel judged. Most teenagers appreciate having a neutral adult who listens without trying to fix everything immediately.",
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'How long does therapy typically last?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'This varies greatly depending on the individual and their needs. Some young people benefit from short-term therapy (6-12 sessions) for specific issues, while others need longer-term support. We regularly review progress and discuss when therapy feels complete.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Do you offer online therapy for young people?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Yes, I offer online sessions for teenagers and young adults when appropriate. However, I prefer in-person sessions for younger children as play therapy is more effective face-to-face. Online therapy can be particularly helpful for young people with school anxiety or those away at university.',
+        },
+      },
+    ],
+  };
+
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://nextgentherapy.co.uk',
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Youth & Family FAQ',
+        item: 'https://nextgentherapy.co.uk/youth-family-faq',
+      },
+    ],
+  };
+
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        {/* Hero Section */}
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <div className={styles.page}>
+        <main className={styles.main}>
+          {/* Hero Section */}
         <section className={styles.heroSection}>
           <div className={styles.heroContent}>
             <h1 className={styles.pageTitle}>Youth & Family Therapy FAQ</h1>
@@ -447,7 +562,8 @@ export default function YouthFamilyFAQPage() {
             </Link>
           </div>
         </section>
-      </main>
-    </div>
+        </main>
+      </div>
+    </>
   );
 }
