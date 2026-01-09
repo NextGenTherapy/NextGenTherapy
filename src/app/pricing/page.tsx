@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   title: 'Psychotherapy Costs Colchester | £60 Sessions | Fees',
   authors: [{ name: 'Andreea Horhocea' }],
   description:
-    'Transparent psychotherapy costs: £60 per 50-minute session with BACP registered psychotherapist in Colchester. Free consultation available.',
+    'Transparent psychotherapy costs: £60 per 50-minute session with BACP registered psychotherapist in Colchester. In-person or online.',
   keywords: [
     'psychotherapy costs Colchester',
     'psychotherapist fees Essex',
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Psychotherapy Costs Colchester | £60 Sessions',
     description:
-      'Transparent psychotherapy costs: £60 per 50-minute session with BACP registered psychotherapist in Colchester. Free consultation available.',
+      'Transparent psychotherapy costs: £60 per 50-minute session with BACP registered psychotherapist in Colchester.',
     url: `${siteUrl}/pricing`,
     siteName: 'Next Generation Therapy',
     locale: 'en_GB',
@@ -68,26 +68,69 @@ export const metadata: Metadata = {
 };
 
 export default function Pricing() {
+  const offerSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Offer',
+    name: 'Therapy Session',
+    description: 'Professional psychodynamic therapy sessions in Colchester, Essex',
+    price: '60',
+    priceCurrency: 'GBP',
+    availability: 'https://schema.org/InStock',
+    seller: {
+      '@type': 'LocalBusiness',
+      name: 'Next Generation Therapy',
+      url: 'https://nextgentherapy.co.uk',
+    },
+  };
+
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: 'How much does therapy cost in Colchester?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Therapy sessions at Next Generation Therapy cost £60 per 50-minute session. This includes professional psychodynamic therapy with a BACP registered therapist, available both in-person in Colchester and online.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'What payment methods do you accept?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Sessions are paid by bank transfer only. Payment details will be provided when you book your session.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'What is your cancellation policy?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Please provide at least 24 hours notice for cancellations. Late cancellations may be subject to the full session fee.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Are online therapy sessions the same price?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Yes, both in-person sessions in Colchester and online therapy sessions are £60 per 50-minute session.',
+        },
+      },
+    ],
+  };
+
   return (
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'Offer',
-            name: 'Therapy Session',
-            description: 'Professional psychodynamic therapy sessions in Colchester, Essex',
-            price: '60',
-            priceCurrency: 'GBP',
-            availability: 'https://schema.org/InStock',
-            seller: {
-              '@type': 'LocalBusiness',
-              name: 'Next Generation Therapy',
-              url: 'https://nextgenerationtherapy.co.uk',
-            },
-          }),
-        }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(offerSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
 
       <div className={styles.page}>
@@ -122,20 +165,12 @@ export default function Pricing() {
                   </ul>
                 </div>
 
-                <div className={styles.consultation}>
-                  <h3>Free Initial Consultation</h3>
-                  <p>
-                    Before booking your first session, I offer a free 15-20 minute consultation to
-                    discuss your needs and answer any questions you may have about therapy.
-                  </p>
-                </div>
-
                 <div className={styles.bookingSection}>
                   <Link href="/book-now" className={styles.bookButton}>
                     Book Your Session
                   </Link>
                   <p className={styles.bookingNote}>
-                    Contact me to arrange your free consultation or first session
+                    Get in touch to arrange your first session
                   </p>
                 </div>
               </div>

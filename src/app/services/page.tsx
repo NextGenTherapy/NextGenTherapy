@@ -634,8 +634,8 @@ export default function Services() {
                 <h3>How do I know if therapy is right for me?</h3>
                 <p>
                   Therapy can help with anxiety, depression, relationship issues, life transitions,
-                  and personal growth. A free 15-minute consultation can help determine if
-                  we&apos;re a good fit.
+                  and personal growth. Get in touch to discuss your needs and see if we&apos;re a
+                  good fit.
                 </p>
               </div>
               <div className={styles.faqItem}>

@@ -125,7 +125,7 @@ export default function PersonSchema({ className }: PersonSchemaProps) {
     ],
     contactPoint: {
       '@type': 'ContactPoint',
-      telephone: '+44-7448-036017',
+      telephone: '+447448036017',
       email: 'andreeatherapytoday@gmail.com',
       contactType: 'Professional Services',
       availableLanguage: 'English',
@@ -153,16 +153,6 @@ export default function PersonSchema({ className }: PersonSchemaProps) {
       addressCountry: 'GB',
     },
     makesOffer: [
-      {
-        '@type': 'Offer',
-        itemOffered: {
-          '@type': 'Service',
-          name: 'Free Consultation',
-          description: '15-minute complimentary consultation',
-        },
-        price: '0',
-        priceCurrency: 'GBP',
-      },
       {
         '@type': 'Offer',
         itemOffered: {

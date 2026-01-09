@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://nextgentherapy.co.uk'),
   title: 'Psychodynamic Therapy Explained | What to Expect',
   description:
-    'Learn about psychodynamic therapy in Colchester. Understand what it is, how it works, benefits & what to expect. Expert guidance on this approach.',
+    'Learn about psychodynamic therapy in Colchester. Understand what it is, how it works, benefits & what to expect from your first session.',
   keywords: [
     'psychodynamic therapy explained',
     'what is psychodynamic therapy',
@@ -55,8 +55,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: 'https://nextgentherapy.co.uk/images/default-social-share.jpg',
-        width: 300,
-        height: 300,
+        width: 1200,
+        height: 630,
         alt: 'Andreea Horhocea - Psychodynamic Psychotherapist',
       },
     ],
@@ -179,6 +179,43 @@ export default function AboutTherapy() {
     ],
   };
 
+  const howToSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'HowTo',
+    name: 'How to Start Therapy in Colchester',
+    description:
+      'A step-by-step guide to beginning your therapy journey with a BACP registered psychotherapist in Colchester.',
+    totalTime: 'P7D',
+    estimatedCost: {
+      '@type': 'MonetaryAmount',
+      currency: 'GBP',
+      value: '60',
+    },
+    step: [
+      {
+        '@type': 'HowToStep',
+        name: 'Reach Out',
+        text: 'Contact us via the website contact form, email, or phone to express your interest in therapy.',
+        url: 'https://nextgentherapy.co.uk/book-now',
+      },
+      {
+        '@type': 'HowToStep',
+        name: 'Initial Discussion',
+        text: 'We will have a brief conversation to discuss your needs and answer any questions about the therapy process.',
+      },
+      {
+        '@type': 'HowToStep',
+        name: 'Book Your First Session',
+        text: 'Schedule your first therapy session at a time that suits you, either in-person in Colchester or online.',
+      },
+      {
+        '@type': 'HowToStep',
+        name: 'Begin Your Journey',
+        text: 'Attend your first session and begin exploring your thoughts and feelings in a safe, confidential environment.',
+      },
+    ],
+  };
+
   return (
     <>
       <script
@@ -196,6 +233,10 @@ export default function AboutTherapy() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }}
       />
       <div className={styles.page}>
         <main className={styles.main}>

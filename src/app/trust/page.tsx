@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   title: 'Trust & Care | BACP Registered Counsellor Colchester',
   authors: [{ name: 'Andreea Horhocea' }],
   description:
-    'Professional counsellor in Colchester committed to trust and care. BACP registered with highest ethical standards. Safe therapy environment.',
+    'Professional therapist in Colchester committed to trust and care. BACP registered with highest ethical standards. Safe, confidential environment.',
   keywords: [
     'trusted counsellor Colchester',
     'professional standards counsellor',
@@ -180,7 +180,7 @@ export default function TestimonialsPage() {
             </p>
             <div className={styles.ctaButtons}>
               <Link href="/book-now" className={styles.primaryButton}>
-                Book Free Consultation
+                Book Now
               </Link>
               <Link href="/about" className={styles.secondaryButton}>
                 Learn About My Approach

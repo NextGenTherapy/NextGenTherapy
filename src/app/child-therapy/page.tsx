@@ -6,9 +6,9 @@ import buttonStyles from '../../components/ui/button.module.scss';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://nextgentherapy.co.uk'),
-  title: 'Child Therapy Colchester | BACP Registered Child Therapist | Next Generation',
+  title: 'Child Therapy Colchester | BACP Registered Child Therapist',
   description:
-    'Professional child therapy in Colchester & online. BACP registered therapist helping children with anxiety, emotions, behaviour & family challenges. Compassionate support for children & parents.',
+    'Professional child therapy in Colchester & online. BACP registered therapist helping children aged 5-12 with anxiety, emotions & behaviour. Get in touch today.',
   keywords: [
     'child therapy Colchester',
     'child therapist Colchester',

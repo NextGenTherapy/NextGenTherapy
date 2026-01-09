@@ -5,9 +5,9 @@ import buttonStyles from '../../components/ui/button.module.scss';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://nextgentherapy.co.uk'),
-  title: 'Neurodiversity Therapy | ADHD, Autism & SEN Support | Colchester',
+  title: 'Neurodiversity Therapy Colchester | ADHD & Autism Support',
   description:
-    'Specialist therapy for neurodivergent children, teenagers, and young adults in Colchester. Expert support for ADHD, autism, and other neurodivergent conditions with SEN school experience.',
+    'Specialist therapy for neurodivergent children, teenagers & young adults in Colchester. Expert ADHD & autism support with SEN school experience. Get in touch today.',
   keywords: [
     'neurodiversity therapy Colchester',
     'ADHD therapy Essex',
@@ -19,6 +19,12 @@ export const metadata: Metadata = {
     'sensory processing therapy',
     'executive function support',
     'neurodiversity counselling',
+    'AuDHD therapy Colchester',
+    'neurodivergent teen support',
+    'autism affirming therapy',
+    'ADHD young adult support',
+    'neurodivergent counselling Essex',
+    'autistic therapist Colchester',
   ],
   authors: [{ name: 'Andreea Horhocea' }],
   alternates: {

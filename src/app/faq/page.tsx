@@ -70,7 +70,7 @@ export default function FAQ() {
     {
       question: 'How much does therapy cost in Colchester?',
       answer:
-        "Individual therapy sessions are £60 for 50 minutes. I also offer a free 15-minute consultation call to discuss your needs and see if we're a good fit to work together.",
+        "Individual therapy sessions are £60 for 50 minutes. Get in touch to discuss your needs and see if we're a good fit to work together.",
     },
     {
       question: 'Do you offer online therapy sessions?',
@@ -110,7 +110,7 @@ export default function FAQ() {
     {
       question: 'How do I book a therapy session in Colchester?',
       answer:
-        'You can book through the contact form on my website, call me directly, or email. I respond within 24 hours and offer a free consultation call to answer any questions.',
+        'You can book through the contact form on my website, call me directly, or email. I respond within 24 hours to discuss your needs and answer any questions.',
     },
     {
       question: 'Do you work with children?',
@@ -183,11 +183,10 @@ export default function FAQ() {
           <section className={styles.callToAction}>
             <h2>Still Have Questions?</h2>
             <p>
-              Book a free 15-minute consultation call to discuss your specific needs and learn how
-              therapy can help you.
+              Get in touch to discuss your specific needs and learn how therapy can help you.
             </p>
             <div className={styles.buttonGroup}>
-              <Button href="/book-now">Book Free Consultation</Button>
+              <Button href="/book-now">Book Now</Button>
               <Button href="/services">View Services</Button>
               <Button href="/about">About Andreea</Button>
             </div>

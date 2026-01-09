@@ -6,9 +6,9 @@ import buttonStyles from '../../components/ui/button.module.scss';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://nextgentherapy.co.uk'),
-  title: 'Young Adult Therapy Colchester | BACP Therapist | Next Generation',
+  title: 'Young Adult Therapy Colchester | BACP Therapist 18-30s',
   description:
-    'Professional young adult therapy in Colchester & online. BACP registered therapist helping with life transitions, career stress, relationships & identity. Expert support for 18-30s.',
+    'Professional young adult therapy in Colchester & online. BACP registered therapist helping 18-30s with life transitions, career stress & relationships. Get in touch today.',
   keywords: [
     'young adult therapy Colchester',
     'young adult therapist Essex',

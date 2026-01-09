@@ -49,20 +49,21 @@
 }
 
 .logoImage {
-  background-image: url('/images/logo.jpg');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
   width: 100%;
-  height: 100%;
-  min-height: 200px;
-  max-width: 400px;
+  height: auto;
+  max-width: 300px;
+  object-fit: contain;
   transition: var(--transition-normal);
 }
 
 @media (min-width: 768px) {
   .logoImage {
-    min-height: 300px;
+    max-width: 400px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .logoImage {
     max-width: 500px;
   }
 }

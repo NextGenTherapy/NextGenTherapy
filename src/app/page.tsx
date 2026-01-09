@@ -10,7 +10,7 @@ function getMetadata(): Metadata {
     metadataBase: new URL(siteUrl),
     title: 'Colchester Therapist | BACP Registered | Next Generation',
     description:
-      'Professional therapy in Colchester & online. BACP registered therapist offering anxiety, depression & relationship therapy for all ages. Specialising in young people & families. Free consultation.',
+      'Professional therapy in Colchester & online. BACP registered therapist offering anxiety, depression & relationship therapy for all ages. Specialising in young people & families.',
     keywords: [
       'therapy Colchester',
       'therapist Colchester',
@@ -113,22 +113,26 @@ export default function Home() {
           {/* Logo Section at Top */}
           <section className={styles.logoSection} aria-label="Next Generation Therapy branding">
             <div className={styles.logoContainer}>
-              <div
+              <Image
+                src="/images/logo.jpg"
+                alt="Next Generation Therapy logo - Professional therapy services in Colchester"
+                width={500}
+                height={500}
+                priority
                 className={styles.logoImage}
-                role="img"
-                aria-label="Next Generation Therapy logo - Professional therapy services in Colchester"
-              ></div>
+              />
             </div>
           </section>
 
           {/* Content Section */}
           <section className={styles.contentSection}>
             <div className={styles.greeting}>
-              <h1>Hi! I&apos;m Andreea Horhocea - Therapist in Colchester.</h1>
+              <h1>Professional Therapy in Colchester | Expert Support for All Ages</h1>
               <p className={styles.subtitle}>
-                A BACP registered therapist offering professional therapy sessions in Colchester and
-                online. I work with people of all ages, with particular expertise in supporting
-                young people and families through life&apos;s challenges.{' '}
+                Hi, I&apos;m Andreea Horhocea - a BACP registered therapist offering professional
+                therapy sessions in Colchester and online. I work with people of all ages, with
+                particular expertise in supporting young people and families through life&apos;s
+                challenges.{' '}
                 <Link href="/faq">View common therapy questions</Link> or{' '}
                 <Link href="/services">explore our therapy services</Link>.
               </p>
@@ -153,21 +157,27 @@ export default function Home() {
               <div className={styles.cardsContainer}>
                 <Link href="/about" className={styles.introCard}>
                   <h2>About Me</h2>
-                  <p>Learn about my background, qualifications, and approach to therapy.</p>
+                  <p>
+                    Learn about my background, qualifications, and psychodynamic approach to therapy.
+                    I hold a Master&apos;s degree in Psychodynamic Psychotherapy and am a registered
+                    member of the British Association for Counselling and Psychotherapy (BACP).
+                  </p>
                 </Link>
                 <Link href="/services" className={styles.servicesCard}>
                   <h2>Who I Help</h2>
                   <p>
-                    I work with people of all ages addressing mental health challenges such as
-                    anxiety, depression, stress, relationship difficulties, and life transitions. I
-                    have particular expertise with young people and families.
+                    I provide mental health support for people of all ages experiencing anxiety,
+                    depression, stress, relationship difficulties, and life transitions. I specialise
+                    in supporting children, teenagers, and young adults through emotional wellbeing
+                    challenges using therapeutic techniques tailored to each individual.
                   </p>
                 </Link>
                 <Link href="/blog#professional-thoughts" className={styles.approachCard}>
                   <h2>My Approach</h2>
                   <p>
-                    I focus on creating a safe, compassionate, and supportive environment where you
-                    can achieve meaningful and lasting change.
+                    Using psychodynamic therapy principles, I create a safe, compassionate space for
+                    self-reflection and personal growth. Together we explore unconscious patterns and
+                    build healthier coping strategies for lasting positive change.
                   </p>
                 </Link>
               </div>

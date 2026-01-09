@@ -80,6 +80,12 @@ export default function Footer() {
       <div className={styles.footerBottom}>
         <div className={styles.quickLinks}>
           <Link href="/services">Therapy Services</Link>
+          <Link href="/child-therapy">Child Therapy</Link>
+          <Link href="/teenage-therapy">Teenage Therapy</Link>
+          <Link href="/young-adult-therapy">Young Adult Therapy</Link>
+          <Link href="/neurodiversity-therapy">Neurodiversity Support</Link>
+          <Link href="/lgbtq-therapy">LGBTQ+ Therapy</Link>
+          <Link href="/parent-support">Parent Support</Link>
           <Link href="/pricing">Pricing</Link>
           <Link href="/faq">FAQ</Link>
           <Link href="/trust">Trust & Care</Link>

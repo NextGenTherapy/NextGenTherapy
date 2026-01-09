@@ -38,7 +38,7 @@ export default function WebsiteSchema({ className }: WebsiteSchemaProps) {
       'Professional psychodynamic therapy services in Colchester and online with BACP registered therapist Andreea Horhocea',
     url: 'https://nextgentherapy.co.uk',
     inLanguage: 'en-GB',
-    copyrightYear: '2024',
+    copyrightYear: '2025',
     copyrightHolder: {
       '@type': 'Person',
       name: 'Andreea Horhocea',

@@ -60,16 +60,6 @@ export default function LocalBusinessSchema() {
           price: '60',
           priceCurrency: 'GBP',
         },
-        {
-          '@type': 'Offer',
-          itemOffered: {
-            '@type': 'Service',
-            name: 'Free Consultation',
-            description: '15-20 minute free consultation to discuss therapy needs',
-          },
-          price: '0',
-          priceCurrency: 'GBP',
-        },
       ],
     },
     paymentAccepted: ['Cash', 'Bank Transfer', 'Card'],

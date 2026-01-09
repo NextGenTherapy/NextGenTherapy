@@ -5,9 +5,9 @@ import Link from 'next/link';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://nextgentherapy.co.uk'),
-  title: "Parent Support and Guidance | Supporting Your Child's Mental Health | Colchester",
+  title: "Parent Support Colchester | Child Mental Health Guidance",
   description:
-    "Expert guidance for parents navigating their child's mental health journey. Support for families dealing with anxiety, depression, school avoidance, and behavioral challenges in Colchester.",
+    "Expert guidance for parents navigating their child's mental health journey in Colchester. Support for anxiety, depression, school avoidance & behavioural challenges.",
   keywords: [
     'parent support Colchester',
     'child mental health guidance',
@@ -17,6 +17,14 @@ export const metadata: Metadata = {
     'parent counselling Colchester',
     'family mental health support',
     'child psychology guidance Essex',
+    'school avoidance parent support',
+    'anxious child help Colchester',
+    'child behaviour support',
+    'parent therapy guidance',
+    'family counselling Colchester',
+    'child emotional support parents',
+    'parenting teenage mental health',
+    'supporting neurodivergent child',
   ],
   authors: [{ name: 'Andreea Horhocea' }],
   alternates: {

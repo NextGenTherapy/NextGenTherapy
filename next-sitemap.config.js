@@ -22,6 +22,13 @@ module.exports = {
     if (path === '/about-therapy') priority = 0.8;
     if (path === '/blog') priority = 0.75;
     if (path.startsWith('/blog/')) priority = 0.7;
+    // Specialized service pages - high priority for targeted SEO
+    if (path === '/child-therapy') priority = 0.85;
+    if (path === '/teenage-therapy') priority = 0.85;
+    if (path === '/young-adult-therapy') priority = 0.85;
+    if (path === '/neurodiversity-therapy') priority = 0.85;
+    if (path === '/lgbtq-therapy') priority = 0.85;
+    if (path === '/parent-support') priority = 0.85;
 
     return {
       loc: path,

@@ -16,6 +16,9 @@ const ContentSecurityPolicy = `
 `.replace(/\n/g, '');
 
 const nextConfig: NextConfig = {
+  images: {
+    formats: ['image/avif', 'image/webp'],
+  },
   async redirects() {
     return [
       // www to non-www redirect (highest priority for SEO)

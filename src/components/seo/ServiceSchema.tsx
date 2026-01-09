@@ -111,7 +111,7 @@ export default function ServiceSchema({
           description: `${duration} session`,
         }),
         availability: 'https://schema.org/InStock',
-        validFrom: '2024-01-01',
+        validFrom: '2025-01-01',
       },
     }),
     isRelatedTo: [
@@ -194,14 +194,6 @@ export const OnlineTherapySchema = () => (
   />
 );
 
-export const FreeConsultationSchema = () => (
-  <ServiceSchema
-    serviceName="Free Consultation"
-    description="Complimentary 15-minute consultation to discuss therapy needs and determine if services are suitable"
-    price="0"
-    duration="15 minutes"
-  />
-);
 
 /**
  * Child and Adolescent Therapy Schemas

@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://nextgentherapy.co.uk'),
   title: 'About Andreea | BACP Psychodynamic Therapist Colchester',
   description:
-    "Meet psychodynamic therapist Andreea Horhocea in Colchester. BACP registered with Master's degree & 6+ years experience. Anxiety, depression & relationships.",
+    "Meet psychodynamic therapist Andreea Horhocea in Colchester. BACP registered with Master's degree & 6+ years experience. Specialising in young people.",
   keywords: [
     'psychodynamic therapist Colchester',
     'psychodynamic therapy specialist',
@@ -60,8 +60,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: 'https://nextgentherapy.co.uk/images/default-social-share.jpg',
-        width: 300,
-        height: 300,
+        width: 1200,
+        height: 630,
         alt: 'Andreea Horhocea - Psychodynamic Psychotherapist',
       },
     ],

@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://nextgentherapy.co.uk'),
   title: 'Mental Health Blog | Expert Guidance & Professional Tips',
   description:
-    'Expert mental health guidance & support from BACP registered professional. Mental health advice, coping strategies, and insights for better wellbeing.',
+    'Expert mental health guidance from BACP registered therapist in Colchester. Mental health advice, coping strategies & insights for better wellbeing.',
   keywords: [
     'mental health guidance UK',
     'mental health blog Colchester',

@@ -5,20 +5,26 @@ import buttonStyles from '../../components/ui/button.module.scss';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://nextgentherapy.co.uk'),
-  title: 'LGBTQ+ Therapy | Inclusive Support & Identity Affirmation | Colchester',
+  title: 'LGBTQ+ Therapy Colchester | Inclusive & Affirming Support',
   description:
-    'Inclusive, affirming therapy for LGBTQ+ individuals in Colchester. Safe space for identity exploration, coming out support, and mental health care for the LGBTQ+ community.',
+    'Inclusive, affirming therapy for LGBTQ+ individuals in Colchester. Safe space for identity exploration, coming out support & mental health care. Get in touch today.',
   keywords: [
     'LGBTQ therapy Colchester',
     'gay therapy Essex',
-    'transgender therapy',
+    'transgender therapy Colchester',
     'queer counselling Colchester',
-    'coming out support',
+    'coming out support Essex',
     'LGBTQ+ mental health',
     'gender identity therapy',
     'inclusive therapy Colchester',
     'LGBTQ+ counselling Essex',
     'affirming therapy',
+    'LGBTQ+ therapist Colchester',
+    'trans therapy Essex',
+    'non-binary counselling',
+    'sexuality counselling Colchester',
+    'LGBTQ+ safe space therapy',
+    'pride affirming therapist',
   ],
   authors: [{ name: 'Andreea Horhocea' }],
   alternates: {

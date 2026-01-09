@@ -24,10 +24,37 @@ export default function BreadcrumbSchema({ items }: BreadcrumbSchemaProps) {
     defaultItems.push({ name: 'About', url: 'https://nextgentherapy.co.uk/about' });
   } else if (pathname === '/faq') {
     defaultItems.push({ name: 'FAQ', url: 'https://nextgentherapy.co.uk/faq' });
-  } else if (pathname === '/testimonials') {
-    defaultItems.push({ name: 'Trust & Care', url: 'https://nextgentherapy.co.uk/testimonials' });
+  } else if (pathname === '/trust') {
+    defaultItems.push({ name: 'Trust & Care', url: 'https://nextgentherapy.co.uk/trust' });
   } else if (pathname === '/book-now') {
     defaultItems.push({ name: 'Book Now', url: 'https://nextgentherapy.co.uk/book-now' });
+  } else if (pathname === '/child-therapy') {
+    defaultItems.push({ name: 'Services', url: 'https://nextgentherapy.co.uk/services' });
+    defaultItems.push({ name: 'Child Therapy', url: 'https://nextgentherapy.co.uk/child-therapy' });
+  } else if (pathname === '/teenage-therapy') {
+    defaultItems.push({ name: 'Services', url: 'https://nextgentherapy.co.uk/services' });
+    defaultItems.push({ name: 'Teenage Therapy', url: 'https://nextgentherapy.co.uk/teenage-therapy' });
+  } else if (pathname === '/young-adult-therapy') {
+    defaultItems.push({ name: 'Services', url: 'https://nextgentherapy.co.uk/services' });
+    defaultItems.push({ name: 'Young Adult Therapy', url: 'https://nextgentherapy.co.uk/young-adult-therapy' });
+  } else if (pathname === '/lgbtq-therapy') {
+    defaultItems.push({ name: 'Services', url: 'https://nextgentherapy.co.uk/services' });
+    defaultItems.push({ name: 'LGBTQ+ Therapy', url: 'https://nextgentherapy.co.uk/lgbtq-therapy' });
+  } else if (pathname === '/neurodiversity-therapy') {
+    defaultItems.push({ name: 'Services', url: 'https://nextgentherapy.co.uk/services' });
+    defaultItems.push({ name: 'Neurodiversity Therapy', url: 'https://nextgentherapy.co.uk/neurodiversity-therapy' });
+  } else if (pathname === '/parent-support') {
+    defaultItems.push({ name: 'Services', url: 'https://nextgentherapy.co.uk/services' });
+    defaultItems.push({ name: 'Parent Support', url: 'https://nextgentherapy.co.uk/parent-support' });
+  } else if (pathname === '/location') {
+    defaultItems.push({ name: 'Location', url: 'https://nextgentherapy.co.uk/location' });
+  } else if (pathname === '/about-therapy') {
+    defaultItems.push({ name: 'About Therapy', url: 'https://nextgentherapy.co.uk/about-therapy' });
+  } else if (pathname === '/youth-family-faq') {
+    defaultItems.push({ name: 'Services', url: 'https://nextgentherapy.co.uk/services' });
+    defaultItems.push({ name: 'Youth & Family FAQ', url: 'https://nextgentherapy.co.uk/youth-family-faq' });
+  } else if (pathname === '/blog') {
+    defaultItems.push({ name: 'Blog', url: 'https://nextgentherapy.co.uk/blog' });
   } else if (pathname?.startsWith('/blog/')) {
     defaultItems.push({ name: 'Blog', url: 'https://nextgentherapy.co.uk/blog' });
     const slug = pathname.split('/blog/')[1];

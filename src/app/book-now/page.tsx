@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://nextgentherapy.co.uk'),
   title: 'Book Counsellor Colchester | Schedule Your Session | Contact',
   description:
-    'Ready to book your counsellor? Schedule your session with BACP registered counsellor in Colchester. £60 sessions, free consultation available.',
+    'Ready to book your therapist? Schedule your session with BACP registered therapist in Colchester. £60 sessions available in-person or online.',
   keywords: [
     'book counsellor Colchester',
     'book counselling session Essex',
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Book Therapy Session Colchester | Contact Andreea Horhocea',
     description:
-      'Book therapy with BACP registered psychotherapist Andreea Horhocea. £60 sessions in Colchester or online. Free 15-min consultation.',
+      'Book therapy with BACP registered psychotherapist Andreea Horhocea. £60 sessions in Colchester or online.',
     url: 'https://nextgentherapy.co.uk/book-now',
     siteName: 'Next Generation Therapy',
     locale: 'en_GB',
@@ -91,15 +91,8 @@ export default function BookNow() {
     offers: [
       {
         '@type': 'Offer',
-        name: 'Free Consultation',
-        description: 'Free 15-minute consultation available',
-        price: '0',
-        priceCurrency: 'GBP',
-      },
-      {
-        '@type': 'Offer',
         name: 'Therapy Session',
-        description: 'Individual therapy session',
+        description: 'Individual 50-minute therapy session',
         price: '60',
         priceCurrency: 'GBP',
       },
@@ -154,13 +147,10 @@ export default function BookNow() {
           <section className={styles.contentTop}>
             <article>
               <h2>Ready to Take the First Step?</h2>
-              <div className={styles.consultationOffer}>
-                <h3>Free 15-Minute Consultation Available</h3>
-                <p>
-                  Not sure if therapy is right for you? I offer a brief, no-obligation consultation
-                  to discuss your needs and answer any questions about the process.
-                </p>
-              </div>
+              <p>
+                Taking the first step towards therapy can feel daunting, but you don&apos;t have to
+                do it alone. I&apos;m here to support you through the process.
+              </p>
               <ul>
                 <li>
                   If you&apos;re feeling ready to explore therapy or have questions about the
@@ -168,8 +158,8 @@ export default function BookNow() {
                 </li>
                 <li>Reach out via the contact form below, email, or phone.</li>
                 <li>
-                  I aim to respond within 24 hours to schedule a brief consultation and discuss how
-                  we might work together.
+                  I aim to respond within 24 hours to discuss how we might work together and
+                  schedule your first session.
                 </li>
               </ul>
             </article>
@@ -211,17 +201,12 @@ export default function BookNow() {
               <div className={styles.step}>
                 <span className={styles.stepNumber}>2</span>
                 <h3>Initial Response</h3>
-                <p>I&apos;ll respond within 24 hours to arrange a brief consultation</p>
+                <p>I&apos;ll respond within 24 hours to discuss your needs</p>
               </div>
               <div className={styles.step}>
                 <span className={styles.stepNumber}>3</span>
-                <h3>Free Consultation</h3>
-                <p>We&apos;ll have a 15-minute chat to discuss your needs and answer questions</p>
-              </div>
-              <div className={styles.step}>
-                <span className={styles.stepNumber}>4</span>
                 <h3>Book Your Session</h3>
-                <p>If we&apos;re a good fit, we&apos;ll schedule your first therapy session</p>
+                <p>We&apos;ll find a suitable time for your first therapy session</p>
               </div>
             </div>
           </section>

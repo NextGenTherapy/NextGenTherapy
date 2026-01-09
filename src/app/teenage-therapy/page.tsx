@@ -6,9 +6,9 @@ import buttonStyles from '../../components/ui/button.module.scss';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://nextgentherapy.co.uk'),
-  title: 'Teenage Therapy Colchester | BACP Teen Therapist | Next Generation',
+  title: 'Teenage Therapy Colchester | BACP Teen Therapist',
   description:
-    'Professional teenage therapy in Colchester & online. BACP registered therapist helping teens with anxiety, depression, school stress & identity. Confidential support for teenagers & families.',
+    'Professional teenage therapy in Colchester & online. BACP registered therapist helping teens aged 13-18 with anxiety, depression & school stress. Get in touch today.',
   keywords: [
     'teenage therapy Colchester',
     'teen therapist Colchester',

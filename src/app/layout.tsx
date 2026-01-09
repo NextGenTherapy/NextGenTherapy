@@ -162,7 +162,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
                   },
                   contactPoint: {
                     '@type': 'ContactPoint',
-                    telephone: '+44-7448-036017',
+                    telephone: '+447448036017',
                     contactType: 'Customer Service',
                     email: 'andreeatherapytoday@gmail.com',
                     availableLanguage: 'English',
@@ -170,9 +170,15 @@ export default async function RootLayout({ children }: { children: React.ReactNo
                   openingHoursSpecification: [
                     {
                       '@type': 'OpeningHoursSpecification',
-                      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+                      dayOfWeek: ['Monday', 'Tuesday'],
+                      opens: '10:00',
+                      closes: '19:00',
+                    },
+                    {
+                      '@type': 'OpeningHoursSpecification',
+                      dayOfWeek: 'Friday',
                       opens: '09:00',
-                      closes: '18:00',
+                      closes: '14:00',
                     },
                   ],
                   priceRange: '££',
@@ -191,16 +197,6 @@ export default async function RootLayout({ children }: { children: React.ReactNo
                     '@type': 'OfferCatalog',
                     name: 'Therapy Services Menu',
                     itemListElement: [
-                      {
-                        '@type': 'Offer',
-                        itemOffered: {
-                          '@type': 'Service',
-                          name: 'Free 15-minute Consultation',
-                          description: 'Complimentary consultation call to discuss therapy needs',
-                        },
-                        price: '0',
-                        priceCurrency: 'GBP',
-                      },
                       {
                         '@type': 'Offer',
                         itemOffered: {
