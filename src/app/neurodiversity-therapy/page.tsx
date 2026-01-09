@@ -108,6 +108,45 @@ export default function NeurodiversityTherapyPage() {
     ],
   };
 
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: 'Do you have experience with ADHD and autism?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Yes, I have extensive experience working in SEN schools and with neurodivergent children, teenagers, and young adults. I understand the unique strengths and challenges of ADHD, autism, and other neurodivergent conditions.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Do you adapt therapy sessions for neurodivergent clients?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Absolutely. I adapt session length, use sensory-friendly environments, incorporate visual tools, allow movement breaks, and follow each individual\'s preferred communication style.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'What age groups do you work with for neurodiversity support?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'I work with neurodivergent children (5-12), teenagers (13-18), and young adults (18-25), adapting my approach for each developmental stage.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Can you help with late-diagnosed ADHD or autism?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Yes, I support people processing late diagnosis, helping them understand their identity, develop coping strategies, and build self-advocacy skills.',
+        },
+      },
+    ],
+  };
+
   return (
     <>
       <script
@@ -117,6 +156,10 @@ export default function NeurodiversityTherapyPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
       <div className={styles.page}>
         <main className={styles.main}>

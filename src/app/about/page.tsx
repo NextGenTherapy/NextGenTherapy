@@ -52,7 +52,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'About Andreea Horhocea | Psychodynamic Therapy & Colchester Therapy',
     description:
-      "Meet Andreea Horhocea, BACP registered psychodynamic therapist offering Colchester therapy services. Master's degree, 6+ years experience with children, adults & families.",
+      "Meet Andreea Horhocea, BACP registered psychodynamic therapist in Colchester. Master's degree, 6+ years experience with all ages.",
     url: 'https://nextgentherapy.co.uk/about',
     siteName: 'Next Generation Therapy',
     locale: 'en_GB',

@@ -25,7 +25,6 @@ export const metadata: Metadata = {
     'book psychotherapist Colchester',
     'mental health appointment',
     'BACP counsellor booking',
-    'counselling consultation free',
     'anxiety counsellor appointment',
     'depression counsellor booking',
     'relationship counsellor contact',

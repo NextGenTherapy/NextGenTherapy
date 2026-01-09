@@ -10,7 +10,7 @@ function getMetadata(): Metadata {
     metadataBase: new URL(siteUrl),
     title: 'Colchester Therapist | BACP Registered | Next Generation',
     description:
-      'Professional therapy in Colchester & online. BACP registered therapist offering anxiety, depression & relationship therapy for all ages. Specialising in young people & families.',
+      'Professional therapy in Colchester & online. BACP registered therapist for anxiety, depression & relationships. Specialising in young people.',
     keywords: [
       'therapy Colchester',
       'therapist Colchester',
@@ -39,7 +39,7 @@ function getMetadata(): Metadata {
     openGraph: {
       title: 'Therapy Colchester | BACP Registered Therapist',
       description:
-        'Professional therapy in Colchester & online. Expert help for anxiety, depression, relationships & personal growth. Specialising in young people & families. BACP registered therapist.',
+        'Professional therapy in Colchester & online. Expert help for anxiety, depression & relationships. Specialising in young people. BACP registered.',
       url: siteUrl,
       siteName: 'Next Generation Therapy',
       locale: 'en_GB',
@@ -95,7 +95,7 @@ export default function Home() {
       '@type': 'ImageObject',
       url: 'https://nextgentherapy.co.uk/images/andreea.jpg',
     },
-    lastReviewed: '2025-09-14',
+    lastReviewed: '2026-01-09',
     reviewedBy: {
       '@type': 'Person',
       name: 'Andreea Horhocea',

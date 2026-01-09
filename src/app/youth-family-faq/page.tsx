@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://nextgentherapy.co.uk'),
   title: 'Youth & Family Therapy FAQ | Child, Teen & Young Adult Questions',
   description:
-    'Answers to frequently asked questions about child therapy, teenage therapy, and young adult therapy. Expert guidance for families considering therapy in Colchester, Essex.',
+    'FAQs about child, teenage & young adult therapy. Expert guidance for families considering therapy in Colchester. Get answers today.',
   keywords: [
     'child therapy FAQ Colchester',
     'teenage therapy questions Essex',

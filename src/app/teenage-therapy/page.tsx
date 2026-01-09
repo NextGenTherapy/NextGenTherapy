@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://nextgentherapy.co.uk'),
   title: 'Teenage Therapy Colchester | BACP Teen Therapist',
   description:
-    'Professional teenage therapy in Colchester & online. BACP registered therapist helping teens aged 13-18 with anxiety, depression & school stress. Get in touch today.',
+    'Professional teenage therapy in Colchester & online. BACP therapist helping teens 13-18 with anxiety, depression & school stress. Book today.',
   keywords: [
     'teenage therapy Colchester',
     'teen therapist Colchester',
@@ -93,12 +93,55 @@ export default function TeenageTherapyPage() {
     ],
   };
 
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: 'What ages do you work with for teenage therapy?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'I work with teenagers aged 13-18, providing confidential therapy that respects their need for privacy while keeping parents appropriately informed.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Is teenage therapy confidential from parents?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Yes, what we discuss stays confidential with rare exceptions for safety. Teens have the right to privacy while I provide general progress updates to parents.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'How long does teenage therapy take?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'This varies for each teen. Some benefit from short-term support of a few sessions, while others prefer longer-term work as they navigate adolescence.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'How much does teenage therapy cost in Colchester?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Teenage therapy sessions cost £60 for a 50-minute session, available in-person in Colchester or online.',
+        },
+      },
+    ],
+  };
+
   return (
     <>
       <TeenageTherapySchema />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
       <div className={styles.page}>
         <div className={styles.main}>
@@ -332,6 +375,35 @@ export default function TeenageTherapyPage() {
                       navigate adolescence.
                     </p>
                   </div>
+                </div>
+              </section>
+
+              <section className={styles.relatedSection}>
+                <h2>Related Services</h2>
+                <p>
+                  Explore other therapy services that may be relevant to your needs.
+                </p>
+                <div className={styles.relatedGrid}>
+                  <Link href="/child-therapy" className={styles.relatedCard}>
+                    <h3>Child Therapy</h3>
+                    <p>
+                      Therapy support for younger children aged 5-12 navigating emotional and
+                      behavioural challenges.
+                    </p>
+                  </Link>
+                  <Link href="/young-adult-therapy" className={styles.relatedCard}>
+                    <h3>Young Adult Therapy</h3>
+                    <p>
+                      Support for those 18-30 navigating life transitions, career stress, and
+                      emerging adulthood.
+                    </p>
+                  </Link>
+                  <Link href="/parent-support" className={styles.relatedCard}>
+                    <h3>Parent Support</h3>
+                    <p>
+                      Guidance for parents supporting teenagers through challenging times.
+                    </p>
+                  </Link>
                 </div>
               </section>
 

@@ -108,6 +108,45 @@ export default function ParentSupportPage() {
     ],
   };
 
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: 'Do you offer therapy for parents?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'I offer parent support and guidance sessions to help you better understand and support your child\'s mental health. This includes practical strategies and communication techniques.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Can I attend parent support without my child having therapy?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Yes, parent support sessions can be standalone or complement your child\'s therapy. Many parents find guidance helpful even before deciding if their child needs direct support.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'What do parent support sessions cover?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Sessions cover understanding your child\'s difficulties, communication strategies, managing your own emotions, creating supportive home environments, and working with schools.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'How much does parent support cost?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Parent support sessions cost £60 for 50 minutes, the same as individual therapy sessions. I offer both in-person sessions in Colchester and online options.',
+        },
+      },
+    ],
+  };
+
   return (
     <>
       <script
@@ -117,6 +156,10 @@ export default function ParentSupportPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
       <div className={styles.page}>
         <main className={styles.main}>

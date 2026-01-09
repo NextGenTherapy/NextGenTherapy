@@ -60,6 +60,10 @@ export default function BreadcrumbSchema({ items }: BreadcrumbSchemaProps) {
     const slug = pathname.split('/blog/')[1];
     const title = slug?.replace(/-/g, ' ').replace(/\b\w/g, (l) => l.toUpperCase()) || 'Article';
     defaultItems.push({ name: title, url: `https://nextgentherapy.co.uk${pathname}` });
+  } else if (pathname === '/privacy-policy') {
+    defaultItems.push({ name: 'Privacy Policy', url: 'https://nextgentherapy.co.uk/privacy-policy' });
+  } else if (pathname === '/terms') {
+    defaultItems.push({ name: 'Terms & Conditions', url: 'https://nextgentherapy.co.uk/terms' });
   }
 
   const breadcrumbItems = items || defaultItems;

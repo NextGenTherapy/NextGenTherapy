@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://nextgentherapy.co.uk'),
   title: 'Young Adult Therapy Colchester | BACP Therapist 18-30s',
   description:
-    'Professional young adult therapy in Colchester & online. BACP registered therapist helping 18-30s with life transitions, career stress & relationships. Get in touch today.',
+    'Professional young adult therapy in Colchester & online. BACP therapist helping 18-30s with life transitions, career stress & relationships.',
   keywords: [
     'young adult therapy Colchester',
     'young adult therapist Essex',
@@ -93,12 +93,55 @@ export default function YoungAdultTherapyPage() {
     ],
   };
 
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: 'What age range is young adult therapy for?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Young adult therapy is designed for those aged 18-30, supporting the unique challenges of emerging adulthood including career transitions, relationships, and independence.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'What issues do you help young adults with?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'I help with anxiety, depression, career stress, relationship challenges, life transitions, imposter syndrome, and quarter-life crisis concerns.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Do you offer online therapy for young adults?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Yes, I offer both in-person sessions in Colchester and online therapy, which is popular with young adults managing busy schedules or university commitments.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'How much does young adult therapy cost?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Sessions cost £60 for 50 minutes. I offer flexible scheduling to accommodate work and study commitments.',
+        },
+      },
+    ],
+  };
+
   return (
     <>
       <YoungAdultTherapySchema />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
       <div className={styles.page}>
         <div className={styles.main}>
@@ -315,6 +358,36 @@ export default function YoungAdultTherapyPage() {
                       relationships, work, and daily life challenges.
                     </p>
                   </div>
+                </div>
+              </section>
+
+              <section className={styles.relatedSection}>
+                <h2>Related Services</h2>
+                <p>
+                  Explore other therapy services that may be relevant to your journey.
+                </p>
+                <div className={styles.relatedGrid}>
+                  <Link href="/teenage-therapy" className={styles.relatedCard}>
+                    <h3>Teenage Therapy</h3>
+                    <p>
+                      Confidential support for teenagers 13-18 navigating adolescence and
+                      identity formation.
+                    </p>
+                  </Link>
+                  <Link href="/lgbtq-therapy" className={styles.relatedCard}>
+                    <h3>LGBTQ+ Therapy</h3>
+                    <p>
+                      Affirming therapy for LGBTQ+ individuals exploring identity, relationships,
+                      and life challenges.
+                    </p>
+                  </Link>
+                  <Link href="/neurodiversity-therapy" className={styles.relatedCard}>
+                    <h3>Neurodiversity Therapy</h3>
+                    <p>
+                      Supportive therapy for neurodivergent adults navigating work, relationships,
+                      and self-understanding.
+                    </p>
+                  </Link>
                 </div>
               </section>
 

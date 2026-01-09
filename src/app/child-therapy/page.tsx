@@ -93,12 +93,55 @@ export default function ChildTherapyPage() {
     ],
   };
 
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: 'What age children do you work with?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'I work with children from age 5 through to 12. Play-based therapy techniques are used for younger children, adapting the approach as they develop.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'How long do child therapy sessions last?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Child therapy sessions are 50 minutes long and typically take place weekly. The total length of therapy varies depending on your child\'s needs.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Will I know what happens in my child\'s therapy sessions?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'While sessions are confidential, I provide regular parent check-ins to discuss progress and offer guidance on supporting your child at home.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'How much does child therapy cost in Colchester?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Child therapy sessions cost £60 for a 50-minute session. I offer both in-person sessions in Colchester and online therapy options.',
+        },
+      },
+    ],
+  };
+
   return (
     <>
       <ChildTherapySchema />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
       <div className={styles.page}>
         <div className={styles.main}>
@@ -325,6 +368,29 @@ export default function ChildTherapyPage() {
                       input as a parent is invaluable in this process.
                     </p>
                   </div>
+                </div>
+              </section>
+
+              <section className={styles.relatedSection}>
+                <h2>Related Services</h2>
+                <p>
+                  Explore other therapy services that may support your family&apos;s needs.
+                </p>
+                <div className={styles.relatedGrid}>
+                  <Link href="/parent-support" className={styles.relatedCard}>
+                    <h3>Parent Support</h3>
+                    <p>
+                      Guidance and support for parents navigating the challenges of raising children
+                      through difficult times.
+                    </p>
+                  </Link>
+                  <Link href="/teenage-therapy" className={styles.relatedCard}>
+                    <h3>Teenage Therapy</h3>
+                    <p>
+                      Confidential therapy support for teenagers aged 13-18 dealing with
+                      adolescent challenges.
+                    </p>
+                  </Link>
                 </div>
               </section>
 

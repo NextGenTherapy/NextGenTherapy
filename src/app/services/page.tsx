@@ -51,7 +51,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Therapy Services Colchester | Play Therapy & Adult Counselling',
     description:
-      'Professional therapy services in Colchester & online. Play therapy for children, psychodynamic therapy for adults. Anxiety, depression, relationships, body image support.',
+      'Professional therapy in Colchester & online. Play therapy for children, psychodynamic therapy for adults. Anxiety, depression & relationships.',
     url: 'https://nextgentherapy.co.uk/services',
     siteName: 'Next Generation Therapy',
     locale: 'en_GB',

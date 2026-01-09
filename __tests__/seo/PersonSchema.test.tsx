@@ -145,7 +145,7 @@ describe('PersonSchema Component', () => {
     const jsonData = JSON.parse(scriptTag?.textContent || '{}');
 
     expect(jsonData.contactPoint['@type']).toBe('ContactPoint');
-    expect(jsonData.contactPoint.telephone).toBe('+44-7448-036017');
+    expect(jsonData.contactPoint.telephone).toBe('+447448036017');
     expect(jsonData.contactPoint.email).toBe('andreeatherapytoday@gmail.com');
     expect(jsonData.contactPoint.hoursAvailable).toHaveLength(2);
   });
@@ -170,15 +170,12 @@ describe('PersonSchema Component', () => {
     const scriptTag = container.querySelector('script[type="application/ld+json"]');
     const jsonData = JSON.parse(scriptTag?.textContent || '{}');
 
-    expect(jsonData.makesOffer).toHaveLength(2);
+    expect(jsonData.makesOffer).toHaveLength(1);
 
-    const freeConsultation = jsonData.makesOffer[0];
-    expect(freeConsultation.price).toBe('0');
-    expect(freeConsultation.itemOffered.name).toBe('Free Consultation');
-
-    const therapySession = jsonData.makesOffer[1];
+    const therapySession = jsonData.makesOffer[0];
     expect(therapySession.price).toBe('60');
     expect(therapySession.priceCurrency).toBe('GBP');
+    expect(therapySession.itemOffered.name).toBe('Individual Therapy Session');
   });
 
   it('applies className when provided', () => {

@@ -44,7 +44,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Therapy Blog | Mental Health Insights from Colchester Therapist',
     description:
-      'Expert therapy insights & mental health advice from BACP registered psychotherapist Andreea Horhocea. Professional guidance on anxiety, depression & relationships.',
+      'Expert therapy insights & mental health advice from BACP registered psychotherapist. Guidance on anxiety, depression & relationships.',
     url: 'https://nextgentherapy.co.uk/blog',
     siteName: 'Next Generation Therapy',
     locale: 'en_GB',

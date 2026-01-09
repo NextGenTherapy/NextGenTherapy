@@ -523,3 +523,115 @@
 .contactNote a:hover {
   text-decoration: underline;
 }
+
+/* Related Services Section */
+.relatedSection {
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid var(--color-accent-light);
+  border-radius: var(--border-radius-large);
+  padding: var(--spacing-medium);
+  margin-bottom: var(--spacing-medium);
+  box-shadow: var(--box-shadow);
+  transition: var(--transition-normal);
+
+  &:hover {
+    box-shadow: var(--box-shadow-hover);
+    transform: translateY(-2px);
+  }
+
+  h2 {
+    color: var(--color-accent);
+    font-size: var(--font-size-h4);
+    margin-bottom: var(--spacing-small);
+    font-weight: 600;
+  }
+
+  p {
+    line-height: 1.6;
+    margin-bottom: var(--spacing-small);
+    color: var(--color-text-primary);
+    font-size: var(--font-size-small);
+  }
+}
+
+@media (min-width: 768px) {
+  .relatedSection {
+    padding: var(--spacing-large);
+    margin-bottom: var(--spacing-large);
+
+    h2 {
+      font-size: var(--font-size-h3);
+      margin-bottom: var(--spacing-medium);
+    }
+
+    p {
+      font-size: var(--font-size-base);
+      margin-bottom: var(--spacing-medium);
+    }
+  }
+}
+
+.relatedGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-medium);
+  margin-top: var(--spacing-medium);
+}
+
+@media (min-width: 768px) {
+  .relatedGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .relatedGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.relatedCard {
+  display: block;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid var(--color-accent-light);
+  border-radius: var(--border-radius-large);
+  padding: var(--spacing-medium);
+  text-decoration: none;
+  box-shadow: var(--box-shadow);
+  transition: var(--transition-normal);
+
+  &:hover {
+    box-shadow: var(--box-shadow-hover);
+    transform: translateY(-2px);
+    border-color: var(--color-accent);
+  }
+
+  h3 {
+    color: var(--color-accent);
+    font-size: var(--font-size-h4);
+    margin-bottom: var(--spacing-small);
+    font-weight: 600;
+  }
+
+  p {
+    line-height: 1.6;
+    color: var(--color-text-primary);
+    font-size: var(--font-size-small);
+    margin: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .relatedCard {
+    padding: var(--spacing-large);
+
+    h3 {
+      font-size: var(--font-size-h3);
+      margin-bottom: var(--spacing-medium);
+    }
+
+    p {
+      font-size: var(--font-size-base);
+    }
+  }
+}

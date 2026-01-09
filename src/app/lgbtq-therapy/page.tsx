@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://nextgentherapy.co.uk'),
   title: 'LGBTQ+ Therapy Colchester | Inclusive & Affirming Support',
   description:
-    'Inclusive, affirming therapy for LGBTQ+ individuals in Colchester. Safe space for identity exploration, coming out support & mental health care. Get in touch today.',
+    'Inclusive, affirming LGBTQ+ therapy in Colchester. Safe space for identity exploration, coming out support & mental health. Book today.',
   keywords: [
     'LGBTQ therapy Colchester',
     'gay therapy Essex',
@@ -80,7 +80,46 @@ export default function LGBTQTherapyPage() {
     serviceType: 'LGBTQ+ Affirming Therapy',
     areaServed: ['Colchester', 'Essex', 'Online'],
     description:
-      'Inclusive, affirming therapy for LGBTQ+ individuals. Safe space for identity exploration, coming out support, and mental health care for the LGBTQ+ community.',
+      'Inclusive, affirming therapy for LGBTQ+ individuals. Safe space for identity exploration, coming out support, and mental health care.',
+  };
+
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: 'Is your therapy LGBTQ+ affirming?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Yes, I provide fully affirming therapy for LGBTQ+ individuals. I respect and validate all gender identities and sexual orientations without attempting to change or question them.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'What LGBTQ+ issues do you help with?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'I help with coming out, identity exploration, family acceptance, relationship issues, minority stress, anxiety, depression, and general mental health concerns within an affirming framework.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Do you work with transgender and non-binary clients?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Yes, I welcome and support transgender, non-binary, and gender-diverse clients. I use your correct name and pronouns and provide a safe space for exploring gender identity.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Is LGBTQ+ therapy confidential?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Absolutely. Everything discussed is strictly confidential. This is especially important for those who may not be out to family, friends, or colleagues.',
+        },
+      },
+    ],
   };
 
   const breadcrumbSchema = {
@@ -107,6 +146,7 @@ export default function LGBTQTherapyPage() {
       },
     ],
   };
+
   return (
     <>
       <script
@@ -116,6 +156,10 @@ export default function LGBTQTherapyPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
       <div className={styles.page}>
         <main className={styles.main}>

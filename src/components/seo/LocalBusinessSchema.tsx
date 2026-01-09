@@ -46,6 +46,28 @@ export default function LocalBusinessSchema() {
       },
       geoRadius: '50000',
     },
+    areaServed: [
+      {
+        '@type': 'City',
+        name: 'Colchester',
+        containedIn: 'Essex',
+      },
+      {
+        '@type': 'City',
+        name: 'Ipswich',
+        containedIn: 'Suffolk',
+      },
+      {
+        '@type': 'City',
+        name: 'Chelmsford',
+        containedIn: 'Essex',
+      },
+      {
+        '@type': 'AdministrativeArea',
+        name: 'Essex',
+      },
+    ],
+    knowsLanguage: ['en-GB'],
     hasOfferCatalog: {
       '@type': 'OfferCatalog',
       name: 'Therapy Services',
