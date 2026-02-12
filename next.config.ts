@@ -66,6 +66,11 @@ const nextConfig: NextConfig = {
         destination: '/blog/understanding-anxiety-young-people',
         permanent: true,
       },
+      {
+        source: '/blog/managing-anxiety-practical-tips',
+        destination: '/blog/understanding-anxiety-young-people',
+        permanent: true,
+      },
       // Legacy paths from old site structure
       {
         source: '/why-people-seek-therapy',

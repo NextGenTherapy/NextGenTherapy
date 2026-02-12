@@ -9,19 +9,34 @@ module.exports = {
   priority: 0.7,
   sitemapSize: 5000,
   transform: async (config, path) => {
-    // Set strategic priority for SEO optimization
+    // Set strategic priority and changefreq for SEO optimization
     let priority = 0.7;
-    if (path === '/') priority = 1.0;
-    if (path === '/services') priority = 0.95; // Boost services page (Page 6 → Page 1-3)
+    let changefreq = 'monthly'; // Default for static pages
+
+    // Homepage - changes frequently with updates
+    if (path === '/') {
+      priority = 1.0;
+      changefreq = 'daily';
+    }
+    // Blog index - new posts added regularly
+    if (path === '/blog') {
+      priority = 0.75;
+      changefreq = 'weekly';
+    }
+    // Individual blog posts - rarely change after publication
+    if (path.startsWith('/blog/')) {
+      priority = 0.7;
+      changefreq = 'monthly';
+    }
+    // High-intent service pages
+    if (path === '/services') priority = 0.95;
     if (path === '/book-now') priority = 0.9;
-    if (path === '/pricing') priority = 0.9; // High priority for commercial intent
+    if (path === '/pricing') priority = 0.9;
     if (path === '/faq') priority = 0.85;
-    if (path === '/trust') priority = 0.85; // Social proof for conversions
-    if (path === '/location') priority = 0.8; // Local SEO importance
+    if (path === '/trust') priority = 0.85;
+    if (path === '/location') priority = 0.8;
     if (path === '/about') priority = 0.85;
     if (path === '/about-therapy') priority = 0.8;
-    if (path === '/blog') priority = 0.75;
-    if (path.startsWith('/blog/')) priority = 0.7;
     // Specialized service pages - high priority for targeted SEO
     if (path === '/child-therapy') priority = 0.85;
     if (path === '/teenage-therapy') priority = 0.85;
@@ -32,7 +47,7 @@ module.exports = {
 
     return {
       loc: path,
-      changefreq: config.changefreq,
+      changefreq: changefreq,
       priority: priority,
       lastmod: config.autoLastmod ? new Date().toISOString() : undefined,
     };
