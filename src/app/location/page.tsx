@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: 'https://nextgentherapy.co.uk/images/office.jpg',
+        url: 'https://nextgentherapy.co.uk/images/office-opt.jpg',
         width: 1200,
         height: 630,
         alt: 'Next Generation Therapy Location - Colchester Business Centre',
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Therapy Location Colchester | Next Generation Therapy',
     description: 'Find our therapy location in Colchester Business Centre with easy parking.',
-    images: ['https://nextgentherapy.co.uk/images/office.jpg'],
+    images: ['https://nextgentherapy.co.uk/images/office-opt.jpg'],
   },
   alternates: {
     canonical: `${siteUrl}/location`,

@@ -4,7 +4,7 @@ export default function LocalBusinessSchema() {
     '@type': 'LocalBusiness',
     '@id': 'https://nextgentherapy.co.uk/#localbusiness',
     name: 'Next Generation Therapy',
-    image: 'https://nextgentherapy.co.uk/images/office.jpg',
+    image: 'https://nextgentherapy.co.uk/images/office-opt.jpg',
     description:
       'Professional psychodynamic therapy services in Colchester, Essex. BACP registered therapist offering individual therapy for anxiety, depression, relationships and personal growth.',
     address: {
