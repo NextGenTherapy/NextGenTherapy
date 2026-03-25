@@ -32,15 +32,15 @@
   color: var(--color-accent);
   margin-bottom: var(--spacing-medium);
   font-weight: 600;
-  font-family: var(--font-family);
+  font-family: var(--font-body);
 }
 
 .subtitle {
-  font-size: var(--font-size-medium);
-  color: var(--color-text-primary);
+  font-size: var(--font-size-lead);
+  color: var(--color-text);
   max-width: 600px;
   margin: 0 auto;
-  line-height: 1.6;
+  line-height: var(--line-height-body);
 }
 
 .approachSection {
@@ -53,7 +53,7 @@
   color: var(--color-accent);
   margin-bottom: var(--spacing-xlarge);
   font-weight: 600;
-  font-family: var(--font-family);
+  font-family: var(--font-body);
 }
 
 .commitmentGrid {
@@ -64,9 +64,9 @@
 }
 
 .commitmentItem {
-  background: var(--color-primary);
+  background: var(--color-bg);
   border: var(--border-width) solid var(--color-border);
-  border-radius: var(--border-radius-large);
+  border-radius: var(--radius-medium);
   padding: var(--spacing-xlarge);
   text-align: center;
   box-shadow: var(--box-shadow);
@@ -79,23 +79,23 @@
 }
 
 .commitmentItem h3 {
-  font-size: var(--font-size-h4);
+  font-size: var(--font-size-h3);
   color: var(--color-accent);
   margin-bottom: var(--spacing-medium);
   font-weight: 600;
-  font-family: var(--font-family);
+  font-family: var(--font-body);
 }
 
 .commitmentItem p {
-  color: var(--color-text-primary);
-  line-height: 1.6;
-  font-size: var(--font-size-base);
+  color: var(--color-text);
+  line-height: var(--line-height-body);
+  font-size: var(--font-size-body);
 }
 
 .qualificationsSection {
-  background: var(--color-background);
+  background: var(--color-bg);
   padding: var(--spacing-section) var(--spacing-xlarge);
-  border-radius: var(--border-radius-large);
+  border-radius: var(--radius-medium);
   margin: var(--spacing-section) 0;
 }
 
@@ -105,7 +105,7 @@
   color: var(--color-accent);
   margin-bottom: var(--spacing-xlarge);
   font-weight: 600;
-  font-family: var(--font-family);
+  font-family: var(--font-body);
 }
 
 .qualifications {
@@ -115,24 +115,24 @@
 }
 
 .qualification {
-  background: var(--color-primary);
-  border-radius: var(--border-radius);
+  background: var(--color-bg);
+  border-radius: var(--radius-small);
   padding: var(--spacing-xlarge);
   box-shadow: var(--box-shadow);
 }
 
 .qualification h3 {
-  font-size: var(--font-size-h4);
+  font-size: var(--font-size-h3);
   color: var(--color-accent);
   margin-bottom: var(--spacing-medium);
   font-weight: 600;
-  font-family: var(--font-family);
+  font-family: var(--font-body);
 }
 
 .qualification p {
-  color: var(--color-text-primary);
-  line-height: 1.6;
-  font-size: var(--font-size-base);
+  color: var(--color-text);
+  line-height: var(--line-height-body);
+  font-size: var(--font-size-body);
 }
 
 .feedbackSection {
@@ -146,21 +146,21 @@
   color: var(--color-accent);
   margin-bottom: var(--spacing-large);
   font-weight: 600;
-  font-family: var(--font-family);
+  font-family: var(--font-body);
 }
 
 .feedbackSection p {
-  font-size: var(--font-size-medium);
-  color: var(--color-text-primary);
+  font-size: var(--font-size-lead);
+  color: var(--color-text);
   max-width: 600px;
   margin: 0 auto var(--spacing-large) auto;
-  line-height: 1.6;
+  line-height: var(--line-height-body);
 }
 
 .ctaSection {
-  background: var(--color-background);
+  background: var(--color-bg);
   padding: var(--spacing-section) var(--spacing-xlarge);
-  border-radius: var(--border-radius-large);
+  border-radius: var(--radius-medium);
   text-align: center;
   margin-top: var(--spacing-section);
 }
@@ -170,12 +170,12 @@
   color: var(--color-accent);
   margin-bottom: var(--spacing-medium);
   font-weight: 600;
-  font-family: var(--font-family);
+  font-family: var(--font-body);
 }
 
 .ctaSection p {
-  font-size: var(--font-size-medium);
-  color: var(--color-text-primary);
+  font-size: var(--font-size-lead);
+  color: var(--color-text);
   margin-bottom: var(--spacing-xlarge);
   max-width: 500px;
   margin-left: auto;
@@ -190,63 +190,63 @@
 }
 
 .primaryButton {
-  background: var(--color-button);
-  color: var(--color-text-secondary);
+  background: var(--color-brand);
+  color: var(--color-header-text);
   padding: var(--spacing-medium) var(--spacing-xlarge);
-  border-radius: var(--border-radius);
+  border-radius: var(--radius-small);
   text-decoration: none;
   font-weight: 500;
   transition: var(--transition-normal);
-  border: var(--border-width-thick) solid var(--color-button);
-  font-family: var(--font-family);
+  border: var(--border-width-thick) solid var(--color-brand);
+  font-family: var(--font-body);
 }
 
 .primaryButton:hover {
-  background: var(--color-button-hover);
-  border-color: var(--color-button-hover);
+  background: var(--color-brand-hover);
+  border-color: var(--color-brand-hover);
 }
 
 .secondaryButton {
   background: transparent;
-  color: var(--color-button);
+  color: var(--color-brand);
   padding: var(--spacing-medium) var(--spacing-xlarge);
-  border: var(--border-width-thick) solid var(--color-button);
-  border-radius: var(--border-radius);
+  border: var(--border-width-thick) solid var(--color-brand);
+  border-radius: var(--radius-small);
   text-decoration: none;
   font-weight: 500;
   transition: var(--transition-normal);
-  font-family: var(--font-family);
+  font-family: var(--font-body);
 }
 
 .secondaryButton:hover {
-  background: var(--color-button);
-  color: var(--color-text-secondary);
+  background: var(--color-brand);
+  color: var(--color-header-text);
 }
 
 @media (max-width: 768px) {
   .container {
-    padding: 1rem;
+    padding: var(--container-padding-mobile);
   }
 
   .header h1 {
-    font-size: 2rem;
+    font-size: var(--font-size-h2);
   }
 
   .testimonialsGrid {
     grid-template-columns: 1fr;
-    gap: 1.5rem;
+    gap: var(--spacing-large);
   }
 
   .testimonial {
-    padding: 1.5rem;
+    padding: var(--spacing-large);
   }
 
   .ctaSection {
-    padding: 2rem 1rem;
+    padding: var(--spacing-xlarge) var(--container-padding-mobile);
   }
 
   .ctaSection h2 {
-    font-size: 1.5rem;
+    font-size: var(--font-size-h3);
   }
 
   .ctaButtons {

@@ -1,7 +1,7 @@
 /* Pricing Page Styles */
 
 .page {
-  background: var(--color-background);
+  background: var(--color-bg);
   min-height: 100vh;
   padding-bottom: var(--spacing-large);
   width: 100%;
@@ -37,16 +37,16 @@
   font-size: var(--font-size-h1);
   color: var(--color-accent);
   margin-bottom: var(--spacing-medium);
-  font-family: var(--font-family);
+  font-family: var(--font-body);
   font-weight: bold;
 }
 
 .subtitle {
-  font-size: var(--font-size-large);
-  color: var(--color-text-primary);
+  font-size: var(--font-size-h3);
+  color: var(--color-text);
   max-width: 700px;
   margin: 0 auto;
-  line-height: 1.6;
+  line-height: var(--line-height-body);
 }
 
 /* Content Sections */
@@ -68,8 +68,8 @@
 }
 
 .priceCard {
-  background: var(--color-background-secondary);
-  border-radius: var(--border-radius-large);
+  background: var(--color-bg-secondary);
+  border-radius: var(--radius-medium);
   padding: var(--spacing-xlarge);
   border: var(--border-width-thin) solid var(--color-border);
   transition: var(--transition-normal);
@@ -92,7 +92,7 @@
 }
 
 .sessionLength {
-  color: var(--color-text-primary);
+  color: var(--color-text);
   margin-bottom: var(--spacing-medium);
   font-style: italic;
 }
@@ -105,8 +105,8 @@
 .included h3 {
   color: var(--color-accent);
   margin-bottom: var(--spacing-medium);
-  font-size: var(--font-size-h4);
-  font-family: var(--font-family);
+  font-size: var(--font-size-h3);
+  font-family: var(--font-body);
   font-weight: 600;
   text-align: center;
 }
@@ -121,8 +121,8 @@
 
 .included li {
   padding: var(--spacing-xs) 0;
-  color: var(--color-text-primary);
-  line-height: 1.5;
+  color: var(--color-text);
+  line-height: var(--line-height-heading);
   list-style: none !important;
   text-align: center;
 }
@@ -132,23 +132,23 @@
 }
 
 .consultation {
-  background: var(--color-background);
+  background: var(--color-bg);
   padding: var(--spacing-large);
-  border-radius: var(--border-radius);
+  border-radius: var(--radius-small);
   margin: var(--spacing-large) 0;
 }
 
 .consultation h3 {
   color: var(--color-accent);
   margin-bottom: var(--spacing-medium);
-  font-size: var(--font-size-h4);
-  font-family: var(--font-family);
+  font-size: var(--font-size-h3);
+  font-family: var(--font-body);
   font-weight: 600;
 }
 
 .consultation p {
-  color: var(--color-text-primary);
-  line-height: 1.6;
+  color: var(--color-text);
+  line-height: var(--line-height-body);
   margin: 0;
 }
 
@@ -158,24 +158,24 @@
 }
 
 .bookButton {
-  background: var(--color-button);
-  color: var(--color-text-secondary);
+  background: var(--color-brand);
+  color: var(--color-header-text);
   padding: var(--spacing-medium) var(--spacing-xlarge);
-  border-radius: var(--border-radius);
+  border-radius: var(--radius-small);
   text-decoration: none;
   font-weight: 600;
   transition: var(--transition-normal);
   display: inline-block;
-  font-family: var(--font-family);
+  font-family: var(--font-body);
   margin-bottom: var(--spacing-medium);
 }
 
 .bookButton:hover {
-  background: var(--color-button-hover);
+  background: var(--color-brand-hover);
 }
 
 .bookingNote {
-  color: var(--color-text-primary);
+  color: var(--color-text);
   font-size: var(--font-size-small);
   margin: 0;
 }
@@ -189,9 +189,9 @@
 
 .paymentMethod,
 .cancellation {
-  background: var(--color-background-secondary);
+  background: var(--color-bg-secondary);
   padding: var(--spacing-large);
-  border-radius: var(--border-radius);
+  border-radius: var(--radius-small);
   border: var(--border-width-thin) solid var(--color-border);
 }
 
@@ -199,15 +199,15 @@
 .cancellation h3 {
   color: var(--color-accent);
   margin-bottom: var(--spacing-medium);
-  font-size: var(--font-size-h4);
-  font-family: var(--font-family);
+  font-size: var(--font-size-h3);
+  font-family: var(--font-body);
   font-weight: 600;
 }
 
 .paymentMethod p,
 .cancellation p {
-  color: var(--color-text-primary);
-  line-height: 1.6;
+  color: var(--color-text);
+  line-height: var(--line-height-body);
   margin: 0;
 }
 
@@ -217,12 +217,12 @@
   left: 50%;
   transform: translateX(-50%);
   background: var(--color-accent);
-  color: var(--color-text-secondary);
+  color: var(--color-header-text);
   padding: var(--spacing-xs) var(--spacing-medium);
-  border-radius: var(--border-radius);
+  border-radius: var(--radius-small);
   font-size: var(--font-size-small);
   font-weight: 600;
-  font-family: var(--font-family);
+  font-family: var(--font-body);
 }
 
 .priceHeader {
@@ -233,7 +233,7 @@
   font-size: var(--font-size-h3);
   color: var(--color-accent);
   margin-bottom: var(--spacing-medium);
-  font-family: var(--font-family);
+  font-family: var(--font-body);
   font-weight: 600;
 }
 
@@ -245,20 +245,20 @@
 }
 
 .currency {
-  font-size: var(--font-size-large);
+  font-size: var(--font-size-h3);
   color: var(--color-accent);
 }
 
 .amount {
-  font-size: 3rem;
+  font-size: var(--font-size-h1);
   font-weight: bold;
   color: var(--color-accent);
   margin-left: var(--spacing-xs);
 }
 
 .duration {
-  color: var(--color-text-primary);
-  font-size: var(--font-size-medium);
+  color: var(--color-text);
+  font-size: var(--font-size-lead);
 }
 
 .features {
@@ -271,8 +271,8 @@
 
 .features li {
   padding: var(--spacing-xs) 0;
-  color: var(--color-text-primary);
-  line-height: 1.5;
+  color: var(--color-text);
+  line-height: var(--line-height-heading);
   list-style: none !important;
   list-style-type: none !important;
 }
@@ -295,7 +295,7 @@
   font-size: var(--font-size-h2);
   color: var(--color-accent);
   margin-bottom: var(--spacing-large);
-  font-family: var(--font-family);
+  font-family: var(--font-body);
   font-weight: 600;
 }
 
@@ -308,17 +308,17 @@
 }
 
 .infoCard {
-  background: var(--color-background-secondary);
-  border-radius: var(--border-radius-large);
+  background: var(--color-bg-secondary);
+  border-radius: var(--radius-medium);
   padding: var(--spacing-xlarge);
   border: var(--border-width-thin) solid var(--color-border);
 }
 
 .infoCard h3 {
-  font-size: var(--font-size-h4);
+  font-size: var(--font-size-h3);
   color: var(--color-accent);
   margin-bottom: var(--spacing-medium);
-  font-family: var(--font-family);
+  font-family: var(--font-body);
   font-weight: 600;
 }
 
@@ -331,8 +331,8 @@
 
 .infoCard li {
   padding: var(--spacing-xs) 0;
-  color: var(--color-text-primary);
-  line-height: 1.5;
+  color: var(--color-text);
+  line-height: var(--line-height-heading);
   list-style: none !important;
   list-style-type: none !important;
 }
@@ -350,7 +350,7 @@
   font-size: var(--font-size-h2);
   color: var(--color-accent);
   margin-bottom: var(--spacing-large);
-  font-family: var(--font-family);
+  font-family: var(--font-body);
   font-weight: 600;
 }
 
@@ -364,28 +364,28 @@
 
 .benefit {
   padding: var(--spacing-large);
-  background: var(--color-background-secondary);
-  border-radius: var(--border-radius-large);
+  background: var(--color-bg-secondary);
+  border-radius: var(--radius-medium);
   border: var(--border-width-thin) solid var(--color-border);
 }
 
 .benefit h3 {
-  font-size: var(--font-size-h4);
+  font-size: var(--font-size-h3);
   color: var(--color-accent);
   margin-bottom: var(--spacing-medium);
-  font-family: var(--font-family);
+  font-family: var(--font-body);
   font-weight: 600;
 }
 
 .benefit p {
-  color: var(--color-text-primary);
-  line-height: 1.5;
+  color: var(--color-text);
+  line-height: var(--line-height-heading);
 }
 
 .callToAction {
   text-align: center;
-  background: var(--color-background-secondary);
-  border-radius: var(--border-radius-large);
+  background: var(--color-bg-secondary);
+  border-radius: var(--radius-medium);
   padding: var(--spacing-section);
   margin: var(--spacing-section) 0;
   border: var(--border-width-thin) solid var(--color-border);
@@ -395,18 +395,18 @@
   font-size: var(--font-size-h2);
   color: var(--color-accent);
   margin-bottom: var(--spacing-medium);
-  font-family: var(--font-family);
+  font-family: var(--font-body);
   font-weight: 600;
 }
 
 .callToAction p {
-  font-size: var(--font-size-large);
-  color: var(--color-text-primary);
+  font-size: var(--font-size-h3);
+  color: var(--color-text);
   margin-bottom: var(--spacing-large);
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
-  line-height: 1.6;
+  line-height: var(--line-height-body);
 }
 
 .buttonGroup {
@@ -427,7 +427,7 @@
   }
 
   .subtitle {
-    font-size: var(--font-size-medium);
+    font-size: var(--font-size-lead);
   }
 
   .pricingGrid {
@@ -444,7 +444,7 @@
   }
 
   .amount {
-    font-size: 2.5rem;
+    font-size: var(--font-size-h2);
   }
 
   .buttonGroup {

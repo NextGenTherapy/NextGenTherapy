@@ -4,7 +4,7 @@
   display: inline-flex;
   align-items: center;
   gap: var(--spacing-small);
-  padding: 12px 28px;
+  padding: var(--spacing-medium) var(--spacing-large);
   font-family: var(--font-body);
   font-size: var(--font-size-small);
   font-weight: var(--font-weight-medium);
@@ -21,8 +21,8 @@
   }
 
   &:focus-visible {
-    outline: 2px solid var(--color-brand);
-    outline-offset: 2px;
+    outline: var(--outline-width) solid var(--color-brand);
+    outline-offset: var(--outline-offset);
   }
 }
 

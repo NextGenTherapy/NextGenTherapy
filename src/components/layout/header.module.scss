@@ -3,14 +3,21 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: stretch;
-  background-color: var(--color-header-background);
-  min-height: var(--header-height);
-  color: var(--color-text-secondary);
+  background-color: var(--color-header);
+  min-height: var(--header-height-mobile);
+  color: var(--color-header-text);
   position: relative;
   z-index: 1000;
   width: 100%;
   padding-top: env(safe-area-inset-top, 0);
   box-sizing: border-box;
+  border-bottom: var(--border-width-thin) solid rgba(255, 255, 255, 0.1);
+}
+
+@media (min-width: 1024px) {
+  .header {
+    min-height: var(--header-height);
+  }
 }
 
 .nav {
@@ -18,7 +25,7 @@
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  min-height: var(--header-height);
+  min-height: var(--header-height-mobile);
   background-color: transparent;
   padding: 0 var(--container-padding-mobile);
   box-sizing: border-box;
@@ -32,6 +39,7 @@
 
 @media (min-width: 1024px) {
   .nav {
+    min-height: var(--header-height);
     padding: 0 var(--container-padding-desktop);
   }
 }
@@ -40,8 +48,8 @@
   display: block;
   background: none;
   border: none;
-  color: var(--color-text-secondary);
-  font-size: 1.5rem;
+  color: var(--color-header-text);
+  font-size: var(--font-size-h3);
   cursor: pointer;
   z-index: 1001;
   padding: var(--spacing-small);
@@ -64,16 +72,18 @@
 }
 
 .logo div {
-  font-size: var(--font-size-logo);
+  font-family: var(--font-display);
+  font-size: var(--font-size-h3);
+  font-weight: var(--font-weight-medium);
+  letter-spacing: 0.02em;
   margin: 0;
-  color: var(--color-text-secondary);
-  line-height: 1.2;
+  color: var(--color-header-text);
+  line-height: var(--line-height-heading);
   padding: var(--spacing-small) 0;
-  font-weight: bold;
 }
 
 .logo a:hover div {
-  color: var(--color-header-accent-hover);
+  color: var(--color-accent);
 }
 
 .navList {
@@ -83,8 +93,8 @@
   margin: 0;
   padding: var(--spacing-medium);
   width: 100%;
-  background-color: var(--color-header-background);
-  color: var(--color-text-secondary);
+  background-color: var(--color-header);
+  color: var(--color-header-text);
   gap: var(--spacing-medium);
   box-sizing: border-box;
   position: absolute;
@@ -92,7 +102,6 @@
   left: 0;
   z-index: 999;
   text-align: center;
-  box-shadow: var(--box-shadow);
 }
 
 .navListOpen {
@@ -121,18 +130,15 @@
 
 .navItem a {
   text-decoration: none;
-  color: var(--color-text-secondary);
-  font-size: var(--font-size-base);
-  transition: color var(--transition-normal);
+  color: var(--color-header-text);
+  font-family: var(--font-body);
+  font-size: var(--font-size-small);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  transition: color 200ms ease;
   padding: var(--spacing-small) var(--spacing-medium);
   display: block;
-  border-radius: var(--border-radius);
-}
-
-@media (min-width: 768px) {
-  .navItem a {
-    font-size: var(--font-size-medium);
-  }
+  border-radius: var(--radius-small);
 }
 
 @media (min-width: 1024px) {
@@ -144,15 +150,27 @@
 
 .navItem a:hover,
 .navItem a:focus {
-  color: var(--color-header-accent-hover);
-  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--color-accent);
 }
 
-@media (min-width: 1024px) {
-  .navItem a:hover,
-  .navItem a:focus {
-    background-color: transparent;
-  }
+/* Book Now button styling */
+.bookNowItem a {
+  background-color: var(--color-accent);
+  color: var(--color-header);
+  font-weight: var(--font-weight-medium);
+  border-radius: var(--radius-pill);
+  padding: var(--spacing-small) var(--spacing-medium);
+  transition: background-color 200ms ease, color 200ms ease;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-family: var(--font-body);
+  font-size: var(--font-size-small);
+}
+
+.bookNowItem a:hover,
+.bookNowItem a:focus {
+  background-color: var(--color-accent-light);
+  color: var(--color-brand-hover);
 }
 
 /* Hamburger menu icon */
@@ -176,7 +194,7 @@
   display: block;
   height: 2px;
   width: 100%;
-  background-color: var(--color-text-secondary);
+  background-color: var(--color-header-text);
   border-radius: 1px;
   transition: all var(--transition-normal);
   transform-origin: center;
