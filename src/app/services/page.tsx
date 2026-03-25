@@ -1,10 +1,10 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
+import PageHero from '@/components/ui/PageHero';
+import CTABlock from '@/components/ui/CTABlock';
 import styles from './services.module.scss';
-import buttonLinksStyles from '../../components/ui/buttonLinks.module.scss';
 import buttonStyles from '../../components/ui/button.module.scss';
-import Button from '../../components/ui/button';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://nextgentherapy.co.uk'),
@@ -229,16 +229,14 @@ export default function Services() {
           }),
         }}
       />
+      <PageHero
+        eyebrow="Professional Services"
+        title="Colchester Therapist - Professional Therapy Services"
+        lead="Experienced therapist serving Colchester and surrounding Essex areas. Offering both in-person therapy sessions in Colchester and secure online therapy across the UK."
+      />
+
       <div className={styles.page}>
         <main className={styles.main}>
-          <div className={styles.greeting}>
-            <h1>Colchester Therapist - Professional Therapy Services</h1>
-            <p className={styles.professionalIntro}>
-              Experienced therapist serving Colchester and surrounding Essex areas. Offering both
-              in-person therapy sessions in Colchester and secure online therapy across the UK.
-            </p>
-          </div>
-
           <section className={styles.servicesOverview}>
             <div className={styles.contentGrid}>
               <article className={styles.textContent}>
@@ -649,13 +647,10 @@ export default function Services() {
             </div>
           </section>
 
-          <section className={buttonLinksStyles.buttonLinks}>
-            <Button href="/about-therapy">About Therapy</Button>
-            <Button href="/about">About Me</Button>
-            <Button href="/book-now">Book Now</Button>
-          </section>
         </main>
       </div>
+
+      <CTABlock />
     </>
   );
 }

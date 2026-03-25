@@ -1,8 +1,9 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { ChildTherapySchema } from '@/components/seo/ServiceSchema';
+import PageHero from '@/components/ui/PageHero';
+import CTABlock from '@/components/ui/CTABlock';
 import styles from './child-therapy.module.scss';
-import buttonStyles from '../../components/ui/button.module.scss';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://nextgentherapy.co.uk'),
@@ -143,17 +144,14 @@ export default function ChildTherapyPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
+      <PageHero
+        eyebrow="Child Therapy"
+        title="Child Therapy in Colchester"
+        lead="Compassionate, professional therapy support for children navigating life's challenges. BACP registered therapist providing a safe, understanding space for your child to grow and heal."
+      />
+
       <div className={styles.page}>
         <div className={styles.main}>
-          <section className={styles.heroSection}>
-            <h1>Child Therapy in Colchester</h1>
-            <p className={styles.subtitle}>
-              Compassionate, professional therapy support for children navigating life&apos;s
-              challenges. BACP registered therapist providing a safe, understanding space for your
-              child to grow and heal.
-            </p>
-          </section>
-
           <section className={styles.contentSection}>
             <div className={styles.textContainer}>
               <section className={styles.introduction}>
@@ -394,32 +392,12 @@ export default function ChildTherapyPage() {
                 </div>
               </section>
 
-              <section className={styles.callToAction}>
-                <h2>Ready to Take the Next Step?</h2>
-                <p>
-                  If you&apos;re concerned about your child&apos;s wellbeing and think therapy might
-                  help, I&apos;d be happy to discuss your situation. Every child deserves to feel
-                  understood, supported, and hopeful about their future.
-                </p>
-                <div className={styles.ctaButtons}>
-                  <Link href="/contact" className={buttonStyles.button}>
-                    Book a Consultation
-                  </Link>
-                  <Link href="/about" className={buttonStyles.button}>
-                    Learn About My Approach
-                  </Link>
-                </div>
-                <p className={styles.contactNote}>
-                  <strong>Location:</strong> I offer child therapy sessions in Colchester and
-                  online.
-                  <Link href="/pricing">View pricing information</Link> or
-                  <Link href="/about">learn more about my background and qualifications</Link>.
-                </p>
-              </section>
             </div>
           </section>
         </div>
       </div>
+
+      <CTABlock />
     </>
   );
 }

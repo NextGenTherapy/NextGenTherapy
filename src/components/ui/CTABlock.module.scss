@@ -1,0 +1,44 @@
+/* CTABlock Component Styles */
+
+.cta {
+  background: var(--color-accent-light);
+  padding: var(--spacing-xxlarge) 0;
+}
+
+.container {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 0 var(--container-padding-mobile);
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding: 0 var(--container-padding-tablet);
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding: 0 var(--container-padding-desktop);
+  }
+}
+
+.heading {
+  font-family: var(--font-display);
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-medium);
+  font-style: italic;
+  color: var(--color-text);
+  line-height: var(--line-height-heading);
+  margin: 0 0 var(--spacing-small);
+}
+
+.subheading {
+  font-family: var(--font-body);
+  font-size: var(--font-size-lead);
+  font-weight: var(--font-weight-regular);
+  color: var(--color-text-muted);
+  line-height: var(--line-height-body);
+  margin: 0 0 var(--spacing-large);
+}

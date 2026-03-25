@@ -1,8 +1,9 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { YoungAdultTherapySchema } from '@/components/seo/ServiceSchema';
+import PageHero from '@/components/ui/PageHero';
+import CTABlock from '@/components/ui/CTABlock';
 import styles from './young-adult-therapy.module.scss';
-import buttonStyles from '../../components/ui/button.module.scss';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://nextgentherapy.co.uk'),
@@ -143,17 +144,14 @@ export default function YoungAdultTherapyPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
+      <PageHero
+        eyebrow="Young Adult Therapy"
+        title="Young Adult Therapy in Colchester"
+        lead="Professional therapy support for young adults navigating life transitions, career challenges, and the complexities of emerging adulthood. Find clarity and confidence in this pivotal life stage."
+      />
+
       <div className={styles.page}>
         <div className={styles.main}>
-          <section className={styles.heroSection}>
-            <h1>Young Adult Therapy in Colchester</h1>
-            <p className={styles.subtitle}>
-              Professional therapy support for young adults navigating life transitions, career
-              challenges, and the complexities of emerging adulthood. Find clarity and confidence in
-              this pivotal life stage.
-            </p>
-          </section>
-
           <section className={styles.contentSection}>
             <div className={styles.textContainer}>
               <section className={styles.introduction}>
@@ -391,33 +389,12 @@ export default function YoungAdultTherapyPage() {
                 </div>
               </section>
 
-              <section className={styles.callToAction}>
-                <h2>Ready to Invest in Your Future?</h2>
-                <p>
-                  Your twenties and thirties are a time of incredible growth and possibility. While
-                  it can feel overwhelming, it&apos;s also an opportunity to build the foundation
-                  for the life you want. Therapy can help you navigate this time with greater
-                  clarity, confidence, and purpose.
-                </p>
-                <div className={styles.ctaButtons}>
-                  <Link href="/contact" className={buttonStyles.button}>
-                    Book a Consultation
-                  </Link>
-                  <Link href="/about" className={buttonStyles.button}>
-                    Learn About My Approach
-                  </Link>
-                </div>
-                <p className={styles.contactNote}>
-                  <strong>Location:</strong> I offer young adult therapy sessions in Colchester and
-                  online.
-                  <Link href="/pricing">View pricing information</Link> or
-                  <Link href="/about">learn more about my background and qualifications</Link>.
-                </p>
-              </section>
             </div>
           </section>
         </div>
       </div>
+
+      <CTABlock />
     </>
   );
 }

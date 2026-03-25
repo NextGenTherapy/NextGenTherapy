@@ -1,8 +1,9 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { TeenageTherapySchema } from '@/components/seo/ServiceSchema';
+import PageHero from '@/components/ui/PageHero';
+import CTABlock from '@/components/ui/CTABlock';
 import styles from './teenage-therapy.module.scss';
-import buttonStyles from '../../components/ui/button.module.scss';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://nextgentherapy.co.uk'),
@@ -143,17 +144,14 @@ export default function TeenageTherapyPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
+      <PageHero
+        eyebrow="Teenage Therapy"
+        title="Teenage Therapy in Colchester"
+        lead="Understanding, confidential therapy support for teenagers navigating the complexities of adolescence. A safe space to explore identity, relationships, and life's challenges."
+      />
+
       <div className={styles.page}>
         <div className={styles.main}>
-          <section className={styles.heroSection}>
-            <h1>Teenage Therapy in Colchester</h1>
-            <p className={styles.subtitle}>
-              Understanding, confidential therapy support for teenagers navigating the complexities
-              of adolescence. A safe space to explore identity, relationships, and life&apos;s
-              challenges.
-            </p>
-          </section>
-
           <section className={styles.contentSection}>
             <div className={styles.textContainer}>
               <section className={styles.introduction}>
@@ -407,33 +405,12 @@ export default function TeenageTherapyPage() {
                 </div>
               </section>
 
-              <section className={styles.callToAction}>
-                <h2>Ready to Take the First Step?</h2>
-                <p>
-                  Whether you&apos;re thinking about therapy for yourself or a parent is encouraging
-                  you to try it, taking that first step can feel daunting. I&apos;m here to make it
-                  as comfortable as possible and to help you figure out if therapy might be useful
-                  for you.
-                </p>
-                <div className={styles.ctaButtons}>
-                  <Link href="/contact" className={buttonStyles.button}>
-                    Book a Consultation
-                  </Link>
-                  <Link href="/about" className={buttonStyles.button}>
-                    Learn About My Approach
-                  </Link>
-                </div>
-                <p className={styles.contactNote}>
-                  <strong>Location:</strong> I offer teenage therapy sessions in Colchester and
-                  online.
-                  <Link href="/pricing">View pricing information</Link> or
-                  <Link href="/about">learn more about my background and qualifications</Link>.
-                </p>
-              </section>
             </div>
           </section>
         </div>
       </div>
+
+      <CTABlock />
     </>
   );
 }

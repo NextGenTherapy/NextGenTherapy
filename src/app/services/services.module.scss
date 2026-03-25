@@ -1,9 +1,7 @@
 /* Services Page Styles */
 
 .page {
-  background: var(--color-background);
-  min-height: 100vh;
-  padding-bottom: var(--spacing-large);
+  background: var(--color-bg);
   width: 100%;
 }
 
@@ -27,19 +25,6 @@
   }
 }
 
-/* Hero Section */
-.greeting {
-  text-align: center;
-  padding: var(--spacing-section) 0 var(--spacing-large);
-
-  h1 {
-    font-size: var(--font-size-h1);
-    font-weight: bold;
-    color: var(--color-accent);
-    margin-bottom: var(--spacing-small);
-  }
-}
-
 /* Content Sections */
 .servicesOverview {
   margin: var(--spacing-section) 0;
@@ -54,17 +39,34 @@
 }
 
 /* Services Overview Section */
+.servicesOverview {
+  background: var(--color-surface);
+  padding: var(--spacing-xlarge) var(--spacing-medium);
+  border-radius: var(--radius-medium);
+  margin-bottom: var(--spacing-large);
+}
+
+@media (min-width: 768px) {
+  .servicesOverview {
+    padding: var(--spacing-xxlarge) var(--spacing-large);
+  }
+}
+
 .servicesOverview h2 {
+  font-family: var(--font-display);
   font-size: var(--font-size-h2);
-  color: var(--color-accent);
+  font-weight: var(--font-weight-medium);
+  font-style: italic;
+  color: var(--color-text);
+  line-height: var(--line-height-body);
   margin-bottom: var(--spacing-medium);
 }
 
 .servicesOverview p {
   line-height: 1.6;
-  color: var(--color-text-primary);
+  color: var(--color-text);
   margin-bottom: var(--spacing-large);
-  font-size: var(--font-size-medium);
+  font-size: var(--font-size-lead);
 }
 
 .servicesList {
@@ -73,10 +75,13 @@
 }
 
 .servicesList h3 {
-  color: var(--color-accent);
-  font-size: var(--font-size-h4);
+  font-family: var(--font-display);
+  font-size: var(--font-size-h3);
+  font-weight: var(--font-weight-medium);
+  font-style: italic;
+  color: var(--color-text);
+  line-height: var(--line-height-body);
   margin-bottom: var(--spacing-medium);
-  font-weight: 600;
 }
 
 /* Client List Styling */
@@ -104,7 +109,7 @@
   align-items: center;
 
   .image {
-    border-radius: var(--border-radius-large);
+    border-radius: var(--radius-medium);
     box-shadow: var(--box-shadow);
   }
 }
@@ -120,15 +125,18 @@
 
 .listColumn li {
   padding: var(--spacing-small) 0;
-  border-bottom: 1px solid var(--color-accent-light);
-  color: var(--color-text-primary);
+  border-bottom: 1px solid var(--color-border);
+  color: var(--color-text);
   position: relative;
   padding-left: var(--spacing-medium);
+  font-family: var(--font-body);
+  font-size: var(--font-size-body);
+  line-height: var(--line-height-body);
 }
 
 .listColumn li:before {
   content: '✓';
-  color: var(--color-accent);
+  color: var(--color-brand);
   font-weight: bold;
   position: absolute;
   left: 0;
@@ -154,7 +162,7 @@
 
   p {
     line-height: 1.6;
-    color: var(--color-text-primary);
+    color: var(--color-text);
     margin-bottom: var(--spacing-medium);
 
     &:last-child {
@@ -171,7 +179,7 @@
     li {
       list-style: circle;
       margin-bottom: var(--spacing-medium);
-      color: var(--color-text-primary);
+      color: var(--color-text);
     }
   }
 }
@@ -185,7 +193,7 @@
   align-items: center;
 
   .image {
-    border-radius: var(--border-radius-large);
+    border-radius: var(--radius-medium);
     box-shadow: var(--box-shadow);
     width: 250px;
     height: 250px;
@@ -201,7 +209,7 @@
   gap: var(--spacing-xxlarge);
   padding: var(--spacing-large);
   background: rgba(255, 255, 255, 0.6);
-  border-radius: var(--border-radius-large);
+  border-radius: var(--radius-medium);
   box-shadow: var(--box-shadow);
   transition: var(--transition-normal);
 
@@ -215,7 +223,7 @@
 .ageSpecificServices {
   margin: var(--spacing-section) 0;
   background: rgba(255, 255, 255, 0.6);
-  border-radius: var(--border-radius-large);
+  border-radius: var(--radius-medium);
   box-shadow: var(--box-shadow);
   transition: var(--transition-normal);
 
@@ -231,14 +239,18 @@
 }
 
 .ageServicesContainer h2 {
+  font-family: var(--font-display);
   font-size: var(--font-size-h2);
-  color: var(--color-accent);
+  font-weight: var(--font-weight-medium);
+  font-style: italic;
+  color: var(--color-text);
+  line-height: var(--line-height-body);
   margin-bottom: var(--spacing-medium);
 }
 
 .ageIntro {
-  font-size: var(--font-size-large);
-  color: var(--color-text-primary);
+  font-size: var(--font-size-h3);
+  color: var(--color-text);
   max-width: 800px;
   margin: 0 auto var(--spacing-large);
   line-height: var(--line-height-body);
@@ -267,7 +279,7 @@
 .ageServiceCard {
   background: rgba(255, 255, 255, 0.8);
   padding: var(--spacing-large);
-  border-radius: var(--border-radius-large);
+  border-radius: var(--radius-medium);
   box-shadow: var(--box-shadow);
   text-align: left;
   display: flex;
@@ -282,15 +294,19 @@
 }
 
 .ageServiceCard h3 {
+  font-family: var(--font-display);
   font-size: var(--font-size-h3);
-  color: var(--color-accent);
+  font-weight: var(--font-weight-medium);
+  font-style: italic;
+  color: var(--color-text);
+  line-height: var(--line-height-body);
   margin-bottom: var(--spacing-small);
 }
 
 .ageServiceCard p {
   font-size: var(--font-size-body);
   line-height: var(--line-height-body);
-  color: var(--color-text-primary);
+  color: var(--color-text);
   margin-bottom: var(--spacing-small);
   flex-grow: 1;
 }
@@ -303,15 +319,17 @@
 
 .ageServiceCard li {
   padding: var(--spacing-small) 0;
-  border-bottom: 1px solid var(--color-accent-light);
+  border-bottom: 1px solid var(--color-border);
+  font-family: var(--font-body);
   font-size: var(--font-size-body);
-  color: var(--color-text-primary);
+  color: var(--color-text);
+  line-height: var(--line-height-body);
   position: relative;
   padding-left: var(--spacing-medium);
 
   &:before {
     content: '✓';
-    color: var(--color-accent);
+    color: var(--color-brand);
     font-weight: bold;
     position: absolute;
     left: 0;
@@ -344,7 +362,7 @@
 .faqItem {
   background-color: rgba(255, 255, 255, 0.8);
   border: 1px solid var(--color-accent-light);
-  border-radius: var(--border-radius-large);
+  border-radius: var(--radius-medium);
   padding: var(--spacing-large);
   margin-bottom: var(--spacing-medium);
   box-shadow: var(--box-shadow);
@@ -357,17 +375,17 @@
 
   h3 {
     color: var(--color-accent);
-    font-size: var(--font-size-medium);
+    font-size: var(--font-size-lead);
     font-weight: 600;
     margin-bottom: var(--spacing-small);
     line-height: 1.4;
   }
 
   p {
-    color: var(--color-text-primary);
+    color: var(--color-text);
     line-height: 1.6;
     margin: 0;
-    font-size: var(--font-size-base);
+    font-size: var(--font-size-body);
   }
 }
 
@@ -479,7 +497,7 @@
   }
 
   .faqItem h3 {
-    font-size: var(--font-size-medium);
+    font-size: var(--font-size-lead);
   }
 }
 
@@ -515,18 +533,18 @@
   }
 
   .faqContainer h2 {
-    font-size: var(--font-size-h4);
+    font-size: var(--font-size-h3);
   }
 
   .faqItem h3 {
-    font-size: var(--font-size-base);
+    font-size: var(--font-size-body);
   }
 }
 
 /* New SEO Enhancement Sections */
 .professionalIntro {
-  font-size: var(--font-size-large);
-  color: var(--color-text-primary);
+  font-size: var(--font-size-h3);
+  color: var(--color-text);
   text-align: center;
   margin-bottom: var(--spacing-medium);
   font-style: italic;
@@ -537,7 +555,7 @@
   margin: var(--spacing-section) 0;
   padding: var(--spacing-large);
   background: rgba(255, 255, 255, 0.8);
-  border-radius: var(--border-radius-large);
+  border-radius: var(--radius-medium);
   box-shadow: var(--box-shadow);
 
   h2 {
@@ -560,7 +578,7 @@
 .onlineServices {
   background: white;
   padding: var(--spacing-large);
-  border-radius: var(--border-radius-medium);
+  border-radius: var(--radius-medium);
   box-shadow: var(--box-shadow);
   transition: var(--transition-normal);
 
@@ -572,13 +590,13 @@
   h3 {
     color: var(--color-accent);
     margin-bottom: var(--spacing-medium);
-    font-size: var(--font-size-h4);
+    font-size: var(--font-size-h3);
   }
 
   p {
     margin-bottom: var(--spacing-medium);
     line-height: 1.6;
-    color: var(--color-text-primary);
+    color: var(--color-text);
   }
 
   ul {
@@ -587,7 +605,7 @@
 
     li {
       padding: var(--spacing-small) 0;
-      border-bottom: 1px solid var(--color-border-light);
+      border-bottom: 1px solid var(--color-border);
       position: relative;
       padding-left: var(--spacing-medium);
 
@@ -610,7 +628,7 @@
   margin: var(--spacing-section) 0;
   padding: var(--spacing-large);
   background: rgba(255, 255, 255, 0.6);
-  border-radius: var(--border-radius-large);
+  border-radius: var(--radius-medium);
   box-shadow: var(--box-shadow);
   transition: var(--transition-normal);
 
@@ -638,7 +656,7 @@
 .credential {
   background: white;
   padding: var(--spacing-large);
-  border-radius: var(--border-radius-medium);
+  border-radius: var(--radius-medium);
   text-align: center;
   box-shadow: var(--box-shadow);
   transition: var(--transition-normal);
@@ -651,12 +669,12 @@
   h3 {
     color: var(--color-accent);
     margin-bottom: var(--spacing-medium);
-    font-size: var(--font-size-h4);
+    font-size: var(--font-size-h3);
   }
 
   p {
     line-height: 1.6;
-    color: var(--color-text-primary);
+    color: var(--color-text);
   }
 }
 
@@ -664,7 +682,7 @@
   margin: var(--spacing-section) 0;
   padding: var(--spacing-large);
   background: rgba(255, 255, 255, 0.9);
-  border-radius: var(--border-radius-large);
+  border-radius: var(--radius-medium);
   box-shadow: var(--box-shadow);
 
   h2 {
@@ -683,7 +701,7 @@
   }
 
   .professionalIntro {
-    font-size: var(--font-size-medium);
+    font-size: var(--font-size-lead);
   }
 
   .locationCoverage,
@@ -715,7 +733,7 @@
 
 /* Parent Support Page Styles */
 .servicesContainer {
-  background: var(--color-background);
+  background: var(--color-bg);
   min-height: 100vh;
   padding-bottom: var(--spacing-large);
 }
@@ -735,14 +753,14 @@
 
 .pageTitle {
   font-size: var(--font-size-h1);
-  color: var(--color-primary);
+  color: var(--color-bg);
   margin-bottom: var(--spacing-medium);
   font-weight: bold;
 }
 
 .heroSubtitle {
-  font-size: var(--font-size-large);
-  color: var(--color-text-secondary);
+  font-size: var(--font-size-h3);
+  color: var(--color-header-text);
   line-height: var(--line-height-heading);
   margin: 0;
 }
@@ -762,14 +780,14 @@
 
 .introContent h2 {
   font-size: var(--font-size-h2);
-  color: var(--color-primary);
+  color: var(--color-bg);
   margin-bottom: var(--spacing-large);
 }
 
 .introContent p {
   font-size: var(--font-size-body);
   line-height: var(--line-height-body);
-  color: var(--color-text-primary);
+  color: var(--color-text);
   margin-bottom: var(--spacing-medium);
   text-align: left;
 }
@@ -783,7 +801,7 @@
 
 .serviceDetails h2 {
   font-size: var(--font-size-h2);
-  color: var(--color-primary);
+  color: var(--color-bg);
   text-align: center;
   margin-bottom: var(--spacing-xlarge);
 }
@@ -797,7 +815,7 @@
 .detailCard {
   background: var(--color-surface);
   padding: var(--spacing-large);
-  border-radius: var(--border-radius);
+  border-radius: var(--radius-small);
   border: 1px solid var(--color-border);
   transition: var(--transition-normal);
 }
@@ -809,14 +827,14 @@
 
 .detailCard h3 {
   font-size: var(--font-size-h3);
-  color: var(--color-primary);
+  color: var(--color-bg);
   margin-bottom: var(--spacing-medium);
 }
 
 .detailCard p {
   font-size: var(--font-size-body);
   line-height: var(--line-height-body);
-  color: var(--color-text-primary);
+  color: var(--color-text);
   margin: 0;
 }
 
@@ -826,12 +844,12 @@
   margin: 0 auto;
   padding: var(--spacing-xlarge) var(--spacing-medium);
   background: rgba(255, 255, 255, 0.5);
-  border-radius: var(--border-radius-large);
+  border-radius: var(--radius-medium);
 }
 
 .concernsSection h2 {
   font-size: var(--font-size-h2);
-  color: var(--color-primary);
+  color: var(--color-bg);
   text-align: center;
   margin-bottom: var(--spacing-xlarge);
 }
@@ -843,9 +861,9 @@
 }
 
 .concernItem {
-  background: var(--color-background);
+  background: var(--color-bg);
   padding: var(--spacing-large);
-  border-radius: var(--border-radius);
+  border-radius: var(--radius-small);
   border: 1px solid var(--color-border);
   transition: var(--transition-normal);
 }
@@ -856,8 +874,8 @@
 }
 
 .concernItem h3 {
-  font-size: var(--font-size-h4);
-  color: var(--color-primary);
+  font-size: var(--font-size-h3);
+  color: var(--color-bg);
   margin-bottom: var(--spacing-medium);
   font-style: italic;
 }
@@ -865,7 +883,7 @@
 .concernItem p {
   font-size: var(--font-size-body);
   line-height: var(--line-height-body);
-  color: var(--color-text-primary);
+  color: var(--color-text);
   margin: 0;
 }
 
@@ -878,7 +896,7 @@
 
 .ageGuidanceSection h2 {
   font-size: var(--font-size-h2);
-  color: var(--color-primary);
+  color: var(--color-bg);
   text-align: center;
   margin-bottom: var(--spacing-xlarge);
 }
@@ -892,7 +910,7 @@
 .ageCard {
   background: var(--color-surface);
   padding: var(--spacing-large);
-  border-radius: var(--border-radius);
+  border-radius: var(--radius-small);
   border: 1px solid var(--color-border);
   display: flex;
   flex-direction: column;
@@ -906,7 +924,7 @@
 
 .ageCard h3 {
   font-size: var(--font-size-h3);
-  color: var(--color-primary);
+  color: var(--color-bg);
   margin-bottom: var(--spacing-medium);
 }
 
@@ -919,16 +937,16 @@
 
 .ageCard li {
   padding: var(--spacing-xs) 0;
-  border-bottom: 1px solid var(--color-border-light);
+  border-bottom: 1px solid var(--color-border);
   position: relative;
   padding-left: var(--spacing-medium);
   font-size: var(--font-size-body);
-  color: var(--color-text-primary);
+  color: var(--color-text);
 }
 
 .ageCard li:before {
   content: '•';
-  color: var(--color-primary);
+  color: var(--color-bg);
   font-weight: bold;
   position: absolute;
   left: 0;
@@ -939,7 +957,7 @@
 }
 
 .ageLink {
-  color: var(--color-primary);
+  color: var(--color-bg);
   text-decoration: none;
   font-weight: 600;
   padding: var(--spacing-small) 0;
@@ -948,7 +966,7 @@
 }
 
 .ageLink:hover {
-  color: var(--color-primary-dark);
+  color: var(--color-bg-dark);
 }
 
 /* Self Care Section */
@@ -957,12 +975,12 @@
   margin: 0 auto;
   padding: var(--spacing-xlarge) var(--spacing-medium);
   background: linear-gradient(135deg, rgba(43, 92, 230, 0.05), rgba(43, 92, 230, 0.1));
-  border-radius: var(--border-radius-large);
+  border-radius: var(--radius-medium);
 }
 
 .selfCareSection h2 {
   font-size: var(--font-size-h2);
-  color: var(--color-primary);
+  color: var(--color-bg);
   text-align: center;
   margin-bottom: var(--spacing-xlarge);
 }
@@ -975,7 +993,7 @@
 .selfCareContent p {
   font-size: var(--font-size-body);
   line-height: var(--line-height-body);
-  color: var(--color-text-primary);
+  color: var(--color-text);
   margin-bottom: var(--spacing-large);
   text-align: center;
 }
@@ -987,9 +1005,9 @@
 }
 
 .selfCareCard {
-  background: var(--color-background);
+  background: var(--color-bg);
   padding: var(--spacing-large);
-  border-radius: var(--border-radius);
+  border-radius: var(--radius-small);
   border: 1px solid var(--color-border);
   text-align: center;
   transition: var(--transition-normal);
@@ -1001,15 +1019,15 @@
 }
 
 .selfCareCard h3 {
-  font-size: var(--font-size-h4);
-  color: var(--color-primary);
+  font-size: var(--font-size-h3);
+  color: var(--color-bg);
   margin-bottom: var(--spacing-medium);
 }
 
 .selfCareCard p {
   font-size: var(--font-size-body);
   line-height: var(--line-height-body);
-  color: var(--color-text-primary);
+  color: var(--color-text);
   margin: 0;
   text-align: left;
 }
@@ -1023,7 +1041,7 @@
 
 .approachSection h2 {
   font-size: var(--font-size-h2);
-  color: var(--color-primary);
+  color: var(--color-bg);
   text-align: center;
   margin-bottom: var(--spacing-large);
 }
@@ -1036,7 +1054,7 @@
 .approachContent p {
   font-size: var(--font-size-body);
   line-height: var(--line-height-body);
-  color: var(--color-text-primary);
+  color: var(--color-text);
   margin-bottom: var(--spacing-large);
   text-align: center;
 }
@@ -1049,17 +1067,17 @@
 
 .approachList li {
   padding: var(--spacing-medium) 0;
-  border-bottom: 1px solid var(--color-border-light);
+  border-bottom: 1px solid var(--color-border);
   position: relative;
   padding-left: var(--spacing-large);
   font-size: var(--font-size-body);
   line-height: var(--line-height-body);
-  color: var(--color-text-primary);
+  color: var(--color-text);
 }
 
 .approachList li:before {
   content: '✓';
-  color: var(--color-primary);
+  color: var(--color-bg);
   font-weight: bold;
   position: absolute;
   left: 0;
@@ -1071,7 +1089,7 @@
 }
 
 .approachList strong {
-  color: var(--color-primary);
+  color: var(--color-bg);
   font-weight: 600;
 }
 
@@ -1084,14 +1102,14 @@
 
 .whenToSeekSection h2 {
   font-size: var(--font-size-h2);
-  color: var(--color-primary);
+  color: var(--color-bg);
   text-align: center;
   margin-bottom: var(--spacing-medium);
 }
 
 .whenToSeekSection > p {
-  font-size: var(--font-size-large);
-  color: var(--color-text-primary);
+  font-size: var(--font-size-h3);
+  color: var(--color-text);
   text-align: center;
   margin-bottom: var(--spacing-xlarge);
 }
@@ -1105,7 +1123,7 @@
 .warningCard {
   background: var(--color-surface);
   padding: var(--spacing-large);
-  border-radius: var(--border-radius);
+  border-radius: var(--radius-small);
   border: 1px solid var(--color-border);
   text-align: center;
   transition: var(--transition-normal);
@@ -1117,15 +1135,15 @@
 }
 
 .warningCard h3 {
-  font-size: var(--font-size-h4);
-  color: var(--color-primary);
+  font-size: var(--font-size-h3);
+  color: var(--color-bg);
   margin-bottom: var(--spacing-medium);
 }
 
 .warningCard p {
   font-size: var(--font-size-body);
   line-height: var(--line-height-body);
-  color: var(--color-text-primary);
+  color: var(--color-text);
   margin: 0;
 }
 
@@ -1135,20 +1153,20 @@
   margin: 0 auto;
   padding: var(--spacing-xlarge) var(--spacing-medium);
   background: linear-gradient(135deg, rgba(43, 92, 230, 0.1), rgba(43, 92, 230, 0.05));
-  border-radius: var(--border-radius-large);
+  border-radius: var(--radius-medium);
   text-align: center;
 }
 
 .ctaContent h2 {
   font-size: var(--font-size-h2);
-  color: var(--color-primary);
+  color: var(--color-bg);
   margin-bottom: var(--spacing-large);
 }
 
 .ctaContent p {
-  font-size: var(--font-size-large);
+  font-size: var(--font-size-h3);
   line-height: var(--line-height-body);
-  color: var(--color-text-primary);
+  color: var(--color-text);
   margin-bottom: var(--spacing-xlarge);
   max-width: 600px;
   margin-left: auto;
@@ -1164,40 +1182,40 @@
 }
 
 .primaryButton {
-  background: var(--color-primary);
+  background: var(--color-bg);
   color: white;
   padding: var(--spacing-medium) var(--spacing-large);
-  border-radius: var(--border-radius);
+  border-radius: var(--radius-small);
   text-decoration: none;
   font-weight: 600;
   transition: var(--transition-normal);
 }
 
 .primaryButton:hover {
-  background: var(--color-primary-dark);
+  background: var(--color-bg-dark);
   transform: translateY(-2px);
 }
 
 .secondaryButton {
   background: transparent;
-  color: var(--color-primary);
+  color: var(--color-bg);
   padding: var(--spacing-medium) var(--spacing-large);
-  border: 2px solid var(--color-primary);
-  border-radius: var(--border-radius);
+  border: 2px solid var(--color-bg);
+  border-radius: var(--radius-small);
   text-decoration: none;
   font-weight: 600;
   transition: var(--transition-normal);
 }
 
 .secondaryButton:hover {
-  background: var(--color-primary);
+  background: var(--color-bg);
   color: white;
   transform: translateY(-2px);
 }
 
 .contactNote {
   font-size: var(--font-size-small);
-  color: var(--color-text-secondary);
+  color: var(--color-header-text);
   margin: 0;
   font-style: italic;
 }
@@ -1211,7 +1229,7 @@
 
 .relatedSection h2 {
   font-size: var(--font-size-h2);
-  color: var(--color-primary);
+  color: var(--color-bg);
   text-align: center;
   margin-bottom: var(--spacing-xlarge);
 }
@@ -1225,7 +1243,7 @@
 .relatedCard {
   background: var(--color-surface);
   padding: var(--spacing-large);
-  border-radius: var(--border-radius);
+  border-radius: var(--radius-small);
   border: 1px solid var(--color-border);
   text-decoration: none;
   transition: var(--transition-normal);
@@ -1238,15 +1256,15 @@
 }
 
 .relatedCard h3 {
-  font-size: var(--font-size-h4);
-  color: var(--color-primary);
+  font-size: var(--font-size-h3);
+  color: var(--color-bg);
   margin-bottom: var(--spacing-medium);
 }
 
 .relatedCard p {
   font-size: var(--font-size-body);
   line-height: var(--line-height-body);
-  color: var(--color-text-primary);
+  color: var(--color-text);
   margin: 0;
 }
 
@@ -1273,7 +1291,7 @@
   }
 
   .heroSubtitle {
-    font-size: var(--font-size-medium);
+    font-size: var(--font-size-lead);
   }
 
   .serviceIntro,
