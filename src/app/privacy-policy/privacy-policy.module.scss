@@ -1,5 +1,5 @@
 .page {
-  background: var(--color-background);
+  background: var(--color-bg);
   min-height: 100vh;
 }
 
@@ -7,15 +7,15 @@
   max-width: 800px;
   margin: 0 auto;
   padding: var(--spacing-large);
-  background: var(--color-background);
-  color: var(--color-text-primary);
-  font-family: var(--font-family);
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
   line-height: 1.6;
 }
 
 .privacyPolicy * {
-  font-family: var(--font-family);
-  color: var(--color-text-primary);
+  font-family: var(--font-body);
+  color: var(--color-text);
 }
 
 @media (min-width: 1024px) {
@@ -35,8 +35,8 @@
 .heading {
   font-size: var(--font-size-h1);
   margin-bottom: var(--spacing-large);
-  color: var(--color-text-primary);
-  font-family: var(--font-family);
+  color: var(--color-text);
+  font-family: var(--font-body);
   text-align: center;
   font-weight: normal;
 }
@@ -44,9 +44,9 @@
 .updated {
   margin-bottom: var(--spacing-large);
   text-align: center;
-  font-size: var(--font-size-base);
-  color: var(--color-text-primary);
-  font-family: var(--font-family);
+  font-size: var(--font-size-body);
+  color: var(--color-text);
+  font-family: var(--font-body);
 }
 
 .sectionHeading {
@@ -54,7 +54,7 @@
   margin-top: var(--spacing-xlarge);
   margin-bottom: var(--spacing-medium);
   color: var(--color-accent);
-  font-family: var(--font-family);
+  font-family: var(--font-body);
   font-weight: normal;
   padding-bottom: var(--spacing-xs);
   border-bottom: var(--outline-width) solid var(--color-accent);
@@ -63,48 +63,48 @@
 .list {
   margin-bottom: var(--spacing-large);
   padding-left: var(--spacing-large);
-  font-family: var(--font-family);
+  font-family: var(--font-body);
 }
 
 .list li {
   margin-bottom: var(--spacing-medium);
   line-height: 1.6;
-  font-family: var(--font-family);
-  color: var(--color-text-primary);
+  font-family: var(--font-body);
+  color: var(--color-text);
 }
 
 .list li strong {
-  font-family: var(--font-family);
-  color: var(--color-text-primary);
+  font-family: var(--font-body);
+  color: var(--color-text);
 }
 
 .link {
   color: var(--color-accent);
   text-decoration: underline;
   transition: var(--transition-normal);
-  font-family: var(--font-family);
+  font-family: var(--font-body);
 
   &:hover,
   &:focus {
-    color: var(--color-accent-hover);
+    color: var(--color-brand-hover);
   }
 }
 
 .privacyPolicy p {
-  color: var(--color-text-primary);
+  color: var(--color-text);
   line-height: 1.6;
   margin-bottom: var(--spacing-medium);
-  font-size: var(--font-size-base);
-  font-family: var(--font-family);
+  font-size: var(--font-size-body);
+  font-family: var(--font-body);
 }
 
 .privacyPolicy ul {
-  color: var(--color-text-primary);
-  font-family: var(--font-family);
+  color: var(--color-text);
+  font-family: var(--font-body);
 }
 
 .privacyPolicy a {
-  font-family: var(--font-family);
+  font-family: var(--font-body);
 }
 
 /* Responsive design */
@@ -118,7 +118,7 @@
   }
 
   .sectionHeading {
-    font-size: var(--font-size-h4);
+    font-size: var(--font-size-h3);
   }
 }
 

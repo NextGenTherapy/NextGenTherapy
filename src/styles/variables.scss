@@ -1,22 +1,33 @@
 :root {
-  /* Color Palette */
-  --color-primary: #ffffff;
-  --color-background: linear-gradient(135deg, #d6e4f0 0%, #ffffff 50%, #c2d9ec 100%);
-  --color-text-primary: #000000;
-  --color-text-secondary: #ffffff;
-  --color-accent: #4a6a7a;
-  --color-accent-hover: #2a4a5a;
-  --color-accent-light: #b8c8d4;
+  /* ===========================================
+     COLOUR TOKENS - New Design System
+     =========================================== */
 
-  /* Header and Footer Colors */
-  --color-header-background: #164b39;
-  --color-header-accent-hover: #a8c8d8;
+  /* Core Colours */
+  --color-bg: #F8F6F1;
+  --color-surface: #EEE9E1;
+  --color-background-secondary: #EEE9E1;
 
-  /* Button Colors */
-  --color-button: #164b39;
-  --color-button-hover: #4a6b7a;
+  /* Text Colours */
+  --color-text: #282822;
+  --color-text-muted: #6E7260;
 
-  /* Status Colors - WCAG 2.1 AA Compliant */
+  /* Brand Colours */
+  --color-brand: #5B7A5E;
+  --color-brand-hover: #3D5940;
+
+  /* Accent Colours */
+  --color-accent: #A89070;
+  --color-accent-light: #EDE4D8;
+
+  /* Border Colours */
+  --color-border: #DDD8CF;
+
+  /* Header Colours */
+  --color-header: #3D5940;
+  --color-header-text: #F8F6F1;
+
+  /* Status Colours - WCAG 2.1 AA Compliant (kept from original) */
   --color-success: #2e7d32;
   --color-success-bg: #e8f5e8;
   --color-error: #d32f2f;
@@ -24,23 +35,69 @@
   --color-info: #1976d2;
   --color-info-bg: #e3f2fd;
 
-  /* Border Colors */
-  --color-border: #ccc;
-  --color-border-light: rgba(0, 0, 0, 0.2);
+  /* Disabled States (kept from original) */
   --color-disabled: #cccccc;
   --color-disabled-text: #595959;
 
-  /* Spacing Variables - Mobile First */
+  /* ===========================================
+     TYPOGRAPHY TOKENS - New Design System
+     =========================================== */
+
+  /* Font Families - uses next/font CSS variables from layout.tsx */
+  --font-display: var(--font-cormorant);
+  --font-body: var(--font-dm-sans);
+
+  /* Font Sizes - Responsive with clamp() */
+  --font-size-hero: clamp(2.8rem, 6vw, 5rem);
+  --font-size-h1: clamp(2rem, 4vw, 3.5rem);
+  --font-size-h2: clamp(1.6rem, 3vw, 2.5rem);
+  --font-size-h3: clamp(1.2rem, 2vw, 1.75rem);
+  --font-size-lead: clamp(1.1rem, 1.5vw, 1.3rem);
+  --font-size-body: 1rem;
+  --font-size-small: 0.875rem;
+
+  /* Font Weights */
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* Line Heights */
+  --line-height-tight: 1.15;
+  --line-height-heading: 1.25;
+  --line-height-body: 1.75;
+  --line-height-relaxed: 1.9;
+
+  /* ===========================================
+     SPACING TOKENS - New Design System
+     =========================================== */
+
   --spacing-xs: 4px;
   --spacing-small: 8px;
-  --spacing-medium: 12px;
-  --spacing-large: 16px;
-  --spacing-xlarge: 24px;
-  --spacing-xxlarge: 32px;
-  --spacing-section: 60px;
-  --spacing-hero: 80px;
+  --spacing-medium: 16px;
+  --spacing-large: 24px;
+  --spacing-xlarge: 40px;
+  --spacing-xxlarge: 64px;
+  --spacing-section: clamp(64px, 10vw, 120px);
+  --spacing-hero: clamp(80px, 12vw, 160px);
 
-  /* Container Widths */
+  /* ===========================================
+     BORDER RADIUS TOKENS - New Design System
+     =========================================== */
+
+  --radius-small: 6px;
+  --radius-medium: 12px;
+  --radius-large: 20px;
+  --radius-pill: 100px;
+
+  /* Border Width */
+  --border-width-thin: 1px;
+
+  /* ===========================================
+     CONTAINER WIDTHS (kept from original)
+     =========================================== */
+
   --container-width-mobile: 100%;
   --container-width-tablet: 90%;
   --container-width-desktop: 1200px;
@@ -48,79 +105,39 @@
   --container-padding-tablet: 24px;
   --container-padding-desktop: 32px;
 
-  /* Responsive Breakpoints */
+  /* ===========================================
+     RESPONSIVE BREAKPOINTS (kept from original)
+     =========================================== */
+
   --breakpoint-mobile: 480px;
   --breakpoint-tablet: 768px;
   --breakpoint-desktop: 1024px;
   --breakpoint-large: 1200px;
 
-  /* Transform and Animation Values */
+  /* ===========================================
+     TRANSFORM AND ANIMATION VALUES (kept from original)
+     =========================================== */
+
   --transform-translate-small: 6px;
   --outline-width: 2px;
   --outline-offset: 2px;
   --border-width: 1px;
   --border-width-thick: 3px;
 
-  /* Layout */
-  --header-height: 100px;
-  --border-radius: 6px;
-  --border-radius-large: 12px;
+  /* ===========================================
+     LAYOUT (kept from original)
+     =========================================== */
 
-  /* Typography - Mobile First */
-  --font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  --font-size-small: 0.875rem;
-  --font-size-base: 1rem;
-  --font-size-medium: 1.125rem;
-  --font-size-large: 1.25rem;
-  --font-size-h6: 0.875rem;
-  --font-size-h5: 1rem;
-  --font-size-h4: 1.125rem;
-  --font-size-h3: 1.25rem;
-  --font-size-h2: 1.5rem;
-  --font-size-h1: 2rem;
-  --font-size-logo: 1.75rem;
+  --header-height: 68px;
+  --header-height-mobile: 60px;
 
-  /* Transitions and Animations */
+  /* ===========================================
+     TRANSITIONS AND SHADOWS (kept from original)
+     =========================================== */
+
   --transition-fast: 0.2s ease;
   --transition-normal: 0.3s ease;
   --box-shadow: 0 4px 16px rgba(0, 0, 0, 0.07);
   --box-shadow-hover: 0 6px 20px rgba(0, 0, 0, 0.1);
   --box-shadow-reverse: 0 -4px 16px rgba(0, 0, 0, 0.1);
-}
-
-/* Responsive Typography and Spacing */
-@media (min-width: 768px) {
-  :root {
-    /* Tablet and up spacing */
-    --spacing-large: 20px;
-    --spacing-xlarge: 30px;
-    --spacing-xxlarge: 40px;
-    --spacing-section: 80px;
-    --spacing-hero: 100px;
-
-    /* Typography scaling */
-    --font-size-h4: 1.25rem;
-    --font-size-h3: 1.5rem;
-    --font-size-h2: 1.75rem;
-    --font-size-h1: 2.25rem;
-    --font-size-logo: 2rem;
-  }
-}
-
-@media (min-width: 1024px) {
-  :root {
-    /* Desktop spacing */
-    --spacing-large: 24px;
-    --spacing-xlarge: 36px;
-    --spacing-xxlarge: 48px;
-    --spacing-section: 120px;
-    --spacing-hero: 140px;
-
-    /* Desktop typography */
-    --font-size-h4: 1.5rem;
-    --font-size-h3: 1.75rem;
-    --font-size-h2: 2rem;
-    --font-size-h1: 2.5rem;
-    --font-size-logo: 2.25rem;
-  }
 }

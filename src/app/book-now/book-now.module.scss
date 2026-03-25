@@ -1,7 +1,7 @@
 /* Book Now Page Styles */
 
 .page {
-  background: var(--color-background);
+  background: var(--color-bg);
   min-height: 100vh;
   padding-bottom: var(--spacing-large);
 
@@ -37,7 +37,7 @@
   max-width: 600px;
 
   .heroImage {
-    border-radius: var(--border-radius-large);
+    border-radius: var(--radius-medium);
     box-shadow: var(--box-shadow);
     width: 100%;
     height: auto;
@@ -62,7 +62,7 @@
 
     p {
       line-height: 1.6;
-      color: var(--color-text-primary);
+      color: var(--color-text);
       margin-bottom: var(--spacing-medium);
     }
 
@@ -92,7 +92,7 @@
 .hoursCard {
   background: rgba(255, 255, 255, 0.8);
   border: 1px solid var(--color-accent-light);
-  border-radius: var(--border-radius-large);
+  border-radius: var(--radius-medium);
   padding: var(--spacing-large);
   box-shadow: var(--box-shadow);
   transition: var(--transition-normal);
@@ -118,7 +118,7 @@
 
   li {
     margin-bottom: var(--spacing-small);
-    color: var(--color-text-primary);
+    color: var(--color-text);
     line-height: 1.6;
 
     &:last-child {
@@ -131,7 +131,7 @@
       transition: var(--transition-fast);
 
       &:hover {
-        color: var(--color-accent-hover);
+        color: var(--color-brand-hover);
         text-decoration: underline;
       }
     }
@@ -141,7 +141,7 @@
 /* Map Container Styles */
 .mapContainer {
   margin-top: var(--spacing-medium);
-  border-radius: var(--border-radius-medium);
+  border-radius: var(--radius-medium);
   overflow: hidden;
   box-shadow: var(--box-shadow);
 
@@ -175,10 +175,10 @@
   justify-content: center;
   align-items: center;
   padding: var(--spacing-xlarge);
-  font-size: var(--font-size-large);
-  color: var(--color-text-primary);
+  font-size: var(--font-size-h3);
+  color: var(--color-text);
   background: rgba(248, 249, 250, 0.9);
-  border-radius: var(--border-radius-large);
+  border-radius: var(--radius-medium);
   margin: var(--spacing-large) 0;
   box-shadow: var(--box-shadow);
 
@@ -205,14 +205,14 @@
 
 /* New Trust Section */
 .consultationOffer {
-  background: linear-gradient(135deg, var(--color-accent-light), var(--color-background-secondary));
+  background: linear-gradient(135deg, var(--color-accent-light), var(--color-bg-secondary));
   padding: var(--spacing-medium);
-  border-radius: var(--border-radius-large);
+  border-radius: var(--radius-medium);
   margin: var(--spacing-medium) 0;
 
   h3 {
     color: var(--color-accent);
-    font-size: var(--font-size-h4);
+    font-size: var(--font-size-h3);
     margin-bottom: var(--spacing-small);
     font-weight: 600;
   }
@@ -220,7 +220,7 @@
   p {
     margin: 0;
     font-style: italic;
-    color: var(--color-text-primary);
+    color: var(--color-text);
   }
 }
 
@@ -228,7 +228,7 @@
   margin: var(--spacing-section) 0;
   padding: var(--spacing-large);
   background: rgba(255, 255, 255, 0.9);
-  border-radius: var(--border-radius-large);
+  border-radius: var(--radius-medium);
   box-shadow: var(--box-shadow);
 }
 
@@ -241,7 +241,7 @@
   .sessionInfo {
     h3 {
       color: var(--color-accent);
-      font-size: var(--font-size-h4);
+      font-size: var(--font-size-h3);
       margin-bottom: var(--spacing-medium);
       font-weight: 600;
     }
@@ -252,7 +252,7 @@
 
       li {
         padding: var(--spacing-small) 0;
-        color: var(--color-text-primary);
+        color: var(--color-text);
         font-weight: 500;
 
         &:before {
@@ -290,19 +290,19 @@
   text-align: center;
   padding: var(--spacing-large);
   background: rgba(255, 255, 255, 0.9);
-  border-radius: var(--border-radius-large);
+  border-radius: var(--radius-medium);
   box-shadow: var(--box-shadow);
   position: relative;
 
   h3 {
     color: var(--color-accent);
-    font-size: var(--font-size-h4);
+    font-size: var(--font-size-h3);
     margin: var(--spacing-medium) 0 var(--spacing-small);
     font-weight: 600;
   }
 
   p {
-    color: var(--color-text-primary);
+    color: var(--color-text);
     line-height: 1.6;
     margin: 0;
   }
@@ -318,7 +318,7 @@
   color: white;
   border-radius: 50%;
   font-weight: bold;
-  font-size: var(--font-size-medium);
+  font-size: var(--font-size-lead);
   margin-bottom: var(--spacing-small);
 }
 
@@ -367,7 +367,7 @@
     padding: var(--spacing-small);
 
     h3 {
-      font-size: var(--font-size-base);
+      font-size: var(--font-size-body);
     }
   }
 

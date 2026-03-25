@@ -1,7 +1,7 @@
 /* About Me Page Styles */
 
 .page {
-  background: var(--color-background);
+  background: var(--color-bg);
   min-height: 100vh;
   padding-bottom: var(--spacing-large);
   width: 100%;
@@ -74,7 +74,7 @@
 }
 
 .imageContainer .image {
-  border-radius: var(--border-radius-large);
+  border-radius: var(--radius-medium);
   box-shadow: var(--box-shadow);
   width: 100%;
   height: auto;
@@ -103,7 +103,7 @@
 .practiceSection {
   background: rgba(255, 255, 255, 0.9);
   border: 1px solid var(--color-accent-light);
-  border-radius: var(--border-radius-large);
+  border-radius: var(--radius-medium);
   padding: var(--spacing-medium);
   margin-bottom: var(--spacing-medium);
   box-shadow: var(--box-shadow);
@@ -120,7 +120,7 @@
 
   h3 {
     color: var(--color-accent);
-    font-size: var(--font-size-h4);
+    font-size: var(--font-size-h3);
     margin-bottom: var(--spacing-small);
     font-weight: 600;
   }
@@ -128,7 +128,7 @@
   p {
     line-height: 1.6;
     margin-bottom: var(--spacing-small);
-    color: var(--color-text-primary);
+    color: var(--color-text);
     font-size: var(--font-size-small);
 
     &:last-child {
@@ -151,7 +151,7 @@
     }
 
     p {
-      font-size: var(--font-size-base);
+      font-size: var(--font-size-body);
       margin-bottom: var(--spacing-medium);
     }
   }
@@ -207,7 +207,7 @@
 
 .galleryItem {
   overflow: hidden;
-  border-radius: var(--border-radius-large);
+  border-radius: var(--radius-medium);
   box-shadow: var(--box-shadow);
   transition: var(--transition-normal);
 
@@ -227,7 +227,7 @@
   width: 100%;
   height: 200px;
   object-fit: cover;
-  border-radius: var(--border-radius-large);
+  border-radius: var(--radius-medium);
 }
 
 @media (min-width: 768px) {

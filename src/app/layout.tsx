@@ -1,6 +1,22 @@
 import type { Metadata } from 'next';
+import { Cormorant_Garamond, DM_Sans } from 'next/font/google';
 import '../styles/variables.scss';
 import '../styles/globals.scss';
+
+const cormorant = Cormorant_Garamond({
+  weight: ['300', '400', '500'],
+  style: ['normal', 'italic'],
+  subsets: ['latin'],
+  variable: '--font-cormorant',
+  display: 'swap',
+});
+
+const dmSans = DM_Sans({
+  weight: ['300', '400', '500', '600'],
+  subsets: ['latin'],
+  variable: '--font-dm-sans',
+  display: 'swap',
+});
 import Header from '../components/layout/header';
 import Footer from '../components/layout/footer';
 import ScrollToTop from '../components/ui/scroll-to-top';
@@ -100,7 +116,7 @@ export const metadata: Metadata = {
 
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en-GB">
+    <html lang="en-GB" className={`${cormorant.variable} ${dmSans.variable}`}>
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
         {/* iPhone/Safari status bar styling */}

@@ -4,7 +4,7 @@
   justify-content: center;
   min-height: 60vh;
   padding: var(--spacing-xlarge);
-  background: var(--color-background);
+  background: var(--color-bg);
 }
 
 .errorContent {
@@ -14,14 +14,14 @@
 
 .errorTitle {
   font-size: var(--font-size-h1);
-  color: var(--color-header-background);
+  color: var(--color-header);
   margin-bottom: var(--spacing-large);
 }
 
 .errorMessage {
-  color: var(--color-text-primary);
+  color: var(--color-text);
   margin-bottom: var(--spacing-large);
-  font-size: var(--font-size-large);
+  font-size: var(--font-size-h3);
   line-height: 1.6;
 }
 

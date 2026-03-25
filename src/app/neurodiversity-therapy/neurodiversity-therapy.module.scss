@@ -1,7 +1,7 @@
 /* Neurodiversity Therapy Page Styles */
 
 .page {
-  background: var(--color-background);
+  background: var(--color-bg);
   min-height: 100vh;
   padding-bottom: var(--spacing-large);
   width: 100%;
@@ -46,8 +46,8 @@
 }
 
 .heroSubtitle {
-  font-size: var(--font-size-large);
-  color: var(--color-text-primary);
+  font-size: var(--font-size-h3);
+  color: var(--color-text);
   line-height: 1.6;
   margin-bottom: 0;
 }
@@ -72,7 +72,7 @@
 .introContent {
   background: rgba(255, 255, 255, 0.9);
   border: 1px solid var(--color-accent-light);
-  border-radius: var(--border-radius-large);
+  border-radius: var(--radius-medium);
   padding: var(--spacing-medium);
   margin-bottom: var(--spacing-medium);
   box-shadow: var(--box-shadow);
@@ -91,7 +91,7 @@
 
   h2 {
     color: var(--color-accent);
-    font-size: var(--font-size-h4);
+    font-size: var(--font-size-h3);
     margin-bottom: var(--spacing-small);
     font-weight: 600;
   }
@@ -99,7 +99,7 @@
   p {
     line-height: 1.6;
     margin-bottom: var(--spacing-small);
-    color: var(--color-text-primary);
+    color: var(--color-text);
     font-size: var(--font-size-small);
 
     &:last-child {
@@ -119,7 +119,7 @@
     }
 
     p {
-      font-size: var(--font-size-base);
+      font-size: var(--font-size-body);
       margin-bottom: var(--spacing-medium);
     }
   }
@@ -142,7 +142,7 @@
 
   h2 {
     color: var(--color-accent);
-    font-size: var(--font-size-h4);
+    font-size: var(--font-size-h3);
     margin-bottom: var(--spacing-medium);
     font-weight: 600;
     text-align: center;
@@ -151,12 +151,12 @@
   > p {
     background: rgba(255, 255, 255, 0.9);
     border: 1px solid var(--color-accent-light);
-    border-radius: var(--border-radius-large);
+    border-radius: var(--radius-medium);
     padding: var(--spacing-medium);
     margin: 0 auto var(--spacing-medium) auto;
     box-shadow: var(--box-shadow);
     line-height: 1.6;
-    color: var(--color-text-primary);
+    color: var(--color-text);
     font-size: var(--font-size-small);
     max-width: 800px;
     transition: var(--transition-normal);
@@ -181,7 +181,7 @@
 
     > p {
       padding: var(--spacing-large);
-      font-size: var(--font-size-base);
+      font-size: var(--font-size-body);
       margin-bottom: var(--spacing-large);
     }
   }
@@ -209,7 +209,7 @@
 .experienceCard {
   background: rgba(255, 255, 255, 0.9);
   border: 1px solid var(--color-accent-light);
-  border-radius: var(--border-radius-large);
+  border-radius: var(--radius-medium);
   padding: var(--spacing-medium);
   margin-bottom: var(--spacing-medium);
   box-shadow: var(--box-shadow);
@@ -226,14 +226,14 @@
 
   h3 {
     color: var(--color-accent);
-    font-size: var(--font-size-h4);
+    font-size: var(--font-size-h3);
     margin-bottom: var(--spacing-small);
     font-weight: 600;
   }
 
   p {
     line-height: 1.6;
-    color: var(--color-text-primary);
+    color: var(--color-text);
     font-size: var(--font-size-small);
     margin-bottom: 0;
 
@@ -254,7 +254,7 @@
     }
 
     p {
-      font-size: var(--font-size-base);
+      font-size: var(--font-size-body);
       margin-bottom: var(--spacing-medium);
     }
   }
@@ -277,7 +277,7 @@
 
   h2 {
     color: var(--color-accent);
-    font-size: var(--font-size-h4);
+    font-size: var(--font-size-h3);
     margin-bottom: var(--spacing-medium);
     font-weight: 600;
     text-align: center;
@@ -286,12 +286,12 @@
   > p {
     background: rgba(255, 255, 255, 0.9);
     border: 1px solid var(--color-accent-light);
-    border-radius: var(--border-radius-large);
+    border-radius: var(--radius-medium);
     padding: var(--spacing-medium);
     margin: 0 auto var(--spacing-medium) auto;
     box-shadow: var(--box-shadow);
     line-height: 1.6;
-    color: var(--color-text-primary);
+    color: var(--color-text);
     font-size: var(--font-size-small);
     max-width: 800px;
     transition: var(--transition-normal);
@@ -316,7 +316,7 @@
 
     > p {
       padding: var(--spacing-large);
-      font-size: var(--font-size-base);
+      font-size: var(--font-size-body);
       margin-bottom: var(--spacing-large);
     }
   }
@@ -337,7 +337,7 @@
 .adaptationItem {
   background: rgba(255, 255, 255, 0.9);
   border: 1px solid var(--color-accent-light);
-  border-radius: var(--border-radius-large);
+  border-radius: var(--radius-medium);
   padding: var(--spacing-medium);
   margin-bottom: var(--spacing-medium);
   box-shadow: var(--box-shadow);
@@ -354,14 +354,14 @@
 
   h3 {
     color: var(--color-accent);
-    font-size: var(--font-size-h4);
+    font-size: var(--font-size-h3);
     margin-bottom: var(--spacing-small);
     font-weight: 600;
   }
 
   p {
     line-height: 1.6;
-    color: var(--color-text-primary);
+    color: var(--color-text);
     font-size: var(--font-size-small);
     margin-bottom: 0;
 
@@ -382,7 +382,7 @@
     }
 
     p {
-      font-size: var(--font-size-base);
+      font-size: var(--font-size-body);
       margin-bottom: var(--spacing-medium);
     }
   }
@@ -392,7 +392,7 @@
 .ageSpecificSection {
   margin: var(--spacing-large) 0;
   background: rgba(255, 255, 255, 0.6);
-  border-radius: var(--border-radius-large);
+  border-radius: var(--radius-medium);
   box-shadow: var(--box-shadow);
   padding: var(--spacing-medium);
   transition: var(--transition-normal);
@@ -445,7 +445,7 @@
 .ageGroupCard {
   background: rgba(255, 255, 255, 0.9);
   border: 1px solid var(--color-accent-light);
-  border-radius: var(--border-radius-large);
+  border-radius: var(--radius-medium);
   padding: var(--spacing-medium);
   box-shadow: var(--box-shadow);
   transition: var(--transition-normal);
@@ -457,14 +457,14 @@
 
   h3 {
     color: var(--color-accent);
-    font-size: var(--font-size-h4);
+    font-size: var(--font-size-h3);
     margin-bottom: var(--spacing-xs);
     font-weight: 600;
   }
 
   h4 {
     color: var(--color-accent);
-    font-size: var(--font-size-medium);
+    font-size: var(--font-size-lead);
     margin-bottom: var(--spacing-small);
     font-weight: 500;
     font-style: italic;
@@ -480,7 +480,7 @@
       padding-left: var(--spacing-medium);
       margin-bottom: var(--spacing-xs);
       line-height: 1.6;
-      color: var(--color-text-primary);
+      color: var(--color-text);
       font-size: var(--font-size-small);
 
       &:before {
@@ -508,7 +508,7 @@
     }
 
     h4 {
-      font-size: var(--font-size-large);
+      font-size: var(--font-size-h3);
       margin-bottom: var(--spacing-medium);
     }
 
@@ -516,7 +516,7 @@
       margin-bottom: var(--spacing-medium);
 
       li {
-        font-size: var(--font-size-base);
+        font-size: var(--font-size-body);
         margin-bottom: var(--spacing-small);
       }
     }
@@ -530,7 +530,7 @@
   margin-top: var(--spacing-small);
   font-size: var(--font-size-small);
   line-height: 1.6;
-  color: var(--color-text-primary);
+  color: var(--color-text);
   font-style: italic;
 }
 
@@ -538,7 +538,7 @@
   .ageNote {
     padding: var(--spacing-medium);
     margin-top: var(--spacing-medium);
-    font-size: var(--font-size-base);
+    font-size: var(--font-size-body);
   }
 }
 
@@ -559,7 +559,7 @@
 
   h2 {
     color: var(--color-accent);
-    font-size: var(--font-size-h4);
+    font-size: var(--font-size-h3);
     margin-bottom: var(--spacing-large);
     font-weight: 600;
     text-align: center;
@@ -595,7 +595,7 @@
 .challengeCard {
   background: rgba(255, 255, 255, 0.9);
   border: 1px solid var(--color-accent-light);
-  border-radius: var(--border-radius-large);
+  border-radius: var(--radius-medium);
   padding: var(--spacing-medium);
   margin-bottom: var(--spacing-medium);
   box-shadow: var(--box-shadow);
@@ -612,14 +612,14 @@
 
   h3 {
     color: var(--color-accent);
-    font-size: var(--font-size-h4);
+    font-size: var(--font-size-h3);
     margin-bottom: var(--spacing-small);
     font-weight: 600;
   }
 
   p {
     line-height: 1.6;
-    color: var(--color-text-primary);
+    color: var(--color-text);
     font-size: var(--font-size-small);
     margin-bottom: 0;
 
@@ -640,7 +640,7 @@
     }
 
     p {
-      font-size: var(--font-size-base);
+      font-size: var(--font-size-body);
       margin-bottom: var(--spacing-medium);
     }
   }
@@ -650,7 +650,7 @@
 .explorationSection {
   margin: var(--spacing-large) 0;
   background: rgba(255, 255, 255, 0.6);
-  border-radius: var(--border-radius-large);
+  border-radius: var(--radius-medium);
   box-shadow: var(--box-shadow);
   padding: var(--spacing-medium);
   transition: var(--transition-normal);
@@ -674,7 +674,7 @@
 
   h2 {
     color: var(--color-accent);
-    font-size: var(--font-size-h4);
+    font-size: var(--font-size-h3);
     margin-bottom: var(--spacing-medium);
     font-weight: 600;
     text-align: center;
@@ -683,12 +683,12 @@
   > p {
     background: rgba(255, 255, 255, 0.9);
     border: 1px solid var(--color-accent-light);
-    border-radius: var(--border-radius-large);
+    border-radius: var(--radius-medium);
     padding: var(--spacing-medium);
     margin: 0 auto var(--spacing-medium) auto;
     box-shadow: var(--box-shadow);
     line-height: 1.6;
-    color: var(--color-text-primary);
+    color: var(--color-text);
     font-size: var(--font-size-small);
     max-width: 800px;
     transition: var(--transition-normal);
@@ -713,7 +713,7 @@
 
     > p {
       padding: var(--spacing-large);
-      font-size: var(--font-size-base);
+      font-size: var(--font-size-body);
       margin-bottom: var(--spacing-large);
     }
   }
@@ -735,7 +735,7 @@
 .explorationItem {
   background: rgba(255, 255, 255, 0.9);
   border: 1px solid var(--color-accent-light);
-  border-radius: var(--border-radius-large);
+  border-radius: var(--radius-medium);
   padding: var(--spacing-medium);
   margin-bottom: var(--spacing-medium);
   box-shadow: var(--box-shadow);
@@ -752,14 +752,14 @@
 
   h3 {
     color: var(--color-accent);
-    font-size: var(--font-size-h4);
+    font-size: var(--font-size-h3);
     margin-bottom: var(--spacing-small);
     font-weight: 600;
   }
 
   p {
     line-height: 1.6;
-    color: var(--color-text-primary);
+    color: var(--color-text);
     font-size: var(--font-size-small);
     margin-bottom: 0;
 
@@ -780,7 +780,7 @@
     }
 
     p {
-      font-size: var(--font-size-base);
+      font-size: var(--font-size-body);
       margin-bottom: var(--spacing-medium);
     }
   }
@@ -803,7 +803,7 @@
 
   h2 {
     color: var(--color-accent);
-    font-size: var(--font-size-h4);
+    font-size: var(--font-size-h3);
     margin-bottom: var(--spacing-medium);
     font-weight: 600;
     text-align: center;
@@ -812,12 +812,12 @@
   > p {
     background: rgba(255, 255, 255, 0.9);
     border: 1px solid var(--color-accent-light);
-    border-radius: var(--border-radius-large);
+    border-radius: var(--radius-medium);
     padding: var(--spacing-medium);
     margin: 0 auto var(--spacing-medium) auto;
     box-shadow: var(--box-shadow);
     line-height: 1.6;
-    color: var(--color-text-primary);
+    color: var(--color-text);
     font-size: var(--font-size-small);
     max-width: 800px;
     transition: var(--transition-normal);
@@ -842,7 +842,7 @@
 
     > p {
       padding: var(--spacing-large);
-      font-size: var(--font-size-base);
+      font-size: var(--font-size-body);
       margin-bottom: var(--spacing-large);
     }
   }
@@ -864,7 +864,7 @@
 .supportCard {
   background: rgba(255, 255, 255, 0.9);
   border: 1px solid var(--color-accent-light);
-  border-radius: var(--border-radius-large);
+  border-radius: var(--radius-medium);
   padding: var(--spacing-medium);
   margin-bottom: var(--spacing-medium);
   box-shadow: var(--box-shadow);
@@ -881,14 +881,14 @@
 
   h3 {
     color: var(--color-accent);
-    font-size: var(--font-size-h4);
+    font-size: var(--font-size-h3);
     margin-bottom: var(--spacing-small);
     font-weight: 600;
   }
 
   p {
     line-height: 1.6;
-    color: var(--color-text-primary);
+    color: var(--color-text);
     font-size: var(--font-size-small);
     margin-bottom: 0;
 
@@ -909,7 +909,7 @@
     }
 
     p {
-      font-size: var(--font-size-base);
+      font-size: var(--font-size-body);
       margin-bottom: var(--spacing-medium);
     }
   }
@@ -930,7 +930,7 @@
 .ctaContent {
   background: rgba(255, 255, 255, 0.9);
   border: 1px solid var(--color-accent-light);
-  border-radius: var(--border-radius-large);
+  border-radius: var(--radius-medium);
   padding: var(--spacing-medium);
   margin-bottom: var(--spacing-medium);
   box-shadow: var(--box-shadow);
@@ -949,14 +949,14 @@
 
   h2 {
     color: var(--color-accent);
-    font-size: var(--font-size-h4);
+    font-size: var(--font-size-h3);
     margin-bottom: var(--spacing-small);
     font-weight: 600;
   }
 
   p {
     line-height: 1.6;
-    color: var(--color-text-primary);
+    color: var(--color-text);
     font-size: var(--font-size-small);
     margin-bottom: var(--spacing-small);
 
@@ -977,7 +977,7 @@
     }
 
     p {
-      font-size: var(--font-size-base);
+      font-size: var(--font-size-body);
       margin-bottom: var(--spacing-medium);
     }
   }
@@ -1003,7 +1003,7 @@
 .secondaryButton {
   display: inline-block;
   padding: var(--spacing-small) var(--spacing-medium);
-  border-radius: var(--border-radius-medium);
+  border-radius: var(--radius-medium);
   text-decoration: none;
   font-weight: 600;
   transition: var(--transition-normal);
@@ -1015,7 +1015,7 @@
   .primaryButton,
   .secondaryButton {
     padding: var(--spacing-medium) var(--spacing-large);
-    font-size: var(--font-size-base);
+    font-size: var(--font-size-body);
   }
 }
 
@@ -1047,7 +1047,7 @@
 
 .contactNote {
   font-size: var(--font-size-xs);
-  color: var(--color-text-secondary);
+  color: var(--color-header-text);
   font-style: italic;
 }
 
@@ -1106,7 +1106,7 @@
 .relatedCard {
   background: rgba(255, 255, 255, 0.9);
   border: 1px solid var(--color-accent-light);
-  border-radius: var(--border-radius-large);
+  border-radius: var(--radius-medium);
   padding: var(--spacing-medium);
   box-shadow: var(--box-shadow);
   transition: var(--transition-normal);
@@ -1122,14 +1122,14 @@
 
   h3 {
     color: var(--color-accent);
-    font-size: var(--font-size-h4);
+    font-size: var(--font-size-h3);
     margin-bottom: var(--spacing-small);
     font-weight: 600;
   }
 
   p {
     line-height: 1.6;
-    color: var(--color-text-primary);
+    color: var(--color-text);
     font-size: var(--font-size-small);
     margin-bottom: 0;
   }
@@ -1145,7 +1145,7 @@
     }
 
     p {
-      font-size: var(--font-size-base);
+      font-size: var(--font-size-body);
     }
   }
 }

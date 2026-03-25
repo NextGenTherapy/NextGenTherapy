@@ -102,7 +102,7 @@ export default function Header() {
               Blog
             </Link>
           </li>
-          <li className={styles.navItem}>
+          <li className={`${styles.navItem} ${styles.bookNowItem}`}>
             <Link href="/book-now" onClick={closeMenu}>
               Book Now
             </Link>

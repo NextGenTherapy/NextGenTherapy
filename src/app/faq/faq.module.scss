@@ -27,13 +27,13 @@
   font-size: var(--font-size-h1);
   color: var(--color-accent);
   margin-bottom: var(--spacing-medium);
-  font-family: var(--font-family);
+  font-family: var(--font-body);
   font-weight: normal;
 }
 
 .subtitle {
-  font-size: var(--font-size-large);
-  color: var(--color-text-primary);
+  font-size: var(--font-size-h3);
+  color: var(--color-text);
   max-width: 800px;
   margin: 0 auto;
   line-height: 1.6;
@@ -51,8 +51,8 @@
 }
 
 .faqItem {
-  background: var(--color-background-alt);
-  border-radius: var(--border-radius);
+  background: var(--color-surface);
+  border-radius: var(--radius-small);
   padding: var(--spacing-large);
   border-left: 4px solid var(--color-accent);
   transition:
@@ -66,24 +66,24 @@
 }
 
 .faqItem h3 {
-  font-size: var(--font-size-h4);
+  font-size: var(--font-size-h3);
   color: var(--color-accent);
   margin-bottom: var(--spacing-medium);
-  font-family: var(--font-family);
+  font-family: var(--font-body);
   font-weight: normal;
   line-height: 1.4;
 }
 
 .faqItem p {
-  color: var(--color-text-primary);
+  color: var(--color-text);
   line-height: 1.6;
   margin: 0;
 }
 
 .callToAction {
   text-align: center;
-  background: var(--color-background-alt);
-  border-radius: var(--border-radius);
+  background: var(--color-surface);
+  border-radius: var(--radius-small);
   padding: var(--spacing-xlarge);
   margin-top: var(--spacing-xlarge);
 }
@@ -92,13 +92,13 @@
   font-size: var(--font-size-h2);
   color: var(--color-accent);
   margin-bottom: var(--spacing-medium);
-  font-family: var(--font-family);
+  font-family: var(--font-body);
   font-weight: normal;
 }
 
 .callToAction p {
-  font-size: var(--font-size-large);
-  color: var(--color-text-primary);
+  font-size: var(--font-size-h3);
+  color: var(--color-text);
   margin-bottom: var(--spacing-large);
   max-width: 600px;
   margin-left: auto;
@@ -124,7 +124,7 @@
   }
 
   .subtitle {
-    font-size: var(--font-size-medium);
+    font-size: var(--font-size-lead);
   }
 
   .faqItem {
@@ -132,7 +132,7 @@
   }
 
   .faqItem h3 {
-    font-size: var(--font-size-medium);
+    font-size: var(--font-size-lead);
   }
 
   .callToAction {

@@ -2,7 +2,7 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: var(--spacing-xlarge);
-  font-family: var(--font-family);
+  font-family: var(--font-body);
 }
 
 .main {
@@ -21,12 +21,12 @@
   color: var(--color-accent);
   margin-bottom: var(--spacing-medium);
   font-weight: 600;
-  font-family: var(--font-family);
+  font-family: var(--font-body);
 }
 
 .subtitle {
-  font-size: var(--font-size-medium);
-  color: var(--color-text-primary);
+  font-size: var(--font-size-lead);
+  color: var(--color-text);
   max-width: 600px;
   margin: 0 auto;
   line-height: 1.6;
@@ -38,7 +38,7 @@
 
 .mapContainer {
   box-shadow: var(--shadow);
-  border-radius: var(--border-radius-large);
+  border-radius: var(--radius-medium);
   overflow: hidden;
 }
 
@@ -56,9 +56,9 @@
 .hoursCard,
 .accessCard,
 .contactCard {
-  background: var(--color-background-secondary);
+  background: var(--color-bg-secondary);
   border: var(--border-width-thin) solid var(--color-border);
-  border-radius: var(--border-radius-large);
+  border-radius: var(--radius-medium);
   padding: var(--spacing-xlarge);
   box-shadow: var(--shadow-light);
 }
@@ -71,18 +71,18 @@
   color: var(--color-accent);
   margin-bottom: var(--spacing-medium);
   font-weight: 600;
-  font-family: var(--font-family);
+  font-family: var(--font-body);
 }
 
 .addressCard address {
   font-style: normal;
   line-height: 1.6;
-  color: var(--color-text-primary);
+  color: var(--color-text);
   margin-bottom: var(--spacing-medium);
 }
 
 .mapLink {
-  color: var(--color-button);
+  color: var(--color-brand);
   text-decoration: none;
   font-weight: 500;
 }
@@ -101,7 +101,7 @@
   display: flex;
   justify-content: space-between;
   padding: var(--spacing-small) 0;
-  border-bottom: var(--border-width-thin) solid var(--color-background);
+  border-bottom: var(--border-width-thin) solid var(--color-bg);
 }
 
 .hoursList li:last-child {
@@ -114,7 +114,7 @@
 }
 
 .hoursList li span:last-child {
-  color: var(--color-text-primary);
+  color: var(--color-text);
 }
 
 .accessCard ul {
@@ -125,7 +125,7 @@
 
 .accessCard li {
   padding: var(--spacing-small) 0;
-  color: var(--color-text-primary);
+  color: var(--color-text);
 }
 
 .contactInfo {
@@ -135,11 +135,11 @@
 
 .contactInfo p {
   margin-bottom: var(--spacing-medium);
-  color: var(--color-text-primary);
+  color: var(--color-text);
 }
 
 .contactInfo a {
-  color: var(--color-button);
+  color: var(--color-brand);
   text-decoration: none;
 }
 
@@ -153,9 +153,9 @@
 }
 
 .directionsSection {
-  background: var(--color-background);
+  background: var(--color-bg);
   padding: var(--spacing-section) var(--spacing-xlarge);
-  border-radius: var(--border-radius-large);
+  border-radius: var(--radius-medium);
   margin-top: var(--spacing-section);
 }
 
@@ -165,7 +165,7 @@
   color: var(--color-accent);
   margin-bottom: var(--spacing-xlarge);
   font-weight: 600;
-  font-family: var(--font-family);
+  font-family: var(--font-body);
 }
 
 .directionsGrid {
@@ -175,8 +175,8 @@
 }
 
 .directionCard {
-  background: var(--color-background-secondary);
-  border-radius: var(--border-radius);
+  background: var(--color-bg-secondary);
+  border-radius: var(--radius-small);
   padding: var(--spacing-xlarge);
   box-shadow: var(--shadow-light);
   text-align: center;
@@ -187,11 +187,11 @@
   color: var(--color-accent);
   margin-bottom: var(--spacing-medium);
   font-weight: 600;
-  font-family: var(--font-family);
+  font-family: var(--font-body);
 }
 
 .directionCard p {
-  color: var(--color-text-primary);
+  color: var(--color-text);
   line-height: 1.6;
 }
 

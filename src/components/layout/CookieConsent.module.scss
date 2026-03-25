@@ -3,7 +3,7 @@
   bottom: 0;
   left: 0;
   right: 0;
-  background: var(--color-primary);
+  background: var(--color-bg);
   border-top: var(--border-width-thick) solid var(--color-accent);
   box-shadow: var(--box-shadow-reverse);
   z-index: 1000;
@@ -24,14 +24,14 @@
 
     h3 {
       margin: 0;
-      font-size: var(--font-size-h4);
-      color: var(--color-text-primary);
+      font-size: var(--font-size-h3);
+      color: var(--color-text);
     }
 
     p {
       margin: 0;
-      font-size: var(--font-size-base);
-      color: var(--color-text-primary);
+      font-size: var(--font-size-body);
+      color: var(--color-text);
       flex: 1;
     }
   }
@@ -44,32 +44,32 @@
     button {
       padding: var(--spacing-small) var(--spacing-medium);
       border: none;
-      border-radius: var(--border-radius);
-      font-size: var(--font-size-base);
+      border-radius: var(--radius-small);
+      font-size: var(--font-size-body);
       font-weight: 600;
       cursor: pointer;
       transition: all var(--transition-fast);
-      font-family: var(--font-family);
+      font-family: var(--font-body);
     }
   }
 
   .acceptBtn {
     background: var(--color-accent);
-    color: var(--color-text-secondary);
+    color: var(--color-header-text);
 
     &:hover {
-      background: var(--color-accent-hover);
+      background: var(--color-brand-hover);
     }
   }
 
   .declineBtn {
     background: transparent;
-    color: var(--color-text-primary);
+    color: var(--color-text);
     border: var(--border-width) solid var(--color-accent);
 
     &:hover {
       background: var(--color-accent);
-      color: var(--color-text-secondary);
+      color: var(--color-header-text);
     }
   }
 
@@ -81,7 +81,7 @@
       text-decoration: underline;
 
       &:hover {
-        color: var(--color-accent-hover);
+        color: var(--color-brand-hover);
       }
     }
   }

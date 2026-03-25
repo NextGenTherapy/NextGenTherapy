@@ -4,8 +4,8 @@
   max-width: 600px;
   margin: 0 auto;
   padding: var(--spacing-medium);
-  background: var(--color-primary);
-  border-radius: var(--border-radius-large);
+  background: var(--color-bg);
+  border-radius: var(--radius-medium);
   box-shadow: var(--box-shadow);
   display: flex;
   flex-direction: column;
@@ -50,13 +50,13 @@
 /* Label styling */
 .contactForm label {
   font-weight: 600;
-  color: var(--color-text-primary);
+  color: var(--color-text);
   font-size: var(--font-size-small);
 }
 
 @media (min-width: 768px) {
   .contactForm label {
-    font-size: var(--font-size-base);
+    font-size: var(--font-size-body);
   }
 }
 
@@ -65,7 +65,7 @@
   width: 100%;
   padding: var(--spacing-small);
   border: var(--border-width) solid var(--color-border);
-  border-radius: var(--border-radius);
+  border-radius: var(--radius-small);
   font-size: var(--font-size-small);
   box-sizing: border-box;
   transition:
@@ -73,18 +73,18 @@
     box-shadow var(--transition-fast);
   min-height: 44px;
   resize: none;
-  font-family: var(--font-family);
+  font-family: var(--font-body);
 
   &:focus {
     border-color: var(--color-accent);
-    outline: var(--outline-width) solid var(--color-accent-hover);
+    outline: var(--outline-width) solid var(--color-brand-hover);
     outline-offset: var(--outline-offset);
   }
 }
 
 @media (min-width: 768px) {
   .contactForm input {
-    font-size: var(--font-size-base);
+    font-size: var(--font-size-body);
     min-height: 48px;
     padding: var(--spacing-medium);
   }
@@ -97,7 +97,7 @@
   width: 100%;
   padding: var(--spacing-small);
   border: var(--border-width) solid var(--color-border);
-  border-radius: var(--border-radius);
+  border-radius: var(--radius-small);
   font-size: var(--font-size-small);
   box-sizing: border-box;
   transition:
@@ -105,11 +105,11 @@
     box-shadow var(--transition-fast);
   overflow-y: auto;
   resize: none;
-  font-family: var(--font-family);
+  font-family: var(--font-body);
 
   &:focus {
     border-color: var(--color-accent);
-    outline: var(--outline-width) solid var(--color-accent-hover);
+    outline: var(--outline-width) solid var(--color-brand-hover);
     outline-offset: var(--outline-offset);
   }
 }
@@ -118,29 +118,29 @@
   .textareaAutoGrow {
     min-height: 120px;
     max-height: 400px;
-    font-size: var(--font-size-base);
+    font-size: var(--font-size-body);
     padding: var(--spacing-medium);
   }
 }
 
 /* Button styling */
 .contactForm button {
-  background: var(--color-button);
-  color: var(--color-text-secondary);
+  background: var(--color-brand);
+  color: var(--color-header-text);
   border: none;
-  border-radius: var(--border-radius);
+  border-radius: var(--radius-small);
   padding: var(--spacing-medium) var(--spacing-large);
   font-size: var(--font-size-small);
   font-weight: 600;
   cursor: pointer;
   transition: background var(--transition-fast);
-  font-family: var(--font-family);
+  font-family: var(--font-body);
   min-height: 44px;
   width: 100%;
 
   &:hover,
   &:focus {
-    background: var(--color-button-hover);
+    background: var(--color-brand-hover);
   }
 
   &:disabled {
@@ -156,7 +156,7 @@
 
 @media (min-width: 768px) {
   .contactForm button {
-    font-size: var(--font-size-base);
+    font-size: var(--font-size-body);
     min-height: 48px;
     width: auto;
     align-self: center;
@@ -172,12 +172,12 @@
   padding: var(--spacing-small);
   background-color: var(--color-success-bg);
   border: var(--border-width) solid var(--color-success);
-  border-radius: var(--border-radius);
+  border-radius: var(--radius-small);
 }
 
 @media (min-width: 768px) {
   .statusSuccess {
-    font-size: var(--font-size-base);
+    font-size: var(--font-size-body);
     padding: var(--spacing-medium);
   }
 }
@@ -189,12 +189,12 @@
   padding: var(--spacing-small);
   background-color: var(--color-error-bg);
   border: var(--border-width) solid var(--color-error);
-  border-radius: var(--border-radius);
+  border-radius: var(--radius-small);
 }
 
 @media (min-width: 768px) {
   .statusError {
-    font-size: var(--font-size-base);
+    font-size: var(--font-size-body);
     padding: var(--spacing-medium);
   }
 }
@@ -206,12 +206,12 @@
   padding: var(--spacing-small);
   background-color: var(--color-info-bg);
   border: var(--border-width) solid var(--color-info);
-  border-radius: var(--border-radius);
+  border-radius: var(--radius-small);
 }
 
 @media (min-width: 768px) {
   .statusLoading {
-    font-size: var(--font-size-base);
+    font-size: var(--font-size-body);
     padding: var(--spacing-medium);
   }
 }

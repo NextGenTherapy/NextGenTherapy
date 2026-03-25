@@ -1,7 +1,7 @@
 /* About Therapy Page Styles */
 
 .page {
-  background: var(--color-background);
+  background: var(--color-bg);
   min-height: 100vh;
   padding-bottom: var(--spacing-large);
 }
@@ -26,8 +26,8 @@
 }
 
 .subtitle {
-  font-size: var(--font-size-medium);
-  color: var(--color-text-primary);
+  font-size: var(--font-size-lead);
+  color: var(--color-text);
   margin: 0 0 var(--spacing-large) 0;
   opacity: 0.8;
 }
@@ -43,7 +43,7 @@
 }
 
 .image {
-  border-radius: var(--border-radius-large);
+  border-radius: var(--radius-medium);
   box-shadow: var(--box-shadow);
 }
 
@@ -67,7 +67,7 @@
 .textContent p {
   line-height: 1.6;
   margin-bottom: var(--spacing-medium);
-  color: var(--color-text-primary);
+  color: var(--color-text);
   text-align: left;
 }
 
@@ -93,7 +93,7 @@
 .benefitCard {
   background: rgba(255, 255, 255, 0.8);
   border: 1px solid var(--color-accent-light);
-  border-radius: var(--border-radius-large);
+  border-radius: var(--radius-medium);
   padding: var(--spacing-large);
   text-align: left;
   box-shadow: var(--box-shadow);
@@ -107,13 +107,13 @@
 
 .benefitCard h3 {
   color: var(--color-accent);
-  font-size: var(--font-size-medium);
+  font-size: var(--font-size-lead);
   margin-bottom: var(--spacing-small);
   font-weight: 600;
 }
 
 .benefitCard p {
-  color: var(--color-text-primary);
+  color: var(--color-text);
   line-height: 1.6;
   margin: 0;
 }
@@ -135,8 +135,8 @@
 }
 
 .locationIntro p {
-  color: var(--color-text-primary);
-  font-size: var(--font-size-medium);
+  color: var(--color-text);
+  font-size: var(--font-size-lead);
 }
 
 .locationContent {
@@ -161,15 +161,15 @@
 
 .hours h3 {
   color: var(--color-accent);
-  font-size: var(--font-size-medium);
+  font-size: var(--font-size-lead);
   margin-bottom: var(--spacing-small);
   font-weight: 600;
 }
 
 .hours p {
-  color: var(--color-text-primary);
+  color: var(--color-text);
   margin-bottom: var(--spacing-medium);
-  font-size: var(--font-size-base);
+  font-size: var(--font-size-body);
 }
 
 .hours p:last-child {
@@ -184,7 +184,7 @@
 }
 
 .map {
-  border-radius: var(--border-radius-large);
+  border-radius: var(--radius-medium);
   box-shadow: var(--box-shadow);
   width: 100%;
   min-height: 300px;
@@ -244,7 +244,7 @@
   }
 
   .subtitle {
-    font-size: var(--font-size-base);
+    font-size: var(--font-size-body);
   }
 
   .whyTherapySection,

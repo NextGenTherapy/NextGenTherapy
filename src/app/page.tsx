@@ -110,77 +110,110 @@ export default function Home() {
       />
       <div className={styles.page}>
         <main>
-          {/* Logo Section at Top */}
-          <section className={styles.logoSection} aria-label="Next Generation Therapy branding">
-            <div className={styles.logoContainer}>
+          {/* Section 1: Hero */}
+          <section className={styles.hero} aria-label="Welcome to Next Generation Therapy">
+            <div className={styles.heroContent}>
+              <p className={styles.eyebrow}>Colchester & Online · BACP Registered</p>
+              <h1 className={styles.headline}>
+                You don&apos;t have to keep holding it together alone.
+              </h1>
+              <p className={styles.subheading}>
+                Psychodynamic therapy for children, teenagers and adults — in Colchester and online
+                across the UK.
+              </p>
+              <div className={styles.heroCta}>
+                <Link href="/book-now" className={styles.primaryButton}>
+                  Book a Free Consultation
+                </Link>
+                <Link href="/about-therapy" className={styles.secondaryLink}>
+                  Learn about my approach →
+                </Link>
+              </div>
+            </div>
+            <div className={styles.heroImageWrapper}>
               <Image
-                src="/images/logo.jpg"
-                alt="Next Generation Therapy logo - Professional therapy services in Colchester"
-                width={500}
-                height={500}
+                src="/images/andreea.jpg"
+                alt="Andreea Horhocea - BACP registered psychotherapist in Colchester"
+                width={450}
+                height={563}
                 priority
-                className={styles.logoImage}
+                className={styles.heroImage}
               />
             </div>
           </section>
 
-          {/* Content Section */}
-          <section className={styles.contentSection}>
-            <div className={styles.greeting}>
-              <h1>Professional Therapy in Colchester | Expert Support for All Ages</h1>
-              <p className={styles.subtitle}>
-                Hi, I&apos;m Andreea Horhocea - a BACP registered therapist offering professional
-                therapy sessions in Colchester and online. I work with people of all ages, with
-                particular expertise in supporting young people and families through life&apos;s
-                challenges.{' '}
-                <Link href="/faq">View common therapy questions</Link> or{' '}
-                <Link href="/services">explore our therapy services</Link>.
+          {/* Section 2: Trust Bar */}
+          <section className={styles.trustBar} aria-label="Credentials">
+            <div className={styles.trustBarInner}>
+              <span className={styles.trustItem}>BACP Registered Member</span>
+              <span className={styles.trustItem}>Colchester & Online</span>
+              <span className={styles.trustItem}>All Ages Welcome</span>
+            </div>
+          </section>
+
+          {/* Section 3: How I Can Help */}
+          <section className={styles.services} aria-labelledby="services-title">
+            <h2 id="services-title" className={styles.sectionTitle}>
+              How I Can Help
+            </h2>
+            <div className={styles.servicesGrid}>
+              <Link href="/child-therapy" className={styles.serviceCard}>
+                <h3>Child Therapy</h3>
+                <p>
+                  A safe, nurturing space for children to explore their emotions through play and
+                  creative expression. Helping young minds process difficult experiences.
+                </p>
+                <span className={styles.serviceLink}>Learn more →</span>
+              </Link>
+              <Link href="/teenage-therapy" className={styles.serviceCard}>
+                <h3>Teenage Therapy</h3>
+                <p>
+                  Supporting adolescents through the unique challenges of growing up. Building
+                  resilience, self-understanding and healthy coping strategies.
+                </p>
+                <span className={styles.serviceLink}>Learn more →</span>
+              </Link>
+              <Link href="/young-adult-therapy" className={styles.serviceCard}>
+                <h3>Adult & Young Adult Therapy</h3>
+                <p>
+                  Compassionate support for adults navigating anxiety, depression, relationships and
+                  life transitions. Creating lasting positive change.
+                </p>
+                <span className={styles.serviceLink}>Learn more →</span>
+              </Link>
+            </div>
+          </section>
+
+          {/* Section 4: About Andreea */}
+          <section className={styles.about} aria-label="About Andreea">
+            <div className={styles.aboutInner}>
+              <div className={styles.aboutContent}>
+                <blockquote className={styles.quote}>
+                  &ldquo;I created this space to offer a therapeutic experience where you can feel
+                  safe, seen, and understood — a space where your story matters. Whatever brings you
+                  here, you&apos;re welcome.&rdquo;
+                </blockquote>
+                <p className={styles.credentials}>
+                  Andreea Horhocea — MSc Psychodynamic Psychotherapy, BACP Registered
+                </p>
+                <Link href="/about" className={styles.aboutLink}>
+                  More about me →
+                </Link>
+              </div>
+              <div className={styles.aboutDecoration} aria-hidden="true" />
+            </div>
+          </section>
+
+          {/* Section 5: CTA */}
+          <section className={styles.cta} aria-label="Book a consultation">
+            <div className={styles.ctaInner}>
+              <h2 className={styles.ctaTitle}>Ready to take the first step?</h2>
+              <p className={styles.ctaText}>
+                I offer a free 15-minute phone consultation. No commitment required.
               </p>
-            </div>
-
-            {/* Image under greeting - centered */}
-            <div className={styles.imageSection}>
-              <div className={styles.imageContainer}>
-                <Image
-                  src="/images/andreea.jpg"
-                  alt="Andreea Horhocea - BACP registered counsellor and psychotherapist in Colchester offering professional mental health counselling services"
-                  height={400}
-                  width={300}
-                  priority
-                  className={styles.image}
-                />
-              </div>
-            </div>
-
-            {/* Cards Container */}
-            <div className={styles.aboutContainer}>
-              <div className={styles.cardsContainer}>
-                <Link href="/about" className={styles.introCard}>
-                  <h2>About Me</h2>
-                  <p>
-                    Learn about my background, qualifications, and psychodynamic approach to therapy.
-                    I hold a Master&apos;s degree in Psychodynamic Psychotherapy and am a registered
-                    member of the British Association for Counselling and Psychotherapy (BACP).
-                  </p>
-                </Link>
-                <Link href="/services" className={styles.servicesCard}>
-                  <h2>Who I Help</h2>
-                  <p>
-                    I provide mental health support for people of all ages experiencing anxiety,
-                    depression, stress, relationship difficulties, and life transitions. I specialise
-                    in supporting children, teenagers, and young adults through emotional wellbeing
-                    challenges using therapeutic techniques tailored to each individual.
-                  </p>
-                </Link>
-                <Link href="/blog#professional-thoughts" className={styles.approachCard}>
-                  <h2>My Approach</h2>
-                  <p>
-                    Using psychodynamic therapy principles, I create a safe, compassionate space for
-                    self-reflection and personal growth. Together we explore unconscious patterns and
-                    build healthier coping strategies for lasting positive change.
-                  </p>
-                </Link>
-              </div>
+              <Link href="/book-now" className={styles.primaryButton}>
+                Book Now
+              </Link>
             </div>
           </section>
         </main>
