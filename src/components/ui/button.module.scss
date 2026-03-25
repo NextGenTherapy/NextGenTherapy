@@ -1,43 +1,62 @@
 /* Button Component Styles */
 
-.button {
-  display: inline-block;
-  padding: var(--spacing-small) var(--spacing-medium);
+%buttonBase {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-small);
+  padding: 12px 28px;
+  font-family: var(--font-body);
   font-size: var(--font-size-small);
-  font-weight: bold;
+  font-weight: var(--font-weight-medium);
+  letter-spacing: 0.04em;
   text-align: center;
   text-decoration: none;
-  color: var(--color-text-secondary);
-  background-color: var(--color-button);
-  border: none;
-  border-radius: var(--border-radius);
+  border-radius: var(--radius-pill);
   cursor: pointer;
-  transition: var(--transition-normal);
-  min-width: 120px;
+  transition: background 200ms ease, transform 150ms ease, border-color 200ms ease, color 200ms ease;
   box-sizing: border-box;
 
   &:hover {
-    background-color: var(--color-button-hover) !important;
-    color: var(--color-text-secondary) !important;
+    transform: translateY(-1px);
   }
 
-  &:focus {
-    outline: var(--outline-width) solid var(--color-button-hover);
-    outline-offset: var(--outline-offset);
-  }
-}
-
-@media (min-width: 768px) {
-  .button {
-    padding: var(--spacing-medium) var(--spacing-large);
-    font-size: var(--font-size-base);
-    min-width: 140px;
+  &:focus-visible {
+    outline: 2px solid var(--color-brand);
+    outline-offset: 2px;
   }
 }
 
-@media (min-width: 1024px) {
-  .button {
-    font-size: var(--font-size-medium);
-    min-width: 160px;
+.primary {
+  @extend %buttonBase;
+  background-color: var(--color-brand);
+  color: var(--color-header-text);
+  border: none;
+
+  &:hover {
+    background-color: var(--color-brand-hover);
+  }
+}
+
+.secondary {
+  @extend %buttonBase;
+  background-color: transparent;
+  color: var(--color-brand);
+  border: var(--border-width-thin) solid var(--color-brand);
+
+  &:hover {
+    background-color: var(--color-brand);
+    color: var(--color-header-text);
+  }
+}
+
+.outline {
+  @extend %buttonBase;
+  background-color: transparent;
+  color: var(--color-text);
+  border: var(--border-width-thin) solid var(--color-border);
+
+  &:hover {
+    border-color: var(--color-brand);
+    color: var(--color-brand);
   }
 }

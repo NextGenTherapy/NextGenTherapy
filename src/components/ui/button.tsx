@@ -2,6 +2,8 @@ import Link from 'next/link';
 import styles from './button.module.scss';
 import { ButtonHTMLAttributes } from 'react';
 
+type ButtonVariant = 'primary' | 'secondary' | 'outline';
+
 interface ButtonProps extends Omit<ButtonHTMLAttributes<HTMLButtonElement>, 'type'> {
   href?: string;
   children: React.ReactNode;
@@ -9,6 +11,7 @@ interface ButtonProps extends Omit<ButtonHTMLAttributes<HTMLButtonElement>, 'typ
   disabled?: boolean;
   onClick?: () => void;
   className?: string;
+  variant?: ButtonVariant;
 }
 
 export default function Button({
@@ -18,12 +21,16 @@ export default function Button({
   disabled = false,
   onClick,
   className,
+  variant = 'primary',
   ...restProps
 }: ButtonProps) {
+  const variantClass = styles[variant];
+  const buttonClassName = className ? `${variantClass} ${className}` : variantClass;
+
   // Only allow internal navigation to prevent open redirects
   if (href && href.startsWith('/')) {
     return (
-      <Link href={href} className={className || styles.button}>
+      <Link href={href} className={buttonClassName}>
         {children}
       </Link>
     );
@@ -33,7 +40,7 @@ export default function Button({
   return (
     <button
       type={type}
-      className={className || styles.button}
+      className={buttonClassName}
       disabled={disabled}
       onClick={onClick}
       {...restProps}
