@@ -149,16 +149,15 @@ export default function AboutMe() {
             <div className={styles.whyContent}>
               <h2>Why I do this work</h2>
               <p>
-                I grew up without access to mental health support or understanding, and that shaped
-                the kind of therapist I wanted to become. I wanted to create a space specifically
-                for children and women to unpack the expectations and challenges placed on them —
-                somewhere they could be honest without being judged.
+                I became a therapist because I grew up without access to the kind of understanding
+                I needed, and I wanted to make sure other people — particularly women and young
+                people — had somewhere to take the things they&apos;re carrying. That&apos;s still
+                why I do this work now.
               </p>
               <p>
-                Psychodynamic therapy is open-ended. We go at your pace, for however long it takes.
-                There&apos;s no set number of sessions and no pressure to rush. The relationship we
-                build matters more than any technique — it&apos;s often where the real change
-                happens.
+                The work I do is slow and open-ended. It&apos;s not a toolkit or a six-week course.
+                We meet weekly, and we keep meeting until something has genuinely shifted. For some
+                people that&apos;s a few months; for others, it&apos;s a few years.
               </p>
             </div>
             <div className={styles.whyImage}>
@@ -254,41 +253,39 @@ export default function AboutMe() {
               <div className={styles.howBlock}>
                 <h3>The approach</h3>
                 <p>
-                  I&apos;m trained in psychodynamic therapy, which means we explore the patterns,
-                  relationships and experiences that have shaped how you feel today. I also draw on
-                  mindfulness and practical tools when they&apos;re helpful. With children, I use
-                  play, sand tray, drawing and creative materials to help them express what words
-                  can&apos;t.
+                  I&apos;m a psychodynamic therapist. That means we spend time together
+                  understanding why certain patterns keep showing up in your life, where they came
+                  from, and what they&apos;re protecting. I draw on other approaches — mindfulness,
+                  some CBT-informed tools, creative work with younger clients — but the foundation
+                  is always psychodynamic.
                 </p>
               </div>
 
               <div className={styles.howBlock}>
                 <h3>The format</h3>
                 <p>
-                  Sessions are weekly, at the same time each week. Before we start, I offer a free
-                  15-minute call — not therapy, just a chance for both of us to check whether
-                  we&apos;re a good fit. Our first proper session is about getting to know each
-                  other: what brought you here, what you&apos;re hoping for, and whether you feel
-                  comfortable enough to want to come back. That matters more than anything else.
+                  Sessions are weekly and 50 minutes long. I work open-ended, which means we
+                  don&apos;t start with a fixed number of sessions. Some people come for a few
+                  months, some come for a few years. We review how it&apos;s going as we go.
                 </p>
               </div>
 
               <div className={styles.howBlock}>
                 <h3>Who I work with</h3>
                 <p>
-                  I work with children (4–12), teenagers (13–17), young adults (18–25), adults
-                  (26–40) and parents. In-person sessions are available at my therapy room in
-                  Colchester. Online sessions are available UK-wide for anyone aged 16 and over.
+                  I work with women, neurodivergent adults, teenagers aged 13–17, young adults, and
+                  children from 4 upwards. I also see parents as clients in their own right. Online
+                  sessions are available for anyone 16 or older — I don&apos;t do online work for
+                  younger clients because confidentiality is hard to guarantee at home.
                 </p>
               </div>
 
               <div className={styles.howBlock}>
                 <h3>Who I don&apos;t work with</h3>
                 <p>
-                  I don&apos;t work with couples, people over 40, anyone with open court cases or
-                  forensic involvement, active psychosis, or current addiction without wraparound
-                  support. Being clear about this helps us both — if I&apos;m not the right fit,
-                  I&apos;ll do my best to point you in the right direction.
+                  I don&apos;t offer couples therapy, forensic work, or work with active psychosis
+                  or untreated addiction. If that&apos;s what you need, I&apos;m happy to point you
+                  toward people who specialise in it.
                 </p>
               </div>
             </div>
@@ -299,12 +296,12 @@ export default function AboutMe() {
             <div className={styles.romanianContainer}>
               <h2>Therapy in Romanian</h2>
               <p>
-                {/* {{ CONFIRM WITH ANDREEA }}: exact wording about her Romanian background */}
-                I offer therapy in Romanian for adults and young adults navigating bicultural
-                identity, the immigrant experience, or parenting across cultures. If your first
-                language is Romanian, working in your mother tongue can make it easier to access
-                emotions and memories that feel harder to reach in English.
+                I also offer sessions in Romanian. If you grew up in Romania, or between Romania
+                and the UK, there are things that are easier to say in your first language — and
+                things about the experience of being between two cultures that can be hard to
+                explain to someone who hasn&apos;t lived it. I have.
               </p>
+              {/* {{ CONFIRM WITH ANDREEA: a single sentence about her own Romanian background if she wants to include it, otherwise delete this last sentence }} */}
               <p className={styles.romanianCta}>
                 {/* {{ CONFIRM WITH ANDREEA }}: Romanian CTA phrasing */}
                 Dacă preferi terapia în limba română,{' '}
@@ -321,8 +318,9 @@ export default function AboutMe() {
             <div className={styles.ctaContainer}>
               <h2>Book a free 15-minute call</h2>
               <p>
-                This isn&apos;t therapy — it&apos;s a chance for us to talk through the logistics
-                and see whether we&apos;re a good fit. No commitment, no pressure.
+                The free call is an informal 15-minute conversation, not a first session. We use it
+                to see whether working together feels right, sort out logistics, and give you a
+                chance to ask anything you want to.
               </p>
               <Link href="/book-now" className={buttonStyles.button}>
                 Book a free 15-minute call
