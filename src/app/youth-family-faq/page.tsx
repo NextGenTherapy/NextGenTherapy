@@ -498,19 +498,19 @@ export default function YouthFamilyFAQPage() {
               </p>
             </Link>
 
-            <Link href="/teenage-therapy" className={styles.relatedCard}>
-              <h3>Teenage Therapy (Ages 13-18)</h3>
+            <Link href="/teen-therapy" className={styles.relatedCard}>
+              <h3>Teenage Therapy (Ages 13-17)</h3>
               <p>
                 Confidential support for teenagers navigating identity, relationships, school
                 stress, and emotional challenges.
               </p>
             </Link>
 
-            <Link href="/young-adult-therapy" className={styles.relatedCard}>
-              <h3>Young Adult Therapy (Ages 18-25)</h3>
+            <Link href="/therapy-for-women" className={styles.relatedCard}>
+              <h3>Therapy for Women</h3>
               <p>
-                Specialized support for life transitions, career anxiety, relationships, and
-                developing independence.
+                For overthinking, burnout, self-esteem, body image, anxiety, and identity.
+                Includes work with women in same-sex relationships.
               </p>
             </Link>
 
@@ -525,7 +525,7 @@ export default function YouthFamilyFAQPage() {
               </p>
             </Link>
 
-            <Link href="/parent-support" className={styles.relatedCard}>
+            <Link href="/child-therapy#for-parents" className={styles.relatedCard}>
               <h3>Parent Support & Guidance</h3>
               <p>
                 Practical strategies and emotional support for parents navigating their child&apos;s

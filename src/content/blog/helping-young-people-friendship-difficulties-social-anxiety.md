@@ -359,8 +359,8 @@ Many young people who struggle socially go on to form meaningful, lasting relati
 
 If you&apos;re concerned about a young person&apos;s social difficulties, trust your instincts. Professional support can provide valuable tools and perspectives that help young people develop confidence and skills.
 
-[Child therapy](/child-therapy) can help younger children develop social skills through play-based approaches, while [teenage therapy](/teenage-therapy) offers confidential support for adolescents navigating complex peer relationships. [Young adult therapy](/young-adult-therapy) can support those transitioning to adult social and professional relationships.
+[Child therapy](/child-therapy) can help younger children develop social skills through play-based approaches, while [teen therapy](/teen-therapy) offers confidential support for adolescents navigating complex peer relationships.
 
-For families seeking additional guidance, our [parent support](/parent-support) services provide practical strategies for supporting young people through social challenges.
+For families seeking additional guidance, our [parent support section](/child-therapy#for-parents) provides practical strategies for supporting young people through social challenges.
 
 Remember, seeking help is a sign of strength and care—both for the young person struggling socially and for the families who love them. With appropriate support, every young person can develop the social confidence and relationship skills they need to thrive.

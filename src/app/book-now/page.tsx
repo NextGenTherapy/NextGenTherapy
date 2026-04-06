@@ -276,7 +276,7 @@ export default function BookNow() {
           <CTABlock />
 
           <section className={buttonLinksStyles.buttonLinks}>
-            <Button href="/about-therapy">About Therapy</Button>
+            <Button href="/is-this-right-for-you">Is This Right for You?</Button>
             <Button href="/services">Services</Button>
             <Button href="/book-now">Book Now</Button>
           </section>

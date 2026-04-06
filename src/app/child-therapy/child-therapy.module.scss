@@ -71,6 +71,13 @@
   border-radius: var(--radius-medium);
 }
 
+.forParentsSection {
+  background: var(--color-surface);
+  padding: var(--spacing-xlarge) var(--spacing-medium);
+  margin-bottom: var(--spacing-medium);
+  border-radius: var(--radius-medium);
+}
+
 .practicalInfo {
   background: var(--color-surface);
   padding: var(--spacing-xlarge) var(--spacing-medium);
@@ -91,6 +98,7 @@
   .approach,
   .commonConcerns,
   .parentSupport,
+  .forParentsSection,
   .practicalInfo,
   .relatedSection {
     padding: var(--spacing-xxlarge) var(--spacing-large);
@@ -108,6 +116,7 @@
 .approach h2,
 .commonConcerns h2,
 .parentSupport h2,
+.forParentsSection h2,
 .practicalInfo h2,
 .relatedSection h2 {
   font-family: var(--font-display);
@@ -125,6 +134,7 @@
 .approach p,
 .commonConcerns p,
 .parentSupport p,
+.forParentsSection > p,
 .practicalInfo p,
 .relatedSection p {
   font-family: var(--font-body);
@@ -299,6 +309,10 @@
 .parentResources {
   margin-top: var(--spacing-large);
   text-align: center;
+  display: flex;
+  gap: var(--spacing-medium);
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .resourceLink {
@@ -400,6 +414,46 @@
     font-family: var(--font-body);
     font-size: var(--font-size-body);
     color: var(--color-text-muted);
+    line-height: var(--line-height-body);
+    margin: 0;
+  }
+}
+
+/* Parent Support Grid (For Parents section) */
+.parentSupportGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-medium);
+  margin-top: var(--spacing-large);
+  margin-bottom: var(--spacing-large);
+}
+
+@media (min-width: 768px) {
+  .parentSupportGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.parentSupportCard {
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-medium);
+  padding: var(--spacing-large);
+
+  h3 {
+    font-family: var(--font-display);
+    font-size: var(--font-size-h3);
+    font-weight: var(--font-weight-medium);
+    font-style: italic;
+    color: var(--color-text);
+    line-height: var(--line-height-body);
+    margin: 0 0 var(--spacing-small);
+  }
+
+  p {
+    font-family: var(--font-body);
+    font-size: var(--font-size-body);
+    color: var(--color-text);
     line-height: var(--line-height-body);
     margin: 0;
   }

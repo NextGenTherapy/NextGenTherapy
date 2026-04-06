@@ -11,6 +11,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://nextgentherapy.co.uk/therapy-for-women',
   },
+  robots: { index: false, follow: false },
   openGraph: {
     title: 'Therapy for Women | Next Generation Therapy',
     description:

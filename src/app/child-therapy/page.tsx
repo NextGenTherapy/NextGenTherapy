@@ -307,24 +307,66 @@ export default function ChildTherapyPage() {
                 </div>
               </section>
 
-              <section className={styles.parentSupport}>
-                <h2>Supporting Parents Too</h2>
+              <section id="for-parents" className={styles.forParentsSection}>
+                <h2>For Parents</h2>
                 <p>
                   When a child is struggling, parents often feel overwhelmed, confused, or worried
-                  about whether they&apos;re doing the right thing. Child therapy isn&apos;t just
-                  about supporting the child—it&apos;s about supporting the whole family system.
+                  about whether they&apos;re doing the right thing. You want to help, but you might
+                  feel unsure about what to say or do. These feelings are completely normal.
                 </p>
                 <p>
-                  I provide guidance on how to respond to challenging behaviours, communicate with
-                  your child about difficult topics, and create a supportive home environment that
-                  complements the therapeutic work. You&apos;re not alone in this journey.
+                  Child therapy isn&apos;t just about supporting the child—it&apos;s about supporting
+                  the whole family system. I work closely with parents to help you feel more
+                  confident and equipped to support your child&apos;s emotional wellbeing.
                 </p>
+
+                <div className={styles.parentSupportGrid}>
+                  <div className={styles.parentSupportCard}>
+                    <h3>Understanding Your Child</h3>
+                    <p>
+                      Learn about your child&apos;s specific challenges, including anxiety,
+                      emotional difficulties, or behavioural changes. Understanding the
+                      &apos;why&apos; behind behaviours helps you respond with compassion.
+                    </p>
+                  </div>
+
+                  <div className={styles.parentSupportCard}>
+                    <h3>Communication Strategies</h3>
+                    <p>
+                      Develop skills for talking with your child about difficult topics, validating
+                      their emotions, and creating opportunities for connection that feel natural.
+                    </p>
+                  </div>
+
+                  <div className={styles.parentSupportCard}>
+                    <h3>Managing Your Own Feelings</h3>
+                    <p>
+                      Supporting a struggling child is emotionally demanding. Learn strategies for
+                      managing your own stress and feelings while staying emotionally available.
+                    </p>
+                  </div>
+
+                  <div className={styles.parentSupportCard}>
+                    <h3>Working With Schools</h3>
+                    <p>
+                      Navigate relationships with teachers and other professionals. Learn how to
+                      advocate effectively for your child while building collaborative relationships.
+                    </p>
+                  </div>
+                </div>
+
                 <div className={styles.parentResources}>
                   <Link
                     href="/blog/supporting-child-through-therapy"
                     className={styles.resourceLink}
                   >
                     Read: Supporting Your Child Through Therapy
+                  </Link>
+                  <Link
+                    href="/blog/school-avoidance-education-feels-impossible"
+                    className={styles.resourceLink}
+                  >
+                    Read: School Avoidance Support
                   </Link>
                 </div>
               </section>
@@ -375,18 +417,17 @@ export default function ChildTherapyPage() {
                   Explore other therapy services that may support your family&apos;s needs.
                 </p>
                 <div className={styles.relatedGrid}>
-                  <Link href="/parent-support" className={styles.relatedCard}>
-                    <h3>Parent Support</h3>
+                  <Link href="/teen-therapy" className={styles.relatedCard}>
+                    <h3>Teen Therapy</h3>
                     <p>
-                      Guidance and support for parents navigating the challenges of raising children
-                      through difficult times.
+                      Confidential therapy support for teenagers aged 13-17 dealing with
+                      adolescent challenges.
                     </p>
                   </Link>
-                  <Link href="/teenage-therapy" className={styles.relatedCard}>
-                    <h3>Teenage Therapy</h3>
+                  <Link href="/neurodiversity" className={styles.relatedCard}>
+                    <h3>Neurodiversity Support</h3>
                     <p>
-                      Confidential therapy support for teenagers aged 13-18 dealing with
-                      adolescent challenges.
+                      Specialist support for ADHD, autism, and other neurodivergent conditions.
                     </p>
                   </Link>
                 </div>

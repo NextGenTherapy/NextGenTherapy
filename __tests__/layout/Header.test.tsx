@@ -49,7 +49,7 @@ describe('Header Component', () => {
       { name: 'Home', href: '/' },
       { name: 'About Me', href: '/about' },
       { name: 'Services', href: '/services' },
-      { name: 'About Therapy', href: '/about-therapy' },
+      { name: 'Is This Right for You?', href: '/is-this-right-for-you' },
       { name: 'Blog', href: '/blog' },
       { name: 'Book Now', href: '/book-now' },
     ];
@@ -183,7 +183,7 @@ describe('Header Component', () => {
     render(<Header />);
 
     const navItems = screen.getAllByRole('listitem');
-    const expectedOrder = ['Home', 'About Me', 'Services', 'About Therapy', 'Blog', 'Book Now'];
+    const expectedOrder = ['Home', 'About Me', 'Services', 'Is This Right for You?', 'Blog', 'Book Now'];
 
     navItems.forEach((item, index) => {
       const link = item.querySelector('a');

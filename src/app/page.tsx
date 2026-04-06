@@ -163,7 +163,7 @@ export default function Home() {
                 </p>
                 <span className={styles.serviceLink}>Learn more →</span>
               </Link>
-              <Link href="/neurodiversity-therapy" className={styles.serviceCard}>
+              <Link href="/neurodiversity" className={styles.serviceCard}>
                 <h3>ADHD & Autism in Adults</h3>
                 <p>
                   Affirmative therapy for late-diagnosed and self-identified neurodivergent adults.

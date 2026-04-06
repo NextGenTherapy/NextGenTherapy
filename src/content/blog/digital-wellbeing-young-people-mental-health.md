@@ -468,8 +468,8 @@ Remember that developing digital wellness is a process, not a perfection. There 
 
 ### Moving Forward
 
-If you&apos;re concerned about a young person&apos;s digital wellbeing or its impact on their mental health, professional support can help. [Child therapy](/child-therapy), [teenage therapy](/teenage-therapy), and [young adult therapy](/young-adult-therapy) can all address digital wellness as part of comprehensive mental health care.
+If you&apos;re concerned about a young person&apos;s digital wellbeing or its impact on their mental health, professional support can help. [Child therapy](/child-therapy) and [teen therapy](/teen-therapy) can address digital wellness as part of comprehensive mental health care.
 
-For families needing additional guidance on supporting young people through digital challenges, [parent support](/parent-support) services provide practical strategies and emotional support for navigating the complexities of raising children in the digital age.
+For families needing additional guidance on supporting young people through digital challenges, our [parent support section](/child-therapy#for-parents) provides practical strategies and emotional support for navigating the complexities of raising children in the digital age.
 
 The digital world will continue evolving, but the fundamental principles of mental health—connection, purpose, balance, and self-awareness—remain constant. By prioritizing these principles while adapting to technological change, young people can thrive in our increasingly digital world.

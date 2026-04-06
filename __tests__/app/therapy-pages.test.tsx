@@ -44,27 +44,10 @@ jest.mock('@/components/seo/ServiceSchema', () => ({
       />
     );
   },
-  TeenageTherapySchema: function MockTeenageTherapySchema() {
-    return (
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@type': 'Service', name: 'TeenageTherapy' }) }}
-      />
-    );
-  },
-  YoungAdultTherapySchema: function MockYoungAdultTherapySchema() {
-    return (
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@type': 'Service', name: 'YoungAdultTherapy' }) }}
-      />
-    );
-  },
 }));
 
 // Import after mocks
 import ChildTherapyPage from '../../src/app/child-therapy/page';
-import TeenageTherapyPage from '../../src/app/teenage-therapy/page';
 
 describe('Therapy Pages', () => {
   describe('Child Therapy Page', () => {
@@ -207,151 +190,6 @@ describe('Therapy Pages', () => {
     describe('JSON-LD Schema', () => {
       it('renders BreadcrumbList schema', () => {
         const { container } = render(<ChildTherapyPage />);
-        const scripts = container.querySelectorAll('script[type="application/ld+json"]');
-        const schemas = Array.from(scripts).map((script) =>
-          JSON.parse(script.textContent || '{}')
-        );
-
-        const breadcrumbSchema = schemas.find((s) => s['@type'] === 'BreadcrumbList');
-        expect(breadcrumbSchema).toBeDefined();
-        expect(breadcrumbSchema?.itemListElement).toHaveLength(3);
-      });
-    });
-  });
-
-  describe('Teenage Therapy Page', () => {
-    beforeEach(() => {
-      render(<TeenageTherapyPage />);
-    });
-
-    it('renders the main heading', () => {
-      const heading = screen.getByRole('heading', { level: 1 });
-      expect(heading).toBeInTheDocument();
-      expect(heading).toHaveTextContent(/Teenage Therapy in Colchester/i);
-    });
-
-    it('displays subtitle about confidential support', () => {
-      expect(
-        screen.getByText(/Understanding, confidential therapy support/i)
-      ).toBeInTheDocument();
-    });
-
-    describe('Content Sections', () => {
-      it('displays understanding teenage experience heading', () => {
-        expect(screen.getByText(/Understanding the Teenage Experience/i)).toBeInTheDocument();
-      });
-
-      it('displays signs you might benefit section', () => {
-        expect(screen.getByText(/Signs You Might Benefit from Therapy/i)).toBeInTheDocument();
-      });
-
-      it('displays approach section', () => {
-        expect(screen.getByText(/My Approach to Teenage Therapy/i)).toBeInTheDocument();
-      });
-
-      it('displays common issues heading', () => {
-        expect(screen.getByText(/Common Issues I Help Teenagers With/i)).toBeInTheDocument();
-      });
-    });
-
-    describe('Symptom Categories', () => {
-      it('lists emotional struggles', () => {
-        expect(screen.getByText(/Emotional Struggles/i)).toBeInTheDocument();
-        expect(screen.getByText(/Persistent feelings of sadness or emptiness/i)).toBeInTheDocument();
-      });
-
-      it('lists school & life challenges', () => {
-        expect(screen.getByText(/School & Life Challenges/i)).toBeInTheDocument();
-      });
-
-      it('lists social & identity issues', () => {
-        expect(screen.getByText(/Social & Identity Issues/i)).toBeInTheDocument();
-      });
-    });
-
-    describe('Approach Points', () => {
-      it('displays your space your pace', () => {
-        expect(screen.getByText(/Your Space, Your Pace/i)).toBeInTheDocument();
-      });
-
-      it('displays confidentiality respected', () => {
-        expect(screen.getByText(/Confidentiality Respected/i)).toBeInTheDocument();
-      });
-
-      it('displays no judgment zone', () => {
-        expect(screen.getByText(/No Judgment Zone/i)).toBeInTheDocument();
-      });
-    });
-
-    describe('Common Concerns Grid', () => {
-      it('shows anxiety & overwhelm', () => {
-        expect(screen.getByText(/Anxiety & Overwhelm/i)).toBeInTheDocument();
-      });
-
-      it('shows depression & low mood', () => {
-        expect(screen.getByText(/Depression & Low Mood/i)).toBeInTheDocument();
-      });
-
-      it('shows school stress', () => {
-        expect(screen.getByText(/School Stress/i)).toBeInTheDocument();
-      });
-
-      it('shows identity & self-worth', () => {
-        expect(screen.getByText(/Identity & Self-Worth/i)).toBeInTheDocument();
-      });
-
-      it('shows family relationships', () => {
-        expect(screen.getByText(/Family Relationships/i)).toBeInTheDocument();
-      });
-
-      it('shows trauma & difficult experiences', () => {
-        expect(screen.getByText(/Trauma & Difficult Experiences/i)).toBeInTheDocument();
-      });
-    });
-
-    describe('For Parents Section', () => {
-      it('displays information for parents', () => {
-        expect(screen.getByText(/Information for Parents/i)).toBeInTheDocument();
-      });
-    });
-
-    describe('Practical Info', () => {
-      it('displays what to expect heading', () => {
-        expect(screen.getByText(/What to Expect from Teenage Therapy/i)).toBeInTheDocument();
-      });
-
-      it('shows first session info', () => {
-        expect(screen.getByText(/First Session/i)).toBeInTheDocument();
-      });
-
-      it('shows building trust', () => {
-        const buildingTrust = screen.getAllByText(/Building Trust/i);
-        expect(buildingTrust.length).toBeGreaterThan(0);
-      });
-
-      it('shows exploring issues', () => {
-        expect(screen.getByText(/Exploring Issues/i)).toBeInTheDocument();
-      });
-
-      it('shows your journey', () => {
-        expect(screen.getByText(/Your Journey/i)).toBeInTheDocument();
-      });
-    });
-
-    describe('Call to Action', () => {
-      it('displays CTA heading', () => {
-        expect(screen.getByText(/Ready to Take the First Step\?/i)).toBeInTheDocument();
-      });
-
-      it('has book consultation link', () => {
-        const link = screen.getByRole('link', { name: /Book a Consultation/i });
-        expect(link).toHaveAttribute('href', '/contact');
-      });
-    });
-
-    describe('JSON-LD Schema', () => {
-      it('renders BreadcrumbList schema', () => {
-        const { container } = render(<TeenageTherapyPage />);
         const scripts = container.querySelectorAll('script[type="application/ld+json"]');
         const schemas = Array.from(scripts).map((script) =>
           JSON.parse(script.textContent || '{}')

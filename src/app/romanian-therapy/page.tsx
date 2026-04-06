@@ -11,6 +11,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://nextgentherapy.co.uk/romanian-therapy',
   },
+  robots: { index: false, follow: false },
   openGraph: {
     title: 'Terapie în Limba Română | Romanian Therapist UK',
     description:

@@ -36,14 +36,14 @@ module.exports = {
     if (path === '/trust') priority = 0.85;
     if (path === '/location') priority = 0.8;
     if (path === '/about') priority = 0.85;
-    if (path === '/about-therapy') priority = 0.8;
+    if (path === '/is-this-right-for-you') priority = 0.8;
     // Specialized service pages - high priority for targeted SEO
+    if (path === '/therapy-for-women') priority = 0.85;
+    if (path === '/neurodiversity') priority = 0.85;
+    if (path === '/teen-therapy') priority = 0.85;
     if (path === '/child-therapy') priority = 0.85;
-    if (path === '/teenage-therapy') priority = 0.85;
-    if (path === '/young-adult-therapy') priority = 0.85;
-    if (path === '/neurodiversity-therapy') priority = 0.85;
-    if (path === '/lgbtq-therapy') priority = 0.85;
-    if (path === '/parent-support') priority = 0.85;
+    if (path === '/romanian-therapy') priority = 0.85;
+    if (path === '/online-therapy') priority = 0.85;
 
     return {
       loc: path,

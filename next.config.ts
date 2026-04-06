@@ -36,12 +36,12 @@ const nextConfig: NextConfig = {
       // Legacy page redirects
       {
         source: '/therapy-101',
-        destination: '/about-therapy',
+        destination: '/is-this-right-for-you',
         permanent: true,
       },
       {
         source: '/who-i-see',
-        destination: '/about-therapy',
+        destination: '/is-this-right-for-you',
         permanent: true,
       },
       // Testimonials redirects to trust page
@@ -84,12 +84,43 @@ const nextConfig: NextConfig = {
       },
       {
         source: '/therapy101',
-        destination: '/about-therapy',
+        destination: '/is-this-right-for-you',
         permanent: true,
       },
       {
         source: '/reviews-2',
         destination: '/trust',
+        permanent: true,
+      },
+      // Service page consolidation redirects
+      {
+        source: '/teenage-therapy',
+        destination: '/teen-therapy',
+        permanent: true,
+      },
+      {
+        source: '/neurodiversity-therapy',
+        destination: '/neurodiversity',
+        permanent: true,
+      },
+      {
+        source: '/young-adult-therapy',
+        destination: '/therapy-for-women',
+        permanent: true,
+      },
+      {
+        source: '/lgbtq-therapy',
+        destination: '/therapy-for-women',
+        permanent: true,
+      },
+      {
+        source: '/parent-support',
+        destination: '/child-therapy',
+        permanent: true,
+      },
+      {
+        source: '/about-therapy',
+        destination: '/is-this-right-for-you',
         permanent: true,
       },
     ];

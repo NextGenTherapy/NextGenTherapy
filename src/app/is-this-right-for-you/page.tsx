@@ -11,6 +11,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://nextgentherapy.co.uk/is-this-right-for-you',
   },
+  robots: { index: false, follow: false },
   openGraph: {
     title: 'Is This Right for You? | Next Generation Therapy',
     description:

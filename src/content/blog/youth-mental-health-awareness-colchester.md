@@ -358,4 +358,4 @@ Mental health awareness isn't just about recognising problems—it's about creat
 
 If you're supporting a young person through mental health challenges, remember that you don't have to do it alone. Professional help is available, recovery is possible, and there is always hope for positive change and growth.
 
-For more information about youth mental health services in Colchester, explore our [child therapy](/child-therapy), [teenage therapy](/teenage-therapy), and [young adult therapy](/young-adult-therapy) services, or learn about [supporting your child through therapy](/blog/supporting-child-through-therapy) in our comprehensive parent guide.
+For more information about youth mental health services in Colchester, explore our [child therapy](/child-therapy) and [teen therapy](/teen-therapy) services, or learn about [supporting your child through therapy](/blog/supporting-child-through-therapy) in our comprehensive parent guide.

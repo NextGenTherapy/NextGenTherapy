@@ -50,57 +50,10 @@ jest.mock('../../src/components/ui/button', () => {
 });
 
 // Import after mocks
-import AboutTherapy from '../../src/app/about-therapy/page';
 import TrustPage from '../../src/app/trust/page';
 import YouthFamilyFAQ from '../../src/app/youth-family-faq/page';
 
 describe('Remaining Pages', () => {
-  describe('About Therapy Page', () => {
-    beforeEach(() => {
-      render(<AboutTherapy />);
-    });
-
-    it('renders the main heading', () => {
-      const heading = screen.getByRole('heading', { level: 1 });
-      expect(heading).toBeInTheDocument();
-      expect(heading).toHaveTextContent(/Professional Therapy in Colchester/i);
-    });
-
-    it('displays why therapy section', () => {
-      expect(screen.getByText(/Why do people seek therapy\?/i)).toBeInTheDocument();
-    });
-
-    it('displays how therapy helps section', () => {
-      expect(screen.getByText(/How Can Therapy Help\?/i)).toBeInTheDocument();
-    });
-
-    it('displays subtitle', () => {
-      expect(screen.getByText(/Discover the benefits of therapy/i)).toBeInTheDocument();
-    });
-
-    it('displays image', () => {
-      const image = screen.getByAltText(/Visual representation of stress/i);
-      expect(image).toBeInTheDocument();
-    });
-
-    it('has navigation links', () => {
-      const links = screen.getAllByRole('link');
-      expect(links.length).toBeGreaterThan(0);
-    });
-
-    it('renders WebPage schema', () => {
-      const { container } = render(<AboutTherapy />);
-      const scripts = container.querySelectorAll('script[type="application/ld+json"]');
-      const schemas = Array.from(scripts).map((script) =>
-        JSON.parse(script.textContent || '{}')
-      );
-
-      const webPageSchema = schemas.find((s) => s['@type'] === 'WebPage');
-      expect(webPageSchema).toBeDefined();
-      expect(webPageSchema?.name).toBe('About Therapy');
-    });
-  });
-
   describe('Trust Page', () => {
     beforeEach(() => {
       render(<TrustPage />);
