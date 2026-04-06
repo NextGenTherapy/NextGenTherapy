@@ -1,36 +1,413 @@
-/* Therapy for Women - Stub Page Styles */
+/* Therapy for Women - Cornerstone Page Styles */
 
 .page {
   background: var(--color-bg);
-  padding: var(--spacing-section) var(--container-padding-mobile);
+  min-height: 100vh;
+  padding-bottom: var(--spacing-large);
+  width: 100%;
+}
+
+.main {
+  max-width: var(--container-width-desktop);
+  margin: 0 auto;
+  padding: 0 var(--container-padding-mobile);
+  width: 100%;
+  box-sizing: border-box;
 }
 
 @media (min-width: 768px) {
-  .page {
-    padding: var(--spacing-section) var(--container-padding-tablet);
+  .main {
+    padding: 0 var(--container-padding-tablet);
   }
 }
 
 @media (min-width: 1024px) {
-  .page {
+  .main {
+    padding: 0 var(--container-padding-desktop);
+  }
+}
+
+/* Section 2: Recognition Pull-Quotes */
+.recognitionSection {
+  background: var(--color-surface);
+  margin: 0 calc(-1 * var(--container-padding-mobile));
+  padding: var(--spacing-large) var(--container-padding-mobile);
+}
+
+@media (min-width: 768px) {
+  .recognitionSection {
+    margin: 0 calc(-1 * var(--container-padding-tablet));
+    padding: var(--spacing-xlarge) var(--container-padding-tablet);
+  }
+}
+
+@media (min-width: 1024px) {
+  .recognitionSection {
+    margin: 0 calc(-1 * var(--container-padding-desktop));
     padding: var(--spacing-section) var(--container-padding-desktop);
   }
 }
 
-.container {
-  max-width: var(--container-width-content);
+.recognitionContainer {
+  max-width: var(--container-width-desktop);
   margin: 0 auto;
-}
-
-.comingSoon {
   text-align: center;
-  padding: var(--spacing-xlarge) 0;
 }
 
-.message {
+.recognitionHeading {
+  font-family: var(--font-display);
+  font-size: var(--font-size-h3);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-muted);
+  margin-bottom: var(--spacing-large);
+  line-height: var(--line-height-heading);
+}
+
+@media (min-width: 768px) {
+  .recognitionHeading {
+    margin-bottom: var(--spacing-xlarge);
+  }
+}
+
+.quoteList {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 var(--spacing-large);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-medium);
+}
+
+@media (min-width: 768px) {
+  .quoteList {
+    gap: var(--spacing-large);
+    margin: 0 0 var(--spacing-xlarge);
+  }
+}
+
+.quote {
+  font-family: var(--font-display);
+  font-size: var(--font-size-h3);
+  font-style: italic;
+  font-weight: var(--font-weight-regular);
+  color: var(--color-text);
+  line-height: var(--line-height-heading);
+}
+
+@media (min-width: 768px) {
+  .quote {
+    font-size: var(--font-size-h2);
+  }
+}
+
+.recognitionNote {
   font-family: var(--font-body);
-  font-size: var(--font-size-lead);
+  font-size: var(--font-size-body);
   color: var(--color-text-muted);
   line-height: var(--line-height-body);
   margin: 0;
+}
+
+/* Section 3: How I Work */
+.workSection {
+  margin: var(--spacing-large) 0;
+}
+
+@media (min-width: 768px) {
+  .workSection {
+    margin: var(--spacing-xlarge) 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .workSection {
+    margin: var(--spacing-section) 0;
+  }
+}
+
+.workContent {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-large);
+}
+
+@media (min-width: 768px) {
+  .workContent {
+    flex-direction: row;
+    gap: var(--spacing-xlarge);
+    align-items: flex-start;
+  }
+}
+
+.workText {
+  flex: 1;
+  order: 2;
+
+  h2 {
+    font-family: var(--font-display);
+    font-size: var(--font-size-h2);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-text);
+    margin-bottom: var(--spacing-medium);
+    line-height: var(--line-height-heading);
+  }
+
+  p {
+    font-family: var(--font-body);
+    font-size: var(--font-size-body);
+    color: var(--color-text);
+    line-height: var(--line-height-body);
+    margin-bottom: var(--spacing-medium);
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .workText {
+    flex: 0 0 60%;
+    order: 1;
+  }
+}
+
+.workImage {
+  position: relative;
+  width: 100%;
+  max-width: 280px;
+  aspect-ratio: 1 / 1;
+  border-radius: var(--radius-medium);
+  margin: 0 auto;
+  order: 1;
+  overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .workImage {
+    flex: 0 0 40%;
+    max-width: none;
+    order: 2;
+    position: sticky;
+    top: var(--spacing-large);
+    aspect-ratio: 3 / 4;
+  }
+}
+
+.image {
+  border-radius: var(--radius-medium);
+  box-shadow: var(--box-shadow);
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Section 4: What I Often Work With */
+.topicsSection {
+  background: var(--color-surface);
+  margin: var(--spacing-large) calc(-1 * var(--container-padding-mobile));
+  padding: var(--spacing-large) var(--container-padding-mobile);
+}
+
+@media (min-width: 768px) {
+  .topicsSection {
+    margin: var(--spacing-xlarge) calc(-1 * var(--container-padding-tablet));
+    padding: var(--spacing-xlarge) var(--container-padding-tablet);
+  }
+}
+
+@media (min-width: 1024px) {
+  .topicsSection {
+    margin: var(--spacing-section) calc(-1 * var(--container-padding-desktop));
+    padding: var(--spacing-section) var(--container-padding-desktop);
+  }
+}
+
+.topicsContainer {
+  max-width: var(--container-width-desktop);
+  margin: 0 auto;
+
+  h2 {
+    font-family: var(--font-display);
+    font-size: var(--font-size-h2);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-text);
+    margin-bottom: var(--spacing-large);
+    line-height: var(--line-height-heading);
+  }
+}
+
+.topicsGrid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-large);
+}
+
+@media (min-width: 768px) {
+  .topicsGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-xlarge);
+  }
+}
+
+.topicItem {
+  h3 {
+    font-family: var(--font-display);
+    font-size: var(--font-size-h3);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-brand);
+    margin-bottom: var(--spacing-small);
+    line-height: var(--line-height-heading);
+  }
+
+  p {
+    font-family: var(--font-body);
+    font-size: var(--font-size-body);
+    color: var(--color-text);
+    line-height: var(--line-height-body);
+    margin: 0;
+  }
+}
+
+/* Section 5: LGBTQ+ Section */
+.lgbtqSection {
+  background: var(--color-accent-light);
+  margin: var(--spacing-large) calc(-1 * var(--container-padding-mobile));
+  padding: var(--spacing-large) var(--container-padding-mobile);
+}
+
+@media (min-width: 768px) {
+  .lgbtqSection {
+    margin: var(--spacing-xlarge) calc(-1 * var(--container-padding-tablet));
+    padding: var(--spacing-xlarge) var(--container-padding-tablet);
+  }
+}
+
+@media (min-width: 1024px) {
+  .lgbtqSection {
+    margin: var(--spacing-section) calc(-1 * var(--container-padding-desktop));
+    padding: var(--spacing-section) var(--container-padding-desktop);
+  }
+}
+
+.lgbtqContainer {
+  max-width: var(--container-width-desktop);
+  margin: 0 auto;
+
+  h2 {
+    font-family: var(--font-display);
+    font-size: var(--font-size-h2);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-text);
+    margin-bottom: var(--spacing-medium);
+    line-height: var(--line-height-heading);
+  }
+
+  p {
+    font-family: var(--font-body);
+    font-size: var(--font-size-body);
+    color: var(--color-text);
+    line-height: var(--line-height-body);
+    margin-bottom: var(--spacing-medium);
+    max-width: 720px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+/* Section 6: Is This Right For You */
+.fitSection {
+  margin: var(--spacing-large) 0;
+}
+
+@media (min-width: 768px) {
+  .fitSection {
+    margin: var(--spacing-xlarge) 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .fitSection {
+    margin: var(--spacing-section) 0;
+  }
+}
+
+.fitContainer {
+  max-width: 720px;
+
+  h2 {
+    font-family: var(--font-display);
+    font-size: var(--font-size-h2);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-text);
+    margin-bottom: var(--spacing-medium);
+    line-height: var(--line-height-heading);
+  }
+
+  p {
+    font-family: var(--font-body);
+    font-size: var(--font-size-body);
+    color: var(--color-text);
+    line-height: var(--line-height-body);
+    margin-bottom: var(--spacing-medium);
+  }
+}
+
+/* Section 7: CTA */
+.ctaSection {
+  margin: var(--spacing-large) 0;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .ctaSection {
+    margin: var(--spacing-xlarge) 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .ctaSection {
+    margin: var(--spacing-section) 0;
+  }
+}
+
+.ctaContainer {
+  max-width: 600px;
+  margin: 0 auto;
+
+  h2 {
+    font-family: var(--font-display);
+    font-size: var(--font-size-h2);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-text);
+    margin-bottom: var(--spacing-medium);
+    line-height: var(--line-height-heading);
+  }
+
+  p {
+    font-family: var(--font-body);
+    font-size: var(--font-size-body);
+    color: var(--color-text-muted);
+    line-height: var(--line-height-body);
+    margin-bottom: var(--spacing-large);
+  }
+}
+
+/* Links */
+.link {
+  color: var(--color-brand);
+  text-decoration: underline;
+  text-underline-offset: var(--spacing-xs);
+  transition: var(--transition-fast);
+
+  &:hover {
+    color: var(--color-brand-hover);
+  }
+
+  &:focus {
+    outline: var(--outline-width) solid var(--color-brand);
+    outline-offset: var(--outline-offset);
+  }
 }
