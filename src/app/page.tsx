@@ -142,8 +142,8 @@ export default function Home() {
           {/* Section 2: Trust Bar */}
           <section className={styles.trustBar} aria-label="Credentials">
             <div className={styles.trustBarInner}>
-              <span className={styles.trustItem}>BACP Registered Member</span>
-              <span className={styles.trustItem}>Colchester & Online</span>
+              <span className={styles.trustItem}>BACP Registered</span>
+              <span className={styles.trustItem}>Colchester & Online (UK)</span>
               <span className={styles.trustItem}>English & Romanian</span>
             </div>
           </section>
@@ -193,7 +193,7 @@ export default function Home() {
                   considered, and one person at a time.&rdquo;
                 </blockquote>
                 <p className={styles.credentials}>
-                  Andreea Horhocea (University of Essex, 2020), BACP Registered
+                  Andreea Horhocea — MSc Psych (University of Essex, 2020), BACP Registered
                 </p>
                 <Link href="/about" className={styles.aboutLink}>
                   More about me →
