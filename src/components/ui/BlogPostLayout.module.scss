@@ -186,7 +186,7 @@
     font-family: monospace;
     font-size: var(--font-size-small);
     background: var(--color-surface);
-    padding: 2px 6px;
+    padding: var(--spacing-xs) var(--spacing-small);
     border-radius: var(--radius-small);
   }
 

@@ -55,7 +55,7 @@ export default function Footer() {
               rel="noopener noreferrer"
               title="Visit our Facebook page"
             >
-              <Image src="/images/facebook-opt.png" alt="Facebook" width={32} height={32} />
+              <Image src="/images/facebook-opt.png" alt="Facebook" width={32} height={32} unoptimized />
             </a>
             <a
               href="https://www.instagram.com/nextgentherapycolchester?igsh=MWx2N2g0NnI0eTVveQ%3D%3D&utm_source=qr"
@@ -63,7 +63,7 @@ export default function Footer() {
               rel="noopener noreferrer"
               title="Visit our Instagram page"
             >
-              <Image src="/images/instagram-opt.png" alt="Instagram" width={32} height={32} />
+              <Image src="/images/instagram-opt.png" alt="Instagram" width={32} height={32} unoptimized />
             </a>
             <a
               href="https://www.bacp.co.uk/therapists/385976/andreea-horhocea/london-e16"

@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import PageHero from '@/components/ui/PageHero';
+import CTABlock from '@/components/ui/CTABlock';
 import styles from './youth-family-faq.module.scss';
-import buttonStyles from '../../components/ui/button.module.scss';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
@@ -484,31 +484,7 @@ export default function YouthFamilyFAQPage() {
           </div>
         </section>
 
-        {/* Still Have Questions Section */}
-        <section className={styles.ctaSection}>
-          <div className={styles.ctaContent}>
-            <h2>Still Have Questions?</h2>
-            <p>
-              Every family&apos;s situation is unique, and you may have specific questions not
-              covered here. I&apos;m happy to discuss your particular circumstances and how therapy
-              might help your child, teenager, or young adult.
-            </p>
-
-            <div className={styles.ctaButtons}>
-              <Link href="/contact" className={buttonStyles.button}>
-                Ask Your Question
-              </Link>
-              <Link href="/about" className={buttonStyles.button}>
-                Learn About My Approach
-              </Link>
-            </div>
-
-            <p className={styles.contactNote}>
-              All consultations are confidential and take place in my comfortable practice in
-              Colchester, Essex.
-            </p>
-          </div>
-        </section>
+        <CTABlock />
 
         {/* Related Services */}
         <section className={styles.relatedSection}>

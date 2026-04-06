@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
+import PageHero from '@/components/ui/PageHero';
+import CTABlock from '@/components/ui/CTABlock';
 import styles from './trust.module.scss';
-import Link from 'next/link';
 
 const siteUrl = 'https://nextgentherapy.co.uk';
 
@@ -101,13 +102,11 @@ export default function TestimonialsPage() {
       />
       <div className={styles.container}>
         <main className={styles.main}>
-          <header className={styles.header}>
-            <h1>Building Trust Through Professional Care</h1>
-            <p className={styles.subtitle}>
-              Creating a safe, confidential environment where healing can begin in Colchester,
-              Essex.
-            </p>
-          </header>
+          <PageHero
+            eyebrow="Trust & Care"
+            title="Building Trust Through Professional Care"
+            lead="Creating a safe, confidential environment where healing can begin in Colchester, Essex."
+          />
 
           <section className={styles.approachSection}>
             <div className={styles.approach}>
@@ -172,21 +171,7 @@ export default function TestimonialsPage() {
             </div>
           </section>
 
-          <section className={styles.ctaSection}>
-            <h2>Ready to Begin Your Journey?</h2>
-            <p>
-              Take the first step towards healing and personal growth with professional,
-              confidential therapy support in Colchester.
-            </p>
-            <div className={styles.ctaButtons}>
-              <Link href="/book-now" className={styles.primaryButton}>
-                Book Now
-              </Link>
-              <Link href="/about" className={styles.secondaryButton}>
-                Learn About My Approach
-              </Link>
-            </div>
-          </section>
+          <CTABlock />
         </main>
       </div>
     </>

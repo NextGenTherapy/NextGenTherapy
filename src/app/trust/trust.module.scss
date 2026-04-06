@@ -22,27 +22,6 @@
   gap: var(--spacing-section);
 }
 
-.header {
-  text-align: center;
-  padding: var(--spacing-section) 0 var(--spacing-large);
-}
-
-.header h1 {
-  font-size: var(--font-size-h1);
-  color: var(--color-accent);
-  margin-bottom: var(--spacing-medium);
-  font-weight: 600;
-  font-family: var(--font-body);
-}
-
-.subtitle {
-  font-size: var(--font-size-lead);
-  color: var(--color-text);
-  max-width: 600px;
-  margin: 0 auto;
-  line-height: var(--line-height-body);
-}
-
 .approachSection {
   margin: var(--spacing-section) 0;
 }
@@ -157,79 +136,9 @@
   line-height: var(--line-height-body);
 }
 
-.ctaSection {
-  background: var(--color-bg);
-  padding: var(--spacing-section) var(--spacing-xlarge);
-  border-radius: var(--radius-medium);
-  text-align: center;
-  margin-top: var(--spacing-section);
-}
-
-.ctaSection h2 {
-  font-size: var(--font-size-h2);
-  color: var(--color-accent);
-  margin-bottom: var(--spacing-medium);
-  font-weight: 600;
-  font-family: var(--font-body);
-}
-
-.ctaSection p {
-  font-size: var(--font-size-lead);
-  color: var(--color-text);
-  margin-bottom: var(--spacing-xlarge);
-  max-width: 500px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.ctaButtons {
-  display: flex;
-  gap: var(--spacing-medium);
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.primaryButton {
-  background: var(--color-brand);
-  color: var(--color-header-text);
-  padding: var(--spacing-medium) var(--spacing-xlarge);
-  border-radius: var(--radius-small);
-  text-decoration: none;
-  font-weight: 500;
-  transition: var(--transition-normal);
-  border: var(--border-width-thick) solid var(--color-brand);
-  font-family: var(--font-body);
-}
-
-.primaryButton:hover {
-  background: var(--color-brand-hover);
-  border-color: var(--color-brand-hover);
-}
-
-.secondaryButton {
-  background: transparent;
-  color: var(--color-brand);
-  padding: var(--spacing-medium) var(--spacing-xlarge);
-  border: var(--border-width-thick) solid var(--color-brand);
-  border-radius: var(--radius-small);
-  text-decoration: none;
-  font-weight: 500;
-  transition: var(--transition-normal);
-  font-family: var(--font-body);
-}
-
-.secondaryButton:hover {
-  background: var(--color-brand);
-  color: var(--color-header-text);
-}
-
 @media (max-width: 768px) {
   .container {
     padding: var(--container-padding-mobile);
-  }
-
-  .header h1 {
-    font-size: var(--font-size-h2);
   }
 
   .testimonialsGrid {
@@ -239,24 +148,5 @@
 
   .testimonial {
     padding: var(--spacing-large);
-  }
-
-  .ctaSection {
-    padding: var(--spacing-xlarge) var(--container-padding-mobile);
-  }
-
-  .ctaSection h2 {
-    font-size: var(--font-size-h3);
-  }
-
-  .ctaButtons {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .primaryButton,
-  .secondaryButton {
-    width: 100%;
-    max-width: 300px;
   }
 }

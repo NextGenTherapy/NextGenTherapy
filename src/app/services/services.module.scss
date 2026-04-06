@@ -931,7 +931,7 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: var(--spacing-xlarge) var(--spacing-medium);
-  background: linear-gradient(135deg, var(--color-accent-light), var(--color-surface));
+  background: var(--color-surface);
   border-radius: var(--radius-medium);
 }
 
@@ -1109,7 +1109,7 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: var(--spacing-xlarge) var(--spacing-medium);
-  background: linear-gradient(135deg, var(--color-surface), var(--color-accent-light));
+  background: var(--color-surface);
   border-radius: var(--radius-medium);
   text-align: center;
 }
