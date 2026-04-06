@@ -1,0 +1,36 @@
+/* Romanian Therapy - Stub Page Styles */
+
+.page {
+  background: var(--color-bg);
+  padding: var(--spacing-section) var(--container-padding-mobile);
+}
+
+@media (min-width: 768px) {
+  .page {
+    padding: var(--spacing-section) var(--container-padding-tablet);
+  }
+}
+
+@media (min-width: 1024px) {
+  .page {
+    padding: var(--spacing-section) var(--container-padding-desktop);
+  }
+}
+
+.container {
+  max-width: var(--container-width-content);
+  margin: 0 auto;
+}
+
+.comingSoon {
+  text-align: center;
+  padding: var(--spacing-xlarge) 0;
+}
+
+.message {
+  font-family: var(--font-body);
+  font-size: var(--font-size-lead);
+  color: var(--color-text-muted);
+  line-height: var(--line-height-body);
+  margin: 0;
+}

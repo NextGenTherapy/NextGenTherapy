@@ -8,38 +8,31 @@ function getMetadata(): Metadata {
 
   return {
     metadataBase: new URL(siteUrl),
-    title: 'Colchester Therapist | BACP Registered | Next Generation',
+    title: 'Psychodynamic Therapy in Colchester & Online | Andreea Horhocea',
     description:
-      'Professional therapy in Colchester & online. BACP registered therapist for anxiety, depression & relationships. Specialising in young people.',
+      'Psychodynamic therapy in Colchester and online (UK-wide) for women, neurodivergent adults and teenagers. BACP registered. Sessions in English and Romanian. Free 15-minute intro call.',
     keywords: [
       'therapy Colchester',
-      'therapist Colchester',
-      'therapy sessions Colchester',
+      'psychodynamic therapist Colchester',
       'BACP therapist Essex',
-      'registered therapist Colchester',
-      'qualified therapist Essex',
-      'professional therapy Colchester',
-      'therapy Colchester Essex',
-      'online therapy UK',
-      'depression therapy Colchester',
+      'therapy for women Colchester',
+      'burnout therapy',
       'anxiety therapy Colchester',
-      'relationship therapy Essex',
-      'child therapy Colchester',
-      'teenage therapy Colchester',
-      'young adult therapy',
-      'mental health therapy Essex',
-      'therapy services Colchester',
+      'neurodivergent therapist Essex',
+      'ADHD therapist Colchester',
+      'autism therapist Essex',
+      'teen therapy Colchester',
+      'online therapy UK',
+      'Romanian therapist UK',
       'Andreea Horhocea therapist',
+      'psychodynamic therapy Essex',
       'therapist near me Essex',
-      'therapy appointments Colchester',
-      'family therapy support',
-      'psychodynamic therapy',
     ],
     authors: [{ name: 'Andreea Horhocea' }],
     openGraph: {
-      title: 'Therapy Colchester | BACP Registered Therapist',
+      title: 'Psychodynamic Therapy in Colchester & Online | Andreea Horhocea',
       description:
-        'Professional therapy in Colchester & online. Expert help for anxiety, depression & relationships. Specialising in young people. BACP registered.',
+        'Psychodynamic therapy in Colchester and online (UK-wide) for women, neurodivergent adults and teenagers. BACP registered. Free 15-minute intro call.',
       url: siteUrl,
       siteName: 'Next Generation Therapy',
       locale: 'en_GB',
@@ -49,15 +42,15 @@ function getMetadata(): Metadata {
           url: 'https://nextgentherapy.co.uk/images/default-social-share.jpg',
           width: 1200,
           height: 630,
-          alt: 'Next Generation Therapy - Professional Therapy Services in Colchester',
+          alt: 'Andreea Horhocea - Psychodynamic Therapist in Colchester',
         },
       ],
     },
     twitter: {
       card: 'summary_large_image',
-      title: 'Professional Therapy Services Colchester | Next Generation Therapy',
+      title: 'Psychodynamic Therapy in Colchester & Online | Andreea Horhocea',
       description:
-        'Professional psychodynamic therapy in Colchester & online. Expert help for anxiety, depression, relationships & personal growth. Specialising in young people.',
+        'Psychodynamic therapy in Colchester and online (UK-wide) for women, neurodivergent adults and teenagers. BACP registered. Free 15-minute intro call.',
       images: ['https://nextgentherapy.co.uk/images/default-social-share.jpg'],
     },
     alternates: {
@@ -115,18 +108,20 @@ export default function Home() {
             <div className={styles.heroContent}>
               <p className={styles.eyebrow}>Colchester & Online · BACP Registered</p>
               <h1 className={styles.headline}>
-                You don&apos;t have to keep holding it together alone.
+                You fit everything in. And somehow you still feel like you&apos;re slipping
+                something.
               </h1>
               <p className={styles.subheading}>
-                Psychodynamic therapy for children, teenagers and adults — in Colchester and online
-                across the UK.
+                I&apos;m Andreea — a psychodynamic psychotherapist in Colchester and online. I work
+                mainly with women, neurodivergent adults, and teenagers who look fine from the
+                outside and are exhausted on the inside.
               </p>
               <div className={styles.heroCta}>
                 <Link href="/book-now" className={styles.primaryButton}>
-                  Book a Free Consultation
+                  Book a Free 15-Minute Call
                 </Link>
-                <Link href="/about-therapy" className={styles.secondaryLink}>
-                  Learn about my approach →
+                <Link href="/is-this-right-for-you" className={styles.secondaryLink}>
+                  See if we&apos;re the right fit →
                 </Link>
               </div>
             </div>
@@ -149,37 +144,39 @@ export default function Home() {
             <div className={styles.trustBarInner}>
               <span className={styles.trustItem}>BACP Registered Member</span>
               <span className={styles.trustItem}>Colchester & Online</span>
-              <span className={styles.trustItem}>All Ages Welcome</span>
+              <span className={styles.trustItem}>English & Romanian</span>
             </div>
           </section>
 
-          {/* Section 3: How I Can Help */}
+          {/* Section 3: What I Work With */}
           <section className={styles.services} aria-labelledby="services-title">
             <h2 id="services-title" className={styles.sectionTitle}>
-              How I Can Help
+              What I Work With
             </h2>
             <div className={styles.servicesGrid}>
-              <Link href="/child-therapy" className={styles.serviceCard}>
-                <h3>Child Therapy</h3>
+              <Link href="/therapy-for-women" className={styles.serviceCard}>
+                <h3>Therapy for Women</h3>
                 <p>
-                  A safe, nurturing space for children to explore their emotions through play and
-                  creative expression. Helping young minds process difficult experiences.
+                  For the overthinking, the burnout, the body image stuff, the &ldquo;I don&apos;t
+                  know who I am anymore.&rdquo; Work that takes your inner life seriously without
+                  pathologising it.
                 </p>
                 <span className={styles.serviceLink}>Learn more →</span>
               </Link>
-              <Link href="/teenage-therapy" className={styles.serviceCard}>
-                <h3>Teenage Therapy</h3>
+              <Link href="/neurodiversity-therapy" className={styles.serviceCard}>
+                <h3>ADHD & Autism in Adults</h3>
                 <p>
-                  Supporting adolescents through the unique challenges of growing up. Building
-                  resilience, self-understanding and healthy coping strategies.
+                  Affirmative therapy for late-diagnosed and self-identified neurodivergent adults.
+                  The room is quiet, sensory-aware, and stimming is welcome.
                 </p>
                 <span className={styles.serviceLink}>Learn more →</span>
               </Link>
-              <Link href="/young-adult-therapy" className={styles.serviceCard}>
-                <h3>Adult & Young Adult Therapy</h3>
+              <Link href="/teen-therapy" className={styles.serviceCard}>
+                <h3>Therapy for Teenagers</h3>
                 <p>
-                  Compassionate support for adults navigating anxiety, depression, relationships and
-                  life transitions. Creating lasting positive change.
+                  For teens aged 13–17 navigating anxiety, self-harm, school, friendships, identity.
+                  I work alongside parents when it&apos;s helpful and always on the young
+                  person&apos;s terms.
                 </p>
                 <span className={styles.serviceLink}>Learn more →</span>
               </Link>
@@ -191,12 +188,12 @@ export default function Home() {
             <div className={styles.aboutInner}>
               <div className={styles.aboutContent}>
                 <blockquote className={styles.quote}>
-                  &ldquo;I created this space to offer a therapeutic experience where you can feel
-                  safe, seen, and understood — a space where your story matters. Whatever brings you
-                  here, you&apos;re welcome.&rdquo;
+                  &ldquo;I&apos;ve worked in NHS schools, SEN provision, Mind, and YMCA alongside my
+                  private practice. What I do now is a continuation of all of that — slower, more
+                  considered, and one person at a time.&rdquo;
                 </blockquote>
                 <p className={styles.credentials}>
-                  Andreea Horhocea — MSc Psychodynamic Psychotherapy, BACP Registered
+                  Andreea Horhocea (University of Essex, 2020), BACP Registered
                 </p>
                 <Link href="/about" className={styles.aboutLink}>
                   More about me →
@@ -206,15 +203,33 @@ export default function Home() {
             </div>
           </section>
 
-          {/* Section 5: CTA */}
+          {/* Section 5: Romanian Language */}
+          <section className={styles.romanian} aria-label="Romanian language therapy">
+            <div className={styles.romanianInner}>
+              <h2 className={styles.romanianTitle}>Terapie în limba română</h2>
+              <p className={styles.romanianText}>
+                I also offer therapy in Romanian. If you grew up between Romania and the UK, there
+                are things that are easier to talk about in your first language — and things about
+                the experience of moving between cultures that are hard to explain to someone who
+                hasn&apos;t lived it.
+              </p>
+              <Link href="/romanian-therapy" className={styles.romanianLink}>
+                Learn more →
+              </Link>
+            </div>
+          </section>
+
+          {/* Section 6: CTA */}
           <section className={styles.cta} aria-label="Book a consultation">
             <div className={styles.ctaInner}>
-              <h2 className={styles.ctaTitle}>Ready to take the first step?</h2>
+              <h2 className={styles.ctaTitle}>Not sure yet? That&apos;s what the free call is for.</h2>
               <p className={styles.ctaText}>
-                I offer a free 15-minute phone consultation. No commitment required.
+                The free 15-minute call is not a first session. It&apos;s an informal conversation —
+                you ask what you want, I answer honestly, and we both decide whether working
+                together feels right. No pressure.
               </p>
               <Link href="/book-now" className={styles.primaryButton}>
-                Book Now
+                Book a Free 15-Minute Call
               </Link>
             </div>
           </section>

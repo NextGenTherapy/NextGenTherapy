@@ -438,7 +438,68 @@
 }
 
 /* ===========================================
-   SECTION 5: CTA
+   SECTION 5: ROMANIAN LANGUAGE
+   =========================================== */
+
+.romanian {
+  background: var(--color-surface);
+  padding: var(--spacing-section) var(--container-padding-mobile);
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .romanian {
+    padding: var(--spacing-section) var(--container-padding-tablet);
+  }
+}
+
+@media (min-width: 1024px) {
+  .romanian {
+    padding: var(--spacing-section) var(--container-padding-desktop);
+  }
+}
+
+.romanianInner {
+  max-width: 700px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-large);
+}
+
+.romanianTitle {
+  font-family: var(--font-display);
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-light);
+  font-style: italic;
+  color: var(--color-text);
+  margin: 0;
+}
+
+.romanianText {
+  font-family: var(--font-body);
+  font-size: var(--font-size-lead);
+  color: var(--color-text-muted);
+  line-height: var(--line-height-body);
+  margin: 0;
+}
+
+.romanianLink {
+  font-family: var(--font-body);
+  font-size: var(--font-size-body);
+  color: var(--color-brand);
+  text-decoration: none;
+  transition: var(--transition-normal);
+
+  &:hover,
+  &:focus {
+    color: var(--color-brand-hover);
+  }
+}
+
+/* ===========================================
+   SECTION 6: CTA
    =========================================== */
 
 .cta {
