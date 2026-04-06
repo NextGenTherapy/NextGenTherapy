@@ -12,6 +12,8 @@ jest.mock('next/image', () => {
     width?: number;
     className?: string;
     priority?: boolean;
+    fill?: boolean;
+    sizes?: string;
   }) {
     // eslint-disable-next-line @next/next/no-img-element
     return <img src={props.src} alt={props.alt} className={props.className} />;
@@ -22,11 +24,17 @@ jest.mock('next/link', () => {
   return function MockLink({
     children,
     href,
+    className,
   }: {
     children: React.ReactNode;
     href: string;
+    className?: string;
   }) {
-    return <a href={href}>{children}</a>;
+    return (
+      <a href={href} className={className}>
+        {children}
+      </a>
+    );
   };
 });
 
@@ -57,80 +65,97 @@ describe('About Page', () => {
   });
 
   describe('Page Structure', () => {
+    it('renders the eyebrow text', () => {
+      expect(screen.getByText(/About Andreea/i)).toBeInTheDocument();
+    });
+
     it('renders the main heading', () => {
       const heading = screen.getByRole('heading', { level: 1 });
       expect(heading).toBeInTheDocument();
-      expect(heading).toHaveTextContent(/About Me/i);
+      expect(heading).toHaveTextContent(/Hi, I'm Andreea/i);
     });
 
     it('renders the main image', () => {
-      const image = screen.getByAltText(/Andreea Horhocea - Psychodynamic Psychotherapist/i);
+      const image = screen.getByAltText(/Andreea Horhocea — Psychodynamic Psychotherapist/i);
       expect(image).toBeInTheDocument();
       expect(image).toHaveAttribute('src', '/images/andreea.jpg');
-    });
-
-    it('renders the greeting section', () => {
-      expect(screen.getByText(/Hi There/i)).toBeInTheDocument();
-      expect(screen.getByText(/It's lovely to meet you/i)).toBeInTheDocument();
     });
   });
 
   describe('Content Sections', () => {
-    it('displays therapist qualifications', () => {
+    it('displays why I do this work section', () => {
+      expect(screen.getByRole('heading', { name: /Why I do this work/i })).toBeInTheDocument();
       expect(
-        screen.getByText(/psychodynamic psychotherapist with a Master's degree/i)
+        screen.getByText(/I became a therapist because I grew up without access/i)
       ).toBeInTheDocument();
     });
 
-    it('displays approach section', () => {
-      expect(screen.getByText(/My Approach/i)).toBeInTheDocument();
-      expect(
-        screen.getByText(/I created this space to offer a therapeutic experience/i)
-      ).toBeInTheDocument();
+    it('displays training section', () => {
+      expect(screen.getByText(/Where I trained and where I've worked/i)).toBeInTheDocument();
     });
 
-    it('displays practice section', () => {
-      expect(screen.getByText(/A Place to Begin/i)).toBeInTheDocument();
+    it('displays MSc qualification', () => {
+      expect(screen.getByText(/MSc Psychodynamic Psychotherapy/i)).toBeInTheDocument();
+      expect(screen.getByText(/University of Essex, 2020/i)).toBeInTheDocument();
     });
 
-    it('mentions BACP registration', () => {
-      expect(
-        screen.getByText(/British Association for Counselling and Psychotherapy/i)
-      ).toBeInTheDocument();
+    it('displays BACP registration', () => {
+      expect(screen.getByText(/BACP Registered Member \(MBACP\)/i)).toBeInTheDocument();
+    });
+
+    it('displays CPD training', () => {
+      expect(screen.getByText(/Post-qualification training \(CPD\)/i)).toBeInTheDocument();
+      expect(screen.getByText(/Neurodiversity \(ADHD and autism/i)).toBeInTheDocument();
+      expect(screen.getByText(/Eating disorders/i)).toBeInTheDocument();
+    });
+
+    it('displays experience section', () => {
+      expect(screen.getByText(/NHS Essex/i)).toBeInTheDocument();
+      expect(screen.getByText(/Sir Bobby Robson School, Ipswich/i)).toBeInTheDocument();
+      expect(screen.getByText(/Mind \(Mid & North East Essex\)/i)).toBeInTheDocument();
+      expect(screen.getByText(/YMCA \(ongoing\)/i)).toBeInTheDocument();
     });
   });
 
-  describe('Gallery Section', () => {
-    it('renders therapy environment heading', () => {
-      expect(screen.getByText(/My Therapy Environment/i)).toBeInTheDocument();
+  describe('How I Work Section', () => {
+    it('displays how I work heading', () => {
+      expect(screen.getByText(/How I work/)).toBeInTheDocument();
     });
 
-    it('renders gallery images', () => {
-      const galleryImages = [
-        'Picture of office with laptop',
-        'Picture of doll house for play therapy for children',
-        'Picture of shelves including games for children to play with',
-      ];
+    it('displays the approach description', () => {
+      expect(screen.getByText(/I'm a psychodynamic therapist/i)).toBeInTheDocument();
+    });
 
-      galleryImages.forEach((alt) => {
-        expect(screen.getByAltText(alt)).toBeInTheDocument();
-      });
+    it('displays who I work with', () => {
+      expect(
+        screen.getByText(/I work with women, neurodivergent adults, teenagers/i)
+      ).toBeInTheDocument();
+    });
+
+    it('displays who I do not work with', () => {
+      expect(screen.getByText(/Who I don't work with/i)).toBeInTheDocument();
+      expect(screen.getByText(/couples therapy/i)).toBeInTheDocument();
+    });
+  });
+
+  describe('Romanian Section', () => {
+    it('displays therapy in Romanian heading', () => {
+      expect(screen.getByText(/Therapy in Romanian/)).toBeInTheDocument();
+    });
+
+    it('displays Romanian CTA', () => {
+      expect(screen.getByText(/Dacă preferi terapia în limba română/i)).toBeInTheDocument();
     });
   });
 
   describe('Navigation Links', () => {
-    it('renders About Therapy link', () => {
-      const link = screen.getByRole('link', { name: /About Therapy/i });
-      expect(link).toHaveAttribute('href', '/about-therapy');
+    it('renders Book a free 15-minute call link', () => {
+      const link = screen.getByRole('link', { name: /Book a free 15-minute call/i });
+      expect(link).toHaveAttribute('href', '/book-now');
     });
 
-    it('renders Services link', () => {
-      const link = screen.getByRole('link', { name: /Services/i });
-      expect(link).toHaveAttribute('href', '/services');
-    });
-
-    it('renders Book Now link', () => {
-      const link = screen.getByRole('link', { name: /Book Now/i });
+    it('renders Romanian contact link', () => {
+      const link = screen.getByRole('link', { name: /contactează-mă aici/i });
       expect(link).toHaveAttribute('href', '/book-now');
     });
   });

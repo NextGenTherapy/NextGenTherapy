@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://nextgentherapy.co.uk/teen-therapy',
   },
-  robots: { index: false, follow: false },
+  robots: { index: true, follow: true },
   openGraph: {
     title: 'Teen Therapy Colchester | Professional Support for Teens',
     description:
