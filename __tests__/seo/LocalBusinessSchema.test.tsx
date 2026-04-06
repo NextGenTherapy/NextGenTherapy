@@ -108,18 +108,13 @@ describe('LocalBusinessSchema Component', () => {
 
     expect(jsonData.hasOfferCatalog).toBeDefined();
     expect(jsonData.hasOfferCatalog.name).toBe('Therapy Services');
-    expect(jsonData.hasOfferCatalog.itemListElement).toHaveLength(2);
+    expect(jsonData.hasOfferCatalog.itemListElement).toHaveLength(1);
 
     // Check individual therapy service
     const individualTherapy = jsonData.hasOfferCatalog.itemListElement[0];
     expect(individualTherapy.itemOffered.name).toBe('Individual Therapy');
     expect(individualTherapy.price).toBe('60');
     expect(individualTherapy.priceCurrency).toBe('GBP');
-
-    // Check free consultation
-    const consultation = jsonData.hasOfferCatalog.itemListElement[1];
-    expect(consultation.itemOffered.name).toBe('Free Consultation');
-    expect(consultation.price).toBe('0');
   });
 
   it('includes payment information', () => {

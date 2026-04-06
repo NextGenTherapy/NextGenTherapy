@@ -22,21 +22,40 @@ jest.mock('next/link', () => {
   };
 });
 
+jest.mock('../../src/components/ui/button', () => {
+  return function MockButton({
+    children,
+    href,
+  }: {
+    children: React.ReactNode;
+    href?: string;
+  }) {
+    if (href) {
+      return <a href={href}>{children}</a>;
+    }
+    return <button type="button">{children}</button>;
+  };
+});
+
 describe('Pricing Page', () => {
   beforeEach(() => {
     render(<Pricing />);
   });
 
   describe('Page Structure', () => {
+    it('renders the page hero with eyebrow', () => {
+      expect(screen.getByText(/Therapy Pricing/i)).toBeInTheDocument();
+    });
+
     it('renders the main heading', () => {
       const heading = screen.getByRole('heading', { level: 1 });
       expect(heading).toBeInTheDocument();
-      expect(heading).toHaveTextContent(/Therapy Pricing/i);
+      expect(heading).toHaveTextContent(/Transparent, straightforward pricing/i);
     });
 
-    it('renders the subtitle', () => {
+    it('renders the lead text', () => {
       expect(
-        screen.getByText(/Transparent, straightforward pricing/i)
+        screen.getByText(/£60 per session.*50 minutes.*No hidden fees/i)
       ).toBeInTheDocument();
     });
   });
@@ -52,7 +71,13 @@ describe('Pricing Page', () => {
     });
 
     it('displays per session text', () => {
-      expect(screen.getByText(/per session/i)).toBeInTheDocument();
+      // "per session" appears in lead text and pricing card
+      const matches = screen.getAllByText(/per session/i);
+      expect(matches.length).toBeGreaterThan(0);
+    });
+
+    it('displays Therapy Sessions heading', () => {
+      expect(screen.getByText('Therapy Sessions')).toBeInTheDocument();
     });
   });
 
@@ -68,18 +93,6 @@ describe('Pricing Page', () => {
       expect(screen.getByText(/Confidential, safe environment/i)).toBeInTheDocument();
       expect(screen.getByText(/In-person or online sessions/i)).toBeInTheDocument();
       expect(screen.getByText(/Flexible scheduling/i)).toBeInTheDocument();
-    });
-  });
-
-  describe('Free Consultation', () => {
-    it('displays free consultation section', () => {
-      expect(screen.getByText(/Free Initial Consultation/i)).toBeInTheDocument();
-    });
-
-    it('describes the consultation offer', () => {
-      expect(
-        screen.getByText(/free 15-20 minute consultation/i)
-      ).toBeInTheDocument();
     });
   });
 
@@ -119,8 +132,20 @@ describe('Pricing Page', () => {
 
     it('displays booking note', () => {
       expect(
-        screen.getByText(/Contact me to arrange your free consultation/i)
+        screen.getByText(/Get in touch to arrange your first session/i)
       ).toBeInTheDocument();
+    });
+  });
+
+  describe('CTA Block', () => {
+    it('renders the CTA section', () => {
+      expect(screen.getByText(/Ready to take the first step/i)).toBeInTheDocument();
+    });
+
+    it('renders book consultation link in CTA', () => {
+      // CTA block uses "Book Now" as link text
+      const bookLinks = screen.getAllByRole('link', { name: /Book.*(?:Now|Session)/i });
+      expect(bookLinks.length).toBeGreaterThan(0);
     });
   });
 

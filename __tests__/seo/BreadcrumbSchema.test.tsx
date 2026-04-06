@@ -98,15 +98,15 @@ describe('BreadcrumbSchema Component', () => {
     expect(faqItem.item).toBe('https://nextgentherapy.co.uk/faq');
   });
 
-  it('generates breadcrumbs for testimonials page', () => {
-    usePathname.mockReturnValue('/testimonials');
+  it('generates breadcrumbs for trust page', () => {
+    usePathname.mockReturnValue('/trust');
     const { container } = render(<BreadcrumbSchema />);
     const scriptTag = container.querySelector('script[type="application/ld+json"]');
     const jsonData = JSON.parse(scriptTag?.textContent || '{}');
 
-    const testimonialsItem = jsonData.itemListElement.find((item: any) => item.position === 2);
-    expect(testimonialsItem.name).toBe('Trust & Care');
-    expect(testimonialsItem.item).toBe('https://nextgentherapy.co.uk/testimonials');
+    const trustItem = jsonData.itemListElement.find((item: any) => item.position === 2);
+    expect(trustItem.name).toBe('Trust & Care');
+    expect(trustItem.item).toBe('https://nextgentherapy.co.uk/trust');
   });
 
   it('generates breadcrumbs for book-now page', () => {
@@ -120,13 +120,16 @@ describe('BreadcrumbSchema Component', () => {
     expect(bookNowItem.item).toBe('https://nextgentherapy.co.uk/book-now');
   });
 
-  it('returns null for unsupported paths like /blog', () => {
+  it('generates breadcrumbs for blog page', () => {
     usePathname.mockReturnValue('/blog');
     const { container } = render(<BreadcrumbSchema />);
     const scriptTag = container.querySelector('script[type="application/ld+json"]');
+    const jsonData = JSON.parse(scriptTag?.textContent || '{}');
 
-    // Component doesn't handle /blog directly, only /blog/post-slug, so it returns null
-    expect(scriptTag).toBeNull();
+    expect(jsonData.itemListElement).toHaveLength(2);
+    const blogItem = jsonData.itemListElement.find((item: any) => item.position === 2);
+    expect(blogItem.name).toBe('Blog');
+    expect(blogItem.item).toBe('https://nextgentherapy.co.uk/blog');
   });
 
   it('generates breadcrumbs with custom items', () => {

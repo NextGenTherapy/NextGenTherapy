@@ -38,9 +38,9 @@ describe('CookieConsent Component', () => {
 
     render(<CookieConsent />);
 
-    expect(screen.getByText('We use cookies')).toBeInTheDocument();
-    expect(screen.getByText('Accept all cookies')).toBeInTheDocument();
-    expect(screen.getByText('Essential cookies only')).toBeInTheDocument();
+    expect(screen.getByText(/We use cookies to improve your experience/i)).toBeInTheDocument();
+    expect(screen.getByText('Accept')).toBeInTheDocument();
+    expect(screen.getByText('Essential only')).toBeInTheDocument();
   });
 
   test('does not show banner when consent is already given', () => {
@@ -48,7 +48,7 @@ describe('CookieConsent Component', () => {
 
     render(<CookieConsent />);
 
-    expect(screen.queryByText('We use cookies')).not.toBeInTheDocument();
+    expect(screen.queryByText(/We use cookies/i)).not.toBeInTheDocument();
   });
 
   test('sets localStorage and hides banner when user accepts cookies', async () => {
@@ -56,13 +56,13 @@ describe('CookieConsent Component', () => {
 
     render(<CookieConsent />);
 
-    const acceptButton = screen.getByText('Accept all cookies');
+    const acceptButton = screen.getByText('Accept');
     fireEvent.click(acceptButton);
 
     expect(localStorageMock.setItem).toHaveBeenCalledWith('cookie-consent', 'accepted');
 
     await waitFor(() => {
-      expect(screen.queryByText('We use cookies')).not.toBeInTheDocument();
+      expect(screen.queryByText(/We use cookies/i)).not.toBeInTheDocument();
     });
   });
 
@@ -71,7 +71,7 @@ describe('CookieConsent Component', () => {
 
     render(<CookieConsent />);
 
-    const declineButton = screen.getByText('Essential cookies only');
+    const declineButton = screen.getByText('Essential only');
     fireEvent.click(declineButton);
 
     expect(localStorageMock.setItem).toHaveBeenCalledWith('cookie-consent', 'declined');
@@ -84,7 +84,7 @@ describe('CookieConsent Component', () => {
     });
 
     await waitFor(() => {
-      expect(screen.queryByText('We use cookies')).not.toBeInTheDocument();
+      expect(screen.queryByText(/We use cookies/i)).not.toBeInTheDocument();
     });
   });
 
@@ -93,7 +93,7 @@ describe('CookieConsent Component', () => {
 
     render(<CookieConsent />);
 
-    const privacyLink = screen.getByText('Learn more in our privacy policy');
-    expect(privacyLink.closest('a')).toHaveAttribute('href', '/privacy-policy');
+    const privacyLink = screen.getByRole('link', { name: /Privacy policy/i });
+    expect(privacyLink).toHaveAttribute('href', '/privacy-policy');
   });
 });

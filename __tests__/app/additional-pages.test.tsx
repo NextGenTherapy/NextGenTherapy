@@ -118,22 +118,26 @@ describe('Additional Pages', () => {
       render(<FAQ />);
     });
 
+    it('renders the page with PageHero', () => {
+      expect(screen.getByText(/Common Questions/i)).toBeInTheDocument();
+    });
+
     it('renders the main heading', () => {
       const heading = screen.getByRole('heading', { level: 1 });
       expect(heading).toBeInTheDocument();
-      expect(heading).toHaveTextContent(/FAQ|Frequently Asked Questions/i);
+      expect(heading).toHaveTextContent(/Everything you want to know before getting in touch/i);
     });
 
     it('displays therapy cost question', () => {
-      expect(screen.getByText(/How much does therapy cost/i)).toBeInTheDocument();
+      expect(screen.getByText(/How much does therapy cost in Colchester/i)).toBeInTheDocument();
     });
 
     it('displays online therapy question', () => {
-      expect(screen.getByText(/Do you offer online therapy/i)).toBeInTheDocument();
+      expect(screen.getByText(/Do you offer online therapy sessions/i)).toBeInTheDocument();
     });
 
     it('displays session length question', () => {
-      expect(screen.getByText(/How long does therapy take/i)).toBeInTheDocument();
+      expect(screen.getByText(/How long does therapy take to work/i)).toBeInTheDocument();
     });
 
     it('displays confidentiality question', () => {
@@ -144,9 +148,8 @@ describe('Additional Pages', () => {
       expect(screen.getByText(/£60/i)).toBeInTheDocument();
     });
 
-    it('has book now link', () => {
-      const link = screen.getByRole('link', { name: /Book.*consultation/i });
-      expect(link).toBeInTheDocument();
+    it('has CTABlock section', () => {
+      expect(screen.getByText(/Ready to take the first step/i)).toBeInTheDocument();
     });
 
     it('renders FAQPage schema', () => {
@@ -172,10 +175,14 @@ describe('Additional Pages', () => {
       render(<LocationPage />);
     });
 
+    it('renders the page with PageHero', () => {
+      expect(screen.getByText(/Find Us/i)).toBeInTheDocument();
+    });
+
     it('renders the main heading', () => {
       const heading = screen.getByRole('heading', { level: 1 });
       expect(heading).toBeInTheDocument();
-      expect(heading).toHaveTextContent(/Location|Find|Contact/i);
+      expect(heading).toHaveTextContent(/Colchester Business Centre/i);
     });
 
     it('displays address', () => {

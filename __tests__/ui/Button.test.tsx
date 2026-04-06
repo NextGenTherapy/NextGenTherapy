@@ -153,19 +153,19 @@ describe('Button Component', () => {
   });
 
   describe('Styling and Classes', () => {
-    it('applies default button class when no className provided', () => {
+    it('applies default primary variant class when no className provided', () => {
       render(<Button>Default Style</Button>);
 
       const button = screen.getByRole('button');
-      expect(button).toHaveClass('button');
+      expect(button).toHaveClass('primary');
     });
 
-    it('applies custom className when provided', () => {
+    it('applies custom className in addition to variant when provided', () => {
       render(<Button className="custom-button">Custom Style</Button>);
 
       const button = screen.getByRole('button');
       expect(button).toHaveClass('custom-button');
-      expect(button).not.toHaveClass('button');
+      expect(button).toHaveClass('primary');
     });
 
     it('applies custom className to link when href provided', () => {
@@ -179,11 +179,25 @@ describe('Button Component', () => {
       expect(link).toHaveClass('custom-link');
     });
 
-    it('applies default button class to link when no className provided', () => {
+    it('applies default primary variant class to link when no className provided', () => {
       render(<Button href="/test">Default Link Style</Button>);
 
       const link = screen.getByRole('link');
-      expect(link).toHaveClass('button');
+      expect(link).toHaveClass('primary');
+    });
+
+    it('applies secondary variant class when specified', () => {
+      render(<Button variant="secondary">Secondary</Button>);
+
+      const button = screen.getByRole('button');
+      expect(button).toHaveClass('secondary');
+    });
+
+    it('applies outline variant class when specified', () => {
+      render(<Button variant="outline">Outline</Button>);
+
+      const button = screen.getByRole('button');
+      expect(button).toHaveClass('outline');
     });
   });
 

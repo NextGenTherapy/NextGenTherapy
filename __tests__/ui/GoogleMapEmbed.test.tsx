@@ -65,15 +65,14 @@ describe('GoogleMapEmbed Component', () => {
       expect(iframe).toHaveAttribute('referrerPolicy', 'no-referrer-when-downgrade');
     });
 
-    it('has proper styling', () => {
+    it('has styling via SCSS module', () => {
       render(<GoogleMapEmbed />);
       const iframe = screen.getByTitle(
         'Next Generation Therapy Location - Colchester Business Centre'
       );
 
-      const style = iframe.style;
-      expect(style.border).toBe('0px');
-      expect(style.borderRadius).toBe('8px');
+      // Component uses SCSS modules for styling
+      expect(iframe).toHaveClass('mapFrame');
     });
   });
 
@@ -121,11 +120,12 @@ describe('GoogleMapEmbed Component', () => {
       expect(wrapper).toHaveClass('custom-map-class');
     });
 
-    it('renders without className when not provided', () => {
+    it('renders without custom className when not provided', () => {
       const { container } = render(<GoogleMapEmbed />);
       const wrapper = container.firstChild as HTMLElement;
 
-      expect(wrapper.className).toBe('');
+      // The wrapper still has its internal structure, just no custom className prop applied
+      expect(wrapper).not.toHaveClass('custom-map-class');
     });
   });
 
@@ -144,14 +144,12 @@ describe('GoogleMapEmbed Component', () => {
       expect(screen.getByText(/colchester co1 2js/i)).toBeInTheDocument();
     });
 
-    it('formats location text with proper styling', () => {
+    it('formats location text with SCSS module styling', () => {
       render(<GoogleMapEmbed />);
 
       const locationText = screen.getByText(/our location:/i).closest('p');
-      expect(locationText).toHaveStyle({ fontSize: '0.875rem' });
-      expect(locationText).toHaveStyle({ color: '#666' });
-      expect(locationText).toHaveStyle({ marginTop: '0.5rem' });
-      expect(locationText).toHaveStyle({ textAlign: 'center' });
+      // Component uses SCSS modules for styling
+      expect(locationText).toHaveClass('caption');
     });
 
     it('emphasizes location label', () => {

@@ -59,13 +59,17 @@ describe('Remaining Pages', () => {
       render(<TrustPage />);
     });
 
+    it('renders the page with PageHero eyebrow', () => {
+      expect(screen.getByText(/Trust & Care/i)).toBeInTheDocument();
+    });
+
     it('renders the main heading', () => {
       const heading = screen.getByRole('heading', { level: 1 });
       expect(heading).toBeInTheDocument();
-      expect(heading).toHaveTextContent(/Trust|Professional Care/i);
+      expect(heading).toHaveTextContent(/Building Trust Through Professional Care/i);
     });
 
-    it('displays subtitle', () => {
+    it('displays lead text about safe environment', () => {
       expect(screen.getByText(/safe, confidential environment/i)).toBeInTheDocument();
     });
 
@@ -105,18 +109,13 @@ describe('Remaining Pages', () => {
       expect(screen.getByText(/Psychodynamic Training/i)).toBeInTheDocument();
     });
 
-    it('displays call to action', () => {
-      expect(screen.getByText(/Ready to Begin Your Journey\?/i)).toBeInTheDocument();
+    it('displays CTABlock section', () => {
+      expect(screen.getByText(/Ready to take the first step/i)).toBeInTheDocument();
     });
 
-    it('has book consultation link', () => {
-      const link = screen.getByRole('link', { name: /Book Free Consultation/i });
+    it('has book now link in CTABlock', () => {
+      const link = screen.getByRole('link', { name: /Book Now/i });
       expect(link).toHaveAttribute('href', '/book-now');
-    });
-
-    it('has about link', () => {
-      const link = screen.getByRole('link', { name: /Learn About My Approach/i });
-      expect(link).toHaveAttribute('href', '/about');
     });
 
     it('renders LocalBusiness schema', () => {
@@ -141,10 +140,14 @@ describe('Remaining Pages', () => {
       render(<YouthFamilyFAQ />);
     });
 
+    it('renders the page with PageHero eyebrow', () => {
+      expect(screen.getByText(/Youth & Family FAQ/i)).toBeInTheDocument();
+    });
+
     it('renders the main heading', () => {
       const heading = screen.getByRole('heading', { level: 1 });
       expect(heading).toBeInTheDocument();
-      expect(heading).toHaveTextContent(/Youth.*Family.*FAQ|Frequently Asked Questions/i);
+      expect(heading).toHaveTextContent(/Questions from young people and families/i);
     });
 
     it('displays age groups question', () => {
@@ -169,6 +172,10 @@ describe('Remaining Pages', () => {
       // The page links to related services - check any link exists
       const links = screen.getAllByRole('link');
       expect(links.length).toBeGreaterThan(0);
+    });
+
+    it('has CTABlock section', () => {
+      expect(screen.getByText(/Ready to take the first step/i)).toBeInTheDocument();
     });
 
     it('renders FAQPage schema', () => {

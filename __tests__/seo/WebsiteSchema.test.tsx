@@ -52,7 +52,7 @@ describe('WebsiteSchema Component', () => {
     const scriptTag = container.querySelector('script[type="application/ld+json"]');
     const jsonData = JSON.parse(scriptTag?.textContent || '{}');
 
-    expect(jsonData.copyrightYear).toBe('2024');
+    expect(jsonData.copyrightYear).toBe('2025');
     expect(jsonData.copyrightHolder).toEqual({
       '@type': 'Person',
       name: 'Andreea Horhocea',

@@ -34,7 +34,7 @@ describe('HomePage Component', () => {
     render(<HomePage />);
     expect(screen.getByRole('heading', { level: 1 })).toBeInTheDocument();
     expect(
-      screen.getByText(/Hi! I.*m Andreea Horhocea - Therapist in Colchester/i)
+      screen.getByText(/You fit everything in.*And somehow you still feel like you.*re slipping/i)
     ).toBeInTheDocument();
   });
 
@@ -42,27 +42,51 @@ describe('HomePage Component', () => {
     render(<HomePage />);
     const heroImage = screen.getByTestId('next-image');
     expect(heroImage).toBeInTheDocument();
-    expect(heroImage).toHaveAttribute('alt', expect.stringContaining('Andreea Horhocea'));
+    expect(heroImage).toHaveAttribute('alt', expect.stringContaining('Andreea'));
   });
 
-  it('includes BACP registration mention', () => {
+  it('displays the eyebrow text with credentials', () => {
     render(<HomePage />);
-    expect(screen.getByText(/BACP registered/i)).toBeInTheDocument();
+    expect(screen.getByText(/Colchester & Online · BACP Registered/i)).toBeInTheDocument();
   });
 
-  it('displays about section', () => {
+  it('includes BACP registration mention in trust bar', () => {
     render(<HomePage />);
-    expect(screen.getByText(/About Me/)).toBeInTheDocument();
+    expect(screen.getByText('BACP Registered')).toBeInTheDocument();
   });
 
-  it('displays services overview', () => {
+  it('displays What I Work With section', () => {
     render(<HomePage />);
-    expect(screen.getByText(/Who I Help/)).toBeInTheDocument();
+    expect(screen.getByText('What I Work With')).toBeInTheDocument();
   });
 
-  it('displays approach section', () => {
+  it('displays service cards', () => {
     render(<HomePage />);
-    expect(screen.getByText(/My Approach/)).toBeInTheDocument();
+    expect(screen.getByText('Therapy for Women')).toBeInTheDocument();
+    expect(screen.getByText('ADHD & Autism in Adults')).toBeInTheDocument();
+    expect(screen.getByText('Therapy for Teenagers')).toBeInTheDocument();
+  });
+
+  it('includes about section with quote', () => {
+    render(<HomePage />);
+    expect(
+      screen.getByText(/I've worked in NHS schools, SEN provision, Mind, and YMCA/i)
+    ).toBeInTheDocument();
+  });
+
+  it('displays Andreea credentials', () => {
+    render(<HomePage />);
+    expect(screen.getByText(/MSc Psych.*University of Essex.*2020.*BACP Registered/i)).toBeInTheDocument();
+  });
+
+  it('includes Romanian language section', () => {
+    render(<HomePage />);
+    expect(screen.getByText(/Terapie în limba română/i)).toBeInTheDocument();
+  });
+
+  it('includes CTA section', () => {
+    render(<HomePage />);
+    expect(screen.getByText(/Not sure yet.*That.*s what the free call is for/i)).toBeInTheDocument();
   });
 
   it('includes navigation links', () => {
@@ -70,8 +94,10 @@ describe('HomePage Component', () => {
     const links = screen.getAllByTestId('next-link');
     expect(links.length).toBeGreaterThan(0);
 
-    // Check for specific links
-    expect(screen.getByRole('link', { name: /About Me/ })).toBeInTheDocument();
+    // Check for specific links (using getAllByRole since some appear multiple times)
+    const bookLinks = screen.getAllByRole('link', { name: /Book a Free 15-Minute Call/i });
+    expect(bookLinks.length).toBeGreaterThan(0);
+    expect(screen.getByRole('link', { name: /More about me/i })).toBeInTheDocument();
   });
 
   it('renders structured data schema', () => {
@@ -82,8 +108,7 @@ describe('HomePage Component', () => {
 
   it('includes location information', () => {
     render(<HomePage />);
-    // Multiple elements contain Colchester, so use getAllBy
-    expect(screen.getAllByText(/Colchester/).length).toBeGreaterThan(0);
+    expect(screen.getByText(/Colchester & Online \(UK\)/i)).toBeInTheDocument();
   });
 
   it('has proper semantic HTML structure', () => {
@@ -94,7 +119,7 @@ describe('HomePage Component', () => {
 
     // Check for section elements
     const sections = container.querySelectorAll('section');
-    expect(sections.length).toBeGreaterThan(0);
+    expect(sections.length).toBeGreaterThanOrEqual(5);
   });
 
   it('displays accessibility features', () => {
@@ -114,15 +139,16 @@ describe('HomePage Component', () => {
 
   it('includes therapy-related content', () => {
     render(<HomePage />);
-    // Multiple elements contain therapy, so use getAllBy
     expect(screen.getAllByText(/therapy/i).length).toBeGreaterThan(0);
   });
 
-  it('mentions young people and families expertise', () => {
+  it('mentions target client groups', () => {
     render(<HomePage />);
-    // Multiple elements may contain these terms, so use getAllBy
-    expect(screen.getAllByText(/young people/i).length).toBeGreaterThan(0);
-    expect(screen.getAllByText(/families/i).length).toBeGreaterThan(0);
+    // Multiple mentions of women throughout the page
+    expect(screen.getAllByText(/women/i).length).toBeGreaterThan(0);
+    // "neurodivergent adults" may appear in multiple places
+    expect(screen.getAllByText(/neurodivergent adults/i).length).toBeGreaterThan(0);
+    expect(screen.getAllByText(/teenagers/i).length).toBeGreaterThan(0);
   });
 
   it('renders all required sections', () => {
@@ -130,6 +156,6 @@ describe('HomePage Component', () => {
 
     // Count sections to ensure page completeness
     const sections = container.querySelectorAll('section');
-    expect(sections.length).toBeGreaterThanOrEqual(2);
+    expect(sections.length).toBeGreaterThanOrEqual(5);
   });
 });

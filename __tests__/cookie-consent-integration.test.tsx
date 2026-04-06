@@ -34,16 +34,16 @@ describe('Cookie Consent and Vercel Analytics Integration', () => {
     it('shows cookie consent banner when no consent is stored', () => {
       render(<CookieConsent />);
 
-      expect(screen.getByText('We use cookies')).toBeInTheDocument();
-      expect(screen.getByText('Accept all cookies')).toBeInTheDocument();
-      expect(screen.getByText('Essential cookies only')).toBeInTheDocument();
+      expect(screen.getByText(/We use cookies to improve your experience/i)).toBeInTheDocument();
+      expect(screen.getByText('Accept')).toBeInTheDocument();
+      expect(screen.getByText('Essential only')).toBeInTheDocument();
     });
 
     it('stores "accepted" when user accepts cookies', async () => {
       const user = userEvent.setup();
       render(<CookieConsent />);
 
-      const acceptButton = screen.getByText('Accept all cookies');
+      const acceptButton = screen.getByText('Accept');
       await user.click(acceptButton);
 
       expect(localStorage.getItem('cookie-consent')).toBe('accepted');
@@ -53,7 +53,7 @@ describe('Cookie Consent and Vercel Analytics Integration', () => {
       const user = userEvent.setup();
       render(<CookieConsent />);
 
-      const declineButton = screen.getByText('Essential cookies only');
+      const declineButton = screen.getByText('Essential only');
       await user.click(declineButton);
 
       expect(localStorage.getItem('cookie-consent')).toBe('declined');
@@ -63,7 +63,7 @@ describe('Cookie Consent and Vercel Analytics Integration', () => {
       const user = userEvent.setup();
       render(<CookieConsent />);
 
-      const acceptButton = screen.getByText('Accept all cookies');
+      const acceptButton = screen.getByText('Accept');
       await user.click(acceptButton);
 
       expect(window.dispatchEvent).toHaveBeenCalledWith(
@@ -115,7 +115,7 @@ describe('Cookie Consent and Vercel Analytics Integration', () => {
       expect(screen.queryByTestId('vercel-analytics')).not.toBeInTheDocument();
 
       // Accept cookies
-      const acceptButton = screen.getByText('Accept all cookies');
+      const acceptButton = screen.getByText('Accept');
       await user.click(acceptButton);
 
       // Verify localStorage was updated
@@ -140,7 +140,7 @@ describe('Cookie Consent and Vercel Analytics Integration', () => {
       );
 
       // Decline cookies
-      const declineButton = screen.getByText('Essential cookies only');
+      const declineButton = screen.getByText('Essential only');
       await user.click(declineButton);
 
       // Analytics should remain disabled

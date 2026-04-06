@@ -63,32 +63,31 @@ describe('Book Now Page', () => {
   });
 
   describe('Page Structure', () => {
+    it('renders the page hero eyebrow', () => {
+      expect(screen.getByText(/Get in Touch/i)).toBeInTheDocument();
+    });
+
     it('renders the main heading', () => {
       const heading = screen.getByRole('heading', { level: 1 });
       expect(heading).toBeInTheDocument();
-      expect(heading).toHaveTextContent(/Book a Therapist in Colchester/i);
+      expect(heading).toHaveTextContent(/Let's talk about whether I'm the right fit for you/i);
     });
 
-    it('renders hero image', () => {
-      const image = screen.getByAltText(
-        /Book therapy session in Colchester/i
-      );
-      expect(image).toBeInTheDocument();
+    it('renders the lead text with free consultation offer', () => {
+      expect(screen.getByText(/free 15-minute phone consultation/i)).toBeInTheDocument();
     });
   });
 
   describe('Content Sections', () => {
     it('displays ready to take the first step heading', () => {
-      expect(screen.getByText(/Ready to Take the First Step\?/i)).toBeInTheDocument();
+      // Appears both in content section and CTA block
+      const matches = screen.getAllByText(/Ready to Take the First Step\?/i);
+      expect(matches.length).toBeGreaterThan(0);
     });
 
-    it('displays free consultation offer', () => {
-      expect(screen.getByText(/Free 15-Minute Consultation Available/i)).toBeInTheDocument();
-    });
-
-    it('describes the no-obligation consultation', () => {
+    it('describes the process of reaching out', () => {
       expect(
-        screen.getByText(/Not sure if therapy is right for you\?/i)
+        screen.getByText(/Reach out via the contact form below, email, or phone/i)
       ).toBeInTheDocument();
     });
   });
@@ -119,7 +118,6 @@ describe('Book Now Page', () => {
     it('shows all process steps', () => {
       expect(screen.getByText(/Submit Your Enquiry/i)).toBeInTheDocument();
       expect(screen.getByText(/Initial Response/i)).toBeInTheDocument();
-      expect(screen.getByText(/Free Consultation/i)).toBeInTheDocument();
       expect(screen.getByText(/Book Your Session/i)).toBeInTheDocument();
     });
 
@@ -127,7 +125,6 @@ describe('Book Now Page', () => {
       expect(screen.getByText('1')).toBeInTheDocument();
       expect(screen.getByText('2')).toBeInTheDocument();
       expect(screen.getByText('3')).toBeInTheDocument();
-      expect(screen.getByText('4')).toBeInTheDocument();
     });
   });
 
@@ -177,14 +174,22 @@ describe('Book Now Page', () => {
   });
 
   describe('Navigation Links', () => {
-    it('renders About Therapy link', () => {
-      const links = screen.getAllByRole('link', { name: /About Therapy/i });
-      expect(links.length).toBeGreaterThan(0);
+    it('renders Is This Right for You link', () => {
+      const link = screen.getByRole('link', { name: /Is This Right for You\?/i });
+      expect(link).toHaveAttribute('href', '/is-this-right-for-you');
     });
 
     it('renders Services link', () => {
       const links = screen.getAllByRole('link', { name: /Services/i });
       expect(links.length).toBeGreaterThan(0);
+    });
+  });
+
+  describe('CTA Block', () => {
+    it('renders the CTA section', () => {
+      // "Ready to take the first step" appears in page content and CTA block
+      const matches = screen.getAllByText(/Ready to take the first step/i);
+      expect(matches.length).toBeGreaterThan(0);
     });
   });
 
@@ -218,7 +223,7 @@ describe('Book Now Page', () => {
 
       const contactSchema = schemas.find((s) => s['@type'] === 'ContactPage');
       expect(contactSchema?.offers).toBeDefined();
-      expect(contactSchema?.offers).toHaveLength(2);
+      expect(contactSchema?.offers).toHaveLength(1);
     });
 
     it('renders BreadcrumbList schema', () => {

@@ -12,17 +12,6 @@ jest.mock('next/link', () => {
   return MockLink;
 });
 
-// Mock Button component
-jest.mock('../../src/components/ui/button', () => {
-  const MockButton = ({ href, children, ...props }: any) => (
-    <a href={href} {...props} data-testid="button">
-      {children}
-    </a>
-  );
-  MockButton.displayName = 'MockButton';
-  return MockButton;
-});
-
 describe('NotFound Component', () => {
   beforeEach(() => {
     jest.clearAllMocks();
@@ -33,30 +22,30 @@ describe('NotFound Component', () => {
     expect(screen.getByRole('main')).toBeInTheDocument();
   });
 
-  it('displays 404 error message', () => {
+  it('displays page not found message in PageHero', () => {
     render(<NotFound />);
-    expect(screen.getByText(/404/)).toBeInTheDocument();
-    expect(screen.getByText(/Page Not Found/i)).toBeInTheDocument();
+    expect(screen.getByText(/Page not found/i)).toBeInTheDocument();
+    expect(screen.getByText(/That page doesn't exist/i)).toBeInTheDocument();
   });
 
-  it('displays helpful error message', () => {
+  it('displays helpful lead text', () => {
     render(<NotFound />);
-    expect(screen.getByText(/page you are looking for/i)).toBeInTheDocument();
+    expect(screen.getByText(/Some of the older pages.*merged or renamed/i)).toBeInTheDocument();
   });
 
-  it('includes navigation back to home', () => {
+  it('includes navigation links to main pages', () => {
     render(<NotFound />);
-    const homeLink = screen.getByTestId('next-link');
-    expect(homeLink).toBeInTheDocument();
-    expect(homeLink).toHaveAttribute('href', '/');
+
+    // Check for some of the key navigation links
+    expect(screen.getByRole('link', { name: /Therapy for Women/i })).toBeInTheDocument();
+    expect(screen.getByRole('link', { name: /ADHD & Autism in Adults/i })).toBeInTheDocument();
+    expect(screen.getByRole('link', { name: /About Andreea/i })).toBeInTheDocument();
   });
 
-  it('includes helpful navigation elements', () => {
+  it('includes book now link', () => {
     render(<NotFound />);
-    // Check for navigation links instead of buttons since 404 page may use links
-    const homeLink = screen.getByTestId('next-link');
-    expect(homeLink).toBeInTheDocument();
-    expect(homeLink).toHaveAttribute('href', '/');
+    const bookLinks = screen.getAllByRole('link', { name: /book/i });
+    expect(bookLinks.length).toBeGreaterThan(0);
   });
 
   it('has proper semantic HTML structure', () => {
@@ -73,16 +62,17 @@ describe('NotFound Component', () => {
   it('includes accessibility features', () => {
     const { container } = render(<NotFound />);
 
-    // Check for proper heading structure
-    const headings = container.querySelectorAll('h1, h2, h3, h4, h5, h6');
-    expect(headings.length).toBeGreaterThan(0);
+    // Check for navigation landmark
+    const nav = container.querySelector('nav');
+    expect(nav).toBeInTheDocument();
+    expect(nav).toHaveAttribute('aria-label', 'Site navigation');
   });
 
-  it('provides clear user guidance', () => {
+  it('provides clear closing message with contact link', () => {
     render(<NotFound />);
 
-    // Should provide clear next steps for users
-    expect(screen.getByText(/home/i) || screen.getByText(/back/i)).toBeInTheDocument();
+    expect(screen.getByText(/Still can't find what you were looking for/i)).toBeInTheDocument();
+    expect(screen.getByRole('link', { name: /Send me a message/i })).toBeInTheDocument();
   });
 
   it('maintains consistent styling', () => {

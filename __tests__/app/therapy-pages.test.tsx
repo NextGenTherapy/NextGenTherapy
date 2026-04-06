@@ -55,13 +55,19 @@ describe('Therapy Pages', () => {
       render(<ChildTherapyPage />);
     });
 
+    it('renders the page with PageHero eyebrow', () => {
+      // "Child Therapy" appears in eyebrow, title, and section headings
+      const matches = screen.getAllByText(/Child Therapy/i);
+      expect(matches.length).toBeGreaterThan(0);
+    });
+
     it('renders the main heading', () => {
       const heading = screen.getByRole('heading', { level: 1 });
       expect(heading).toBeInTheDocument();
       expect(heading).toHaveTextContent(/Child Therapy in Colchester/i);
     });
 
-    it('displays subtitle about compassionate support', () => {
+    it('displays lead text about compassionate support', () => {
       expect(screen.getByText(/Compassionate, professional therapy support/i)).toBeInTheDocument();
     });
 
@@ -90,7 +96,9 @@ describe('Therapy Pages', () => {
       });
 
       it('lists behavioural changes', () => {
-        expect(screen.getByText(/Behavioural Changes/i)).toBeInTheDocument();
+        // "Behavioural Changes" appears in heading and in description text
+        const matches = screen.getAllByText(/Behavioural Changes/i);
+        expect(matches.length).toBeGreaterThan(0);
         expect(screen.getByText(/Sleep difficulties or nightmares/i)).toBeInTheDocument();
       });
 
@@ -143,9 +151,15 @@ describe('Therapy Pages', () => {
       });
     });
 
-    describe('Parent Support', () => {
-      it('displays supporting parents section', () => {
-        expect(screen.getByText(/Supporting Parents Too/i)).toBeInTheDocument();
+    describe('For Parents Section', () => {
+      it('displays For Parents section', () => {
+        expect(screen.getByText(/For Parents/i)).toBeInTheDocument();
+      });
+
+      it('shows understanding your child card', () => {
+        // Multiple headings contain "Understanding Your Child" text
+        const matches = screen.getAllByText(/Understanding Your Child/i);
+        expect(matches.length).toBeGreaterThan(0);
       });
     });
 
@@ -171,19 +185,30 @@ describe('Therapy Pages', () => {
       });
     });
 
-    describe('Call to Action', () => {
-      it('displays CTA heading', () => {
-        expect(screen.getByText(/Ready to Take the Next Step\?/i)).toBeInTheDocument();
+    describe('Related Services', () => {
+      it('displays related services section', () => {
+        expect(screen.getByText(/Related Services/i)).toBeInTheDocument();
       });
 
-      it('has book consultation link', () => {
-        const link = screen.getByRole('link', { name: /Book a Consultation/i });
-        expect(link).toHaveAttribute('href', '/contact');
+      it('has teen therapy link', () => {
+        const link = screen.getByRole('link', { name: /Teen Therapy/i });
+        expect(link).toHaveAttribute('href', '/teen-therapy');
       });
 
-      it('has learn about approach link', () => {
-        const link = screen.getByRole('link', { name: /Learn About My Approach/i });
-        expect(link).toHaveAttribute('href', '/about');
+      it('has neurodiversity link', () => {
+        const link = screen.getByRole('link', { name: /Neurodiversity Support/i });
+        expect(link).toHaveAttribute('href', '/neurodiversity');
+      });
+    });
+
+    describe('CTA Block', () => {
+      it('displays CTABlock', () => {
+        expect(screen.getByText(/Ready to take the first step/i)).toBeInTheDocument();
+      });
+
+      it('has book now link', () => {
+        const link = screen.getByRole('link', { name: /Book Now/i });
+        expect(link).toHaveAttribute('href', '/book-now');
       });
     });
 

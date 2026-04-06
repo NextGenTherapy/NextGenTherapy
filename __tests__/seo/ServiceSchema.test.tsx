@@ -6,7 +6,6 @@ import ServiceSchema, {
   DepressionTherapySchema,
   RelationshipTherapySchema,
   OnlineTherapySchema,
-  FreeConsultationSchema,
   ChildTherapySchema,
   TeenageTherapySchema,
   YoungAdultTherapySchema,
@@ -216,15 +215,6 @@ describe('Pre-configured Service Schemas', () => {
 
     expect(jsonData.name).toBe('Online Therapy');
     expect(jsonData.description).toContain('online');
-  });
-
-  it('FreeConsultationSchema renders correctly', () => {
-    const { container } = render(<FreeConsultationSchema />);
-    const scriptTag = container.querySelector('script[type="application/ld+json"]');
-    const jsonData = JSON.parse(scriptTag?.textContent || '{}');
-
-    expect(jsonData.name).toBe('Free Consultation');
-    expect(jsonData.offers.price).toBe('0');
   });
 });
 

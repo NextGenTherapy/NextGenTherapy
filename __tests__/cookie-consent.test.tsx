@@ -48,38 +48,38 @@ describe('Cookie Consent and Analytics Integration', () => {
     it('shows cookie consent banner when no consent is stored', () => {
       render(<CookieConsent />);
 
-      expect(screen.getByText('We use cookies')).toBeInTheDocument();
-      expect(screen.getByText('Accept all cookies')).toBeInTheDocument();
-      expect(screen.getByText('Essential cookies only')).toBeInTheDocument();
+      expect(screen.getByText(/We use cookies to improve your experience/i)).toBeInTheDocument();
+      expect(screen.getByText('Accept')).toBeInTheDocument();
+      expect(screen.getByText('Essential only')).toBeInTheDocument();
     });
 
     it('does not show banner when consent is already given', () => {
       localStorage.setItem('cookie-consent', 'accepted');
       render(<CookieConsent />);
 
-      expect(screen.queryByText('We use cookies')).not.toBeInTheDocument();
+      expect(screen.queryByText(/We use cookies/i)).not.toBeInTheDocument();
     });
 
     it('stores "accepted" when user accepts cookies', async () => {
       const user = userEvent.setup();
       render(<CookieConsent />);
 
-      const acceptButton = screen.getByText('Accept all cookies');
+      const acceptButton = screen.getByText('Accept');
       await user.click(acceptButton);
 
       expect(localStorage.getItem('cookie-consent')).toBe('accepted');
-      expect(screen.queryByText('We use cookies')).not.toBeInTheDocument();
+      expect(screen.queryByText(/We use cookies/i)).not.toBeInTheDocument();
     });
 
     it('stores "declined" when user declines cookies', async () => {
       const user = userEvent.setup();
       render(<CookieConsent />);
 
-      const declineButton = screen.getByText('Essential cookies only');
+      const declineButton = screen.getByText('Essential only');
       await user.click(declineButton);
 
       expect(localStorage.getItem('cookie-consent')).toBe('declined');
-      expect(screen.queryByText('We use cookies')).not.toBeInTheDocument();
+      expect(screen.queryByText(/We use cookies/i)).not.toBeInTheDocument();
     });
 
     it('dispatches custom event when consent changes', async () => {
@@ -87,7 +87,7 @@ describe('Cookie Consent and Analytics Integration', () => {
       const eventSpy = jest.spyOn(window, 'dispatchEvent');
       render(<CookieConsent />);
 
-      const acceptButton = screen.getByText('Accept all cookies');
+      const acceptButton = screen.getByText('Accept');
       await user.click(acceptButton);
 
       expect(eventSpy).toHaveBeenCalledWith(
@@ -95,6 +95,13 @@ describe('Cookie Consent and Analytics Integration', () => {
           type: 'cookie-consent-changed',
         })
       );
+    });
+
+    it('includes link to privacy policy', () => {
+      render(<CookieConsent />);
+
+      const privacyLink = screen.getByRole('link', { name: /privacy policy/i });
+      expect(privacyLink).toHaveAttribute('href', '/privacy-policy');
     });
   });
 
@@ -203,7 +210,7 @@ describe('Cookie Consent and Analytics Integration', () => {
 
       // Accept cookies wrapped in act
       await act(async () => {
-        const acceptButton = screen.getByText('Accept all cookies');
+        const acceptButton = screen.getByText('Accept');
         await user.click(acceptButton);
       });
 
@@ -232,7 +239,7 @@ describe('Cookie Consent and Analytics Integration', () => {
 
       // Decline cookies wrapped in act
       await act(async () => {
-        const declineButton = screen.getByText('Essential cookies only');
+        const declineButton = screen.getByText('Essential only');
         await user.click(declineButton);
       });
 

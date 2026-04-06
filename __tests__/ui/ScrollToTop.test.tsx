@@ -38,83 +38,11 @@ describe('ScrollToTop Component', () => {
       render(<ScrollToTop />);
       expect(screen.getByText('↑')).toBeInTheDocument();
     });
-  });
 
-  describe('Styling', () => {
-    it('has correct fixed positioning styles', () => {
+    it('has aria-label for accessibility', () => {
       render(<ScrollToTop />);
       const button = screen.getByRole('button');
-
-      expect(button).toHaveStyle({
-        position: 'fixed',
-        bottom: '30px',
-        right: '30px',
-      });
-    });
-
-    it('has correct size and shape styles', () => {
-      render(<ScrollToTop />);
-      const button = screen.getByRole('button');
-
-      expect(button).toHaveStyle({
-        width: '50px',
-        height: '50px',
-        borderRadius: '50%',
-      });
-    });
-
-    it('has correct color and background styles', () => {
-      render(<ScrollToTop />);
-      const button = screen.getByRole('button');
-
-      expect(button).toHaveStyle({
-        backgroundColor: '#5B7A5E',
-        color: 'white',
-      });
-
-      // The component sets border: "none" in the style object
-      // Note: JSDOM may not always reflect shorthand properties perfectly
-      expect(button.style.border).toBeDefined();
-    });
-
-    it('has correct typography styles', () => {
-      render(<ScrollToTop />);
-      const button = screen.getByRole('button');
-
-      expect(button).toHaveStyle({
-        fontSize: '20px',
-        fontWeight: 'bold',
-      });
-    });
-
-    it('has proper cursor and z-index styles', () => {
-      render(<ScrollToTop />);
-      const button = screen.getByRole('button');
-
-      expect(button).toHaveStyle({
-        cursor: 'pointer',
-        zIndex: '999999',
-      });
-    });
-
-    it('has flexbox centering styles', () => {
-      render(<ScrollToTop />);
-      const button = screen.getByRole('button');
-
-      expect(button).toHaveStyle({
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-      });
-    });
-
-    it('has proper shadow styling', () => {
-      render(<ScrollToTop />);
-      const button = screen.getByRole('button');
-
-      expect(button).toHaveStyle({
-        boxShadow: '0 4px 12px rgba(0, 0, 0, 0.25)',
-      });
+      expect(button).toHaveAttribute('aria-label', 'Scroll to top');
     });
   });
 
@@ -224,13 +152,11 @@ describe('ScrollToTop Component', () => {
       expect(button.tagName.toLowerCase()).toBe('button');
     });
 
-    it('could benefit from aria-label for screen readers', () => {
+    it('has aria-label for screen readers', () => {
       render(<ScrollToTop />);
       const button = screen.getByRole('button');
 
-      // Note: This test documents current behavior, but the component
-      // could be improved with an aria-label
-      expect(button).not.toHaveAttribute('aria-label');
+      expect(button).toHaveAttribute('aria-label', 'Scroll to top');
     });
   });
 
@@ -257,67 +183,7 @@ describe('ScrollToTop Component', () => {
     });
   });
 
-  describe('Visual Design', () => {
-    it('has consistent branding colors', () => {
-      render(<ScrollToTop />);
-      const button = screen.getByRole('button');
-
-      // Uses the brand green color
-      expect(button).toHaveStyle({ backgroundColor: '#5B7A5E' });
-    });
-
-    it('maintains circular shape', () => {
-      render(<ScrollToTop />);
-      const button = screen.getByRole('button');
-
-      expect(button).toHaveStyle({
-        width: '50px',
-        height: '50px',
-        borderRadius: '50%',
-      });
-    });
-
-    it('has appropriate visual hierarchy', () => {
-      render(<ScrollToTop />);
-      const button = screen.getByRole('button');
-
-      // High z-index ensures it stays on top
-      expect(button).toHaveStyle({ zIndex: '999999' });
-    });
-
-    it('provides visual feedback with shadow', () => {
-      render(<ScrollToTop />);
-      const button = screen.getByRole('button');
-
-      expect(button).toHaveStyle({
-        boxShadow: '0 4px 12px rgba(0, 0, 0, 0.25)',
-      });
-    });
-  });
-
   describe('User Experience', () => {
-    it('is positioned for easy thumb access on mobile', () => {
-      render(<ScrollToTop />);
-      const button = screen.getByRole('button');
-
-      // Bottom-right positioning is typical for scroll-to-top buttons
-      expect(button).toHaveStyle({
-        bottom: '30px',
-        right: '30px',
-      });
-    });
-
-    it('has appropriate size for touch targets', () => {
-      render(<ScrollToTop />);
-      const button = screen.getByRole('button');
-
-      // 50px meets WCAG touch target guidelines (minimum 44px)
-      expect(button).toHaveStyle({
-        width: '50px',
-        height: '50px',
-      });
-    });
-
     it('provides clear visual indication of function', () => {
       render(<ScrollToTop />);
 

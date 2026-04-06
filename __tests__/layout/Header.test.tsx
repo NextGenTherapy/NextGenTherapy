@@ -42,43 +42,77 @@ describe('Header Component', () => {
     expect(logoLink).toHaveAttribute('href', '/');
   });
 
-  it('renders all navigation links', () => {
+  it('renders main navigation links', () => {
     render(<Header />);
 
-    const expectedLinks = [
+    // Main nav links (not in dropdown)
+    const mainLinks = [
       { name: 'Home', href: '/' },
-      { name: 'About Me', href: '/about' },
-      { name: 'Services', href: '/services' },
-      { name: 'Is This Right for You?', href: '/is-this-right-for-you' },
+      { name: 'About', href: '/about' },
+      { name: 'Pricing', href: '/pricing' },
       { name: 'Blog', href: '/blog' },
-      { name: 'Book Now', href: '/book-now' },
+      { name: 'Book a Free Call', href: '/book-now' },
     ];
 
-    expectedLinks.forEach((link) => {
+    mainLinks.forEach((link) => {
       const linkElement = screen.getByRole('link', { name: link.name });
       expect(linkElement).toBeInTheDocument();
       expect(linkElement).toHaveAttribute('href', link.href);
     });
   });
 
-  it('renders the hamburger menu button', () => {
+  it('renders dropdown service links', () => {
     render(<Header />);
-    const menuButton = screen.getByRole('button');
+
+    // Service links in dropdown (appear twice - desktop and mobile)
+    const serviceLinks = [
+      { name: 'Therapy for Women', href: '/therapy-for-women' },
+      { name: 'ADHD & Autism in Adults', href: '/neurodiversity' },
+      { name: 'Therapy for Teenagers', href: '/teen-therapy' },
+      { name: 'Therapy for Children', href: '/child-therapy' },
+      { name: 'Therapy in Romanian', href: '/romanian-therapy' },
+      { name: 'Online Therapy', href: '/online-therapy' },
+    ];
+
+    serviceLinks.forEach((link) => {
+      // Multiple instances due to desktop and mobile dropdowns
+      const linkElements = screen.getAllByRole('link', { name: link.name });
+      expect(linkElements.length).toBeGreaterThan(0);
+      expect(linkElements[0]).toHaveAttribute('href', link.href);
+    });
+  });
+
+  it('renders Is This Right For You link in dropdown', () => {
+    render(<Header />);
+    const links = screen.getAllByRole('link', { name: /Is This Right For You\?/i });
+    expect(links.length).toBeGreaterThan(0);
+    expect(links[0]).toHaveAttribute('href', '/is-this-right-for-you');
+  });
+
+  it('renders the hamburger menu button with correct aria attributes', () => {
+    render(<Header />);
+    // Get hamburger button by aria-label (not the dropdown triggers)
+    const menuButton = screen.getByRole('button', { name: /navigation menu/i });
     expect(menuButton).toBeInTheDocument();
-    expect(menuButton).toHaveAttribute('aria-label', 'Open navigation menu');
     expect(menuButton).toHaveAttribute('aria-expanded', 'false');
     expect(menuButton).toHaveAttribute('aria-controls', 'main-navigation');
+  });
+
+  it('renders dropdown trigger buttons', () => {
+    render(<Header />);
+    // Multiple dropdown triggers (desktop and mobile)
+    const dropdownButtons = screen.getAllByRole('button', { name: /What I Work With/i });
+    expect(dropdownButtons.length).toBeGreaterThan(0);
   });
 
   it('toggles menu when hamburger button is clicked', async () => {
     const user = userEvent.setup();
     render(<Header />);
 
-    const menuButton = screen.getByRole('button');
+    const menuButton = screen.getByRole('button', { name: /navigation menu/i });
 
     // Initially menu should be closed
     expect(menuButton).toHaveAttribute('aria-expanded', 'false');
-    expect(menuButton).toHaveAttribute('aria-label', 'Open navigation menu');
 
     // Click to open menu
     await user.click(menuButton);
@@ -95,22 +129,22 @@ describe('Header Component', () => {
     const user = userEvent.setup();
     render(<Header />);
 
-    const menuButton = screen.getByRole('button');
-    const servicesLink = screen.getByRole('link', { name: 'Services' });
+    const menuButton = screen.getByRole('button', { name: /navigation menu/i });
+    const aboutLink = screen.getByRole('link', { name: 'About' });
 
     // Open menu first
     await user.click(menuButton);
     expect(menuButton).toHaveAttribute('aria-expanded', 'true');
 
     // Click a navigation link
-    await user.click(servicesLink);
+    await user.click(aboutLink);
     expect(menuButton).toHaveAttribute('aria-expanded', 'false');
   });
 
   it('closes menu when clicking outside', () => {
     render(<Header />);
 
-    const menuButton = screen.getByRole('button');
+    const menuButton = screen.getByRole('button', { name: /navigation menu/i });
 
     // Open menu first
     fireEvent.click(menuButton);
@@ -124,7 +158,7 @@ describe('Header Component', () => {
   it('does not close menu when clicking inside navigation', () => {
     render(<Header />);
 
-    const menuButton = screen.getByRole('button');
+    const menuButton = screen.getByRole('button', { name: /navigation menu/i });
     const navigation = screen.getByRole('navigation');
 
     // Open menu first
@@ -140,7 +174,7 @@ describe('Header Component', () => {
     render(<Header />);
 
     const navigation = screen.getByRole('navigation');
-    const menuButton = screen.getByRole('button');
+    const menuButton = screen.getByRole('button', { name: /navigation menu/i });
     const navList = document.getElementById('main-navigation');
 
     expect(navigation).toBeInTheDocument();
@@ -152,7 +186,7 @@ describe('Header Component', () => {
   it('contains hamburger icon spans', () => {
     render(<Header />);
 
-    const menuButton = screen.getByRole('button');
+    const menuButton = screen.getByRole('button', { name: /navigation menu/i });
     const hamburgerIcon = menuButton.querySelector('.hamburgerIcon');
     expect(hamburgerIcon).toBeInTheDocument();
 
@@ -166,7 +200,7 @@ describe('Header Component', () => {
 
     const header = screen.getByRole('banner');
     const navigation = screen.getByRole('navigation');
-    const menuButton = screen.getByRole('button');
+    const menuButton = screen.getByRole('button', { name: /navigation menu/i });
     const navList = document.getElementById('main-navigation');
 
     // Find the logo div by class
@@ -177,18 +211,6 @@ describe('Header Component', () => {
     expect(logoDiv?.className).toContain('logo');
     expect(menuButton.className).toContain('menuButton');
     expect(navList?.className).toContain('navList');
-  });
-
-  it('renders navigation items in correct order', () => {
-    render(<Header />);
-
-    const navItems = screen.getAllByRole('listitem');
-    const expectedOrder = ['Home', 'About Me', 'Services', 'Is This Right for You?', 'Blog', 'Book Now'];
-
-    navItems.forEach((item, index) => {
-      const link = item.querySelector('a');
-      expect(link?.textContent).toBe(expectedOrder[index]);
-    });
   });
 
   it('has semantic HTML structure', () => {
@@ -203,11 +225,21 @@ describe('Header Component', () => {
     // Should have logo link
     expect(screen.getByRole('link', { name: /nextgentherapy/i })).toBeInTheDocument();
 
-    // Should have unordered list for navigation
-    expect(screen.getByRole('list')).toBeInTheDocument();
+    // Should have lists (main nav + dropdown menus)
+    const lists = screen.getAllByRole('list');
+    expect(lists.length).toBeGreaterThan(0);
 
     // Should have list items
-    expect(screen.getAllByRole('listitem')).toHaveLength(6);
+    const listItems = screen.getAllByRole('listitem');
+    expect(listItems.length).toBeGreaterThan(0);
+  });
+
+  it('dropdown trigger has proper aria-haspopup attribute', () => {
+    render(<Header />);
+    const dropdownButtons = screen.getAllByRole('button', { name: /What I Work With/i });
+    // Desktop dropdown has aria-haspopup
+    const desktopDropdown = dropdownButtons.find((btn) => btn.getAttribute('aria-haspopup') === 'true');
+    expect(desktopDropdown).toBeInTheDocument();
   });
 
   it('cleans up event listeners on unmount', () => {
