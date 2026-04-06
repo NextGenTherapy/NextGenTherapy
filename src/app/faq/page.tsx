@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
+import PageHero from '@/components/ui/PageHero';
+import CTABlock from '@/components/ui/CTABlock';
 import styles from './faq.module.scss';
-import Button from '../../components/ui/button';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://nextgentherapy.co.uk'),
@@ -159,16 +160,13 @@ export default function FAQ() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
+      <PageHero
+        eyebrow="Common Questions"
+        title="Everything you want to know before getting in touch"
+        lead="I know reaching out to a therapist can feel daunting. Here are the questions I get asked most often — answered honestly."
+      />
       <div className={styles.page}>
         <main>
-          <section className={styles.hero}>
-            <h1>Frequently Asked Questions</h1>
-            <p className={styles.subtitle}>
-              Common questions about therapy in Colchester answered by BACP registered
-              psychotherapist Andreea Horhocea
-            </p>
-          </section>
-
           <section className={styles.faqSection}>
             <div className={styles.faqGrid}>
               {faqData.map((faq, index) => (
@@ -180,17 +178,7 @@ export default function FAQ() {
             </div>
           </section>
 
-          <section className={styles.callToAction}>
-            <h2>Still Have Questions?</h2>
-            <p>
-              Get in touch to discuss your specific needs and learn how therapy can help you.
-            </p>
-            <div className={styles.buttonGroup}>
-              <Button href="/book-now">Book Now</Button>
-              <Button href="/services">View Services</Button>
-              <Button href="/about">About Andreea</Button>
-            </div>
-          </section>
+          <CTABlock />
         </main>
       </div>
     </>

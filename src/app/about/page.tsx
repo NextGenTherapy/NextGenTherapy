@@ -1,11 +1,10 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
+import PageHero from '@/components/ui/PageHero';
+import CTABlock from '@/components/ui/CTABlock';
 import styles from './about.module.scss';
 import buttonLinksStyles from '../../components/ui/buttonLinks.module.scss';
 import Button from '../../components/ui/button';
-// Schema components available for future use
-// import PersonSchema from "../../components/seo/PersonSchema";
-// import BreadcrumbSchema from "../../components/seo/BreadcrumbSchema";
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://nextgentherapy.co.uk'),
@@ -157,32 +156,41 @@ export default function AboutMe() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
+      <PageHero
+        eyebrow="About Andreea"
+        title="Hi, I'm Andreea — and I'm really glad you're here."
+        lead="I'm a psychodynamic psychotherapist with a Master's degree and over six years of experience working with children, young people and adults in Colchester and online."
+      />
       <div className={styles.page}>
         <main className={styles.main}>
-          {/* Hero Section */}
-          <section className={styles.heroSection}>
-            <div className={styles.greeting}>
-              <h1>About Me - Psychodynamic Therapy & Colchester Therapy Specialist</h1>
+          {/* Credentials Trust Strip */}
+          <section className={styles.trustStrip}>
+            <div className={styles.trustStripInner}>
+              <span className={styles.trustItem}>BACP Registered</span>
+              <span className={styles.trustItem}>MSc Psychodynamic Psychotherapy</span>
+              <span className={styles.trustItem}>6+ Years Experience</span>
             </div>
           </section>
 
-          {/* Image Section */}
-          <section className={styles.imageSection}>
-            <div className={styles.imageContainer}>
-              <Image
-                src="/images/andreea.jpg"
-                alt="Andreea Horhocea - Psychodynamic Psychotherapist"
-                height={400}
-                width={400}
-                priority
-                className={styles.image}
-              />
+          {/* Two-Column Layout: Image + Content */}
+          <section className={styles.twoColumnSection}>
+            {/* Image Column */}
+            <div className={styles.imageColumn}>
+              <div className={styles.imageContainer}>
+                <Image
+                  src="/images/andreea.jpg"
+                  alt="Andreea Horhocea - Psychodynamic Psychotherapist"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 400px"
+                  priority
+                  className={styles.image}
+                />
+              </div>
             </div>
-          </section>
 
-          {/* Content Section */}
-          <section className={styles.contentSection}>
-            <article className={styles.textContainer}>
+            {/* Content Column */}
+            <div className={styles.contentColumn}>
+              <article className={styles.textContainer}>
               <div className={styles.introSection}>
                 <h3>Hi There</h3>
                 <p>It&apos;s lovely to meet you, and I&apos;m really glad you&apos;re here.</p>
@@ -255,7 +263,8 @@ export default function AboutMe() {
                   and heard — no matter where you are in your journey.
                 </p>
               </div>
-            </article>
+              </article>
+            </div>
           </section>
 
           {/* Therapy Room Gallery */}
@@ -276,6 +285,8 @@ export default function AboutMe() {
               ))}
             </div>
           </section>
+
+          <CTABlock />
 
           <section className={buttonLinksStyles.buttonLinks}>
             <Button href="/about-therapy">About Therapy</Button>

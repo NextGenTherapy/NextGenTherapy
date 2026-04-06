@@ -186,3 +186,54 @@ a:focus {
     --color-brand: #0000ff;
   }
 }
+
+/* ===========================================
+   SECTION 6: COOKIE BANNER COMPENSATION
+   =========================================== */
+
+/* Add padding when cookie banner is visible */
+body.cookie-banner-visible {
+  padding-bottom: 80px;
+}
+
+@media (min-width: 768px) {
+  body.cookie-banner-visible {
+    padding-bottom: 60px;
+  }
+}
+
+/* ===========================================
+   SECTION 7: PROSE UTILITY
+   =========================================== */
+
+.prose {
+  max-width: 780px;
+  margin-left: auto;
+  margin-right: auto;
+
+  p {
+    font-size: 1.05rem;
+    line-height: var(--line-height-relaxed);
+    margin-bottom: var(--spacing-medium);
+  }
+
+  h2 {
+    margin-top: var(--spacing-xxlarge);
+    margin-bottom: var(--spacing-medium);
+  }
+
+  h3 {
+    margin-top: var(--spacing-xlarge);
+    margin-bottom: var(--spacing-medium);
+  }
+
+  ul,
+  ol {
+    margin-bottom: var(--spacing-medium);
+    padding-left: var(--spacing-large);
+  }
+
+  li {
+    margin-bottom: var(--spacing-small);
+  }
+}

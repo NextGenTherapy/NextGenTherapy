@@ -12,41 +12,6 @@
   padding: 0 var(--spacing-medium);
 }
 
-/* Hero Section */
-.heroSection {
-  text-align: center;
-  padding: var(--spacing-section) 0 var(--spacing-large);
-}
-
-.greeting h1 {
-  font-size: var(--font-size-h1);
-  font-weight: bold;
-  color: var(--color-accent);
-  margin-bottom: var(--spacing-small);
-}
-
-.subtitle {
-  font-size: var(--font-size-lead);
-  color: var(--color-text);
-  margin: 0 0 var(--spacing-large) 0;
-  opacity: 0.8;
-}
-
-.imageContainer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: var(--spacing-large);
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.image {
-  border-radius: var(--radius-medium);
-  box-shadow: var(--box-shadow);
-}
-
 /* Section Styles */
 .whyTherapySection {
   margin: var(--spacing-section) 0;
@@ -235,18 +200,6 @@
     padding: 0 var(--spacing-medium);
   }
 
-  .heroSection {
-    padding: var(--spacing-large) 0;
-  }
-
-  .greeting h1 {
-    font-size: var(--font-size-h1);
-  }
-
-  .subtitle {
-    font-size: var(--font-size-body);
-  }
-
   .whyTherapySection,
   .howTherapyHelpsSection,
   .locationSection {
@@ -276,14 +229,6 @@
 @media (max-width: 480px) {
   .main {
     padding: 0 var(--spacing-small);
-  }
-
-  .heroSection {
-    padding: var(--spacing-medium) 0;
-  }
-
-  .greeting h1 {
-    font-size: var(--font-size-h2);
   }
 
   .imageContainer {

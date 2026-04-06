@@ -11,27 +11,6 @@
   gap: var(--spacing-section);
 }
 
-.header {
-  text-align: center;
-  margin-bottom: var(--spacing-xlarge);
-}
-
-.header h1 {
-  font-size: var(--font-size-h1);
-  color: var(--color-accent);
-  margin-bottom: var(--spacing-medium);
-  font-weight: 600;
-  font-family: var(--font-body);
-}
-
-.subtitle {
-  font-size: var(--font-size-lead);
-  color: var(--color-text);
-  max-width: 600px;
-  margin: 0 auto;
-  line-height: 1.6;
-}
-
 .mapSection {
   margin: var(--spacing-xlarge) 0;
 }

@@ -3,50 +3,58 @@
   bottom: 0;
   left: 0;
   right: 0;
-  background: var(--color-bg);
-  border-top: var(--border-width-thick) solid var(--color-accent);
+  background: var(--color-text);
   box-shadow: var(--box-shadow-reverse);
   z-index: 1000;
-  padding: var(--spacing-large) var(--spacing-medium);
+  padding: var(--spacing-medium) var(--container-padding-mobile);
+
+  @media (min-width: 768px) {
+    padding: var(--spacing-medium) var(--container-padding-tablet);
+  }
 
   .content {
-    max-width: 1200px;
+    max-width: var(--container-width-desktop);
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     gap: var(--spacing-medium);
+    align-items: center;
+    text-align: center;
 
     @media (min-width: 768px) {
       flex-direction: row;
-      align-items: center;
+      text-align: left;
       justify-content: space-between;
-    }
-
-    h3 {
-      margin: 0;
-      font-size: var(--font-size-h3);
-      color: var(--color-text);
     }
 
     p {
       margin: 0;
-      font-size: var(--font-size-body);
-      color: var(--color-text);
+      font-size: var(--font-size-small);
+      color: var(--color-header-text);
       flex: 1;
+
+      a {
+        color: var(--color-accent-light);
+        text-decoration: underline;
+
+        &:hover {
+          color: var(--color-accent);
+        }
+      }
     }
   }
 
   .buttons {
     display: flex;
-    gap: var(--spacing-medium);
-    flex-wrap: wrap;
+    gap: var(--spacing-small);
+    flex-shrink: 0;
 
     button {
       padding: var(--spacing-small) var(--spacing-medium);
       border: none;
       border-radius: var(--radius-small);
-      font-size: var(--font-size-body);
-      font-weight: 600;
+      font-size: var(--font-size-small);
+      font-weight: var(--font-weight-medium);
       cursor: pointer;
       transition: all var(--transition-fast);
       font-family: var(--font-body);
@@ -58,41 +66,19 @@
     color: var(--color-header-text);
 
     &:hover {
-      background: var(--color-brand-hover);
+      background: var(--color-accent-light);
+      color: var(--color-text);
     }
   }
 
   .declineBtn {
     background: transparent;
-    color: var(--color-text);
-    border: var(--border-width) solid var(--color-accent);
+    color: var(--color-header-text);
+    border: var(--border-width-thin) solid var(--color-header-text);
 
     &:hover {
-      background: var(--color-accent);
-      color: var(--color-header-text);
-    }
-  }
-
-  .learnMore {
-    font-size: var(--font-size-small) !important;
-
-    a {
-      color: var(--color-accent);
-      text-decoration: underline;
-
-      &:hover {
-        color: var(--color-brand-hover);
-      }
-    }
-  }
-
-  @media (max-width: 767px) {
-    .content {
-      text-align: center;
-    }
-
-    .buttons {
-      justify-content: center;
+      background: var(--color-header-text);
+      color: var(--color-text);
     }
   }
 }

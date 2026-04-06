@@ -120,13 +120,13 @@ export default async function RootLayout({ children }: { children: React.ReactNo
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
         {/* iPhone/Safari status bar styling */}
-        <meta name="theme-color" content="#164b39" />
+        <meta name="theme-color" content="#3D5940" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="mobile-web-app-capable" content="yes" />
         {/* Additional mobile browser theme colors */}
-        <meta name="msapplication-TileColor" content="#164b39" />
-        <meta name="msapplication-navbutton-color" content="#164b39" />
+        <meta name="msapplication-TileColor" content="#3D5940" />
+        <meta name="msapplication-navbutton-color" content="#3D5940" />
 
         {/* DNS Prefetch for faster external resource loading */}
         <link rel="dns-prefetch" href="https://www.google-analytics.com" />

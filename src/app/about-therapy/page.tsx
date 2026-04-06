@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
-import Image from 'next/image';
+import PageHero from '@/components/ui/PageHero';
+import CTABlock from '@/components/ui/CTABlock';
 import styles from './about-therapy.module.scss';
 import buttonLinksStyles from '../../components/ui/buttonLinks.module.scss';
 import Button from '../../components/ui/button';
@@ -238,30 +239,13 @@ export default function AboutTherapy() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }}
       />
+      <PageHero
+        eyebrow="Understanding Therapy"
+        title="Why therapy works — and how to know if it's right for you"
+        lead="Therapy isn't just for when things fall apart. It's a space to understand yourself, make sense of patterns, and find a more grounded way forward."
+      />
       <div className={styles.page}>
         <main className={styles.main}>
-          {/* Hero Section */}
-          <section className={styles.heroSection}>
-            <div className={styles.greeting}>
-              <h1>Professional Therapy in Colchester - Understanding How Therapy Works</h1>
-              <p className={styles.subtitle}>
-                Discover the benefits of therapy and how it can help you in Colchester and online
-              </p>
-            </div>
-
-            {/* Image Section */}
-            <div className={styles.imageContainer}>
-              <Image
-                src="/images/learn-more.jpg"
-                alt="Visual representation of stress, anxiety and depression concepts"
-                height={400}
-                width={600}
-                priority
-                className={styles.image}
-              />
-            </div>
-          </section>
-
           {/* Why Therapy Section */}
           <section className={styles.whyTherapySection}>
             <article className={styles.textContent}>
@@ -392,6 +376,8 @@ export default function AboutTherapy() {
               </div>
             </div>
           </section>
+
+          <CTABlock />
 
           {/* Button Links Section */}
           <section className={buttonLinksStyles.buttonLinks}>

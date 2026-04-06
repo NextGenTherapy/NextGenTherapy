@@ -58,3 +58,7 @@ to-do.md
 seo-roadmap.md
 # Documentation files (keep README.md in root)
 docs/*.md
+
+# Claude Code local files
+.claude/settings.local.json
+CLAUDE.local.md

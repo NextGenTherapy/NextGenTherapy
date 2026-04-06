@@ -2,6 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
 import Link from 'next/link';
+import PageHero from '@/components/ui/PageHero';
 import styles from './blog.module.scss';
 import type { Metadata } from 'next';
 
@@ -193,12 +194,11 @@ export default function BlogPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
       <div className={styles.page}>
-        <section className={styles.greeting}>
-          <h1>Blog</h1>
-          <p className={styles.subtitle}>
-            Welcome to my thoughts and reflections on therapy, life, and everything in between.
-          </p>
-        </section>
+        <PageHero
+          eyebrow="Writing & Reflections"
+          title="Thoughts on therapy, life and everything in between"
+          lead="Practical guidance and honest reflections for young people, parents and anyone wondering if therapy might help."
+        />
 
         <div className={styles.main}>
           <BlogSection

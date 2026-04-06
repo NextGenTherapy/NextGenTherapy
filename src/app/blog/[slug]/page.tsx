@@ -7,9 +7,33 @@ import matter from 'gray-matter';
 import { remark } from 'remark';
 import html from 'remark-html';
 import { notFound } from 'next/navigation';
-import Button from '../../../components/ui/button';
-import Link from 'next/link';
+import BlogPostLayout from '../../../components/ui/BlogPostLayout';
+import BlogPostNavigation from '../../../components/ui/BlogPostNavigation';
+import CTABlock from '../../../components/ui/CTABlock';
 import styles from '../blog.module.scss';
+
+// Helper function to calculate read time
+function calculateReadTime(content: string): string {
+  const wordsPerMinute = 200;
+  const wordCount = content.split(/\s+/).length;
+  const minutes = Math.ceil(wordCount / wordsPerMinute);
+  return `${minutes} min read`;
+}
+
+// Helper function to format date
+function formatDate(dateString: string): string {
+  const date = new Date(dateString);
+  return date.toLocaleDateString('en-GB', {
+    day: 'numeric',
+    month: 'long',
+    year: 'numeric',
+  });
+}
+
+// Helper function to get eyebrow text from category
+function getEyebrow(category: string | undefined): string {
+  return category === 'professional' ? 'Professional Thoughts' : 'Personal Thoughts';
+}
 
 // Generate static params for all blog posts (for sitemap)
 export async function generateStaticParams() {
@@ -256,34 +280,21 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
           __html: JSON.stringify(structuredData),
         }}
       />
-      <div className={styles.main}>
-        <article className={styles.blogPostContent}>
-          <h1>{data.title}</h1>
-          <p>
-            <em>{data.date}</em>
-          </p>
+      <main className={styles.main}>
+        <BlogPostLayout
+          title={data.title}
+          eyebrow={getEyebrow(data.category)}
+          date={formatDate(data.date)}
+          readTime={calculateReadTime(content)}
+        >
           <div dangerouslySetInnerHTML={{ __html: contentHtml }} />
-          <div className={styles.buttonNav}>
-            {prevPost ? (
-              <Link href={`/blog/${prevPost.slug}`}>
-                <Button>← Previous</Button>
-              </Link>
-            ) : (
-              <span />
-            )}
-            <Link href="/blog">
-              <Button>Back to Blog</Button>
-            </Link>
-            {nextPost ? (
-              <Link href={`/blog/${nextPost.slug}`}>
-                <Button>Next →</Button>
-              </Link>
-            ) : (
-              <span />
-            )}
-          </div>
-        </article>
-      </div>
+        </BlogPostLayout>
+        <BlogPostNavigation
+          prevPost={prevPost ? { slug: prevPost.slug, title: prevPost.title } : null}
+          nextPost={nextPost ? { slug: nextPost.slug, title: nextPost.title } : null}
+        />
+        <CTABlock />
+      </main>
     </div>
   );
 }

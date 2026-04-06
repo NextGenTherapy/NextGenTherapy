@@ -1,6 +1,8 @@
 import { Metadata } from 'next';
-import styles from './pricing.module.scss';
 import Link from 'next/link';
+import PageHero from '@/components/ui/PageHero';
+import CTABlock from '@/components/ui/CTABlock';
+import styles from './pricing.module.scss';
 
 const siteUrl = 'https://nextgentherapy.co.uk';
 
@@ -133,15 +135,13 @@ export default function Pricing() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
 
+      <PageHero
+        eyebrow="Therapy Pricing"
+        title="Transparent, straightforward pricing"
+        lead="£60 per session. 50 minutes. No hidden fees. I want accessing support to feel as straightforward as possible."
+      />
       <div className={styles.page}>
         <div className={styles.main}>
-          <section className={styles.hero}>
-            <h1>Therapy Pricing</h1>
-            <p className={styles.subtitle}>
-              Transparent, straightforward pricing for professional therapy in Colchester.
-            </p>
-          </section>
-
           <section className={styles.pricingSection}>
             <div className={styles.mainPricing}>
               <div className={styles.priceCard}>
@@ -208,6 +208,8 @@ export default function Pricing() {
               </p>
             </section>
           </section>
+
+          <CTABlock />
         </div>
       </div>
     </>

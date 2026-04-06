@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import PageHero from '@/components/ui/PageHero';
 import styles from './youth-family-faq.module.scss';
 import buttonStyles from '../../components/ui/button.module.scss';
 import Link from 'next/link';
@@ -145,15 +146,11 @@ export default function YouthFamilyFAQPage() {
       />
       <div className={styles.page}>
         <main className={styles.main}>
-          {/* Hero Section */}
-        <section className={styles.heroSection}>
-          <div className={styles.heroContent}>
-            <h1 className={styles.pageTitle}>Youth & Family Therapy FAQ</h1>
-            <p className={styles.heroSubtitle}>
-              Common questions about therapy for children, teenagers, and young adults
-            </p>
-          </div>
-        </section>
+          <PageHero
+            eyebrow="Youth & Family FAQ"
+            title="Questions from young people and families"
+            lead="Common questions about therapy for children, teenagers and families — answered honestly."
+          />
 
         {/* Introduction */}
         <section className={styles.serviceIntro}>

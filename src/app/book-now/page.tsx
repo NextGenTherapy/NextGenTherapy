@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
-import Image from 'next/image';
 import dynamic from 'next/dynamic';
+import PageHero from '@/components/ui/PageHero';
+import CTABlock from '@/components/ui/CTABlock';
 import styles from './book-now.module.scss';
 import buttonLinksStyles from '../../components/ui/buttonLinks.module.scss';
 import Button from '../../components/ui/button';
@@ -127,22 +128,13 @@ export default function BookNow() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
+      <PageHero
+        eyebrow="Get in Touch"
+        title="Let's talk about whether I'm the right fit for you"
+        lead="I offer a free 15-minute phone consultation — no commitment, no pressure. Just a conversation to see if working together feels right."
+      />
       <div className={styles.page}>
         <main className={styles.main}>
-          <section className={styles.greeting}>
-            <h1>Book a Therapist in Colchester - Let the Journey Begin</h1>
-            <div className={styles.heroImageContainer}>
-              <Image
-                src="/images/book-now.jpg"
-                alt="Book therapy session in Colchester - professional counselling and mental health support available"
-                width={600}
-                height={400}
-                className={styles.heroImage}
-                priority
-              />
-            </div>
-          </section>
-
           <section className={styles.contentTop}>
             <article>
               <h2>Ready to Take the First Step?</h2>
@@ -280,6 +272,8 @@ export default function BookNow() {
             <h2>Contact Form</h2>
             <ContactForm />
           </section>
+
+          <CTABlock />
 
           <section className={buttonLinksStyles.buttonLinks}>
             <Button href="/about-therapy">About Therapy</Button>

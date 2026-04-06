@@ -1,7 +1,8 @@
 import { Metadata } from 'next';
-import styles from './parent-support.module.scss';
-import buttonStyles from '../../components/ui/button.module.scss';
 import Link from 'next/link';
+import PageHero from '@/components/ui/PageHero';
+import CTABlock from '@/components/ui/CTABlock';
+import styles from './parent-support.module.scss';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://nextgentherapy.co.uk'),
@@ -161,18 +162,13 @@ export default function ParentSupportPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
+      <PageHero
+        eyebrow="Support for Parents"
+        title="You don't have to navigate this alone either"
+        lead="Parenting a child who is struggling is one of the hardest experiences there is. I offer guidance, support and a space to think things through — for you as well as your child."
+      />
       <div className={styles.page}>
         <main className={styles.main}>
-          {/* Hero Section */}
-        <section className={styles.heroSection}>
-          <div className={styles.heroContent}>
-            <h1 className={styles.pageTitle}>Parent Support and Guidance</h1>
-            <p className={styles.heroSubtitle}>
-              Supporting you as you support your child through their mental health journey
-            </p>
-          </div>
-        </section>
-
         {/* Introduction */}
         <section className={styles.serviceIntro}>
           <div className={styles.introContent}>
@@ -500,31 +496,7 @@ export default function ParentSupportPage() {
           </div>
         </section>
 
-        {/* Call to Action */}
-        <section className={styles.ctaSection}>
-          <div className={styles.ctaContent}>
-            <h2>Ready to Get Support?</h2>
-            <p>
-              Parenting a child with mental health difficulties can feel isolating, but you
-              don&apos;t have to do it alone. With the right support and guidance, you can feel more
-              confident and effective in helping your child thrive.
-            </p>
-
-            <div className={styles.ctaButtons}>
-              <Link href="/contact" className={buttonStyles.button}>
-                Book a Consultation
-              </Link>
-              <Link href="/about" className={buttonStyles.button}>
-                Learn About My Approach
-              </Link>
-            </div>
-
-            <p className={styles.contactNote}>
-              All consultations are confidential and take place in my comfortable practice in
-              Colchester, Essex.
-            </p>
-          </div>
-        </section>
+        <CTABlock />
 
         {/* Related Services */}
         <section className={styles.relatedSection}>

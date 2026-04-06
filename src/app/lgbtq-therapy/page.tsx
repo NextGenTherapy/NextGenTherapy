@@ -1,7 +1,8 @@
 import { Metadata } from 'next';
-import styles from './lgbtq-therapy.module.scss';
 import Link from 'next/link';
-import buttonStyles from '../../components/ui/button.module.scss';
+import PageHero from '@/components/ui/PageHero';
+import CTABlock from '@/components/ui/CTABlock';
+import styles from './lgbtq-therapy.module.scss';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://nextgentherapy.co.uk'),
@@ -161,19 +162,13 @@ export default function LGBTQTherapyPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
+      <PageHero
+        eyebrow="LGBTQ+ Inclusive Therapy"
+        title="A space where you are wholly welcome"
+        lead="I offer affirming, identity-conscious therapy for LGBTQ+ individuals of all ages. You never have to explain or justify who you are here."
+      />
       <div className={styles.page}>
         <main className={styles.main}>
-          {/* Hero Section */}
-        <section className={styles.heroSection}>
-          <div className={styles.heroContent}>
-            <h1 className={styles.pageTitle}>LGBTQ+ Inclusive Therapy</h1>
-            <p className={styles.heroSubtitle}>
-              Affirming, inclusive therapeutic support for LGBTQ+ individuals of all ages in a safe
-              and understanding environment
-            </p>
-          </div>
-        </section>
-
         {/* Introduction */}
         <section className={styles.serviceIntro}>
           <div className={styles.introContent}>
@@ -585,31 +580,7 @@ export default function LGBTQTherapyPage() {
           </div>
         </section>
 
-        {/* Call to Action */}
-        <section className={styles.ctaSection}>
-          <div className={styles.ctaContent}>
-            <h2>Ready to Begin Your Journey?</h2>
-            <p>
-              Taking the step to seek affirming therapy is an act of self-care and courage. Whether
-              you&apos;re just beginning to explore your identity or you&apos;ve been out for years,
-              therapy can provide valuable support for wherever you are in your journey.
-            </p>
-
-            <div className={styles.ctaButtons}>
-              <Link href="/contact" className={buttonStyles.button}>
-                Book a Consultation
-              </Link>
-              <Link href="/about" className={buttonStyles.button}>
-                Learn About My Approach
-              </Link>
-            </div>
-
-            <p className={styles.contactNote}>
-              All consultations are completely confidential and take place in my safe, inclusive
-              practice in Colchester, Essex.
-            </p>
-          </div>
-        </section>
+        <CTABlock />
 
         {/* Related Services */}
         <section className={styles.relatedSection}>

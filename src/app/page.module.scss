@@ -135,28 +135,57 @@
 .heroImageWrapper {
   display: flex;
   justify-content: center;
+  order: -1;
 }
 
 @media (min-width: 1024px) {
   .heroImageWrapper {
     flex: 0 0 45%;
     justify-content: flex-end;
+    order: 0;
+  }
+}
+
+.heroImageFrame {
+  position: relative;
+  width: 100%;
+  max-width: 320px;
+  aspect-ratio: 4 / 5;
+  border-radius: var(--radius-large);
+  outline: var(--border-width-thick) solid var(--color-accent);
+  outline-offset: var(--spacing-small);
+
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: var(--radius-large);
+    background: linear-gradient(
+      180deg,
+      transparent 60%,
+      rgba(93, 122, 94, 0.15) 100%
+    );
+    pointer-events: none;
+    z-index: 1;
+  }
+}
+
+@media (min-width: 768px) {
+  .heroImageFrame {
+    max-width: 380px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .heroImageFrame {
+    max-width: 450px;
   }
 }
 
 .heroImage {
   border-radius: var(--radius-large);
   object-fit: cover;
-  width: 100%;
-  max-width: 400px;
-  height: auto;
-  aspect-ratio: 4 / 5;
-}
-
-@media (min-width: 1024px) {
-  .heroImage {
-    max-width: 100%;
-  }
+  object-position: center top;
 }
 
 /* ===========================================

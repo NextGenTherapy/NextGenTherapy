@@ -449,14 +449,6 @@
     padding: 0 var(--spacing-medium);
   }
 
-  .greeting {
-    padding: var(--spacing-large) 0;
-
-    h1 {
-      font-size: var(--font-size-h1);
-    }
-  }
-
   .servicesOverview,
   .contentEnd {
     margin: var(--spacing-section) 0;
@@ -504,14 +496,6 @@
 @media (max-width: 480px) {
   .main {
     padding: 0 var(--spacing-small);
-  }
-
-  .greeting {
-    padding: var(--spacing-medium) 0;
-
-    h1 {
-      font-size: var(--font-size-h2);
-    }
   }
 
   .imageContainer,
@@ -738,33 +722,6 @@
   padding-bottom: var(--spacing-large);
 }
 
-/* Hero Section */
-.heroSection {
-  background: linear-gradient(135deg, rgba(43, 92, 230, 0.05), rgba(43, 92, 230, 0.1));
-  padding: var(--spacing-xlarge) 0;
-  text-align: center;
-}
-
-.heroContent {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 0 var(--spacing-medium);
-}
-
-.pageTitle {
-  font-size: var(--font-size-h1);
-  color: var(--color-bg);
-  margin-bottom: var(--spacing-medium);
-  font-weight: bold;
-}
-
-.heroSubtitle {
-  font-size: var(--font-size-h3);
-  color: var(--color-header-text);
-  line-height: var(--line-height-heading);
-  margin: 0;
-}
-
 /* Service Introduction */
 .serviceIntro {
   max-width: 1200px;
@@ -974,7 +931,7 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: var(--spacing-xlarge) var(--spacing-medium);
-  background: linear-gradient(135deg, rgba(43, 92, 230, 0.05), rgba(43, 92, 230, 0.1));
+  background: linear-gradient(135deg, var(--color-accent-light), var(--color-surface));
   border-radius: var(--radius-medium);
 }
 
@@ -1152,7 +1109,7 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: var(--spacing-xlarge) var(--spacing-medium);
-  background: linear-gradient(135deg, rgba(43, 92, 230, 0.1), rgba(43, 92, 230, 0.05));
+  background: linear-gradient(135deg, var(--color-surface), var(--color-accent-light));
   border-radius: var(--radius-medium);
   text-align: center;
 }
@@ -1282,18 +1239,6 @@
 }
 
 @media (max-width: 768px) {
-  .heroSection {
-    padding: var(--spacing-large) 0;
-  }
-
-  .pageTitle {
-    font-size: var(--font-size-h2);
-  }
-
-  .heroSubtitle {
-    font-size: var(--font-size-lead);
-  }
-
   .serviceIntro,
   .serviceDetails,
   .concernsSection,
@@ -1327,7 +1272,6 @@
 }
 
 @media (max-width: 480px) {
-  .heroContent,
   .introContent,
   .selfCareContent,
   .approachContent {

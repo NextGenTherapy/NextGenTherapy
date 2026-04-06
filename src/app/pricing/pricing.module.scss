@@ -27,28 +27,6 @@
   }
 }
 
-/* Hero Section */
-.hero {
-  text-align: center;
-  padding: var(--spacing-section) 0 var(--spacing-large);
-}
-
-.hero h1 {
-  font-size: var(--font-size-h1);
-  color: var(--color-accent);
-  margin-bottom: var(--spacing-medium);
-  font-family: var(--font-body);
-  font-weight: bold;
-}
-
-.subtitle {
-  font-size: var(--font-size-h3);
-  color: var(--color-text);
-  max-width: 700px;
-  margin: 0 auto;
-  line-height: var(--line-height-body);
-}
-
 /* Content Sections */
 .pricingSection {
   margin: var(--spacing-section) 0;

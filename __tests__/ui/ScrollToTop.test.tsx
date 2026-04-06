@@ -68,7 +68,7 @@ describe('ScrollToTop Component', () => {
       const button = screen.getByRole('button');
 
       expect(button).toHaveStyle({
-        backgroundColor: '#164b39',
+        backgroundColor: '#5B7A5E',
         color: 'white',
       });
 
@@ -263,7 +263,7 @@ describe('ScrollToTop Component', () => {
       const button = screen.getByRole('button');
 
       // Uses the brand green color
-      expect(button).toHaveStyle({ backgroundColor: '#164b39' });
+      expect(button).toHaveStyle({ backgroundColor: '#5B7A5E' });
     });
 
     it('maintains circular shape', () => {

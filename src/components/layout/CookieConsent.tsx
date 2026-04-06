@@ -10,12 +10,17 @@ export default function CookieConsent() {
     const consent = localStorage.getItem('cookie-consent');
     if (!consent) {
       setShowConsent(true);
+      document.body.classList.add('cookie-banner-visible');
     }
+    return () => {
+      document.body.classList.remove('cookie-banner-visible');
+    };
   }, []);
 
   const acceptCookies = () => {
     localStorage.setItem('cookie-consent', 'accepted');
     setShowConsent(false);
+    document.body.classList.remove('cookie-banner-visible');
     // Dispatch custom event for same-tab updates
     window.dispatchEvent(new CustomEvent('cookie-consent-changed'));
   };
@@ -23,6 +28,7 @@ export default function CookieConsent() {
   const declineCookies = () => {
     localStorage.setItem('cookie-consent', 'declined');
     setShowConsent(false);
+    document.body.classList.remove('cookie-banner-visible');
     // Dispatch custom event for same-tab updates
     window.dispatchEvent(new CustomEvent('cookie-consent-changed'));
     // Disable analytics
@@ -42,23 +48,18 @@ export default function CookieConsent() {
   return (
     <div className={styles.cookieConsent}>
       <div className={styles.content}>
-        <h3>We use cookies</h3>
         <p>
-          We use essential cookies to make our site work. We&apos;d also like to use analytics
-          cookies from Google Analytics and Vercel Analytics to understand how you use our services
-          and to make improvements.
+          We use cookies to improve your experience and analyse site usage.{' '}
+          <a href="/privacy-policy">Privacy policy</a>
         </p>
         <div className={styles.buttons}>
           <button onClick={acceptCookies} className={styles.acceptBtn}>
-            Accept all cookies
+            Accept
           </button>
           <button onClick={declineCookies} className={styles.declineBtn}>
-            Essential cookies only
+            Essential only
           </button>
         </div>
-        <p className={styles.learnMore}>
-          <a href="/privacy-policy">Learn more in our privacy policy</a>
-        </p>
       </div>
     </div>
   );

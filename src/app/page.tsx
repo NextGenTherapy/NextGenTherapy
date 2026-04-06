@@ -131,14 +131,16 @@ export default function Home() {
               </div>
             </div>
             <div className={styles.heroImageWrapper}>
-              <Image
-                src="/images/andreea.jpg"
-                alt="Andreea Horhocea - BACP registered psychotherapist in Colchester"
-                width={450}
-                height={563}
-                priority
-                className={styles.heroImage}
-              />
+              <div className={styles.heroImageFrame}>
+                <Image
+                  src="/images/andreea.jpg"
+                  alt="Andreea Horhocea - BACP registered psychotherapist in Colchester"
+                  fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 450px"
+                  priority
+                  className={styles.heroImage}
+                />
+              </div>
             </div>
           </section>
 

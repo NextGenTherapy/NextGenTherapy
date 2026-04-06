@@ -1,7 +1,8 @@
 import { Metadata } from 'next';
-import styles from './neurodiversity-therapy.module.scss';
 import Link from 'next/link';
-import buttonStyles from '../../components/ui/button.module.scss';
+import PageHero from '@/components/ui/PageHero';
+import CTABlock from '@/components/ui/CTABlock';
+import styles from './neurodiversity-therapy.module.scss';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://nextgentherapy.co.uk'),
@@ -161,19 +162,13 @@ export default function NeurodiversityTherapyPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
+      <PageHero
+        eyebrow="Neurodiversity Support"
+        title="Therapy that works with how your mind works"
+        lead="I offer specialist support for neurodivergent children, teenagers and adults — including those with ADHD, autism, dyslexia and sensory processing differences."
+      />
       <div className={styles.page}>
         <main className={styles.main}>
-          {/* Hero Section */}
-        <section className={styles.heroSection}>
-          <div className={styles.heroContent}>
-            <h1 className={styles.pageTitle}>Neurodiversity Therapy & SEN Support</h1>
-            <p className={styles.heroSubtitle}>
-              Specialist therapy for neurodivergent children, teenagers, and young adults with deep
-              understanding of their unique strengths and challenges
-            </p>
-          </div>
-        </section>
-
         {/* Introduction */}
         <section className={styles.serviceIntro}>
           <div className={styles.introContent}>
@@ -543,31 +538,7 @@ export default function NeurodiversityTherapyPage() {
           </div>
         </section>
 
-        {/* Call to Action */}
-        <section className={styles.ctaSection}>
-          <div className={styles.ctaContent}>
-            <h2>Ready to Support Your Neurodivergent Journey?</h2>
-            <p>
-              Whether you&apos;re a neurodivergent individual seeking understanding and strategies,
-              or a family looking for support, therapy can provide a safe space for growth,
-              exploration, and positive change.
-            </p>
-
-            <div className={styles.ctaButtons}>
-              <Link href="/contact" className={buttonStyles.button}>
-                Book a Consultation
-              </Link>
-              <Link href="/about" className={buttonStyles.button}>
-                Learn About My Approach
-              </Link>
-            </div>
-
-            <p className={styles.contactNote}>
-              All consultations are confidential and take place in my comfortable,
-              neurodiversity-friendly practice in Colchester, Essex.
-            </p>
-          </div>
-        </section>
+        <CTABlock />
 
         {/* Related Services */}
         <section className={styles.relatedSection}>

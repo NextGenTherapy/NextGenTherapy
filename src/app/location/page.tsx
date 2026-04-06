@@ -1,4 +1,6 @@
 import { Metadata } from 'next';
+import PageHero from '@/components/ui/PageHero';
+import CTABlock from '@/components/ui/CTABlock';
 import styles from './location.module.scss';
 import GoogleMapEmbed from '../../components/ui/GoogleMapEmbed';
 import Button from '../../components/ui/button';
@@ -114,15 +116,13 @@ export default function LocationPage() {
         }}
       />
 
+      <PageHero
+        eyebrow="Find Us"
+        title="Colchester Business Centre — easy to reach, easy to park"
+        lead="Sessions take place at Colchester Business Centre, 1 George Williams Way, CO1 2JS. Online sessions available across the UK."
+      />
       <div className={styles.container}>
         <main className={styles.main}>
-          <header className={styles.header}>
-            <h1>Our Location</h1>
-            <p className={styles.subtitle}>
-              Find us at Colchester Business Centre in the heart of Colchester, Essex.
-            </p>
-          </header>
-
           <section className={styles.mapSection}>
             <GoogleMapEmbed className={styles.mapContainer} />
           </section>
@@ -238,6 +238,7 @@ export default function LocationPage() {
           </section>
         </main>
       </div>
+      <CTABlock />
     </>
   );
 }
