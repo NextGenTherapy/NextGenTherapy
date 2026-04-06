@@ -158,7 +158,7 @@ export default function TherapyForWomenPage() {
       <PageHero
         eyebrow="Therapy for Women"
         title="You look fine. You're not fine."
-        lead="For the overthinking, the burnout, the body image stuff, the feeling of never quite being enough — even when everyone else thinks you've got it all together."
+        lead="For the overthinking, the burnout, the body image stuff, the 'I don't know who I am anymore.' Psychodynamic therapy for women in Colchester and online, with a therapist who takes your inner life seriously."
       />
 
       <div className={styles.page}>
@@ -166,15 +166,20 @@ export default function TherapyForWomenPage() {
           {/* Section 2: Recognition Pull-Quotes */}
           <section className={styles.recognitionSection}>
             <div className={styles.recognitionContainer}>
-              <h2 className={styles.recognitionHeading}>
-                If any of this sounds familiar, you&apos;re in the right place
-              </h2>
+              <h2 className={styles.recognitionHeading}>You might recognise yourself here</h2>
+              <p className={styles.recognitionIntro}>
+                Most of the women I work with say some version of the same thing in the first
+                session. If any of these sound familiar, you&apos;re in the right place.
+              </p>
               <ul className={styles.quoteList}>
                 <li className={styles.quote}>&ldquo;I can&apos;t stop overthinking.&rdquo;</li>
                 <li className={styles.quote}>
                   &ldquo;I&apos;m avoiding situations because of how I feel about my body.&rdquo;
                 </li>
-                <li className={styles.quote}>&ldquo;I feel stuck and burnt out.&rdquo;</li>
+                <li className={styles.quote}>
+                  &ldquo;I feel stuck and burnt out, but I can&apos;t stop doing any of the things
+                  that are burning me out.&rdquo;
+                </li>
                 <li className={styles.quote}>
                   &ldquo;I fit everything in and somehow still feel like I&apos;m slipping
                   something.&rdquo;
@@ -186,12 +191,15 @@ export default function TherapyForWomenPage() {
                   &ldquo;I don&apos;t know who I am anymore.&rdquo;
                 </li>
                 <li className={styles.quote}>
-                  &ldquo;I feel like I&apos;m failing at everything.&rdquo;
+                  &ldquo;I feel like I&apos;m failing at everything — even though everyone tells me
+                  I&apos;m doing well.&rdquo;
                 </li>
                 <li className={styles.quote}>&ldquo;I can&apos;t switch off.&rdquo;</li>
               </ul>
               <p className={styles.recognitionNote}>
-                These are real things women say to me in first sessions.
+                These aren&apos;t symptoms to be tidied up in six sessions. They&apos;re usually
+                telling you something important about how you&apos;ve been living, and what&apos;s
+                been asked of you for a long time. That&apos;s the work I do.
               </p>
             </div>
           </section>
@@ -202,20 +210,21 @@ export default function TherapyForWomenPage() {
               <div className={styles.workText}>
                 <h2>How I work</h2>
                 <p>
-                  I&apos;m a psychodynamic therapist. That means we spend time together
-                  understanding why certain patterns keep showing up in your life — the
-                  overthinking, the self-criticism, the feeling that you should be doing better.
-                  Where did they come from? What are they protecting?
+                  I&apos;m a psychodynamic therapist, which means we don&apos;t start with a
+                  worksheet. We start with what&apos;s on your mind today, and we notice what comes
+                  up — patterns, feelings you weren&apos;t expecting, things you haven&apos;t said
+                  out loud before. Over time, we build a shared understanding of why you are the way
+                  you are, and what you&apos;d like to be different.
                 </p>
                 <p>
-                  This isn&apos;t a six-week toolkit or a set of techniques to manage your symptoms.
-                  We meet weekly, and we keep meeting until something has genuinely shifted. For
-                  some people that&apos;s a few months; for others, a few years.
+                  This is weekly, open-ended work. Some women come for a few months around a
+                  specific life event. Others stay longer, because the patterns we&apos;re working
+                  with took a long time to form and take a while to loosen.
                 </p>
                 <p>
-                  I draw on other approaches when they&apos;re useful — mindfulness, some
-                  CBT-informed tools, writing prompts — but the foundation is always
-                  psychodynamic. The goal is understanding, not managing.
+                  I draw on other approaches when they help — mindfulness, some CBT-informed tools,
+                  writing prompts between sessions. But the foundation is psychodynamic: slow,
+                  considered, and curious about the whole of you.
                 </p>
               </div>
               <div className={styles.workImage}>
@@ -238,8 +247,8 @@ export default function TherapyForWomenPage() {
                 <div className={styles.topicItem}>
                   <h3>Burnout and overwhelm</h3>
                   <p>
-                    The exhaustion that comes from doing everything right and still feeling like
-                    you&apos;re running on empty.
+                    Especially the kind that hides behind competence — the exhaustion that comes from
+                    doing everything right and still feeling like you&apos;re running on empty.
                   </p>
                 </div>
                 <div className={styles.topicItem}>
@@ -252,22 +261,23 @@ export default function TherapyForWomenPage() {
                 <div className={styles.topicItem}>
                   <h3>Self-esteem and self-criticism</h3>
                   <p>
-                    The inner voice that&apos;s never satisfied, the feeling that you&apos;re not
-                    good enough no matter what you do.
+                    The internal voice that never lets up — never satisfied, always telling you
+                    you&apos;re not good enough no matter what you do.
                   </p>
                 </div>
                 <div className={styles.topicItem}>
-                  <h3>Body image and eating difficulties</h3>
+                  <h3>Body image and disordered eating</h3>
                   <p>
-                    The complicated relationship with your body that affects how you live, what you
-                    avoid, and how you feel about yourself.
+                    Including patterns you haven&apos;t called disordered before — the complicated
+                    relationship with your body that affects how you live, what you avoid, and how
+                    you feel about yourself.
                   </p>
                 </div>
                 <div className={styles.topicItem}>
                   <h3>Identity and life transitions</h3>
                   <p>
-                    The sense of not knowing who you are anymore, or the disorientation that comes
-                    with major life changes.
+                    &ldquo;I don&apos;t know who I am anymore&rdquo; — the disorientation that comes
+                    with major life changes, or when everything looks fine but something feels wrong.
                   </p>
                 </div>
                 <div className={styles.topicItem}>
@@ -280,15 +290,16 @@ export default function TherapyForWomenPage() {
                 <div className={styles.topicItem}>
                   <h3>High-functioning depression</h3>
                   <p>
-                    Getting through each day, hitting your targets, but feeling flat, disconnected,
-                    or like you&apos;re just going through the motions.
+                    The kind that looks like productivity — getting through each day, hitting your
+                    targets, but feeling flat, disconnected, or like you&apos;re just going through
+                    the motions.
                   </p>
                 </div>
                 <div className={styles.topicItem}>
                   <h3>Perfectionism</h3>
                   <p>
-                    The impossible standards that drive you forward and wear you down at the same
-                    time.
+                    And what it&apos;s costing you — the impossible standards that drive you forward
+                    and wear you down at the same time.
                   </p>
                 </div>
               </div>
@@ -298,16 +309,19 @@ export default function TherapyForWomenPage() {
           {/* Section 5: LGBTQ+ Section */}
           <section id="lgbtq" className={styles.lgbtqSection}>
             <div className={styles.lgbtqContainer}>
-              <h2>Working with LGBTQ+ women</h2>
+              <h2>For women in same-sex relationships</h2>
               <p>
-                I have specific training in working with LGBTQ+ clients and see women navigating
-                identity, same-sex relationships, family dynamics, and internalised shame. You
-                won&apos;t need to explain your life or come out again — I understand the landscape.
+                A lot of my LGBTQ+ work is with women in same-sex relationships. Sometimes
+                that&apos;s about the relationship itself — dynamics, family, whose family we&apos;re
+                at for Christmas, the micro-negotiations of being visible or not visible in
+                different contexts. Sometimes it&apos;s about identity: coming out late, internalised
+                shame, questions about gender expression that don&apos;t have obvious answers.
               </p>
               <p>
-                Whether you&apos;re dealing with questions about your identity, difficulties in your
-                relationship, family pressures, or the weight of expectations you&apos;ve carried
-                for years, this is a space where your experience is understood, not pathologised.
+                You won&apos;t need to explain the basics of your life to me, and I&apos;m not going
+                to treat your sexuality as the reason you&apos;re in therapy unless you tell me it
+                is. I&apos;ve completed specific post-qualification training in working with LGBTQ+
+                clients.
               </p>
             </div>
           </section>
@@ -317,17 +331,14 @@ export default function TherapyForWomenPage() {
             <div className={styles.fitContainer}>
               <h2>Is this right for you?</h2>
               <p>
-                This kind of therapy works best if you want to understand why things keep happening,
-                not just stop them from happening. If you&apos;re looking for a short-term course or
-                a structured CBT programme, I&apos;m probably not the right fit — but I can point
-                you to people who are.
-              </p>
-              <p>
-                I work with women aged 18–40, in-person in Colchester or online across the UK.
-                Online sessions are available for anyone 16 or older.
+                I&apos;m not the right therapist for everyone. If you&apos;re looking for a toolkit,
+                a six-week programme, or a CBT approach, we&apos;d be a mismatch — and there are
+                good therapists in Colchester who work that way. If you want to understand{' '}
+                <em>why</em> the patterns keep showing up and do slow, considered work, that&apos;s
+                what I do.
               </p>
               <Link href="/is-this-right-for-you" className={styles.link}>
-                See full details on who I work with
+                More on whether we&apos;re a good fit →
               </Link>
             </div>
           </section>
@@ -335,11 +346,11 @@ export default function TherapyForWomenPage() {
           {/* Section 7: CTA */}
           <section className={styles.ctaSection}>
             <div className={styles.ctaContainer}>
-              <h2>Book a free 15-minute call</h2>
+              <h2>Start with a free 15-minute call</h2>
               <p>
-                The free call is an informal 15-minute conversation, not a first session. We use it
-                to see whether working together feels right, sort out logistics, and give you a
-                chance to ask anything you want to.
+                The free call is an informal 15-minute conversation, not a first session. You can
+                ask anything you want, I&apos;ll answer honestly, and we&apos;ll decide together
+                whether working with me feels like the right next step.
               </p>
               <Link href="/book-now" className={buttonStyles.primary}>
                 Book a free 15-minute call
