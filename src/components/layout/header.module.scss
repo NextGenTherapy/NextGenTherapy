@@ -120,6 +120,7 @@
     gap: var(--spacing-large);
     text-align: left;
     box-shadow: none;
+    align-items: center;
   }
 
   .navListOpen {
@@ -223,4 +224,186 @@
 .navItem a:focus {
   outline: var(--outline-width) solid var(--color-accent);
   outline-offset: var(--outline-offset);
+}
+
+/* ===========================================
+   DESKTOP DROPDOWN STYLES
+   =========================================== */
+
+.desktopOnly {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .desktopOnly {
+    display: block;
+  }
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdownTrigger {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  background: none;
+  border: none;
+  color: var(--color-header-text);
+  font-family: var(--font-body);
+  font-size: var(--font-size-small);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  cursor: pointer;
+  padding: var(--spacing-small);
+  transition: color 200ms ease;
+}
+
+.dropdownTrigger:hover,
+.dropdownTrigger:focus {
+  color: var(--color-accent);
+}
+
+.dropdownTrigger:focus {
+  outline: var(--outline-width) solid var(--color-accent);
+  outline-offset: var(--outline-offset);
+}
+
+.chevron {
+  transition: transform 200ms ease;
+}
+
+.chevronOpen {
+  transform: rotate(180deg);
+}
+
+.dropdownMenu {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--color-header);
+  border-radius: var(--radius-medium);
+  padding: var(--spacing-small) 0;
+  min-width: 220px;
+  box-shadow: var(--box-shadow-hover);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 200ms ease, visibility 200ms ease;
+  list-style: none;
+  margin: 0;
+  z-index: 1000;
+}
+
+.dropdownMenuOpen {
+  opacity: 1;
+  visibility: visible;
+}
+
+.dropdownMenu li {
+  margin: 0;
+}
+
+.dropdownMenu li a {
+  display: block;
+  padding: var(--spacing-small) var(--spacing-medium);
+  color: var(--color-header-text);
+  text-decoration: none;
+  font-family: var(--font-body);
+  font-size: var(--font-size-small);
+  letter-spacing: 0.04em;
+  text-transform: none;
+  transition: background-color 200ms ease, color 200ms ease;
+  white-space: nowrap;
+}
+
+.dropdownMenu li a:hover,
+.dropdownMenu li a:focus {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--color-accent);
+}
+
+.dropdownDivider {
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.15);
+  margin: var(--spacing-small) var(--spacing-medium);
+}
+
+/* ===========================================
+   MOBILE DROPDOWN (ACCORDION) STYLES
+   =========================================== */
+
+.mobileOnly {
+  display: block;
+}
+
+@media (min-width: 1024px) {
+  .mobileOnly {
+    display: none;
+  }
+}
+
+.mobileDropdown {
+  width: 100%;
+}
+
+.mobileDropdownTrigger {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-small);
+  width: 100%;
+  background: none;
+  border: none;
+  color: var(--color-header-text);
+  font-family: var(--font-body);
+  font-size: var(--font-size-small);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  cursor: pointer;
+  padding: var(--spacing-small) var(--spacing-medium);
+  transition: color 200ms ease;
+}
+
+.mobileDropdownTrigger:hover,
+.mobileDropdownTrigger:focus {
+  color: var(--color-accent);
+}
+
+.mobileDropdownTrigger:focus {
+  outline: var(--outline-width) solid var(--color-accent);
+  outline-offset: var(--outline-offset);
+}
+
+.mobileDropdownMenu {
+  display: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background-color: rgba(0, 0, 0, 0.15);
+  border-radius: var(--radius-small);
+  overflow: hidden;
+}
+
+.mobileDropdownMenuOpen {
+  display: block;
+}
+
+.mobileDropdownMenu li a {
+  display: block;
+  padding: var(--spacing-small) var(--spacing-medium);
+  color: var(--color-header-text);
+  text-decoration: none;
+  font-family: var(--font-body);
+  font-size: var(--font-size-small);
+  letter-spacing: 0.04em;
+  text-transform: none;
+  transition: background-color 200ms ease, color 200ms ease;
+}
+
+.mobileDropdownMenu li a:hover,
+.mobileDropdownMenu li a:focus {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--color-accent);
 }
