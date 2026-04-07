@@ -1,36 +1,311 @@
-/* Romanian Therapy - Stub Page Styles */
+/* Romanian Therapy - Bilingual Landing Page Styles */
 
 .page {
   background: var(--color-bg);
-  padding: var(--spacing-section) var(--container-padding-mobile);
+  min-height: 100vh;
+  padding-bottom: var(--spacing-large);
+  width: 100%;
+}
+
+.main {
+  max-width: var(--container-width-desktop);
+  margin: 0 auto;
+  padding: 0 var(--container-padding-mobile);
+  width: 100%;
+  box-sizing: border-box;
 }
 
 @media (min-width: 768px) {
-  .page {
-    padding: var(--spacing-section) var(--container-padding-tablet);
+  .main {
+    padding: 0 var(--container-padding-tablet);
   }
 }
 
 @media (min-width: 1024px) {
-  .page {
+  .main {
+    padding: 0 var(--container-padding-desktop);
+  }
+}
+
+/* Section 2: English Introduction */
+.introSection {
+  margin: var(--spacing-large) 0;
+  max-width: 720px;
+
+  h2 {
+    font-family: var(--font-display);
+    font-size: var(--font-size-h2);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-text);
+    margin-bottom: var(--spacing-medium);
+    line-height: var(--line-height-heading);
+  }
+
+  p {
+    font-family: var(--font-body);
+    font-size: var(--font-size-body);
+    color: var(--color-text);
+    line-height: var(--line-height-body);
+    margin-bottom: var(--spacing-medium);
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .introSection {
+    margin: var(--spacing-xlarge) 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .introSection {
+    margin: var(--spacing-section) 0;
+  }
+}
+
+/* Section 3: Romanian Introduction (Accent Background) */
+.romanianSection {
+  background: var(--color-accent-light);
+  margin: var(--spacing-large) calc(-1 * var(--container-padding-mobile));
+  padding: var(--spacing-large) var(--container-padding-mobile);
+}
+
+@media (min-width: 768px) {
+  .romanianSection {
+    margin: var(--spacing-xlarge) calc(-1 * var(--container-padding-tablet));
+    padding: var(--spacing-xlarge) var(--container-padding-tablet);
+  }
+}
+
+@media (min-width: 1024px) {
+  .romanianSection {
+    margin: var(--spacing-section) calc(-1 * var(--container-padding-desktop));
     padding: var(--spacing-section) var(--container-padding-desktop);
   }
 }
 
-.container {
-  max-width: var(--container-width-content);
+.romanianContainer {
+  max-width: var(--container-width-desktop);
   margin: 0 auto;
+
+  p {
+    font-family: var(--font-body);
+    font-size: var(--font-size-body);
+    color: var(--color-text);
+    line-height: var(--line-height-body);
+    margin-bottom: var(--spacing-medium);
+    max-width: 720px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
 }
 
-.comingSoon {
-  text-align: center;
-  padding: var(--spacing-xlarge) 0;
+.romanianHeading {
+  font-family: var(--font-display);
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-semibold);
+  font-style: italic;
+  color: var(--color-text);
+  margin-bottom: var(--spacing-medium);
+  line-height: var(--line-height-heading);
 }
 
-.message {
-  font-family: var(--font-body);
-  font-size: var(--font-size-lead);
-  color: var(--color-text-muted);
-  line-height: var(--line-height-body);
+.romanianHeadingSmall {
+  font-family: var(--font-display);
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-semibold);
+  font-style: italic;
+  color: var(--color-text);
+  margin-bottom: var(--spacing-medium);
+  line-height: var(--line-height-heading);
+}
+
+/* Section 4: What I Often Work With - Bilingual Grid */
+.topicsSection {
+  background: var(--color-surface);
+  margin: var(--spacing-large) calc(-1 * var(--container-padding-mobile));
+  padding: var(--spacing-large) var(--container-padding-mobile);
+}
+
+@media (min-width: 768px) {
+  .topicsSection {
+    margin: var(--spacing-xlarge) calc(-1 * var(--container-padding-tablet));
+    padding: var(--spacing-xlarge) var(--container-padding-tablet);
+  }
+}
+
+@media (min-width: 1024px) {
+  .topicsSection {
+    margin: var(--spacing-section) calc(-1 * var(--container-padding-desktop));
+    padding: var(--spacing-section) var(--container-padding-desktop);
+  }
+}
+
+.topicsContainer {
+  max-width: var(--container-width-desktop);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xlarge);
+}
+
+@media (min-width: 768px) {
+  .topicsContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-xlarge);
+  }
+}
+
+.topicsColumn {
+  h2 {
+    font-family: var(--font-display);
+    font-size: var(--font-size-h2);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-text);
+    margin-bottom: var(--spacing-large);
+    line-height: var(--line-height-heading);
+  }
+}
+
+.topicsList {
+  list-style: none;
+  padding: 0;
   margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-medium);
+
+  li {
+    font-family: var(--font-body);
+    font-size: var(--font-size-body);
+    color: var(--color-text);
+    line-height: var(--line-height-body);
+
+    strong {
+      font-weight: var(--font-weight-semibold);
+      color: var(--color-brand);
+    }
+  }
+}
+
+/* Section 5: Practical Bits - Two Column */
+.practicalSection {
+  margin: var(--spacing-large) 0;
+}
+
+@media (min-width: 768px) {
+  .practicalSection {
+    margin: var(--spacing-xlarge) 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .practicalSection {
+    margin: var(--spacing-section) 0;
+  }
+}
+
+.practicalGrid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xlarge);
+}
+
+@media (min-width: 768px) {
+  .practicalGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-xlarge);
+  }
+}
+
+.practicalColumn {
+  h2 {
+    font-family: var(--font-display);
+    font-size: var(--font-size-h2);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-text);
+    margin-bottom: var(--spacing-large);
+    line-height: var(--line-height-heading);
+  }
+}
+
+.practicalList {
+  margin: 0;
+  padding: 0;
+}
+
+.practicalItem {
+  margin-bottom: var(--spacing-medium);
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  dt {
+    font-family: var(--font-body);
+    font-size: var(--font-size-body);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-brand);
+    margin-bottom: var(--spacing-xs);
+  }
+
+  dd {
+    font-family: var(--font-body);
+    font-size: var(--font-size-body);
+    color: var(--color-text);
+    line-height: var(--line-height-body);
+    margin: 0;
+  }
+}
+
+/* Section 6: Bilingual CTA */
+.ctaSection {
+  margin: var(--spacing-large) 0;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .ctaSection {
+    margin: var(--spacing-xlarge) 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .ctaSection {
+    margin: var(--spacing-section) 0;
+  }
+}
+
+.ctaContainer {
+  max-width: 600px;
+  margin: 0 auto;
+
+  h2 {
+    font-family: var(--font-display);
+    font-size: var(--font-size-h2);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-text);
+    margin-bottom: var(--spacing-medium);
+    line-height: var(--line-height-heading);
+  }
+
+  p {
+    font-family: var(--font-body);
+    font-size: var(--font-size-body);
+    color: var(--color-text-muted);
+    line-height: var(--line-height-body);
+    margin-bottom: var(--spacing-medium);
+  }
+}
+
+.romanianText {
+  font-style: italic;
+  margin-bottom: var(--spacing-large);
 }
