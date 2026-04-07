@@ -1,41 +1,48 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+
 import { TeenageTherapySchema } from '@/components/seo/ServiceSchema';
 import PageHero from '@/components/ui/PageHero';
-import CTABlock from '@/components/ui/CTABlock';
+
+import buttonStyles from '../../components/ui/button.module.scss';
 import styles from './teen-therapy.module.scss';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://nextgentherapy.co.uk'),
-  title: 'Teen Therapy Colchester | BACP Therapist for Teenagers 13-17',
+  title: 'Therapy for Teenagers in Colchester | Anxiety, School Refusal, Self-Harm',
   description:
-    'Professional teen therapy in Colchester & online. BACP therapist helping teens 13-17 with anxiety, depression & school stress. Book today.',
+    'Psychodynamic therapy for teenagers aged 13–17 in Colchester. Anxiety, school refusal, self-harm, low mood, identity. BACP registered. NHS, SEN and youth work background. Free intro call for parents.',
   keywords: [
     'teen therapy Colchester',
-    'teen therapist Colchester',
+    'teenage therapist Colchester',
     'adolescent therapy Essex',
-    'teenage counselling Colchester',
+    'school refusal therapy',
+    'teen anxiety Colchester',
+    'self-harm therapy teenagers',
     'teen mental health Colchester',
-    'adolescent counselling Essex',
-    'teenager therapy near me',
-    'teen anxiety therapy',
-    'adolescent depression therapy',
-    'school anxiety therapy teens',
-    'teenage therapy online',
     'BACP teen therapist',
-    'confidential teen therapy',
-    'teen therapy sessions',
-    'adolescent mental health support',
+    'teenager counselling Essex',
+    'parent support teen therapy',
   ],
   authors: [{ name: 'Andreea Horhocea' }],
   alternates: {
     canonical: 'https://nextgentherapy.co.uk/teen-therapy',
   },
-  robots: { index: true, follow: true },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
   openGraph: {
-    title: 'Teen Therapy Colchester | Professional Support for Teens',
+    title: 'Therapy for Teenagers in Colchester | Anxiety, School Refusal, Self-Harm',
     description:
-      'Expert teen therapy in Colchester & online. BACP registered therapist providing confidential support for teens facing anxiety, depression & life challenges.',
+      'Psychodynamic therapy for teenagers aged 13–17 in Colchester. BACP registered therapist with NHS, SEN and youth work background. Free intro call for parents.',
     url: 'https://nextgentherapy.co.uk/teen-therapy',
     siteName: 'Next Generation Therapy',
     locale: 'en_GB',
@@ -45,15 +52,15 @@ export const metadata: Metadata = {
         url: 'https://nextgentherapy.co.uk/images/default-social-share.jpg',
         width: 1200,
         height: 630,
-        alt: 'Teen Therapy Services in Colchester - Next Generation Therapy',
+        alt: 'Teen Therapy in Colchester — Next Generation Therapy',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Teen Therapy Colchester | BACP Registered Therapist',
+    title: 'Therapy for Teenagers in Colchester | BACP Registered Therapist',
     description:
-      "Professional teen therapy services in Colchester & online. Confidential support for teens' mental health and wellbeing.",
+      'Psychodynamic therapy for teenagers 13–17 in Colchester. Anxiety, school refusal, self-harm, identity. Free intro call for parents.',
     images: ['https://nextgentherapy.co.uk/images/default-social-share.jpg'],
   },
 };
@@ -93,7 +100,7 @@ export default function TeenTherapyPage() {
         name: 'What ages do you work with for teen therapy?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'I work with teenagers aged 13-17, providing confidential therapy that respects their need for privacy while keeping parents appropriately informed.',
+          text: 'I work with teenagers aged 13–17 in person at my Colchester practice. Online sessions are available for those aged 16 and above.',
         },
       },
       {
@@ -101,23 +108,23 @@ export default function TeenTherapyPage() {
         name: 'Is teen therapy confidential from parents?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Yes, what we discuss stays confidential with rare exceptions for safety. Teens have the right to privacy while I provide general progress updates to parents.',
+          text: 'Yes. What your teenager tells me stays confidential, with exceptions only for immediate safety concerns. I can provide general updates to parents about how therapy is going, without sharing specific content.',
         },
       },
       {
         '@type': 'Question',
-        name: 'How long does teen therapy take?',
+        name: 'What if my teenager refuses to come to therapy?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'This varies for each teen. Some benefit from short-term support of a few sessions, while others prefer longer-term work as they navigate adolescence.',
+          text: "This is common. I'm happy to speak with you first about whether therapy seems right for them, and we can discuss ways to introduce the idea. Sometimes parents find it useful to have their own session to talk through the situation.",
         },
       },
       {
         '@type': 'Question',
-        name: 'How much does teen therapy cost in Colchester?',
+        name: 'How much does teen therapy cost?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Teen therapy sessions cost £60 for a 50-minute session, available in-person in Colchester or online.',
+          text: 'Teen therapy sessions cost £60 for a 50-minute session, available in-person in Colchester. A free 15-minute phone call for parents is available before booking.',
         },
       },
     ],
@@ -134,269 +141,289 @@ export default function TeenTherapyPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
+
+      {/* Section 1: Hero */}
       <PageHero
-        eyebrow="Teen Therapy"
-        title="Teen Therapy in Colchester"
-        lead="Understanding, confidential therapy support for teenagers navigating the complexities of adolescence. A space to explore identity, relationships, and life's challenges."
+        eyebrow="Therapy for Teenagers"
+        title="If your teenager is struggling, you're probably struggling too"
+        lead="Therapy for teenagers aged 13–17 in Colchester. Anxiety, school refusal, self-harm, low mood, identity. A space for them to talk, and support for you as a parent."
       />
 
       <div className={styles.page}>
-        <div className={styles.main}>
-          <section className={styles.contentSection}>
-            <div className={styles.textContainer}>
-              <section className={styles.introduction}>
-                <h2>Understanding the Teenage Experience</h2>
-                <p>
-                  Being a teenager can feel overwhelming. You&apos;re trying to figure out who you
-                  are, where you fit in, and what you want from life, all while dealing with school
-                  pressure, family expectations, changing friendships, and a body and brain that
-                  sometimes feel completely out of your control.
-                </p>
-                <p>
-                  In my practice in Colchester, I work with teenagers who are struggling with these
-                  challenges. Whether you&apos;re feeling anxious, depressed, angry, confused, or
-                  just different from everyone else, therapy can provide a space to make sense of
-                  your experiences and find your own way forward.
-                </p>
-              </section>
-
-              <section className={styles.whenToConsider}>
-                <h2>Signs You Might Benefit from Therapy</h2>
-                <p>
-                  You don&apos;t have to be in crisis to benefit from therapy. Sometimes it&apos;s
-                  just about having someone to talk to who really understands. You might find
-                  therapy helpful if you&apos;re experiencing:
-                </p>
-
-                <div className={styles.symptomsGrid}>
-                  <div className={styles.symptomCategory}>
-                    <h3>Emotional Struggles</h3>
-                    <ul>
-                      <li>Persistent feelings of sadness or emptiness</li>
-                      <li>Anxiety that interferes with daily life</li>
-                      <li>Feeling angry or irritable most of the time</li>
-                      <li>Emotional numbness or disconnection</li>
-                      <li>Overwhelming feelings you can&apos;t understand</li>
-                    </ul>
-                  </div>
-
-                  <div className={styles.symptomCategory}>
-                    <h3>School & Life Challenges</h3>
-                    <ul>
-                      <li>Difficulty concentrating or completing work</li>
-                      <li>School avoidance or refusal</li>
-                      <li>Academic pressure and perfectionism</li>
-                      <li>Problems with teachers or authority figures</li>
-                      <li>Stress about future plans and expectations</li>
-                    </ul>
-                  </div>
-
-                  <div className={styles.symptomCategory}>
-                    <h3>Social & Identity Issues</h3>
-                    <ul>
-                      <li>Friendship difficulties or social anxiety</li>
-                      <li>Feeling different or like you don&apos;t belong</li>
-                      <li>Questions about identity, sexuality, or gender</li>
-                      <li>Relationship problems or romantic stress</li>
-                      <li>Family conflicts or communication issues</li>
-                    </ul>
-                  </div>
-                </div>
-              </section>
-
-              <section className={styles.approach}>
-                <h2>My Approach to Teen Therapy</h2>
-                <p>
-                  Working with teenagers requires respect, authenticity, and genuine understanding
-                  of the unique challenges you face. I don&apos;t treat teenagers like children or
-                  try to be your friend—I&apos;m here as a professional who genuinely cares about
-                  helping you navigate this complex time in your life.
-                </p>
-
-                <div className={styles.approachPoints}>
-                  <div className={styles.point}>
-                    <h3>Your Space, Your Pace</h3>
-                    <p>
-                      Therapy sessions are led by you. You choose what to talk about and how deep to
-                      go. There&apos;s no pressure to share everything immediately—trust builds over
-                      time.
-                    </p>
-                  </div>
-
-                  <div className={styles.point}>
-                    <h3>Confidentiality Respected</h3>
-                    <p>
-                      What we discuss stays between us, with only rare exceptions for safety. You
-                      have the right to privacy and to speak freely without worry about parents
-                      being told everything.
-                    </p>
-                  </div>
-
-                  <div className={styles.point}>
-                    <h3>No Judgment Zone</h3>
-                    <p>
-                      Whether you&apos;re dealing with identity questions, relationship drama,
-                      family conflict, or mental health struggles, this is a space free from
-                      judgment or unsolicited advice.
-                    </p>
-                  </div>
-                </div>
-              </section>
-
-              <section className={styles.commonConcerns}>
-                <h2>Common Issues I Help Teenagers With</h2>
-                <div className={styles.concernsGrid}>
-                  <div className={styles.concern}>
-                    <h3>Anxiety & Overwhelm</h3>
-                    <p>
-                      From social anxiety to panic attacks to general worry about everything, I help
-                      teens understand and manage anxiety in practical, sustainable ways.
-                    </p>
-                  </div>
-
-                  <div className={styles.concern}>
-                    <h3>Depression & Low Mood</h3>
-                    <p>
-                      When life feels heavy, empty, or pointless, therapy can help you understand
-                      these feelings and find ways to reconnect with things that matter to you.
-                    </p>
-                  </div>
-
-                  <div className={styles.concern}>
-                    <h3>School Stress</h3>
-                    <p>
-                      Academic pressure, perfectionism, social dynamics, and future planning can
-                      create overwhelming stress. I help teens find balance and perspective.
-                    </p>
-                  </div>
-
-                  <div className={styles.concern}>
-                    <h3>Identity & Self-Worth</h3>
-                    <p>
-                      Questions about who you are, your sexuality, your values, and your place in
-                      the world are normal but can feel isolating. Therapy provides space to explore
-                      safely.
-                    </p>
-                  </div>
-
-                  <div className={styles.concern}>
-                    <h3>Family Relationships</h3>
-                    <p>
-                      Conflicts with parents, feeling misunderstood, or navigating changing family
-                      dynamics while asserting your independence and autonomy.
-                    </p>
-                  </div>
-
-                  <div className={styles.concern}>
-                    <h3>Trauma & Difficult Experiences</h3>
-                    <p>
-                      Whether it&apos;s bullying, abuse, loss, or other difficult experiences,
-                      trauma-informed therapy helps you process and heal at your own pace.
-                    </p>
-                  </div>
-                </div>
-              </section>
-
-              <section className={styles.forParents}>
-                <h2>Information for Parents</h2>
-                <p>
-                  Supporting a teenager through therapy means finding the right balance between
-                  involvement and giving them space. Most teenagers benefit from knowing their
-                  parents support their therapy while respecting their need for privacy and
-                  autonomy.
-                </p>
-                <p>
-                  I&apos;m happy to provide general updates about progress and offer guidance on how
-                  to support your teenager at home, while maintaining the confidential therapeutic
-                  relationship that&apos;s essential for their growth.
-                </p>
-                <div className={styles.parentResources}>
-                  <Link
-                    href="/blog/adolescent-depression-struggles"
-                    className={styles.resourceLink}
-                  >
-                    Read: Understanding Adolescent Depression
-                  </Link>
-                  <Link
-                    href="/blog/understanding-anxiety-young-people"
-                    className={styles.resourceLink}
-                  >
-                    Read: Anxiety in Young People
-                  </Link>
-                </div>
-              </section>
-
-              <section className={styles.practicalInfo}>
-                <h2>What to Expect from Teen Therapy</h2>
-                <div className={styles.expectationsList}>
-                  <div className={styles.expectation}>
-                    <h3>First Session</h3>
-                    <p>
-                      We&apos;ll start by talking about what brought you to therapy and what
-                      you&apos;re hoping for. There&apos;s no pressure to open up
-                      immediately—we&apos;ll go at your pace.
-                    </p>
-                  </div>
-
-                  <div className={styles.expectation}>
-                    <h3>Building Trust</h3>
-                    <p>
-                      Early sessions focus on getting comfortable and building trust. You&apos;ll
-                      get a sense of my approach and whether you feel understood and supported.
-                    </p>
-                  </div>
-
-                  <div className={styles.expectation}>
-                    <h3>Exploring Issues</h3>
-                    <p>
-                      As trust develops, we&apos;ll explore the issues that matter most to you,
-                      understanding patterns and developing strategies that actually work for your
-                      life.
-                    </p>
-                  </div>
-
-                  <div className={styles.expectation}>
-                    <h3>Your Journey</h3>
-                    <p>
-                      Therapy length varies depending on what you&apos;re working on. Some teens
-                      benefit from short-term support; others prefer longer-term work as they
-                      navigate adolescence.
-                    </p>
-                  </div>
-                </div>
-              </section>
-
-              <section className={styles.relatedSection}>
-                <h2>Related Services</h2>
-                <p>Explore other therapy services that may be relevant to your needs.</p>
-                <div className={styles.relatedGrid}>
-                  <Link href="/child-therapy" className={styles.relatedCard}>
-                    <h3>Child Therapy</h3>
-                    <p>
-                      Therapy support for younger children aged 4-12 navigating emotional and
-                      behavioural challenges.
-                    </p>
-                  </Link>
-                  <Link href="/therapy-for-women" className={styles.relatedCard}>
-                    <h3>Therapy for Women</h3>
-                    <p>
-                      Support for those 18-40 navigating life transitions, burnout, and self-worth.
-                    </p>
-                  </Link>
-                  <Link href="/neurodiversity" className={styles.relatedCard}>
-                    <h3>Neurodiversity Support</h3>
-                    <p>
-                      Specialist support for ADHD, autism, and other neurodivergent conditions.
-                    </p>
-                  </Link>
-                </div>
-              </section>
+        <main className={styles.main}>
+          {/* Section 2: Parent empathy */}
+          <section className={styles.surfaceSection}>
+            <div className={styles.narrowContainer}>
+              <h2>If you&apos;re reading this at 11pm</h2>
+              <p className={styles.leadText}>
+                You&apos;re worried. Your teenager has changed — withdrawn, angry, tearful, refusing
+                school, or something else you can&apos;t quite name. You&apos;ve tried talking to
+                them. You&apos;ve tried giving them space. Nothing seems to help.
+              </p>
+              <p>
+                The CAMHS waitlist is impossibly long. You&apos;re not sure if this is
+                &ldquo;serious enough&rdquo; for private therapy, or whether your teenager would even
+                agree to go. You&apos;re exhausted, and you don&apos;t know what the right next step
+                is.
+              </p>
+              <p>
+                I work with teenagers like yours, and with parents who are trying to figure out how
+                to help. A free 15-minute call might be a good place to start — no pressure, just a
+                conversation about whether therapy could help.
+              </p>
             </div>
           </section>
-        </div>
-      </div>
 
-      <CTABlock />
+          {/* Section 3: What I work with */}
+          <section className={styles.normalSection}>
+            <div className={styles.sectionContainer}>
+              <h2>What I work with</h2>
+              <p>
+                I see teenagers dealing with a range of difficulties. These are the most common:
+              </p>
+              <div className={styles.topicsGrid}>
+                <div className={styles.topicItem}>Anxiety and panic</div>
+                <div className={styles.topicItem}>School refusal and avoidance</div>
+                <div className={styles.topicItem}>Self-harm</div>
+                <div className={styles.topicItem}>Low mood and depression</div>
+                <div className={styles.topicItem}>Anger and irritability</div>
+                <div className={styles.topicItem}>Friendship difficulties and social anxiety</div>
+                <div className={styles.topicItem}>Identity and sexuality questions</div>
+                <div className={styles.topicItem}>Family conflict</div>
+                <div className={styles.topicItem}>Academic pressure and perfectionism</div>
+                <div className={styles.topicItem}>Grief and loss</div>
+              </div>
+            </div>
+          </section>
+
+          {/* Section 4: What I don't work with */}
+          <section className={styles.surfaceSection}>
+            <div className={styles.narrowContainer}>
+              <h2>What I don&apos;t work with</h2>
+              <p>
+                Being clear about my limits helps you find the right support. I&apos;m not the right
+                therapist if your teenager is:
+              </p>
+              <ul className={styles.limitsList}>
+                <li className={styles.limitItem}>
+                  In acute crisis requiring immediate psychiatric support
+                </li>
+                <li className={styles.limitItem}>
+                  Actively suicidal with no current professional support
+                </li>
+                <li className={styles.limitItem}>
+                  Involved in ongoing court proceedings or forensic assessment
+                </li>
+                <li className={styles.limitItem}>Experiencing psychosis</li>
+                <li className={styles.limitItem}>
+                  Struggling with severe addiction without wraparound support
+                </li>
+              </ul>
+              <p>
+                <strong>Online sessions:</strong> I only offer online therapy to those aged 16 and
+                above. This is a confidentiality decision — younger teenagers have sometimes had
+                sessions in houses where parents are present in adjacent rooms, which undermines the
+                work.{' '}
+                <Link href="/online-therapy" className={styles.link}>
+                  More about online therapy →
+                </Link>
+              </p>
+            </div>
+          </section>
+
+          {/* Section 5: How I work */}
+          <section className={styles.normalSection}>
+            <div className={styles.narrowContainer}>
+              <h2>How I work with teenagers</h2>
+              <p>
+                I&apos;m a psychodynamic therapist. That means I&apos;m interested in understanding
+                <em>why</em> your teenager is struggling, not just managing symptoms. We don&apos;t
+                start with worksheets or homework assignments — we start with conversation, at their
+                pace.
+              </p>
+              <ul className={styles.approachList}>
+                <li className={styles.approachItem}>
+                  <h3>Confidentiality</h3>
+                  <p>
+                    What your teenager tells me stays between us, with exceptions only for immediate
+                    safety concerns. They need to know they can speak freely without it getting back
+                    to you. I can give you general updates about how therapy is going — whether
+                    they&apos;re engaging, whether we seem to be making progress — without sharing
+                    the content.
+                  </p>
+                </li>
+                <li className={styles.approachItem}>
+                  <h3>Teenager-led</h3>
+                  <p>
+                    Your teenager chooses what to talk about. I&apos;m not there to extract
+                    information or push them to open up before they&apos;re ready. Trust takes time,
+                    especially with teenagers who&apos;ve learned that adults often have an agenda.
+                  </p>
+                </li>
+                <li className={styles.approachItem}>
+                  <h3>Weekly, open-ended</h3>
+                  <p>
+                    I see teenagers weekly. We don&apos;t start with a fixed number of sessions —
+                    some teenagers come for a few months, others for longer. We review how it&apos;s
+                    going together and with you as the parent.
+                  </p>
+                </li>
+              </ul>
+            </div>
+          </section>
+
+          {/* Section 6: How I work with parents */}
+          <section className={styles.surfaceSection}>
+            <div className={styles.narrowContainer}>
+              <h2>How I work with parents</h2>
+              <p>
+                You&apos;re part of this, even though your teenager&apos;s sessions are theirs. I
+                offer parent sessions alongside teen therapy — space for you to talk about
+                what&apos;s happening at home, how to respond when they&apos;re struggling, and what
+                you can do to support them without taking over.
+              </p>
+              <p>
+                If there&apos;s school involvement — meetings, SENCO conversations, safeguarding
+                concerns — I can liaise with school with your permission. I&apos;ve worked in
+                schools and understand how the system operates.
+              </p>
+              <p>
+                Parent sessions are separate from your teenager&apos;s therapy and are charged at
+                the same rate (£60).
+              </p>
+            </div>
+          </section>
+
+          {/* Section 7: My experience */}
+          <section className={styles.normalSection}>
+            <div className={styles.sectionContainer}>
+              <h2>My experience with young people</h2>
+              <p>
+                I&apos;ve worked with teenagers in schools, in the NHS, and in community settings.
+                This isn&apos;t something I do occasionally — it&apos;s a core part of my practice.
+              </p>
+              <div className={styles.experienceGrid}>
+                <div className={styles.experienceItem}>
+                  <h3>NHS Essex</h3>
+                  <p>
+                    Workshops and seminars with children and parents in primary and secondary
+                    schools across Essex.
+                  </p>
+                </div>
+                <div className={styles.experienceItem}>
+                  <h3>Sir Bobby Robson School, Ipswich</h3>
+                  <p>
+                    A year working in this SEN-specific provision, supporting young people with
+                    complex needs.
+                  </p>
+                </div>
+                <div className={styles.experienceItem}>
+                  <h3>Mind (Mid &amp; North East Essex)</h3>
+                  <p>Youth work in schools, supporting young people with mental health.</p>
+                </div>
+                <div className={styles.experienceItem}>
+                  <h3>YMCA Ipswich</h3>
+                  <p>
+                    Ongoing work across two projects: primary school support and work with young
+                    residents in YMCA accommodation.
+                  </p>
+                </div>
+              </div>
+              <p>
+                I hold an MSc in Psychodynamic Psychotherapy from the University of Essex (2020) and
+                am a registered member of the BACP. I continue to train in neurodiversity,
+                attachment, and trauma.
+              </p>
+            </div>
+          </section>
+
+          {/* Section 8: What if my teenager won't come? */}
+          <section className={styles.surfaceSection}>
+            <div className={styles.narrowContainer}>
+              <h2>What if my teenager won&apos;t come?</h2>
+              <p>
+                This is one of the most common questions I get from parents. Your teenager might be
+                resistant because they don&apos;t want to talk about their feelings, because
+                they&apos;re worried you&apos;ll find out what they say, or because they don&apos;t
+                believe it will help.
+              </p>
+              <p>
+                Sometimes it helps to frame therapy as something you&apos;re offering, not forcing.
+                A trial session with no commitment. Sometimes it helps to let me speak with them
+                briefly beforehand. Sometimes they&apos;re more willing than you expect once they
+                understand that what they say stays confidential.
+              </p>
+              <p>
+                If they genuinely won&apos;t come, I can still work with you as a parent — helping
+                you understand what might be going on and how to respond.
+              </p>
+            </div>
+          </section>
+
+          {/* Section 9: Crisis signposting */}
+          <section className={styles.crisisSection}>
+            <div className={styles.sectionContainer}>
+              <h2>If your teenager is in crisis right now</h2>
+              <p>
+                This page isn&apos;t for emergencies. If your teenager is in immediate danger or you
+                need urgent help, please contact one of these services:
+              </p>
+              <div className={styles.crisisGrid}>
+                <div className={styles.crisisItem}>
+                  <h3>NHS 111</h3>
+                  <p>
+                    Call <strong>111</strong> and select the mental health option for urgent
+                    assessment and advice.
+                  </p>
+                </div>
+                <div className={styles.crisisItem}>
+                  <h3>Your GP</h3>
+                  <p>
+                    Your teenager&apos;s GP can provide urgent referrals and crisis support during
+                    surgery hours.
+                  </p>
+                </div>
+                <div className={styles.crisisItem}>
+                  <h3>A&amp;E</h3>
+                  <p>
+                    Go to A&amp;E if your teenager has harmed themselves seriously or is at
+                    immediate risk.
+                  </p>
+                </div>
+                <div className={styles.crisisItem}>
+                  <h3>Shout</h3>
+                  <p>
+                    Free, confidential 24/7 text service for young people. Text{' '}
+                    <strong>SHOUT to 85258</strong>.
+                  </p>
+                </div>
+                <div className={styles.crisisItem}>
+                  <h3>Papyrus HOPELINEUK</h3>
+                  <p>
+                    For young people under 35 who are having thoughts of suicide. Call{' '}
+                    <strong>0800 068 4141</strong>.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* Section 10: CTA */}
+          <section className={styles.ctaSection}>
+            <div className={styles.ctaContainer}>
+              <h2>Book a free 15-minute call</h2>
+              <p>
+                The free call is for parents. We&apos;ll talk about what&apos;s happening with your
+                teenager, whether therapy seems like the right next step, and any questions you
+                have. No pressure, no commitment.
+              </p>
+              <Link href="/book-now" className={buttonStyles.primary}>
+                Book a free call
+              </Link>
+            </div>
+          </section>
+        </main>
+      </div>
     </>
   );
 }
