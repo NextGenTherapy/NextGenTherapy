@@ -146,7 +146,7 @@ export default function ChildTherapyPage() {
       <PageHero
         eyebrow="Therapy for Children"
         title="When something's not quite right with your child, but you can't put it into words yet."
-        lead="Play-based psychodynamic therapy for children aged 4–12, in person in Colchester. I help children work through anxiety, behavioural changes, and difficult experiences in a way that makes sense to them."
+        lead="Play-based psychodynamic therapy for children aged 4–12, in person in Colchester. For anxiety, behavioural changes, school difficulties, family transitions, neurodiversity, and the things children can't say but can show."
       />
 
       <div className={styles.page}>
@@ -156,24 +156,25 @@ export default function ChildTherapyPage() {
 
               {/* Section 2: When parents bring children to me */}
               <section className={styles.introduction}>
-                <h2>When parents bring their children to me</h2>
+                <h2>When parents bring children to me</h2>
                 <p>
-                  You know something isn&apos;t right. Maybe it&apos;s the meltdowns that seem to come
-                  from nowhere. The withdrawal from friends or activities they used to love. The
-                  anxiety that&apos;s started creeping into everything. The behaviour that&apos;s
-                  leaving teachers concerned.
+                  You&apos;ve noticed something. Maybe sleep has changed — nightmares, bed-wetting
+                  that had stopped, trouble settling. Maybe there are meltdowns that seem to come
+                  from nowhere, or a withdrawal from friends and activities they used to love. Maybe
+                  school is calling, or you&apos;re getting reports that don&apos;t match the child
+                  you know at home.
+                </p>
+                <p>
+                  Often parents can&apos;t point to a single trigger. Sometimes they can — a
+                  separation, a bereavement, a move, something that happened at school. Either way,
+                  the child in front of them is struggling and the usual parenting approaches
+                  aren&apos;t landing.
                 </p>
                 <p>
                   Children don&apos;t have the words adults do. When something is wrong, they show us
                   through behaviour — through tantrums, through silence, through regression, through
-                  changes that are hard to explain. These are the ways children communicate distress
-                  when they can&apos;t articulate it.
-                </p>
-                <p>
-                  As a parent, watching your child struggle is exhausting. You want to help but you
-                  don&apos;t always know how. Therapy gives your child a dedicated space to work
-                  through what&apos;s happening, with support that&apos;s designed for the way
-                  children actually process their experiences.
+                  changes that are hard to explain. This behaviour is communication. Therapy gives
+                  them a space to work through what they can&apos;t say.
                 </p>
               </section>
 
@@ -181,18 +182,19 @@ export default function ChildTherapyPage() {
               <section className={styles.workWithSection}>
                 <h2>What I often work with</h2>
                 <p>
-                  Every child is different, but these are the difficulties that bring families to me
-                  most often:
+                  Every child is different, but these are some of the difficulties that bring
+                  families to me:
                 </p>
                 <ul className={styles.workWithList}>
-                  <li className={styles.workWithItem}>Anxiety, worry, and fearfulness</li>
-                  <li className={styles.workWithItem}>School difficulties — avoidance, refusal, or struggles to settle</li>
-                  <li className={styles.workWithItem}>Family transitions — divorce, separation, new siblings, bereavement</li>
+                  <li className={styles.workWithItem}>Anxiety, worry, and fearfulness that&apos;s affecting daily life</li>
+                  <li className={styles.workWithItem}>School difficulties — avoidance, refusal, trouble settling, friendship problems</li>
+                  <li className={styles.workWithItem}>Family changes — divorce, separation, new siblings, bereavement, moving house</li>
                   <li className={styles.workWithItem}>Behavioural changes that don&apos;t seem to have an obvious cause</li>
-                  <li className={styles.workWithItem}>Sleep difficulties or nightmares</li>
-                  <li className={styles.workWithItem}>Neurodivergent children — ADHD, autism, sensory differences</li>
-                  <li className={styles.workWithItem}>Trauma or frightening experiences</li>
-                  <li className={styles.workWithItem}>Low confidence or self-esteem</li>
+                  <li className={styles.workWithItem}>Sleep difficulties, nightmares, or regression (bed-wetting, clinginess)</li>
+                  <li className={styles.workWithItem}>Neurodivergent children — ADHD, autism, sensory differences, PDA</li>
+                  <li className={styles.workWithItem}>Trauma, frightening experiences, or things that happened too early to remember clearly</li>
+                  <li className={styles.workWithItem}>Low confidence, self-esteem, or a sense that something is wrong without knowing what</li>
+                  <li className={styles.workWithItem}>The things you can&apos;t quite put into words — when you just know something&apos;s not right</li>
                 </ul>
               </section>
 
@@ -201,22 +203,23 @@ export default function ChildTherapyPage() {
                 <h2>How I work with younger children</h2>
                 <p>
                   Children don&apos;t sit on a couch and talk about their feelings the way adults
-                  might. They process the world through play, through stories, through drawing and
-                  making things. That&apos;s why I use play-based psychodynamic therapy — it works
-                  with the way children naturally communicate.
+                  might. A 7-year-old can&apos;t articulate &quot;I&apos;m anxious because I
+                  don&apos;t feel secure since you and Dad separated.&quot; But they can show you —
+                  in a sand tray, in the way they play with toys, in the stories they make up, in
+                  what they draw without being asked.
                 </p>
                 <p>
-                  In sessions, children might use a sand tray to create worlds and scenarios. They
-                  might draw, paint, or use toys to act out situations. Sometimes we talk, sometimes
-                  we don&apos;t. I follow your child&apos;s lead and meet them where they are.
+                  This isn&apos;t entertainment, and it isn&apos;t a distraction technique.
+                  Play-based psychodynamic therapy uses play as the language it is. I watch, I
+                  follow, I sometimes name what I&apos;m noticing. Over time, children work through
+                  what they can&apos;t say in words.
                 </p>
                 <p>
-                  My therapy room at Colchester Business Centre is set up with younger clients in
-                  mind. It&apos;s a ground-floor space, quiet and calm. Plants, soft lighting, a
-                  couch and comfortable chairs. There&apos;s a desk with toys, art materials, and
-                  therapeutic play equipment. Fidgets are available for any age, and stimming is
-                  welcomed — this matters particularly for neurodivergent children who need to move
-                  to think.
+                  My therapy room at Colchester Business Centre is set up for children. Ground
+                  floor, quiet, plants, soft lighting. There&apos;s a sand tray, drawing and art
+                  materials, puppets, small-world toys, and sensory objects. Fidgets are available
+                  for any age, and stimming is welcomed — this matters especially for neurodivergent
+                  children who need to move to think.
                 </p>
               </section>
 
@@ -228,19 +231,21 @@ export default function ChildTherapyPage() {
                   consistency matters — children feel safer when they know what to expect.
                 </p>
                 <p>
-                  For younger children, a parent or carer usually brings them to the waiting area
-                  and collects them afterwards. Some children separate easily; others need time. I
-                  work with whatever your child needs to feel comfortable.
+                  For younger children, a parent or carer brings them to the waiting area and
+                  collects them afterwards. I&apos;ll briefly check in with you at the start and end
+                  — not to discuss content, but to flag anything you think I should know or anything
+                  I think would help at home.
                 </p>
                 <p>
-                  There&apos;s no script for what happens in sessions. Some children arrive ready to
-                  play. Others need time to settle. Some talk constantly; some barely speak for
-                  weeks. All of this is normal and all of it is therapeutic. I follow your
-                  child&apos;s pace rather than imposing my own agenda.
+                  There&apos;s no script for what happens inside the room. Some children arrive
+                  ready to play. Others need time to settle. Some talk constantly; some barely speak
+                  for weeks. All of this is normal and all of it is part of the process. I follow
+                  your child&apos;s lead rather than imposing an agenda.
                 </p>
                 <p>
                   Therapy is open-ended — we work for as long as your child needs, not to a fixed
-                  number of sessions. Endings are planned carefully and worked through together.
+                  number of sessions. Endings are planned carefully and worked through together when
+                  it&apos;s time.
                 </p>
               </section>
 
@@ -248,32 +253,32 @@ export default function ChildTherapyPage() {
               <section id="for-parents" className={styles.forParentsSection}>
                 <h2>For parents: how I work with you</h2>
                 <p>
-                  Child therapy isn&apos;t just about the child — it involves you too. Before I meet
-                  your child, I&apos;ll have an initial conversation with you (either in person or
-                  by phone) to understand the full picture: what&apos;s happening, what you&apos;ve
-                  noticed, your child&apos;s history, and what you&apos;re hoping might change.
+                  Before I meet your child, I&apos;ll have an initial conversation with you — either
+                  by phone or in person — to understand the full picture. What you&apos;ve noticed,
+                  when it started, what you&apos;ve tried. Your child&apos;s history. What you&apos;re
+                  hoping might shift. This gives me context and gives you space to share things you
+                  might not say in front of your child.
                 </p>
                 <p>
-                  Throughout the therapy, I offer regular parent review meetings. These happen
-                  without your child present. I won&apos;t share specific things your child has said
-                  — their sessions are confidential — but I&apos;ll discuss general themes, how the
-                  work is progressing, and how you can support them at home.
+                  Throughout the therapy, I offer <strong>parent review meetings</strong> — regular
+                  sessions without your child present. I won&apos;t share the specific content of
+                  their sessions (that stays confidential), but I&apos;ll discuss general themes,
+                  how things seem to be progressing, and what might help at home.
                 </p>
                 <p>
-                  If you&apos;re finding it hard yourself — if your child&apos;s difficulties are
-                  affecting your own wellbeing — I also offer parent-only sessions. Sometimes the
-                  most helpful thing is for parents to have their own space to process what&apos;s
-                  happening.
+                  If you&apos;re struggling yourself — if your child&apos;s difficulties are
+                  affecting your own wellbeing, your relationship, your capacity to cope — I also
+                  offer <strong>parent-only sessions</strong>. Sometimes the most useful thing is
+                  for you to have your own space.
                 </p>
 
                 <div className={styles.experienceNote}>
                   <p>
-                    I&apos;ve worked extensively with children and families in schools and
-                    community settings — including NHS Essex (workshops with children and parents
-                    in primary and secondary schools), Sir Bobby Robson School in Ipswich
-                    (SEN-specific provision), Mind Mid &amp; North East Essex (youth work in
-                    schools), and ongoing work with YMCA in Ipswich supporting primary school
-                    children and young people in supported accommodation.
+                    I&apos;ve worked with children and families in schools and community settings
+                    across Essex and Suffolk — including NHS Essex (workshops in primary and
+                    secondary schools), Sir Bobby Robson School in Ipswich (SEN-specific provision),
+                    Mind Mid &amp; North East Essex (youth work), and ongoing work with YMCA
+                    supporting primary school children and young people in supported accommodation.
                   </p>
                 </div>
 
@@ -293,23 +298,19 @@ export default function ChildTherapyPage() {
                 </div>
               </section>
 
-              {/* Section 7: Working with schools and other professionals */}
+              {/* Section 7: Working with school and other professionals */}
               <section className={styles.schoolSection}>
-                <h2>Working with schools and other professionals</h2>
+                <h2>Working with school and other professionals</h2>
                 <p>
                   With your consent, I can liaise with your child&apos;s school — their class
-                  teacher, SENCo, or ELSA. Sometimes a joined-up approach makes a real difference,
-                  especially when a child is struggling in the classroom as well as at home.
+                  teacher, SENCo, or ELSA. I can write letters for EHCP applications or reviews if
+                  therapy observations would be useful. I&apos;m also happy to coordinate with other
+                  professionals involved in your child&apos;s care — paediatricians, occupational
+                  therapists, speech and language therapists — where that helps.
                 </p>
                 <p>
-                  I can write letters for EHCP applications or reviews if therapy observations
-                  would be helpful. I&apos;m also happy to coordinate with other professionals
-                  involved in your child&apos;s care — paediatricians, occupational therapists,
-                  speech and language therapists — where that&apos;s useful.
-                </p>
-                <p>
-                  This kind of communication only happens with your explicit agreement. You&apos;re
-                  always in control of who I speak to and what information is shared.
+                  This only happens with your explicit agreement. You&apos;re always in control of
+                  who I speak to and what information is shared.
                 </p>
               </section>
 
@@ -317,21 +318,21 @@ export default function ChildTherapyPage() {
               <section className={styles.limitsSection}>
                 <h2>What I don&apos;t work with at this age</h2>
                 <p>
-                  There are some situations where a different kind of support would be more
-                  appropriate:
+                  There are some situations where a different kind of support is more appropriate:
                 </p>
                 <ul className={styles.limitsList}>
                   <li className={styles.limitsItem}>
                     <strong>Acute crisis or active risk.</strong> If your child is in immediate
-                    danger or experiencing a mental health crisis, they need a multidisciplinary
-                    team — CAMHS crisis services, A&amp;E, or your GP. Private therapy can&apos;t
-                    provide the wraparound support a child in crisis needs.
+                    danger, actively self-harming, or experiencing a mental health crisis, they need
+                    a crisis team — CAMHS, A&amp;E, or your GP. Private weekly therapy can&apos;t
+                    provide the wraparound support a child in acute crisis needs. Once they&apos;re
+                    stable, we can talk.
                   </li>
                   <li className={styles.limitsItem}>
                     <strong>Online therapy for under-16s.</strong> I only offer online sessions to
-                    clients aged 16 and over. For younger children, the work needs to happen in
-                    person where I can use play and creative materials effectively, and where
-                    confidentiality can be properly maintained. Learn more about{' '}
+                    clients aged 16 and over. For children, the work needs to happen in person —
+                    play-based therapy doesn&apos;t translate to a screen, and confidentiality is
+                    harder to maintain when a child is at home. Learn more about{' '}
                     <Link href="/online-therapy" className={styles.limitsLink}>
                       online therapy and who it&apos;s for
                     </Link>.
@@ -341,7 +342,7 @@ export default function ChildTherapyPage() {
 
               {/* Section 9: Crisis signposting */}
               <section className={styles.crisisSection}>
-                <h2>If your child needs urgent help</h2>
+                <h2>If your child is in crisis right now</h2>
                 <p>
                   If your child is in crisis or you&apos;re concerned about their immediate safety,
                   please contact:
@@ -366,18 +367,22 @@ export default function ChildTherapyPage() {
                     <span className={styles.crisisNote}>— free, confidential support for children and young people</span>
                   </li>
                 </ul>
+                <p>
+                  Therapy is part of the longer-term picture, not the right tool for an emergency.
+                </p>
               </section>
 
               {/* Section 10: CTA */}
               <section className={styles.ctaSection}>
                 <h2>Start with a free 15-minute call</h2>
                 <p>
-                  This is a conversation just for you, as the parent — a chance to tell me
-                  what&apos;s happening, ask any questions, and see whether I might be the right
-                  fit for your child. No pressure, no commitment.
+                  The first conversation is just for you, as the parent. A chance to tell me
+                  what&apos;s happening, ask any questions, and see whether I might be the right fit
+                  for your child. No pressure, no commitment, and your child doesn&apos;t need to be
+                  involved yet.
                 </p>
                 <Link href="/book-now" className={styles.ctaButton}>
-                  Book a free consultation
+                  Book a Free 15-Minute Call
                 </Link>
               </section>
 
