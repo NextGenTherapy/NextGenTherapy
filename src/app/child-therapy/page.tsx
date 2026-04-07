@@ -186,15 +186,33 @@ export default function ChildTherapyPage() {
                   families to me:
                 </p>
                 <ul className={styles.workWithList}>
-                  <li className={styles.workWithItem}>Anxiety, worry, and fearfulness that&apos;s affecting daily life</li>
-                  <li className={styles.workWithItem}>School difficulties — avoidance, refusal, trouble settling, friendship problems</li>
-                  <li className={styles.workWithItem}>Family changes — divorce, separation, new siblings, bereavement, moving house</li>
-                  <li className={styles.workWithItem}>Behavioural changes that don&apos;t seem to have an obvious cause</li>
-                  <li className={styles.workWithItem}>Sleep difficulties, nightmares, or regression (bed-wetting, clinginess)</li>
-                  <li className={styles.workWithItem}>Neurodivergent children — ADHD, autism, sensory differences, PDA</li>
-                  <li className={styles.workWithItem}>Trauma, frightening experiences, or things that happened too early to remember clearly</li>
-                  <li className={styles.workWithItem}>Low confidence, self-esteem, or a sense that something is wrong without knowing what</li>
-                  <li className={styles.workWithItem}>The things you can&apos;t quite put into words — when you just know something&apos;s not right</li>
+                  <li className={styles.workWithItem}>
+                    <strong>Anxiety and worry</strong> — including separation anxiety, social anxiety, fears that don&apos;t seem to shift, and worry that&apos;s affecting daily life
+                  </li>
+                  <li className={styles.workWithItem}>
+                    <strong>School-related difficulties</strong> — refusal, avoidance, trouble settling, friendship problems, bullying, difficulty with transitions
+                  </li>
+                  <li className={styles.workWithItem}>
+                    <strong>Family transitions</strong> — separation, divorce, blended families, new siblings, bereavement, moving house
+                  </li>
+                  <li className={styles.workWithItem}>
+                    <strong>Behavioural changes</strong> — withdrawal, anger, aggression, regression, changes that don&apos;t seem to have an obvious cause
+                  </li>
+                  <li className={styles.workWithItem}>
+                    <strong>Sleep difficulties and night fears</strong> — nightmares, trouble settling, bed-wetting that had stopped, night terrors
+                  </li>
+                  <li className={styles.workWithItem}>
+                    <strong>Neurodiversity</strong> — ADHD, autism, sensory processing differences. I work affirmatively with neurodivergent children
+                  </li>
+                  <li className={styles.workWithItem}>
+                    <strong>Trauma and difficult experiences</strong> — hospital stays, accidents, frightening experiences, things that happened too early to remember clearly
+                  </li>
+                  <li className={styles.workWithItem}>
+                    <strong>Self-confidence and self-esteem</strong> — children who seem to carry a sense that something is wrong with them
+                  </li>
+                  <li className={styles.workWithItem}>
+                    <strong>The things you can&apos;t quite put into words</strong> — when you just know something&apos;s not right
+                  </li>
                 </ul>
               </section>
 
@@ -253,6 +271,9 @@ export default function ChildTherapyPage() {
               <section id="for-parents" className={styles.forParentsSection}>
                 <h2>For parents: how I work with you</h2>
                 <p>
+                  <strong>Parents are part of the work, not on the sidelines.</strong>
+                </p>
+                <p>
                   Before I meet your child, I&apos;ll have an initial conversation with you — either
                   by phone or in person — to understand the full picture. What you&apos;ve noticed,
                   when it started, what you&apos;ve tried. Your child&apos;s history. What you&apos;re
@@ -282,20 +303,6 @@ export default function ChildTherapyPage() {
                   </p>
                 </div>
 
-                <div className={styles.parentResources}>
-                  <Link
-                    href="/blog/supporting-child-through-therapy"
-                    className={styles.resourceLink}
-                  >
-                    Read: Supporting Your Child Through Therapy
-                  </Link>
-                  <Link
-                    href="/blog/school-avoidance-education-feels-impossible"
-                    className={styles.resourceLink}
-                  >
-                    Read: School Avoidance Support
-                  </Link>
-                </div>
               </section>
 
               {/* Section 7: Working with school and other professionals */}
@@ -374,12 +381,11 @@ export default function ChildTherapyPage() {
 
               {/* Section 10: CTA */}
               <section className={styles.ctaSection}>
-                <h2>Start with a free 15-minute call</h2>
+                <h2>Start with a parent-only conversation</h2>
                 <p>
-                  The first conversation is just for you, as the parent. A chance to tell me
-                  what&apos;s happening, ask any questions, and see whether I might be the right fit
-                  for your child. No pressure, no commitment, and your child doesn&apos;t need to be
-                  involved yet.
+                  The free 15-minute call is just for you. A chance to tell me what&apos;s happening,
+                  ask any questions, and see whether I might be the right fit for your child. No
+                  pressure, no commitment, and your child doesn&apos;t need to be involved yet.
                 </p>
                 <Link href="/book-now" className={styles.ctaButton}>
                   Book a Free 15-Minute Call
