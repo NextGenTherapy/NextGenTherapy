@@ -1,10 +1,10 @@
 import type { Metadata } from 'next';
 import dynamic from 'next/dynamic';
+import Link from 'next/link';
+
 import PageHero from '@/components/ui/PageHero';
-import CTABlock from '@/components/ui/CTABlock';
+
 import styles from './book-now.module.scss';
-import buttonLinksStyles from '../../components/ui/buttonLinks.module.scss';
-import Button from '../../components/ui/button';
 
 // Dynamically import ContactForm for better performance
 const ContactForm = dynamic(() => import('../../components/forms/contact-form'), {
@@ -13,27 +13,19 @@ const ContactForm = dynamic(() => import('../../components/forms/contact-form'),
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://nextgentherapy.co.uk'),
-  title: 'Book Counsellor Colchester | Schedule Your Session | Contact',
+  title: 'Book a Free 15-Minute Call | Next Generation Therapy Colchester',
   description:
-    'Ready to book your therapist? Schedule your session with BACP registered therapist in Colchester. £60 sessions available in-person or online.',
+    "Book a free 15-minute introductory call with Andreea, BACP-registered psychotherapist in Colchester. No commitment. In-person and online (UK-wide, age 16+).",
   keywords: [
-    'book counsellor Colchester',
-    'book counselling session Essex',
-    'schedule counsellor appointment',
-    'counselling appointment Colchester',
-    'contact counsellor Colchester',
-    'counsellor booking Essex',
-    'book psychotherapist Colchester',
-    'mental health appointment',
-    'BACP counsellor booking',
-    'anxiety counsellor appointment',
-    'depression counsellor booking',
-    'relationship counsellor contact',
-    'psychotherapy booking Essex',
-    'online counsellor booking UK',
-    'counselling session £60',
-    'Andreea Horhocea counsellor',
-    'mental health counsellor booking',
+    'book therapy colchester',
+    'free therapy consultation',
+    'book psychotherapist colchester',
+    'therapy consultation essex',
+    'psychodynamic therapy booking',
+    'contact therapist colchester',
+    'book counsellor essex',
+    'online therapy booking uk',
+    'BACP therapist colchester',
   ],
   authors: [{ name: 'Andreea Horhocea' }],
   alternates: {
@@ -51,9 +43,9 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'Book Therapy Session Colchester | Contact Andreea Horhocea',
+    title: 'Book a Free 15-Minute Call | Next Generation Therapy',
     description:
-      'Book therapy with BACP registered psychotherapist Andreea Horhocea. £60 sessions in Colchester or online.',
+      "Book a free 15-minute introductory call with Andreea, BACP-registered psychotherapist in Colchester. No commitment.",
     url: 'https://nextgentherapy.co.uk/book-now',
     siteName: 'Next Generation Therapy',
     locale: 'en_GB',
@@ -63,40 +55,47 @@ export const metadata: Metadata = {
         url: 'https://nextgentherapy.co.uk/images/default-social-share.jpg',
         width: 1200,
         height: 630,
-        alt: 'Book Therapy Session - Next Generation Therapy Colchester',
+        alt: 'Book a Free 15-Minute Call - Next Generation Therapy Colchester',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Book Now - Next Generation Therapy',
+    title: 'Book a Free 15-Minute Call | Next Generation Therapy',
     description:
-      'Book a therapy session with Andreea Horhocea, a psychodynamic psychotherapist offering services in Colchester and online.',
+      "Book a free 15-minute introductory call with Andreea, BACP-registered psychotherapist in Colchester.",
     images: ['https://nextgentherapy.co.uk/images/default-social-share.jpg'],
   },
 };
 
-export default function BookNow() {
-  const bookingSchema = {
+export default function BookNowPage() {
+  const contactPageSchema = {
     '@context': 'https://schema.org',
     '@type': 'ContactPage',
-    name: 'Book Therapy Session',
-    description: 'Schedule a therapy session with BACP registered therapist in Colchester',
+    name: 'Book a Free 15-Minute Call',
+    description:
+      'Book a free 15-minute introductory call with Andreea Horhocea, BACP-registered psychotherapist in Colchester',
     url: 'https://nextgentherapy.co.uk/book-now',
     provider: {
       '@type': 'Person',
       name: 'Andreea Horhocea',
       jobTitle: 'Psychodynamic Psychotherapist',
+      qualification: [
+        {
+          '@type': 'EducationalOccupationalCredential',
+          credentialCategory: 'degree',
+          name: 'MSc Psychodynamic Psychotherapy',
+          educationalLevel: 'Master',
+        },
+      ],
     },
-    offers: [
-      {
-        '@type': 'Offer',
-        name: 'Therapy Session',
-        description: 'Individual 50-minute therapy session',
-        price: '60',
-        priceCurrency: 'GBP',
-      },
-    ],
+    offers: {
+      '@type': 'Offer',
+      name: 'Free 15-Minute Consultation Call',
+      price: '0',
+      priceCurrency: 'GBP',
+      description: 'A brief, informal phone call to see if we might be a good fit for working together.',
+    },
   };
 
   const breadcrumbSchema = {
@@ -112,7 +111,7 @@ export default function BookNow() {
       {
         '@type': 'ListItem',
         position: 2,
-        name: 'Book Therapy Session',
+        name: 'Book a Free 15-Minute Call',
         item: 'https://nextgentherapy.co.uk/book-now',
       },
     ],
@@ -122,163 +121,170 @@ export default function BookNow() {
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(bookingSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(contactPageSchema) }}
       />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
+
       <PageHero
-        eyebrow="Get in Touch"
-        title="Let's talk about whether I'm the right fit for you"
-        lead="I offer a free 15-minute phone consultation — no commitment, no pressure. Just a conversation to see if working together feels right."
+        eyebrow="Book a Free 15-Minute Call"
+        title="Let's see if we're a good fit"
+        lead="Before any paid session, I offer a free 15-minute phone call. It's not therapy — just an informal conversation to hear a bit about what's brought you here, answer any questions, and see whether working together feels right for both of us."
       />
+
       <div className={styles.page}>
         <main className={styles.main}>
-          <section className={styles.contentTop}>
-            <article>
-              <h2>Ready to Take the First Step?</h2>
-              <p>
-                Taking the first step towards therapy can feel daunting, but you don&apos;t have to
-                do it alone. I&apos;m here to support you through the process.
-              </p>
-              <ul>
-                <li>
-                  If you&apos;re feeling ready to explore therapy or have questions about the
-                  process, I&apos;m here to help.
-                </li>
-                <li>Reach out via the contact form below, email, or phone.</li>
-                <li>
-                  I aim to respond within 24 hours to discuss how we might work together and
-                  schedule your first session.
-                </li>
-              </ul>
-            </article>
-          </section>
-
-          {/* Trust Signals & Credentials */}
-          <section className={styles.trustSection}>
-            <div className={styles.trustContainer}>
-              <div className={styles.credentials}>
-                <h3>Professional Qualifications</h3>
-                <ul>
-                  <li>🎓 Masters in Psychodynamic Psychotherapy</li>
-                  <li>🎓 BA in Criminology and Social Psychology</li>
-                  <li>✅ BACP Registered Member</li>
-                  <li>💼 5+ Years Experience</li>
-                </ul>
-              </div>
-              <div className={styles.sessionInfo}>
-                <h3>Session Information</h3>
-                <ul>
-                  <li>⏱️ 50-minute sessions at £60</li>
-                  <li>📍 In-person (Colchester) or Online</li>
-                  <li>🔒 Completely confidential</li>
-                  <li>📅 Flexible scheduling available</li>
-                </ul>
-              </div>
-            </div>
-          </section>
-
-          {/* What Happens Next */}
+          {/* What happens next */}
           <section className={styles.processSection}>
-            <h2>What Happens Next?</h2>
-            <div className={styles.processSteps}>
-              <div className={styles.step}>
-                <span className={styles.stepNumber}>1</span>
-                <h3>Submit Your Enquiry</h3>
-                <p>Fill out the contact form below or call/email directly</p>
-              </div>
-              <div className={styles.step}>
-                <span className={styles.stepNumber}>2</span>
-                <h3>Initial Response</h3>
-                <p>I&apos;ll respond within 24 hours to discuss your needs</p>
-              </div>
-              <div className={styles.step}>
-                <span className={styles.stepNumber}>3</span>
-                <h3>Book Your Session</h3>
-                <p>We&apos;ll find a suitable time for your first therapy session</p>
-              </div>
-            </div>
+            <h2>What happens next</h2>
+            <ol className={styles.processList}>
+              <li>
+                <strong>I&apos;ll be in touch within 1-2 working days</strong>
+                <p>
+                  Once you submit the form below, I&apos;ll get back to you to arrange a time for
+                  the call.
+                </p>
+              </li>
+              <li>
+                <strong>We&apos;ll have the call (15 minutes, informal)</strong>
+                <p>
+                  This is a chance for us both to get a sense of each other. You can ask me anything
+                  about how I work, and I&apos;ll want to hear a little about what&apos;s brought
+                  you to therapy.
+                </p>
+              </li>
+              <li>
+                <strong>We&apos;ll decide together</strong>
+                <p>
+                  If it feels like a good fit, we can book your first session. If not, no pressure
+                  — I can suggest other options that might suit you better.
+                </p>
+              </li>
+            </ol>
           </section>
 
-          <section className={styles.contentMiddle}>
-            <div className={styles.contactInfo}>
-              <div className={styles.contactCard}>
-                <h3>My Contact Details</h3>
-                <ul>
-                  <li>
-                    <a
-                      href="mailto:andreeatherapytoday@gmail.com"
-                      aria-label="Send an email to Andreea Therapy Today"
-                    >
-                      Email: andreeatherapytoday@gmail.com
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="tel:07448036017"
-                      aria-label="Call Andreea Therapy Today at 07448036017"
-                    >
-                      Phone: 07448036017
-                    </a>
-                  </li>
-                </ul>
-              </div>
-
-              <div className={styles.locationCard} id="location">
-                <h3>Location</h3>
-                <ul>
-                  <li>
-                    <a
-                      href="https://www.google.com/maps?q=Colchester+Business+Centre,+1+George+Williams+Way,+Colchester+CO1+2JS"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label="View Colchester Business Centre on Google Maps"
-                    >
-                      Colchester Business Centre, 1 George Williams Way, Colchester CO1 2JS
-                    </a>
-                  </li>
-                </ul>
-
-                {/* Google Maps Embed */}
-                <div className={styles.mapContainer}>
-                  <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2462.624902209368!2d0.9056014!3d51.8860592!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d905d138eb59f9%3A0xcba6bcd08ff9a10!2sAndreea%20Horhocea%20Next%20Generation%20Counselling%20%26%20Psychotherapy!5e0!3m2!1sen!2suk!4v1743611123198!5m2!1sen!2suk"
-                    width="100%"
-                    height="300"
-                    style={{ border: 0 }}
-                    allowFullScreen
-                    loading="lazy"
-                    referrerPolicy="no-referrer-when-downgrade"
-                    title="Next Generation Therapy Location Map"
-                    aria-label="Google Maps showing location of Next Generation Therapy at Colchester Business Centre, 1 George Williams Way, Colchester CO1 2JS"
-                  ></iframe>
-                </div>
-              </div>
-
-              <div className={styles.hoursCard} id="working-hours">
-                <h3>Working Office Hours</h3>
-                <ul>
-                  <li>Monday - Tuesday: 10am - 7pm</li>
-                  <li>Friday: 9am - 2pm</li>
-                  <li>More availability online</li>
-                </ul>
-              </div>
-            </div>
-          </section>
-
-          <section className={styles.contentEnd} id="contact-form">
-            <h2>Contact Form</h2>
+          {/* Contact Form */}
+          <section className={styles.formSection} id="contact-form">
+            <h2>Send an enquiry</h2>
             <ContactForm />
           </section>
 
-          <CTABlock />
+          {/* Other ways to reach me */}
+          <section className={styles.contactSection}>
+            <h2>Other ways to reach me</h2>
+            <div className={styles.contactGrid}>
+              <div className={styles.contactItem}>
+                <h3>Email</h3>
+                <p>
+                  <a href="mailto:andreeatherapytoday@gmail.com">andreeatherapytoday@gmail.com</a>
+                </p>
+              </div>
+              <div className={styles.contactItem}>
+                <h3>Phone</h3>
+                <p>
+                  <a href="tel:07448036017">07448 036017</a>
+                </p>
+                <p className={styles.contactNote}>
+                  I may be in sessions, so please leave a voicemail and I&apos;ll call you back.
+                </p>
+              </div>
+            </div>
+          </section>
 
-          <section className={buttonLinksStyles.buttonLinks}>
-            <Button href="/is-this-right-for-you">Is This Right for You?</Button>
-            <Button href="/services">Services</Button>
-            <Button href="/book-now">Book Now</Button>
+          {/* Where to find me */}
+          <section className={styles.locationSection}>
+            <h2>Where to find me</h2>
+            <div className={styles.locationGrid}>
+              <div className={styles.locationCard}>
+                <h3>In-person sessions</h3>
+                <address>
+                  Colchester Business Centre<br />
+                  1 George Williams Way<br />
+                  Colchester CO1 2JS
+                </address>
+                <ul className={styles.locationFeatures}>
+                  <li>Ground floor, step-free access</li>
+                  <li>Quiet, private room with natural light</li>
+                  <li>Sensory-friendly environment</li>
+                </ul>
+                <p>
+                  <a
+                    href="https://www.google.com/maps?q=Colchester+Business+Centre,+1+George+Williams+Way,+Colchester+CO1+2JS"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    View on Google Maps
+                  </a>
+                </p>
+              </div>
+              <div className={styles.locationCard}>
+                <h3>Online sessions</h3>
+                <p>Available UK-wide for clients aged 16 and over.</p>
+                <p>
+                  Online sessions happen on Wednesdays. We use a secure video platform — I&apos;ll
+                  send you the link before your session.
+                </p>
+                <p className={styles.locationNote}>
+                  Not sure if online therapy is right for you? We can discuss this on the call.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          {/* Crisis signposting */}
+          <section className={styles.crisisSection}>
+            <div className={styles.crisisBox}>
+              <h2>If this is an emergency</h2>
+              <p>
+                If you&apos;re in immediate danger or need urgent mental health support, please
+                contact one of these services:
+              </p>
+              <div className={styles.crisisGrid}>
+                <div className={styles.crisisItem}>
+                  <h3>NHS 111</h3>
+                  <p>
+                    Call <strong>111</strong> and press option 2 for the mental health crisis line.
+                    Available 24/7.
+                  </p>
+                </div>
+                <div className={styles.crisisItem}>
+                  <h3>Samaritans</h3>
+                  <p>
+                    Call <strong>116 123</strong> (free, 24/7) or email{' '}
+                    <a href="mailto:jo@samaritans.org">jo@samaritans.org</a>.
+                  </p>
+                </div>
+                <div className={styles.crisisItem}>
+                  <h3>Shout</h3>
+                  <p>
+                    Text <strong>85258</strong> for free, confidential 24/7 text support.
+                  </p>
+                </div>
+                <div className={styles.crisisItem}>
+                  <h3>A&amp;E</h3>
+                  <p>
+                    If you or someone else is in immediate physical danger, go to your nearest A&amp;E
+                    or call <strong>999</strong>.
+                  </p>
+                </div>
+              </div>
+              <p className={styles.crisisNote}>
+                This website is not a crisis service. If you&apos;re struggling right now, please
+                reach out to one of the services above.
+              </p>
+            </div>
+          </section>
+
+          {/* Not sure if I'm right? */}
+          <section className={styles.ctaSection}>
+            <p>
+              Not sure if I&apos;m the right therapist for you?{' '}
+              <Link href="/is-this-right-for-you">Read about who I work with</Link> — I&apos;d
+              rather point you in the right direction than have you book with someone who isn&apos;t
+              a good fit.
+            </p>
           </section>
         </main>
       </div>

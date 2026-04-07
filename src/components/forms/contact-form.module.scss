@@ -3,144 +3,271 @@
   width: 100%;
   max-width: 600px;
   margin: 0 auto;
-  padding: var(--spacing-medium);
+  padding: var(--spacing-large);
   background: var(--color-bg);
   border-radius: var(--radius-medium);
   box-shadow: var(--box-shadow);
   display: flex;
   flex-direction: column;
   gap: var(--spacing-medium);
-  transition: box-shadow var(--transition-normal);
   box-sizing: border-box;
-
-  &:hover {
-    box-shadow: var(--box-shadow-hover);
-  }
 }
 
 @media (min-width: 768px) {
   .contactForm {
-    max-width: 700px;
-    padding: var(--spacing-large);
+    max-width: 600px;
+    padding: var(--spacing-xlarge);
     gap: var(--spacing-large);
   }
 }
 
-@media (min-width: 1024px) {
-  .contactForm {
-    max-width: 800px;
-    padding: var(--spacing-xlarge);
-  }
+/* Honeypot field - hidden from humans but visible to bots */
+.honeypot {
+  position: absolute;
+  left: -9999px;
+  top: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
 }
 
+/* Form Group */
 .formGroup {
   display: flex;
   flex-direction: column;
   gap: var(--spacing-xs);
-  margin-bottom: var(--spacing-small);
-}
-
-@media (min-width: 768px) {
-  .formGroup {
-    gap: var(--spacing-small);
-    margin-bottom: var(--spacing-medium);
-  }
 }
 
 /* Label styling */
 .contactForm label {
-  font-weight: 600;
+  font-family: var(--font-body);
+  font-weight: var(--font-weight-medium);
   color: var(--color-text);
-  font-size: var(--font-size-small);
+  font-size: var(--font-size-body);
+  line-height: var(--line-height-body);
 }
 
-@media (min-width: 768px) {
-  .contactForm label {
-    font-size: var(--font-size-body);
-  }
+/* Required and optional indicators */
+.required {
+  color: var(--color-error);
+  font-weight: var(--font-weight-medium);
+}
+
+.optional {
+  color: var(--color-text-muted);
+  font-weight: var(--font-weight-regular);
+  font-size: var(--font-size-small);
 }
 
 /* Input styling */
-.contactForm input {
+.contactForm input[type='text'],
+.contactForm input[type='email'],
+.contactForm input[type='tel'] {
   width: 100%;
-  padding: var(--spacing-small);
+  padding: var(--spacing-small) var(--spacing-medium);
   border: var(--border-width) solid var(--color-border);
   border-radius: var(--radius-small);
-  font-size: var(--font-size-small);
+  font-size: var(--font-size-body);
+  font-family: var(--font-body);
   box-sizing: border-box;
   transition:
     border-color var(--transition-fast),
     box-shadow var(--transition-fast);
-  min-height: 44px;
-  resize: none;
-  font-family: var(--font-body);
+  min-height: 48px;
+  background: white;
 
   &:focus {
-    border-color: var(--color-accent);
+    border-color: var(--color-brand);
     outline: var(--outline-width) solid var(--color-brand-hover);
     outline-offset: var(--outline-offset);
   }
-}
 
-@media (min-width: 768px) {
-  .contactForm input {
-    font-size: var(--font-size-body);
-    min-height: 48px;
-    padding: var(--spacing-medium);
+  &::placeholder {
+    color: var(--color-text-muted);
   }
 }
 
-/* Auto-grow textarea styling */
-.textareaAutoGrow {
+/* Textarea styling */
+.contactForm textarea {
+  width: 100%;
+  padding: var(--spacing-small) var(--spacing-medium);
+  border: var(--border-width) solid var(--color-border);
+  border-radius: var(--radius-small);
+  font-size: var(--font-size-body);
+  font-family: var(--font-body);
+  box-sizing: border-box;
+  transition:
+    border-color var(--transition-fast),
+    box-shadow var(--transition-fast);
   min-height: 100px;
-  max-height: 300px;
-  width: 100%;
-  padding: var(--spacing-small);
-  border: var(--border-width) solid var(--color-border);
-  border-radius: var(--radius-small);
-  font-size: var(--font-size-small);
-  box-sizing: border-box;
-  transition:
-    border-color var(--transition-fast),
-    box-shadow var(--transition-fast);
-  overflow-y: auto;
-  resize: none;
-  font-family: var(--font-body);
+  resize: vertical;
+  background: white;
+  line-height: var(--line-height-body);
 
   &:focus {
-    border-color: var(--color-accent);
+    border-color: var(--color-brand);
     outline: var(--outline-width) solid var(--color-brand-hover);
     outline-offset: var(--outline-offset);
   }
-}
 
-@media (min-width: 768px) {
-  .textareaAutoGrow {
-    min-height: 120px;
-    max-height: 400px;
-    font-size: var(--font-size-body);
-    padding: var(--spacing-medium);
+  &::placeholder {
+    color: var(--color-text-muted);
   }
 }
 
-/* Button styling */
-.contactForm button {
+/* Field hints */
+.fieldHint {
+  font-size: var(--font-size-small);
+  color: var(--color-text-muted);
+  line-height: var(--line-height-body);
+}
+
+/* Message footer with hint and counter */
+.messageFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--spacing-medium);
+  flex-wrap: wrap;
+}
+
+.charCounter {
+  font-size: var(--font-size-small);
+  color: var(--color-text-muted);
+  font-family: var(--font-body);
+  white-space: nowrap;
+}
+
+/* Radio button groups */
+.radioGroup {
+  border: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-small);
+
+  legend {
+    font-family: var(--font-body);
+    font-weight: var(--font-weight-medium);
+    color: var(--color-text);
+    font-size: var(--font-size-body);
+    line-height: var(--line-height-body);
+    padding: 0;
+    margin-bottom: var(--spacing-small);
+  }
+}
+
+.radioOptions {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-small);
+}
+
+@media (min-width: 480px) {
+  .radioOptions {
+    flex-direction: row;
+    gap: var(--spacing-large);
+  }
+}
+
+.radioLabel {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-small);
+  cursor: pointer;
+  font-weight: var(--font-weight-regular);
+
+  input[type='radio'] {
+    width: 20px;
+    height: 20px;
+    margin: 0;
+    accent-color: var(--color-brand);
+    cursor: pointer;
+
+    &:focus {
+      outline: var(--outline-width) solid var(--color-brand-hover);
+      outline-offset: var(--outline-offset);
+    }
+  }
+
+  span {
+    font-size: var(--font-size-body);
+    color: var(--color-text);
+  }
+}
+
+/* Checkbox group */
+.checkboxGroup {
+  margin-top: var(--spacing-small);
+}
+
+.checkboxLabel {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-small);
+  cursor: pointer;
+  font-weight: var(--font-weight-regular);
+
+  input[type='checkbox'] {
+    width: 20px;
+    height: 20px;
+    min-width: 20px;
+    margin: 2px 0 0 0;
+    accent-color: var(--color-brand);
+    cursor: pointer;
+
+    &:focus {
+      outline: var(--outline-width) solid var(--color-brand-hover);
+      outline-offset: var(--outline-offset);
+    }
+  }
+
+  span {
+    font-size: var(--font-size-body);
+    color: var(--color-text);
+    line-height: var(--line-height-body);
+
+    a {
+      color: var(--color-brand);
+      text-decoration: underline;
+
+      &:hover {
+        color: var(--color-brand-hover);
+      }
+
+      &:focus {
+        outline: var(--outline-width) solid var(--color-brand-hover);
+        outline-offset: var(--outline-offset);
+      }
+    }
+  }
+}
+
+/* Submit button styling */
+.submitButton {
   background: var(--color-brand);
   color: var(--color-header-text);
   border: none;
   border-radius: var(--radius-small);
   padding: var(--spacing-medium) var(--spacing-large);
-  font-size: var(--font-size-small);
-  font-weight: 600;
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-semibold);
   cursor: pointer;
   transition: background var(--transition-fast);
   font-family: var(--font-body);
-  min-height: 44px;
+  min-height: 48px;
   width: 100%;
+  margin-top: var(--spacing-small);
 
   &:hover,
   &:focus {
     background: var(--color-brand-hover);
+  }
+
+  &:focus {
+    outline: var(--outline-width) solid var(--color-brand-hover);
+    outline-offset: var(--outline-offset);
   }
 
   &:disabled {
@@ -155,65 +282,47 @@
 }
 
 @media (min-width: 768px) {
-  .contactForm button {
-    font-size: var(--font-size-body);
-    min-height: 48px;
+  .submitButton {
     width: auto;
-    align-self: center;
-    min-width: 200px;
+    align-self: flex-start;
+    min-width: 180px;
   }
 }
 
 /* Status messages */
 .statusSuccess {
   color: var(--color-success);
-  font-size: var(--font-size-small);
-  margin-bottom: var(--spacing-small);
-  padding: var(--spacing-small);
+  font-size: var(--font-size-body);
+  padding: var(--spacing-medium);
   background-color: var(--color-success-bg);
   border: var(--border-width) solid var(--color-success);
   border-radius: var(--radius-small);
-}
+  line-height: var(--line-height-body);
 
-@media (min-width: 768px) {
-  .statusSuccess {
-    font-size: var(--font-size-body);
-    padding: var(--spacing-medium);
+  &:focus {
+    outline: var(--outline-width) solid var(--color-success);
+    outline-offset: var(--outline-offset);
   }
 }
 
 .statusError {
   color: var(--color-error);
-  font-size: var(--font-size-small);
-  margin-bottom: var(--spacing-small);
-  padding: var(--spacing-small);
+  font-size: var(--font-size-body);
+  padding: var(--spacing-medium);
   background-color: var(--color-error-bg);
   border: var(--border-width) solid var(--color-error);
   border-radius: var(--radius-small);
-}
-
-@media (min-width: 768px) {
-  .statusError {
-    font-size: var(--font-size-body);
-    padding: var(--spacing-medium);
-  }
+  line-height: var(--line-height-body);
 }
 
 .statusLoading {
   color: var(--color-info);
-  font-size: var(--font-size-small);
-  margin-bottom: var(--spacing-small);
-  padding: var(--spacing-small);
+  font-size: var(--font-size-body);
+  padding: var(--spacing-medium);
   background-color: var(--color-info-bg);
   border: var(--border-width) solid var(--color-info);
   border-radius: var(--radius-small);
-}
-
-@media (min-width: 768px) {
-  .statusLoading {
-    font-size: var(--font-size-body);
-    padding: var(--spacing-medium);
-  }
+  line-height: var(--line-height-body);
 }
 
 /* Form validation states */
@@ -230,5 +339,6 @@
   color: var(--color-error);
   font-size: var(--font-size-small);
   margin-top: var(--spacing-xs);
-  font-weight: 500;
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-body);
 }

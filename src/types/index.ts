@@ -8,18 +8,28 @@ export interface BlogPost {
   content: string;
 }
 
+export type ContactMethod = 'email' | 'phone';
+export type EnquiryFor = 'myself' | 'child' | 'other';
+
 export interface ContactFormData {
-  firstName: string;
-  lastName: string;
+  name: string;
   email: string;
-  message: string;
+  phone?: string;
+  contactMethod: ContactMethod;
+  enquiryFor: EnquiryFor;
+  message?: string;
+  gdprConsent: boolean;
+  honeypot?: string;
 }
 
 export interface FormErrors {
-  firstName?: string;
-  lastName?: string;
+  name?: string;
   email?: string;
+  phone?: string;
+  contactMethod?: string;
+  enquiryFor?: string;
   message?: string;
+  gdprConsent?: string;
 }
 
 export interface ApiResponse<T = unknown> {
