@@ -1,31 +1,30 @@
-import { Metadata } from 'next';
+import type { Metadata } from 'next';
 import Link from 'next/link';
+
 import PageHero from '@/components/ui/PageHero';
-import CTABlock from '@/components/ui/CTABlock';
 import styles from './neurodiversity.module.scss';
+import buttonStyles from '../../components/ui/button.module.scss';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://nextgentherapy.co.uk'),
-  title: 'Neurodiversity Therapy Colchester | ADHD & Autism Support',
+  title: 'ADHD & Autism Therapy for Adults — Colchester & Online | Affirmative Practice',
   description:
-    'Specialist therapy for neurodivergent children, teenagers & young adults in Colchester. Expert ADHD & autism support with SEN school experience. Get in touch today.',
+    'Psychodynamic, affirmative therapy for neurodivergent adults in Colchester and online. Sensory-aware room, stimming welcome, no formal diagnosis required. BACP registered.',
   keywords: [
-    'neurodiversity therapy Colchester',
-    'ADHD therapy Essex',
-    'autism therapy Colchester',
-    'SEN therapy support',
-    'neurodivergent children therapy',
-    'ADHD counselling Colchester',
-    'autism support Essex',
-    'sensory processing therapy',
-    'executive function support',
-    'neurodiversity counselling',
+    'ADHD therapy Colchester',
+    'autism therapy Essex',
+    'neurodivergent therapist UK',
+    'adult ADHD therapy Essex',
+    'adult autism support Colchester',
+    'affirmative autism therapy',
+    'late diagnosed ADHD support',
+    'neurodivergent-affirming therapist',
+    'sensory-friendly therapy room',
     'AuDHD therapy Colchester',
-    'neurodivergent teen support',
-    'autism affirming therapy',
-    'ADHD young adult support',
-    'neurodivergent counselling Essex',
-    'autistic therapist Colchester',
+    'ADHD burnout therapy',
+    'autistic therapist Essex',
+    'neurodiversity-affirming practice',
+    'masking burnout support',
   ],
   authors: [{ name: 'Andreea Horhocea' }],
   alternates: {
@@ -43,45 +42,46 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'Neurodiversity Therapy | ADHD, Autism & SEN Support',
+    title: 'ADHD & Autism Therapy for Adults — Colchester & Online | Affirmative Practice',
     description:
-      'Specialist therapy for neurodivergent children, teenagers, and young adults in Colchester with SEN school experience.',
-    type: 'website',
+      'Psychodynamic, affirmative therapy for neurodivergent adults in Colchester and online. Sensory-aware room, stimming welcome, no formal diagnosis required.',
     url: 'https://nextgentherapy.co.uk/neurodiversity',
     siteName: 'Next Generation Therapy',
     locale: 'en_GB',
+    type: 'website',
     images: [
       {
         url: 'https://nextgentherapy.co.uk/images/default-social-share.jpg',
         width: 1200,
         height: 630,
-        alt: 'Neurodiversity Therapy - Next Generation Therapy',
+        alt: 'ADHD & Autism Therapy for Adults — Next Generation Therapy',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Neurodiversity Therapy | ADHD, Autism & SEN Support',
+    title: 'ADHD & Autism Therapy for Adults — Colchester & Online | Affirmative Practice',
     description:
-      'Specialist therapy for neurodivergent children, teenagers, and young adults in Colchester with SEN school experience.',
+      'Psychodynamic, affirmative therapy for neurodivergent adults in Colchester and online. Sensory-aware room, stimming welcome.',
     images: ['https://nextgentherapy.co.uk/images/default-social-share.jpg'],
   },
 };
 
 export default function NeurodiversityTherapyPage() {
-  const structuredData = {
+  const serviceSchema = {
     '@context': 'https://schema.org',
     '@type': 'Service',
-    name: 'Neurodiversity Therapy & SEN Support',
+    name: 'Affirmative Therapy for Neurodivergent Adults',
     provider: {
       '@type': 'Person',
       name: 'Andreea Horhocea',
       jobTitle: 'Psychodynamic Psychotherapist',
     },
-    serviceType: ['ADHD Therapy', 'Autism Support', 'SEN Support'],
-    areaServed: ['Colchester', 'Essex', 'Online'],
+    serviceType: ['ADHD Therapy', 'Autism Therapy', 'Neurodivergent-Affirmative Therapy'],
+    areaServed: ['Colchester', 'Essex', 'United Kingdom (online)'],
+    availableLanguage: ['English', 'Romanian'],
     description:
-      'Specialist therapy for neurodivergent children, teenagers, and young adults. Expert support for ADHD, autism, and other neurodivergent conditions with SEN school experience.',
+      'Psychodynamic, affirmative therapy for neurodivergent adults including ADHD and autism. Sensory-aware room in Colchester, online sessions UK-wide. No formal diagnosis required.',
   };
 
   const breadcrumbSchema = {
@@ -115,34 +115,34 @@ export default function NeurodiversityTherapyPage() {
     mainEntity: [
       {
         '@type': 'Question',
-        name: 'Do you have experience with ADHD and autism?',
+        name: 'Do I need a formal diagnosis to work with you?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Yes, I have extensive experience working in SEN schools and with neurodivergent children, teenagers, and young adults. I understand the unique strengths and challenges of ADHD, autism, and other neurodivergent conditions.',
+          text: "No. NHS assessment waitlists are years long, and many people self-identify long before they get a diagnosis — if they ever do. If you recognise yourself as ADHD or autistic, that's enough to start working together.",
         },
       },
       {
         '@type': 'Question',
-        name: 'Do you adapt therapy sessions for neurodivergent clients?',
+        name: 'What does affirmative practice mean?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: "Absolutely. I adapt session length, use sensory-friendly environments, incorporate visual tools, allow movement breaks, and follow each individual's preferred communication style.",
+          text: "Affirmative practice means I'm not trying to fix, reduce, or mask your neurodivergence. I work with you as you are, not towards some neurotypical standard. The goal is understanding yourself better and building a life that works for your brain.",
         },
       },
       {
         '@type': 'Question',
-        name: 'What age groups do you work with for neurodiversity support?',
+        name: 'What makes your therapy room sensory-friendly?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'I work with neurodivergent children (5-12), teenagers (13-18), and young adults (18-25), adapting my approach for each developmental stage.',
+          text: 'The room has soft, adjustable lighting, fidgets available for any age, comfortable seating options, and plants. Stimming is welcome. The space is designed to reduce overwhelm rather than add to it.',
         },
       },
       {
         '@type': 'Question',
-        name: 'Can you help with late-diagnosed ADHD or autism?',
+        name: 'Do you offer online sessions for neurodivergent clients?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Yes, I support people processing late diagnosis, helping them understand their identity, develop coping strategies, and build self-advocacy skills.',
+          text: "Yes, I see neurodivergent adults online across the UK. Many neurodivergent clients actually prefer online — you're in your own space, with your own lighting and sensory setup, and no travel required.",
         },
       },
     ],
@@ -152,7 +152,7 @@ export default function NeurodiversityTherapyPage() {
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
       />
       <script
         type="application/ld+json"
@@ -162,418 +162,233 @@ export default function NeurodiversityTherapyPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
+
       <PageHero
-        eyebrow="Neurodiversity Support"
-        title="Therapy that works with how your mind works"
-        lead="I offer specialist support for neurodivergent children, teenagers and adults — including those with ADHD, autism, dyslexia and sensory processing differences."
+        eyebrow="ADHD & Autism in Adults"
+        title="Affirmative therapy. Sensory-aware room. Stimming welcome."
+        lead="Psychodynamic therapy for neurodivergent adults in Colchester and online. For people who've been late-diagnosed, self-identified, or finally had the words for it after their child's assessment."
       />
+
       <div className={styles.page}>
         <main className={styles.main}>
-          {/* Introduction */}
-          <section className={styles.serviceIntro}>
-            <div className={styles.introContent}>
-              <h2>Understanding Neurodiversity Through Experience</h2>
-              <p>
-                Every neurodivergent individual has unique strengths, challenges, and ways of
-                experiencing the world. Through my experience working in SEN schools, I have developed
-                a deep understanding of the complexities and nuances of supporting neurodivergent
-                young people in their mental health journey.
-              </p>
-
-              <p>
-                Neurodiversity encompasses conditions such as ADHD, autism, dyslexia, dyspraxia,
-                Tourette&apos;s syndrome, and other neurological differences. Rather than viewing
-                these as deficits, I approach neurodiversity from a strengths-based perspective,
-                recognizing that different neurological wiring brings both unique challenges and
-                remarkable abilities.
+          {/* Section 2: Recognition */}
+          <section className={styles.recognitionSection}>
+            <div className={styles.recognitionContainer}>
+              <h2 className={styles.recognitionHeading}>
+                If you&apos;re reading this, you might already know
+              </h2>
+              <ul className={styles.quoteList}>
+                <li className={styles.quote}>
+                  &ldquo;I&apos;ve spent my whole life feeling like everyone got a manual I
+                  didn&apos;t.&rdquo;
+                </li>
+                <li className={styles.quote}>
+                  &ldquo;I only found out after my child was diagnosed — and suddenly everything made
+                  sense.&rdquo;
+                </li>
+                <li className={styles.quote}>
+                  &ldquo;I&apos;m exhausted from performing being normal.&rdquo;
+                </li>
+                <li className={styles.quote}>
+                  &ldquo;I&apos;m not sure if I&apos;m autistic or ADHD or both — I just know
+                  something&apos;s different.&rdquo;
+                </li>
+                <li className={styles.quote}>
+                  &ldquo;I mask so well that no one believes me when I say I&apos;m
+                  struggling.&rdquo;
+                </li>
+              </ul>
+              <p className={styles.recognitionNote}>
+                Many of my neurodivergent clients have spent years adapting to a world that
+                wasn&apos;t built for them. Therapy isn&apos;t about adapting harder. It&apos;s
+                about understanding yourself and building a life that actually works for your brain.
               </p>
             </div>
           </section>
 
-          {/* SEN Experience Section */}
-          <section className={styles.experienceSection}>
-            <div className={styles.experienceContent}>
-              <h2>SEN School Experience & Expertise</h2>
+          {/* Section 3: Approach */}
+          <section className={styles.approachSection}>
+            <div className={styles.approachContainer}>
+              <h2>How I work (and what I don&apos;t do)</h2>
               <p>
-                My hands-on experience working in Special Educational Needs (SEN) schools has provided
-                me with invaluable insights into the daily realities faced by neurodivergent young
-                people. This experience has taught me:
+                I&apos;m a psychodynamic therapist with post-qualification training in
+                neurodiversity. That means I&apos;m interested in the whole of you — not just your
+                symptoms or your strategies for getting through the day.
+              </p>
+              <p>
+                We&apos;ll talk about what it&apos;s been like to be you. The ways you&apos;ve
+                adapted. What got missed. What you&apos;re only just realising. What might need to
+                change — and what doesn&apos;t need fixing at all.
+              </p>
+              <p>
+                This is weekly, open-ended work. Some people come for a few months around a specific
+                issue. Others stay longer, because they&apos;ve spent a lifetime not being
+                understood and need time to untangle that.
               </p>
 
-              <div className={styles.experienceGrid}>
-                <div className={styles.experienceCard}>
-                  <h3>Individual Learning Styles</h3>
-                  <p>
-                    Understanding that each neurodivergent child processes information differently and
-                    requires tailored approaches to learning and communication.
-                  </p>
-                </div>
-
-                <div className={styles.experienceCard}>
-                  <h3>Sensory Considerations</h3>
-                  <p>
-                    Recognizing how sensory processing differences impact daily functioning and
-                    therapeutic engagement, and adapting environments accordingly.
-                  </p>
-                </div>
-
-                <div className={styles.experienceCard}>
-                  <h3>Communication Adaptations</h3>
-                  <p>
-                    Developing flexible communication strategies that work with each individual&apos;s
-                    preferred methods of expression and understanding.
-                  </p>
-                </div>
-
-                <div className={styles.experienceCard}>
-                  <h3>Routine and Structure</h3>
-                  <p>
-                    Understanding the importance of predictability and clear expectations while
-                    maintaining flexibility when needed.
-                  </p>
-                </div>
-
-                <div className={styles.experienceCard}>
-                  <h3>Collaborative Approach</h3>
-                  <p>
-                    Working closely with families, schools, and other professionals to create
-                    consistent support across all environments.
-                  </p>
-                </div>
-
-                <div className={styles.experienceCard}>
-                  <h3>Strengths-Based Focus</h3>
-                  <p>
-                    Identifying and building upon each individual&apos;s unique strengths, interests,
-                    and natural abilities.
-                  </p>
-                </div>
-              </div>
+              <h3 className={styles.subheading}>What I don&apos;t do</h3>
+              <ul className={styles.notList}>
+                <li>
+                  <strong>I don&apos;t do ABA or any approach that treats neurodivergence as a
+                  problem to be corrected.</strong>
+                </li>
+                <li>
+                  <strong>I don&apos;t teach masking strategies</strong> — you&apos;ve probably got
+                  enough of those already.
+                </li>
+                <li>
+                  <strong>I don&apos;t offer short-term skills programmes.</strong> If you want a
+                  6-week ADHD toolkit, I&apos;m not the right fit — but there are people who do that
+                  well.
+                </li>
+              </ul>
             </div>
           </section>
 
-          {/* Adaptations Section */}
-          <section className={styles.adaptationsSection}>
-            <div className={styles.adaptationsContent}>
-              <h2>Therapeutic Adaptations for Neurodivergent Clients</h2>
-              <p>
-                Effective therapy for neurodivergent individuals often requires thoughtful adaptations
-                to ensure full engagement and meaningful progress. Based on my SEN experience, I
-                understand that one size does not fit all.
+          {/* Section 4: The Room (KEY DIFFERENTIATOR) */}
+          <section className={styles.roomSection}>
+            <div className={styles.roomContainer}>
+              <h2>The room matters</h2>
+              <p className={styles.roomIntro}>
+                If you&apos;re coming in person, you&apos;ll be at my room in Colchester Business
+                Centre. I&apos;ve set it up with neurodivergent clients in mind:
               </p>
-
-              <div className={styles.adaptationsList}>
-                <div className={styles.adaptationItem}>
-                  <h3>Flexible Session Length</h3>
-                  <p>
-                    Sessions may be shorter to accommodate attention spans and processing needs. Some
-                    clients thrive with 30-minute sessions, while others benefit from traditional
-                    50-minute sessions. We find what works best for each individual.
-                  </p>
-                </div>
-
-                <div className={styles.adaptationItem}>
-                  <h3>Sensory-Friendly Environment</h3>
-                  <p>
-                    Adjusting lighting, noise levels, and sensory elements in the therapy room to
-                    create a comfortable space that reduces overwhelm and supports focus.
-                  </p>
-                </div>
-
-                <div className={styles.adaptationItem}>
-                  <h3>Visual and Concrete Tools</h3>
-                  <p>
-                    Using visual aids, social stories, charts, and hands-on materials to support
-                    understanding and communication when verbal processing is challenging.
-                  </p>
-                </div>
-
-                <div className={styles.adaptationItem}>
-                  <h3>Movement and Fidgets</h3>
-                  <p>
-                    Incorporating movement breaks and fidget tools when needed, understanding that
-                    physical movement often supports concentration and emotional regulation for
-                    neurodivergent individuals.
-                  </p>
-                </div>
-
-                <div className={styles.adaptationItem}>
-                  <h3>Clear Structure and Expectations</h3>
-                  <p>
-                    Providing clear session structure with visual schedules when helpful, while
-                    maintaining flexibility to adapt based on the individual&apos;s needs on any given
-                    day.
-                  </p>
-                </div>
-
-                <div className={styles.adaptationItem}>
-                  <h3>Special Interests Integration</h3>
-                  <p>
-                    Incorporating the client&apos;s special interests and passions into therapy
-                    sessions to build rapport and create meaningful connections to therapeutic goals.
-                  </p>
-                </div>
-              </div>
+              <ul className={styles.roomFeatures}>
+                <li>
+                  <strong>Soft, adjustable lighting</strong> — no harsh overhead fluorescents
+                </li>
+                <li>
+                  <strong>Fidgets available</strong> — for any age, no questions asked
+                </li>
+                <li>
+                  <strong>Stimming is welcome</strong> — move however you need to
+                </li>
+                <li>
+                  <strong>Comfortable seating options</strong> — couch and chairs
+                </li>
+                <li>
+                  <strong>Calm atmosphere</strong> — plants, quiet, ground floor
+                </li>
+              </ul>
+              <p className={styles.roomNote}>
+                The space shouldn&apos;t add to your overwhelm. It should reduce it.
+              </p>
+              {/* {{ CONFIRM WITH ANDREEA: room photo }} */}
             </div>
           </section>
 
-          {/* Age-Specific Support */}
-          <section className={styles.ageSpecificSection}>
-            <h2>Neurodiversity Support Across Age Groups</h2>
-
-            <div className={styles.ageGroupsGrid}>
-              <div className={styles.ageGroupCard}>
-                <h3>Children (Ages 5-12)</h3>
-                <h4>Building Foundation Skills</h4>
-                <ul>
-                  <li>Emotional recognition and regulation strategies</li>
-                  <li>Social skills development through play and structured activities</li>
-                  <li>Coping strategies for sensory challenges</li>
-                  <li>Building self-awareness and self-advocacy skills</li>
-                  <li>Supporting family understanding and communication</li>
-                  <li>Preparing for transitions and changes</li>
-                </ul>
-                <p className={styles.ageNote}>
-                  Sessions often incorporate play therapy techniques, visual schedules, and hands-on
-                  activities tailored to the child&apos;s interests and learning style.
-                </p>
-              </div>
-
-              <div className={styles.ageGroupCard}>
-                <h3>Teenagers (Ages 13-18)</h3>
-                <h4>Identity and Independence</h4>
-                <ul>
-                  <li>Understanding their neurodivergent identity and strengths</li>
-                  <li>Developing self-advocacy skills for school and social settings</li>
-                  <li>Managing anxiety and depression that may co-occur</li>
-                  <li>Navigating friendships and social relationships</li>
-                  <li>Planning for post-school transitions</li>
-                  <li>Building executive function and organizational skills</li>
-                </ul>
-                <p className={styles.ageNote}>
-                  Teen sessions focus on building confidence, self-understanding, and practical skills
-                  for increasing independence.
-                </p>
-              </div>
-
-              <div className={styles.ageGroupCard}>
-                <h3>Young Adults (Ages 18-25)</h3>
-                <h4>Exploration and Growth</h4>
-                <ul>
-                  <li>Career exploration and workplace accommodation needs</li>
-                  <li>Relationship development and communication skills</li>
-                  <li>Independent living skills and self-management</li>
-                  <li>Understanding personal support needs</li>
-                  <li>Managing transitions to higher education or employment</li>
-                  <li>Developing authentic self-identity and confidence</li>
-                </ul>
-                <p className={styles.ageNote}>
-                  Therapy becomes an exploration space where young adults can discover their authentic
-                  selves, build on their strengths, and develop strategies for thriving in adult life.
-                </p>
-              </div>
-            </div>
-          </section>
-
-          {/* Common Challenges Section */}
+          {/* Section 5: Challenges */}
           <section className={styles.challengesSection}>
-            <div className={styles.challengesContent}>
-              <h2>Common Challenges I Help Address</h2>
-
+            <div className={styles.challengesContainer}>
+              <h2>What neurodivergent adults often come to me with</h2>
               <div className={styles.challengesGrid}>
-                <div className={styles.challengeCard}>
-                  <h3>Executive Function Difficulties</h3>
+                <div className={styles.challengeItem}>
+                  <h3>Burnout from masking</h3>
                   <p>
-                    Supporting the development of planning, organization, time management, and task
-                    initiation skills through practical strategies and tools.
+                    Years of performing &ldquo;normal&rdquo; catch up with you. The exhaustion goes
+                    deeper than rest can fix.
                   </p>
                 </div>
-
-                <div className={styles.challengeCard}>
-                  <h3>Sensory Processing Challenges</h3>
+                <div className={styles.challengeItem}>
+                  <h3>Late diagnosis grief</h3>
                   <p>
-                    Understanding sensory needs and developing coping strategies for overwhelming
-                    environments or sensory-seeking behaviors.
+                    The relief of finally knowing, mixed with anger about everything that could have
+                    been different.
                   </p>
                 </div>
-
-                <div className={styles.challengeCard}>
-                  <h3>Social Communication</h3>
+                <div className={styles.challengeItem}>
+                  <h3>Anxiety</h3>
                   <p>
-                    Building skills for reading social cues, maintaining friendships, and navigating
-                    complex social situations with confidence.
+                    Often lifelong, often misdiagnosed. The hypervigilance that comes from always
+                    having to work harder to fit in.
                   </p>
                 </div>
-
-                <div className={styles.challengeCard}>
-                  <h3>Emotional Regulation</h3>
+                <div className={styles.challengeItem}>
+                  <h3>Relationships and communication</h3>
                   <p>
-                    Developing strategies for managing big emotions, meltdowns, and overwhelming
-                    feelings in healthy ways.
+                    Misunderstandings, feeling like you&apos;re always getting it wrong, not knowing
+                    why connection feels so hard.
                   </p>
                 </div>
-
-                <div className={styles.challengeCard}>
-                  <h3>Anxiety and Overwhelm</h3>
+                <div className={styles.challengeItem}>
+                  <h3>Rejection sensitivity</h3>
                   <p>
-                    Addressing anxiety that often accompanies neurodivergent conditions, particularly
-                    around social situations and changes.
+                    The intensity of feeling rejected or criticised — and how much it shapes what
+                    you do and don&apos;t do.
                   </p>
                 </div>
-
-                <div className={styles.challengeCard}>
-                  <h3>Self-Esteem and Identity</h3>
+                <div className={styles.challengeItem}>
+                  <h3>Identity questions</h3>
                   <p>
-                    Building positive self-concept and understanding personal strengths while
-                    addressing feelings of being &quot;different&quot; or misunderstood.
+                    Who am I when I stop performing? What do I actually want — not what I&apos;ve
+                    been told to want?
+                  </p>
+                </div>
+                <div className={styles.challengeItem}>
+                  <h3>Executive function struggles</h3>
+                  <p>
+                    Not a skills deficit — often the shame and frustration that comes with a brain
+                    that doesn&apos;t work the way people expect.
+                  </p>
+                </div>
+                <div className={styles.challengeItem}>
+                  <h3>Parenting as a neurodivergent adult</h3>
+                  <p>
+                    Raising kids when your own needs are high. Managing your regulation alongside
+                    theirs.
                   </p>
                 </div>
               </div>
             </div>
           </section>
 
-          {/* Therapy as Exploration */}
-          <section className={styles.explorationSection}>
-            <div className={styles.explorationContent}>
-              <h2>Therapy as an Exploration Space</h2>
+          {/* Section 6: Diagnosis */}
+          <section className={styles.diagnosisSection}>
+            <div className={styles.diagnosisContainer}>
+              <h2>You don&apos;t need a formal diagnosis</h2>
               <p>
-                For neurodivergent teenagers and young adults especially, therapy becomes a unique
-                exploration space where they can:
+                NHS ADHD and autism assessment waitlists are years long in most areas. Many people
+                self-identify long before they ever get on a list — if they pursue assessment at
+                all.
               </p>
-
-              <div className={styles.explorationList}>
-                <div className={styles.explorationItem}>
-                  <h3>Discover Their Authentic Self</h3>
-                  <p>
-                    Free from external expectations and pressures, clients can explore who they truly
-                    are, what matters to them, and how they want to navigate the world.
-                  </p>
-                </div>
-
-                <div className={styles.explorationItem}>
-                  <h3>Understand Their Neurodivergent Brain</h3>
-                  <p>
-                    Learning about their specific neurological differences, how their brain works, and
-                    why certain things that are easy for others might be challenging for them.
-                  </p>
-                </div>
-
-                <div className={styles.explorationItem}>
-                  <h3>Experiment with Strategies</h3>
-                  <p>
-                    Trying different approaches to challenges without fear of judgment, finding what
-                    works for their unique brain and lifestyle.
-                  </p>
-                </div>
-
-                <div className={styles.explorationItem}>
-                  <h3>Build Self-Advocacy Skills</h3>
-                  <p>
-                    Learning to communicate their needs, ask for accommodations, and educate others
-                    about their neurodivergent experience.
-                  </p>
-                </div>
-
-                <div className={styles.explorationItem}>
-                  <h3>Process Experiences</h3>
-                  <p>
-                    Making sense of past experiences, trauma, or feeling misunderstood, while building
-                    resilience for future challenges.
-                  </p>
-                </div>
-
-                <div className={styles.explorationItem}>
-                  <h3>Plan for the Future</h3>
-                  <p>
-                    Exploring career paths, relationships, and life goals that align with their
-                    strengths and accommodate their challenges.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          {/* Family Support Section */}
-          <section className={styles.familySection}>
-            <div className={styles.familyContent}>
-              <h2>Supporting Families of Neurodivergent Young People</h2>
               <p>
-                Families play a crucial role in supporting neurodivergent individuals. My work often
-                includes:
+                If you recognise yourself as ADHD, autistic, or both, that&apos;s enough. You
+                don&apos;t need to prove anything to me. We work with your experience, not a piece
+                of paper.
               </p>
-
-              <div className={styles.familySupport}>
-                <div className={styles.supportCard}>
-                  <h3>Understanding Neurodiversity</h3>
-                  <p>
-                    Helping families understand their child&apos;s neurodivergent profile, including
-                    strengths and challenges, to respond with empathy and appropriate support.
-                  </p>
-                </div>
-
-                <div className={styles.supportCard}>
-                  <h3>Developing Strategies</h3>
-                  <p>
-                    Teaching practical strategies for daily challenges like routines, transitions,
-                    emotional regulation, and communication.
-                  </p>
-                </div>
-
-                <div className={styles.supportCard}>
-                  <h3>Advocacy Skills</h3>
-                  <p>
-                    Supporting parents in advocating for their child&apos;s needs in school,
-                    healthcare, and community settings.
-                  </p>
-                </div>
-
-                <div className={styles.supportCard}>
-                  <h3>Celebrating Strengths</h3>
-                  <p>
-                    Helping families recognize and nurture their child&apos;s unique strengths,
-                    interests, and abilities.
-                  </p>
-                </div>
-              </div>
             </div>
           </section>
 
-          <CTABlock />
-
-          {/* Related Services */}
-          <section className={styles.relatedSection}>
-            <h2>Related Therapy Services</h2>
-            <div className={styles.relatedGrid}>
-              <Link href="/child-therapy" className={styles.relatedCard}>
-                <h3>Child Therapy</h3>
-                <p>
-                  Gentle, play-based therapy for children including neurodivergent young people with
-                  specialized approaches.
-                </p>
+          {/* Section 7: Online */}
+          <section className={styles.onlineSection}>
+            <div className={styles.onlineContainer}>
+              <h2>Online therapy for neurodivergent adults</h2>
+              <p>
+                Many neurodivergent clients actually prefer online. You&apos;re in your own space,
+                with your own lighting and sensory setup. No travel, no waiting rooms, no
+                transition stress.
+              </p>
+              <p>
+                I see neurodivergent adults online across the UK. If you&apos;re 16 or over, online
+                is an option.
+              </p>
+              <Link href="/online-therapy" className={styles.link}>
+                More about online therapy →
               </Link>
+            </div>
+          </section>
 
-              <Link href="/teen-therapy" className={styles.relatedCard}>
-                <h3>Teen Therapy</h3>
-                <p>
-                  Confidential support for neurodivergent teenagers navigating identity, school
-                  challenges, and social relationships.
-                </p>
-              </Link>
-
-              <Link href="/therapy-for-women" className={styles.relatedCard}>
-                <h3>Therapy for Women</h3>
-                <p>
-                  Support for neurodivergent women navigating burnout, identity, relationships, and
-                  self-worth.
-                </p>
-              </Link>
-
-              <Link href="/services" className={styles.relatedCard}>
-                <h3>All Services</h3>
-                <p>
-                  Comprehensive overview of all therapy services offered for individuals and families
-                  in Colchester.
-                </p>
+          {/* Section 8: CTA */}
+          <section className={styles.ctaSection}>
+            <div className={styles.ctaContainer}>
+              <h2>Book a free 15-minute call</h2>
+              <p>
+                The free call is an informal 15-minute conversation, not a first session. You can
+                ask anything you want, I&apos;ll answer honestly, and we&apos;ll decide together
+                whether working with me feels like the right next step.
+              </p>
+              <Link href="/book-now" className={buttonStyles.primary}>
+                Book a free 15-minute call
               </Link>
             </div>
           </section>
