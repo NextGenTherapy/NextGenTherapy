@@ -1,17 +1,19 @@
-import { Metadata } from 'next';
+import type { Metadata } from 'next';
 import Link from 'next/link';
+
 import PageHero from '@/components/ui/PageHero';
-import CTABlock from '@/components/ui/CTABlock';
+
+import buttonStyles from '../../components/ui/button.module.scss';
 import styles from './pricing.module.scss';
 
 const siteUrl = 'https://nextgentherapy.co.uk';
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: 'Psychotherapy Costs Colchester | £60 Sessions | Fees',
+  title: 'Pricing & Booking | £60 Per Session | Free 15-Minute Call',
   authors: [{ name: 'Andreea Horhocea' }],
   description:
-    'Transparent psychotherapy costs: £60 per 50-minute session with BACP registered psychotherapist in Colchester. In-person or online.',
+    'Psychodynamic therapy £60 per 50-minute session, Colchester and online. Free 15-minute intro call. BACP registered. Transparent pricing with no hidden fees.',
   keywords: [
     'psychotherapy costs Colchester',
     'psychotherapist fees Essex',
@@ -22,17 +24,13 @@ export const metadata: Metadata = {
     '£60 psychotherapy session',
     'professional psychotherapy costs',
     'psychotherapy fees Essex',
-    'psychotherapist session fees',
-    'psychotherapy pricing UK',
-    'affordable psychotherapy Colchester',
-    'psychotherapy consultation fees',
     'psychodynamic therapy costs',
     'private psychotherapy fees',
   ],
   openGraph: {
-    title: 'Psychotherapy Costs Colchester | £60 Sessions',
+    title: 'Pricing & Booking | £60 Per Session | Free 15-Minute Call',
     description:
-      'Transparent psychotherapy costs: £60 per 50-minute session with BACP registered psychotherapist in Colchester.',
+      'Psychodynamic therapy £60 per 50-minute session, Colchester and online. Free 15-minute intro call. BACP registered. Transparent pricing with no hidden fees.',
     url: `${siteUrl}/pricing`,
     siteName: 'Next Generation Therapy',
     locale: 'en_GB',
@@ -48,9 +46,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Therapy Pricing Colchester | £60 per Session',
+    title: 'Pricing & Booking | £60 Per Session | Free 15-Minute Call',
     description:
-      'Transparent therapy pricing: £60 per 50-minute session with BACP registered therapist.',
+      'Psychodynamic therapy £60 per 50-minute session, Colchester and online. BACP registered. Transparent pricing.',
     images: ['https://nextgentherapy.co.uk/images/default-social-share.jpg'],
   },
   alternates: {
@@ -73,8 +71,9 @@ export default function Pricing() {
   const offerSchema = {
     '@context': 'https://schema.org',
     '@type': 'Offer',
-    name: 'Therapy Session',
-    description: 'Professional psychodynamic therapy sessions in Colchester, Essex',
+    name: 'Psychodynamic Therapy Session',
+    description:
+      'Professional psychodynamic therapy sessions with BACP registered therapist in Colchester, Essex. 50 minutes, in-person or online.',
     price: '60',
     priceCurrency: 'GBP',
     availability: 'https://schema.org/InStock',
@@ -85,132 +84,212 @@ export default function Pricing() {
     },
   };
 
-  const faqSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: [
-      {
-        '@type': 'Question',
-        name: 'How much does therapy cost in Colchester?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Therapy sessions at Next Generation Therapy cost £60 per 50-minute session. This includes professional psychodynamic therapy with a BACP registered therapist, available both in-person in Colchester and online.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'What payment methods do you accept?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Sessions are paid by bank transfer only. Payment details will be provided when you book your session.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'What is your cancellation policy?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Please provide at least 24 hours notice for cancellations. Late cancellations may be subject to the full session fee.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'Are online therapy sessions the same price?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Yes, both in-person sessions in Colchester and online therapy sessions are £60 per 50-minute session.',
-        },
-      },
-    ],
-  };
-
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(offerSchema) }}
       />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
 
+      {/* Section 1: Hero */}
       <PageHero
-        eyebrow="Therapy Pricing"
-        title="Transparent, straightforward pricing"
-        lead="£60 per session. 50 minutes. No hidden fees. I want accessing support to feel as straightforward as possible."
+        eyebrow="Fees & Booking"
+        title="£60 per 50-minute session. Free 15-minute intro call."
+        lead="Here's an honest breakdown of what therapy with me costs, what's included, and how booking works — so there are no surprises and no awkward money conversations later."
       />
+
       <div className={styles.page}>
-        <div className={styles.main}>
-          <section className={styles.pricingSection}>
-            <div className={styles.mainPricing}>
-              <div className={styles.priceCard}>
-                <h2>Therapy Sessions</h2>
-                <div className={styles.price}>
-                  <span className={styles.currency}>£</span>
-                  <span className={styles.amount}>60</span>
-                  <span className={styles.duration}>per session</span>
-                </div>
-                <p className={styles.sessionLength}>50-minute sessions</p>
-
-                <div className={styles.included}>
-                  <h3>What&apos;s Included:</h3>
-                  <ul>
-                    <li>Full 50-minute therapy session</li>
-                    <li>Professional psychodynamic approach</li>
-                    <li>BACP registered therapist</li>
-                    <li>Confidential, safe environment</li>
-                    <li>In-person or online sessions</li>
-                    <li>Flexible scheduling</li>
-                  </ul>
-                </div>
-
-                <div className={styles.bookingSection}>
-                  <Link href="/book-now" className={styles.bookButton}>
-                    Book Your Session
-                  </Link>
-                  <p className={styles.bookingNote}>
-                    Get in touch to arrange your first session
-                  </p>
-                </div>
-              </div>
+        <main className={styles.main}>
+          {/* Section 2: What's included in a session */}
+          <section className={styles.surfaceSection}>
+            <div className={styles.narrowContainer}>
+              <h2>What&apos;s included in £60</h2>
+              <p>
+                This isn&apos;t just 50 minutes in a room. Here&apos;s what you&apos;re paying for:
+              </p>
+              <ul className={styles.bulletList}>
+                <li>
+                  <strong>A full 50-minute session</strong> — not 45 or &ldquo;therapeutic
+                  hour.&rdquo; We start when you arrive and finish at the 50-minute mark.
+                </li>
+                <li>
+                  <strong>BACP registered, MSc-qualified psychotherapist</strong> — I hold an MSc in
+                  Psychodynamic Psychotherapy from the University of Essex (2020) and am a
+                  registered member of the British Association for Counselling and Psychotherapy.
+                </li>
+                <li>
+                  <strong>Your weekly slot held for you</strong> — same day, same time, every week.
+                  You don&apos;t have to re-book each session.
+                </li>
+                <li>
+                  <strong>A sensory-aware therapy room</strong> — ground floor, soft lighting,
+                  fidgets available, stimming welcomed. Designed for neurodivergent clients and
+                  anyone who finds clinical environments uncomfortable.
+                </li>
+                <li>
+                  <strong>Worksheets and prompts where helpful</strong> — not CBT homework, but
+                  occasional reflective exercises between sessions if they&apos;d be useful.
+                </li>
+                <li>
+                  <strong>Email contact for logistics</strong> — rescheduling, admin questions,
+                  anything practical between sessions.
+                </li>
+                <li>
+                  <strong>Ongoing clinical supervision</strong> — I receive regular professional
+                  supervision, which means your therapy benefits from a second clinical perspective.
+                </li>
+              </ul>
             </div>
-
-            <section className={styles.paymentInfo}>
-              <h3>Payment Information</h3>
-              <div className={styles.paymentDetails}>
-                <div className={styles.paymentMethod}>
-                  <h4>Payment Methods</h4>
-                  <p>Sessions are paid by bank transfer only.</p>
-                </div>
-                <div className={styles.cancellation}>
-                  <h4>Cancellation Policy</h4>
-                  <p>
-                    Please provide at least 24 hours notice for cancellations. Late cancellations
-                    may be subject to the full session fee.
-                  </p>
-                </div>
-              </div>
-            </section>
-
-            <section className={styles.valueSection}>
-              <h3>Investment in Your Wellbeing</h3>
-              <p>
-                Therapy is an investment in your mental health and overall wellbeing. Each session
-                provides a dedicated space for you to explore your thoughts and feelings with a
-                qualified professional who is committed to supporting your journey towards healing
-                and growth.
-              </p>
-              <p>
-                As a BACP registered psychodynamic psychotherapist, I bring years of training and
-                experience to help you understand patterns in your life and develop healthier ways
-                of coping with challenges.
-              </p>
-            </section>
           </section>
 
-          <CTABlock />
-        </div>
+          {/* Section 3: The free 15-minute call */}
+          <section className={styles.normalSection}>
+            <div className={styles.narrowContainer}>
+              <h2>The free 15-minute call</h2>
+              <p>
+                Before any paid session, we&apos;ll have a short phone call. This is genuinely free
+                — no commitment, no pressure, no catch.
+              </p>
+              <h3>What it is</h3>
+              <p>
+                A chance for us to hear each other&apos;s voices and get a sense of whether we might
+                work well together. You can ask me anything. I&apos;ll ask a little about what
+                brought you here. We both get to check the vibe.
+              </p>
+              <h3>What it isn&apos;t</h3>
+              <p>
+                This isn&apos;t therapy. We won&apos;t get into deep exploration or analysis. It&apos;s
+                a practical call to work out fit, logistics, and next steps.
+              </p>
+              <p>
+                If we both feel good about it, we&apos;ll book your first session. If not — no hard
+                feelings. I&apos;d rather help you find the right therapist than have you book with
+                me and realise it&apos;s not what you needed.
+              </p>
+            </div>
+          </section>
+
+          {/* Section 4: How booking works */}
+          <section className={styles.surfaceSection}>
+            <div className={styles.narrowContainer}>
+              <h2>How booking works</h2>
+              <ol className={styles.stepsList}>
+                <li>
+                  <span>
+                    <strong>Get in touch</strong> — fill in the contact form or email me directly.
+                    Tell me a little about what you&apos;re looking for.
+                  </span>
+                </li>
+                <li>
+                  <span>
+                    <strong>Free 15-minute call</strong> — we&apos;ll arrange a brief phone call to
+                    check fit and answer any questions.
+                  </span>
+                </li>
+                <li>
+                  <span>
+                    <strong>First session</strong> — if we decide to work together, we&apos;ll book
+                    your first 50-minute session. This is when I&apos;ll hear your story and we&apos;ll
+                    start getting to know each other properly.
+                  </span>
+                </li>
+                <li>
+                  <span>
+                    <strong>Weekly sessions</strong> — same day, same time, every week. Open-ended,
+                    for as long as the work is useful.
+                  </span>
+                </li>
+              </ol>
+            </div>
+          </section>
+
+          {/* Section 5: Cancellation and missed sessions */}
+          <section className={styles.normalSection}>
+            <div className={styles.narrowContainer}>
+              <h2>Cancellation and missed sessions</h2>
+              <p>
+                Life happens. If you need to cancel or reschedule, please give me at least 24 hours
+                notice.
+              </p>
+              <p>
+                Late cancellations (less than 24 hours) or missed sessions may be charged at the
+                full session fee.
+              </p>
+              {/* {{ CONFIRM WITH ANDREEA — Is this cancellation policy correct? 24 hours notice, full fee for late cancellation? }} */}
+              <div className={styles.confirmMarker}>
+                Note: This cancellation policy is pending confirmation.
+              </div>
+            </div>
+          </section>
+
+          {/* Section 6: Payment */}
+          <section className={styles.surfaceSection}>
+            <div className={styles.narrowContainer}>
+              <h2>Payment</h2>
+              <p>
+                Sessions are paid by bank transfer. I&apos;ll provide payment details when you book.
+              </p>
+              {/* {{ CONFIRM WITH ANDREEA — Payment frequency: per session, weekly in advance, or monthly? }} */}
+              <div className={styles.confirmMarker}>
+                Note: Payment frequency (per session, weekly, or monthly) to be confirmed.
+              </div>
+            </div>
+          </section>
+
+          {/* Section 7: What I don't offer */}
+          <section className={styles.normalSection}>
+            <div className={styles.narrowContainer}>
+              <h2>What I don&apos;t offer</h2>
+              <p>
+                Being clear about this upfront saves both of us time:
+              </p>
+              <ul className={styles.notIncludedList}>
+                <li>
+                  <span>
+                    <strong>Sliding scale or reduced-fee sessions</strong> — I don&apos;t currently
+                    offer concessions.
+                  </span>
+                </li>
+                <li>
+                  <span>
+                    <strong>Insurance billing</strong> — I don&apos;t bill insurance companies
+                    directly, but I can provide receipts for you to submit if your insurer covers
+                    therapy.
+                  </span>
+                </li>
+                <li>
+                  <span>
+                    <strong>Sessions shorter than 50 minutes</strong> — the session length is fixed.
+                  </span>
+                </li>
+                <li>
+                  <span>
+                    <strong>Pay-as-you-go or irregular bookings</strong> — therapy works best with a
+                    consistent weekly slot. I don&apos;t offer ad-hoc sessions.
+                  </span>
+                </li>
+              </ul>
+              {/* {{ CONFIRM WITH ANDREEA — Do you offer any sliding scale, reduced-fee, or concession sessions? }} */}
+              <div className={styles.confirmMarker}>
+                Note: Sliding scale availability to be confirmed.
+              </div>
+            </div>
+          </section>
+
+          {/* Section 8: CTA */}
+          <section className={styles.ctaSection}>
+            <div className={styles.ctaContainer}>
+              <h2>Book a free 15-minute call</h2>
+              <p>
+                No pressure, no commitment, and genuinely free. Let&apos;s see whether we&apos;re a
+                fit.
+              </p>
+              <Link href="/book-now" className={buttonStyles.primary}>
+                Book a Free 15-Minute Call
+              </Link>
+            </div>
+          </section>
+        </main>
       </div>
     </>
   );
