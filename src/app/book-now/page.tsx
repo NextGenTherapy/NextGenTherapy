@@ -240,8 +240,8 @@ export default function BookNowPage() {
             <div className={styles.crisisBox}>
               <h2>If this is an emergency</h2>
               <p>
-                If you&apos;re in immediate danger or need urgent mental health support, please
-                contact one of these services:
+                I&apos;m not a crisis service and I don&apos;t monitor messages outside of working
+                hours. If you or someone you care about is in immediate danger, please contact:
               </p>
               <div className={styles.crisisGrid}>
                 <div className={styles.crisisItem}>
@@ -273,8 +273,8 @@ export default function BookNowPage() {
                 </div>
               </div>
               <p className={styles.crisisNote}>
-                This website is not a crisis service. If you&apos;re struggling right now, please
-                reach out to one of the services above.
+                I&apos;ll respond to messages sent through this form within 1–2 working days, but
+                please don&apos;t wait for me if you need urgent help.
               </p>
             </div>
           </section>

@@ -128,7 +128,7 @@ export default function ContactForm() {
       } else {
         const errorData = await res.json().catch(() => ({}));
         setStatus('error');
-        setServerError(errorData.error || 'Something went wrong. Please try again.');
+        setServerError(errorData.error || 'Something went wrong. Please try again, or email me directly at andreeatherapytoday@gmail.com');
       }
     } catch {
       setStatus('error');
@@ -154,8 +154,7 @@ export default function ContactForm() {
           aria-live="polite"
           tabIndex={-1}
         >
-          <strong>Thank you for getting in touch.</strong> I&apos;ll be in contact within 1-2
-          working days.
+          <strong>Thanks</strong> — I&apos;ll be in touch within 1–2 working days.
         </div>
       )}
 
@@ -334,7 +333,7 @@ export default function ContactForm() {
         aria-describedby={errors.enquiryFor ? 'enquiryFor-error' : undefined}
       >
         <legend>
-          Who is this enquiry for? <span className={styles.required}>*</span>
+          Are you contacting me about yourself, or someone else? <span className={styles.required}>*</span>
         </legend>
         <div className={styles.radioOptions}>
           <label className={styles.radioLabel}>
@@ -384,7 +383,7 @@ export default function ContactForm() {
       {/* Message field */}
       <div className={styles.formGroup}>
         <label htmlFor="message">
-          Anything you would like to share <span className={styles.optional}>(optional)</span>
+          What&apos;s bringing you to therapy? <span className={styles.optional}>(optional)</span>
         </label>
         <textarea
           id="message"
@@ -396,10 +395,11 @@ export default function ContactForm() {
           aria-describedby="message-counter message-hint"
           className={errors.message ? styles.inputError : undefined}
           maxLength={MAX_MESSAGE_LENGTH}
+          placeholder="A sentence or two is fine — you don't have to explain everything. This just helps me prepare for our call."
         />
         <div className={styles.messageFooter}>
           <span id="message-hint" className={styles.fieldHint}>
-            This is optional. We can discuss everything on the call.
+            This is optional — we can discuss everything on the call.
           </span>
           <span
             id="message-counter"
@@ -448,7 +448,7 @@ export default function ContactForm() {
 
       {/* Submit button */}
       <button type="submit" className={styles.submitButton} disabled={status === 'loading'}>
-        {status === 'loading' ? 'Sending...' : 'Send enquiry'}
+        {status === 'loading' ? 'Sending...' : 'Send Message'}
       </button>
     </form>
   );
