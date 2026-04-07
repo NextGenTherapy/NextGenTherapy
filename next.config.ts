@@ -115,7 +115,7 @@ const nextConfig: NextConfig = {
       },
       {
         source: '/parent-support',
-        destination: '/child-therapy',
+        destination: '/child-therapy#for-parents',
         permanent: true,
       },
       {

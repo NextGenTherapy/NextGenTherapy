@@ -458,3 +458,368 @@
     margin: 0;
   }
 }
+
+/* Work With List - Section 3 */
+.workWithSection {
+  background: var(--color-surface);
+  padding: var(--spacing-xlarge) var(--spacing-medium);
+  margin-bottom: var(--spacing-medium);
+  border-radius: var(--radius-medium);
+
+  h2 {
+    font-family: var(--font-display);
+    font-size: var(--font-size-h2);
+    font-weight: var(--font-weight-medium);
+    font-style: italic;
+    color: var(--color-text);
+    line-height: var(--line-height-body);
+    margin: 0 0 var(--spacing-medium);
+  }
+
+  p {
+    font-family: var(--font-body);
+    font-size: var(--font-size-body);
+    color: var(--color-text);
+    line-height: var(--line-height-body);
+    margin: 0 0 var(--spacing-medium);
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .workWithSection {
+    padding: var(--spacing-xxlarge) var(--spacing-large);
+    margin-bottom: var(--spacing-large);
+  }
+}
+
+.workWithList {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-small);
+  margin-top: var(--spacing-large);
+  list-style: none;
+  padding: 0;
+}
+
+@media (min-width: 768px) {
+  .workWithList {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-medium);
+  }
+}
+
+.workWithItem {
+  font-family: var(--font-body);
+  font-size: var(--font-size-body);
+  color: var(--color-text);
+  line-height: var(--line-height-body);
+  padding: var(--spacing-medium);
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-small);
+  position: relative;
+  padding-left: var(--spacing-xlarge);
+
+  &::before {
+    content: '•';
+    color: var(--color-brand);
+    position: absolute;
+    left: var(--spacing-medium);
+    font-weight: bold;
+  }
+}
+
+/* Sessions Section - Section 5 */
+.sessionsSection {
+  background: var(--color-surface);
+  padding: var(--spacing-xlarge) var(--spacing-medium);
+  margin-bottom: var(--spacing-medium);
+  border-radius: var(--radius-medium);
+
+  h2 {
+    font-family: var(--font-display);
+    font-size: var(--font-size-h2);
+    font-weight: var(--font-weight-medium);
+    font-style: italic;
+    color: var(--color-text);
+    line-height: var(--line-height-body);
+    margin: 0 0 var(--spacing-medium);
+  }
+
+  p {
+    font-family: var(--font-body);
+    font-size: var(--font-size-body);
+    color: var(--color-text);
+    line-height: var(--line-height-body);
+    margin: 0 0 var(--spacing-medium);
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .sessionsSection {
+    padding: var(--spacing-xxlarge) var(--spacing-large);
+    margin-bottom: var(--spacing-large);
+  }
+}
+
+/* School Liaison Section - Section 7 */
+.schoolSection {
+  background: var(--color-surface);
+  padding: var(--spacing-xlarge) var(--spacing-medium);
+  margin-bottom: var(--spacing-medium);
+  border-radius: var(--radius-medium);
+
+  h2 {
+    font-family: var(--font-display);
+    font-size: var(--font-size-h2);
+    font-weight: var(--font-weight-medium);
+    font-style: italic;
+    color: var(--color-text);
+    line-height: var(--line-height-body);
+    margin: 0 0 var(--spacing-medium);
+  }
+
+  p {
+    font-family: var(--font-body);
+    font-size: var(--font-size-body);
+    color: var(--color-text);
+    line-height: var(--line-height-body);
+    margin: 0 0 var(--spacing-medium);
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .schoolSection {
+    padding: var(--spacing-xxlarge) var(--spacing-large);
+    margin-bottom: var(--spacing-large);
+  }
+}
+
+/* Clinical Limits Section - Section 8 */
+.limitsSection {
+  background: var(--color-bg);
+  padding: var(--spacing-xlarge) var(--spacing-medium);
+  margin-bottom: var(--spacing-medium);
+  border-radius: var(--radius-medium);
+
+  h2 {
+    font-family: var(--font-display);
+    font-size: var(--font-size-h2);
+    font-weight: var(--font-weight-medium);
+    font-style: italic;
+    color: var(--color-text);
+    line-height: var(--line-height-body);
+    margin: 0 0 var(--spacing-medium);
+  }
+
+  p {
+    font-family: var(--font-body);
+    font-size: var(--font-size-body);
+    color: var(--color-text);
+    line-height: var(--line-height-body);
+    margin: 0 0 var(--spacing-medium);
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .limitsSection {
+    padding: var(--spacing-xxlarge) var(--spacing-large);
+    margin-bottom: var(--spacing-large);
+  }
+}
+
+.limitsList {
+  list-style: none;
+  padding: 0;
+  margin: var(--spacing-medium) 0 0;
+}
+
+.limitsItem {
+  font-family: var(--font-body);
+  font-size: var(--font-size-body);
+  color: var(--color-text);
+  line-height: var(--line-height-body);
+  padding: var(--spacing-medium);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-small);
+  margin-bottom: var(--spacing-small);
+  position: relative;
+  padding-left: var(--spacing-xlarge);
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &::before {
+    content: '×';
+    color: var(--color-text-muted);
+    position: absolute;
+    left: var(--spacing-medium);
+    font-weight: bold;
+  }
+}
+
+.limitsLink {
+  color: var(--color-brand);
+  text-decoration: underline;
+  font-weight: var(--font-weight-medium);
+  transition: var(--transition-normal);
+
+  &:hover {
+    color: var(--color-brand-dark);
+  }
+}
+
+/* Crisis Signposting Section - Section 9 */
+.crisisSection {
+  background: var(--color-surface);
+  padding: var(--spacing-xlarge) var(--spacing-medium);
+  margin-bottom: var(--spacing-medium);
+  border-radius: var(--radius-medium);
+  border-left: 4px solid var(--color-brand);
+
+  h2 {
+    font-family: var(--font-display);
+    font-size: var(--font-size-h2);
+    font-weight: var(--font-weight-medium);
+    font-style: italic;
+    color: var(--color-text);
+    line-height: var(--line-height-body);
+    margin: 0 0 var(--spacing-medium);
+  }
+
+  p {
+    font-family: var(--font-body);
+    font-size: var(--font-size-body);
+    color: var(--color-text);
+    line-height: var(--line-height-body);
+    margin: 0 0 var(--spacing-medium);
+  }
+}
+
+@media (min-width: 768px) {
+  .crisisSection {
+    padding: var(--spacing-xxlarge) var(--spacing-large);
+    margin-bottom: var(--spacing-large);
+  }
+}
+
+.crisisList {
+  list-style: none;
+  padding: 0;
+  margin: var(--spacing-medium) 0 0;
+}
+
+.crisisItem {
+  font-family: var(--font-body);
+  font-size: var(--font-size-body);
+  color: var(--color-text);
+  line-height: var(--line-height-body);
+  padding: var(--spacing-medium);
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-small);
+  margin-bottom: var(--spacing-small);
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.crisisName {
+  font-weight: var(--font-weight-medium);
+  display: block;
+  margin-bottom: var(--spacing-xsmall);
+}
+
+.crisisNumber {
+  color: var(--color-brand);
+  font-weight: var(--font-weight-medium);
+}
+
+.crisisNote {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-small);
+}
+
+/* CTA Section - Section 10 */
+.ctaSection {
+  background: var(--color-brand);
+  padding: var(--spacing-xlarge) var(--spacing-medium);
+  margin-bottom: 0;
+  border-radius: var(--radius-medium);
+  text-align: center;
+
+  h2 {
+    font-family: var(--font-display);
+    font-size: var(--font-size-h2);
+    font-weight: var(--font-weight-medium);
+    font-style: italic;
+    color: var(--color-header-text);
+    line-height: var(--line-height-body);
+    margin: 0 0 var(--spacing-medium);
+  }
+
+  p {
+    font-family: var(--font-body);
+    font-size: var(--font-size-body);
+    color: var(--color-header-text);
+    line-height: var(--line-height-body);
+    margin: 0 0 var(--spacing-large);
+    opacity: 0.9;
+  }
+}
+
+@media (min-width: 768px) {
+  .ctaSection {
+    padding: var(--spacing-xxlarge) var(--spacing-large);
+  }
+}
+
+.ctaButton {
+  display: inline-block;
+  padding: var(--spacing-medium) var(--spacing-large);
+  background: var(--color-header-text);
+  color: var(--color-brand);
+  text-decoration: none;
+  border-radius: var(--radius-small);
+  font-family: var(--font-body);
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-size-body);
+  transition: var(--transition-normal);
+
+  &:hover {
+    background: var(--color-bg);
+    transform: translateY(-2px);
+  }
+}
+
+/* Experience note within forParentsSection */
+.experienceNote {
+  margin-top: var(--spacing-large);
+  padding: var(--spacing-medium);
+  background: var(--color-bg);
+  border-radius: var(--radius-small);
+  border-left: 3px solid var(--color-brand);
+
+  p {
+    margin: 0;
+  }
+}

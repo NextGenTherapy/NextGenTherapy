@@ -204,7 +204,7 @@ export const ChildTherapySchema = () => {
     '@type': 'Service',
     name: 'Child Therapy',
     description:
-      'Professional play-based therapy for children aged 5-12 dealing with anxiety, behavioral challenges, and emotional difficulties in Colchester, Essex',
+      'Professional play-based therapy for children aged 4-12 dealing with anxiety, behavioral challenges, and emotional difficulties in Colchester, Essex',
     provider: {
       '@type': 'Person',
       name: 'Andreea Horhocea',
@@ -214,8 +214,8 @@ export const ChildTherapySchema = () => {
     category: 'Mental Health',
     audience: {
       '@type': 'Audience',
-      audienceType: 'Children aged 5-12 and their families',
-      suggestedMinAge: '5',
+      audienceType: 'Children aged 4-12 and their families',
+      suggestedMinAge: '4',
       suggestedMaxAge: '12',
     },
     areaServed: [
