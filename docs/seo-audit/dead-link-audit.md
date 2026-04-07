@@ -60,6 +60,26 @@ The following 301 redirects are configured in `next.config.ts` to handle externa
 - Info pages: `/pricing`, `/faq`, `/about`, `/location`, `/services`
 - Legal: `/privacy-policy`, `/terms`
 
+## Location Page Links (Pending)
+
+The footer originally referenced 7 location pages that will be created in Prompt 08:
+
+| URL | Town | Status |
+|-----|------|--------|
+| `/therapy-in-wivenhoe` | Wivenhoe | Pending |
+| `/therapy-in-mersea` | Mersea | Pending |
+| `/therapy-in-tiptree` | Tiptree | Pending |
+| `/therapy-in-marks-tey` | Marks Tey | Pending |
+| `/therapy-in-manningtree` | Manningtree | Pending |
+| `/therapy-in-clacton` | Clacton | Pending |
+| `/therapy-in-ipswich` | Ipswich | Pending |
+
+These links have been **commented out** in `src/components/layout/footer.tsx` until the pages exist. Only the Colchester link (pointing to `/location`) remains active.
+
+**Action required:** When Prompt 08 (`08-location-landing-pages.md`) is executed, uncomment the location links in the footer.
+
+---
+
 ## Conclusion
 
 No remediation required. All internal links are valid and redirects are in place for legacy URLs.

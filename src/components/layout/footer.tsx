@@ -60,6 +60,7 @@ export default function Footer() {
             <li>
               <Link href="/location">Colchester</Link>
             </li>
+            {/* TODO: Uncomment when Prompt 08 creates location pages
             <li>
               <Link href="/therapy-in-wivenhoe">Wivenhoe</Link>
             </li>
@@ -81,6 +82,7 @@ export default function Footer() {
             <li>
               <Link href="/therapy-in-ipswich">Ipswich</Link>
             </li>
+            */}
           </ul>
         </section>
 
