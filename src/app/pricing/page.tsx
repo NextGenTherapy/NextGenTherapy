@@ -208,17 +208,13 @@ export default function Pricing() {
             <div className={styles.narrowContainer}>
               <h2>Cancellation and missed sessions</h2>
               <p>
-                Life happens. If you need to cancel or reschedule, please give me at least 24 hours
-                notice.
+                Once a session is booked, the fee is non-refundable. If you cancel or miss a
+                session, the full £60 is still charged.
               </p>
               <p>
-                Late cancellations (less than 24 hours) or missed sessions may be charged at the
-                full session fee.
+                This isn&apos;t about being inflexible — it&apos;s because your weekly slot is held
+                for you. That time can&apos;t be offered to someone else at short notice.
               </p>
-              {/* {{ CONFIRM WITH ANDREEA — Is this cancellation policy correct? 24 hours notice, full fee for late cancellation? }} */}
-              <div className={styles.confirmMarker}>
-                Note: This cancellation policy is pending confirmation.
-              </div>
             </div>
           </section>
 
@@ -227,12 +223,9 @@ export default function Pricing() {
             <div className={styles.narrowContainer}>
               <h2>Payment</h2>
               <p>
-                Sessions are paid by bank transfer. I&apos;ll provide payment details when you book.
+                Payment is taken before each session by bank transfer. I&apos;ll provide payment
+                details when you book.
               </p>
-              {/* {{ CONFIRM WITH ANDREEA — Payment frequency: per session, weekly in advance, or monthly? }} */}
-              <div className={styles.confirmMarker}>
-                Note: Payment frequency (per session, weekly, or monthly) to be confirmed.
-              </div>
             </div>
           </section>
 
@@ -246,8 +239,8 @@ export default function Pricing() {
               <ul className={styles.notIncludedList}>
                 <li>
                   <span>
-                    <strong>Sliding scale or reduced-fee sessions</strong> — I don&apos;t currently
-                    offer concessions.
+                    <strong>Sliding scale or reduced-fee sessions</strong> — I don&apos;t offer
+                    concessions. The fee is £60 for everyone.
                   </span>
                 </li>
                 <li>
@@ -269,10 +262,6 @@ export default function Pricing() {
                   </span>
                 </li>
               </ul>
-              {/* {{ CONFIRM WITH ANDREEA — Do you offer any sliding scale, reduced-fee, or concession sessions? }} */}
-              <div className={styles.confirmMarker}>
-                Note: Sliding scale availability to be confirmed.
-              </div>
             </div>
           </section>
 

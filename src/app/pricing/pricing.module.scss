@@ -200,18 +200,6 @@
   }
 }
 
-/* Confirmation marker styling */
-.confirmMarker {
-  background: var(--color-surface);
-  border-left: var(--border-width-thick) solid var(--color-brand);
-  padding: var(--spacing-medium);
-  margin: var(--spacing-medium) 0;
-  font-family: var(--font-body);
-  font-size: var(--font-size-small);
-  color: var(--color-text-muted);
-  font-style: italic;
-}
-
 /* CTA Section */
 .ctaSection {
   margin: var(--spacing-large) 0;
