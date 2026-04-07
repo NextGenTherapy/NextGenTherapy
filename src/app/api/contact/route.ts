@@ -55,8 +55,8 @@ const isValidUKPhone = (phone: string): boolean => {
 const getEnquiryForLabel = (value: string): string => {
   const labels: Record<string, string> = {
     myself: 'Themselves',
-    child: 'Their child',
-    other: 'Someone else',
+    child: 'Their child or teenager',
+    other: 'A family member or partner',
   };
   return labels[value] || value;
 };
@@ -66,6 +66,7 @@ const getContactMethodLabel = (value: string): string => {
   const labels: Record<string, string> = {
     email: 'Email',
     phone: 'Phone',
+    either: 'Either email or phone',
   };
   return labels[value] || value;
 };
@@ -157,7 +158,7 @@ export async function POST(req: NextRequest) {
     }
 
     // Validate contact method
-    if (!['email', 'phone'].includes(sanitizedContactMethod)) {
+    if (!['email', 'phone', 'either'].includes(sanitizedContactMethod)) {
       return NextResponse.json(
         { success: false, error: 'Please select how you would like to be contacted.' },
         { status: 400 }

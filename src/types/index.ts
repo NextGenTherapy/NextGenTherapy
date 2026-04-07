@@ -8,7 +8,7 @@ export interface BlogPost {
   content: string;
 }
 
-export type ContactMethod = 'email' | 'phone';
+export type ContactMethod = 'email' | 'phone' | 'either';
 export type EnquiryFor = 'myself' | 'child' | 'other';
 
 export interface ContactFormData {

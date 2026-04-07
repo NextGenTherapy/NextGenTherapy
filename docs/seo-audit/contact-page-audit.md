@@ -48,10 +48,10 @@
 | Name | First Name + Last Name | Single Name field |
 | Email | Required | Required |
 | Phone | Not present | Optional, UK validation |
-| Contact Preference | Not present | Radio: Email / Phone |
-| Enquiry For | Not present | Radio: Myself / My child / Someone else |
+| Contact Preference | Not present | Radio: Email / Phone / Either |
+| Enquiry For | Not present | Radio: Myself / My child or teenager / A family member or partner |
 | Message | Required, no limit | Optional, 1000 char limit with counter |
-| GDPR Consent | Not present | Required checkbox with privacy policy link |
+| GDPR Consent | Not present | Required checkbox - "I understand that the information I'm sending will be used to respond to my enquiry and arrange a free 15-minute call. I've read the Privacy Policy." |
 | Honeypot | Not present | Hidden field for bot detection |
 
 ### Accessibility Improvements
@@ -132,6 +132,34 @@ In-person and online (UK-wide, age 16+)."
 - **Form backend:** Resend via `/api/contact` route ✓
 - **Map embed:** Removed - replaced with text link to Google Maps (removes tracking, improves page load)
 - **Static map image:** Not implemented - would need to be provided separately if desired
+
+---
+
+## April 2026 Content Refinement
+
+### Form Updates
+
+1. **Contact Method** - Added "Either" option to allow flexible contact preference
+2. **Enquiry Labels** - Updated for clarity:
+   - "My child" → "My child or teenager"
+   - "Someone else" → "A family member or partner"
+3. **GDPR Text** - Simplified: "I understand that the information I'm sending will be used to respond to my enquiry and arrange a free 15-minute call. I've read the Privacy Policy."
+
+### Page Content Updates
+
+1. **PageHero Title** - Changed to: "Let's start with a free call. No commitment, no forms to fill in afterwards."
+2. **PageHero Lead** - Updated to: "The free 15-minute call is an informal conversation — phone or video, your choice. You can ask anything you want about how I work, I'll answer honestly, and we can both see whether working together feels right."
+3. **Process Section Heading** - Changed from "What happens next" to "What happens after you send this"
+4. **Process Steps** - Rewritten per positioning brief requirements
+5. **Contact Section Heading** - Changed from "Other ways to reach me" to "Or reach me directly"
+6. **Phone Number** - Changed to international format: +44 7448 036017
+7. **Location Features** - Added "On-site parking" and changed "step-free access" to "accessible entrance"
+
+### API Route Updates
+
+1. **Contact Method Validation** - Now accepts 'either' in addition to 'email' and 'phone'
+2. **Label Updates** - getContactMethodLabel returns "Either email or phone" for 'either' value
+3. **Enquiry Labels** - Updated to match form: "Their child or teenager", "A family member or partner"
 
 ---
 

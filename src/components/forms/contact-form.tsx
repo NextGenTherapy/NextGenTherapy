@@ -303,6 +303,21 @@ export default function ContactForm() {
             />
             <span>Phone</span>
           </label>
+          <label className={styles.radioLabel}>
+            <input
+              type="radio"
+              name="contactMethod"
+              value="either"
+              checked={formData.contactMethod === 'either'}
+              onChange={(e) =>
+                setFormData((prev) => ({
+                  ...prev,
+                  contactMethod: e.target.value as ContactMethod,
+                }))
+              }
+            />
+            <span>Either</span>
+          </label>
         </div>
         {errors.contactMethod && (
           <div id="contactMethod-error" className={styles.errorMessage} role="alert">
@@ -344,7 +359,7 @@ export default function ContactForm() {
                 setFormData((prev) => ({ ...prev, enquiryFor: e.target.value as EnquiryFor }))
               }
             />
-            <span>My child</span>
+            <span>My child or teenager</span>
           </label>
           <label className={styles.radioLabel}>
             <input
@@ -356,7 +371,7 @@ export default function ContactForm() {
                 setFormData((prev) => ({ ...prev, enquiryFor: e.target.value as EnquiryFor }))
               }
             />
-            <span>Someone else</span>
+            <span>A family member or partner</span>
           </label>
         </div>
         {errors.enquiryFor && (
@@ -416,11 +431,12 @@ export default function ContactForm() {
             aria-describedby={errors.gdprConsent ? 'gdprConsent-error' : undefined}
           />
           <span>
-            I consent to Andreea storing my details and contacting me about my enquiry. See the{' '}
+            I understand that the information I&apos;m sending will be used to respond to my enquiry
+            and arrange a free 15-minute call. I&apos;ve read the{' '}
             <Link href="/privacy-policy" target="_blank">
-              privacy policy
-            </Link>{' '}
-            for how your data is handled. <span className={styles.required}>*</span>
+              Privacy Policy
+            </Link>
+            . <span className={styles.required}>*</span>
           </span>
         </label>
         {errors.gdprConsent && (

@@ -130,36 +130,36 @@ export default function BookNowPage() {
 
       <PageHero
         eyebrow="Book a Free 15-Minute Call"
-        title="Let's see if we're a good fit"
-        lead="Before any paid session, I offer a free 15-minute phone call. It's not therapy — just an informal conversation to hear a bit about what's brought you here, answer any questions, and see whether working together feels right for both of us."
+        title="Let's start with a free call. No commitment, no forms to fill in afterwards."
+        lead="The free 15-minute call is an informal conversation — phone or video, your choice. You can ask anything you want about how I work, I'll answer honestly, and we can both see whether working together feels right."
       />
 
       <div className={styles.page}>
         <main className={styles.main}>
           {/* What happens next */}
           <section className={styles.processSection}>
-            <h2>What happens next</h2>
+            <h2>What happens after you send this</h2>
             <ol className={styles.processList}>
               <li>
-                <strong>I&apos;ll be in touch within 1-2 working days</strong>
+                <strong>I&apos;ll be in touch within 1–2 working days</strong>
                 <p>
-                  Once you submit the form below, I&apos;ll get back to you to arrange a time for
-                  the call.
+                  Usually by email, unless you&apos;ve asked me to call. I&apos;ll suggest a few
+                  times for the free 15-minute call.
                 </p>
               </li>
               <li>
-                <strong>We&apos;ll have the call (15 minutes, informal)</strong>
+                <strong>We&apos;ll have the call</strong>
                 <p>
-                  This is a chance for us both to get a sense of each other. You can ask me anything
-                  about how I work, and I&apos;ll want to hear a little about what&apos;s brought
-                  you to therapy.
+                  Phone or video, whichever you prefer. It&apos;s 15 minutes, informal, no pressure.
+                  You can ask anything you want.
                 </p>
               </li>
               <li>
                 <strong>We&apos;ll decide together</strong>
                 <p>
-                  If it feels like a good fit, we can book your first session. If not, no pressure
-                  — I can suggest other options that might suit you better.
+                  If working with me feels right, we&apos;ll book a first session. If it
+                  doesn&apos;t, that&apos;s completely fine, and I&apos;ll try to suggest someone
+                  else who might be a better fit.
                 </p>
               </li>
             </ol>
@@ -173,7 +173,7 @@ export default function BookNowPage() {
 
           {/* Other ways to reach me */}
           <section className={styles.contactSection}>
-            <h2>Other ways to reach me</h2>
+            <h2>Or reach me directly</h2>
             <div className={styles.contactGrid}>
               <div className={styles.contactItem}>
                 <h3>Email</h3>
@@ -184,10 +184,11 @@ export default function BookNowPage() {
               <div className={styles.contactItem}>
                 <h3>Phone</h3>
                 <p>
-                  <a href="tel:07448036017">07448 036017</a>
+                  <a href="tel:+447448036017">+44 7448 036017</a>
                 </p>
                 <p className={styles.contactNote}>
-                  I may be in sessions, so please leave a voicemail and I&apos;ll call you back.
+                  I&apos;m in sessions for most of the day, so if I don&apos;t pick up, please leave
+                  a voicemail and I&apos;ll call you back.
                 </p>
               </div>
             </div>
@@ -205,7 +206,8 @@ export default function BookNowPage() {
                   Colchester CO1 2JS
                 </address>
                 <ul className={styles.locationFeatures}>
-                  <li>Ground floor, step-free access</li>
+                  <li>Ground floor, accessible entrance</li>
+                  <li>On-site parking</li>
                   <li>Quiet, private room with natural light</li>
                   <li>Sensory-friendly environment</li>
                 </ul>
