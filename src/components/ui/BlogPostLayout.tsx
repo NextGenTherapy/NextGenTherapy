@@ -1,11 +1,19 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import styles from './BlogPostLayout.module.scss';
+
+interface CornerstoneLink {
+  href: string;
+  title: string;
+  description?: string;
+}
 
 interface BlogPostLayoutProps {
   title: string;
   eyebrow: string;
   date?: string;
   readTime?: string;
+  seeAlso?: CornerstoneLink[];
   children: React.ReactNode;
 }
 
@@ -14,6 +22,7 @@ export default function BlogPostLayout({
   eyebrow,
   date,
   readTime,
+  seeAlso,
   children,
 }: BlogPostLayoutProps) {
   return (
@@ -32,6 +41,28 @@ export default function BlogPostLayout({
       </header>
 
       <div className={styles.body}>{children}</div>
+
+      {seeAlso && seeAlso.length > 0 && (
+        <aside className={styles.seeAlso} aria-labelledby="see-also-heading">
+          <h2 id="see-also-heading" className={styles.seeAlsoHeading}>
+            Continue reading
+          </h2>
+          <ul className={styles.seeAlsoList}>
+            {seeAlso.map((link) => (
+              <li key={link.href} className={styles.seeAlsoItem}>
+                <Link href={link.href} className={styles.seeAlsoLink}>
+                  <span className={styles.seeAlsoTitle}>{link.title}</span>
+                  {link.description && (
+                    <span className={styles.seeAlsoDescription}>
+                      {link.description}
+                    </span>
+                  )}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </aside>
+      )}
 
       <aside className={styles.author}>
         <Image
