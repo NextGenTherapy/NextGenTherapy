@@ -325,7 +325,7 @@ export const TeenageTherapySchema = () => {
     '@type': 'Service',
     name: 'Teenage Therapy',
     description:
-      'Confidential therapy for teenagers aged 13-18 dealing with depression, anxiety, identity issues, and life transitions in Colchester, Essex',
+      'Confidential therapy for teenagers aged 13-17 dealing with depression, anxiety, identity issues, and life transitions in Colchester, Essex',
     provider: {
       '@type': 'Person',
       name: 'Andreea Horhocea',
@@ -335,9 +335,9 @@ export const TeenageTherapySchema = () => {
     category: 'Mental Health',
     audience: {
       '@type': 'Audience',
-      audienceType: 'Teenagers aged 13-18',
+      audienceType: 'Teenagers aged 13-17',
       suggestedMinAge: '13',
-      suggestedMaxAge: '18',
+      suggestedMaxAge: '17',
     },
     areaServed: [
       {

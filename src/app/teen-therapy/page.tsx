@@ -145,8 +145,8 @@ export default function TeenTherapyPage() {
       {/* Section 1: Hero */}
       <PageHero
         eyebrow="Therapy for Teenagers"
-        title="If your teenager is struggling, you're probably struggling too"
-        lead="Therapy for teenagers aged 13–17 in Colchester. Anxiety, school refusal, self-harm, low mood, identity. A space for them to talk, and support for you as a parent."
+        title="If your teenager is struggling and you don't know what to do next"
+        lead="In-person psychodynamic therapy for teenagers aged 13–17 in Colchester. Working alongside parents, not around them. CAMHS has a 12-month waitlist — you don't have to wait that long."
       />
 
       <div className={styles.page}>
@@ -154,69 +154,70 @@ export default function TeenTherapyPage() {
           {/* Section 2: Parent empathy */}
           <section className={styles.surfaceSection}>
             <div className={styles.narrowContainer}>
-              <h2>If you&apos;re reading this at 11pm</h2>
+              <h2>If you&apos;re a parent reading this at 11pm</h2>
               <p className={styles.leadText}>
-                You&apos;re worried. Your teenager has changed — withdrawn, angry, tearful, refusing
-                school, or something else you can&apos;t quite name. You&apos;ve tried talking to
-                them. You&apos;ve tried giving them space. Nothing seems to help.
+                You&apos;ve noticed something has changed. Your teenager is withdrawn, or angry, or
+                tearful, or refusing school — or something you can&apos;t quite name. You&apos;ve
+                tried talking. You&apos;ve tried giving space. You&apos;ve tried being patient.
+                Nothing seems to shift it.
               </p>
               <p>
-                The CAMHS waitlist is impossibly long. You&apos;re not sure if this is
-                &ldquo;serious enough&rdquo; for private therapy, or whether your teenager would even
-                agree to go. You&apos;re exhausted, and you don&apos;t know what the right next step
-                is.
+                You&apos;ve probably already spoken to the school. Maybe you&apos;ve been to the GP.
+                There might be a CAMHS referral sitting somewhere in a queue — the waitlist in Essex
+                is 12 months or longer. You&apos;re exhausted, and you&apos;re not sure what to do
+                next.
               </p>
               <p>
-                I work with teenagers like yours, and with parents who are trying to figure out how
-                to help. A free 15-minute call might be a good place to start — no pressure, just a
-                conversation about whether therapy could help.
+                I work with teenagers like yours, and I take the parents seriously too. You&apos;re
+                not being dramatic. You know your child. If something feels wrong, it probably is
+                worth looking into.
               </p>
             </div>
           </section>
 
-          {/* Section 3: What I work with */}
+          {/* Section 3: What teenagers usually come to me with */}
           <section className={styles.normalSection}>
             <div className={styles.sectionContainer}>
-              <h2>What I work with</h2>
+              <h2>What teenagers usually come to me with</h2>
               <p>
                 I see teenagers dealing with a range of difficulties. These are the most common:
               </p>
               <div className={styles.topicsGrid}>
                 <div className={styles.topicItem}>Anxiety and panic</div>
-                <div className={styles.topicItem}>School refusal and avoidance</div>
-                <div className={styles.topicItem}>Self-harm</div>
-                <div className={styles.topicItem}>Low mood and depression</div>
-                <div className={styles.topicItem}>Anger and irritability</div>
-                <div className={styles.topicItem}>Friendship difficulties and social anxiety</div>
-                <div className={styles.topicItem}>Identity and sexuality questions</div>
+                <div className={styles.topicItem}>School refusal and school anxiety</div>
+                <div className={styles.topicItem}>Mild self-harm (cutting, scratching, hair-pulling)</div>
+                <div className={styles.topicItem}>Low mood and feeling stuck</div>
+                <div className={styles.topicItem}>Friendship and social difficulties</div>
                 <div className={styles.topicItem}>Family conflict</div>
-                <div className={styles.topicItem}>Academic pressure and perfectionism</div>
-                <div className={styles.topicItem}>Grief and loss</div>
+                <div className={styles.topicItem}>Identity questions (gender, sexuality, self)</div>
+                <div className={styles.topicItem}>Behavioural changes without a name yet</div>
+                <div className={styles.topicItem}>Late-identified ADHD or autism</div>
+                <div className={styles.topicItem}>Body image and early signs of disordered eating</div>
               </div>
             </div>
           </section>
 
-          {/* Section 4: What I don't work with */}
+          {/* Section 4: What I don't work with at this age */}
           <section className={styles.surfaceSection}>
             <div className={styles.narrowContainer}>
-              <h2>What I don&apos;t work with</h2>
+              <h2>What I don&apos;t work with at this age</h2>
               <p>
                 Being clear about my limits helps you find the right support. I&apos;m not the right
-                therapist if your teenager is:
+                fit if your teenager is:
               </p>
               <ul className={styles.limitsList}>
                 <li className={styles.limitItem}>
-                  In acute crisis requiring immediate psychiatric support
+                  In acute crisis or actively suicidal with no current support in place
                 </li>
                 <li className={styles.limitItem}>
-                  Actively suicidal with no current professional support
+                  Dealing with a severe eating disorder that needs medical monitoring
                 </li>
                 <li className={styles.limitItem}>
                   Involved in ongoing court proceedings or forensic assessment
                 </li>
                 <li className={styles.limitItem}>Experiencing psychosis</li>
                 <li className={styles.limitItem}>
-                  Struggling with severe addiction without wraparound support
+                  Struggling with active addiction without wraparound support
                 </li>
               </ul>
               <p>
@@ -234,41 +235,23 @@ export default function TeenTherapyPage() {
           {/* Section 5: How I work */}
           <section className={styles.normalSection}>
             <div className={styles.narrowContainer}>
-              <h2>How I work with teenagers</h2>
+              <h2>How I work</h2>
               <p>
-                I&apos;m a psychodynamic therapist. That means I&apos;m interested in understanding
-                <em>why</em> your teenager is struggling, not just managing symptoms. We don&apos;t
-                start with worksheets or homework assignments — we start with conversation, at their
-                pace.
+                Your teenager is the client, with the same confidentiality I&apos;d offer any adult.
+                What they tell me stays between us — with exceptions only for immediate safety
+                concerns. They need to know they can speak freely without it getting back to you.
               </p>
-              <ul className={styles.approachList}>
-                <li className={styles.approachItem}>
-                  <h3>Confidentiality</h3>
-                  <p>
-                    What your teenager tells me stays between us, with exceptions only for immediate
-                    safety concerns. They need to know they can speak freely without it getting back
-                    to you. I can give you general updates about how therapy is going — whether
-                    they&apos;re engaging, whether we seem to be making progress — without sharing
-                    the content.
-                  </p>
-                </li>
-                <li className={styles.approachItem}>
-                  <h3>Teenager-led</h3>
-                  <p>
-                    Your teenager chooses what to talk about. I&apos;m not there to extract
-                    information or push them to open up before they&apos;re ready. Trust takes time,
-                    especially with teenagers who&apos;ve learned that adults often have an agenda.
-                  </p>
-                </li>
-                <li className={styles.approachItem}>
-                  <h3>Weekly, open-ended</h3>
-                  <p>
-                    I see teenagers weekly. We don&apos;t start with a fixed number of sessions —
-                    some teenagers come for a few months, others for longer. We review how it&apos;s
-                    going together and with you as the parent.
-                  </p>
-                </li>
-              </ul>
+              <p>
+                I&apos;m a psychodynamic therapist. That means I&apos;m interested in understanding{' '}
+                <em>why</em> your teenager is struggling, not just managing the symptoms. This
+                isn&apos;t a 6-week worksheet programme. We work at their pace, for as long as
+                they need.
+              </p>
+              <p>
+                In session, we talk. Sometimes we write, or draw, or use other materials — whatever
+                helps them process what&apos;s going on. The approach adapts to the teenager, not
+                the other way around.
+              </p>
             </div>
           </section>
 
@@ -277,27 +260,49 @@ export default function TeenTherapyPage() {
             <div className={styles.narrowContainer}>
               <h2>How I work with parents</h2>
               <p>
-                You&apos;re part of this, even though your teenager&apos;s sessions are theirs. I
-                offer parent sessions alongside teen therapy — space for you to talk about
-                what&apos;s happening at home, how to respond when they&apos;re struggling, and what
-                you can do to support them without taking over.
+                You&apos;re part of this, even though your teenager&apos;s sessions are theirs.
               </p>
-              <p>
-                If there&apos;s school involvement — meetings, SENCO conversations, safeguarding
-                concerns — I can liaise with school with your permission. I&apos;ve worked in
-                schools and understand how the system operates.
-              </p>
-              <p>
-                Parent sessions are separate from your teenager&apos;s therapy and are charged at
-                the same rate (£60).
-              </p>
+              <ul className={styles.approachList}>
+                <li className={styles.approachItem}>
+                  <h3>Initial conversation</h3>
+                  <p>
+                    Before work begins, I speak with you as the parent to understand the background,
+                    what you&apos;ve noticed, what you&apos;ve already tried. This informs the
+                    therapy without breaking your teenager&apos;s confidentiality later.
+                  </p>
+                </li>
+                <li className={styles.approachItem}>
+                  <h3>Confidentiality boundaries</h3>
+                  <p>
+                    I&apos;ll be clear with both of you about what I will and won&apos;t share. I
+                    can tell you how therapy is going in general terms — whether they&apos;re
+                    engaging, whether we&apos;re making progress — without revealing content.
+                  </p>
+                </li>
+                <li className={styles.approachItem}>
+                  <h3>Parent sessions when useful</h3>
+                  <p>
+                    Separate sessions for you to talk through what&apos;s happening at home, how to
+                    respond when they&apos;re struggling, how to support without taking over. These
+                    are £60, separate from your teenager&apos;s therapy.
+                  </p>
+                </li>
+                <li className={styles.approachItem}>
+                  <h3>Working with school</h3>
+                  <p>
+                    If there&apos;s school involvement — meetings, SENCO conversations, EHCP
+                    processes, safeguarding concerns — I can liaise with the school with your
+                    permission. I&apos;ve worked in schools and understand how the system operates.
+                  </p>
+                </li>
+              </ul>
             </div>
           </section>
 
-          {/* Section 7: My experience */}
+          {/* Section 7: My experience working with young people */}
           <section className={styles.normalSection}>
             <div className={styles.sectionContainer}>
-              <h2>My experience with young people</h2>
+              <h2>My experience working with young people</h2>
               <p>
                 I&apos;ve worked with teenagers in schools, in the NHS, and in community settings.
                 This isn&apos;t something I do occasionally — it&apos;s a core part of my practice.
@@ -313,8 +318,8 @@ export default function TeenTherapyPage() {
                 <div className={styles.experienceItem}>
                   <h3>Sir Bobby Robson School, Ipswich</h3>
                   <p>
-                    A year working in this SEN-specific provision, supporting young people with
-                    complex needs.
+                    One year in this SEN-specific provision, supporting young people with complex
+                    needs.
                   </p>
                 </div>
                 <div className={styles.experienceItem}>
@@ -322,7 +327,7 @@ export default function TeenTherapyPage() {
                   <p>Youth work in schools, supporting young people with mental health.</p>
                 </div>
                 <div className={styles.experienceItem}>
-                  <h3>YMCA Ipswich</h3>
+                  <h3>YMCA Ipswich (current)</h3>
                   <p>
                     Ongoing work across two projects: primary school support and work with young
                     residents in YMCA accommodation.
@@ -331,28 +336,41 @@ export default function TeenTherapyPage() {
               </div>
               <p>
                 I hold an MSc in Psychodynamic Psychotherapy from the University of Essex (2020) and
-                am a registered member of the BACP. I continue to train in neurodiversity,
-                attachment, and trauma.
+                am a registered member of the BACP. I continue to train in areas relevant to young
+                people: neurodiversity, eating disorders, trauma, attachment, and working with
+                LGBTQ+ clients.
               </p>
             </div>
           </section>
 
-          {/* Section 8: What if my teenager won't come? */}
+          {/* Section 8: What if my teenager refuses to come? */}
           <section className={styles.surfaceSection}>
             <div className={styles.narrowContainer}>
-              <h2>What if my teenager won&apos;t come?</h2>
+              <h2>What if my teenager refuses to come?</h2>
               <p>
-                This is one of the most common questions I get from parents. Your teenager might be
-                resistant because they don&apos;t want to talk about their feelings, because
-                they&apos;re worried you&apos;ll find out what they say, or because they don&apos;t
-                believe it will help.
+                This is the most common question parents ask me. Teenagers exist on a spectrum:
+                some are actively asking for help, some are ambivalent, some are firmly against the
+                idea. Your teenager might be resistant because they don&apos;t want to talk about
+                feelings, because they&apos;re worried you&apos;ll find out what they say, or
+                because they don&apos;t believe anything will help.
               </p>
               <p>
-                Sometimes it helps to frame therapy as something you&apos;re offering, not forcing.
-                A trial session with no commitment. Sometimes it helps to let me speak with them
-                briefly beforehand. Sometimes they&apos;re more willing than you expect once they
-                understand that what they say stays confidential.
+                There are a few ways to approach this:
               </p>
+              <ul className={styles.limitsList}>
+                <li className={styles.limitItem}>
+                  <strong>A parent-only call first</strong> — we can talk through the situation and
+                  whether therapy seems right, without involving your teenager yet.
+                </li>
+                <li className={styles.limitItem}>
+                  <strong>A brief intro chat with your teenager</strong> — 10 minutes, no
+                  commitment, just so they can see what I&apos;m like and ask questions.
+                </li>
+                <li className={styles.limitItem}>
+                  <strong>No pressure</strong> — sometimes framing it as &ldquo;one session to
+                  try&rdquo; rather than a commitment helps.
+                </li>
+              </ul>
               <p>
                 If they genuinely won&apos;t come, I can still work with you as a parent — helping
                 you understand what might be going on and how to respond.
@@ -372,19 +390,18 @@ export default function TeenTherapyPage() {
                 <div className={styles.crisisItem}>
                   <h3>NHS 111</h3>
                   <p>
-                    Call <strong>111</strong> and select the mental health option for urgent
-                    assessment and advice.
+                    Call <strong>111</strong> and press option 2 for the mental health crisis line.
                   </p>
                 </div>
                 <div className={styles.crisisItem}>
                   <h3>Your GP</h3>
                   <p>
-                    Your teenager&apos;s GP can provide urgent referrals and crisis support during
-                    surgery hours.
+                    Your teenager&apos;s GP can offer emergency same-day appointments and urgent
+                    referrals.
                   </p>
                 </div>
                 <div className={styles.crisisItem}>
-                  <h3>A&amp;E</h3>
+                  <h3>A&amp;E Colchester General Hospital</h3>
                   <p>
                     Go to A&amp;E if your teenager has harmed themselves seriously or is at
                     immediate risk.
@@ -400,7 +417,7 @@ export default function TeenTherapyPage() {
                 <div className={styles.crisisItem}>
                   <h3>Papyrus HOPELINEUK</h3>
                   <p>
-                    For young people under 35 who are having thoughts of suicide. Call{' '}
+                    For young people under 35 having thoughts of suicide. Call{' '}
                     <strong>0800 068 4141</strong>.
                   </p>
                 </div>
@@ -411,11 +428,12 @@ export default function TeenTherapyPage() {
           {/* Section 10: CTA */}
           <section className={styles.ctaSection}>
             <div className={styles.ctaContainer}>
-              <h2>Book a free 15-minute call</h2>
+              <h2>Start with a free 15-minute call</h2>
               <p>
-                The free call is for parents. We&apos;ll talk about what&apos;s happening with your
-                teenager, whether therapy seems like the right next step, and any questions you
-                have. No pressure, no commitment.
+                The call can be just you as the parent, just your teenager, or both of you
+                together — whatever makes most sense. We&apos;ll talk about what&apos;s going on,
+                whether therapy seems like the right next step, and any questions you have. No
+                pressure, no commitment.
               </p>
               <Link href="/book-now" className={buttonStyles.primary}>
                 Book a free call
