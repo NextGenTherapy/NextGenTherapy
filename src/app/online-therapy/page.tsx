@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://nextgentherapy.co.uk'),
   title: 'Online Therapy UK | Video Sessions Age 16+ | Next Generation Therapy',
   description:
-    'Online psychodynamic therapy across the UK. Secure video sessions for clients aged 16 and over. Weekly sessions on Wednesdays. BACP registered therapist offering therapy in English and Romanian.',
+    'Online psychodynamic therapy across the UK. Secure video sessions for clients aged 16 and over. £60 per 50-minute session. Weekly on Wednesdays. BACP registered therapist offering therapy in English and Romanian.',
   keywords: [
     'online therapy uk',
     'online psychodynamic therapy',
@@ -267,6 +267,20 @@ export default function OnlineTherapyPage() {
                     .
                   </p>
                 </div>
+                <div className={styles.topicItem}>
+                  <h3>Relationship patterns and life transitions</h3>
+                  <p>
+                    The same dynamic showing up in every relationship. Major life changes that leave
+                    you unmoored. Navigating parenthood, separation, or career shifts.
+                  </p>
+                </div>
+                <div className={styles.topicItem}>
+                  <h3>The things you haven&apos;t found words for yet</h3>
+                  <p>
+                    Not everything arrives with a label. Sometimes you just know something
+                    isn&apos;t right, and that&apos;s enough to start.
+                  </p>
+                </div>
               </div>
             </div>
           </section>
@@ -345,6 +359,13 @@ export default function OnlineTherapyPage() {
                 <div className={styles.detailsItem}>
                   <dt>Coverage</dt>
                   <dd>UK-wide</dd>
+                </div>
+                <div className={styles.detailsItem}>
+                  <dt>What you need</dt>
+                  <dd>
+                    A private space where you won&apos;t be overheard, a stable internet connection,
+                    and a device with camera
+                  </dd>
                 </div>
               </dl>
             </div>
