@@ -173,35 +173,18 @@ export default function NeurodiversityTherapyPage() {
         <main className={styles.main}>
           {/* Section 2: Recognition */}
           <section className={styles.recognitionSection}>
-            <div className={styles.recognitionContainer}>
-              <h2 className={styles.recognitionHeading}>
-                If you&apos;re reading this, you might already know
-              </h2>
-              <ul className={styles.quoteList}>
-                <li className={styles.quote}>
-                  &ldquo;I&apos;ve spent my whole life feeling like everyone got a manual I
-                  didn&apos;t.&rdquo;
-                </li>
-                <li className={styles.quote}>
-                  &ldquo;I only found out after my child was diagnosed — and suddenly everything made
-                  sense.&rdquo;
-                </li>
-                <li className={styles.quote}>
-                  &ldquo;I&apos;m exhausted from performing being normal.&rdquo;
-                </li>
-                <li className={styles.quote}>
-                  &ldquo;I&apos;m not sure if I&apos;m autistic or ADHD or both — I just know
-                  something&apos;s different.&rdquo;
-                </li>
-                <li className={styles.quote}>
-                  &ldquo;I mask so well that no one believes me when I say I&apos;m
-                  struggling.&rdquo;
-                </li>
-              </ul>
-              <p className={styles.recognitionNote}>
-                Many of my neurodivergent clients have spent years adapting to a world that
-                wasn&apos;t built for them. Therapy isn&apos;t about adapting harder. It&apos;s
-                about understanding yourself and building a life that actually works for your brain.
+            <div className={styles.narrowContainer}>
+              <h2>If you&apos;re reading this, you might already know</h2>
+              <p>
+                You might have been diagnosed recently. You might be self-identified and reading
+                everything you can. You might have spent forty years being told you were lazy, too
+                sensitive, too much, or not enough — and somewhere along the way you started to
+                believe it.
+              </p>
+              <p>
+                I work with neurodivergent adults who are tired of masking, tired of being told to
+                try harder, and looking for a therapist who isn&apos;t going to treat ADHD or autism
+                as a problem to be solved.
               </p>
             </div>
           </section>
@@ -209,39 +192,30 @@ export default function NeurodiversityTherapyPage() {
           {/* Section 3: Approach */}
           <section className={styles.approachSection}>
             <div className={styles.approachContainer}>
-              <h2>How I work (and what I don&apos;t do)</h2>
+              <h2>How I work</h2>
               <p>
-                I&apos;m a psychodynamic therapist with post-qualification training in
-                neurodiversity. That means I&apos;m interested in the whole of you — not just your
-                symptoms or your strategies for getting through the day.
+                My practice is affirmative. That means I start from the assumption that your brain
+                works the way it works, and the goal isn&apos;t to make it look like a neurotypical
+                one. The goal is to understand how you actually function, what&apos;s been costing
+                you, what&apos;s been hidden, and what would make your life feel more like your own.
               </p>
               <p>
-                We&apos;ll talk about what it&apos;s been like to be you. The ways you&apos;ve
-                adapted. What got missed. What you&apos;re only just realising. What might need to
-                change — and what doesn&apos;t need fixing at all.
-              </p>
-              <p>
-                This is weekly, open-ended work. Some people come for a few months around a specific
-                issue. Others stay longer, because they&apos;ve spent a lifetime not being
-                understood and need time to untangle that.
+                I&apos;ve completed specific post-qualification training in neurodiversity,
+                alongside my MSc in Psychodynamic Psychotherapy. I&apos;ve worked in SEN provision
+                at Sir Bobby Robson School in Ipswich and in primary and secondary schools with Mind
+                and the YMCA. Most of what I&apos;ve learned, though, has come from working with
+                neurodivergent clients in private practice — many of whom knew more about their own
+                neurotype than any textbook I could read.
               </p>
 
               <h3 className={styles.subheading}>What I don&apos;t do</h3>
-              <ul className={styles.notList}>
-                <li>
-                  <strong>I don&apos;t do ABA or any approach that treats neurodivergence as a
-                  problem to be corrected.</strong>
-                </li>
-                <li>
-                  <strong>I don&apos;t teach masking strategies</strong> — you&apos;ve probably got
-                  enough of those already.
-                </li>
-                <li>
-                  <strong>I don&apos;t offer short-term skills programmes.</strong> If you want a
-                  6-week ADHD toolkit, I&apos;m not the right fit — but there are people who do that
-                  well.
-                </li>
-              </ul>
+              <p>
+                I don&apos;t do ADHD or autism &ldquo;coaching&rdquo; — I&apos;m a therapist, not a
+                behavioural trainer. I don&apos;t try to reduce stimming, eye contact avoidance, or
+                other regulating behaviours. I don&apos;t require a formal diagnosis for you to work
+                with me. And I don&apos;t pathologise the parts of you that are actually adaptations
+                to a world that wasn&apos;t built for your brain.
+              </p>
             </div>
           </section>
 
@@ -249,29 +223,17 @@ export default function NeurodiversityTherapyPage() {
           <section className={styles.roomSection}>
             <div className={styles.roomContainer}>
               <h2>The room matters</h2>
-              <p className={styles.roomIntro}>
-                If you&apos;re coming in person, you&apos;ll be at my room in Colchester Business
-                Centre. I&apos;ve set it up with neurodivergent clients in mind:
+              <p>
+                My therapy room is on the ground floor at Colchester Business Centre. It&apos;s
+                quiet, it has plants, and the lighting is soft — none of the fluorescent overheads
+                you get in most clinical settings. There&apos;s a couch, two comfortable chairs, and
+                a desk with fidgets on it. Stimming is welcome. You don&apos;t have to sit still.
+                You don&apos;t have to make eye contact. You can move around if you need to, bring a
+                drink, take breaks, or ask me to repeat something.
               </p>
-              <ul className={styles.roomFeatures}>
-                <li>
-                  <strong>Soft, adjustable lighting</strong> — no harsh overhead fluorescents
-                </li>
-                <li>
-                  <strong>Fidgets available</strong> — for any age, no questions asked
-                </li>
-                <li>
-                  <strong>Stimming is welcome</strong> — move however you need to
-                </li>
-                <li>
-                  <strong>Comfortable seating options</strong> — couch and chairs
-                </li>
-                <li>
-                  <strong>Calm atmosphere</strong> — plants, quiet, ground floor
-                </li>
-              </ul>
-              <p className={styles.roomNote}>
-                The space shouldn&apos;t add to your overwhelm. It should reduce it.
+              <p>
+                None of this is a gimmick. Sensory environment matters for neurodivergent clients,
+                and I designed the room knowing that.
               </p>
               {/* {{ CONFIRM WITH ANDREEA: room photo }} */}
             </div>
@@ -281,96 +243,64 @@ export default function NeurodiversityTherapyPage() {
           <section className={styles.challengesSection}>
             <div className={styles.challengesContainer}>
               <h2>What neurodivergent adults often come to me with</h2>
-              <div className={styles.challengesGrid}>
-                <div className={styles.challengeItem}>
-                  <h3>Burnout from masking</h3>
-                  <p>
-                    Years of performing &ldquo;normal&rdquo; catch up with you. The exhaustion goes
-                    deeper than rest can fix.
-                  </p>
-                </div>
-                <div className={styles.challengeItem}>
-                  <h3>Late diagnosis grief</h3>
-                  <p>
-                    The relief of finally knowing, mixed with anger about everything that could have
-                    been different.
-                  </p>
-                </div>
-                <div className={styles.challengeItem}>
-                  <h3>Anxiety</h3>
-                  <p>
-                    Often lifelong, often misdiagnosed. The hypervigilance that comes from always
-                    having to work harder to fit in.
-                  </p>
-                </div>
-                <div className={styles.challengeItem}>
-                  <h3>Relationships and communication</h3>
-                  <p>
-                    Misunderstandings, feeling like you&apos;re always getting it wrong, not knowing
-                    why connection feels so hard.
-                  </p>
-                </div>
-                <div className={styles.challengeItem}>
-                  <h3>Rejection sensitivity</h3>
-                  <p>
-                    The intensity of feeling rejected or criticised — and how much it shapes what
-                    you do and don&apos;t do.
-                  </p>
-                </div>
-                <div className={styles.challengeItem}>
-                  <h3>Identity questions</h3>
-                  <p>
-                    Who am I when I stop performing? What do I actually want — not what I&apos;ve
-                    been told to want?
-                  </p>
-                </div>
-                <div className={styles.challengeItem}>
-                  <h3>Executive function struggles</h3>
-                  <p>
-                    Not a skills deficit — often the shame and frustration that comes with a brain
-                    that doesn&apos;t work the way people expect.
-                  </p>
-                </div>
-                <div className={styles.challengeItem}>
-                  <h3>Parenting as a neurodivergent adult</h3>
-                  <p>
-                    Raising kids when your own needs are high. Managing your regulation alongside
-                    theirs.
-                  </p>
-                </div>
-              </div>
+              <ul className={styles.challengesList}>
+                <li>
+                  <strong>Burnout from masking</strong> — the exhaustion that comes from years of
+                  performing neurotypical
+                </li>
+                <li>
+                  <strong>Late diagnosis grief and relief</strong> — the strange double-feeling of
+                  &ldquo;I finally understand&rdquo; and &ldquo;I&apos;ve lost so much time&rdquo;
+                </li>
+                <li>
+                  <strong>Anxiety and overwhelm</strong> — sensory, social, or both
+                </li>
+                <li>
+                  <strong>Relationship difficulties</strong> — especially mixed-neurotype
+                  relationships and family dynamics
+                </li>
+                <li>
+                  <strong>Rejection sensitivity</strong> — the pain that doesn&apos;t match the
+                  situation
+                </li>
+                <li>
+                  <strong>Identity</strong> — who were you before you started masking, and who are
+                  you now
+                </li>
+                <li>
+                  <strong>Executive function and self-compassion</strong> — not skills-based
+                  coaching, but the emotional work underneath the struggle
+                </li>
+                <li>
+                  <strong>Parenting a neurodivergent child while being one yourself</strong> — the
+                  exhaustion no one talks about
+                </li>
+              </ul>
             </div>
           </section>
 
           {/* Section 6: Diagnosis */}
           <section className={styles.diagnosisSection}>
-            <div className={styles.diagnosisContainer}>
+            <div className={styles.narrowContainer}>
               <h2>You don&apos;t need a formal diagnosis</h2>
               <p>
-                NHS ADHD and autism assessment waitlists are years long in most areas. Many people
-                self-identify long before they ever get on a list — if they pursue assessment at
-                all.
-              </p>
-              <p>
-                If you recognise yourself as ADHD, autistic, or both, that&apos;s enough. You
-                don&apos;t need to prove anything to me. We work with your experience, not a piece
-                of paper.
+                If you&apos;ve identified yourself as autistic, ADHD, or both — that&apos;s enough
+                for me. NHS waiting lists for assessment are years long and private assessment is
+                expensive. I work with self-identified clients, and I treat your understanding of
+                your own neurotype as credible.
               </p>
             </div>
           </section>
 
           {/* Section 7: Online */}
           <section className={styles.onlineSection}>
-            <div className={styles.onlineContainer}>
+            <div className={styles.narrowContainer}>
               <h2>Online therapy for neurodivergent adults</h2>
               <p>
-                Many neurodivergent clients actually prefer online. You&apos;re in your own space,
-                with your own lighting and sensory setup. No travel, no waiting rooms, no
-                transition stress.
-              </p>
-              <p>
-                I see neurodivergent adults online across the UK. If you&apos;re 16 or over, online
-                is an option.
+                I work online on Wednesdays, UK-wide, for clients aged 16 and over. For a lot of
+                neurodivergent adults, online therapy is more accessible than in-person — no
+                commute, familiar environment, ability to fidget off-camera, no fluorescent waiting
+                room. If that&apos;s what works for you, it works for me.
               </p>
               <Link href="/online-therapy" className={styles.link}>
                 More about online therapy →
@@ -381,14 +311,14 @@ export default function NeurodiversityTherapyPage() {
           {/* Section 8: CTA */}
           <section className={styles.ctaSection}>
             <div className={styles.ctaContainer}>
-              <h2>Book a free 15-minute call</h2>
+              <h2>Start with a free 15-minute call</h2>
               <p>
-                The free call is an informal 15-minute conversation, not a first session. You can
-                ask anything you want, I&apos;ll answer honestly, and we&apos;ll decide together
-                whether working with me feels like the right next step.
+                If you want to ask about the approach, the room, online options, or anything else —
+                the free call is the place to do it. It&apos;s 15 minutes, informal, and you can ask
+                absolutely anything.
               </p>
               <Link href="/book-now" className={buttonStyles.primary}>
-                Book a free 15-minute call
+                Book a Free 15-Minute Call
               </Link>
             </div>
           </section>
