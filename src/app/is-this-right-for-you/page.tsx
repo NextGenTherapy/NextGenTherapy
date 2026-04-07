@@ -144,39 +144,35 @@ export default function IsThisRightForYouPage() {
             <div className={styles.narrowContainer}>
               <h2>What I actually do</h2>
               <p>
-                I practice psychodynamic therapy. In practical terms, that means:
+                I&apos;m a psychodynamic psychotherapist. In practical terms, that means:
               </p>
-              <ul className={styles.bulletList}>
-                <li>
-                  <strong>Weekly sessions</strong> — 50 minutes, same day and time each week.
-                  Consistency matters in this kind of work.
-                </li>
-                <li>
-                  <strong>Open-ended</strong> — we don&apos;t set a fixed number of sessions in
-                  advance. Some people stay for a few months, some for years. The work continues as
-                  long as it&apos;s useful.
-                </li>
-                <li>
-                  <strong>Understanding over managing</strong> — psychodynamic therapy isn&apos;t
-                  about giving you coping strategies or homework to manage symptoms. It&apos;s about
-                  understanding why patterns keep repeating in your life and what your feelings are
-                  actually trying to tell you.
-                </li>
-                <li>
-                  <strong>Your inner life matters</strong> — we&apos;ll talk about dreams, feelings,
-                  memories, relationships. The things that seem irrational or embarrassing often turn
-                  out to be the most important.
-                </li>
-                <li>
-                  <strong>I draw on other approaches when useful</strong> — mindfulness,
-                  CBT-informed tools, creative work with younger clients. But the foundation is
-                  psychodynamic.
-                </li>
-              </ul>
               <p>
-                This isn&apos;t the only way to do therapy, and it&apos;s not the best way for
-                everyone. But it&apos;s how I work, and being clear about that upfront means fewer
-                mismatches.
+                <strong>We meet weekly, in 50-minute sessions.</strong> Same day, same time,
+                ideally for as long as we&apos;re working together.
+              </p>
+              <p>
+                <strong>The work is open-ended.</strong> We don&apos;t start with a fixed number
+                of sessions or a predetermined structure. Some people work with me for a few months
+                around a specific life event. Others stay for a few years because the patterns
+                we&apos;re working with took a long time to form and take a while to loosen.
+                We review how things are going as we go.
+              </p>
+              <p>
+                <strong>The focus is on understanding, not techniques.</strong> Rather than giving
+                you tools to manage symptoms, we try to understand why certain patterns — overthinking,
+                anxiety, avoidance, self-criticism, whatever&apos;s brought you here — keep showing up
+                in your life. Where they came from, what they&apos;re protecting, and what it would
+                mean to work with them differently.
+              </p>
+              <p>
+                <strong>We take your inner life seriously.</strong> Dreams, feelings that don&apos;t
+                make sense, memories that come up unexpectedly, the things you haven&apos;t said out
+                loud to anyone — all of that is part of the material we work with.
+              </p>
+              <p>
+                <strong>I&apos;ll draw on other approaches when they help.</strong> Mindfulness, some
+                CBT-informed tools, creative work with younger clients, writing prompts between
+                sessions — but the foundation is always psychodynamic.
               </p>
             </div>
           </section>
@@ -210,7 +206,16 @@ export default function IsThisRightForYouPage() {
                   >
                     The Turner Centre
                   </a>{' '}
-                  (private, Colchester). {/* {{ CONFIRM URLS WITH ANDREEA }} */}
+                  or{' '}
+                  <a
+                    href="https://colchestercounselling.co.uk"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={styles.link}
+                  >
+                    Colchester Counselling &amp; Psychotherapy Practice
+                  </a>{' '}
+                  (both private, Colchester). {/* {{ CONFIRM URLS WITH ANDREEA }} */}
                 </li>
                 <li>
                   <strong>CBT (Cognitive Behavioural Therapy)</strong> — If you want to focus on
