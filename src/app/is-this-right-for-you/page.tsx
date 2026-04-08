@@ -247,20 +247,6 @@ export default function IsThisRightForYouPage() {
                   <strong>Active psychosis</strong> — If you&apos;re experiencing psychosis, you need
                   a specialist team, not weekly talking therapy.
                 </li>
-                <li>
-                  <strong>Clients over 40</strong> — My practice focuses on children, teenagers,
-                  young adults, and adults up to 40. If you&apos;re looking for therapy over 40,
-                  the{' '}
-                  <a
-                    href="https://www.bacp.co.uk/search/Therapists"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={styles.link}
-                  >
-                    BACP therapist directory
-                  </a>{' '}
-                  can help.
-                </li>
               </ul>
               <p>
                 I&apos;d rather point you toward the right help than have you book with me and realise
@@ -341,7 +327,6 @@ export default function IsThisRightForYouPage() {
                   You want advice, coaching, or someone to tell you what to do
                 </li>
                 <li>You&apos;re looking for couples therapy</li>
-                <li>You&apos;re over 40</li>
               </ul>
               <p>
                 None of these make you a bad fit for therapy — just for therapy with me. There are
