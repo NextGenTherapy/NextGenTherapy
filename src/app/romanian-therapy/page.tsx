@@ -292,6 +292,29 @@ export default function RomanianTherapyPage() {
             </div>
           </section>
 
+          {/* Section: Related Services */}
+          <section className={styles.relatedSection}>
+            <div className={styles.relatedContainer}>
+              <h2>Related services</h2>
+              <div className={styles.relatedLinks}>
+                <Link href="/therapy-for-women" className={styles.relatedLink}>
+                  <strong>Therapy for Women</strong>
+                  <span>
+                    Many Romanian-speaking women I work with are dealing with burnout, anxiety, and
+                    identity questions. This page goes deeper into that work.
+                  </span>
+                </Link>
+                <Link href="/online-therapy" className={styles.relatedLink}>
+                  <strong>Online Therapy</strong>
+                  <span>
+                    If you&apos;re not near Colchester, I offer online sessions in Romanian across
+                    the UK for clients aged 16 and over.
+                  </span>
+                </Link>
+              </div>
+            </div>
+          </section>
+
           {/* Section 6: Bilingual CTA */}
           <section className={styles.ctaSection}>
             <div className={styles.ctaContainer}>

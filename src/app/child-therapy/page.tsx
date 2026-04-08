@@ -293,6 +293,19 @@ export default function ChildTherapyPage() {
                 </p>
               </section>
 
+              {/* Section: Related Services */}
+              <section className={styles.relatedSection}>
+                <h2>For older children and teenagers</h2>
+                <p>
+                  If your child is 13 or older, they would move into{' '}
+                  <Link href="/teen-therapy" className={styles.relatedLink}>
+                    teen therapy
+                  </Link>
+                  , which is less play-based and more conversational. The approach adapts as young
+                  people develop.
+                </p>
+              </section>
+
               {/* Section 8: What I don't work with at this age */}
               <section className={styles.limitsSection}>
                 <h2>What I don&apos;t work with at this age</h2>

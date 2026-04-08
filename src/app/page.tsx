@@ -180,6 +180,23 @@ export default function Home() {
                 </p>
                 <span className={styles.serviceLink}>Learn more →</span>
               </Link>
+              <Link href="/child-therapy" className={styles.serviceCard}>
+                <h3>Therapy for Children</h3>
+                <p>
+                  Play-based psychodynamic therapy for children aged 4–12. In-person only at my
+                  Colchester practice. Sand tray, art, toys — because children show us what they
+                  can&apos;t say.
+                </p>
+                <span className={styles.serviceLink}>Learn more →</span>
+              </Link>
+              <Link href="/online-therapy" className={styles.serviceCard}>
+                <h3>Online Therapy</h3>
+                <p>
+                  Therapy from wherever you are in the UK. For clients aged 16 and over. Same
+                  approach, same weekly rhythm — just through a screen instead of across a room.
+                </p>
+                <span className={styles.serviceLink}>Learn more →</span>
+              </Link>
             </div>
           </section>
 

@@ -65,6 +65,23 @@
   }
 }
 
+/* Related Section */
+.relatedSection {
+  margin: var(--spacing-large) 0;
+}
+
+@media (min-width: 768px) {
+  .relatedSection {
+    margin: var(--spacing-xlarge) 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .relatedSection {
+    margin: var(--spacing-section) 0;
+  }
+}
+
 /* Crisis Section - Accent Light Background */
 .crisisSection {
   background: var(--color-accent-light);

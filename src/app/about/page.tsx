@@ -12,6 +12,17 @@ export const metadata: Metadata = {
   title: 'About Andreea Horhocea — BACP Psychotherapist in Colchester',
   description:
     'MSc Psychodynamic Psychotherapy (University of Essex, 2020). BACP registered. Working with women, neurodivergent adults, teenagers and children in Colchester and online. Sessions available in English and Romanian.',
+  keywords: [
+    'about Andreea Horhocea',
+    'BACP therapist Colchester',
+    'psychodynamic psychotherapist Essex',
+    'University of Essex therapist',
+    'female therapist Colchester',
+    'Romanian speaking therapist',
+    'Colchester psychotherapist',
+    'MBACP therapist Essex',
+    'qualified therapist Colchester',
+  ],
   authors: [{ name: 'Andreea Horhocea' }],
   alternates: {
     canonical: 'https://nextgentherapy.co.uk/about',

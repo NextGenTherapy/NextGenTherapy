@@ -19,6 +19,11 @@ export const metadata: Metadata = {
     'psychodynamic vs CBT',
     'Colchester therapist',
     'what to expect therapy',
+    'how to choose therapist',
+    'first therapy session',
+    'psychodynamic vs cognitive behavioural therapy',
+    'open-ended therapy',
+    'finding right therapist',
   ],
   authors: [{ name: 'Andreea Horhocea' }],
   alternates: {

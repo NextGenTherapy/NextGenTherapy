@@ -25,6 +25,7 @@ import CookieConsent from '../components/layout/CookieConsent';
 import ConditionalAnalytics from '../components/layout/ConditionalAnalytics';
 import ConditionalVercelAnalytics from '../components/layout/ConditionalVercelAnalytics';
 import WebVitalsReporter from '../components/layout/WebVitalsReporter';
+import WebsiteSchema from '../components/seo/WebsiteSchema';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://nextgentherapy.co.uk'),
@@ -289,6 +290,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
         />
       </head>
       <body>
+        <WebsiteSchema />
         <a href="#main-content" className="skip-link">
           Skip to content
         </a>

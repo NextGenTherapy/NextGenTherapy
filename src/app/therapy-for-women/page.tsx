@@ -315,6 +315,29 @@ export default function TherapyForWomenPage() {
             </div>
           </section>
 
+          {/* Section: Related Services */}
+          <section className={styles.relatedSection}>
+            <div className={styles.relatedContainer}>
+              <h2>You might also be interested in</h2>
+              <div className={styles.relatedLinks}>
+                <Link href="/neurodiversity" className={styles.relatedLink}>
+                  <strong>ADHD &amp; Autism in Adults</strong>
+                  <span>
+                    If you&apos;re a woman who&apos;s late-diagnosed or self-identified as
+                    neurodivergent, you might find this page more specific to your experience.
+                  </span>
+                </Link>
+                <Link href="/romanian-therapy" className={styles.relatedLink}>
+                  <strong>Therapy in Romanian</strong>
+                  <span>
+                    If you&apos;re a Romanian speaker navigating bicultural identity or immigrant
+                    experience, I offer sessions in Romanian as well as English.
+                  </span>
+                </Link>
+              </div>
+            </div>
+          </section>
+
           {/* Section 7: CTA */}
           <section className={styles.ctaSection}>
             <div className={styles.ctaContainer}>

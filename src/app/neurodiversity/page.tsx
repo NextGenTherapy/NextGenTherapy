@@ -280,6 +280,21 @@ export default function NeurodiversityTherapyPage() {
             </div>
           </section>
 
+          {/* Section: Related Services */}
+          <section className={styles.relatedSection}>
+            <div className={styles.narrowContainer}>
+              <h2>Related</h2>
+              <p>
+                Many of the neurodivergent clients I work with are women dealing with burnout,
+                masking, and identity questions. If that resonates, you might also find the{' '}
+                <Link href="/therapy-for-women" className={styles.link}>
+                  Therapy for Women
+                </Link>{' '}
+                page relevant.
+              </p>
+            </div>
+          </section>
+
           {/* Section 8: CTA */}
           <section className={styles.ctaSection}>
             <div className={styles.ctaContainer}>

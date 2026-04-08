@@ -367,6 +367,21 @@ export default function TeenTherapyPage() {
             </div>
           </section>
 
+          {/* Section: Related Services */}
+          <section className={styles.relatedSection}>
+            <div className={styles.narrowContainer}>
+              <h2>Looking for therapy for a younger child?</h2>
+              <p>
+                If your child is under 13, I also offer{' '}
+                <Link href="/child-therapy" className={styles.link}>
+                  play-based therapy for children aged 4–12
+                </Link>
+                . The approach is different — more play, less talking — but the underlying
+                psychodynamic framework is the same.
+              </p>
+            </div>
+          </section>
+
           {/* Section 9: Crisis signposting */}
           <section className={styles.crisisSection}>
             <div className={styles.sectionContainer}>
