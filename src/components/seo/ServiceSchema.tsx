@@ -91,7 +91,7 @@ export default function ServiceSchema({
     hoursAvailable: [
       {
         '@type': 'OpeningHoursSpecification',
-        dayOfWeek: ['Monday', 'Tuesday'],
+        dayOfWeek: ['Monday', 'Tuesday', 'Wednesday'],
         opens: '10:00',
         closes: '19:00',
       },
@@ -253,7 +253,7 @@ export const ChildTherapySchema = () => {
     hoursAvailable: [
       {
         '@type': 'OpeningHoursSpecification',
-        dayOfWeek: ['Monday', 'Tuesday'],
+        dayOfWeek: ['Monday', 'Tuesday', 'Wednesday'],
         opens: '10:00',
         closes: '19:00',
       },
@@ -379,7 +379,7 @@ export const TeenageTherapySchema = () => {
     hoursAvailable: [
       {
         '@type': 'OpeningHoursSpecification',
-        dayOfWeek: ['Monday', 'Tuesday'],
+        dayOfWeek: ['Monday', 'Tuesday', 'Wednesday'],
         opens: '10:00',
         closes: '19:00',
       },
@@ -514,7 +514,7 @@ export const YoungAdultTherapySchema = () => {
     hoursAvailable: [
       {
         '@type': 'OpeningHoursSpecification',
-        dayOfWeek: ['Monday', 'Tuesday'],
+        dayOfWeek: ['Monday', 'Tuesday', 'Wednesday'],
         opens: '10:00',
         closes: '19:00',
       },

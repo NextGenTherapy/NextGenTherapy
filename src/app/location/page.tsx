@@ -97,7 +97,7 @@ export default function LocationPage() {
             openingHoursSpecification: [
               {
                 '@type': 'OpeningHoursSpecification',
-                dayOfWeek: ['Monday', 'Tuesday'],
+                dayOfWeek: ['Monday', 'Tuesday', 'Wednesday'],
                 opens: '10:00',
                 closes: '19:00',
               },
@@ -159,19 +159,19 @@ export default function LocationPage() {
                 <h2>Opening Hours</h2>
                 <ul className={styles.hoursList}>
                   <li>
-                    <span>Monday:</span> 10:00 AM - 7:00 PM
+                    <span>Monday:</span> 10:00 AM - 7:00 PM (in-person or online)
                   </li>
                   <li>
-                    <span>Tuesday:</span> 10:00 AM - 7:00 PM
+                    <span>Tuesday:</span> 10:00 AM - 7:00 PM (in-person or online)
                   </li>
                   <li>
-                    <span>Wednesday:</span> Closed
+                    <span>Wednesday:</span> 10:00 AM - 7:00 PM (online only)
                   </li>
                   <li>
                     <span>Thursday:</span> Closed
                   </li>
                   <li>
-                    <span>Friday:</span> 9:00 AM - 2:00 PM
+                    <span>Friday:</span> 9:00 AM - 2:00 PM (in-person or online)
                   </li>
                   <li>
                     <span>Saturday:</span> Closed

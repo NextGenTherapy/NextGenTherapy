@@ -201,7 +201,7 @@ Before exploring the signs that therapy might be helpful, let's address some com
 - Aggressive or disruptive behaviour
 - Regression in developmental milestones
 
-### Adults (18-40)
+### Adults
 
 **Common reasons to seek therapy:**
 
@@ -235,7 +235,7 @@ Before exploring the signs that therapy might be helpful, let's address some com
 
 - Look for someone who specialises in your areas of concern
 - Consider whether you prefer a specific therapeutic approach
-- Think about practical factors (location, insurance, scheduling)
+- Think about practical factors (location, cost, scheduling)
 - Don't be afraid to meet with a few therapists to find the right fit
 
 ### Making the Appointment

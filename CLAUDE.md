@@ -144,7 +144,7 @@ Ground floor. Quiet. Plants. Green, calming. A couch plus two comfortable chairs
 ### Online sessions
 - **Age 16+ only.** Confidentiality reason: younger clients have had sessions in houses where parents are present, which undermines the work. This is a safeguarding and clinical-integrity decision and should be stated plainly on the site — parents respect this.
 - Platform: *{{ CONFIRM: Zoom or other }}*
-- Wednesdays are online-only capacity.
+- **Availability**: Monday, Tuesday, Wednesday, and Friday. Wednesday is online-only; other days offer both in-person and online.
 
 ### Clinical limits (will NOT work with)
 - Couples

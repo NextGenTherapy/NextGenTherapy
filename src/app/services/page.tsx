@@ -136,7 +136,7 @@ export default function ServicesPage() {
 
               <Link href="/online-therapy" className={styles.serviceCard}>
                 <h2>Online therapy (UK-wide)</h2>
-                <p>Wednesdays. Age 16 and over only. Zoom.</p>
+                <p>Mon, Tue, Wed, Fri. Age 16 and over only. Secure video.</p>
               </Link>
             </div>
           </section>

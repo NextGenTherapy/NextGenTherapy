@@ -243,18 +243,6 @@ const practicalFaqs = [
     plainAnswer: '£60 per 50-minute session.',
   },
   {
-    question: 'Do you take insurance?',
-    answer: (
-      <p>
-        I do not work directly with insurance companies, but I can provide receipts if you want to
-        claim back from a private health insurance policy. Check with your insurer whether they
-        cover psychotherapy and what documentation they need.
-      </p>
-    ),
-    plainAnswer:
-      'I do not work directly with insurance companies, but I can provide receipts if you want to claim back from a private health insurance policy. Check with your insurer whether they cover psychotherapy and what documentation they need.',
-  },
-  {
     question: 'Do you offer reduced fees?',
     answer: (
       <p>
@@ -300,12 +288,13 @@ const practicalFaqs = [
     question: 'What days and times do you work?',
     answer: (
       <p>
-        I see clients on Mondays and Tuesdays (10am–7pm) and Fridays (9am–2pm). Wednesdays are
-        reserved for online sessions only.
+        I see clients on Mondays and Tuesdays (10am–7pm), Wednesdays (10am–7pm, online only), and
+        Fridays (9am–2pm). Monday, Tuesday, and Friday sessions can be in-person at my Colchester
+        office or online — whichever works better for you.
       </p>
     ),
     plainAnswer:
-      'I see clients on Mondays and Tuesdays (10am–7pm) and Fridays (9am–2pm). Wednesdays are reserved for online sessions only.',
+      'I see clients on Mondays and Tuesdays (10am–7pm), Wednesdays (10am–7pm, online only), and Fridays (9am–2pm). Monday, Tuesday, and Friday sessions can be in-person at my Colchester office or online — whichever works better for you.',
   },
 ];
 
@@ -314,13 +303,14 @@ const onlineTherapyFaqs = [
     question: 'Do you offer online sessions?',
     answer: (
       <p>
-        Yes, for clients aged 16 and over. Online therapy is available UK-wide. I keep Wednesdays
-        for online sessions, but there is some flexibility on other days. See my{' '}
+        Yes, for clients aged 16 and over. Online therapy is available UK-wide. Wednesdays are
+        dedicated to online sessions only, but online sessions are also available on Mondays,
+        Tuesdays, and Fridays alongside in-person appointments. See my{' '}
         <Link href="/online-therapy">online therapy page</Link> for more details.
       </p>
     ),
     plainAnswer:
-      'Yes, for clients aged 16 and over. Online therapy is available UK-wide. I keep Wednesdays for online sessions, but there is some flexibility on other days.',
+      'Yes, for clients aged 16 and over. Online therapy is available UK-wide. Wednesdays are dedicated to online sessions only, but online sessions are also available on Mondays, Tuesdays, and Fridays alongside in-person appointments.',
   },
   {
     question: 'Why is there an age limit for online sessions?',

@@ -139,7 +139,6 @@ describe('Pricing Page', () => {
 
     it('lists what is not offered', () => {
       expect(screen.getByText(/sliding scale/i)).toBeInTheDocument();
-      expect(screen.getByText(/insurance billing/i)).toBeInTheDocument();
       expect(screen.getByText(/sessions shorter than 50 minutes/i)).toBeInTheDocument();
       expect(screen.getByText(/pay-as-you-go/i)).toBeInTheDocument();
     });

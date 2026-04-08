@@ -26,11 +26,11 @@
 
 | Day | Hours | Notes |
 |-----|-------|-------|
-| Monday | 10:00 – 19:00 | In-person |
-| Tuesday | 10:00 – 19:00 | In-person |
+| Monday | 10:00 – 19:00 | In-person or online |
+| Tuesday | 10:00 – 19:00 | In-person or online |
 | Wednesday | 10:00 – 19:00 | Online only |
 | Thursday | Closed | |
-| Friday | 09:00 – 14:00 | In-person |
+| Friday | 09:00 – 14:00 | In-person or online |
 | Saturday | Closed | |
 | Sunday | Closed | |
 
@@ -97,7 +97,7 @@ Add these services to GBP (11 total):
 | Adult Autism Therapy | Affirmative therapy for autistic adults in a sensory-aware environment. |
 | Teen Therapy | Psychodynamic therapy for teenagers 13-17 (in-person only). |
 | Child Therapy | Play-based psychodynamic work for children 4-12 with parent involvement (in-person only). |
-| Online Therapy | UK-wide video sessions for ages 16+ in English or Romanian. |
+| Online Therapy | UK-wide video sessions for ages 16+ (Mon, Tue, Wed, Fri) in English or Romanian. |
 | Romanian-Speaking Therapy | Therapy in Romanian for bicultural individuals and Romanian speakers in the UK. |
 | Parent Consultations | Supporting parents alongside child/teen therapy work. |
 | Neurodiversity Support | Affirmative approach for ADHD and autism — stimming welcomed, sensory-aware room. |

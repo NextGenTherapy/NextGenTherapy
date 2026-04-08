@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://nextgentherapy.co.uk'),
   title: 'Online Therapy UK | Video Sessions Age 16+',
   description:
-    'Online psychodynamic therapy UK-wide. Secure video sessions, age 16+. £60 per session. Wednesdays. BACP registered. English & Romanian.',
+    'Online psychodynamic therapy UK-wide. Secure video sessions, age 16+. £60 per session. Available Mon, Tue, Wed, Fri. BACP registered. English & Romanian.',
   keywords: [
     'online therapy uk',
     'online psychodynamic therapy',
@@ -83,7 +83,7 @@ export default function OnlineTherapyPage() {
     },
     availableLanguage: ['English', 'Romanian'],
     description:
-      'Online psychodynamic therapy for adults and teens aged 16+ across the UK. Weekly video sessions on Wednesdays.',
+      'Online psychodynamic therapy for adults and teens aged 16+ across the UK. Weekly video sessions available Monday, Tuesday, Wednesday, and Friday.',
   };
 
 
@@ -104,7 +104,7 @@ export default function OnlineTherapyPage() {
         name: 'When are online therapy sessions available?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'I dedicate Wednesdays entirely to online sessions. This allows me to offer consistent, focused attention to my online clients without the context-switching of moving between in-person and video appointments.',
+          text: 'Online sessions are available Monday, Tuesday, Wednesday, and Friday. Wednesdays are dedicated entirely to online sessions, while on Monday, Tuesday, and Friday I offer both in-person and online appointments.',
         },
       },
       {
@@ -132,7 +132,7 @@ export default function OnlineTherapyPage() {
       <PageHero
         eyebrow="Online Therapy — UK-wide"
         title="Therapy that comes to you"
-        lead="Psychodynamic therapy via secure video, wherever you are in the UK. For clients aged 16 and over. Wednesdays."
+        lead="Psychodynamic therapy via secure video, wherever you are in the UK. For clients aged 16 and over. Available Monday, Tuesday, Wednesday, and Friday."
       />
 
       <div className={styles.page}>
@@ -143,9 +143,9 @@ export default function OnlineTherapyPage() {
               <h2>How online therapy works</h2>
               <div className={styles.howContent}>
                 <p>
-                  I dedicate Wednesdays entirely to online sessions. This isn&apos;t an add-on to my
-                  in-person practice — it&apos;s a deliberate choice to give my online clients
-                  consistent, focused attention.
+                  Online sessions are available Monday, Tuesday, Wednesday, and Friday. Wednesdays
+                  are dedicated entirely to online sessions, while on other days I offer both
+                  in-person and online appointments — whichever works better for you.
                 </p>
                 <p>
                   We meet weekly, at the same time each week, for 50 minutes. Sessions happen via
@@ -301,8 +301,8 @@ export default function OnlineTherapyPage() {
               <h2>Practical details</h2>
               <dl className={styles.detailsList}>
                 <div className={styles.detailsItem}>
-                  <dt>Day</dt>
-                  <dd>Wednesdays (online-only day)</dd>
+                  <dt>Days</dt>
+                  <dd>Mon, Tue, Wed (online-only), Fri</dd>
                 </div>
                 <div className={styles.detailsItem}>
                   <dt>Age</dt>

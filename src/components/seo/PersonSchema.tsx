@@ -132,7 +132,7 @@ export default function PersonSchema({ className }: PersonSchemaProps) {
       hoursAvailable: [
         {
           '@type': 'OpeningHoursSpecification',
-          dayOfWeek: ['Monday', 'Tuesday'],
+          dayOfWeek: ['Monday', 'Tuesday', 'Wednesday'],
           opens: '10:00',
           closes: '19:00',
         },

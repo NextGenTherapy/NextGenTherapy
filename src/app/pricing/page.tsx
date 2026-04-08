@@ -246,13 +246,6 @@ export default function Pricing() {
                 </li>
                 <li>
                   <span>
-                    <strong>Insurance billing</strong> — I don&apos;t bill insurance companies
-                    directly, but I can provide receipts for you to submit if your insurer covers
-                    therapy.
-                  </span>
-                </li>
-                <li>
-                  <span>
                     <strong>Sessions shorter than 50 minutes</strong> — the session length is fixed.
                   </span>
                 </li>
