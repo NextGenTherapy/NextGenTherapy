@@ -352,7 +352,7 @@ const whoIWorkWithFaqs = [
     answer: (
       <>
         <p>
-          I work with children (4–12), teenagers (13–17), young adults (18–25), and adults (26–40).
+          I work with children, teenagers, young adults, and adults through their 30s.
         </p>
         <p>
           Children under 16 must attend in person. Online sessions are available from age 16
@@ -361,7 +361,7 @@ const whoIWorkWithFaqs = [
       </>
     ),
     plainAnswer:
-      'I work with children (4–12), teenagers (13–17), young adults (18–25), and adults (26–40). Children under 16 must attend in person. Online sessions are available from age 16 upwards.',
+      'I work with children, teenagers, young adults, and adults through their 30s. Children under 16 must attend in person. Online sessions are available from age 16 upwards.',
   },
   {
     question: 'Do you work with neurodivergent clients?',
@@ -470,7 +470,6 @@ const notRightFaqs = [
       <>
         <p>I do not work with:</p>
         <ul>
-          <li>Clients over 40</li>
           <li>Couples or families</li>
           <li>Anyone with an open court case</li>
           <li>Forensic or court-mandated work</li>
@@ -488,7 +487,7 @@ const notRightFaqs = [
       </>
     ),
     plainAnswer:
-      'I do not work with: clients over 40, couples or families, anyone with an open court case, forensic or court-mandated work, active addiction without wraparound support, or active psychosis. This is not a judgment — it is about making sure I can offer the right kind of help.',
+      'I do not work with: couples or families, anyone with an open court case, forensic or court-mandated work, active addiction without wraparound support, or active psychosis. This is not a judgment — it is about making sure I can offer the right kind of help.',
   },
   {
     question: 'What if I am in crisis right now?',
