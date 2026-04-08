@@ -7,9 +7,14 @@
   box-shadow: var(--box-shadow-reverse);
   z-index: 1000;
   padding: var(--spacing-medium) var(--container-padding-mobile);
+  transition: transform var(--transition-normal), opacity var(--transition-normal);
 
   @media (min-width: 768px) {
     padding: var(--spacing-medium) var(--container-padding-tablet);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    transition: none;
   }
 
   .content {

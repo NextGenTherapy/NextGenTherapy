@@ -50,7 +50,7 @@ export default function CookieConsent() {
       <div className={styles.content}>
         <p>
           We use cookies to improve your experience and analyse site usage.{' '}
-          <a href="/privacy-policy">Privacy policy</a>
+          <a href="/cookies">Learn more about cookies</a>
         </p>
         <div className={styles.buttons}>
           <button onClick={acceptCookies} className={styles.acceptBtn}>

@@ -6,8 +6,14 @@ import Button from '../ui/button';
 import styles from './legal-navigation.module.scss';
 
 interface LegalNavigationProps {
-  currentPage: 'privacy' | 'terms';
+  currentPage: 'privacy' | 'terms' | 'cookies';
 }
+
+const legalPages = {
+  privacy: { url: '/privacy-policy', title: 'Privacy Policy' },
+  terms: { url: '/terms', title: 'Terms of Service' },
+  cookies: { url: '/cookies', title: 'Cookie Policy' },
+};
 
 export default function LegalNavigation({ currentPage }: LegalNavigationProps) {
   const router = useRouter();
@@ -20,8 +26,10 @@ export default function LegalNavigation({ currentPage }: LegalNavigationProps) {
     }
   };
 
-  const otherPageUrl = currentPage === 'privacy' ? '/terms' : '/privacy-policy';
-  const otherPageTitle = currentPage === 'privacy' ? 'Terms of Service' : 'Privacy Policy';
+  // Get the other two pages (not the current one)
+  const otherPages = Object.entries(legalPages)
+    .filter(([key]) => key !== currentPage)
+    .map(([, page]) => page);
 
   return (
     <div className={styles.navigationContainer}>
@@ -30,11 +38,15 @@ export default function LegalNavigation({ currentPage }: LegalNavigationProps) {
           ← Back
         </Button>
 
-        <Button href={otherPageUrl}>View {otherPageTitle} →</Button>
+        {otherPages.map((page) => (
+          <Button key={page.url} href={page.url}>
+            {page.title}
+          </Button>
+        ))}
       </div>
 
       <div className={styles.homeLink}>
-        <Button href="/">🏠 Home</Button>
+        <Button href="/">Home</Button>
       </div>
     </div>
   );
