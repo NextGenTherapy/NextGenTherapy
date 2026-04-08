@@ -203,8 +203,8 @@ export default function BookNowPage() {
                 <h3>Online sessions</h3>
                 <p>Available UK-wide for clients aged 16 and over.</p>
                 <p>
-                  Online sessions happen on Wednesdays. We use a secure video platform — I&apos;ll
-                  send you the link before your session.
+                  Online sessions happen on Wednesdays via Google Meet — I&apos;ll send you the
+                  link before your session.
                 </p>
                 <p className={styles.locationNote}>
                   Not sure if online therapy is right for you? We can discuss this on the call.

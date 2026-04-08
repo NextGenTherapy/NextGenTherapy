@@ -322,8 +322,7 @@ export default function OnlineTherapyPage() {
                 </div>
                 <div className={styles.detailsItem}>
                   <dt>Platform</dt>
-                  {/* {{ CONFIRM WITH ANDREEA }} - which video platform? */}
-                  <dd>Secure video (link sent before each session)</dd>
+                  <dd>Google Meet (link sent before each session)</dd>
                 </div>
                 <div className={styles.detailsItem}>
                   <dt>Languages</dt>

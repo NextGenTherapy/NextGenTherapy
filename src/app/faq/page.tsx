@@ -246,31 +246,37 @@ const practicalFaqs = [
     question: 'Do you offer reduced fees?',
     answer: (
       <p>
-        {'{{ CONFIRM WITH ANDREEA: Do you offer sliding scale or reduced fee slots? If so, how many and for whom? }}'}
+        I don&apos;t offer a general sliding scale, but concessions may be available for students
+        and single parents booking therapy for their child. Get in touch to discuss your
+        circumstances.
       </p>
     ),
     plainAnswer:
-      '{{ CONFIRM WITH ANDREEA: Do you offer sliding scale or reduced fee slots? If so, how many and for whom? }}',
+      "I don't offer a general sliding scale, but concessions may be available for students and single parents booking therapy for their child. Get in touch to discuss your circumstances.",
   },
   {
     question: 'How do I pay?',
     answer: (
       <p>
-        {'{{ CONFIRM WITH ANDREEA: Bank transfer / card? Do clients pay weekly, monthly, or per session? }}'}
+        Bank transfer, 48 hours before your session. I&apos;ll send you an invoice each week. I
+        don&apos;t accept cash.
       </p>
     ),
     plainAnswer:
-      '{{ CONFIRM WITH ANDREEA: Bank transfer / card? Do clients pay weekly, monthly, or per session? }}',
+      "Bank transfer, 48 hours before your session. I'll send you an invoice each week. I don't accept cash.",
   },
   {
     question: 'What is your cancellation policy?',
     answer: (
       <p>
-        {'{{ CONFIRM WITH ANDREEA: What is the notice period for cancellations? What happens with late cancellations? }}'}
+        Your weekly slot is reserved for you, so cancelled or missed sessions are still charged.
+        If you&apos;re unwell or can&apos;t attend in person at short notice, I can offer a remote
+        session via Google Meet instead. This keeps continuity and means you don&apos;t lose the
+        session.
       </p>
     ),
     plainAnswer:
-      '{{ CONFIRM WITH ANDREEA: What is the notice period for cancellations? What happens with late cancellations? }}',
+      "Your weekly slot is reserved for you, so cancelled or missed sessions are still charged. If you're unwell or can't attend in person at short notice, I can offer a remote session via Google Meet instead. This keeps continuity and means you don't lose the session.",
   },
   {
     question: 'Where are you based?',
@@ -328,11 +334,12 @@ const onlineTherapyFaqs = [
     question: 'What platform do you use for online sessions?',
     answer: (
       <p>
-        {'{{ CONFIRM WITH ANDREEA: Zoom, Google Meet, or other platform? Is it encrypted/secure? }}'}
+        Google Meet. I&apos;ll send you a link before each session. All you need is a private
+        space and a reliable internet connection.
       </p>
     ),
     plainAnswer:
-      '{{ CONFIRM WITH ANDREEA: Zoom, Google Meet, or other platform? Is it encrypted/secure? }}',
+      "Google Meet. I'll send you a link before each session. All you need is a private space and a reliable internet connection.",
   },
 ];
 

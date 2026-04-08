@@ -209,12 +209,12 @@ export default function Pricing() {
             <div className={styles.narrowContainer}>
               <h2>Cancellation and missed sessions</h2>
               <p>
-                Once a session is booked, the fee is non-refundable. If you cancel or miss a
-                session, the full £60 is still charged.
+                Your weekly slot is reserved for you, so cancelled or missed sessions are still
+                charged. That time can&apos;t be offered to someone else at short notice.
               </p>
               <p>
-                This isn&apos;t about being inflexible — it&apos;s because your weekly slot is held
-                for you. That time can&apos;t be offered to someone else at short notice.
+                If you&apos;re unwell or can&apos;t attend in person, I can offer a remote session
+                via Google Meet instead — so you don&apos;t lose the session.
               </p>
             </div>
           </section>
@@ -240,8 +240,9 @@ export default function Pricing() {
               <ul className={styles.notIncludedList}>
                 <li>
                   <span>
-                    <strong>Sliding scale or reduced-fee sessions</strong> — I don&apos;t offer
-                    concessions. The fee is £60 for everyone.
+                    <strong>General sliding scale</strong> — I don&apos;t offer a broad sliding
+                    scale, but concessions may be available for students and single parents booking
+                    therapy for their child. Get in touch to discuss.
                   </span>
                 </li>
                 <li>
@@ -252,7 +253,8 @@ export default function Pricing() {
                 <li>
                   <span>
                     <strong>Pay-as-you-go or irregular bookings</strong> — therapy works best with a
-                    consistent weekly slot. I don&apos;t offer ad-hoc sessions.
+                    consistent weekly slot. The exception is ad-hoc sessions for previous clients
+                    who want to discuss a new specific issue or life event.
                   </span>
                 </li>
               </ul>
