@@ -38,6 +38,10 @@ jest.mock('next/link', () => {
   };
 });
 
+jest.mock('next/navigation', () => ({
+  usePathname: () => '/about',
+}));
+
 jest.mock('../../src/components/ui/button', () => {
   return function MockButton({
     children,

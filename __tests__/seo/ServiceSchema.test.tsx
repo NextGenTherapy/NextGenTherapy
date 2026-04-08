@@ -108,7 +108,7 @@ describe('ServiceSchema Component', () => {
     const jsonData = JSON.parse(scriptTag?.textContent || '{}');
 
     expect(jsonData.hoursAvailable).toHaveLength(2);
-    expect(jsonData.hoursAvailable[0].dayOfWeek).toEqual(['Monday', 'Tuesday']);
+    expect(jsonData.hoursAvailable[0].dayOfWeek).toEqual(['Monday', 'Tuesday', 'Wednesday']);
     expect(jsonData.hoursAvailable[1].dayOfWeek).toBe('Friday');
   });
 

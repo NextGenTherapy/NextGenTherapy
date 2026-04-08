@@ -120,7 +120,7 @@ export default function LocalBusinessSchema() {
         },
       ],
     },
-    paymentAccepted: ['Cash', 'Bank Transfer', 'Card'],
+    paymentAccepted: ['Bank Transfer'],
     currenciesAccepted: 'GBP',
     priceRange: '£60',
   };

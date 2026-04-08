@@ -72,11 +72,11 @@ describe('LocalBusinessSchema Component', () => {
 
     expect(jsonData.openingHoursSpecification).toHaveLength(2);
 
-    // Check Monday/Tuesday hours
-    const mondayTuesday = jsonData.openingHoursSpecification[0];
-    expect(mondayTuesday.dayOfWeek).toEqual(['Monday', 'Tuesday']);
-    expect(mondayTuesday.opens).toBe('10:00');
-    expect(mondayTuesday.closes).toBe('19:00');
+    // Check Monday/Tuesday/Wednesday hours
+    const mondayTuesdayWednesday = jsonData.openingHoursSpecification[0];
+    expect(mondayTuesdayWednesday.dayOfWeek).toEqual(['Monday', 'Tuesday', 'Wednesday']);
+    expect(mondayTuesdayWednesday.opens).toBe('10:00');
+    expect(mondayTuesdayWednesday.closes).toBe('19:00');
 
     // Check Friday hours
     const friday = jsonData.openingHoursSpecification[1];
@@ -122,9 +122,9 @@ describe('LocalBusinessSchema Component', () => {
     const scriptTag = container.querySelector('script[type="application/ld+json"]');
     const jsonData = JSON.parse(scriptTag?.textContent || '{}');
 
-    expect(jsonData.paymentAccepted).toEqual(['Cash', 'Bank Transfer', 'Card']);
+    expect(jsonData.paymentAccepted).toEqual(['Bank Transfer']);
     expect(jsonData.currenciesAccepted).toBe('GBP');
-    expect(jsonData.priceRange).toBe('££');
+    expect(jsonData.priceRange).toBe('£60');
   });
 
   it('includes proper therapy-focused description', () => {

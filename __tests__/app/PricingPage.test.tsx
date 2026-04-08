@@ -117,8 +117,8 @@ describe('Pricing Page', () => {
     });
 
     it('explains cancellation policy', () => {
-      expect(screen.getByText(/non-refundable/i)).toBeInTheDocument();
-      expect(screen.getByText(/full £60 is still charged/i)).toBeInTheDocument();
+      expect(screen.getByText(/reserved for you/i)).toBeInTheDocument();
+      expect(screen.getByText(/still charged/i)).toBeInTheDocument();
     });
   });
 
@@ -138,7 +138,7 @@ describe('Pricing Page', () => {
     });
 
     it('lists what is not offered', () => {
-      expect(screen.getByText(/sliding scale/i)).toBeInTheDocument();
+      expect(screen.getByText(/general sliding scale/i)).toBeInTheDocument();
       expect(screen.getByText(/sessions shorter than 50 minutes/i)).toBeInTheDocument();
       expect(screen.getByText(/pay-as-you-go/i)).toBeInTheDocument();
     });

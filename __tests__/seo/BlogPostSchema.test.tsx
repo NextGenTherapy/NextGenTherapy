@@ -31,7 +31,7 @@ describe('BlogPostSchema Component', () => {
     const jsonData = JSON.parse(scriptTag?.textContent || '{}');
 
     expect(jsonData['@context']).toBe('https://schema.org');
-    expect(jsonData['@type']).toBe('Article');
+    expect(jsonData['@type']).toBe('BlogPosting');
   });
 
   it('includes basic blog post information', () => {
@@ -41,7 +41,9 @@ describe('BlogPostSchema Component', () => {
 
     expect(jsonData.headline).toBe('Understanding Anxiety Therapy');
     expect(jsonData.description).toBe('A comprehensive guide to anxiety therapy approaches');
-    expect(jsonData.url).toBe('https://nextgentherapy.co.uk/blog/understanding-anxiety-therapy');
+    expect(jsonData.mainEntityOfPage['@id']).toBe(
+      'https://nextgentherapy.co.uk/blog/understanding-anxiety-therapy'
+    );
   });
 
   it('includes publication dates', () => {
@@ -72,8 +74,13 @@ describe('BlogPostSchema Component', () => {
     expect(jsonData.author).toEqual({
       '@type': 'Person',
       name: 'Andreea Horhocea',
-      jobTitle: 'BACP Registered Psychodynamic Psychotherapist',
+      jobTitle: 'Psychodynamic Psychotherapist',
       url: 'https://nextgentherapy.co.uk/about',
+      worksFor: {
+        '@type': 'Organization',
+        name: 'Next Generation Therapy',
+        url: 'https://nextgentherapy.co.uk',
+      },
     });
   });
 
@@ -88,9 +95,9 @@ describe('BlogPostSchema Component', () => {
       url: 'https://nextgentherapy.co.uk',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://nextgentherapy.co.uk/images/logo.jpg',
-        width: 400,
-        height: 400,
+        url: 'https://nextgentherapy.co.uk/images/default-social-share.jpg',
+        width: 1200,
+        height: 630,
       },
     });
   });
@@ -100,7 +107,7 @@ describe('BlogPostSchema Component', () => {
     const scriptTag = container.querySelector('script[type="application/ld+json"]');
     const jsonData = JSON.parse(scriptTag?.textContent || '{}');
 
-    expect(jsonData.image).toBe('https://nextgentherapy.co.uk/images/default-social-share.jpg');
+    expect(jsonData.image.url).toBe('https://nextgentherapy.co.uk/images/default-social-share.jpg');
   });
 
   it('includes main entity information', () => {
@@ -144,7 +151,9 @@ describe('BlogPostSchema Component', () => {
     const scriptTag = container.querySelector('script[type="application/ld+json"]');
     const jsonData = JSON.parse(scriptTag?.textContent || '{}');
 
-    expect(jsonData.url).toBe('https://nextgentherapy.co.uk/blog/depression-therapy-techniques');
+    expect(jsonData.mainEntityOfPage['@id']).toBe(
+      'https://nextgentherapy.co.uk/blog/depression-therapy-techniques'
+    );
     expect(jsonData.headline).toBe('Depression Therapy Techniques');
   });
 
@@ -201,8 +210,7 @@ describe('BlogPostSchema Component', () => {
     const scriptTag = container.querySelector('script[type="application/ld+json"]');
     const jsonData = JSON.parse(scriptTag?.textContent || '{}');
 
-    expect(jsonData.url).toMatch(/^https:\/\/nextgentherapy\.co\.uk\/blog\//);
-    expect(jsonData.mainEntityOfPage['@id']).toBe(jsonData.url);
+    expect(jsonData.mainEntityOfPage['@id']).toMatch(/^https:\/\/nextgentherapy\.co\.uk\/blog\//);
   });
 
   it('handles special characters in slug', () => {
@@ -216,7 +224,9 @@ describe('BlogPostSchema Component', () => {
     const scriptTag = container.querySelector('script[type="application/ld+json"]');
     const jsonData = JSON.parse(scriptTag?.textContent || '{}');
 
-    expect(jsonData.url).toBe('https://nextgentherapy.co.uk/blog/self-esteem-therapy-tips');
+    expect(jsonData.mainEntityOfPage['@id']).toBe(
+      'https://nextgentherapy.co.uk/blog/self-esteem-therapy-tips'
+    );
     expect(jsonData.headline).toBe('Self-Esteem & Therapy Tips');
   });
 });

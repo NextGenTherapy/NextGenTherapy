@@ -34,6 +34,10 @@ jest.mock('next/image', () => {
   };
 });
 
+jest.mock('next/navigation', () => ({
+  usePathname: () => '/child-therapy',
+}));
+
 // Mock SEO schema components
 jest.mock('@/components/seo/ServiceSchema', () => ({
   ChildTherapySchema: function MockChildTherapySchema() {

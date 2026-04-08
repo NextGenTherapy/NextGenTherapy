@@ -35,6 +35,10 @@ jest.mock('next/link', () => {
   };
 });
 
+jest.mock('next/navigation', () => ({
+  usePathname: () => '/services',
+}));
+
 jest.mock('../../src/components/ui/button', () => {
   return function MockButton({
     children,
@@ -109,7 +113,7 @@ describe('Services Page', () => {
     it('renders online therapy card with correct link', () => {
       const link = screen.getByRole('link', { name: /Online therapy/i });
       expect(link).toHaveAttribute('href', '/online-therapy');
-      expect(screen.getByText(/Wednesdays/i)).toBeInTheDocument();
+      expect(screen.getByText(/Mon, Tue, Wed, Fri/i)).toBeInTheDocument();
     });
   });
 

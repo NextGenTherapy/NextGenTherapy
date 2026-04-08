@@ -30,6 +30,10 @@ jest.mock('next/link', () => {
   };
 });
 
+jest.mock('next/navigation', () => ({
+  usePathname: () => '/book-now',
+}));
+
 jest.mock('next/dynamic', () => {
   return function mockDynamic(
     importFn: () => Promise<{ default: React.ComponentType }>,
