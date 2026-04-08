@@ -72,7 +72,7 @@ In therapy, we get curious about that feeling. Where does it come from? Who are 
 
 ## The connection to burnout
 
-High-functioning anxiety doesn't stay contained forever. If you spend years running on adrenaline, constantly vigilant, never quite letting yourself rest, eventually something gives.
+High-functioning anxiety doesn't stay contained forever. If you spend years running on adrenaline, constantly vigilant, never quite letting yourself rest, eventually something gives. [Understanding the difference between burnout and depression](/blog/burnout-vs-depression) can help you recognise what you're experiencing.
 
 Burnout is what happens when the coping strategies stop working. When the engine that's been running too hot for too long finally overheats. When you wake up one morning and realise you can't do it anymore — not because you don't want to, but because you literally cannot.
 
@@ -96,10 +96,10 @@ None of this happens quickly. But it happens.
 
 ## If this sounds familiar
 
-I work with women up to age 40 who are experiencing exactly what I've described — the exhaustion of appearing fine when you're not, the relentless inner pressure, the sense that something needs to change but you don't know what.
+I [work with women](/therapy-for-women) up to age 40 who are experiencing exactly what I've described — the exhaustion of appearing fine when you're not, the relentless inner pressure, the sense that something needs to change but you don't know what.
 
-I offer therapy in person at my practice in Colchester and online across the UK for those aged 16 and over.
+I offer therapy [in person at my practice in Colchester](/therapy-in-colchester) and online across the UK for those aged 16 and over.
 
-The first step is a free 15-minute call. It's not therapy — it's a chance to ask questions, get a sense of whether we might be a good fit, and decide if you want to book a first session. There's no pressure. If I'm not the right therapist for you, I'll tell you.
+The first step is a free 15-minute call. It's not therapy — it's a chance to ask questions, get a sense of whether we might be a good fit, and decide if you want to book a first session. There's no pressure. If you're [unsure whether this approach is right for you](/is-this-right-for-you), that's something we can explore together. If I'm not the right therapist for you, I'll tell you.
 
 If you've been holding it together for years and you're tired of just coping, I'd be glad to hear from you.

@@ -52,7 +52,7 @@ These are the questions that lead somewhere.
 
 Eating and body image struggles rarely exist in isolation. They're usually tangled up with other things.
 
-**Anxiety and perfectionism.** The same tendencies that make you over-prepare for meetings can show up in rigid food rules. The same fear of failure that drives your work can drive your body control.
+**[Anxiety and perfectionism](/blog/high-functioning-anxiety-women).** The same tendencies that make you over-prepare for meetings can show up in rigid food rules. The same fear of failure that drives your work can drive your body control.
 
 **Relationship difficulties.** How you relate to your body often mirrors how you relate to yourself. Self-criticism, impossibly high standards, the sense that you're never good enough — these patterns appear everywhere.
 
@@ -104,10 +104,10 @@ The body image piece is often slower. We live in a culture that profits from wom
 
 ## If this sounds like you
 
-I work with women up to age 40 who are struggling with eating, body image, or both. I offer therapy in person in Colchester and online across the UK for those aged 16 and over.
+I [work with women](/therapy-for-women) up to age 40 who are struggling with eating, body image, or both. I offer therapy [in person in Colchester](/therapy-in-colchester) and online across the UK for those aged 16 and over.
 
 If you've been quietly struggling with this for years — if it doesn't fit a diagnosis but it takes up too much space in your head — I'd be glad to hear from you.
 
-The first step is a free 15-minute call. It's not therapy; it's a chance to talk briefly about what's going on and whether working together might help. No pressure, no judgement.
+The first step is a free 15-minute call. It's not therapy; it's a chance to talk briefly about what's going on and whether working together might help. If you're [wondering whether this approach is right for you](/is-this-right-for-you), that's something we can explore. No pressure, no judgement.
 
 You don't have to keep fighting your body in silence.

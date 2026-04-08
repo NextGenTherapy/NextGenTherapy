@@ -162,4 +162,6 @@ The "best" therapy approach is the one that:
 
 Therapy is a collaborative process, and finding the right fit sometimes takes time. Don't hesitate to discuss with me how our work together is feeling and whether any adjustments might be helpful.
 
-Every person is unique, and your therapy should be tailored to your individual needs, goals, and circumstances. The most important thing is that you feel supported, understood, and empowered in your therapeutic journey.
+Every person is unique, and your therapy should be tailored to your individual needs, goals, and circumstances. The most important thing is that you feel supported and understood — and that the work actually helps.
+
+If you want to understand more about [how I work specifically](/blog/what-is-psychodynamic-therapy), or whether [this approach might suit you](/is-this-right-for-you), those pages go into more detail.

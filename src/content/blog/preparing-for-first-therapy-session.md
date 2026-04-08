@@ -6,7 +6,9 @@ category: 'professional'
 keywords: 'first therapy session, therapy preparation, what to expect therapy, therapy tips, Colchester therapist advice, psychotherapy guide'
 ---
 
-Starting therapy can feel both exciting and nerve-wracking. It's completely normal to feel a mix of emotions as you approach your first session. Here's a practical guide to help you prepare and make the most of this important step in your mental health journey.
+Starting therapy can feel both exciting and nerve-wracking. It's completely normal to feel a mix of emotions as you approach your first session. Here's a practical guide to help you prepare and make the most of this important step.
+
+I've written a more detailed piece about [what actually happens in a first session](/blog/first-session-what-to-expect) if you want the full picture. This post focuses on the practical preparations.
 
 ## What to Expect in Your First Session
 
@@ -94,7 +96,7 @@ It's normal to feel various emotions after your first session:
 - **Hope**: You've started a process that can lead to positive change
 - **Uncertainty**: You might wonder if therapy is right for you
 
-Give yourself time to process these feelings. Remember, therapy is a journey, and the first session is just the beginning.
+Give yourself time to process these feelings. The first session is just the beginning — the work unfolds from here.
 
 ## Moving Forward
 
@@ -108,4 +110,6 @@ If you decide to continue therapy, we'll work together to:
 
 Remember, seeking therapy is a sign of strength and self-awareness. You're taking an important step toward understanding yourself better and creating positive change in your life.
 
-If you have any questions before your first session, please don't hesitate to reach out. I'm here to support you every step of the way.
+If you have questions before your first session, you can [book a free 15-minute call](/book-now) to ask them. It's a chance to get a sense of me before committing to anything.
+
+If you're still wondering whether [psychodynamic therapy is right for you](/is-this-right-for-you), that's worth exploring before you book.

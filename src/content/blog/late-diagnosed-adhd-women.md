@@ -84,9 +84,9 @@ These aren't accommodations I offer reluctantly. They're built into how I work. 
 
 ## What therapy looks like
 
-When a woman comes to me after an ADHD diagnosis, we often start with her history. Not just the factual history — what happened, when — but the emotional history. What did it feel like to grow up with an undiagnosed brain? What strategies did you develop? What did you believe about yourself?
+When a [woman comes to me](/therapy-for-women) after an ADHD diagnosis, we often start with her history. Not just the factual history — what happened, when — but the emotional history. What did it feel like to grow up with an undiagnosed brain? What strategies did you develop? What did you believe about yourself?
 
-We explore the masking. Masking isn't just a behaviour — it's a survival strategy that develops in response to not being understood. Understanding why you mask, what you're protecting yourself from, what it costs you: this is part of the work.
+We explore the masking. [Masking isn't just a behaviour](/blog/neurodivergent-burnout-masking) — it's a survival strategy that develops in response to not being understood. Understanding why you mask, what you're protecting yourself from, what it costs you: this is part of the work.
 
 We make space for the grief. Sometimes this means anger — at parents who didn't notice, at a system that failed you, at yourself for not knowing sooner. The anger is often covering something softer: sadness, loss, loneliness.
 
@@ -104,7 +104,7 @@ If you're unsure whether you might be ADHD and want to explore that, we can cert
 
 ## If this resonates
 
-I work with neurodivergent adults up to age 40, offering therapy in person in Colchester and online across the UK for those aged 16 and over.
+I [work with neurodivergent adults](/neurodiversity) up to age 40, offering therapy in person in Colchester and [online across the UK](/online-therapy) for those aged 16 and over.
 
 If you've recently been diagnosed with ADHD and you're navigating the emotional aftermath — or if you've known for years but never had space to process it — I'd be glad to hear from you.
 

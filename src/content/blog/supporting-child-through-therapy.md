@@ -6,7 +6,7 @@ category: 'professional'
 keywords: 'child therapy support Colchester, parenting during therapy, supporting child therapy Essex, child counselling guide, parent therapy advice Colchester, family therapy support, child mental health Colchester, child therapist guide, therapy for children Essex'
 ---
 
-When a child begins therapy, parents and caregivers play a crucial role in their healing journey. Your support, understanding, and involvement can significantly impact the effectiveness of your child's therapeutic experience. Here's how you can best support your child through this important process.
+When a child begins therapy, parents and caregivers play a crucial role in their progress. Your support, understanding, and involvement can significantly impact the effectiveness of your child's therapeutic experience. Here's how you can best support your child through this important process.
 
 ## Understanding Your Role
 
@@ -221,8 +221,8 @@ Supporting a child through therapy can be emotionally demanding:
 
 ## Remember
 
-Your child's therapeutic journey is ultimately theirs, but your love, patience, and support provide the foundation that makes healing possible. Trust the process, trust your child, and trust yourself as their primary source of love and security.
+Your child's therapy is ultimately theirs, but your love, patience, and support provide the foundation that makes healing possible. Trust the process, trust your child, and trust yourself as their primary source of love and security.
 
 Therapy is not just about addressing problems—it's about building resilience, emotional intelligence, and healthy coping skills that will serve your child throughout their life. Your support during this process is one of the greatest gifts you can give them.
 
-Every child's therapy journey is unique. Stay flexible, patient, and hopeful. With your support and professional guidance, your child can develop the tools they need for emotional wellbeing and healthy relationships throughout their life. If you're considering therapy for your child, learn more about [child therapy](/child-therapy) services, or explore specialized support for [teen therapy](/teen-therapy) if your child is an adolescent. For additional insights, you might find our guide on [understanding anxiety in young people](/blog/understanding-anxiety-young-people) helpful.
+Every child's therapy experience is unique. Stay flexible, patient, and hopeful. With your support and professional guidance, your child can develop the tools they need for emotional wellbeing and healthy relationships throughout their life. If you're considering therapy for your child, learn more about [child therapy](/child-therapy) services, or explore specialised support for [teen therapy](/teen-therapy) if your child is an adolescent. For additional insights, you might find the guide on [understanding anxiety in young people](/blog/understanding-anxiety-young-people) helpful.

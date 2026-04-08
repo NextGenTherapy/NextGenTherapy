@@ -10,7 +10,7 @@ It's 2am and you're awake, thinking about your teenager.
 
 Something has changed. Maybe it's been gradual — a slow withdrawal, less conversation, more time behind a closed bedroom door. Maybe it's been sudden — an outburst, a discovery, a phone call from school that left you shaken. Either way, you're worried. And you're wondering: should they see a therapist?
 
-I work with teenagers and their parents in Colchester and Ipswich. This question — the one you're asking at 2am — is one I hear constantly. And the honest answer is: sometimes yes, sometimes not yet, and often it's complicated. Here's what I've learned.
+I [work with teenagers](/teen-therapy) and their parents in Colchester and [Ipswich](/therapy-in-ipswich). This question — the one you're asking at 2am — is one I hear constantly. And the honest answer is: sometimes yes, sometimes not yet, and often it's complicated. Here's what I've learned.
 
 ## Signs that therapy might help
 
@@ -62,9 +62,9 @@ Many parents imagine therapy as a teenager lying on a couch, talking about their
 
 With teenagers, I meet them where they are. Sometimes that means talking directly about what's bothering them. Often it means going slower — building trust, finding out what they're interested in, letting the therapeutic relationship develop naturally.
 
-We might talk. We might draw, write, use creative exercises. With younger teenagers especially, I use a range of approaches to help them express things they might not have words for yet. There's no pressure to perform or to have immediate insights.
+We might talk. We might draw, write, use creative exercises. With younger teenagers especially, I use a range of approaches to help them express things they might not have words for yet. For [younger children](/child-therapy), my approach involves even more play-based work. There's no pressure to perform or to have immediate insights.
 
-The first session is really a vibe check. Before anything else, your teenager needs to feel comfortable enough with me to want to come back. That matters more than any technique. If the fit isn't right, therapy won't work — and that's okay. Not every therapist is right for every teenager.
+The first session is really a vibe check. Before anything else, your teenager needs to feel comfortable enough with me to want to come back. You can read more about [what happens in a first session](/blog/first-session-what-to-expect). That matters more than any technique. If the fit isn't right, therapy won't work — and that's okay. Not every therapist is right for every teenager.
 
 ## Confidentiality: what parents need to know
 

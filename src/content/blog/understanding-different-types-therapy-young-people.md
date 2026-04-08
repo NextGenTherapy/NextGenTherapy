@@ -409,4 +409,4 @@ Remember that therapy is not a sign of failure or weakness—it&apos;s an invest
 
 Every young person deserves to feel understood, supported, and hopeful about their future. With the right therapeutic approach and a strong therapeutic relationship, positive change is not just possible—it&apos;s expected.
 
-If you&apos;re considering therapy for a young person in your life, explore our specialized services for [child therapy](/child-therapy) and [teen therapy](/teen-therapy). For additional support navigating this process, our [parent support section](/child-therapy#for-parents) provides guidance for families throughout the therapeutic journey.
+If you're considering therapy for a young person in your life, explore [child therapy](/child-therapy) and [teen therapy](/teen-therapy). For additional support navigating this process, the [parent support section](/child-therapy#for-parents) provides guidance for families throughout the therapeutic process.

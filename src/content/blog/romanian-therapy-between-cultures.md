@@ -82,7 +82,7 @@ I'm a Romanian-born therapist practicing in Colchester. I speak Romanian fluentl
 
 I understand the immigrant experience because I've lived it. I understand the pull between cultures, the family dynamics, the particular loneliness of being between two worlds.
 
-I work with Romanian-speaking adults and young adults — both first-generation immigrants and those who grew up here with Romanian families. I offer in-person sessions in Colchester and online sessions across the UK (for those aged 16 and over).
+I work with Romanian-speaking adults and young adults — both first-generation immigrants and those who grew up here with Romanian families. Many of my [women clients](/therapy-for-women) navigate these cultural complexities alongside other challenges. I offer in-person sessions in Colchester and online sessions across the UK (for those aged 16 and over).
 
 This isn't about providing therapy "for Romanians" as if we're all the same. It's about offering something that's often hard to find: a therapist who speaks your language, in both senses.
 
@@ -94,7 +94,7 @@ Nu trebuie să-ți alegi o limbă. Putem vorbi în română, în engleză, sau a
 
 ## If this resonates
 
-I work with Romanian-speaking clients up to age 40, offering therapy in person in Colchester and online across the UK for those aged 16 and over.
+I [work with Romanian-speaking clients](/romanian-therapy) up to age 40, offering therapy in person in Colchester and [online across the UK](/online-therapy) for those aged 16 and over.
 
 If you've been looking for a therapist who speaks Romanian — or who understands what it means to exist between two cultures — I'd be glad to hear from you.
 

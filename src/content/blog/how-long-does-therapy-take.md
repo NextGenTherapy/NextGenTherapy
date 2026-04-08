@@ -88,7 +88,7 @@ When we're approaching the end, we'll talk about it. We'll set an ending date an
 
 ## Who open-ended therapy isn't for
 
-I believe in being honest about fit. Open-ended, psychodynamic therapy isn't for everyone.
+I believe in being honest about fit. Open-ended, psychodynamic therapy isn't for everyone. I've written more about [whether this approach might suit you](/is-this-right-for-you).
 
 **If you want a specific skill.** If you need to learn assertiveness techniques, or want a structured program for social anxiety, a short-term, skills-focused approach might serve you better.
 
@@ -100,7 +100,7 @@ I believe in being honest about fit. Open-ended, psychodynamic therapy isn't for
 
 ## The practical side: cost and commitment
 
-I charge £60 per session. Sessions are typically weekly, lasting 50 minutes.
+I [charge £60 per session](/pricing). Sessions are typically weekly, lasting 50 minutes.
 
 If you're in therapy for six months, that's roughly £1,300. For a year, roughly £2,600. For two years, roughly £5,200.
 
@@ -114,7 +114,7 @@ But I also want you to go in with eyes open. If weekly therapy isn't financially
 
 I work with adults and young people up to age 40, offering therapy in person in Colchester and online across the UK for those aged 16 and over.
 
-If you're curious about psychodynamic therapy — even if you're uncertain about the commitment — the first step is a free 15-minute call. We can talk about what you're looking for, I can give you a sense of how I work, and you can decide if it feels worth exploring further.
+If you're curious about [psychodynamic therapy](/blog/what-is-psychodynamic-therapy) — even if you're uncertain about the commitment — the first step is a [free 15-minute call](/book-now). We can talk about what you're looking for, I can give you a sense of how I work, and you can decide if it feels worth exploring further.
 
 There's no pressure on that call. You're not committing to anything. You're just gathering information.
 

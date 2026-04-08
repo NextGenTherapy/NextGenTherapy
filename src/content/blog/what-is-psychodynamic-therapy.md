@@ -54,7 +54,7 @@ I don't offer CBT-style work. I don't have worksheets or structured protocols. I
 
 ## The question of time
 
-Psychodynamic therapy is typically open-ended. This means we don't set a fixed number of sessions at the start. We work together for however long the work takes.
+Psychodynamic therapy is typically open-ended. This means we don't set a fixed number of sessions at the start. We work together for [however long the work takes](/blog/how-long-does-therapy-take).
 
 For some people, this is six months. For others, it's two or three years. The length depends on what you're working on, how deep the patterns go, and what's happening in your life alongside therapy.
 
@@ -70,7 +70,7 @@ Psychodynamic therapy tends to work well for:
 
 **People who want to understand themselves.** Not just feel better, but genuinely understand why they feel the way they do, why they do what they do, why certain things trigger them.
 
-**People who keep hitting the same walls.** The same relationship pattern. The same work dynamic. The same self-sabotage. If you've tried to change through willpower alone and it hasn't stuck, there's probably something underneath that needs attention.
+**People who keep hitting the same walls.** The same relationship pattern. The same work dynamic. The same self-sabotage. If you've tried to change through willpower alone and it hasn't stuck, there's probably something underneath that needs attention. I particularly [work with women](/therapy-for-women) navigating these patterns.
 
 **People who've tried other approaches.** Many of my clients have done CBT before. It helped, but it didn't get to the root. They're looking for something more.
 
@@ -90,7 +90,7 @@ I believe in being honest about limitations. Psychodynamic therapy isn't the rig
 
 ## My training and approach
 
-I completed my MSc in Psychodynamic Psychotherapy at the University of Essex in 2020. Before entering private practice, I worked in NHS schools, SEN provision, and with organisations like Mind and YMCA. I'm a registered member of BACP.
+I completed my MSc in Psychodynamic Psychotherapy at the University of Essex in 2020. Before entering private practice, I worked in NHS schools, SEN provision, and with organisations like Mind and YMCA. I'm a registered member of BACP. You can [read more about my background](/about).
 
 I continue to develop professionally — I've done post-qualification training in neurodiversity, eating disorders, trauma, attachment, LGBTQ+ work, and addiction. I'm in ongoing clinical supervision and personal therapy, both of which are standard practice for psychodynamic therapists.
 
@@ -102,7 +102,7 @@ The first session is really a vibe check. Before anything else, you need to feel
 
 I work with adults and young people up to age 40, offering therapy in person in Colchester and online across the UK for those aged 16 and over.
 
-If you're curious about psychodynamic therapy — or if you've tried other approaches and are looking for something different — I'd be glad to hear from you.
+If you're curious about psychodynamic therapy — or if you've tried other approaches and are looking for something different — I'd be glad to hear from you. If you're [wondering whether this approach is right for you](/is-this-right-for-you), that page might help.
 
 The first step is a free 15-minute call. It's not therapy; it's a chance to ask questions, get a sense of how I work, and decide whether you want to book a first session. No pressure, no commitment.
 

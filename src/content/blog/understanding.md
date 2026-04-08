@@ -18,3 +18,5 @@ If you see yourself in any of this, know you're not alone. Anxiety can feel incr
 Therapy offers a space to slow down, tune in, and feel understood. It can help you explore the deeper roots of your anxiety, understand how it's affecting your daily life, and develop kinder, more effective ways to manage it. Instead of trying to push through on your own, you can begin to make space for self-compassion, insight, and real change.
 
 You don't have to keep holding it all by yourself. There is support available, and it starts with reaching out.
+
+I work with [women](/therapy-for-women) who carry this kind of invisible weight — the ones who look fine to everyone else but feel exhausted underneath. If that resonates, you might find my post on [high-functioning anxiety](/blog/high-functioning-anxiety-women) helpful. Or you can [book a free 15-minute call](/book-now) to talk about whether therapy might help.

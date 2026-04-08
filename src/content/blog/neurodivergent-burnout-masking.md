@@ -12,7 +12,7 @@ The scripts you relied on for social situations feel impossible to access. The c
 
 This is neurodivergent burnout. And if you're experiencing it, you're not broken. You're exhausted in a very specific way.
 
-I work with neurodivergent adults — people with ADHD, autism, or both — who've reached this point. The burnout that brings them to therapy isn't the regular kind. It's the cumulative result of trying to function in a world that wasn't designed for brains like theirs, often without realising that's what they were doing.
+I work with neurodivergent adults — particularly [women](/therapy-for-women) with ADHD, autism, or both — who've reached this point. The burnout that brings them to therapy isn't the regular kind. It's the cumulative result of trying to function in a world that wasn't designed for brains like theirs, often without realising that's what they were doing.
 
 ## What neurodivergent burnout looks like
 
@@ -56,7 +56,7 @@ Neurodivergent burnout often arrives at predictable pressure points.
 
 **Accumulation over time.** Sometimes there's no obvious trigger. The burnout is simply the result of years of masking finally exceeding what you can sustain. The debt comes due.
 
-**Post-diagnosis identity shifts.** Learning you're neurodivergent can be destabilising, even when it's also a relief. The identity reconstruction that follows takes energy.
+**Post-diagnosis identity shifts.** Learning you're neurodivergent can be destabilising, even when it's also a relief. The identity reconstruction that follows takes energy. I've written more about [the grief and relief of late diagnosis](/blog/late-diagnosed-adhd-women).
 
 **Additional stressors.** A global pandemic. A health crisis. Family issues. When additional demands hit an already-depleted system, it tips over.
 
@@ -116,7 +116,7 @@ I've completed post-qualification training specifically in working with neurodiv
 
 ## If this resonates
 
-I work with neurodivergent adults up to age 40, offering therapy in person in Colchester and online across the UK for those aged 16 and over.
+I [work with neurodivergent adults](/neurodiversity) up to age 40, offering therapy in person in Colchester and [online across the UK](/online-therapy) for those aged 16 and over.
 
 If you're experiencing burnout that regular advice doesn't seem to touch — if you've been masking for so long that you don't know who you are underneath — I'd be glad to hear from you.
 

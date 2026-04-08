@@ -16,4 +16,6 @@ That inner critic? It never truly disappears, but we can learn to mute it or to 
 
 If you are feeling any of the above, I want you to know that reaching out for therapy is not a sign of weakness and it definitely doesn't reflect failure. It's a kind gesture to yourself and the first step in believing that 'This too shall pass.'
 
-If something I wrote resonated with you and you are looking to begin your journey in 'muting your inner critic' while being in a space free of judgement and expectations, please don't hesitate to get in touch.
+If something I wrote resonated with you and you're looking to begin working on that inner critic — in a space free of judgement and expectations — I'd be glad to hear from you. You can [book a free 15-minute call](/book-now) to see if working together might help.
+
+I work with [women](/therapy-for-women) who struggle with overthinking, self-criticism, and burnout. If that sounds familiar, you're not alone.

@@ -6,7 +6,9 @@ category: 'professional'
 keywords: 'when to seek therapy, signs need therapy, mental health help, therapy benefits, professional counselling, when to get help, therapy readiness, mental health support'
 ---
 
-Deciding to start therapy can feel like a big step, and many people wonder whether their struggles are "serious enough" to warrant professional support. The truth is, therapy isn't just for crisis situations—it's a valuable tool for personal growth, emotional wellbeing, and navigating life's challenges at any stage.
+Deciding to start therapy can feel like a big step, and many people wonder whether their struggles are "serious enough" to warrant professional support. The truth is, therapy isn't just for crisis situations — it's for anyone who wants to understand themselves better and change patterns that aren't working.
+
+I work with [women](/therapy-for-women), [neurodivergent adults](/neurodiversity), and [teenagers](/teen-therapy). The signs I describe below are things I see regularly in my practice.
 
 ## Common Misconceptions About Therapy
 
@@ -199,26 +201,16 @@ Before exploring the signs that therapy might be helpful, let's address some com
 - Aggressive or disruptive behaviour
 - Regression in developmental milestones
 
-### Adults
+### Adults (18-40)
 
-**Common adult therapy needs:**
+**Common reasons to seek therapy:**
 
 - Career dissatisfaction or burnout
-- Relationship difficulties
+- Relationship difficulties and patterns
+- Identity questions and life direction
+- Late-diagnosed neurodivergence
 - Parenting challenges
-- Midlife transitions
-- Anxiety about aging or health
-- Financial stress and its emotional impact
-
-### Older Adults
-
-**Therapy can help with:**
-
-- Grief and loss (friends, spouse, independence)
-- Adjusting to retirement
-- Health concerns and chronic illness
-- Depression related to aging
-- Family dynamics and intergenerational issues
+- Patterns from childhood showing up in adult life
 
 ## How to Know If You're Ready
 
@@ -261,4 +253,4 @@ The fact that you're reading this and considering therapy shows self-awareness a
 
 Seeking therapy is an act of courage and self-care. It's an investment in your mental health, your relationships, and your overall quality of life. You deserve support, understanding, and the tools to live your best life.
 
-If you recognise yourself in any of these signs, consider reaching out to a mental health professional. Your future self will thank you for taking this important step toward healing and growth.
+If you recognise yourself in any of these signs, consider reaching out. If you're wondering whether [my approach might suit you](/is-this-right-for-you), that page can help you decide. Or you can [book a free 15-minute call](/book-now) to ask questions before committing to anything.

@@ -28,7 +28,7 @@ The call takes pressure off the first session. By the time we meet properly, we'
 
 ## The room
 
-If you're coming to my practice in Colchester, here's what you'll find:
+If you're coming to my [practice in Colchester](/location), here's what you'll find:
 
 The room is on the ground floor — no stairs. It's quiet, away from street noise. There are plants. The lighting is soft, which matters for sensory-sensitive clients. There's a couch and two comfortable chairs; you can sit wherever you prefer.
 
@@ -138,7 +138,7 @@ We don't set a fixed number of sessions at the start. Psychodynamic therapy is o
 
 I offer therapy in person in Colchester and online across the UK for those aged 16 and over. I work with adults and young people up to age 40.
 
-If you've been thinking about therapy and you're ready to try, the first step is a free 15-minute call. It's low-stakes: a brief conversation to see if working together might make sense.
+If you've been thinking about therapy and you're ready to try, the first step is a [free 15-minute call](/book-now). It's low-stakes: a brief conversation to see if working together might make sense. If you're [not sure whether this approach is right for you](/is-this-right-for-you), that's something we can discuss.
 
 You can book through my website, or just send me an email with a bit about what you're looking for. I'll get back to you within a day or two.
 

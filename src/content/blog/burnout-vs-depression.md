@@ -56,7 +56,7 @@ And they often occur together. Chronic burnout can slide into depression. The su
 
 Similarly, depression can look like burnout. When you're depressed, work feels impossible. You might think you're just burned out from your job when actually the job is fine — it's your depression that's making everything feel unmanageable.
 
-High-functioning depression is particularly easy to mistake for burnout. You're still getting things done, still appearing capable, but everything costs more than it should. You're running on fumes and nobody can tell.
+[High-functioning depression](/blog/high-functioning-anxiety-women) is particularly easy to mistake for burnout. You're still getting things done, still appearing capable, but everything costs more than it should. You're running on fumes and nobody can tell.
 
 ## How to start distinguishing them
 
@@ -104,7 +104,7 @@ Therapy is helpful for both burnout and depression, but depression sometimes nee
 
 ## What might change
 
-The women I work with who are navigating burnout or depression often find that understanding the pattern changes the pattern.
+The [women I work with](/therapy-for-women) who are navigating burnout or depression often find that understanding the pattern changes the pattern.
 
 When you know why you push yourself past your limits, you can start to notice when you're doing it. When you understand what you're trying to prove — and to whom — the urgency starts to ease. When you recognise the old beliefs that are running your life, you have more choice about whether to keep following them.
 
@@ -122,6 +122,6 @@ I work with women up to age 40 who are experiencing burnout, depression, or the 
 
 If you've been holding it together while quietly falling apart, or if the coping strategies that used to work have stopped working, I'd be glad to hear from you.
 
-The first step is a free 15-minute call — a chance to talk briefly, ask questions, and see if working together might help. No pressure, no commitment.
+The first step is a [free 15-minute call](/book-now) — a chance to talk briefly, ask questions, and see if working together might help. If you're [not sure whether this approach is right for you](/is-this-right-for-you), that's something we can explore. No pressure, no commitment.
 
 You don't have to keep pushing through.

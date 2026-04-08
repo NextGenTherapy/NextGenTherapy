@@ -101,7 +101,7 @@ This might involve:
 
 In therapy, work with school avoidance often begins with stabilising the young person's emotional state rather than immediately pushing for school return. This might seem counterintuitive, but trying to force attendance before addressing underlying issues often leads to increased distress and more entrenched avoidance.
 
-The therapeutic journey typically involves:
+The therapeutic process typically involves:
 
 **Building safety and trust:** Creating a relationship where the young person feels understood rather than judged or pressured.
 
@@ -131,4 +131,4 @@ While school avoidance can feel overwhelming for families, recovery is absolutel
 
 The key is understanding that this isn't a battle to be won, but a young person's distress signal that needs to be heard and responded to with compassion and expertise. With the right support, what begins as avoidance can become a pathway to deeper self-understanding and resilience.
 
-If you're supporting a young person through school avoidance, please know that you're not alone, and there is help available. For younger children experiencing school difficulties, [child therapy](/child-therapy) offers age-appropriate support, while [teen therapy](/teen-therapy) provides the confidential space teenagers need to work through their school-related struggles. The journey may be longer than you hoped, but with patience, understanding, and appropriate support, your young person can find their way back to learning and growth.
+If you're supporting a young person through school avoidance, please know that you're not alone, and there is help available. For younger children experiencing school difficulties, [child therapy](/child-therapy) offers age-appropriate support, while [teen therapy](/teen-therapy) provides the confidential space teenagers need to work through their school-related struggles. The process may take longer than you hoped, but with patience, understanding, and appropriate support, your young person can find their way back to learning and growth.
