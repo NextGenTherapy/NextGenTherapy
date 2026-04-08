@@ -44,108 +44,119 @@ describe('Pricing Page', () => {
 
   describe('Page Structure', () => {
     it('renders the page hero with eyebrow', () => {
-      expect(screen.getByText(/Therapy Pricing/i)).toBeInTheDocument();
+      expect(screen.getByText(/fees & booking/i)).toBeInTheDocument();
     });
 
     it('renders the main heading', () => {
       const heading = screen.getByRole('heading', { level: 1 });
       expect(heading).toBeInTheDocument();
-      expect(heading).toHaveTextContent(/Transparent, straightforward pricing/i);
+      expect(heading).toHaveTextContent(/£60 per 50-minute session/i);
     });
 
     it('renders the lead text', () => {
-      expect(
-        screen.getByText(/£60 per session.*50 minutes.*No hidden fees/i)
-      ).toBeInTheDocument();
+      expect(screen.getByText(/honest breakdown/i)).toBeInTheDocument();
     });
   });
 
-  describe('Pricing Information', () => {
-    it('displays session price', () => {
-      expect(screen.getByText('60')).toBeInTheDocument();
-      expect(screen.getByText('£')).toBeInTheDocument();
-    });
-
-    it('displays session duration', () => {
-      expect(screen.getByText(/50-minute sessions/i)).toBeInTheDocument();
-    });
-
-    it('displays per session text', () => {
-      // "per session" appears in lead text and pricing card
-      const matches = screen.getAllByText(/per session/i);
-      expect(matches.length).toBeGreaterThan(0);
-    });
-
-    it('displays Therapy Sessions heading', () => {
-      expect(screen.getByText('Therapy Sessions')).toBeInTheDocument();
-    });
-  });
-
-  describe('Included Features', () => {
+  describe("What's Included Section", () => {
     it('displays what is included heading', () => {
-      expect(screen.getByText(/What's Included:/i)).toBeInTheDocument();
+      expect(screen.getByRole('heading', { name: /what's included in £60/i })).toBeInTheDocument();
     });
 
     it('lists included features', () => {
-      expect(screen.getByText(/Full 50-minute therapy session/i)).toBeInTheDocument();
-      expect(screen.getByText(/Professional psychodynamic approach/i)).toBeInTheDocument();
-      expect(screen.getByText(/BACP registered therapist/i)).toBeInTheDocument();
-      expect(screen.getByText(/Confidential, safe environment/i)).toBeInTheDocument();
-      expect(screen.getByText(/In-person or online sessions/i)).toBeInTheDocument();
-      expect(screen.getByText(/Flexible scheduling/i)).toBeInTheDocument();
+      expect(screen.getByText(/full 50-minute session/i)).toBeInTheDocument();
+      expect(screen.getByText(/bacp registered/i)).toBeInTheDocument();
+      expect(screen.getByText(/weekly slot held for you/i)).toBeInTheDocument();
+      expect(screen.getByText(/sensory-aware therapy room/i)).toBeInTheDocument();
+      expect(screen.getByText(/worksheets and prompts/i)).toBeInTheDocument();
+      expect(screen.getByText(/email contact for logistics/i)).toBeInTheDocument();
+      expect(screen.getByText(/clinical supervision/i)).toBeInTheDocument();
     });
   });
 
-  describe('Payment Information', () => {
-    it('displays payment information heading', () => {
-      expect(screen.getByText(/Payment Information/i)).toBeInTheDocument();
+  describe('Free 15-Minute Call Section', () => {
+    it('displays free call heading', () => {
+      expect(screen.getByRole('heading', { name: /the free 15-minute call/i })).toBeInTheDocument();
     });
 
-    it('displays payment methods', () => {
-      expect(screen.getByText(/Payment Methods/i)).toBeInTheDocument();
-      expect(screen.getByText(/bank transfer only/i)).toBeInTheDocument();
+    it('describes what the call is', () => {
+      const freeMatches = screen.getAllByText(/genuinely free/i);
+      expect(freeMatches.length).toBeGreaterThan(0);
+      const noCommitmentMatches = screen.getAllByText(/no commitment/i);
+      expect(noCommitmentMatches.length).toBeGreaterThan(0);
     });
 
-    it('displays cancellation policy', () => {
-      expect(screen.getByText(/Cancellation Policy/i)).toBeInTheDocument();
-      expect(screen.getByText(/24 hours notice/i)).toBeInTheDocument();
+    it('explains what it is and what it is not', () => {
+      expect(screen.getByRole('heading', { name: /what it is$/i })).toBeInTheDocument();
+      expect(screen.getByRole('heading', { name: /what it isn't/i })).toBeInTheDocument();
     });
   });
 
-  describe('Value Section', () => {
-    it('displays investment heading', () => {
-      expect(screen.getByText(/Investment in Your Wellbeing/i)).toBeInTheDocument();
+  describe('How Booking Works Section', () => {
+    it('displays how booking works heading', () => {
+      expect(screen.getByRole('heading', { name: /how booking works/i })).toBeInTheDocument();
     });
 
-    it('describes value of therapy', () => {
+    it('shows booking steps', () => {
+      const getInTouchMatches = screen.getAllByText(/get in touch/i);
+      expect(getInTouchMatches.length).toBeGreaterThan(0);
+      const freeCallMatches = screen.getAllByText(/free 15-minute call/i);
+      expect(freeCallMatches.length).toBeGreaterThan(0);
+      const firstSessionMatches = screen.getAllByText(/first session/i);
+      expect(firstSessionMatches.length).toBeGreaterThan(0);
+      const weeklyMatches = screen.getAllByText(/weekly sessions/i);
+      expect(weeklyMatches.length).toBeGreaterThan(0);
+    });
+  });
+
+  describe('Cancellation Section', () => {
+    it('displays cancellation heading', () => {
       expect(
-        screen.getByText(/investment in your mental health/i)
+        screen.getByRole('heading', { name: /cancellation and missed sessions/i })
       ).toBeInTheDocument();
+    });
+
+    it('explains cancellation policy', () => {
+      expect(screen.getByText(/non-refundable/i)).toBeInTheDocument();
+      expect(screen.getByText(/full £60 is still charged/i)).toBeInTheDocument();
+    });
+  });
+
+  describe('Payment Section', () => {
+    it('displays payment heading', () => {
+      expect(screen.getByRole('heading', { name: /^payment$/i })).toBeInTheDocument();
+    });
+
+    it('explains payment method', () => {
+      expect(screen.getByText(/bank transfer/i)).toBeInTheDocument();
+    });
+  });
+
+  describe("What I Don't Offer Section", () => {
+    it('displays what not offered heading', () => {
+      expect(screen.getByRole('heading', { name: /what i don't offer/i })).toBeInTheDocument();
+    });
+
+    it('lists what is not offered', () => {
+      expect(screen.getByText(/sliding scale/i)).toBeInTheDocument();
+      expect(screen.getByText(/insurance billing/i)).toBeInTheDocument();
+      expect(screen.getByText(/sessions shorter than 50 minutes/i)).toBeInTheDocument();
+      expect(screen.getByText(/pay-as-you-go/i)).toBeInTheDocument();
     });
   });
 
   describe('Call to Action', () => {
-    it('renders book your session link', () => {
-      const link = screen.getByRole('link', { name: /Book Your Session/i });
-      expect(link).toHaveAttribute('href', '/book-now');
+    it('renders book free call link', () => {
+      const links = screen.getAllByRole('link', { name: /book a free 15-minute call/i });
+      expect(links.length).toBeGreaterThan(0);
+      expect(links[0]).toHaveAttribute('href', '/book-now');
     });
 
-    it('displays booking note', () => {
-      expect(
-        screen.getByText(/Get in touch to arrange your first session/i)
-      ).toBeInTheDocument();
-    });
-  });
-
-  describe('CTA Block', () => {
-    it('renders the CTA section', () => {
-      expect(screen.getByText(/Ready to take the first step/i)).toBeInTheDocument();
-    });
-
-    it('renders book consultation link in CTA', () => {
-      // CTA block uses "Book Now" as link text
-      const bookLinks = screen.getAllByRole('link', { name: /Book.*(?:Now|Session)/i });
-      expect(bookLinks.length).toBeGreaterThan(0);
+    it('displays CTA section heading', () => {
+      const ctaHeading = screen.getByRole('heading', {
+        name: /^book a free 15-minute call$/i,
+      });
+      expect(ctaHeading).toBeInTheDocument();
     });
   });
 
@@ -156,7 +167,7 @@ describe('Pricing Page', () => {
       const schema = JSON.parse(script?.textContent || '{}');
 
       expect(schema['@type']).toBe('Offer');
-      expect(schema.name).toBe('Therapy Session');
+      expect(schema.name).toBe('Psychodynamic Therapy Session');
       expect(schema.price).toBe('60');
       expect(schema.priceCurrency).toBe('GBP');
     });

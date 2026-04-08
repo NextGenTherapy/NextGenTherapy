@@ -227,7 +227,7 @@ describe('Child and Adolescent Therapy Schemas', () => {
     expect(jsonData['@type']).toBe('Service');
     expect(jsonData.name).toBe('Child Therapy');
     expect(jsonData.serviceType).toBe('Child Psychology Service');
-    expect(jsonData.audience.suggestedMinAge).toBe('5');
+    expect(jsonData.audience.suggestedMinAge).toBe('4');
     expect(jsonData.audience.suggestedMaxAge).toBe('12');
   });
 
@@ -250,7 +250,7 @@ describe('Child and Adolescent Therapy Schemas', () => {
     expect(jsonData.name).toBe('Teenage Therapy');
     expect(jsonData.serviceType).toBe('Adolescent Psychology Service');
     expect(jsonData.audience.suggestedMinAge).toBe('13');
-    expect(jsonData.audience.suggestedMaxAge).toBe('18');
+    expect(jsonData.audience.suggestedMaxAge).toBe('17');
   });
 
   it('TeenageTherapySchema includes online option', () => {

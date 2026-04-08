@@ -56,158 +56,159 @@ describe('Therapy Pages', () => {
     });
 
     it('renders the page with PageHero eyebrow', () => {
-      // "Child Therapy" appears in eyebrow, title, and section headings
-      const matches = screen.getAllByText(/Child Therapy/i);
-      expect(matches.length).toBeGreaterThan(0);
+      const eyebrowMatches = screen.getAllByText(/therapy for children/i);
+      expect(eyebrowMatches.length).toBeGreaterThan(0);
     });
 
     it('renders the main heading', () => {
       const heading = screen.getByRole('heading', { level: 1 });
       expect(heading).toBeInTheDocument();
-      expect(heading).toHaveTextContent(/Child Therapy in Colchester/i);
+      expect(heading).toHaveTextContent(/when something's not quite right/i);
     });
 
-    it('displays lead text about compassionate support', () => {
-      expect(screen.getByText(/Compassionate, professional therapy support/i)).toBeInTheDocument();
+    it('displays lead text about play-based therapy', () => {
+      const playBasedMatches = screen.getAllByText(/play-based/i);
+      expect(playBasedMatches.length).toBeGreaterThan(0);
+      const ageMatches = screen.getAllByText(/4–12/i);
+      expect(ageMatches.length).toBeGreaterThan(0);
     });
 
     describe('Content Sections', () => {
-      it('displays understanding your child heading', () => {
-        expect(screen.getByText(/Understanding Your Child's World/i)).toBeInTheDocument();
+      it('displays when parents bring children section', () => {
+        expect(screen.getByText(/when parents bring children to me/i)).toBeInTheDocument();
       });
 
-      it('displays when to consider therapy section', () => {
-        expect(screen.getByText(/When to Consider Child Therapy/i)).toBeInTheDocument();
+      it('displays what I often work with section', () => {
+        expect(screen.getByRole('heading', { name: /what i often work with/i })).toBeInTheDocument();
       });
 
-      it('displays approach section', () => {
-        expect(screen.getByText(/My Approach to Child Therapy/i)).toBeInTheDocument();
+      it('displays how I work with younger children section', () => {
+        expect(screen.getByRole('heading', { name: /how i work with younger children/i })).toBeInTheDocument();
       });
 
-      it('displays common concerns heading', () => {
-        expect(screen.getByText(/Common Concerns I Help Children With/i)).toBeInTheDocument();
+      it('displays what sessions look like section', () => {
+        expect(screen.getByRole('heading', { name: /what sessions actually look like/i })).toBeInTheDocument();
       });
     });
 
-    describe('Symptom Categories', () => {
-      it('lists emotional challenges', () => {
-        expect(screen.getByText(/Emotional Challenges/i)).toBeInTheDocument();
-        expect(screen.getByText(/Persistent sadness or tearfulness/i)).toBeInTheDocument();
+    describe('What I Work With List', () => {
+      it('lists anxiety and worry', () => {
+        expect(screen.getByText(/anxiety and worry/i)).toBeInTheDocument();
+      });
+
+      it('lists school-related difficulties', () => {
+        expect(screen.getByText(/school-related difficulties/i)).toBeInTheDocument();
+      });
+
+      it('lists family transitions', () => {
+        const matches = screen.getAllByText(/family transitions/i);
+        expect(matches.length).toBeGreaterThan(0);
       });
 
       it('lists behavioural changes', () => {
-        // "Behavioural Changes" appears in heading and in description text
-        const matches = screen.getAllByText(/Behavioural Changes/i);
+        const matches = screen.getAllByText(/behavioural changes/i);
         expect(matches.length).toBeGreaterThan(0);
-        expect(screen.getByText(/Sleep difficulties or nightmares/i)).toBeInTheDocument();
       });
 
-      it('lists life transitions', () => {
-        expect(screen.getByText(/Life Transitions/i)).toBeInTheDocument();
-        // Multiple mentions of family changes exist
-        const familyChanges = screen.getAllByText(/Family changes/i);
-        expect(familyChanges.length).toBeGreaterThan(0);
-      });
-    });
-
-    describe('Approach Points', () => {
-      it('displays child-led therapy', () => {
-        expect(screen.getByText(/Child-Led Therapy/i)).toBeInTheDocument();
+      it('lists sleep difficulties', () => {
+        expect(screen.getByText(/sleep difficulties/i)).toBeInTheDocument();
       });
 
-      it('displays safe space', () => {
-        expect(screen.getByText(/Safe Space/i)).toBeInTheDocument();
+      it('lists neurodiversity', () => {
+        const matches = screen.getAllByText(/neurodiversity/i);
+        expect(matches.length).toBeGreaterThan(0);
+        expect(screen.getByText(/adhd, autism/i)).toBeInTheDocument();
       });
 
-      it('displays family involvement', () => {
-        expect(screen.getByText(/Family Involvement/i)).toBeInTheDocument();
-      });
-    });
-
-    describe('Common Concerns Grid', () => {
-      it('shows anxiety & worry', () => {
-        expect(screen.getByText(/Anxiety & Worry/i)).toBeInTheDocument();
+      it('lists trauma and difficult experiences', () => {
+        expect(screen.getByText(/trauma and difficult experiences/i)).toBeInTheDocument();
       });
 
-      it('shows big emotions', () => {
-        expect(screen.getByText(/Big Emotions/i)).toBeInTheDocument();
-      });
-
-      it('shows family changes', () => {
-        const familyChanges = screen.getAllByText(/Family Changes/i);
-        expect(familyChanges.length).toBeGreaterThan(0);
-      });
-
-      it('shows school difficulties', () => {
-        expect(screen.getByText(/School Difficulties/i)).toBeInTheDocument();
-      });
-
-      it('shows trauma & loss', () => {
-        expect(screen.getByText(/Trauma & Loss/i)).toBeInTheDocument();
-      });
-
-      it('shows self-esteem', () => {
-        expect(screen.getByText(/Self-Esteem/i)).toBeInTheDocument();
+      it('lists self-confidence', () => {
+        expect(screen.getByText(/self-confidence and self-esteem/i)).toBeInTheDocument();
       });
     });
 
     describe('For Parents Section', () => {
-      it('displays For Parents section', () => {
-        expect(screen.getByText(/For Parents/i)).toBeInTheDocument();
+      it('displays For Parents section heading', () => {
+        expect(screen.getByRole('heading', { name: /for parents: how i work with you/i })).toBeInTheDocument();
       });
 
-      it('shows understanding your child card', () => {
-        // Multiple headings contain "Understanding Your Child" text
-        const matches = screen.getAllByText(/Understanding Your Child/i);
+      it('mentions parent review meetings', () => {
+        expect(screen.getByText(/parent review meetings/i)).toBeInTheDocument();
+      });
+
+      it('mentions parent-only sessions', () => {
+        expect(screen.getByText(/parent-only sessions/i)).toBeInTheDocument();
+      });
+
+      it('mentions professional experience', () => {
+        expect(screen.getByText(/nhs essex/i)).toBeInTheDocument();
+        expect(screen.getByText(/sir bobby robson school/i)).toBeInTheDocument();
+      });
+    });
+
+    describe('Working with Schools Section', () => {
+      it('displays school liaison section', () => {
+        expect(screen.getByRole('heading', { name: /working with school and other professionals/i })).toBeInTheDocument();
+      });
+
+      it('mentions SENCo and ELSA', () => {
+        expect(screen.getByText(/senco/i)).toBeInTheDocument();
+        expect(screen.getByText(/elsa/i)).toBeInTheDocument();
+      });
+
+      it('mentions EHCP applications', () => {
+        expect(screen.getByText(/ehcp/i)).toBeInTheDocument();
+      });
+    });
+
+    describe('Limitations Section', () => {
+      it('displays what I dont work with heading', () => {
+        expect(screen.getByRole('heading', { name: /what i don't work with at this age/i })).toBeInTheDocument();
+      });
+
+      it('mentions acute crisis limitations', () => {
+        const matches = screen.getAllByText(/acute crisis/i);
         expect(matches.length).toBeGreaterThan(0);
       });
-    });
 
-    describe('Practical Info', () => {
-      it('displays what to expect heading', () => {
-        expect(screen.getByText(/What to Expect/i)).toBeInTheDocument();
+      it('mentions online limitations for under-16s', () => {
+        expect(screen.getByText(/online therapy for under-16s/i)).toBeInTheDocument();
       });
 
-      it('shows initial consultation', () => {
-        expect(screen.getByText(/Initial Consultation/i)).toBeInTheDocument();
-      });
-
-      it('shows first sessions', () => {
-        expect(screen.getByText(/First Sessions/i)).toBeInTheDocument();
-      });
-
-      it('shows ongoing work', () => {
-        expect(screen.getByText(/Ongoing Work/i)).toBeInTheDocument();
-      });
-
-      it('shows regular reviews', () => {
-        expect(screen.getByText(/Regular Reviews/i)).toBeInTheDocument();
+      it('has link to online therapy page', () => {
+        const link = screen.getByRole('link', { name: /online therapy and who it's for/i });
+        expect(link).toHaveAttribute('href', '/online-therapy');
       });
     });
 
-    describe('Related Services', () => {
-      it('displays related services section', () => {
-        expect(screen.getByText(/Related Services/i)).toBeInTheDocument();
+    describe('Crisis Section', () => {
+      it('displays crisis signposting heading', () => {
+        expect(screen.getByRole('heading', { name: /if your child is in crisis right now/i })).toBeInTheDocument();
       });
 
-      it('has teen therapy link', () => {
-        const link = screen.getByRole('link', { name: /Teen Therapy/i });
-        expect(link).toHaveAttribute('href', '/teen-therapy');
+      it('shows NHS 111 information', () => {
+        expect(screen.getByText(/nhs 111/i)).toBeInTheDocument();
       });
 
-      it('has neurodiversity link', () => {
-        const link = screen.getByRole('link', { name: /Neurodiversity Support/i });
-        expect(link).toHaveAttribute('href', '/neurodiversity');
+      it('shows Childline information', () => {
+        expect(screen.getByText(/childline/i)).toBeInTheDocument();
+        expect(screen.getByText(/0800 1111/i)).toBeInTheDocument();
+      });
+
+      it('shows A&E information', () => {
+        expect(screen.getByText(/a&e at colchester general hospital/i)).toBeInTheDocument();
       });
     });
 
-    describe('CTA Block', () => {
-      it('displays CTABlock', () => {
-        expect(screen.getByText(/Ready to take the first step/i)).toBeInTheDocument();
+    describe('CTA Section', () => {
+      it('displays CTA heading', () => {
+        expect(screen.getByRole('heading', { name: /start with a parent-only conversation/i })).toBeInTheDocument();
       });
 
       it('has book now link', () => {
-        const link = screen.getByRole('link', { name: /Book Now/i });
+        const link = screen.getByRole('link', { name: /book a free 15-minute call/i });
         expect(link).toHaveAttribute('href', '/book-now');
       });
     });
@@ -223,6 +224,18 @@ describe('Therapy Pages', () => {
         const breadcrumbSchema = schemas.find((s) => s['@type'] === 'BreadcrumbList');
         expect(breadcrumbSchema).toBeDefined();
         expect(breadcrumbSchema?.itemListElement).toHaveLength(3);
+      });
+
+      it('renders FAQPage schema', () => {
+        const { container } = render(<ChildTherapyPage />);
+        const scripts = container.querySelectorAll('script[type="application/ld+json"]');
+        const schemas = Array.from(scripts).map((script) =>
+          JSON.parse(script.textContent || '{}')
+        );
+
+        const faqSchema = schemas.find((s) => s['@type'] === 'FAQPage');
+        expect(faqSchema).toBeDefined();
+        expect(faqSchema?.mainEntity?.length).toBeGreaterThan(0);
       });
     });
   });

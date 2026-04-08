@@ -101,7 +101,7 @@ describe('Footer Component', () => {
     it('renders location links', () => {
       render(<Footer />);
       const expectedLocations = [
-        { name: 'Colchester', href: '/location' },
+        { name: 'Colchester', href: '/therapy-in-colchester' },
         { name: 'Wivenhoe', href: '/therapy-in-wivenhoe' },
         { name: 'Mersea', href: '/therapy-in-mersea' },
         { name: 'Tiptree', href: '/therapy-in-tiptree' },
@@ -232,16 +232,7 @@ describe('Footer Component', () => {
       ).toBeInTheDocument();
     });
 
-    it('displays developer credit with correct link', () => {
-      render(<Footer />);
-
-      expect(screen.getByText('Developed by')).toBeInTheDocument();
-
-      const developerLink = screen.getByRole('link', { name: 'Luke Stevens' });
-      expect(developerLink).toHaveAttribute('href', 'https://lstevens.dev');
-      expect(developerLink).toHaveAttribute('target', '_blank');
-      expect(developerLink).toHaveAttribute('rel', 'noopener noreferrer');
-    });
+    // Developer credit removed from footer in redesign
   });
 
   describe('Accessibility and SEO', () => {
@@ -275,8 +266,8 @@ describe('Footer Component', () => {
         expect(link).toHaveAttribute('rel', 'noopener noreferrer');
       });
 
-      // Should have BACP link, Maps link, Facebook, Instagram, and developer link
-      expect(externalLinks.length).toBeGreaterThanOrEqual(5);
+      // Should have BACP link, Maps link, Facebook, and Instagram
+      expect(externalLinks.length).toBeGreaterThanOrEqual(4);
     });
   });
 

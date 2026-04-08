@@ -119,37 +119,33 @@ describe('Additional Pages', () => {
     });
 
     it('renders the page with PageHero', () => {
-      expect(screen.getByText(/Common Questions/i)).toBeInTheDocument();
+      expect(screen.getByText(/frequently asked questions/i)).toBeInTheDocument();
     });
 
     it('renders the main heading', () => {
       const heading = screen.getByRole('heading', { level: 1 });
       expect(heading).toBeInTheDocument();
-      expect(heading).toHaveTextContent(/Everything you want to know before getting in touch/i);
+      expect(heading).toHaveTextContent(/questions I get asked most/i);
     });
 
-    it('displays therapy cost question', () => {
-      expect(screen.getByText(/How much does therapy cost in Colchester/i)).toBeInTheDocument();
+    it('displays getting started section', () => {
+      expect(screen.getByText(/how do i book a first session/i)).toBeInTheDocument();
     });
 
-    it('displays online therapy question', () => {
-      expect(screen.getByText(/Do you offer online therapy sessions/i)).toBeInTheDocument();
+    it('displays practical questions', () => {
+      expect(screen.getByText(/how much does therapy cost/i)).toBeInTheDocument();
     });
 
-    it('displays session length question', () => {
-      expect(screen.getByText(/How long does therapy take to work/i)).toBeInTheDocument();
+    it('displays online therapy questions', () => {
+      expect(screen.getByText(/do you offer online sessions/i)).toBeInTheDocument();
     });
 
-    it('displays confidentiality question', () => {
-      expect(screen.getByText(/Is therapy confidential/i)).toBeInTheDocument();
+    it('displays confidentiality questions', () => {
+      expect(screen.getByText(/is everything i say confidential/i)).toBeInTheDocument();
     });
 
     it('displays session price in answers', () => {
       expect(screen.getByText(/£60/i)).toBeInTheDocument();
-    });
-
-    it('has CTABlock section', () => {
-      expect(screen.getByText(/Ready to take the first step/i)).toBeInTheDocument();
     });
 
     it('renders FAQPage schema', () => {

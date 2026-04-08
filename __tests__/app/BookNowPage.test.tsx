@@ -64,140 +64,112 @@ describe('Book Now Page', () => {
 
   describe('Page Structure', () => {
     it('renders the page hero eyebrow', () => {
-      expect(screen.getByText(/Get in Touch/i)).toBeInTheDocument();
+      expect(screen.getByText(/book a free 15-minute call/i)).toBeInTheDocument();
     });
 
     it('renders the main heading', () => {
       const heading = screen.getByRole('heading', { level: 1 });
       expect(heading).toBeInTheDocument();
-      expect(heading).toHaveTextContent(/Let's talk about whether I'm the right fit for you/i);
+      expect(heading).toHaveTextContent(/let's start with a free call/i);
     });
 
-    it('renders the lead text with free consultation offer', () => {
-      expect(screen.getByText(/free 15-minute phone consultation/i)).toBeInTheDocument();
-    });
-  });
-
-  describe('Content Sections', () => {
-    it('displays ready to take the first step heading', () => {
-      // Appears both in content section and CTA block
-      const matches = screen.getAllByText(/Ready to Take the First Step\?/i);
-      expect(matches.length).toBeGreaterThan(0);
-    });
-
-    it('describes the process of reaching out', () => {
-      expect(
-        screen.getByText(/Reach out via the contact form below, email, or phone/i)
-      ).toBeInTheDocument();
+    it('renders the lead text describing the call', () => {
+      expect(screen.getByText(/informal conversation/i)).toBeInTheDocument();
     });
   });
 
-  describe('Trust Section', () => {
-    it('displays professional qualifications', () => {
-      expect(screen.getByText(/Professional Qualifications/i)).toBeInTheDocument();
+  describe('What Happens Next Section', () => {
+    it('displays what happens after section heading', () => {
+      expect(screen.getByText(/what happens after you send this/i)).toBeInTheDocument();
     });
 
-    it('shows BACP registration', () => {
-      expect(screen.getByText(/BACP Registered Member/i)).toBeInTheDocument();
-    });
-
-    it('shows session information', () => {
-      expect(screen.getByText(/Session Information/i)).toBeInTheDocument();
-    });
-
-    it('displays session price', () => {
-      expect(screen.getByText(/50-minute sessions at £60/i)).toBeInTheDocument();
-    });
-  });
-
-  describe('Process Section', () => {
-    it('displays what happens next heading', () => {
-      expect(screen.getByText(/What Happens Next\?/i)).toBeInTheDocument();
-    });
-
-    it('shows all process steps', () => {
-      expect(screen.getByText(/Submit Your Enquiry/i)).toBeInTheDocument();
-      expect(screen.getByText(/Initial Response/i)).toBeInTheDocument();
-      expect(screen.getByText(/Book Your Session/i)).toBeInTheDocument();
-    });
-
-    it('shows step numbers', () => {
-      expect(screen.getByText('1')).toBeInTheDocument();
-      expect(screen.getByText('2')).toBeInTheDocument();
-      expect(screen.getByText('3')).toBeInTheDocument();
-    });
-  });
-
-  describe('Contact Information', () => {
-    it('displays contact details heading', () => {
-      expect(screen.getByText(/My Contact Details/i)).toBeInTheDocument();
-    });
-
-    it('shows email contact', () => {
-      const emailLink = screen.getByRole('link', {
-        name: /Send an email to Andreea Therapy Today/i,
-      });
-      expect(emailLink).toHaveAttribute('href', 'mailto:andreeatherapytoday@gmail.com');
-    });
-
-    it('shows phone contact', () => {
-      const phoneLink = screen.getByRole('link', { name: /Call Andreea Therapy Today/i });
-      expect(phoneLink).toHaveAttribute('href', 'tel:07448036017');
-    });
-
-    it('displays location section', () => {
-      expect(screen.getByText(/Location/i)).toBeInTheDocument();
-    });
-
-    it('shows address', () => {
-      expect(
-        screen.getByText(/Colchester Business Centre, 1 George Williams Way/i)
-      ).toBeInTheDocument();
-    });
-
-    it('displays working hours', () => {
-      expect(screen.getByText(/Working Office Hours/i)).toBeInTheDocument();
-      expect(screen.getByText(/Monday - Tuesday: 10am - 7pm/i)).toBeInTheDocument();
-      expect(screen.getByText(/Friday: 9am - 2pm/i)).toBeInTheDocument();
+    it('shows the process steps', () => {
+      const workingDaysMatches = screen.getAllByText(/1–2 working days/i);
+      expect(workingDaysMatches.length).toBeGreaterThan(0);
+      expect(screen.getByText(/we'll have the call/i)).toBeInTheDocument();
+      expect(screen.getByText(/decide together/i)).toBeInTheDocument();
     });
   });
 
   describe('Contact Form Section', () => {
-    it('displays contact form heading', () => {
-      const heading = screen.getByRole('heading', { level: 2, name: /Contact Form/i });
+    it('displays send enquiry heading', () => {
+      const heading = screen.getByRole('heading', { name: /send an enquiry/i });
       expect(heading).toBeInTheDocument();
     });
 
     it('shows loading state for contact form', () => {
-      expect(screen.getByText(/Loading contact form.../i)).toBeInTheDocument();
+      expect(screen.getByText(/loading contact form/i)).toBeInTheDocument();
+    });
+  });
+
+  describe('Direct Contact Section', () => {
+    it('displays or reach me directly heading', () => {
+      expect(screen.getByText(/or reach me directly/i)).toBeInTheDocument();
+    });
+
+    it('shows email contact', () => {
+      const emailLink = screen.getByRole('link', { name: /andreeatherapytoday@gmail\.com/i });
+      expect(emailLink).toHaveAttribute('href', 'mailto:andreeatherapytoday@gmail.com');
+    });
+
+    it('shows phone contact', () => {
+      const phoneLink = screen.getByRole('link', { name: /\+44 7448 036017/i });
+      expect(phoneLink).toHaveAttribute('href', 'tel:+447448036017');
+    });
+  });
+
+  describe('Location Section', () => {
+    it('displays where to find me heading', () => {
+      expect(screen.getByText(/where to find me/i)).toBeInTheDocument();
+    });
+
+    it('shows in-person session info', () => {
+      expect(screen.getByText(/in-person sessions/i)).toBeInTheDocument();
+      expect(screen.getByText(/colchester business centre/i)).toBeInTheDocument();
+    });
+
+    it('shows online session info', () => {
+      const onlineMatches = screen.getAllByText(/online/i);
+      expect(onlineMatches.length).toBeGreaterThan(0);
+      expect(screen.getByText(/uk-wide/i)).toBeInTheDocument();
+    });
+
+    it('has Google Maps link', () => {
+      const mapsLink = screen.getByRole('link', { name: /view on google maps/i });
+      expect(mapsLink).toHaveAttribute(
+        'href',
+        expect.stringContaining('google.com/maps')
+      );
+    });
+  });
+
+  describe('Crisis Information', () => {
+    it('displays emergency section heading', () => {
+      expect(screen.getByText(/if this is an emergency/i)).toBeInTheDocument();
+    });
+
+    it('shows NHS 111 information', () => {
+      expect(screen.getByText(/nhs 111/i)).toBeInTheDocument();
+    });
+
+    it('shows Samaritans information', () => {
+      const samaritansMatches = screen.getAllByText(/samaritans/i);
+      expect(samaritansMatches.length).toBeGreaterThan(0);
+      expect(screen.getByText(/116 123/)).toBeInTheDocument();
+    });
+
+    it('shows A&E information', () => {
+      // A&E heading is rendered as "A&E"
+      const aeHeadings = screen.getAllByRole('heading', { level: 3 });
+      const aeHeading = aeHeadings.find((h) => h.textContent === 'A&E');
+      expect(aeHeading).toBeDefined();
     });
   });
 
   describe('Navigation Links', () => {
-    it('renders Is This Right for You link', () => {
-      const link = screen.getByRole('link', { name: /Is This Right for You\?/i });
+    it('renders link to is this right for you page', () => {
+      const link = screen.getByRole('link', { name: /read about who i work with/i });
       expect(link).toHaveAttribute('href', '/is-this-right-for-you');
-    });
-
-    it('renders Services link', () => {
-      const links = screen.getAllByRole('link', { name: /Services/i });
-      expect(links.length).toBeGreaterThan(0);
-    });
-  });
-
-  describe('CTA Block', () => {
-    it('renders the CTA section', () => {
-      // "Ready to take the first step" appears in page content and CTA block
-      const matches = screen.getAllByText(/Ready to take the first step/i);
-      expect(matches.length).toBeGreaterThan(0);
-    });
-  });
-
-  describe('Google Maps', () => {
-    it('renders map iframe', () => {
-      const iframe = document.querySelector('iframe');
-      expect(iframe).toBeInTheDocument();
-      expect(iframe).toHaveAttribute('title', 'Next Generation Therapy Location Map');
     });
   });
 
@@ -211,10 +183,10 @@ describe('Book Now Page', () => {
 
       const contactSchema = schemas.find((s) => s['@type'] === 'ContactPage');
       expect(contactSchema).toBeDefined();
-      expect(contactSchema?.name).toBe('Book Therapy Session');
+      expect(contactSchema?.name).toBe('Book a Free 15-Minute Call');
     });
 
-    it('includes offers in schema', () => {
+    it('includes offer in schema', () => {
       const { container } = render(<BookNow />);
       const scripts = container.querySelectorAll('script[type="application/ld+json"]');
       const schemas = Array.from(scripts).map((script) =>
@@ -223,7 +195,8 @@ describe('Book Now Page', () => {
 
       const contactSchema = schemas.find((s) => s['@type'] === 'ContactPage');
       expect(contactSchema?.offers).toBeDefined();
-      expect(contactSchema?.offers).toHaveLength(1);
+      expect(contactSchema?.offers['@type']).toBe('Offer');
+      expect(contactSchema?.offers.price).toBe('0');
     });
 
     it('renders BreadcrumbList schema', () => {

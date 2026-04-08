@@ -1,4 +1,4 @@
-import { render, screen, fireEvent, waitFor, act } from '@testing-library/react';
+import { render, screen, waitFor, act } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import '@testing-library/jest-dom';
 import ContactForm from '../../src/components/forms/contact-form';
@@ -6,14 +6,16 @@ import ContactForm from '../../src/components/forms/contact-form';
 // Mock fetch
 global.fetch = jest.fn();
 
-// Mock the Button component
-jest.mock('../../src/components/ui/button', () => {
-  return function MockButton({ children, type, disabled, ...props }: any) {
-    return (
-      <button type={type} disabled={disabled} {...props}>
-        {children}
-      </button>
-    );
+// Mock next/link
+jest.mock('next/link', () => {
+  return function MockLink({
+    children,
+    href,
+  }: {
+    children: React.ReactNode;
+    href: string;
+  }) {
+    return <a href={href}>{children}</a>;
   };
 });
 
@@ -27,10 +29,21 @@ describe('ContactForm Component', () => {
     it('renders all form elements', () => {
       render(<ContactForm />);
 
-      expect(screen.getByLabelText(/first name/i)).toBeInTheDocument();
-      expect(screen.getByLabelText(/last name/i)).toBeInTheDocument();
-      expect(screen.getByLabelText(/email/i)).toBeInTheDocument();
-      expect(screen.getByLabelText(/message/i)).toBeInTheDocument();
+      // Name field
+      expect(screen.getByLabelText(/your name/i)).toBeInTheDocument();
+      // Email field
+      expect(screen.getByLabelText(/email address/i)).toBeInTheDocument();
+      // Phone field
+      expect(screen.getByLabelText(/phone number/i)).toBeInTheDocument();
+      // Contact method radio group
+      expect(screen.getByText(/how would you prefer to be contacted/i)).toBeInTheDocument();
+      // Enquiry for radio group
+      expect(screen.getByText(/are you contacting me about yourself/i)).toBeInTheDocument();
+      // Message field
+      expect(screen.getByLabelText(/what's bringing you to therapy/i)).toBeInTheDocument();
+      // GDPR consent checkbox
+      expect(screen.getByRole('checkbox')).toBeInTheDocument();
+      // Submit button
       expect(screen.getByRole('button', { name: /send/i })).toBeInTheDocument();
     });
 
@@ -41,23 +54,26 @@ describe('ContactForm Component', () => {
       expect(form).toHaveClass('contactForm');
     });
 
-    it('all fields are required', () => {
+    it('has correct default radio selections', () => {
       render(<ContactForm />);
 
-      expect(screen.getByLabelText(/first name/i)).toBeRequired();
-      expect(screen.getByLabelText(/last name/i)).toBeRequired();
-      expect(screen.getByLabelText(/email/i)).toBeRequired();
-      expect(screen.getByLabelText(/message/i)).toBeRequired();
+      // Email is default contact method
+      const emailRadio = screen.getByRole('radio', { name: /^email$/i });
+      expect(emailRadio).toBeChecked();
+
+      // Myself is default enquiry for
+      const myselfRadio = screen.getByRole('radio', { name: /myself/i });
+      expect(myselfRadio).toBeChecked();
     });
 
     it('email field has correct type', () => {
       render(<ContactForm />);
-      expect(screen.getByLabelText(/email/i)).toHaveAttribute('type', 'email');
+      expect(screen.getByLabelText(/email address/i)).toHaveAttribute('type', 'email');
     });
   });
 
   describe('Form Validation', () => {
-    it('prevents submission with empty fields', async () => {
+    it('prevents submission with empty required fields', async () => {
       const user = userEvent.setup();
       render(<ContactForm />);
 
@@ -68,20 +84,18 @@ describe('ContactForm Component', () => {
       expect(global.fetch).not.toHaveBeenCalled();
     });
 
-    it('validates individual fields for minimum length', async () => {
+    it('requires GDPR consent', async () => {
       const user = userEvent.setup();
       render(<ContactForm />);
 
-      // Fill with invalid data (too short)
-      await user.type(screen.getByLabelText(/first name/i), 'A'); // Too short
-      await user.type(screen.getByLabelText(/last name/i), 'B'); // Too short
-      await user.type(screen.getByLabelText(/email/i), 'invalid'); // Invalid email
-      await user.type(screen.getByLabelText(/message/i), 'Hi'); // Too short
+      // Fill in required fields but not GDPR consent
+      await user.type(screen.getByLabelText(/your name/i), 'John Doe');
+      await user.type(screen.getByLabelText(/email address/i), 'john@example.com');
 
       const submitButton = screen.getByRole('button', { name: /send/i });
       await user.click(submitButton);
 
-      // Should not call fetch with invalid data
+      // Should not call fetch without GDPR consent
       expect(global.fetch).not.toHaveBeenCalled();
     });
   });
@@ -97,13 +111,11 @@ describe('ContactForm Component', () => {
       render(<ContactForm />);
 
       // Fill with valid data
-      await user.type(screen.getByLabelText(/first name/i), 'John');
-      await user.type(screen.getByLabelText(/last name/i), 'Doe');
-      await user.type(screen.getByLabelText(/email/i), 'john@example.com');
-      await user.type(
-        screen.getByLabelText(/message/i),
-        'This is a valid message with sufficient length for testing purposes.'
-      );
+      await user.type(screen.getByLabelText(/your name/i), 'John Doe');
+      await user.type(screen.getByLabelText(/email address/i), 'john@example.com');
+      // contactMethod defaults to 'email', enquiryFor defaults to 'myself'
+      // Check GDPR consent
+      await user.click(screen.getByRole('checkbox'));
 
       const submitButton = screen.getByRole('button', { name: /send/i });
 
@@ -115,12 +127,7 @@ describe('ContactForm Component', () => {
         expect(global.fetch).toHaveBeenCalledWith('/api/contact', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            firstName: 'John',
-            lastName: 'Doe',
-            email: 'john@example.com',
-            message: 'This is a valid message with sufficient length for testing purposes.',
-          }),
+          body: expect.stringContaining('"name":"John Doe"'),
         });
       });
     });
@@ -135,13 +142,9 @@ describe('ContactForm Component', () => {
       render(<ContactForm />);
 
       // Fill with valid data
-      await user.type(screen.getByLabelText(/first name/i), 'John');
-      await user.type(screen.getByLabelText(/last name/i), 'Doe');
-      await user.type(screen.getByLabelText(/email/i), 'john@example.com');
-      await user.type(
-        screen.getByLabelText(/message/i),
-        'This is a valid message with sufficient length.'
-      );
+      await user.type(screen.getByLabelText(/your name/i), 'John Doe');
+      await user.type(screen.getByLabelText(/email address/i), 'john@example.com');
+      await user.click(screen.getByRole('checkbox'));
 
       const submitButton = screen.getByRole('button', { name: /send/i });
 
@@ -150,23 +153,20 @@ describe('ContactForm Component', () => {
       });
 
       await waitFor(() => {
-        expect(
-          screen.getByText('Thank you! Your message has been sent successfully.')
-        ).toBeInTheDocument();
+        expect(screen.getByText(/thanks/i)).toBeInTheDocument();
+        expect(screen.getByText(/1–2 working days/i)).toBeInTheDocument();
       });
 
       // Form should be reset
-      expect(screen.getByLabelText(/first name/i)).toHaveValue('');
-      expect(screen.getByLabelText(/last name/i)).toHaveValue('');
-      expect(screen.getByLabelText(/email/i)).toHaveValue('');
-      expect(screen.getByLabelText(/message/i)).toHaveValue('');
+      expect(screen.getByLabelText(/your name/i)).toHaveValue('');
+      expect(screen.getByLabelText(/email address/i)).toHaveValue('');
     });
   });
 
   describe('Loading State', () => {
     it('shows loading state during submission', async () => {
       const user = userEvent.setup();
-      let resolvePromise: (value: any) => void;
+      let resolvePromise: (value: unknown) => void;
       const fetchPromise = new Promise((resolve) => {
         resolvePromise = resolve;
       });
@@ -175,17 +175,16 @@ describe('ContactForm Component', () => {
       render(<ContactForm />);
 
       // Fill with valid data
-      await user.type(screen.getByLabelText(/first name/i), 'John');
-      await user.type(screen.getByLabelText(/last name/i), 'Doe');
-      await user.type(screen.getByLabelText(/email/i), 'john@example.com');
-      await user.type(screen.getByLabelText(/message/i), 'Valid message content.');
+      await user.type(screen.getByLabelText(/your name/i), 'John Doe');
+      await user.type(screen.getByLabelText(/email address/i), 'john@example.com');
+      await user.click(screen.getByRole('checkbox'));
 
       const submitButton = screen.getByRole('button', { name: /send/i });
       await user.click(submitButton);
 
       // Check loading state
       expect(screen.getByRole('status')).toBeInTheDocument();
-      expect(screen.getByText('Sending your message...')).toBeInTheDocument();
+      expect(screen.getByText(/sending your message/i)).toBeInTheDocument();
       expect(screen.getByRole('button', { name: /sending/i })).toBeDisabled();
 
       // Resolve the promise
@@ -198,24 +197,21 @@ describe('ContactForm Component', () => {
       const user = userEvent.setup();
       (global.fetch as jest.Mock).mockResolvedValueOnce({
         ok: false,
-        json: async () => ({ message: 'Server error' }),
+        json: async () => ({ error: 'Server error' }),
       });
 
       render(<ContactForm />);
 
       // Fill with valid data
-      await user.type(screen.getByLabelText(/first name/i), 'John');
-      await user.type(screen.getByLabelText(/last name/i), 'Doe');
-      await user.type(screen.getByLabelText(/email/i), 'john@example.com');
-      await user.type(screen.getByLabelText(/message/i), 'Valid message content.');
+      await user.type(screen.getByLabelText(/your name/i), 'John Doe');
+      await user.type(screen.getByLabelText(/email address/i), 'john@example.com');
+      await user.click(screen.getByRole('checkbox'));
 
       const submitButton = screen.getByRole('button', { name: /send/i });
       await user.click(submitButton);
 
       await waitFor(() => {
-        expect(
-          screen.getByText('Sorry, something went wrong. Please try again.')
-        ).toBeInTheDocument();
+        expect(screen.getByRole('alert')).toBeInTheDocument();
       });
     });
 
@@ -226,42 +222,16 @@ describe('ContactForm Component', () => {
       render(<ContactForm />);
 
       // Fill with valid data
-      await user.type(screen.getByLabelText(/first name/i), 'John');
-      await user.type(screen.getByLabelText(/last name/i), 'Doe');
-      await user.type(screen.getByLabelText(/email/i), 'john@example.com');
-      await user.type(screen.getByLabelText(/message/i), 'Valid message content.');
+      await user.type(screen.getByLabelText(/your name/i), 'John Doe');
+      await user.type(screen.getByLabelText(/email address/i), 'john@example.com');
+      await user.click(screen.getByRole('checkbox'));
 
       const submitButton = screen.getByRole('button', { name: /send/i });
       await user.click(submitButton);
 
       await waitFor(() => {
-        expect(
-          screen.getByText('Sorry, something went wrong. Please try again.')
-        ).toBeInTheDocument();
+        expect(screen.getByText(/unable to send your message/i)).toBeInTheDocument();
       });
-    });
-  });
-
-  describe('Textarea Auto-grow', () => {
-    it('adjusts textarea height on input', async () => {
-      const user = userEvent.setup();
-      render(<ContactForm />);
-
-      const textarea = screen.getByLabelText(/message/i) as HTMLTextAreaElement;
-
-      // Mock scrollHeight
-      Object.defineProperty(textarea, 'scrollHeight', {
-        value: 150,
-        writable: true,
-      });
-
-      await user.type(
-        textarea,
-        'This is a long message that should cause the textarea to grow in height automatically when the content exceeds the default height.'
-      );
-
-      // Check that style.height is set to scrollHeight
-      expect(textarea.style.height).toBe('150px');
     });
   });
 
@@ -269,10 +239,10 @@ describe('ContactForm Component', () => {
     it('has proper form labels', () => {
       render(<ContactForm />);
 
-      expect(screen.getByLabelText(/first name/i)).toBeInTheDocument();
-      expect(screen.getByLabelText(/last name/i)).toBeInTheDocument();
-      expect(screen.getByLabelText(/email/i)).toBeInTheDocument();
-      expect(screen.getByLabelText(/message/i)).toBeInTheDocument();
+      expect(screen.getByLabelText(/your name/i)).toBeInTheDocument();
+      expect(screen.getByLabelText(/email address/i)).toBeInTheDocument();
+      expect(screen.getByLabelText(/phone number/i)).toBeInTheDocument();
+      expect(screen.getByLabelText(/what's bringing you to therapy/i)).toBeInTheDocument();
     });
 
     it('uses proper ARIA attributes for status messages', async () => {
@@ -285,29 +255,26 @@ describe('ContactForm Component', () => {
       render(<ContactForm />);
 
       // Fill and submit form
-      await user.type(screen.getByLabelText(/first name/i), 'John');
-      await user.type(screen.getByLabelText(/last name/i), 'Doe');
-      await user.type(screen.getByLabelText(/email/i), 'john@example.com');
-      await user.type(screen.getByLabelText(/message/i), 'Valid message content.');
+      await user.type(screen.getByLabelText(/your name/i), 'John Doe');
+      await user.type(screen.getByLabelText(/email address/i), 'john@example.com');
+      await user.click(screen.getByRole('checkbox'));
 
       const submitButton = screen.getByRole('button', { name: /send/i });
       await user.click(submitButton);
 
       await waitFor(() => {
-        const successMessage = screen.getByRole('alert');
-        expect(successMessage).toHaveTextContent(
-          'Thank you! Your message has been sent successfully.'
-        );
+        const successMessage = screen.getByRole('status');
+        expect(successMessage).toHaveAttribute('aria-live', 'polite');
       });
     });
 
     it('maintains focus management', () => {
       render(<ContactForm />);
 
-      const firstNameInput = screen.getByLabelText(/first name/i);
-      firstNameInput.focus();
+      const nameInput = screen.getByLabelText(/your name/i);
+      nameInput.focus();
 
-      expect(document.activeElement).toBe(firstNameInput);
+      expect(document.activeElement).toBe(nameInput);
     });
   });
 
@@ -315,7 +282,7 @@ describe('ContactForm Component', () => {
     it('prevents double submission', async () => {
       const user = userEvent.setup();
 
-      let resolvePromise: (value: any) => void;
+      let resolvePromise: (value: unknown) => void;
       const fetchPromise = new Promise((resolve) => {
         resolvePromise = resolve;
       });
@@ -324,10 +291,9 @@ describe('ContactForm Component', () => {
       render(<ContactForm />);
 
       // Fill out the form
-      await user.type(screen.getByLabelText(/first name/i), 'John');
-      await user.type(screen.getByLabelText(/last name/i), 'Doe');
-      await user.type(screen.getByLabelText(/email/i), 'john@example.com');
-      await user.type(screen.getByLabelText(/message/i), 'Valid message content.');
+      await user.type(screen.getByLabelText(/your name/i), 'John Doe');
+      await user.type(screen.getByLabelText(/email address/i), 'john@example.com');
+      await user.click(screen.getByRole('checkbox'));
 
       const submitButton = screen.getByRole('button', { name: /send/i });
 
@@ -342,6 +308,26 @@ describe('ContactForm Component', () => {
 
       // Resolve the promise
       resolvePromise!({ ok: true, json: async () => ({ success: true }) });
+    });
+
+    it('allows selecting different contact methods', async () => {
+      const user = userEvent.setup();
+      render(<ContactForm />);
+
+      const phoneRadio = screen.getByRole('radio', { name: /^phone$/i });
+      await user.click(phoneRadio);
+
+      expect(phoneRadio).toBeChecked();
+    });
+
+    it('allows selecting different enquiry types', async () => {
+      const user = userEvent.setup();
+      render(<ContactForm />);
+
+      const childRadio = screen.getByRole('radio', { name: /my child or teenager/i });
+      await user.click(childRadio);
+
+      expect(childRadio).toBeChecked();
     });
   });
 
@@ -358,19 +344,29 @@ describe('ContactForm Component', () => {
       render(<ContactForm />);
 
       // Fill out the form
-      await user.type(screen.getByLabelText(/first name/i), 'John');
-      await user.type(screen.getByLabelText(/last name/i), 'Doe');
-      await user.type(screen.getByLabelText(/email/i), 'john@example.com');
-      await user.type(screen.getByLabelText(/message/i), 'Valid message content.');
+      await user.type(screen.getByLabelText(/your name/i), 'John Doe');
+      await user.type(screen.getByLabelText(/email address/i), 'john@example.com');
+      await user.click(screen.getByRole('checkbox'));
 
       const submitButton = screen.getByRole('button', { name: /send/i });
       await user.click(submitButton);
 
       await waitFor(() => {
-        expect(
-          screen.getByText('Sorry, something went wrong. Please try again.')
-        ).toBeInTheDocument();
+        expect(screen.getByRole('alert')).toBeInTheDocument();
       });
+    });
+
+    it('shows character counter for message field', () => {
+      render(<ContactForm />);
+
+      expect(screen.getByText(/0\/1000/)).toBeInTheDocument();
+    });
+
+    it('displays privacy policy link', () => {
+      render(<ContactForm />);
+
+      const privacyLink = screen.getByRole('link', { name: /privacy policy/i });
+      expect(privacyLink).toHaveAttribute('href', '/privacy-policy');
     });
   });
 });
