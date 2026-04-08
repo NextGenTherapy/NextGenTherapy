@@ -188,7 +188,9 @@ export default function Header() {
           <li className={`${styles.navItem} ${styles.mobileDropdown} ${styles.mobileOnly}`}>
             <button
               type="button"
+              id="mobile-services-menu-trigger"
               className={styles.mobileDropdownTrigger}
+              aria-haspopup="true"
               aria-expanded={isMobileDropdownOpen}
               onClick={toggleMobileDropdown}
               onKeyDown={handleMobileDropdownKeyDown}
@@ -213,16 +215,18 @@ export default function Header() {
             </button>
             <ul
               className={`${styles.mobileDropdownMenu} ${isMobileDropdownOpen ? styles.mobileDropdownMenuOpen : ''}`}
+              role="menu"
+              aria-labelledby="mobile-services-menu-trigger"
             >
               {dropdownLinks.map((link) => (
-                <li key={link.href}>
+                <li key={link.href} role="menuitem">
                   <Link href={link.href} onClick={closeMenu}>
                     {link.label}
                   </Link>
                 </li>
               ))}
-              <li className={styles.dropdownDivider}></li>
-              <li>
+              <li className={styles.dropdownDivider} role="separator" aria-hidden="true"></li>
+              <li role="menuitem">
                 <Link href="/is-this-right-for-you" onClick={closeMenu}>
                   Is This Right For You?
                 </Link>

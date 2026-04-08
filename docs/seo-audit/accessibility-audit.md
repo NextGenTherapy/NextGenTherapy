@@ -71,6 +71,12 @@ The Next Generation Therapy website meets WCAG 2.1 Level AA accessibility requir
 | Focus states using `:focus` | Multiple files | `:focus` pseudo-class | `:focus-visible` for keyboard-only indication |
 | Cookie consent buttons missing focus | `CookieConsent.module.scss` | No focus styling | Added `:focus-visible` to both buttons |
 
+### Mobile Navigation ARIA
+
+| Issue | Location | Before | After |
+|-------|----------|--------|-------|
+| Mobile dropdown missing ARIA roles | `header.tsx:187-231` | No ARIA menu pattern | Added `role="menu"`, `role="menuitem"`, `role="separator"`, `aria-haspopup`, `aria-labelledby` |
+
 ### Bug Fixes
 
 | Issue | Location | Before | After |
@@ -88,7 +94,7 @@ The Next Generation Therapy website meets WCAG 2.1 Level AA accessibility requir
 | `src/components/ui/scroll-to-top.module.scss` | Added `:focus-visible` styling |
 | `src/app/romanian-therapy/page.tsx` | Added `lang="ro"` to 4 Romanian content sections |
 | `src/app/loading.tsx` | Added `role="status"` to spinner for valid ARIA |
-| `src/components/layout/Header.tsx` | Removed Button import; changed hamburger to plain `<button>` |
+| `src/components/layout/header.tsx` | Removed Button import; changed hamburger to plain `<button>`; added ARIA attributes to mobile dropdown |
 | `src/components/layout/header.module.scss` | Updated 6 focus states; fixed Book Now hover; changed to `:focus-visible` |
 | `src/components/layout/footer.module.scss` | Updated 8 focus states; fixed copyright/credentials color; changed to `:focus-visible` |
 | `src/components/layout/CookieConsent.module.scss` | Changed accept button to brand color; added focus styles to both buttons |
