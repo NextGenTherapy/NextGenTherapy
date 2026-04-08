@@ -4,47 +4,26 @@ These are all `{{ CONFIRM WITH ANDREEA }}` placeholders found by searching the e
 
 ---
 
-## Priority 1: Legal Pages (DRAFT — Pending Review)
+## Priority 1: ICO Registration Number (URGENT)
 
-**Status:** All legal pages are marked DRAFT and need review by Andreea and a legal advisor before publishing.
+**File:** `src/app/privacy-policy/page.tsx` (line 124)
 
-### ICO Registration Number
-**File:** `src/app/privacy-policy/page.tsx` (line 157)
-```
-{{ CONFIRM WITH ANDREEA: ICO registration number }}
-```
-**Question:** Is Next Generation Therapy registered with the Information Commissioner's Office (ICO)? If yes, what is the registration number?
+**Status:** Andreea confirmed she IS registered with the ICO. Just need the registration number to insert.
 
-### Clinical Supervisor Disclosure
-**File:** `src/app/privacy-policy/page.tsx` (line 247)
-```
-{{ CONFIRM WITH ANDREEA: Clinical supervisor disclosure — name or just confirm existence? }}
-```
-**Question:** For the privacy policy, should we name the clinical supervisor or just confirm that supervision exists?
+**Action:** Provide the ICO registration number. It can be found by logging into the ICO website or checking any previous ICO correspondence.
 
-### Online Session Platform
-**File:** `src/app/privacy-policy/page.tsx` (line 257)
-```
-{{ CONFIRM WITH ANDREEA: Online platform — Zoom or other? }}
-```
-**Question:** Which video platform is used for online therapy sessions? (Zoom, Google Meet, other)
-
-### Data Retention Period
-**Question:** Confirm 7-year retention period for clinical notes per BACP guidelines is correct.
-
-### Contact Email
-**Question:** Contact email is Gmail (`andreeatherapytoday@gmail.com`). Is this acceptable for processing client enquiries?
+**Current placeholder text:** `[Registration number to be inserted]`
 
 ---
 
-## Priority 2: Legal Pages General Review
+## Priority 2: Legal Pages — Complete
 
-All three legal pages need review:
-- `/privacy-policy` — Restructured with 13 sections
-- `/terms` — Simplified to 7 sections
-- `/cookies` — New page
+Legal pages have been reviewed and are ready. No further action needed unless Andreea wants changes:
+- `/privacy-policy` — 18 sections, UK GDPR compliant
+- `/terms` — 15 sections, website terms only
+- `/cookies` — New page with full cookie disclosure
 
-**See:** `docs/seo-audit/legal-pages-audit.md` for full details of changes.
+**See:** `docs/seo-audit/legal-pages-audit.md` for full details.
 
 ---
 
