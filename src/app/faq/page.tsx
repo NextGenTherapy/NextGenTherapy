@@ -283,12 +283,13 @@ const practicalFaqs = [
     answer: (
       <p>
         In-person sessions take place at Colchester Business Centre, 1 George Williams Way,
-        Colchester CO1 2JS. The room is on the ground floor, quiet, and designed to feel calm — with
-        plants, soft lighting, and comfortable seating. There is free parking on site.
+        Colchester CO1 2JS. The room is on the ground floor, wheelchair accessible, quiet, and
+        designed to feel calm — with plants, soft lighting, and comfortable seating. There is free
+        parking on site.
       </p>
     ),
     plainAnswer:
-      'In-person sessions take place at Colchester Business Centre, 1 George Williams Way, Colchester CO1 2JS. The room is on the ground floor, quiet, and designed to feel calm — with plants, soft lighting, and comfortable seating. There is free parking on site.',
+      'In-person sessions take place at Colchester Business Centre, 1 George Williams Way, Colchester CO1 2JS. The room is on the ground floor, wheelchair accessible, quiet, and designed to feel calm — with plants, soft lighting, and comfortable seating. There is free parking on site.',
   },
   {
     question: 'What days and times do you work?',

@@ -100,6 +100,15 @@ export default function AboutMe() {
       {
         '@type': 'EducationalOccupationalCredential',
         credentialCategory: 'degree',
+        name: 'BA Criminology and Social Psychology',
+        recognizedBy: {
+          '@type': 'CollegeOrUniversity',
+          name: 'University of Essex',
+        },
+      },
+      {
+        '@type': 'EducationalOccupationalCredential',
+        credentialCategory: 'degree',
         name: 'MA Psychodynamic Psychotherapy',
         recognizedBy: {
           '@type': 'CollegeOrUniversity',
@@ -170,6 +179,10 @@ export default function AboutMe() {
                 <div className={styles.trainingGroup}>
                   <h3>Training</h3>
                   <dl className={styles.definitionList}>
+                    <div className={styles.definitionItem}>
+                      <dt>BA Criminology and Social Psychology</dt>
+                      <dd>University of Essex</dd>
+                    </div>
                     <div className={styles.definitionItem}>
                       <dt>MA Psychodynamic Psychotherapy</dt>
                       <dd>University of Essex, 2020</dd>

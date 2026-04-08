@@ -123,6 +123,23 @@ export default function LocalBusinessSchema() {
     paymentAccepted: ['Bank Transfer'],
     currenciesAccepted: 'GBP',
     priceRange: '£60',
+    amenityFeature: [
+      {
+        '@type': 'LocationFeatureSpecification',
+        name: 'Wheelchair accessible',
+        value: true,
+      },
+      {
+        '@type': 'LocationFeatureSpecification',
+        name: 'Ground floor access',
+        value: true,
+      },
+      {
+        '@type': 'LocationFeatureSpecification',
+        name: 'Free parking',
+        value: true,
+      },
+    ],
   };
 
   return (

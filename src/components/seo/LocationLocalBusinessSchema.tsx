@@ -70,6 +70,23 @@ export default function LocationLocalBusinessSchema({
       'https://www.instagram.com/nextgentherapycolchester',
       'https://www.bacp.co.uk/therapists/385976/andreea-horhocea/london-e16',
     ],
+    amenityFeature: [
+      {
+        '@type': 'LocationFeatureSpecification',
+        name: 'Wheelchair accessible',
+        value: true,
+      },
+      {
+        '@type': 'LocationFeatureSpecification',
+        name: 'Ground floor access',
+        value: true,
+      },
+      {
+        '@type': 'LocationFeatureSpecification',
+        name: 'Free parking',
+        value: true,
+      },
+    ],
   };
 
   return (
