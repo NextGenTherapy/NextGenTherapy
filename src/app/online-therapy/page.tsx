@@ -8,9 +8,9 @@ import buttonStyles from '../../components/ui/button.module.scss';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://nextgentherapy.co.uk'),
-  title: 'Online Therapy UK | Video Sessions Age 16+ | Next Generation Therapy',
+  title: 'Online Therapy UK | Video Sessions Age 16+',
   description:
-    'Online psychodynamic therapy across the UK. Secure video sessions for clients aged 16 and over. £60 per 50-minute session. Weekly on Wednesdays. BACP registered therapist offering therapy in English and Romanian.',
+    'Online psychodynamic therapy UK-wide. Secure video sessions, age 16+. £60 per session. Wednesdays. BACP registered. English & Romanian.',
   keywords: [
     'online therapy uk',
     'online psychodynamic therapy',

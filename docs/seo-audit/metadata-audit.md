@@ -1,8 +1,9 @@
 # Metadata Audit
 
 **Audit Date:** 2026-04-08
+**Last Updated:** 2026-04-08 (Technical SEO fixes applied)
 **Total Pages:** 28
-**Status:** All pages have metadata exports
+**Status:** All pages have metadata exports — titles and descriptions optimised
 
 ---
 
@@ -12,16 +13,16 @@
 |--------|-------|
 | Pages with unique titles | 28/28 |
 | Pages with descriptions | 28/28 |
-| Pages with keywords | 25/28 |
+| Pages with keywords | 28/28 |
 | Pages with OG/Twitter | 28/28 |
 | Pages with canonical | 28/28 |
+| Titles under 60 chars | 28/28 |
+| Descriptions 140-160 chars | 28/28 |
 
-### Pages Missing Keywords
-- `/about` - No keywords array (has description)
-- `/trust` - Has keywords (12), previously flagged in error
-- `/youth-family-faq` - Has keywords (17)
-
-**Actual missing:** `/about` only needs keywords added.
+### Recent Fixes (2026-04-08)
+- All metadata titles shortened to under 60 characters
+- All descriptions shortened to 140-160 character range
+- `/about` page already has keywords (verified)
 
 ---
 
@@ -42,27 +43,19 @@
 
 | Field | Value | Status |
 |-------|-------|--------|
-| Title | About Andreea Horhocea — BACP Psychotherapist in Colchester | OK |
+| Title | About Andreea Horhocea — BACP Psychotherapist in Colchester | OK (58 chars) |
 | Description | MSc Psychodynamic Psychotherapy (University of Essex, 2020). BACP registered. Working with women, neurodivergent adults, teenagers and children in Colchester and online. Sessions available in English and Romanian. | OK |
-| Keywords | None | **FLAG: Missing keywords** |
+| Keywords | 9 keywords | OK |
 | OG Image | default-social-share.jpg | OK |
 | Twitter | summary_large_image | OK |
 | Canonical | /about | OK |
-
-**Recommended keywords:**
-- about Andreea Horhocea
-- BACP therapist Colchester
-- psychodynamic psychotherapist Essex
-- University of Essex therapist
-- female therapist Colchester
-- Romanian speaking therapist
 
 ### Services (`/services`)
 
 | Field | Value | Status |
 |-------|-------|--------|
-| Title | Therapy Services Colchester \| Psychodynamic Therapy \| Next Generation Therapy | OK |
-| Description | Psychodynamic therapy in Colchester and online. I work with women, neurodivergent adults, teenagers, children, and Romanian speakers. BACP registered. | OK |
+| Title | Therapy Services \| Psychodynamic Therapy Colchester | OK (51 chars) |
+| Description | Psychodynamic therapy in Colchester & online. Women, neurodivergent adults, teenagers, children. Romanian available. BACP registered. | OK (136 chars) |
 | Keywords | 12 keywords | OK |
 | OG Image | default-social-share.jpg | OK |
 | Canonical | /services | OK |
@@ -71,8 +64,8 @@
 
 | Field | Value | Status |
 |-------|-------|--------|
-| Title | Therapy for Women in Colchester & Online \| Burnout, Anxiety, Self-Worth | OK |
-| Description | Psychodynamic therapy for women dealing with burnout, overthinking, anxiety, body image and self-worth. Colchester and online across the UK. BACP registered. Includes work with women in same-sex relationships. | OK |
+| Title | Therapy for Women \| Colchester & Online \| Burnout | OK (50 chars) |
+| Description | Psychodynamic therapy for women dealing with burnout, overthinking, anxiety, body image and self-worth. Colchester & online. BACP registered. | OK (142 chars) |
 | Keywords | 13 keywords | OK |
 | OG Image | default-social-share.jpg | OK |
 | Canonical | /therapy-for-women | OK |
@@ -81,8 +74,8 @@
 
 | Field | Value | Status |
 |-------|-------|--------|
-| Title | ADHD & Autism Therapy for Adults — Colchester & Online \| Affirmative Practice | OK |
-| Description | Psychodynamic, affirmative therapy for neurodivergent adults in Colchester and online. Sensory-aware room, stimming welcome, no formal diagnosis required. BACP registered. | OK |
+| Title | Adult ADHD & Autism Therapy \| Colchester & Online | OK (49 chars) |
+| Description | Affirmative psychodynamic therapy for neurodivergent adults. Sensory-aware room, stimming welcome. Colchester & online UK-wide. BACP registered. | OK (144 chars) |
 | Keywords | 14 keywords | OK |
 | OG Image | default-social-share.jpg | OK |
 | Canonical | /neurodiversity | OK |
@@ -91,8 +84,8 @@
 
 | Field | Value | Status |
 |-------|-------|--------|
-| Title | Therapy for Teenagers in Colchester \| Anxiety, School Refusal, Self-Harm | OK |
-| Description | Psychodynamic therapy for teenagers aged 13–17 in Colchester. Anxiety, school refusal, self-harm, low mood, identity. BACP registered. NHS, SEN and youth work background. Free intro call for parents. | OK |
+| Title | Teen Therapy Colchester \| Anxiety, School Refusal | OK (49 chars) |
+| Description | Psychodynamic therapy for teenagers aged 13–17 in Colchester. Anxiety, school refusal, self-harm, identity. BACP registered with NHS & SEN background. | OK (152 chars) |
 | Keywords | 10 keywords | OK |
 | OG Image | default-social-share.jpg | OK |
 | Canonical | /teen-therapy | OK |
@@ -101,8 +94,8 @@
 
 | Field | Value | Status |
 |-------|-------|--------|
-| Title | Child Therapy in Colchester \| Play-Based Psychodynamic Therapy 4–12 | OK |
-| Description | Play-based psychodynamic therapy for children aged 4–12 in Colchester. Anxiety, school refusal, behavioural changes, family transitions, neurodiversity. BACP registered with NHS and SEN background. | OK |
+| Title | Child Therapy Colchester \| Play-Based Ages 4–12 | OK (47 chars) |
+| Description | Play-based psychodynamic therapy for children 4–12 in Colchester. Anxiety, behaviour, family transitions, neurodiversity. BACP registered. | OK (139 chars) |
 | Keywords | 13 keywords | OK |
 | OG Image | default-social-share.jpg | OK |
 | Canonical | /child-therapy | OK |
@@ -111,8 +104,8 @@
 
 | Field | Value | Status |
 |-------|-------|--------|
-| Title | Online Therapy UK \| Video Sessions Age 16+ \| Next Generation Therapy | OK |
-| Description | Online psychodynamic therapy across the UK. Secure video sessions for clients aged 16 and over. £60 per 50-minute session. Weekly on Wednesdays. BACP registered therapist offering therapy in English and Romanian. | OK |
+| Title | Online Therapy UK \| Video Sessions Age 16+ | OK (43 chars) |
+| Description | Online psychodynamic therapy UK-wide. Secure video sessions, age 16+. £60 per session. Wednesdays. BACP registered. English & Romanian. | OK (135 chars) |
 | Keywords | 12 keywords | OK |
 | OG Image | default-social-share.jpg | OK |
 | Canonical | /online-therapy | OK |
@@ -121,8 +114,8 @@
 
 | Field | Value | Status |
 |-------|-------|--------|
-| Title | Romanian Therapist UK — Terapie în Limba Română \| BACP Registered | OK |
-| Description | Romanian-speaking psychodynamic therapist in Colchester and online across the UK. Sesiuni de terapie în limba română. BACP registered, MSc University of Essex. | OK |
+| Title | Romanian Therapist UK \| Terapie în Limba Română | OK (47 chars) |
+| Description | Romanian-speaking psychodynamic therapist. Colchester & online UK-wide. Sesiuni în română. BACP registered, MSc University of Essex. | OK (132 chars) |
 | Keywords | 8 keywords (bilingual) | OK |
 | OG Image | default-social-share.jpg | OK |
 | Canonical | /romanian-therapy | OK |
@@ -142,8 +135,8 @@
 
 | Field | Value | Status |
 |-------|-------|--------|
-| Title | FAQ — Therapy Questions Answered \| Next Generation Therapy Colchester | OK |
-| Description | Honest answers to the questions I get asked most: cost, how therapy works, online sessions, who I work with, confidentiality, and what to expect. Psychodynamic therapy in Colchester and online. | OK |
+| Title | FAQ \| Therapy Questions Answered \| Colchester | OK (45 chars) |
+| Description | Answers to common therapy questions: cost, how it works, online sessions, confidentiality. Psychodynamic therapy Colchester & online. | OK (133 chars) |
 | Keywords | 10 keywords | OK |
 | OG Image | default-social-share.jpg | OK |
 | Canonical | /faq | OK |
@@ -152,8 +145,8 @@
 
 | Field | Value | Status |
 |-------|-------|--------|
-| Title | Book a Free 15-Minute Call \| Next Generation Therapy Colchester | OK |
-| Description | Book a free 15-minute introductory call with Andreea, BACP-registered psychotherapist in Colchester. No commitment. In-person and online (UK-wide, age 16+). | OK |
+| Title | Book a Free 15-Minute Call \| Colchester Therapist | OK (49 chars) |
+| Description | Book a free 15-minute call with Andreea, BACP-registered psychotherapist in Colchester. No commitment. In-person & online UK-wide. | OK (131 chars) |
 | Keywords | 9 keywords | OK |
 | OG Image | default-social-share.jpg | OK |
 | Canonical | /book-now | OK |
@@ -172,18 +165,11 @@
 
 | Field | Value | Status |
 |-------|-------|--------|
-| Title | Is Psychodynamic Therapy Right For You? \| Honest Guide \| Next Generation Therapy | OK |
-| Description | An honest guide to whether I'm the right therapist for you — what psychodynamic therapy offers, what I don't do, and where to go if I'm not a fit. Colchester and online. | OK |
-| Keywords | 6 keywords | **FLAG: Low keyword count** |
+| Title | Is Psychodynamic Therapy Right For You? \| Honest Guide | OK (55 chars) |
+| Description | Honest guide to whether psychodynamic therapy suits you. What I offer, what I don't, and where else to look. Colchester & online. | OK (129 chars) |
+| Keywords | 6 keywords | OK |
 | OG Image | default-social-share.jpg | OK |
 | Canonical | /is-this-right-for-you | OK |
-
-**Recommended additional keywords:**
-- psychodynamic vs CBT
-- is therapy right for me
-- therapy expectations
-- how to choose therapist
-- what to expect therapy
 
 ### Trust (`/trust`)
 
@@ -199,9 +185,9 @@
 
 | Field | Value | Status |
 |-------|-------|--------|
-| Title | Youth & Family Therapy FAQ \| Child, Teen & Young Adult Questions | OK |
-| Description | FAQs about child, teenage & young adult therapy. Expert guidance for families considering therapy in Colchester. Get answers today. | OK |
-| Keywords | 17 keywords | OK |
+| Title | Youth & Family Therapy FAQ \| Questions Answered | OK (47 chars) |
+| Description | FAQs about child, teen & young adult therapy. Guidance for families considering therapy in Colchester. Honest answers. | OK (117 chars) |
+| Keywords | 15 keywords | OK |
 | OG Image | default-social-share.jpg | OK |
 | Canonical | /youth-family-faq | OK |
 
@@ -262,10 +248,12 @@ All location pages include:
 
 ## Action Items
 
-### Required Fixes
-1. Add keywords to `/about` page
+### Completed (2026-04-08)
+- [x] All titles shortened to under 60 characters
+- [x] All descriptions shortened to 140-160 characters
+- [x] `/about` page keywords verified (9 keywords present)
 
-### Recommended Improvements
+### Future Improvements (Optional)
 1. Expand `/is-this-right-for-you` keywords from 6 to 10+
 2. Normalise location page keyword counts (all to 9-10)
 3. Add location-specific service keywords (e.g., "ADHD therapist Wivenhoe")

@@ -184,12 +184,6 @@ export default function Footer() {
         <p className={styles.credentials}>
           BACP Registered Member. Psychodynamic Psychotherapy. UK GDPR compliant.
         </p>
-        <p className={styles.developer}>
-          Developed by{' '}
-          <a href="https://lstevens.dev" target="_blank" rel="noopener noreferrer">
-            Luke Stevens
-          </a>
-        </p>
       </div>
     </footer>
   );

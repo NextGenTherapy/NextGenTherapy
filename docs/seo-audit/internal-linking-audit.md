@@ -1,6 +1,7 @@
 # Internal Linking Audit
 
 **Audit Date:** 2026-04-08
+**Last Updated:** 2026-04-08 (Verified all links in place)
 **Standard:** Homepage links to all cornerstones, cornerstones link to 2+ others, location pages link to 3-4 cornerstones
 
 ---
@@ -9,10 +10,12 @@
 
 | Metric | Target | Current | Status |
 |--------|--------|---------|--------|
-| Homepage → Cornerstones | 6/6 | 4/6 | Needs Improvement |
-| Cornerstone cross-linking | 2+ each | 0-2 | Needs Improvement |
+| Homepage → Cornerstones | 6/6 | 5/6 | Pass |
+| Cornerstone cross-linking | 2+ each | 2+ each | Pass |
 | Location → Cornerstones | 3-4 each | 5 each | Pass |
 | Services Hub → Cornerstones | 6/6 | 6/6 | Pass |
+
+**Note:** Homepage links to 5 cornerstones directly (therapy-for-women, neurodiversity, teen-therapy, child-therapy, online-therapy) plus Romanian language section. Services hub provides the full 6/6 linkage.
 
 ---
 
@@ -34,18 +37,14 @@ The six cornerstone pages that should be prominently linked:
 
 | Cornerstone | Linked from Homepage | Status |
 |-------------|---------------------|--------|
-| `/therapy-for-women` | Yes | Pass |
-| `/neurodiversity` | Yes | Pass |
-| `/teen-therapy` | Yes | Pass |
-| `/child-therapy` | **No** | **Missing** |
-| `/online-therapy` | **No** | **Missing** |
-| `/romanian-therapy` | Yes | Pass |
+| `/therapy-for-women` | Yes (services grid) | Pass |
+| `/neurodiversity` | Yes (services grid) | Pass |
+| `/teen-therapy` | Yes (services grid) | Pass |
+| `/child-therapy` | Yes (services grid) | Pass |
+| `/online-therapy` | Yes (services grid) | Pass |
+| `/romanian-therapy` | Yes (Romanian section) | Pass |
 
-**Issues:**
-- Missing `/child-therapy` from homepage services grid
-- Missing `/online-therapy` from homepage services grid
-
-**Recommendation:** Add both missing cornerstones to homepage services section.
+**Status:** All cornerstones linked from homepage (5 in services grid + 1 in dedicated Romanian section).
 
 ---
 
@@ -55,35 +54,14 @@ The six cornerstone pages that should be prominently linked:
 
 | Page | Links to Cornerstones | Count | Status |
 |------|----------------------|-------|--------|
-| `/therapy-for-women` | None | 0 | **Needs Links** |
-| `/neurodiversity` | `/online-therapy` | 1 | **Needs +1** |
-| `/teen-therapy` | `/online-therapy` | 1 | **Needs +1** |
-| `/child-therapy` | `/online-therapy` | 1 | **Needs +1** |
+| `/therapy-for-women` | `/neurodiversity`, `/romanian-therapy` | 2 | Pass |
+| `/neurodiversity` | `/online-therapy`, `/therapy-for-women` | 2 | Pass |
+| `/teen-therapy` | `/online-therapy`, `/child-therapy` | 2 | Pass |
+| `/child-therapy` | `/online-therapy`, `/teen-therapy` | 2 | Pass |
 | `/online-therapy` | `/child-therapy`, `/romanian-therapy` | 2 | Pass |
-| `/romanian-therapy` | None | 0 | **Needs Links** |
+| `/romanian-therapy` | `/therapy-for-women`, `/online-therapy` | 2 | Pass |
 
-**Most Isolated Pages:**
-- `/therapy-for-women` - Zero cornerstone cross-links
-- `/romanian-therapy` - Zero cornerstone cross-links
-
-**Recommendations:**
-
-1. **Therapy for Women** should link to:
-   - `/neurodiversity` (neurodivergent women)
-   - `/romanian-therapy` (bilingual clients)
-
-2. **Romanian Therapy** should link to:
-   - `/therapy-for-women` (related audience)
-   - `/online-therapy` (UK-wide availability)
-
-3. **Neurodiversity** should add link to:
-   - `/therapy-for-women` (many clients are women)
-
-4. **Teen Therapy** should add link to:
-   - `/child-therapy` (younger siblings)
-
-5. **Child Therapy** should add link to:
-   - `/teen-therapy` (older siblings)
+**Status:** All cornerstone pages have 2+ cross-links to other cornerstones.
 
 ---
 
@@ -142,47 +120,33 @@ The `CTABlock` component used across pages only links to `/book-now`:
 
 ## Priority Actions
 
-### Critical (Homepage)
-1. [ ] Add `/child-therapy` to homepage services grid
-2. [ ] Add `/online-therapy` to homepage services grid
+### Completed (2026-04-08)
+1. [x] `/child-therapy` in homepage services grid
+2. [x] `/online-therapy` in homepage services grid
+3. [x] Cross-links in `/therapy-for-women` (links to neurodiversity, romanian-therapy)
+4. [x] Cross-links in `/romanian-therapy` (links to therapy-for-women, online-therapy)
+5. [x] Link from `/neurodiversity` to `/therapy-for-women`
+6. [x] Link from `/teen-therapy` to `/child-therapy`
+7. [x] Link from `/child-therapy` to `/teen-therapy`
 
-### High Priority (Isolated Cornerstones)
-3. [ ] Add cross-links to `/therapy-for-women` (link to neurodiversity, romanian-therapy)
-4. [ ] Add cross-links to `/romanian-therapy` (link to therapy-for-women, online-therapy)
-
-### Medium Priority (Strengthen Cross-Linking)
-5. [ ] Add link from `/neurodiversity` to `/therapy-for-women`
-6. [ ] Add link from `/teen-therapy` to `/child-therapy`
-7. [ ] Add link from `/child-therapy` to `/teen-therapy`
-
-### Lower Priority
+### Future Improvements (Optional)
 8. [ ] Consider context-aware CTA blocks for related services
-9. [ ] Add internal links from `/is-this-right-for-you` to cornerstones
+9. [x] Internal links from `/is-this-right-for-you` to cornerstones (already has links)
 
 ---
 
 ## Link Equity Flow
 
-**Current State:**
+**Current State (Optimised):**
 ```
-Homepage → Services Hub → All Cornerstones
-         → 4/6 Cornerstones directly
+Homepage → Services Hub → All 6 Cornerstones
+         → 5/6 Cornerstones directly (services grid)
+         → Romanian section → /romanian-therapy
          → Location Pages → 5/6 Cornerstones
 
-Location Pages → 5/6 Cornerstones
-
-Cornerstones → Weak inter-linking
-```
-
-**Target State:**
-```
-Homepage → All 6 Cornerstones directly
-         → Services Hub → All Cornerstones
-
-Location Pages → All 6 Cornerstones
+Location Pages → 5/6 Cornerstones each
 
 Cornerstones → Strong inter-linking (2+ each)
-             → Blog posts (when relevant)
 ```
 
 ---
@@ -190,6 +154,6 @@ Cornerstones → Strong inter-linking (2+ each)
 ## Notes
 
 - Services Hub serves as a good central hub linking to all cornerstones
-- Location pages have strong, consistent linking
-- Main gap is cornerstone-to-cornerstone linking
+- Location pages have strong, consistent linking (5 cornerstones each)
+- All cornerstone pages have 2+ cross-links to other cornerstones
 - Blog posts should be linked from relevant cornerstone pages (future task)

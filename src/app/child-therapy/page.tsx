@@ -7,9 +7,9 @@ import styles from './child-therapy.module.scss';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://nextgentherapy.co.uk'),
-  title: 'Child Therapy in Colchester | Play-Based Psychodynamic Therapy 4–12',
+  title: 'Child Therapy Colchester | Play-Based Ages 4–12',
   description:
-    'Play-based psychodynamic therapy for children aged 4–12 in Colchester. Anxiety, school refusal, behavioural changes, family transitions, neurodiversity. BACP registered with NHS and SEN background.',
+    'Play-based psychodynamic therapy for children 4–12 in Colchester. Anxiety, behaviour, family transitions, neurodiversity. BACP registered.',
   keywords: [
     'child therapy Colchester',
     'child therapist Colchester',

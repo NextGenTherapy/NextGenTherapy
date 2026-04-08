@@ -9,9 +9,9 @@ import styles from './is-this-right-for-you.module.scss';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://nextgentherapy.co.uk'),
-  title: 'Is Psychodynamic Therapy Right For You? | Honest Guide | Next Generation Therapy',
+  title: 'Is Psychodynamic Therapy Right For You? | Honest Guide',
   description:
-    "An honest guide to whether I'm the right therapist for you — what psychodynamic therapy offers, what I don't do, and where to go if I'm not a fit. Colchester and online.",
+    "Honest guide to whether psychodynamic therapy suits you. What I offer, what I don't, and where else to look. Colchester & online.",
   keywords: [
     'is therapy right for me',
     'psychodynamic therapy explained',
@@ -180,25 +180,25 @@ export default function IsThisRightForYouPage() {
                   >
                     NHS Therapy For You
                   </a>{' '}
-                  (free) or{' '}
+                  (free NHS service for Essex) or search the{' '}
                   <a
-                    href="https://turnercentre.co.uk"
+                    href="https://www.bacp.co.uk/search/Therapists"
                     target="_blank"
                     rel="noopener noreferrer"
                     className={styles.link}
                   >
-                    The Turner Centre
+                    BACP therapist directory
                   </a>{' '}
                   or{' '}
                   <a
-                    href="https://colchestercounselling.co.uk"
+                    href="https://www.counselling-directory.org.uk"
                     target="_blank"
                     rel="noopener noreferrer"
                     className={styles.link}
                   >
-                    Colchester Counselling &amp; Psychotherapy Practice
+                    Counselling Directory
                   </a>{' '}
-                  (both private, Colchester). {/* {{ CONFIRM URLS WITH ANDREEA }} */}
+                  to find a therapist who offers short-term work.
                 </li>
                 <li>
                   <strong>CBT (Cognitive Behavioural Therapy)</strong> — If you want to focus on

@@ -8,9 +8,9 @@ import styles from './faq.module.scss';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://nextgentherapy.co.uk'),
-  title: 'FAQ — Therapy Questions Answered | Next Generation Therapy Colchester',
+  title: 'FAQ | Therapy Questions Answered | Colchester',
   description:
-    'Honest answers to the questions I get asked most: cost, how therapy works, online sessions, who I work with, confidentiality, and what to expect. Psychodynamic therapy in Colchester and online.',
+    'Answers to common therapy questions: cost, how it works, online sessions, confidentiality. Psychodynamic therapy Colchester & online.',
   keywords: [
     'therapy questions Colchester',
     'therapy FAQ Essex',

@@ -4,8 +4,9 @@ interface BlogPostSchemaProps {
   publishedAt: string;
   modifiedAt?: string;
   slug: string;
-  excerpt?: string;
   author?: string;
+  category?: 'professional' | 'personal';
+  wordCount?: number;
   tags?: string[];
 }
 
@@ -16,23 +17,29 @@ export default function BlogPostSchema({
   modifiedAt,
   slug,
   author = 'Andreea Horhocea',
+  category = 'professional',
+  wordCount,
   tags = [],
 }: BlogPostSchemaProps) {
   const url = `https://nextgentherapy.co.uk/blog/${slug}`;
+  const articleSection =
+    category === 'professional' ? 'Professional Insights' : 'Personal Reflections';
 
-  const articleSchema = {
+  const blogPostSchema = {
     '@context': 'https://schema.org',
-    '@type': 'Article',
+    '@type': 'BlogPosting',
     headline: title,
     description: description,
-    url: url,
-    datePublished: publishedAt,
-    dateModified: modifiedAt || publishedAt,
     author: {
       '@type': 'Person',
       name: author,
-      jobTitle: 'BACP Registered Psychodynamic Psychotherapist',
       url: 'https://nextgentherapy.co.uk/about',
+      jobTitle: 'Psychodynamic Psychotherapist',
+      worksFor: {
+        '@type': 'Organization',
+        name: 'Next Generation Therapy',
+        url: 'https://nextgentherapy.co.uk',
+      },
     },
     publisher: {
       '@type': 'Organization',
@@ -40,16 +47,29 @@ export default function BlogPostSchema({
       url: 'https://nextgentherapy.co.uk',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://nextgentherapy.co.uk/images/logo.jpg',
-        width: 400,
-        height: 400,
+        url: 'https://nextgentherapy.co.uk/images/default-social-share.jpg',
+        width: 1200,
+        height: 630,
       },
     },
+    datePublished: publishedAt,
+    dateModified: modifiedAt || publishedAt,
     mainEntityOfPage: {
       '@type': 'WebPage',
       '@id': url,
     },
-    image: 'https://nextgentherapy.co.uk/images/default-social-share.jpg',
+    image: {
+      '@type': 'ImageObject',
+      url: 'https://nextgentherapy.co.uk/images/default-social-share.jpg',
+      width: 1200,
+      height: 630,
+      alt: `${title} - Next Generation Therapy Blog`,
+    },
+    articleSection: articleSection,
+    ...(wordCount && {
+      wordCount: wordCount,
+      timeRequired: `PT${Math.ceil(wordCount / 200)}M`,
+    }),
     keywords:
       tags.length > 0
         ? tags.join(', ')
@@ -57,18 +77,17 @@ export default function BlogPostSchema({
     about: {
       '@type': 'Thing',
       name: 'Mental Health and Therapy',
+      description: 'Professional therapy services and mental health support',
     },
-    audience: {
-      '@type': 'Audience',
-      audienceType: 'Adults seeking therapy and mental health support',
-    },
+    inLanguage: 'en-GB',
+    isAccessibleForFree: true,
   };
 
   return (
     <script
       type="application/ld+json"
       dangerouslySetInnerHTML={{
-        __html: JSON.stringify(articleSchema),
+        __html: JSON.stringify(blogPostSchema),
       }}
     />
   );

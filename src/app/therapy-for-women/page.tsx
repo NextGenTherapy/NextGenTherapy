@@ -9,9 +9,9 @@ import buttonStyles from '../../components/ui/button.module.scss';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://nextgentherapy.co.uk'),
-  title: 'Therapy for Women in Colchester & Online | Burnout, Anxiety, Self-Worth',
+  title: 'Therapy for Women | Colchester & Online | Burnout',
   description:
-    'Psychodynamic therapy for women dealing with burnout, overthinking, anxiety, body image and self-worth. Colchester and online across the UK. BACP registered. Includes work with women in same-sex relationships.',
+    'Psychodynamic therapy for women dealing with burnout, overthinking, anxiety, body image and self-worth. Colchester & online. BACP registered.',
   keywords: [
     'therapy for women Colchester',
     'burnout therapy Essex',

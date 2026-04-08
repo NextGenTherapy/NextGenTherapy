@@ -10,9 +10,9 @@ import styles from './teen-therapy.module.scss';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://nextgentherapy.co.uk'),
-  title: 'Therapy for Teenagers in Colchester | Anxiety, School Refusal, Self-Harm',
+  title: 'Teen Therapy Colchester | Anxiety, School Refusal',
   description:
-    'Psychodynamic therapy for teenagers aged 13–17 in Colchester. Anxiety, school refusal, self-harm, low mood, identity. BACP registered. NHS, SEN and youth work background. Free intro call for parents.',
+    'Psychodynamic therapy for teenagers aged 13–17 in Colchester. Anxiety, school refusal, self-harm, identity. BACP registered with NHS & SEN background.',
   keywords: [
     'teen therapy Colchester',
     'teenage therapist Colchester',

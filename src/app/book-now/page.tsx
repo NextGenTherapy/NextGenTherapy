@@ -14,9 +14,9 @@ const ContactForm = dynamic(() => import('../../components/forms/contact-form'),
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://nextgentherapy.co.uk'),
-  title: 'Book a Free 15-Minute Call | Next Generation Therapy Colchester',
+  title: 'Book a Free 15-Minute Call | Colchester Therapist',
   description:
-    "Book a free 15-minute introductory call with Andreea, BACP-registered psychotherapist in Colchester. No commitment. In-person and online (UK-wide, age 16+).",
+    'Book a free 15-minute call with Andreea, BACP-registered psychotherapist in Colchester. No commitment. In-person & online UK-wide.',
   keywords: [
     'book therapy colchester',
     'free therapy consultation',

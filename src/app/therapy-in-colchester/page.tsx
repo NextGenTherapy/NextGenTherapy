@@ -3,6 +3,7 @@ import Link from 'next/link';
 
 import PageHero from '@/components/ui/PageHero';
 import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema';
+import LocationLocalBusinessSchema from '@/components/seo/LocationLocalBusinessSchema';
 import styles from '@/styles/location-page.module.scss';
 import buttonStyles from '@/components/ui/button.module.scss';
 
@@ -65,56 +66,12 @@ export const metadata: Metadata = {
 };
 
 export default function TherapyInColchesterPage() {
-  const localBusinessSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'LocalBusiness',
-    '@id': 'https://nextgentherapy.co.uk/#localbusiness',
-    name: 'Next Generation Therapy',
-    description:
-      'Psychodynamic therapy for women, neurodivergent adults, teenagers and children in Colchester, Essex.',
-    url: 'https://nextgentherapy.co.uk',
-    telephone: '+447448036017',
-    email: 'andreeatherapytoday@gmail.com',
-    image: 'https://nextgentherapy.co.uk/images/default-social-share.jpg',
-    priceRange: '£60 per session',
-    address: {
-      '@type': 'PostalAddress',
-      streetAddress: 'Colchester Business Centre, 1 George Williams Way',
-      addressLocality: 'Colchester',
-      addressRegion: 'Essex',
-      postalCode: 'CO1 2JS',
-      addressCountry: 'GB',
-    },
-    geo: {
-      '@type': 'GeoCoordinates',
-      latitude: 51.8891,
-      longitude: 0.9041,
-    },
-    areaServed: {
-      '@type': 'City',
-      name: 'Colchester',
-      containedIn: 'Essex',
-    },
-    openingHoursSpecification: [
-      {
-        '@type': 'OpeningHoursSpecification',
-        dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
-        opens: '09:00',
-        closes: '18:00',
-      },
-    ],
-    sameAs: [
-      'https://www.facebook.com/share/16dg5gpZRo/',
-      'https://www.instagram.com/nextgentherapycolchester',
-      'https://www.bacp.co.uk/therapists/385976/andreea-horhocea/london-e16',
-    ],
-  };
-
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+      <LocationLocalBusinessSchema
+        locationName="Colchester"
+        containedIn="Essex"
+        description="Psychodynamic therapy for women, neurodivergent adults, teenagers and children in Colchester, Essex."
       />
 
       <PageHero

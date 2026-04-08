@@ -8,9 +8,9 @@ import buttonStyles from '../../components/ui/button.module.scss';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://nextgentherapy.co.uk'),
-  title: 'ADHD & Autism Therapy for Adults — Colchester & Online | Affirmative Practice',
+  title: 'Adult ADHD & Autism Therapy | Colchester & Online',
   description:
-    'Psychodynamic, affirmative therapy for neurodivergent adults in Colchester and online. Sensory-aware room, stimming welcome, no formal diagnosis required. BACP registered.',
+    'Affirmative psychodynamic therapy for neurodivergent adults. Sensory-aware room, stimming welcome. Colchester & online UK-wide. BACP registered.',
   keywords: [
     'ADHD therapy Colchester',
     'autism therapy Essex',

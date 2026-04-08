@@ -10,6 +10,7 @@ import { notFound } from 'next/navigation';
 import BlogPostLayout from '../../../components/ui/BlogPostLayout';
 import BlogPostNavigation from '../../../components/ui/BlogPostNavigation';
 import CTABlock from '../../../components/ui/CTABlock';
+import BlogPostSchema from '../../../components/seo/BlogPostSchema';
 import styles from '../blog.module.scss';
 
 // Helper function to calculate read time
@@ -204,81 +205,32 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
   const processedContent = await remark().use(html).process(content);
   const contentHtml = processedContent.toString();
 
-  // JSON-LD structured data for blog posts
-  const structuredData = {
-    '@context': 'https://schema.org',
-    '@type': 'BlogPosting',
-    headline: data.title,
-    description:
-      data.summary ||
-      'Professional insights and guidance from Next Generation Therapy to support your mental health and wellbeing journey.',
-    author: {
-      '@type': 'Person',
-      name: 'Andreea Horhocea',
-      url: 'https://nextgentherapy.co.uk/about',
-      jobTitle: 'Psychodynamic Psychotherapist',
-      worksFor: {
-        '@type': 'Organization',
-        name: 'Next Generation Therapy',
-        url: 'https://nextgentherapy.co.uk',
-      },
-    },
-    publisher: {
-      '@type': 'Organization',
-      name: 'Next Generation Therapy',
-      url: 'https://nextgentherapy.co.uk',
-      logo: {
-        '@type': 'ImageObject',
-        url: 'https://nextgentherapy.co.uk/images/default-social-share.jpg',
-        width: 1200,
-        height: 630,
-      },
-    },
-    datePublished: data.date,
-    dateModified: data.date,
-    mainEntityOfPage: {
-      '@type': 'WebPage',
-      '@id': `https://nextgentherapy.co.uk/blog/${slug}`,
-    },
-    image: {
-      '@type': 'ImageObject',
-      url: 'https://nextgentherapy.co.uk/images/default-social-share.jpg',
-      width: 1200,
-      height: 630,
-      alt: `${data.title} - Next Generation Therapy Blog`,
-    },
-    articleSection:
-      data.category === 'professional' ? 'Professional Insights' : 'Personal Reflections',
-    wordCount: content.split(/\s+/).length,
-    timeRequired: `PT${Math.ceil(content.split(/\s+/).length / 200)}M`,
-    keywords: [
-      'therapy',
-      'mental health',
-      'psychotherapy',
-      'emotional wellbeing',
-      'anxiety support',
-      'depression help',
-      'self-esteem',
-      data.category === 'professional' ? 'professional insights' : 'personal thoughts',
-      'Colchester therapy',
-      'online therapy',
-    ].join(', '),
-    about: {
-      '@type': 'Thing',
-      name: 'Mental Health and Therapy',
-      description: 'Professional therapy services and mental health support',
-    },
-    inLanguage: 'en-GB',
-    isAccessibleForFree: true,
-  };
+  const wordCount = content.split(/\s+/).length;
 
   return (
     <div className={styles.page}>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(structuredData),
-        }}
+      <BlogPostSchema
+        title={data.title}
+        description={
+          data.summary ||
+          'Professional insights and guidance from Next Generation Therapy to support your mental health and wellbeing journey.'
+        }
+        publishedAt={data.date}
+        slug={slug}
+        category={data.category === 'professional' ? 'professional' : 'personal'}
+        wordCount={wordCount}
+        tags={[
+          'therapy',
+          'mental health',
+          'psychotherapy',
+          'emotional wellbeing',
+          'anxiety support',
+          'depression help',
+          'self-esteem',
+          data.category === 'professional' ? 'professional insights' : 'personal thoughts',
+          'Colchester therapy',
+          'online therapy',
+        ]}
       />
       <main className={styles.main}>
         <BlogPostLayout

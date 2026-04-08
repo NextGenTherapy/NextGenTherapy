@@ -7,9 +7,9 @@ import styles from './services.module.scss';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://nextgentherapy.co.uk'),
-  title: 'Therapy Services Colchester | Psychodynamic Therapy | Next Generation Therapy',
+  title: 'Therapy Services | Psychodynamic Therapy Colchester',
   description:
-    'Psychodynamic therapy in Colchester and online. I work with women, neurodivergent adults, teenagers, children, and Romanian speakers. BACP registered.',
+    'Psychodynamic therapy in Colchester & online. Women, neurodivergent adults, teenagers, children. Romanian available. BACP registered.',
   keywords: [
     'therapy colchester',
     'psychodynamic therapy colchester',

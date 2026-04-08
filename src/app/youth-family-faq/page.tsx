@@ -7,9 +7,9 @@ import Link from 'next/link';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://nextgentherapy.co.uk'),
-  title: 'Youth & Family Therapy FAQ | Child, Teen & Young Adult Questions',
+  title: 'Youth & Family Therapy FAQ | Questions Answered',
   description:
-    'FAQs about child, teenage & young adult therapy. Expert guidance for families considering therapy in Colchester. Get answers today.',
+    'FAQs about child, teen & young adult therapy. Guidance for families considering therapy in Colchester. Honest answers.',
   keywords: [
     'child therapy FAQ Colchester',
     'teenage therapy questions Essex',
