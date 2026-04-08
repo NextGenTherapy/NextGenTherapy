@@ -73,6 +73,11 @@
   color: var(--color-accent);
 }
 
+.footerColumn ul li a:focus-visible {
+  outline: var(--outline-width) solid var(--color-header-text);
+  outline-offset: var(--outline-offset);
+}
+
 /* Brand column styles */
 .brandLink {
   display: inline-block;
@@ -93,6 +98,11 @@
   color: var(--color-accent);
 }
 
+.brandLink:focus-visible {
+  outline: var(--outline-width) solid var(--color-header-text);
+  outline-offset: var(--outline-offset);
+}
+
 .tagline {
   color: var(--color-accent-light);
   font-size: var(--font-size-small);
@@ -109,6 +119,11 @@
 .bacpBadge:hover,
 .bacpBadge:focus {
   opacity: 1;
+}
+
+.bacpBadge:focus-visible {
+  outline: var(--outline-width) solid var(--color-header-text);
+  outline-offset: var(--outline-offset);
 }
 
 /* Contact column styles */
@@ -131,6 +146,11 @@
   color: var(--color-accent);
 }
 
+.address a:focus-visible {
+  outline: var(--outline-width) solid var(--color-header-text);
+  outline-offset: var(--outline-offset);
+}
+
 .contactLink {
   margin: 0 0 var(--spacing-small);
 }
@@ -145,6 +165,11 @@
 .contactLink a:hover,
 .contactLink a:focus {
   color: var(--color-accent);
+}
+
+.contactLink a:focus-visible {
+  outline: var(--outline-width) solid var(--color-header-text);
+  outline-offset: var(--outline-offset);
 }
 
 /* Social links */
@@ -168,8 +193,8 @@
   transform: translateY(-2px);
 }
 
-.socialLinks a:focus {
-  outline: var(--outline-width) solid var(--color-accent);
+.socialLinks a:focus-visible {
+  outline: var(--outline-width) solid var(--color-header-text);
   outline-offset: var(--outline-offset);
   border-radius: var(--radius-small);
 }
@@ -205,7 +230,7 @@
 .copyright {
   margin: 0;
   font-size: var(--font-size-small);
-  color: var(--color-text-muted);
+  color: var(--color-accent-light);
 }
 
 .legalLinks {
@@ -226,6 +251,11 @@
   color: var(--color-accent);
 }
 
+.legalLinks a:focus-visible {
+  outline: var(--outline-width) solid var(--color-header-text);
+  outline-offset: var(--outline-offset);
+}
+
 .divider {
   color: var(--color-text-muted);
 }
@@ -233,7 +263,7 @@
 .credentials {
   margin: 0;
   font-size: var(--font-size-small);
-  color: var(--color-text-muted);
+  color: var(--color-accent-light);
 }
 
 .developer {
@@ -251,4 +281,9 @@
 .developer a:hover,
 .developer a:focus {
   color: var(--color-accent);
+}
+
+.developer a:focus-visible {
+  outline: var(--outline-width) solid var(--color-header-text);
+  outline-offset: var(--outline-offset);
 }

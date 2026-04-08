@@ -32,6 +32,11 @@
   transform: translateY(-1px);
 }
 
+.scrollToTopButton:focus-visible {
+  outline: var(--outline-width) solid var(--color-header-text);
+  outline-offset: var(--outline-offset);
+}
+
 @media (max-width: 768px) {
   .scrollToTopContainer {
     bottom: var(--spacing-medium);

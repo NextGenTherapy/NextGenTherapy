@@ -15,9 +15,10 @@ describe('Loading Page', () => {
 
   it('has an accessible loading indicator', () => {
     render(<Loading />);
-    // The spinner should have aria-label for screen readers
-    const spinner = document.querySelector('[aria-label="Loading content"]');
-    expect(spinner).toBeInTheDocument();
+    // The container should have role="status" for screen reader announcements
+    const statusRegion = screen.getByRole('status');
+    expect(statusRegion).toBeInTheDocument();
+    expect(statusRegion).toHaveAttribute('aria-live', 'polite');
   });
 
   it('renders the spinner element', () => {

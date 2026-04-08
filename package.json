@@ -25,7 +25,8 @@
     "backup:create": "node scripts/backup-strategy.js backup",
     "backup:verify": "node scripts/backup-strategy.js verify",
     "backup:report": "node scripts/backup-strategy.js report",
-    "backup:cleanup": "node scripts/backup-strategy.js cleanup"
+    "backup:cleanup": "node scripts/backup-strategy.js cleanup",
+    "a11y:audit": "axe http://localhost:3000 http://localhost:3000/about http://localhost:3000/therapy-for-women http://localhost:3000/romanian-therapy http://localhost:3000/book-now http://localhost:3000/faq --tags wcag2a,wcag2aa --exit"
   },
   "dependencies": {
     "@next/third-parties": "^15.4.0-canary.51",
@@ -48,6 +49,7 @@
     "web-vitals": "^5.1.0"
   },
   "devDependencies": {
+    "@axe-core/cli": "^4.11.1",
     "@eslint/eslintrc": "^3",
     "@lhci/cli": "^0.15.1",
     "@playwright/test": "^1.55.0",

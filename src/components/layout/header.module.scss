@@ -171,7 +171,12 @@
 .bookNowItem a:hover,
 .bookNowItem a:focus {
   background-color: var(--color-accent-light);
-  color: var(--color-brand-hover);
+  color: var(--color-text);
+}
+
+.bookNowItem a:focus-visible {
+  outline: var(--outline-width) solid var(--color-header-text);
+  outline-offset: var(--outline-offset);
 }
 
 /* Hamburger menu icon */
@@ -215,14 +220,14 @@
     translate(var(--transform-translate-small), calc(-1 * var(--transform-translate-small)));
 }
 
-/* Focus indicators */
-.menuButton:focus {
-  outline: var(--outline-width) solid var(--color-accent);
+/* Focus indicators - using --color-header-text for AA contrast on dark header */
+.menuButton:focus-visible {
+  outline: var(--outline-width) solid var(--color-header-text);
   outline-offset: var(--outline-offset);
 }
 
-.navItem a:focus {
-  outline: var(--outline-width) solid var(--color-accent);
+.navItem a:focus-visible {
+  outline: var(--outline-width) solid var(--color-header-text);
   outline-offset: var(--outline-offset);
 }
 
@@ -265,8 +270,8 @@
   color: var(--color-accent);
 }
 
-.dropdownTrigger:focus {
-  outline: var(--outline-width) solid var(--color-accent);
+.dropdownTrigger:focus-visible {
+  outline: var(--outline-width) solid var(--color-header-text);
   outline-offset: var(--outline-offset);
 }
 
@@ -324,6 +329,11 @@
   color: var(--color-accent);
 }
 
+.dropdownMenu li a:focus-visible {
+  outline: var(--outline-width) solid var(--color-header-text);
+  outline-offset: calc(-1 * var(--outline-offset));
+}
+
 .dropdownDivider {
   height: 1px;
   background-color: rgba(255, 255, 255, 0.15);
@@ -371,8 +381,8 @@
   color: var(--color-accent);
 }
 
-.mobileDropdownTrigger:focus {
-  outline: var(--outline-width) solid var(--color-accent);
+.mobileDropdownTrigger:focus-visible {
+  outline: var(--outline-width) solid var(--color-header-text);
   outline-offset: var(--outline-offset);
 }
 
@@ -406,4 +416,9 @@
 .mobileDropdownMenu li a:focus {
   background-color: rgba(255, 255, 255, 0.1);
   color: var(--color-accent);
+}
+
+.mobileDropdownMenu li a:focus-visible {
+  outline: var(--outline-width) solid var(--color-header-text);
+  outline-offset: calc(-1 * var(--outline-offset));
 }

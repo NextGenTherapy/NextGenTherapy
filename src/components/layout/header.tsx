@@ -2,7 +2,6 @@
 
 import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
-import Button from '../ui/button';
 import styles from './header.module.scss';
 
 const dropdownLinks = [
@@ -100,7 +99,7 @@ export default function Header() {
         </div>
 
         {/* Hamburger Menu Button */}
-        <Button
+        <button
           type="button"
           className={styles.menuButton}
           onClick={toggleMenu}
@@ -114,7 +113,7 @@ export default function Header() {
             <span></span>
             <span></span>
           </span>
-        </Button>
+        </button>
 
         {/* Navigation List */}
         <ul

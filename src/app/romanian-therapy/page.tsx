@@ -122,7 +122,7 @@ export default function RomanianTherapyPage() {
 
           {/* Section 3: Romanian Introduction */}
           <section className={styles.romanianSection}>
-            <div className={styles.romanianContainer}>
+            <div className={styles.romanianContainer} lang="ro">
               {/* {{ CONFIRM WITH ANDREEA — Romanian translation below is provisional }} */}
               <h2 className={styles.romanianHeading}>Terapie în limba română</h2>
               <p>
@@ -178,7 +178,7 @@ export default function RomanianTherapyPage() {
                 </ul>
               </div>
 
-              <div className={styles.topicsColumn}>
+              <div className={styles.topicsColumn} lang="ro">
                 {/* {{ CONFIRM WITH ANDREEA — Romanian translation below is provisional }} */}
                 <h2 className={styles.romanianHeadingSmall}>Ce lucrez adesea</h2>
                 <ul className={styles.topicsList}>
@@ -251,7 +251,7 @@ export default function RomanianTherapyPage() {
                 </dl>
               </div>
 
-              <div className={styles.practicalColumn}>
+              <div className={styles.practicalColumn} lang="ro">
                 {/* {{ CONFIRM WITH ANDREEA — Romanian translation below is provisional }} */}
                 <h2 className={styles.romanianHeadingSmall}>Informații practice</h2>
                 <dl className={styles.practicalList}>
@@ -325,7 +325,7 @@ export default function RomanianTherapyPage() {
                 right.
               </p>
               {/* {{ CONFIRM WITH ANDREEA — Romanian translation below is provisional }} */}
-              <p className={styles.romanianText}>
+              <p className={styles.romanianText} lang="ro">
                 Apelul gratuit de 15 minute este o conversație informală, nu o primă ședință. Poți
                 întreba orice vrei, și vom decide împreună dacă colaborarea pare potrivită.
               </p>

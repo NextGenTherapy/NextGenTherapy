@@ -62,12 +62,17 @@
   }
 
   .acceptBtn {
-    background: var(--color-accent);
+    background: var(--color-brand);
     color: var(--color-header-text);
 
     &:hover {
-      background: var(--color-accent-light);
-      color: var(--color-text);
+      background: var(--color-brand-hover);
+      color: var(--color-header-text);
+    }
+
+    &:focus-visible {
+      outline: var(--outline-width) solid var(--color-header-text);
+      outline-offset: var(--outline-offset);
     }
   }
 
@@ -79,6 +84,11 @@
     &:hover {
       background: var(--color-header-text);
       color: var(--color-text);
+    }
+
+    &:focus-visible {
+      outline: var(--outline-width) solid var(--color-header-text);
+      outline-offset: var(--outline-offset);
     }
   }
 }
