@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://nextgentherapy.co.uk'),
   title: 'Romanian Therapist UK | Terapie în Limba Română',
   description:
-    'Romanian-speaking psychodynamic therapist. Colchester & online UK-wide. Sesiuni în română. BACP registered, MSc University of Essex.',
+    'Romanian-speaking psychodynamic therapist. Colchester & online UK-wide. Sesiuni în română. BACP registered, MA University of Essex.',
   keywords: [
     'romanian therapist uk',
     'romanian speaking therapist essex',

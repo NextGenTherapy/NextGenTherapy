@@ -85,7 +85,7 @@ export default function BookNowPage() {
         {
           '@type': 'EducationalOccupationalCredential',
           credentialCategory: 'degree',
-          name: 'MSc Psychodynamic Psychotherapy',
+          name: 'MA Psychodynamic Psychotherapy',
           educationalLevel: 'Master',
         },
       ],

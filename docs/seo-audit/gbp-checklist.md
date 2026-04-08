@@ -56,7 +56,7 @@ Online: UK-wide (age 16+)
 ### A5. Business Description (750 characters max)
 
 ```
-Psychodynamic psychotherapist in Colchester, Essex. BACP registered (MBACP), MSc Psychodynamic Psychotherapy (University of Essex, 2020).
+Psychodynamic psychotherapist in Colchester, Essex. BACP registered (MBACP), MA Psychodynamic Psychotherapy (University of Essex, 2020).
 
 I work with women, neurodivergent adults (ADHD, autism), teenagers (13-17), and children (4-12). Sessions available in English and Romanian.
 

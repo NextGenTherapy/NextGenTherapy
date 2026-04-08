@@ -44,7 +44,7 @@
 | Field | Value | Status |
 |-------|-------|--------|
 | Title | About Andreea Horhocea — BACP Psychotherapist in Colchester | OK (58 chars) |
-| Description | MSc Psychodynamic Psychotherapy (University of Essex, 2020). BACP registered. Working with women, neurodivergent adults, teenagers and children in Colchester and online. Sessions available in English and Romanian. | OK |
+| Description | MA Psychodynamic Psychotherapy (University of Essex, 2020). BACP registered. Working with women, neurodivergent adults, teenagers and children in Colchester and online. Sessions available in English and Romanian. | OK |
 | Keywords | 9 keywords | OK |
 | OG Image | default-social-share.jpg | OK |
 | Twitter | summary_large_image | OK |
@@ -115,7 +115,7 @@
 | Field | Value | Status |
 |-------|-------|--------|
 | Title | Romanian Therapist UK \| Terapie în Limba Română | OK (47 chars) |
-| Description | Romanian-speaking psychodynamic therapist. Colchester & online UK-wide. Sesiuni în română. BACP registered, MSc University of Essex. | OK (132 chars) |
+| Description | Romanian-speaking psychodynamic therapist. Colchester & online UK-wide. Sesiuni în română. BACP registered, MA University of Essex. | OK (132 chars) |
 | Keywords | 8 keywords (bilingual) | OK |
 | OG Image | default-social-share.jpg | OK |
 | Canonical | /romanian-therapy | OK |

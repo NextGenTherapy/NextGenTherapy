@@ -114,7 +114,7 @@ export default function Pricing() {
                   hour.&rdquo; We start when you arrive and finish at the 50-minute mark.
                 </li>
                 <li>
-                  <strong>BACP registered, MSc-qualified psychotherapist</strong> — I hold an MSc in
+                  <strong>BACP registered, MA-qualified psychotherapist</strong> — I hold an MA in
                   Psychodynamic Psychotherapy from the University of Essex (2020) and am a
                   registered member of the British Association for Counselling and Psychotherapy.
                 </li>

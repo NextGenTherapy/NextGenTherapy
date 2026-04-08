@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://nextgentherapy.co.uk'),
   title: 'About Andreea Horhocea — BACP Psychotherapist in Colchester',
   description:
-    'MSc Psychodynamic Psychotherapy (University of Essex, 2020). BACP registered. Working with women, neurodivergent adults, teenagers and children in Colchester and online. Sessions available in English and Romanian.',
+    'MA Psychodynamic Psychotherapy (University of Essex, 2020). BACP registered. Working with women, neurodivergent adults, teenagers and children in Colchester and online. Sessions available in English and Romanian.',
   keywords: [
     'about Andreea Horhocea',
     'BACP therapist Colchester',
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'About Andreea Horhocea — BACP Psychotherapist in Colchester',
     description:
-      'MSc Psychodynamic Psychotherapy (University of Essex, 2020). BACP registered. Working with women, neurodivergent adults, teenagers and children in Colchester and online.',
+      'MA Psychodynamic Psychotherapy (University of Essex, 2020). BACP registered. Working with women, neurodivergent adults, teenagers and children in Colchester and online.',
     url: 'https://nextgentherapy.co.uk/about',
     siteName: 'Next Generation Therapy',
     locale: 'en_GB',
@@ -59,7 +59,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'About Andreea Horhocea — BACP Psychotherapist in Colchester',
     description:
-      'MSc Psychodynamic Psychotherapy (University of Essex, 2020). BACP registered. Working with women, neurodivergent adults, teenagers and children.',
+      'MA Psychodynamic Psychotherapy (University of Essex, 2020). BACP registered. Working with women, neurodivergent adults, teenagers and children.',
     images: ['https://nextgentherapy.co.uk/images/default-social-share.jpg'],
   },
 };
@@ -100,7 +100,7 @@ export default function AboutMe() {
       {
         '@type': 'EducationalOccupationalCredential',
         credentialCategory: 'degree',
-        name: 'MSc Psychodynamic Psychotherapy',
+        name: 'MA Psychodynamic Psychotherapy',
         recognizedBy: {
           '@type': 'CollegeOrUniversity',
           name: 'University of Essex',
@@ -171,7 +171,7 @@ export default function AboutMe() {
                   <h3>Training</h3>
                   <dl className={styles.definitionList}>
                     <div className={styles.definitionItem}>
-                      <dt>MSc Psychodynamic Psychotherapy</dt>
+                      <dt>MA Psychodynamic Psychotherapy</dt>
                       <dd>University of Essex, 2020</dd>
                     </div>
                     <div className={styles.definitionItem}>

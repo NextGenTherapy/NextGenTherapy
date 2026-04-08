@@ -82,7 +82,7 @@ docs/              # Prompts, briefs, positioning (see content-prompts/)
 > **This section is the single source of truth for all page copy, metadata, and schema. If a prompt tells you to write something about Andreea and contradicts this, the positioning brief wins. If you are unsure, mark it `{{ CONFIRM WITH ANDREEA }}` rather than inventing.**
 
 ### Credentials
-- **MSc Psychodynamic Psychotherapy**, University of Essex, 2020
+- **MA Psychodynamic Psychotherapy**, University of Essex, 2020
 - **BACP Registered Member** (MBACP)
 - **Ongoing**: clinical supervision + personal therapy (both required markers of psychodynamic credibility)
 
@@ -136,10 +136,10 @@ Ground floor. Quiet. Plants. Green, calming. A couch plus two comfortable chairs
 - Tweens 8–12 (in-person only)
 - Teens 13–17 (in-person only)
 - Young adults 18–25
-- Adults 26–40
+- Adults through their 30s
 - Parents (as clients in their own right, not just alongside child work)
 
-**Does NOT work with 41+.** Remove ambiguous "all ages" language from the site. Upper cap is 40.
+**Positive framing:** Describe who Andreea works with without mentioning who she doesn't. Use "children, teenagers, young adults, and adults through their 30s" rather than "up to age 40" or "not over 40".
 
 ### Online sessions
 - **Age 16+ only.** Confidentiality reason: younger clients have had sessions in houses where parents are present, which undermines the work. This is a safeguarding and clinical-integrity decision and should be stated plainly on the site — parents respect this.
@@ -259,7 +259,7 @@ The site and blog should reinforce these five pillars. Everything else gets demo
 
 ### What it should STOP trying to rank for
 - Generic "counselling UK" (too competitive)
-- "Therapy for all ages" (she doesn't do 41+)
+- "Therapy for all ages" (her focus is children through adults in their 30s)
 - "Couples therapy" / "CBT" / "short-term therapy" (she doesn't offer these)
 
 ## 14. Site Architecture — Current vs Target
@@ -310,7 +310,7 @@ LGBTQ+ therapy becomes a *section* on `/therapy-for-women` rather than a standal
 
 - Fake or invented testimonials
 - "Composite client stories" presented as real
-- Claims about age ranges she doesn't serve (no 41+, no couples)
+- Exclusionary age language (avoid "no 41+", "over 40" — use positive framing instead)
 - Romanian flag imagery or nationalistic phrasing
 - "Safe nurturing space" stock phrase
 - Any reference to CBT, short-term therapy, or solution-focused work as something she offers
@@ -324,7 +324,7 @@ LGBTQ+ therapy becomes a *section* on `/therapy-for-women` rather than a standal
 - "BACP Registered Member" badge, linked to her BACP profile
 - Named post-qualification training (neurodiversity, eating disorders, trauma, attachment, LGBTQ+, addiction)
 - Named organisations she has worked with (NHS Essex, Sir Bobby Robson School, Mind Mid & North East Essex, YMCA Ipswich)
-- MSc University of Essex 2020
+- MA University of Essex 2020
 - Romanian language availability
 - Clinical limits stated plainly (no couples, no forensic, etc.)
 - Online age cap (16+) and the reason
@@ -342,3 +342,5 @@ Luke uses a sequential prompt workflow with Claude Code in Cursor. One prompt at
 **For any prompt involving page copy**: read `docs/content-prompts/00-positioning-brief.md` first, then follow the prompt.
 
 **For any ambiguity about what Andreea would say**: mark it `{{ CONFIRM WITH ANDREEA }}` and move on. Do not invent content in her voice.
+
+**Track all placeholders**: Any `{{ CONFIRM WITH ANDREEA }}`, `{{ TODO }}`, or similar placeholders that need verification by Luke or Andreea must be added to `docs/andreea-todos/action-items.md` with the file path and line number.

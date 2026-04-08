@@ -76,7 +76,7 @@ describe('HomePage Component', () => {
 
   it('displays Andreea credentials', () => {
     render(<HomePage />);
-    expect(screen.getByText(/MSc Psych.*University of Essex.*2020.*BACP Registered/i)).toBeInTheDocument();
+    expect(screen.getByText(/MA Psych.*University of Essex.*2020.*BACP Registered/i)).toBeInTheDocument();
   });
 
   it('includes Romanian language section', () => {

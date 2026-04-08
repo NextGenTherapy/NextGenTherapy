@@ -20,14 +20,14 @@ This post is an honest explainer for people researching therapy options. Andreea
 5. **The question of time** — Open-ended doesn't mean forever. It means however long it takes. Some people need 6 months, some need 3 years.
 6. **Who psychodynamic therapy is for** — People who want to understand themselves, not just feel better. People who keep hitting the same walls.
 7. **Who it might not be for** — People who want quick solutions, specific phobia treatment, or highly structured approaches.
-8. **Andreea's training** — MSc Psychodynamic Psychotherapy, University of Essex. Why she chose this approach.
+8. **Andreea's training** — MA Psychodynamic Psychotherapy, University of Essex. Why she chose this approach.
 9. **Closing** — Link to /is-this-right-for-you for a fuller picture
 
 ## Must include
 
 - Clear distinction between psychodynamic and CBT (without dismissing CBT)
 - Explanation of why open-ended matters
-- Mention of Andreea's MSc from University of Essex
+- Mention of Andreea's MA from University of Essex
 - Acknowledgment that psychodynamic isn't for everyone (honesty builds trust)
 - Real Andreea quote: "The first session is really a vibe check."
 - Internal link to /is-this-right-for-you (cornerstone)

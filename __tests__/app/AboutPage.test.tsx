@@ -94,8 +94,8 @@ describe('About Page', () => {
       expect(screen.getByText(/Where I trained and where I've worked/i)).toBeInTheDocument();
     });
 
-    it('displays MSc qualification', () => {
-      expect(screen.getByText(/MSc Psychodynamic Psychotherapy/i)).toBeInTheDocument();
+    it('displays MA qualification', () => {
+      expect(screen.getByText(/MA Psychodynamic Psychotherapy/i)).toBeInTheDocument();
       expect(screen.getByText(/University of Essex, 2020/i)).toBeInTheDocument();
     });
 

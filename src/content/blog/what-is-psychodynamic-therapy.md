@@ -90,7 +90,7 @@ I believe in being honest about limitations. Psychodynamic therapy isn't the rig
 
 ## My training and approach
 
-I completed my MSc in Psychodynamic Psychotherapy at the University of Essex in 2020. Before entering private practice, I worked in NHS schools, SEN provision, and with organisations like Mind and YMCA. I'm a registered member of BACP. You can [read more about my background](/about).
+I completed my MA in Psychodynamic Psychotherapy at the University of Essex in 2020. Before entering private practice, I worked in NHS schools, SEN provision, and with organisations like Mind and YMCA. I'm a registered member of BACP. You can [read more about my background](/about).
 
 I continue to develop professionally — I've done post-qualification training in neurodiversity, eating disorders, trauma, attachment, LGBTQ+ work, and addiction. I'm in ongoing clinical supervision and personal therapy, both of which are standard practice for psychodynamic therapists.
 
@@ -100,7 +100,7 @@ The first session is really a vibe check. Before anything else, you need to feel
 
 ## If this approach appeals to you
 
-I work with adults and young people up to age 40, offering therapy in person in Colchester and online across the UK for those aged 16 and over.
+I work with children, teenagers, young adults, and adults through their 30s. I offer therapy in person in Colchester and online across the UK for those aged 16 and over.
 
 If you're curious about psychodynamic therapy — or if you've tried other approaches and are looking for something different — I'd be glad to hear from you. If you're [wondering whether this approach is right for you](/is-this-right-for-you), that page might help.
 

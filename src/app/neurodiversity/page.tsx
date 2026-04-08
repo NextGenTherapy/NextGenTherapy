@@ -173,7 +173,7 @@ export default function NeurodiversityTherapyPage() {
               </p>
               <p>
                 I&apos;ve completed specific post-qualification training in neurodiversity,
-                alongside my MSc in Psychodynamic Psychotherapy. I&apos;ve worked in SEN provision
+                alongside my MA in Psychodynamic Psychotherapy. I&apos;ve worked in SEN provision
                 at Sir Bobby Robson School in Ipswich and in primary and secondary schools with Mind
                 and the YMCA. Most of what I&apos;ve learned, though, has come from working with
                 neurodivergent clients in private practice — many of whom knew more about their own
