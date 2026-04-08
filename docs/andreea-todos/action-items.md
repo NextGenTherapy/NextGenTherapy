@@ -4,32 +4,47 @@ These are all `{{ CONFIRM WITH ANDREEA }}` placeholders found by searching the e
 
 ---
 
-## Priority 1: FAQ Page — Pricing & Policies
+## Priority 1: Legal Pages (DRAFT — Pending Review)
 
-**File:** `src/app/faq/page.tsx`
+**Status:** All legal pages are marked DRAFT and need review by Andreea and a legal advisor before publishing.
 
-These placeholders are visible on the live FAQ page and need answers urgently:
+### ICO Registration Number
+**File:** `src/app/privacy-policy/page.tsx` (line 157)
+```
+{{ CONFIRM WITH ANDREEA: ICO registration number }}
+```
+**Question:** Is Next Generation Therapy registered with the Information Commissioner's Office (ICO)? If yes, what is the registration number?
 
-### ~~Sliding Scale / Reduced Fees~~ ✅ RESOLVED
-**Answer:** No general sliding scale, but concessions available for students and single parents booking child therapy.
+### Clinical Supervisor Disclosure
+**File:** `src/app/privacy-policy/page.tsx` (line 247)
+```
+{{ CONFIRM WITH ANDREEA: Clinical supervisor disclosure — name or just confirm existence? }}
+```
+**Question:** For the privacy policy, should we name the clinical supervisor or just confirm that supervision exists?
 
-### ~~Payment Method~~ ✅ RESOLVED
-**Answer:** Bank transfer, 48 hours before session. Invoice sent weekly. No cash.
+### Online Session Platform
+**File:** `src/app/privacy-policy/page.tsx` (line 257)
+```
+{{ CONFIRM WITH ANDREEA: Online platform — Zoom or other? }}
+```
+**Question:** Which video platform is used for online therapy sessions? (Zoom, Google Meet, other)
 
-### ~~Cancellation Policy~~ ✅ RESOLVED
-**Answer:** Cancelled sessions are still charged — the slot is reserved and can't be filled at short notice.
+### Data Retention Period
+**Question:** Confirm 7-year retention period for clinical notes per BACP guidelines is correct.
 
-### ~~Online Platform~~ ✅ RESOLVED
-**Answer:** Google Meet.
+### Contact Email
+**Question:** Contact email is Gmail (`andreeatherapytoday@gmail.com`). Is this acceptable for processing client enquiries?
 
 ---
 
-## Priority 2: Online Therapy Page
+## Priority 2: Legal Pages General Review
 
-**File:** `src/app/online-therapy/page.tsx`
+All three legal pages need review:
+- `/privacy-policy` — Restructured with 13 sections
+- `/terms` — Simplified to 7 sections
+- `/cookies` — New page
 
-### ~~Video Platform~~ ✅ RESOLVED
-**Answer:** Google Meet.
+**See:** `docs/seo-audit/legal-pages-audit.md` for full details of changes.
 
 ---
 
@@ -199,6 +214,9 @@ Once Andreea provides answers:
 
 | File | Line/Section | Item | Answer Needed |
 |------|--------------|------|---------------|
+| `privacy-policy/page.tsx` | 157 | ICO registration | Registration number |
+| `privacy-policy/page.tsx` | 247 | Clinical supervisor | Name or just confirm? |
+| `privacy-policy/page.tsx` | 257 | Online platform | Zoom/Meet/Other |
 | `faq/page.tsx` | 261-265 | Sliding scale | Yes/No + details |
 | `faq/page.tsx` | 271-275 | Payment method | How clients pay |
 | `faq/page.tsx` | 281-285 | Cancellation policy | Notice period + charges |
@@ -220,30 +238,79 @@ Once Andreea provides answers:
 ## Quick Copy-Paste Questions for Andreea (Updated)
 
 ```
-1. Do you offer sliding scale or reduced-fee sessions? If yes, how many per week and who qualifies?
+LEGAL PAGES (URGENT — need answers before publishing):
 
-2. How do clients pay — bank transfer, card, or other? Do they pay per session, weekly, or monthly in advance?
+1. Are you registered with the ICO (Information Commissioner's Office)? If yes, what's your registration number?
 
-3. What's your cancellation policy? How much notice is required, and are late-cancelled/missed sessions charged?
+2. For the privacy policy clinical supervision disclosure — should we name your supervisor or just confirm that supervision exists?
 
-4. Which video platform do you use for online sessions — Zoom, Google Meet, or something else?
+3. Which video platform do you use for online sessions — Zoom, Google Meet, or something else?
 
-5. For the About page: Do you want to include a personal sentence about your Romanian background, or leave it out?
+4. Please confirm: clinical notes are retained for 7 years after therapy ends (per BACP guidelines)?
 
-6. Please review all Romanian text on the Romanian therapy page for accuracy.
+5. Is it OK to use your Gmail (andreeatherapytoday@gmail.com) for client enquiries, or should you have a business email?
 
-7. Do you have photos we can use? Needed: therapy room, building exterior, professional headshot.
+6. IMPORTANT: Please review all three legal pages (Privacy Policy, Terms, Cookies) before we publish them. They are currently marked DRAFT.
 
-8. What alternative therapist directories should we link to for clients you can't work with?
+---
 
-9. Exact opening hours for Google Business Profile? (Current guess: Mon-Tue 10-7pm, Wed online only, Fri 9am-2pm)
+OTHER QUESTIONS:
 
-10. Does Colchester Business Centre have wheelchair accessible parking?
+7. Do you offer sliding scale or reduced-fee sessions? If yes, how many per week and who qualifies?
 
-11. Your BACP directory shows "London E16" instead of Colchester — please update this in your BACP account.
+8. How do clients pay — bank transfer, card, or other? Do they pay per session, weekly, or monthly in advance?
 
-12. Do you have profiles on Psychology Today, Counselling Directory, or Welldoing.org that need updating?
+9. What's your cancellation policy? How much notice is required, and are late-cancelled/missed sessions charged?
+
+10. For the About page: Do you want to include a personal sentence about your Romanian background, or leave it out?
+
+11. Please review all Romanian text on the Romanian therapy page for accuracy.
+
+12. Do you have photos we can use? Needed: therapy room, building exterior, professional headshot.
+
+13. What alternative therapist directories should we link to for clients you can't work with?
+
+14. Exact opening hours for Google Business Profile? (Current guess: Mon-Tue 10-7pm, Wed online only, Fri 9am-2pm)
+
+15. Does Colchester Business Centre have wheelchair accessible parking?
+
+16. Your BACP directory shows "London E16" instead of Colchester — please update this in your BACP account.
+
+17. Do you have profiles on Psychology Today, Counselling Directory, or Welldoing.org that need updating?
 ```
+
+---
+
+---
+
+## Priority 8: Luke — Analytics & Search Console Setup
+
+**File:** `docs/seo-audit/search-console-setup.md`
+
+### Google Search Console
+- [ ] Go to https://search.google.com/search-console
+- [ ] Add property: `https://nextgentherapy.co.uk` (URL prefix)
+- [ ] Verify using existing HTML tag (already in code)
+- [ ] Submit sitemap: `sitemap.xml`
+
+### Bing Webmaster Tools
+- [ ] Go to https://www.bing.com/webmasters
+- [ ] Import directly from Google Search Console (easiest method)
+- [ ] Submit sitemap
+
+### Lighthouse Baseline
+- [ ] Run Lighthouse on key pages and record scores in `docs/seo-audit/lighthouse-baseline.md`:
+  - Homepage `/`
+  - Book Now `/book-now`
+  - About `/about`
+  - Therapy for Women `/therapy-for-women`
+  - Neurodiversity `/neurodiversity`
+  - Blog `/blog`
+
+### Analytics Verification
+- [ ] Accept cookies → submit contact form → verify `free_call_requested` event in GA4 Real-Time
+- [ ] Click phone/email links → verify `phone_click` / `email_click` events fire
+- [ ] Decline cookies → verify NO GA4 events fire (consent working)
 
 ---
 

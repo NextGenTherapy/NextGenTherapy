@@ -5,6 +5,7 @@ import Link from 'next/link';
 
 import { ContactFormData, FormErrors, LoadingState, ContactMethod, EnquiryFor } from '../../types';
 import { validateEnquiryForm } from '../../lib/utils';
+import { trackFormSubmission } from '@/lib/analytics';
 
 import styles from './contact-form.module.scss';
 
@@ -110,6 +111,8 @@ export default function ContactForm() {
 
       if (res.ok) {
         setStatus('success');
+        // Track successful form submission
+        trackFormSubmission(formData.enquiryFor, window.location.pathname);
         // Reset form
         setFormData({
           name: '',

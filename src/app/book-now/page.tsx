@@ -4,6 +4,7 @@ import Link from 'next/link';
 
 import PageHero from '@/components/ui/PageHero';
 import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema';
+import { TrackedPhoneLink, TrackedEmailLink } from '@/components/ui/TrackedContactLinks';
 
 import styles from './book-now.module.scss';
 
@@ -156,13 +157,13 @@ export default function BookNowPage() {
               <div className={styles.contactItem}>
                 <h3>Email</h3>
                 <p>
-                  <a href="mailto:andreeatherapytoday@gmail.com">andreeatherapytoday@gmail.com</a>
+                  <TrackedEmailLink location="book-now" />
                 </p>
               </div>
               <div className={styles.contactItem}>
                 <h3>Phone</h3>
                 <p>
-                  <a href="tel:+447448036017">+44 7448 036017</a>
+                  <TrackedPhoneLink location="book-now">+44 7448 036017</TrackedPhoneLink>
                 </p>
                 <p className={styles.contactNote}>
                   I&apos;m in sessions for most of the day, so if I don&apos;t pick up, please leave

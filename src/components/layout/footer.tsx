@@ -2,6 +2,8 @@ import styles from './footer.module.scss';
 import Image from 'next/image';
 import Link from 'next/link';
 
+import { TrackedPhoneLink, TrackedEmailLink } from '@/components/ui/TrackedContactLinks';
+
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
@@ -126,14 +128,10 @@ export default function Footer() {
             </a>
           </address>
           <p className={styles.contactLink}>
-            <a href="tel:+447448036017" aria-label="Call Andreea">
-              07448 036017
-            </a>
+            <TrackedPhoneLink location="footer" />
           </p>
           <p className={styles.contactLink}>
-            <a href="mailto:andreeatherapytoday@gmail.com" aria-label="Email Andreea">
-              andreeatherapytoday@gmail.com
-            </a>
+            <TrackedEmailLink location="footer" />
           </p>
           <div className={styles.socialLinks}>
             <a
@@ -178,6 +176,8 @@ export default function Footer() {
         </p>
         <div className={styles.legalLinks}>
           <Link href="/privacy-policy">Privacy Policy</Link>
+          <span className={styles.divider}>·</span>
+          <Link href="/cookies">Cookies</Link>
           <span className={styles.divider}>·</span>
           <Link href="/terms">Terms</Link>
         </div>
