@@ -69,7 +69,7 @@ Includes approaches like EMDR, trauma-focused CBT, and somatic experiencing:
 - **Safety first**: Creating a secure therapeutic environment
 - **Body awareness**: Understanding how trauma affects the physical self
 - **Processing techniques**: Specific methods for working through traumatic memories
-- **Empowerment**: Helping you regain control and agency
+- **Restoring agency**: Helping you regain control and choice
 
 **Best for**: PTSD, childhood trauma, acute stress reactions
 

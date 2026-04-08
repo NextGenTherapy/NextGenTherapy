@@ -1,7 +1,7 @@
 ---
 title: "Supporting Your Child Through Therapy | Parent's Guide to Child Therapy"
 date: '2025-07-01'
-summary: "Essential guidance for parents supporting their child's therapy journey. Expert advice from Colchester child therapist on creating a healing environment at home and working with child therapists."
+summary: "Essential guidance for parents supporting their child through therapy. Expert advice from Colchester child therapist on creating a healing environment at home and working with child therapists."
 category: 'professional'
 keywords: 'child therapy support Colchester, parenting during therapy, supporting child therapy Essex, child counselling guide, parent therapy advice Colchester, family therapy support, child mental health Colchester, child therapist guide, therapy for children Essex'
 ---

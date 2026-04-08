@@ -271,7 +271,7 @@ Social difficulties don&apos;t just affect young people at home—they significa
 - Youth groups and clubs that welcome different personality types
 - Structured activities that facilitate natural peer interaction
 - Mentoring programs connecting young people with positive role models
-- Family support services that address social challenges holistically
+- Family support services that address social challenges comprehensively
 
 ## Technology and Modern Friendship Challenges
 

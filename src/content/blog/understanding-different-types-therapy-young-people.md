@@ -403,7 +403,7 @@ Regardless of the therapeutic approach, families can support the process by:
 
 ## Hope and Healing: The Power of Appropriate Support
 
-Understanding different therapeutic approaches empowers families to make informed decisions about their young person&apos;s mental health support. While the variety of options can seem overwhelming, this diversity means there&apos;s likely an approach that will work well for your family&apos;s specific situation.
+Understanding different therapeutic approaches helps families make informed decisions about their young person's mental health support. While the variety of options can seem overwhelming, this diversity means there&apos;s likely an approach that will work well for your family&apos;s specific situation.
 
 Remember that therapy is not a sign of failure or weakness—it&apos;s an investment in your young person&apos;s emotional wellbeing and future relationships. The skills and insights gained through therapy often serve young people throughout their lives, improving not just their current difficulties but their overall resilience and capacity for healthy relationships.
 

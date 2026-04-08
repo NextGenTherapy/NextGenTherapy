@@ -234,7 +234,7 @@ As a psychotherapist specialising in youth mental health, I see therapy as provi
 
 **For Children:**
 
-- A safe space to explore big feelings through play and creativity
+- A supportive environment to explore big feelings through play and creativity
 - Help understanding family changes or traumatic experiences
 - Development of emotional vocabulary and regulation skills
 - Support for parents in understanding and responding to their child's needs
@@ -326,7 +326,7 @@ If you answered yes to any of these questions, it's worth having a conversation 
 
 Youth mental health is not just a individual or family issue—it's a community responsibility. When young people thrive mentally and emotionally, our entire community benefits. They become the engaged students, thoughtful friends, and resilient adults who will shape our future.
 
-In Colchester and throughout Essex, we have the opportunity to create a community where young people feel supported, understood, and empowered to seek help when they need it. This means continuing conversations about mental health, advocating for better services, and ensuring that no young person feels alone in their struggles.
+In Colchester and throughout Essex, we have the opportunity to create a community where young people feel supported, understood, and confident to seek help when they need it. This means continuing conversations about mental health, advocating for better services, and ensuring that no young person feels alone in their struggles.
 
 ### Resources and Next Steps
 
