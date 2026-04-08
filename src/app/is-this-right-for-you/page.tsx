@@ -290,19 +290,36 @@ export default function IsThisRightForYouPage() {
                   You&apos;re willing to commit to weekly sessions and give the work time to unfold
                 </li>
                 <li>
-                  You&apos;re a woman dealing with burnout, anxiety, overthinking, self-worth
-                  questions, body image, or identity
+                  You&apos;re a{' '}
+                  <Link href="/therapy-for-women" className={styles.link}>
+                    woman dealing with burnout, anxiety, overthinking, self-worth questions, body
+                    image, or identity
+                  </Link>
                 </li>
                 <li>
-                  You&apos;re a neurodivergent adult (ADHD, autism) looking for an affirmative
-                  therapist who won&apos;t try to &ldquo;fix&rdquo; you
+                  You&apos;re a{' '}
+                  <Link href="/neurodiversity" className={styles.link}>
+                    neurodivergent adult (ADHD, autism)
+                  </Link>{' '}
+                  looking for an affirmative therapist who won&apos;t try to &ldquo;fix&rdquo; you
                 </li>
                 <li>
-                  You&apos;re a parent looking for therapy for your teenager or child (ages 4–17,
-                  in-person only)
+                  You&apos;re a parent looking for therapy for your{' '}
+                  <Link href="/teen-therapy" className={styles.link}>
+                    teenager
+                  </Link>{' '}
+                  or{' '}
+                  <Link href="/child-therapy" className={styles.link}>
+                    child
+                  </Link>{' '}
+                  (ages 4–17, in-person only)
                 </li>
                 <li>
-                  You&apos;re a Romanian speaker and want therapy in your first language
+                  You&apos;re a{' '}
+                  <Link href="/romanian-therapy" className={styles.link}>
+                    Romanian speaker
+                  </Link>{' '}
+                  and want therapy in your first language
                 </li>
                 <li>
                   You want an honest therapist who will tell you what she sees, not just reflect
