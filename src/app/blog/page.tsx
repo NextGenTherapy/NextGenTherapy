@@ -3,6 +3,7 @@ import path from 'path';
 import matter from 'gray-matter';
 import Link from 'next/link';
 import PageHero from '@/components/ui/PageHero';
+import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema';
 import styles from './blog.module.scss';
 import type { Metadata } from 'next';
 
@@ -216,6 +217,7 @@ export default function BlogPage() {
           />
         </div>
       </div>
+      <BreadcrumbSchema />
     </>
   );
 }

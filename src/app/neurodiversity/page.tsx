@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 import PageHero from '@/components/ui/PageHero';
+import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema';
 import styles from './neurodiversity.module.scss';
 import buttonStyles from '../../components/ui/button.module.scss';
 
@@ -84,31 +85,6 @@ export default function NeurodiversityTherapyPage() {
       'Psychodynamic, affirmative therapy for neurodivergent adults including ADHD and autism. Sensory-aware room in Colchester, online sessions UK-wide. No formal diagnosis required.',
   };
 
-  const breadcrumbSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    itemListElement: [
-      {
-        '@type': 'ListItem',
-        position: 1,
-        name: 'Home',
-        item: 'https://nextgentherapy.co.uk',
-      },
-      {
-        '@type': 'ListItem',
-        position: 2,
-        name: 'Services',
-        item: 'https://nextgentherapy.co.uk/services',
-      },
-      {
-        '@type': 'ListItem',
-        position: 3,
-        name: 'Neurodiversity Therapy',
-        item: 'https://nextgentherapy.co.uk/neurodiversity',
-      },
-    ],
-  };
-
   const faqSchema = {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
@@ -153,10 +129,6 @@ export default function NeurodiversityTherapyPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
       <script
         type="application/ld+json"
@@ -324,6 +296,7 @@ export default function NeurodiversityTherapyPage() {
           </section>
         </main>
       </div>
+      <BreadcrumbSchema />
     </>
   );
 }

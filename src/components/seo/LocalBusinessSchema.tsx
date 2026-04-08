@@ -54,20 +54,56 @@ export default function LocalBusinessSchema() {
       },
       {
         '@type': 'City',
+        name: 'Wivenhoe',
+        containedIn: 'Essex',
+      },
+      {
+        '@type': 'City',
+        name: 'Mersea',
+        containedIn: 'Essex',
+      },
+      {
+        '@type': 'City',
+        name: 'Tiptree',
+        containedIn: 'Essex',
+      },
+      {
+        '@type': 'City',
+        name: 'Marks Tey',
+        containedIn: 'Essex',
+      },
+      {
+        '@type': 'City',
+        name: 'Manningtree',
+        containedIn: 'Essex',
+      },
+      {
+        '@type': 'City',
+        name: 'Clacton',
+        containedIn: 'Essex',
+      },
+      {
+        '@type': 'City',
         name: 'Ipswich',
         containedIn: 'Suffolk',
       },
       {
-        '@type': 'City',
-        name: 'Chelmsford',
-        containedIn: 'Essex',
-      },
-      {
-        '@type': 'AdministrativeArea',
-        name: 'Essex',
+        '@type': 'Country',
+        name: 'United Kingdom',
       },
     ],
-    knowsLanguage: ['en-GB'],
+    knowsLanguage: ['en-GB', 'ro'],
+    availableLanguage: ['English', 'Romanian'],
+    hasCredential: {
+      '@type': 'EducationalOccupationalCredential',
+      credentialCategory: 'Professional Membership',
+      name: 'BACP Registered Member (MBACP)',
+      recognizedBy: {
+        '@type': 'Organization',
+        name: 'British Association for Counselling and Psychotherapy',
+        url: 'https://www.bacp.co.uk',
+      },
+    },
     hasOfferCatalog: {
       '@type': 'OfferCatalog',
       name: 'Therapy Services',
@@ -86,7 +122,7 @@ export default function LocalBusinessSchema() {
     },
     paymentAccepted: ['Cash', 'Bank Transfer', 'Card'],
     currenciesAccepted: 'GBP',
-    priceRange: '££',
+    priceRange: '£60',
   };
 
   return (

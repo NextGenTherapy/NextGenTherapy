@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 import PageHero from '@/components/ui/PageHero';
+import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema';
 import styles from './romanian-therapy.module.scss';
 import buttonStyles from '../../components/ui/button.module.scss';
 
@@ -82,40 +83,11 @@ export default function RomanianTherapyPage() {
       'Psychodynamic therapy in Romanian and English for individuals navigating bicultural identity, immigrant experience, and life between cultures. In-person in Colchester and online across the UK.',
   };
 
-  const breadcrumbSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    itemListElement: [
-      {
-        '@type': 'ListItem',
-        position: 1,
-        name: 'Home',
-        item: 'https://nextgentherapy.co.uk',
-      },
-      {
-        '@type': 'ListItem',
-        position: 2,
-        name: 'Services',
-        item: 'https://nextgentherapy.co.uk/services',
-      },
-      {
-        '@type': 'ListItem',
-        position: 3,
-        name: 'Romanian Therapy',
-        item: 'https://nextgentherapy.co.uk/romanian-therapy',
-      },
-    ],
-  };
-
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
 
       <PageHero
@@ -341,6 +313,7 @@ export default function RomanianTherapyPage() {
           </section>
         </main>
       </div>
+      <BreadcrumbSchema />
     </>
   );
 }

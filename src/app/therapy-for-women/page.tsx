@@ -3,6 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 import PageHero from '@/components/ui/PageHero';
+import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema';
 import styles from './therapy-for-women.module.scss';
 import buttonStyles from '../../components/ui/button.module.scss';
 
@@ -84,31 +85,6 @@ export default function TherapyForWomenPage() {
       'Psychodynamic therapy for women dealing with burnout, overthinking, anxiety, body image and self-worth. Weekly, open-ended sessions in Colchester and online across the UK.',
   };
 
-  const breadcrumbSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    itemListElement: [
-      {
-        '@type': 'ListItem',
-        position: 1,
-        name: 'Home',
-        item: 'https://nextgentherapy.co.uk',
-      },
-      {
-        '@type': 'ListItem',
-        position: 2,
-        name: 'Services',
-        item: 'https://nextgentherapy.co.uk/services',
-      },
-      {
-        '@type': 'ListItem',
-        position: 3,
-        name: 'Therapy for Women',
-        item: 'https://nextgentherapy.co.uk/therapy-for-women',
-      },
-    ],
-  };
-
   const faqSchema = {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
@@ -145,10 +121,6 @@ export default function TherapyForWomenPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
       <script
         type="application/ld+json"
@@ -359,6 +331,7 @@ export default function TherapyForWomenPage() {
           </section>
         </main>
       </div>
+      <BreadcrumbSchema />
     </>
   );
 }

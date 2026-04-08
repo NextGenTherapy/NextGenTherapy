@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import PageHero from '@/components/ui/PageHero';
 import CTABlock from '@/components/ui/CTABlock';
+import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema';
 import styles from './trust.module.scss';
 
 const siteUrl = 'https://nextgentherapy.co.uk';
@@ -67,31 +68,10 @@ export const metadata: Metadata = {
 export default function TestimonialsPage() {
   const structuredData = {
     '@context': 'https://schema.org',
-    '@graph': [
-      {
-        '@type': 'LocalBusiness',
-        '@id': 'https://nextgentherapy.co.uk/#organization',
-        name: 'Next Generation Therapy',
-        url: 'https://nextgentherapy.co.uk',
-      },
-      {
-        '@type': 'BreadcrumbList',
-        itemListElement: [
-          {
-            '@type': 'ListItem',
-            position: 1,
-            name: 'Home',
-            item: 'https://nextgentherapy.co.uk',
-          },
-          {
-            '@type': 'ListItem',
-            position: 2,
-            name: 'Trust & Care',
-            item: 'https://nextgentherapy.co.uk/trust',
-          },
-        ],
-      },
-    ],
+    '@type': 'LocalBusiness',
+    '@id': 'https://nextgentherapy.co.uk/#organization',
+    name: 'Next Generation Therapy',
+    url: 'https://nextgentherapy.co.uk',
   };
 
   return (
@@ -174,6 +154,7 @@ export default function TestimonialsPage() {
           <CTABlock />
         </main>
       </div>
+      <BreadcrumbSchema />
     </>
   );
 }

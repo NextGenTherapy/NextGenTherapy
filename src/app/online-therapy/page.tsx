@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 import PageHero from '@/components/ui/PageHero';
+import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema';
 import styles from './online-therapy.module.scss';
 import buttonStyles from '../../components/ui/button.module.scss';
 
@@ -85,30 +86,6 @@ export default function OnlineTherapyPage() {
       'Online psychodynamic therapy for adults and teens aged 16+ across the UK. Weekly video sessions on Wednesdays.',
   };
 
-  const breadcrumbSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    itemListElement: [
-      {
-        '@type': 'ListItem',
-        position: 1,
-        name: 'Home',
-        item: 'https://nextgentherapy.co.uk',
-      },
-      {
-        '@type': 'ListItem',
-        position: 2,
-        name: 'Services',
-        item: 'https://nextgentherapy.co.uk/services',
-      },
-      {
-        '@type': 'ListItem',
-        position: 3,
-        name: 'Online Therapy',
-        item: 'https://nextgentherapy.co.uk/online-therapy',
-      },
-    ],
-  };
 
   const faqSchema = {
     '@context': 'https://schema.org',
@@ -146,10 +123,6 @@ export default function OnlineTherapyPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
       <script
         type="application/ld+json"
@@ -387,6 +360,7 @@ export default function OnlineTherapyPage() {
           </section>
         </main>
       </div>
+      <BreadcrumbSchema />
     </>
   );
 }

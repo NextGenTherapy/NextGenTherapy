@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 import PageHero from '@/components/ui/PageHero';
+import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema';
 import styles from '@/styles/location-page.module.scss';
 import buttonStyles from '@/components/ui/button.module.scss';
 
@@ -108,41 +109,13 @@ export default function TherapyInMerseaPage() {
     ],
   };
 
-  const breadcrumbSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    itemListElement: [
-      {
-        '@type': 'ListItem',
-        position: 1,
-        name: 'Home',
-        item: 'https://nextgentherapy.co.uk',
-      },
-      {
-        '@type': 'ListItem',
-        position: 2,
-        name: 'Location',
-        item: 'https://nextgentherapy.co.uk/location',
-      },
-      {
-        '@type': 'ListItem',
-        position: 3,
-        name: 'Therapy near Mersea',
-        item: 'https://nextgentherapy.co.uk/therapy-in-mersea',
-      },
-    ],
-  };
-
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
       />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-      />
+      
 
       <PageHero
         eyebrow="Therapy near Mersea"
@@ -236,6 +209,7 @@ export default function TherapyInMerseaPage() {
           </section>
         </main>
       </div>
+      <BreadcrumbSchema />
     </>
   );
 }

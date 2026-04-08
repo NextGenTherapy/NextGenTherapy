@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import PageHero from '@/components/ui/PageHero';
 import CTABlock from '@/components/ui/CTABlock';
+import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema';
 import styles from './location.module.scss';
 import GoogleMapEmbed from '../../components/ui/GoogleMapEmbed';
 import Button from '../../components/ui/button';
@@ -239,6 +240,7 @@ export default function LocationPage() {
         </main>
       </div>
       <CTABlock />
+      <BreadcrumbSchema />
     </>
   );
 }

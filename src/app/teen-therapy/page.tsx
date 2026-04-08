@@ -3,6 +3,7 @@ import Link from 'next/link';
 
 import { TeenageTherapySchema } from '@/components/seo/ServiceSchema';
 import PageHero from '@/components/ui/PageHero';
+import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema';
 
 import buttonStyles from '../../components/ui/button.module.scss';
 import styles from './teen-therapy.module.scss';
@@ -66,31 +67,6 @@ export const metadata: Metadata = {
 };
 
 export default function TeenTherapyPage() {
-  const breadcrumbSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    itemListElement: [
-      {
-        '@type': 'ListItem',
-        position: 1,
-        name: 'Home',
-        item: 'https://nextgentherapy.co.uk',
-      },
-      {
-        '@type': 'ListItem',
-        position: 2,
-        name: 'Services',
-        item: 'https://nextgentherapy.co.uk/services',
-      },
-      {
-        '@type': 'ListItem',
-        position: 3,
-        name: 'Teen Therapy',
-        item: 'https://nextgentherapy.co.uk/teen-therapy',
-      },
-    ],
-  };
-
   const faqSchema = {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
@@ -133,10 +109,6 @@ export default function TeenTherapyPage() {
   return (
     <>
       <TeenageTherapySchema />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
@@ -457,6 +429,7 @@ export default function TeenTherapyPage() {
           </section>
         </main>
       </div>
+      <BreadcrumbSchema />
     </>
   );
 }

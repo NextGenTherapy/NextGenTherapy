@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import PageHero from '@/components/ui/PageHero';
 import CTABlock from '@/components/ui/CTABlock';
+import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema';
 import styles from './youth-family-faq.module.scss';
 import Link from 'next/link';
 
@@ -544,6 +545,7 @@ export default function YouthFamilyFAQPage() {
         </section>
         </main>
       </div>
+      <BreadcrumbSchema />
     </>
   );
 }

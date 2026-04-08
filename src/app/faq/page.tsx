@@ -80,6 +80,31 @@ const gettingStartedFaqs = [
       'Start with a free 15-minute phone call. This is not therapy — it is a chance for both of us to check if we are a good fit. You can ask questions, tell me a bit about what is going on, and see whether you feel comfortable enough to work with me. If it feels right, we book a first session.',
   },
   {
+    question: "What's the free 15-minute call for? Is it actually free?",
+    answer: (
+      <p>
+        Completely free, no catch. The call is not therapy — it is a chance for both of us to check
+        whether we are a good fit before committing to anything. You can ask me questions, tell me a
+        bit about what is going on, and get a sense of whether you feel comfortable enough to want
+        to work with me. If it does not feel right, no hard feelings.
+      </p>
+    ),
+    plainAnswer:
+      "Completely free, no catch. The call is not therapy — it is a chance for both of us to check whether we are a good fit before committing to anything. You can ask me questions, tell me a bit about what is going on, and get a sense of whether you feel comfortable enough to want to work with me. If it does not feel right, no hard feelings.",
+  },
+  {
+    question: 'How quickly can I start?',
+    answer: (
+      <p>
+        Usually within a week or two, depending on my availability. After the free call, we can
+        often find a first session slot within the next few days. If my diary is full, I will let
+        you know and can suggest colleagues if you need to start sooner.
+      </p>
+    ),
+    plainAnswer:
+      'Usually within a week or two, depending on my availability. After the free call, we can often find a first session slot within the next few days. If my diary is full, I will let you know and can suggest colleagues if you need to start sooner.',
+  },
+  {
     question: 'What happens in the first session?',
     answer: (
       <p>
@@ -97,7 +122,7 @@ const gettingStartedFaqs = [
       'The first session is about getting to know you. I will ask what brought you to therapy right now, and we will talk about your current life, your history, and what you hope to get from this work. There is no pressure to share more than you are ready to. Feeling comfortable is more important than covering everything at once.',
   },
   {
-    question: 'Do I need a diagnosis or referral to start therapy?',
+    question: 'Do I need a referral from my GP?',
     answer: (
       <p>
         No. Most of my clients come to me directly, without a referral or formal diagnosis. You do
@@ -169,6 +194,18 @@ const howTherapyWorksFaqs = [
       'It depends on what you are working through. Some clients stay for a few months; others for a year or more. Psychodynamic therapy is open-ended, meaning we do not set a fixed number of sessions upfront. We go at your pace and review regularly. The goal is lasting change, not a quick fix.',
   },
   {
+    question: 'How often will we meet?',
+    answer: (
+      <p>
+        Weekly, at the same time each week. This rhythm matters in psychodynamic work — it creates
+        continuity and allows material to build from session to session. If circumstances change, we
+        can discuss adjusting the frequency, but weekly sessions are the starting point.
+      </p>
+    ),
+    plainAnswer:
+      'Weekly, at the same time each week. This rhythm matters in psychodynamic work — it creates continuity and allows material to build from session to session. If circumstances change, we can discuss adjusting the frequency, but weekly sessions are the starting point.',
+  },
+  {
     question: 'Do you give homework or exercises?',
     answer: (
       <p>
@@ -204,6 +241,18 @@ const practicalFaqs = [
       </p>
     ),
     plainAnswer: '£60 per 50-minute session.',
+  },
+  {
+    question: 'Do you take insurance?',
+    answer: (
+      <p>
+        I do not work directly with insurance companies, but I can provide receipts if you want to
+        claim back from a private health insurance policy. Check with your insurer whether they
+        cover psychotherapy and what documentation they need.
+      </p>
+    ),
+    plainAnswer:
+      'I do not work directly with insurance companies, but I can provide receipts if you want to claim back from a private health insurance policy. Check with your insurer whether they cover psychotherapy and what documentation they need.',
   },
   {
     question: 'Do you offer reduced fees?',
@@ -377,6 +426,19 @@ const confidentialityFaqs = [
       'Yes, with a few legal exceptions. I am required to break confidentiality if there is a serious risk of harm to yourself or someone else, if a child or vulnerable adult is at risk, or if compelled by law. I would always try to discuss this with you first.',
   },
   {
+    question: 'Will you tell my parents what we talk about?',
+    answer: (
+      <p>
+        No. What you tell me stays between us, with the same exceptions as above. If you are under
+        18, I may need to speak to your parents about practical things like scheduling, but the
+        content of our sessions is confidential. The only exception is if I am worried about your
+        safety — and even then, I would talk to you first whenever possible.
+      </p>
+    ),
+    plainAnswer:
+      'No. What you tell me stays between us, with the same exceptions as above. If you are under 18, I may need to speak to your parents about practical things like scheduling, but the content of our sessions is confidential. The only exception is if I am worried about your safety — and even then, I would talk to you first whenever possible.',
+  },
+  {
     question: 'Do you keep notes?',
     answer: (
       <p>
@@ -441,6 +503,9 @@ const notRightFaqs = [
             <strong>Samaritans:</strong> 116 123 (free, 24/7)
           </li>
           <li>
+            <strong>Shout:</strong> Text SHOUT to 85258 (free, 24/7 text support)
+          </li>
+          <li>
             <strong>NHS Crisis Line:</strong> 111 (press option 2 for mental health)
           </li>
           <li>
@@ -450,7 +515,21 @@ const notRightFaqs = [
       </>
     ),
     plainAnswer:
-      'This website is not a crisis service. If you are in immediate danger or need urgent help, please contact: Samaritans on 116 123 (free, 24/7), NHS Crisis Line on 111 (option 2 for mental health), or emergency services on 999.',
+      'This website is not a crisis service. If you are in immediate danger or need urgent help, please contact: Samaritans on 116 123 (free, 24/7), Shout by texting SHOUT to 85258 (free, 24/7 text support), NHS Crisis Line on 111 (option 2 for mental health), or emergency services on 999.',
+  },
+  {
+    question: "What if therapy isn't working?",
+    answer: (
+      <p>
+        Stuck patches are normal in therapy and are often where the important work happens. If you
+        feel like we are not making progress, I want you to tell me — we can talk about what is
+        going on and whether something needs to shift. And if it turns out I am not the right fit
+        for you, that is okay too. I would rather help you find someone who is than have you stay
+        somewhere that is not working.
+      </p>
+    ),
+    plainAnswer:
+      "Stuck patches are normal in therapy and are often where the important work happens. If you feel like we are not making progress, I want you to tell me — we can talk about what is going on and whether something needs to shift. And if it turns out I am not the right fit for you, that is okay too. I would rather help you find someone who is than have you stay somewhere that is not working.",
   },
   {
     question: 'Can I try a few sessions and then decide?',
@@ -492,9 +571,9 @@ export default function FAQ() {
       <BreadcrumbSchema items={breadcrumbs} />
 
       <PageHero
-        eyebrow="Questions Answered"
-        title="Everything you want to know before getting in touch"
-        lead="I know reaching out to a therapist can feel daunting. Here are honest answers to the questions I hear most often."
+        eyebrow="Frequently Asked Questions"
+        title="The questions I get asked most often."
+        lead="Practical questions about how I work, what therapy costs, who I work with, and what to expect. If your question isn't answered here, the free 15-minute call is the best place to ask it."
       />
 
       <div className={styles.page}>
@@ -530,18 +609,18 @@ export default function FAQ() {
           </section>
 
           <section className={styles.faqSection}>
-            <h2 className={styles.sectionTitle}>When therapy is not right</h2>
+            <h2 className={styles.sectionTitle}>When therapy isn&apos;t right</h2>
             <FaqAccordion items={notRightFaqs} idPrefix="not-right" />
           </section>
 
           <section className={styles.ctaSection}>
             <h2 className={styles.ctaTitle}>Still have questions?</h2>
             <p className={styles.ctaText}>
-              Book a free 15-minute call and ask me directly. No pressure, no commitment — just a
-              chance to see if this feels right.
+              The free 15-minute call is the best place to ask anything I haven&apos;t covered here.
+              There&apos;s no pressure to book sessions afterwards.
             </p>
             <Link href="/book-now" className={styles.ctaButton}>
-              Book your free call
+              Book a Free 15-Minute Call
             </Link>
           </section>
         </main>

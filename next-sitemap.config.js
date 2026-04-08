@@ -29,7 +29,7 @@ module.exports = {
       changefreq = 'monthly';
     }
     // High-intent service pages
-    if (path === '/services') priority = 0.95;
+    if (path === '/services') priority = 0.85;
     if (path === '/book-now') priority = 0.9;
     if (path === '/pricing') priority = 0.9;
     if (path === '/faq') priority = 0.85;
@@ -37,13 +37,20 @@ module.exports = {
     if (path === '/location') priority = 0.8;
     if (path === '/about') priority = 0.85;
     if (path === '/is-this-right-for-you') priority = 0.8;
-    // Specialized service pages - high priority for targeted SEO
-    if (path === '/therapy-for-women') priority = 0.85;
-    if (path === '/neurodiversity') priority = 0.85;
-    if (path === '/teen-therapy') priority = 0.85;
-    if (path === '/child-therapy') priority = 0.85;
-    if (path === '/romanian-therapy') priority = 0.85;
-    if (path === '/online-therapy') priority = 0.85;
+    // Cornerstone service pages - highest priority for targeted SEO
+    if (path === '/therapy-for-women') priority = 0.9;
+    if (path === '/neurodiversity') priority = 0.9;
+    if (path === '/teen-therapy') priority = 0.9;
+    if (path === '/child-therapy') priority = 0.9;
+    if (path === '/romanian-therapy') priority = 0.9;
+    if (path === '/online-therapy') priority = 0.9;
+    // Location pages
+    if (path.startsWith('/therapy-in-')) priority = 0.7;
+    // Legal pages - low priority, rarely change
+    if (path === '/privacy-policy' || path === '/terms') {
+      priority = 0.3;
+      changefreq = 'yearly';
+    }
 
     return {
       loc: path,
@@ -70,7 +77,7 @@ module.exports = {
           result.push({
             loc: `/blog/${slug}`,
             changefreq: 'monthly',
-            priority: 0.8, // High priority for blog content
+            priority: 0.6, // Blog content - lower priority than cornerstone pages
             lastmod: data.date || new Date().toISOString(),
           });
         }

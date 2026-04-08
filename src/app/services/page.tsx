@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import PageHero from '@/components/ui/PageHero';
 import CTABlock from '@/components/ui/CTABlock';
+import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema';
 import styles from './services.module.scss';
 
 export const metadata: Metadata = {
@@ -86,34 +87,11 @@ export default function ServicesPage() {
       'Psychodynamic therapy for women, neurodivergent adults, teenagers, and children. In-person in Colchester and online across the UK.',
   };
 
-  const breadcrumbSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    itemListElement: [
-      {
-        '@type': 'ListItem',
-        position: 1,
-        name: 'Home',
-        item: 'https://nextgentherapy.co.uk',
-      },
-      {
-        '@type': 'ListItem',
-        position: 2,
-        name: 'Services',
-        item: 'https://nextgentherapy.co.uk/services',
-      },
-    ],
-  };
-
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
       <PageHero
         eyebrow="What I Work With"
@@ -175,6 +153,7 @@ export default function ServicesPage() {
       </div>
 
       <CTABlock />
+      <BreadcrumbSchema />
     </>
   );
 }

@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 import PageHero from '@/components/ui/PageHero';
+import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema';
 
 import buttonStyles from '../../components/ui/button.module.scss';
 import styles from './pricing.module.scss';
@@ -280,6 +281,7 @@ export default function Pricing() {
           </section>
         </main>
       </div>
+      <BreadcrumbSchema />
     </>
   );
 }

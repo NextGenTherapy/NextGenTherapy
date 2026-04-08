@@ -66,6 +66,30 @@ export default function BreadcrumbSchema({ items }: BreadcrumbSchemaProps) {
     defaultItems.push({ name: 'Privacy Policy', url: 'https://nextgentherapy.co.uk/privacy-policy' });
   } else if (pathname === '/terms') {
     defaultItems.push({ name: 'Terms & Conditions', url: 'https://nextgentherapy.co.uk/terms' });
+  } else if (pathname === '/therapy-in-colchester') {
+    defaultItems.push({ name: 'Location', url: 'https://nextgentherapy.co.uk/location' });
+    defaultItems.push({ name: 'Colchester', url: 'https://nextgentherapy.co.uk/therapy-in-colchester' });
+  } else if (pathname === '/therapy-in-wivenhoe') {
+    defaultItems.push({ name: 'Location', url: 'https://nextgentherapy.co.uk/location' });
+    defaultItems.push({ name: 'Wivenhoe', url: 'https://nextgentherapy.co.uk/therapy-in-wivenhoe' });
+  } else if (pathname === '/therapy-in-mersea') {
+    defaultItems.push({ name: 'Location', url: 'https://nextgentherapy.co.uk/location' });
+    defaultItems.push({ name: 'Mersea', url: 'https://nextgentherapy.co.uk/therapy-in-mersea' });
+  } else if (pathname === '/therapy-in-tiptree') {
+    defaultItems.push({ name: 'Location', url: 'https://nextgentherapy.co.uk/location' });
+    defaultItems.push({ name: 'Tiptree', url: 'https://nextgentherapy.co.uk/therapy-in-tiptree' });
+  } else if (pathname === '/therapy-in-marks-tey') {
+    defaultItems.push({ name: 'Location', url: 'https://nextgentherapy.co.uk/location' });
+    defaultItems.push({ name: 'Marks Tey', url: 'https://nextgentherapy.co.uk/therapy-in-marks-tey' });
+  } else if (pathname === '/therapy-in-manningtree') {
+    defaultItems.push({ name: 'Location', url: 'https://nextgentherapy.co.uk/location' });
+    defaultItems.push({ name: 'Manningtree', url: 'https://nextgentherapy.co.uk/therapy-in-manningtree' });
+  } else if (pathname === '/therapy-in-clacton') {
+    defaultItems.push({ name: 'Location', url: 'https://nextgentherapy.co.uk/location' });
+    defaultItems.push({ name: 'Clacton', url: 'https://nextgentherapy.co.uk/therapy-in-clacton' });
+  } else if (pathname === '/therapy-in-ipswich') {
+    defaultItems.push({ name: 'Location', url: 'https://nextgentherapy.co.uk/location' });
+    defaultItems.push({ name: 'Ipswich', url: 'https://nextgentherapy.co.uk/therapy-in-ipswich' });
   }
 
   const breadcrumbItems = items || defaultItems;

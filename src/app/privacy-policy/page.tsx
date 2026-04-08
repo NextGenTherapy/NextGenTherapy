@@ -2,6 +2,7 @@ import styles from './privacy-policy.module.scss';
 import buttonLinksStyles from '../../components/ui/buttonLinks.module.scss';
 import LegalNavigation from '../../components/layout/legal-navigation';
 import Button from '../../components/ui/button';
+import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -312,6 +313,7 @@ export default function PrivacyPolicy() {
         </section>
         </main>
       </div>
+      <BreadcrumbSchema />
     </>
   );
 }

@@ -3,6 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 import PageHero from '@/components/ui/PageHero';
+import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema';
 import styles from './about.module.scss';
 import buttonStyles from '../../components/ui/button.module.scss';
 
@@ -108,34 +109,11 @@ export default function AboutMe() {
     ],
   };
 
-  const breadcrumbSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    itemListElement: [
-      {
-        '@type': 'ListItem',
-        position: 1,
-        name: 'Home',
-        item: 'https://nextgentherapy.co.uk',
-      },
-      {
-        '@type': 'ListItem',
-        position: 2,
-        name: 'About',
-        item: 'https://nextgentherapy.co.uk/about',
-      },
-    ],
-  };
-
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
       <PageHero
         eyebrow="About Andreea"
@@ -329,6 +307,7 @@ export default function AboutMe() {
           </section>
         </main>
       </div>
+      <BreadcrumbSchema />
     </>
   );
 }

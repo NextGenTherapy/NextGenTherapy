@@ -3,6 +3,7 @@ import styles from './terms.module.scss';
 import buttonLinksStyles from '../../components/ui/buttonLinks.module.scss';
 import LegalNavigation from '../../components/layout/legal-navigation';
 import Button from '../../components/ui/button';
+import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://nextgentherapy.co.uk'),
@@ -286,6 +287,7 @@ export default function Terms() {
         </section>
         </main>
       </div>
+      <BreadcrumbSchema />
     </>
   );
 }

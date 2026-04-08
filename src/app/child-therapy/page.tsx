@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { ChildTherapySchema } from '@/components/seo/ServiceSchema';
 import PageHero from '@/components/ui/PageHero';
+import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema';
 import styles from './child-therapy.module.scss';
 
 export const metadata: Metadata = {
@@ -66,31 +67,6 @@ export const metadata: Metadata = {
 };
 
 export default function ChildTherapyPage() {
-  const breadcrumbSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    itemListElement: [
-      {
-        '@type': 'ListItem',
-        position: 1,
-        name: 'Home',
-        item: 'https://nextgentherapy.co.uk',
-      },
-      {
-        '@type': 'ListItem',
-        position: 2,
-        name: 'Services',
-        item: 'https://nextgentherapy.co.uk/services',
-      },
-      {
-        '@type': 'ListItem',
-        position: 3,
-        name: 'Child Therapy',
-        item: 'https://nextgentherapy.co.uk/child-therapy',
-      },
-    ],
-  };
-
   const faqSchema = {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
@@ -133,10 +109,6 @@ export default function ChildTherapyPage() {
   return (
     <>
       <ChildTherapySchema />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
@@ -396,6 +368,7 @@ export default function ChildTherapyPage() {
           </section>
         </div>
       </div>
+      <BreadcrumbSchema />
     </>
   );
 }
