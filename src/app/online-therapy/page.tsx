@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: 'https://nextgentherapy.co.uk/images/default-social-share.jpg',
+        url: 'https://nextgentherapy.co.uk/images/og/og-online-therapy.jpg',
         width: 1200,
         height: 630,
         alt: 'Online Therapy UK — Next Generation Therapy',
@@ -62,7 +62,7 @@ export const metadata: Metadata = {
     title: 'Online Therapy UK | Video Sessions Age 16+ | Next Generation Therapy',
     description:
       'Online psychodynamic therapy across the UK. Secure video sessions for clients aged 16 and over. BACP registered.',
-    images: ['https://nextgentherapy.co.uk/images/default-social-share.jpg'],
+    images: ['https://nextgentherapy.co.uk/images/og/og-online-therapy.jpg'],
   },
 };
 

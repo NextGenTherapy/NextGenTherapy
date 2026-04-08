@@ -26,7 +26,8 @@
     "backup:verify": "node scripts/backup-strategy.js verify",
     "backup:report": "node scripts/backup-strategy.js report",
     "backup:cleanup": "node scripts/backup-strategy.js cleanup",
-    "a11y:audit": "axe http://localhost:3000 http://localhost:3000/about http://localhost:3000/therapy-for-women http://localhost:3000/romanian-therapy http://localhost:3000/book-now http://localhost:3000/faq --tags wcag2a,wcag2aa --exit"
+    "a11y:audit": "axe http://localhost:3000 http://localhost:3000/about http://localhost:3000/therapy-for-women http://localhost:3000/romanian-therapy http://localhost:3000/book-now http://localhost:3000/faq --tags wcag2a,wcag2aa --exit",
+    "og:generate": "npx ts-node scripts/generate-og-images.ts"
   },
   "dependencies": {
     "@next/third-parties": "^15.4.0-canary.51",

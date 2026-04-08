@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: 'https://nextgentherapy.co.uk/images/default-social-share.jpg',
+        url: 'https://nextgentherapy.co.uk/images/og/og-romanian-therapy.jpg',
         width: 1200,
         height: 630,
         alt: 'Romanian Therapist UK — Next Generation Therapy',
@@ -62,7 +62,7 @@ export const metadata: Metadata = {
     title: 'Romanian Therapist UK — Terapie în Limba Română | BACP Registered',
     description:
       'Romanian-speaking psychodynamic therapist in Colchester and online across the UK. Sesiuni de terapie în limba română.',
-    images: ['https://nextgentherapy.co.uk/images/default-social-share.jpg'],
+    images: ['https://nextgentherapy.co.uk/images/og/og-romanian-therapy.jpg'],
   },
 };
 

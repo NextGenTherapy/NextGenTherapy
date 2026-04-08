@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import { Cormorant_Garamond, DM_Sans } from 'next/font/google';
 import '../styles/variables.scss';
 import '../styles/globals.scss';
@@ -26,6 +26,12 @@ import ConditionalAnalytics from '../components/layout/ConditionalAnalytics';
 import ConditionalVercelAnalytics from '../components/layout/ConditionalVercelAnalytics';
 import WebVitalsReporter from '../components/layout/WebVitalsReporter';
 import WebsiteSchema from '../components/seo/WebsiteSchema';
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  viewportFit: 'cover',
+};
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://nextgentherapy.co.uk'),
@@ -113,13 +119,21 @@ export const metadata: Metadata = {
       'Professional psychodynamic therapy in Colchester & online with BACP registered therapist Andreea Horhocea.',
     images: ['https://nextgentherapy.co.uk/images/default-social-share.jpg'],
   },
+  icons: {
+    icon: [
+      { url: '/favicon.ico', sizes: 'any' },
+      { url: '/icons/icon-192x192.png', sizes: '192x192', type: 'image/png' },
+      { url: '/icons/icon-512x512.png', sizes: '512x512', type: 'image/png' },
+    ],
+    apple: '/apple-touch-icon.png',
+  },
+  manifest: '/manifest.json',
 };
 
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en-GB" className={`${cormorant.variable} ${dmSans.variable}`}>
       <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
         {/* iPhone/Safari status bar styling */}
         <meta name="theme-color" content="#3D5940" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
@@ -143,8 +157,6 @@ export default async function RootLayout({ children }: { children: React.ReactNo
         <meta name="business-type" content="Health & Medical" />
         <meta name="business-category" content="Mental Health Service" />
 
-        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
-        <link rel="manifest" href="/manifest.json" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

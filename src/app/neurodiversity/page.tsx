@@ -52,7 +52,7 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: 'https://nextgentherapy.co.uk/images/default-social-share.jpg',
+        url: 'https://nextgentherapy.co.uk/images/og/og-neurodiversity.jpg',
         width: 1200,
         height: 630,
         alt: 'ADHD & Autism Therapy for Adults — Next Generation Therapy',
@@ -64,7 +64,7 @@ export const metadata: Metadata = {
     title: 'ADHD & Autism Therapy for Adults — Colchester & Online | Affirmative Practice',
     description:
       'Psychodynamic, affirmative therapy for neurodivergent adults in Colchester and online. Sensory-aware room, stimming welcome.',
-    images: ['https://nextgentherapy.co.uk/images/default-social-share.jpg'],
+    images: ['https://nextgentherapy.co.uk/images/og/og-neurodiversity.jpg'],
   },
 };
 

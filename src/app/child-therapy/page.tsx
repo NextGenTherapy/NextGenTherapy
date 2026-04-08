@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: 'https://nextgentherapy.co.uk/images/default-social-share.jpg',
+        url: 'https://nextgentherapy.co.uk/images/og/og-child-therapy.jpg',
         width: 1200,
         height: 630,
         alt: 'Child Therapy Services in Colchester - Next Generation Therapy',
@@ -62,7 +62,7 @@ export const metadata: Metadata = {
     title: 'Child Therapy in Colchester | Play-Based Therapy 4–12',
     description:
       'Play-based psychodynamic therapy for children aged 4–12. BACP registered with NHS schools experience and SEN specialist training.',
-    images: ['https://nextgentherapy.co.uk/images/default-social-share.jpg'],
+    images: ['https://nextgentherapy.co.uk/images/og/og-child-therapy.jpg'],
   },
 };
 
