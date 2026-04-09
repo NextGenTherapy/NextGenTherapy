@@ -1,14 +1,18 @@
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-export function middleware(_request: NextRequest) {
-  // www to non-www redirect is handled in next.config.ts redirects (301)
-  // This middleware is kept for future extensibility
-  return NextResponse.next();
+function generateNonce() {
+  return Buffer.from(crypto.getRandomValues(new Uint8Array(16))).toString('base64');
 }
 
-// Match all routes except static files and API routes
+export function proxy(request: NextRequest) {
+  // Generate nonce for CSP
+  const nonce = generateNonce();
+  const response = NextResponse.next();
+  response.headers.set('x-nonce', nonce);
+  return response;
+}
+
 export const config = {
   matcher: [
     /*

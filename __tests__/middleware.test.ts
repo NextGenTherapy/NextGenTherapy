@@ -3,9 +3,9 @@
  */
 
 import { NextRequest } from 'next/server';
-import { middleware } from '../src/middleware';
+import { proxy } from '../proxy';
 
-describe('Middleware', () => {
+describe('Proxy', () => {
   describe('Basic functionality', () => {
     it('returns NextResponse.next() for standard requests', () => {
       const request = new NextRequest('https://nextgentherapy.co.uk/about', {
@@ -14,11 +14,36 @@ describe('Middleware', () => {
         },
       });
 
-      const response = middleware(request);
+      const response = proxy(request);
 
-      // Middleware passes through all requests now
-      // www redirects are handled in next.config.ts
+      // Proxy passes through all requests and adds nonce header
       expect(response.status).toBe(200);
+    });
+
+    it('adds x-nonce header to response', () => {
+      const request = new NextRequest('https://nextgentherapy.co.uk/about', {
+        headers: {
+          host: 'nextgentherapy.co.uk',
+        },
+      });
+
+      const response = proxy(request);
+
+      // Check that nonce header is set
+      expect(response.headers.get('x-nonce')).toBeTruthy();
+      // Nonce should be a base64 string
+      expect(response.headers.get('x-nonce')).toMatch(/^[A-Za-z0-9+/]+=*$/);
+    });
+
+    it('generates unique nonces for different requests', () => {
+      const request1 = new NextRequest('https://nextgentherapy.co.uk/about');
+      const request2 = new NextRequest('https://nextgentherapy.co.uk/services');
+
+      const response1 = proxy(request1);
+      const response2 = proxy(request2);
+
+      // Each request should get a unique nonce
+      expect(response1.headers.get('x-nonce')).not.toBe(response2.headers.get('x-nonce'));
     });
 
     it('passes through requests with various paths', () => {
@@ -37,8 +62,9 @@ describe('Middleware', () => {
           },
         });
 
-        const response = middleware(request);
+        const response = proxy(request);
         expect(response.status).toBe(200);
+        expect(response.headers.get('x-nonce')).toBeTruthy();
       });
     });
 
@@ -49,7 +75,7 @@ describe('Middleware', () => {
         },
       });
 
-      const response = middleware(request);
+      const response = proxy(request);
       expect(response.status).toBe(200);
     });
 
@@ -60,7 +86,7 @@ describe('Middleware', () => {
         },
       });
 
-      const response = middleware(request);
+      const response = proxy(request);
       expect(response.status).toBe(200);
     });
 
@@ -72,18 +98,18 @@ describe('Middleware', () => {
         },
       });
 
-      const response = middleware(request);
+      const response = proxy(request);
       expect(response.status).toBe(200);
     });
 
     it('handles requests without host header', () => {
       const request = new NextRequest('https://nextgentherapy.co.uk/about');
 
-      const response = middleware(request);
+      const response = proxy(request);
       expect(response.status).toBe(200);
     });
   });
 
-  // Note: www to non-www redirects are now handled by next.config.ts redirects (301)
-  // Not by this middleware
+  // Note: www to non-www redirects are handled by next.config.ts redirects (301)
+  // Not by this proxy
 });
