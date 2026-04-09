@@ -148,21 +148,22 @@ a:focus {
   outline-offset: var(--outline-offset);
 }
 
-/* Skip link */
+/* Skip link - hidden off-screen until focused */
 .skip-link {
   position: absolute;
-  top: -40px;
-  left: 6px;
+  top: 0;
+  left: 0;
   background: var(--color-brand);
   color: var(--color-header-text);
   padding: var(--spacing-small);
   text-decoration: none;
   border-radius: var(--radius-small);
   z-index: 10000;
-  transition: top var(--transition-normal);
+  transform: translateY(-100%);
+  transition: transform var(--transition-normal);
 
   &:focus {
-    top: 6px;
+    transform: translateY(0);
   }
 }
 

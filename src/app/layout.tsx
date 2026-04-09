@@ -306,9 +306,6 @@ export default async function RootLayout({ children }: { children: React.ReactNo
         <a href="#main-content" className="skip-link">
           Skip to content
         </a>
-        <a href="#main-navigation" className="skip-link">
-          Skip to navigation
-        </a>
         <div className="layout-container">
           <Header />
           <ErrorBoundary>
