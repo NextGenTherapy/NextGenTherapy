@@ -42,7 +42,7 @@ export default function Cookies() {
       url: 'https://nextgentherapy.co.uk',
     },
     inLanguage: 'en-GB',
-    dateModified: '2026-04-08',
+    dateModified: '2026-04-09',
   };
 
   const breadcrumbSchema = {
@@ -80,7 +80,7 @@ export default function Cookies() {
 
           <h1 className={styles.heading}>Cookie Policy</h1>
           <p className={styles.updated}>
-            <strong>Last updated: 8 April 2026</strong>
+            <strong>Last updated: 9 April 2026</strong>
           </p>
 
           <p>
@@ -100,8 +100,10 @@ export default function Cookies() {
               site.
             </p>
             <p>
-              Under UK law (the Privacy and Electronic Communications Regulations 2003, as amended),
-              certain cookies require your consent before they can be set.
+              Under UK law (the Privacy and Electronic Communications Regulations 2003, as amended
+              by the Data (Use and Access) Act 2025), certain cookies require your consent before
+              they can be set. The 2025 amendments clarify consent requirements and emphasise
+              that refusing cookies must be as easy as accepting them.
             </p>
           </section>
 

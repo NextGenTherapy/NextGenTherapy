@@ -1,8 +1,10 @@
-import styles from './footer.module.scss';
+'use client';
+
 import Image from 'next/image';
 import Link from 'next/link';
 
-import { TrackedPhoneLink, TrackedEmailLink } from '@/components/ui/TrackedContactLinks';
+import { TrackedPhoneLink, TrackedEmailLink, TrackedBACPLink } from '@/components/ui/TrackedContactLinks';
+import styles from './footer.module.scss';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -19,15 +21,9 @@ export default function Footer() {
             Psychodynamic therapy for women, neurodivergent adults, and young people in Colchester
             and online across the UK.
           </p>
-          <a
-            href="https://www.bacp.co.uk/therapists/385976/andreea-horhocea/london-e16"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.bacpBadge}
-            aria-label="View Andreea's BACP registration"
-          >
+          <TrackedBACPLink location="footer" className={styles.bacpBadge}>
             <Image src="/images/bacp.jpg" alt="BACP Registered Member" width={60} height={60} />
-          </a>
+          </TrackedBACPLink>
         </section>
 
         {/* Column 2: What I Work With */}
@@ -182,7 +178,7 @@ export default function Footer() {
           <Link href="/terms">Terms</Link>
         </div>
         <p className={styles.credentials}>
-          BACP Registered Member. Psychodynamic Psychotherapy. UK GDPR compliant.
+          BACP Registered Member (MBACP 385976). Psychodynamic Psychotherapy. UK GDPR compliant.
         </p>
       </div>
     </footer>

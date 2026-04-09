@@ -4,7 +4,7 @@ These are all `{{ CONFIRM WITH ANDREEA }}` placeholders found by searching the e
 
 ---
 
-## Priority 1: ICO Registration Number (URGENT)
+## Priority 1: ICO Registration Number (URGENT — BLOCKING PUBLICATION)
 
 **File:** `src/app/privacy-policy/page.tsx` (line 124)
 
@@ -14,16 +14,41 @@ These are all `{{ CONFIRM WITH ANDREEA }}` placeholders found by searching the e
 
 **Current placeholder text:** `[Registration number to be inserted]`
 
+**Legal requirement:** Under UK GDPR and the Data Protection Act 2018, data controllers who process personal data are legally required to register with the ICO and pay an annual fee (£52/year for Tier 1). The registration number must be displayed.
+
 ---
 
-## Priority 2: Legal Pages — Complete
+## Priority 2: BACP Directory Location Fix (URGENT — EXTERNAL)
 
-Legal pages have been reviewed and are ready. No further action needed unless Andreea wants changes:
-- `/privacy-policy` — 18 sections, UK GDPR compliant
-- `/terms` — 15 sections, website terms only
-- `/cookies` — New page with full cookie disclosure
+**File:** External — BACP website account
 
-**See:** `docs/seo-audit/legal-pages-audit.md` for full details.
+**Status:** BACP profile shows "London E16" instead of Colchester CO1 2JS.
+
+**Action:** Log into BACP account and update practice location to:
+- Colchester Business Centre
+- 1 George Williams Way
+- Colchester CO1 2JS
+
+**Profile URL:** https://www.bacp.co.uk/therapists/385976/andreea-horhocea/
+
+---
+
+## Priority 3: Legal Pages — Updated 9 April 2026
+
+Legal pages have been reviewed by senior UK legal counsel and updated to comply with 2026 regulations:
+
+**Completed updates:**
+- ✅ `/privacy-policy` — Now 20 sections, includes new Data Protection Complaints Procedure (DUAA 2025 requirement)
+- ✅ `/terms` — Now includes Consumer Contracts Regulations 2013 reference
+- ✅ `/cookies` — Updated PECR reference to include DUAA 2025 amendments
+- ✅ Cookie banner — Both "Accept" and "Essential only" buttons now have equal visual prominence (PECR 2026 requirement)
+- ✅ Footer — BACP membership number (385976) now displayed
+
+**Still pending:**
+- ❌ ICO registration number (see Priority 1)
+- ❌ BACP profile location (see Priority 2)
+
+**See:** `docs/seo-audit/legal-pages-audit.md` for full audit details.
 
 ---
 
@@ -293,4 +318,32 @@ OTHER QUESTIONS:
 
 ---
 
-Last updated: April 2026
+---
+
+## Priority 9: Legal Monitoring Items (Ongoing)
+
+These are items to monitor for future updates:
+
+### Crime and Policing Bill 2024-25 — Mandatory Reporting
+**Status:** Monitor — Lords report stage expected 18 March 2026
+
+**Action required when enacted:** Update Privacy Policy safeguarding disclosures to reflect any new mandatory child abuse reporting requirements.
+
+### DUAA 2025 — First-Party Analytics Exemption
+**Status:** Optional enhancement
+
+The Data (Use and Access) Act 2025 introduced exemptions for first-party analytics cookies used solely for site improvement. Currently we conservatively require consent for all analytics (including GA4). This approach is compliant but could be reviewed if pure first-party analytics are implemented.
+
+### Annual ICO Registration Renewal
+**Status:** Annual reminder
+
+ICO registration must be renewed annually. Set calendar reminder for renewal date.
+
+### BACP Ethical Framework Updates
+**Status:** Monitor
+
+Check annually for updates to BACP Ethical Framework that may affect privacy policy or terms.
+
+---
+
+Last updated: 9 April 2026

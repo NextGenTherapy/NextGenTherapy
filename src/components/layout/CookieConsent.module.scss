@@ -81,18 +81,19 @@
     }
   }
 
+  // PECR 2026: "Reject/Essential only" button must have equal prominence to "Accept"
   .declineBtn {
-    background: transparent;
-    color: var(--color-header-text);
-    border: var(--border-width-thin) solid var(--color-header-text);
+    background: var(--color-header-text);
+    color: var(--color-text);
+    border: none;
 
     &:hover {
-      background: var(--color-header-text);
+      background: var(--color-accent-light);
       color: var(--color-text);
     }
 
     &:focus-visible {
-      outline: var(--outline-width) solid var(--color-header-text);
+      outline: var(--outline-width) solid var(--color-brand);
       outline-offset: var(--outline-offset);
     }
   }

@@ -47,7 +47,7 @@ export default function Terms() {
       url: 'https://nextgentherapy.co.uk',
     },
     inLanguage: 'en-GB',
-    dateModified: '2026-04-08',
+    dateModified: '2026-04-09',
   };
 
   const breadcrumbSchema = {
@@ -85,7 +85,7 @@ export default function Terms() {
 
           <h1 className={styles.heading}>Terms of Service</h1>
           <p className={styles.updated}>
-            <strong>Last updated: 8 April 2026</strong>
+            <strong>Last updated: 9 April 2026</strong>
           </p>
 
           <p>
@@ -140,6 +140,13 @@ export default function Terms() {
               <li>Data protection</li>
               <li>Ending therapy</li>
             </ul>
+            <p>
+              <strong>Consumer rights:</strong> Under the Consumer Contracts (Information,
+              Cancellation and Additional Charges) Regulations 2013, consumers booking services
+              online may have a 14-day cooling-off period. The therapy agreement explains how
+              this applies to psychotherapy services, including where you may waive this right
+              if you wish therapy to begin immediately.
+            </p>
             <p>
               <strong>Online therapy</strong> is only available for clients aged 16 and over. This
               is a safeguarding measure.

@@ -51,7 +51,7 @@ export default function PrivacyPolicy() {
       url: 'https://nextgentherapy.co.uk',
     },
     inLanguage: 'en-GB',
-    dateModified: '2026-04-08',
+    dateModified: '2026-04-09',
   };
 
   const breadcrumbSchema = {
@@ -89,7 +89,7 @@ export default function PrivacyPolicy() {
 
           <h1 className={styles.heading}>Privacy Policy</h1>
           <p className={styles.updated}>
-            <strong>Last updated: 8 April 2026</strong>
+            <strong>Last updated: 9 April 2026</strong>
           </p>
 
           <p>
@@ -445,14 +445,46 @@ export default function PrivacyPolicy() {
           </section>
 
           <section>
-            <h2 className={styles.sectionHeading}>16. Complaints</h2>
+            <h2 className={styles.sectionHeading}>16. Data Protection Complaints Procedure</h2>
             <p>
-              If you have concerns about how your data is handled, please contact me first. I take
-              all concerns seriously and will endeavour to resolve them.
+              Under the Data (Use and Access) Act 2025, I maintain a documented data protection
+              complaints procedure. If you have concerns about how your personal data is handled:
             </p>
+            <ol className={styles.list}>
+              <li>
+                <strong>Submit your complaint:</strong> Contact me by email at{' '}
+                <a href="mailto:andreeatherapytoday@gmail.com" className={styles.link}>
+                  andreeatherapytoday@gmail.com
+                </a>{' '}
+                or by post at the address above. Please describe your concern and, if relevant,
+                the specific data involved.
+              </li>
+              <li>
+                <strong>Acknowledgement:</strong> I will acknowledge your complaint within 5
+                working days of receipt.
+              </li>
+              <li>
+                <strong>Investigation:</strong> I will investigate your complaint thoroughly,
+                which may involve reviewing the data processing in question and any relevant
+                records.
+              </li>
+              <li>
+                <strong>Response:</strong> I will provide a substantive written response within
+                28 days. If the matter is complex and requires additional time, I will inform
+                you of the revised timeframe.
+              </li>
+              <li>
+                <strong>Resolution:</strong> If I find that your complaint is justified, I will
+                take appropriate action to remedy the issue and prevent recurrence.
+              </li>
+            </ol>
+          </section>
+
+          <section>
+            <h2 className={styles.sectionHeading}>17. Information Commissioner&apos;s Office</h2>
             <p>
-              You also have the right to lodge a complaint with the Information Commissioner&apos;s
-              Office:
+              If you are not satisfied with my response, or at any time, you have the right to
+              lodge a complaint with the Information Commissioner&apos;s Office (ICO):
             </p>
             <ul className={styles.list}>
               <li>
@@ -475,22 +507,45 @@ export default function PrivacyPolicy() {
               </li>
             </ul>
             <p>
-              For complaints about therapy services (as opposed to data handling), you may also
-              contact the BACP at{' '}
-              <a
-                href="https://www.bacp.co.uk/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className={styles.link}
-              >
-                bacp.co.uk
-              </a>
-              .
+              The ICO recommends that you raise concerns with me first, as I may be able to
+              resolve the matter more quickly.
             </p>
           </section>
 
           <section>
-            <h2 className={styles.sectionHeading}>17. Changes to This Policy</h2>
+            <h2 className={styles.sectionHeading}>18. BACP Complaints</h2>
+            <p>
+              For complaints about therapy services (as opposed to data handling), you may
+              contact the BACP:
+            </p>
+            <ul className={styles.list}>
+              <li>
+                <strong>Website:</strong>{' '}
+                <a
+                  href="https://www.bacp.co.uk/about-us/protecting-the-public/professional-conduct/how-to-complain-about-a-bacp-member/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.link}
+                >
+                  BACP Complaints Procedure
+                </a>
+              </li>
+              <li>
+                <strong>My BACP Profile:</strong>{' '}
+                <a
+                  href="https://www.bacp.co.uk/therapists/385976/andreea-horhocea/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.link}
+                >
+                  View my registration
+                </a>
+              </li>
+            </ul>
+          </section>
+
+          <section>
+            <h2 className={styles.sectionHeading}>19. Changes to This Policy</h2>
             <p>
               I may update this Privacy Policy from time to time. Material changes will be
               communicated to current clients directly. The date at the top indicates when the
@@ -499,7 +554,7 @@ export default function PrivacyPolicy() {
           </section>
 
           <section>
-            <h2 className={styles.sectionHeading}>18. Contact</h2>
+            <h2 className={styles.sectionHeading}>20. Contact</h2>
             <p>
               For any questions about this Privacy Policy or your personal data, contact:
             </p>
