@@ -210,7 +210,7 @@ export default function Home() {
                   considered, and one person at a time.&rdquo;
                 </blockquote>
                 <p className={styles.credentials}>
-                  Andreea Horhocea — MA Psych (University of Essex, 2020), BACP Registered
+                  Andreea Horhocea — MA Psychodynamic Psychotherapy (University of Essex, 2020), BACP Registered
                 </p>
                 <Link href="/about" className={styles.aboutLink}>
                   More about me →
