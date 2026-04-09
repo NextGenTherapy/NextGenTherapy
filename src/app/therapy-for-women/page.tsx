@@ -352,6 +352,46 @@ export default function TherapyForWomenPage() {
               </Link>
             </div>
           </section>
+
+          {/* Crisis signposting */}
+          <section className={styles.crisisSection}>
+            <div className={styles.crisisBox}>
+              <h2>If you&apos;re in crisis</h2>
+              <p>
+                I&apos;m not a crisis service and I don&apos;t monitor messages outside of working
+                hours. If you or someone you care about is in immediate danger, please contact:
+              </p>
+              <div className={styles.crisisGrid}>
+                <div className={styles.crisisItem}>
+                  <h3>NHS 111</h3>
+                  <p>
+                    Call <strong>111</strong> and press option 2 for the mental health crisis line.
+                    Available 24/7.
+                  </p>
+                </div>
+                <div className={styles.crisisItem}>
+                  <h3>Samaritans</h3>
+                  <p>
+                    Call <strong>116 123</strong> (free, 24/7) or email{' '}
+                    <a href="mailto:jo@samaritans.org">jo@samaritans.org</a>.
+                  </p>
+                </div>
+                <div className={styles.crisisItem}>
+                  <h3>Shout</h3>
+                  <p>
+                    Text <strong>85258</strong> for free, confidential 24/7 text support.
+                  </p>
+                </div>
+                <div className={styles.crisisItem}>
+                  <h3>A&amp;E</h3>
+                  <p>
+                    If you or someone else is in immediate physical danger, go to your nearest
+                    A&amp;E or call <strong>999</strong>.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
         </main>
       </div>
       <BreadcrumbSchema />

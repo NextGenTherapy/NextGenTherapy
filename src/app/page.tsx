@@ -250,6 +250,14 @@ export default function Home() {
               </Link>
             </div>
           </section>
+
+          {/* Crisis signposting */}
+          <aside className={styles.crisisNotice} aria-label="Crisis resources">
+            <p>
+              If you&apos;re in crisis, please contact{' '}
+              <a href="tel:116123">Samaritans (116 123)</a>, NHS 111 option 2, or go to A&amp;E.
+            </p>
+          </aside>
         </main>
       </div>
     </>

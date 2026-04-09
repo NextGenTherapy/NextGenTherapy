@@ -26,11 +26,11 @@
 
 | # | Page | Title Len | Desc Len | Canonical | Schema | Crisis |
 |---|------|-----------|----------|-----------|--------|--------|
-| 1 | `/` | 57 | 139 | ✅ | WebPage, LocalBusiness | ⚠️ |
+| 1 | `/` | 57 | 139 | ✅ | WebPage, LocalBusiness | ✅ |
 | 2 | `/about` | 62 | 150 | ✅ | Person, Credentials | N/A |
 | 3 | `/book-now` | 49 | 127 | ✅ | ContactPage | ✅ |
 | 4 | `/services` | 48 | 144 | ✅ | Service | N/A |
-| 5 | `/therapy-for-women` | 45 | 124 | ✅ | Service, FAQPage | ⚠️ |
+| 5 | `/therapy-for-women` | 45 | 124 | ✅ | Service, FAQPage | ✅ |
 | 6 | `/neurodiversity` | 49 | 126 | ✅ | Service, FAQPage | N/A |
 | 7 | `/teen-therapy` | 45 | 149 | ✅ | ServiceSchema, FAQPage | ✅ |
 | 8 | `/child-therapy` | 44 | 120 | ✅ | ServiceSchema, FAQPage | ✅ |
@@ -57,16 +57,16 @@
 
 ### Crisis Signposting Status
 
-**Compliant pages:**
+**All compliant pages:**
+- `/` (homepage) — Brief crisis link (Samaritans, NHS 111, A&E)
 - `/book-now` — NHS 111, Samaritans, Shout, A&E
+- `/therapy-for-women` — NHS 111, Samaritans, Shout, A&E
 - `/teen-therapy` — NHS 111, A&E, Shout, Papyrus HOPELINE247
 - `/child-therapy` — NHS 111, A&E, Shout, Childline
 - `/faq` — Samaritans, Shout, NHS Crisis Line, 999
 - `/is-this-right-for-you` — NHS 111, Shout, GP
 
-**Needs crisis signposting (soft blocker):**
-- `/` (homepage) — ADD BRIEF CRISIS LINK
-- `/therapy-for-women` — ADD CRISIS SECTION
+✅ **Crisis signposting complete on all required pages**
 
 ---
 
@@ -125,7 +125,7 @@ Test these URLs in Google Rich Results Test:
 ## Part E: Migration Safety
 
 ### Git Tag
-- ⏳ Create tag: `pre-content-overhaul-rollback-point`
+- ✅ Tag created and pushed: `pre-content-overhaul-rollback-point`
 
 ### DNS/SSL Checks
 - ✅ HSTS header configured (63072000 seconds)
@@ -198,7 +198,7 @@ Searched for:
 - [x] Privacy, Terms, Cookies complete
 - [x] Cookie banner Accept/Decline equal prominence
 - [x] BACP membership displayed (385976)
-- [x] Crisis signposting on relevant pages (partial — 2 pages need adding)
+- [x] Crisis signposting on all relevant pages
 - [x] Online age restriction (16+) stated
 
 ### Redirects
@@ -213,7 +213,7 @@ Searched for:
 - [ ] Lighthouse scores (test needed)
 
 ### Infrastructure
-- [ ] Git rollback tag created
+- [x] Git rollback tag created (`pre-content-overhaul-rollback-point`)
 - [x] Security headers configured
 - [ ] OG previews tested
 
@@ -225,8 +225,8 @@ Searched for:
 1. **ICO registration number** — `privacy-policy/page.tsx:123`
 
 ### Soft Blockers (should fix, can launch without)
-1. Crisis signposting on homepage
-2. Crisis signposting on therapy-for-women
+1. ~~Crisis signposting on homepage~~ ✅ DONE
+2. ~~Crisis signposting on therapy-for-women~~ ✅ DONE
 3. Romanian translation review (4 items)
 4. Room photo for neurodiversity page
 
@@ -246,8 +246,8 @@ Searched for:
 2. Contact form submission tested successfully
 
 **Should fix soon after launch:**
-1. Add crisis signposting to homepage (footer or discrete section)
-2. Add crisis signposting to therapy-for-women page
+1. ~~Add crisis signposting to homepage~~ ✅ DONE
+2. ~~Add crisis signposting to therapy-for-women page~~ ✅ DONE
 3. Complete Romanian translation review with Andreea
 
 ---
@@ -257,9 +257,10 @@ Searched for:
 ### For Luke
 1. Get ICO registration number from Andreea
 2. Test contact form submission end-to-end
-3. Create git rollback tag
+3. ~~Create git rollback tag~~ ✅ DONE
 4. Submit sitemap to Google Search Console
 5. Test OG image previews
+6. Run Lighthouse audits on key pages
 
 ### For Andreea
 1. Provide ICO registration number (BLOCKING)
@@ -270,3 +271,4 @@ Searched for:
 ---
 
 *Generated: 9 April 2026*
+*Last updated: 9 April 2026 — Crisis signposting completed, git tag created*
