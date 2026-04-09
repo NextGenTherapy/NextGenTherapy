@@ -110,7 +110,7 @@ describe('Remaining Pages', () => {
     });
 
     it('displays CTABlock section', () => {
-      expect(screen.getByText(/Ready to take the first step/i)).toBeInTheDocument();
+      expect(screen.getByText(/Let's see if we're the right fit/i)).toBeInTheDocument();
     });
 
     it('has book now link in CTABlock', () => {
@@ -175,7 +175,7 @@ describe('Remaining Pages', () => {
     });
 
     it('has CTABlock section', () => {
-      expect(screen.getByText(/Ready to take the first step/i)).toBeInTheDocument();
+      expect(screen.getByText(/Let's see if we're the right fit/i)).toBeInTheDocument();
     });
 
     it('renders FAQPage schema', () => {
