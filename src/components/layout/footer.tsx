@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 import { TrackedPhoneLink, TrackedEmailLink, TrackedBACPLink } from '@/components/ui/TrackedContactLinks';
+import { resetCookieConsent } from './CookieConsent';
 import styles from './footer.module.scss';
 
 export default function Footer() {
@@ -176,6 +177,14 @@ export default function Footer() {
           <Link href="/cookies">Cookies</Link>
           <span className={styles.divider}>·</span>
           <Link href="/terms">Terms</Link>
+          <span className={styles.divider}>·</span>
+          <button
+            onClick={resetCookieConsent}
+            className={styles.manageCookies}
+            type="button"
+          >
+            Manage Cookies
+          </button>
         </div>
         <p className={styles.credentials}>
           BACP Registered Member (MBACP 385976). Psychodynamic Psychotherapy. UK GDPR compliant.

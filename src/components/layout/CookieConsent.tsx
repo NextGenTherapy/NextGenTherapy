@@ -3,6 +3,18 @@
 import { useState, useEffect } from 'react';
 import styles from './CookieConsent.module.scss';
 
+/**
+ * Resets cookie consent, allowing users to change their preferences.
+ * Clears the stored consent and reloads the page to show the consent banner.
+ */
+export function resetCookieConsent() {
+  if (typeof window !== 'undefined') {
+    localStorage.removeItem('cookie-consent');
+    window.dispatchEvent(new CustomEvent('cookie-consent-changed'));
+    window.location.reload();
+  }
+}
+
 export default function CookieConsent() {
   const [showConsent, setShowConsent] = useState(false);
 

@@ -38,11 +38,13 @@ These are all `{{ CONFIRM WITH ANDREEA }}` placeholders found by searching the e
 Legal pages have been reviewed by senior UK legal counsel and updated to comply with 2026 regulations:
 
 **Completed updates:**
-- ✅ `/privacy-policy` — Now 20 sections, includes new Data Protection Complaints Procedure (DUAA 2025 requirement)
+- ✅ `/privacy-policy` — Now 21 sections, includes Data Protection Complaints Procedure (DUAA 2025) and Safeguarding/DBS Check statement
 - ✅ `/terms` — Now includes Consumer Contracts Regulations 2013 reference
 - ✅ `/cookies` — Updated PECR reference to include DUAA 2025 amendments
 - ✅ Cookie banner — Both "Accept" and "Essential only" buttons now have equal visual prominence (PECR 2026 requirement)
 - ✅ Footer — BACP membership number (385976) now displayed
+- ✅ Footer — "Manage Cookies" button added to allow users to reset cookie preferences
+- ✅ `/accessibility` — New Accessibility Statement page with WCAG 2.1 AA commitment, physical accessibility details
 
 **Still pending:**
 - ❌ ICO registration number (see Priority 1)

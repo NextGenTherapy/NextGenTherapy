@@ -300,7 +300,22 @@ export default function PrivacyPolicy() {
           </section>
 
           <section>
-            <h2 className={styles.sectionHeading}>9. Data Retention</h2>
+            <h2 className={styles.sectionHeading}>9. Safeguarding and Background Checks</h2>
+            <p>
+              As part of my commitment to safeguarding, I hold an Enhanced DBS (Disclosure and
+              Barring Service) check, which is renewed in accordance with BACP professional
+              requirements. This is standard practice for therapists working with children and
+              young people.
+            </p>
+            <p>
+              DBS checks help ensure that practitioners working with vulnerable groups have been
+              appropriately vetted. My current Enhanced DBS certificate is valid and available
+              for verification upon request.
+            </p>
+          </section>
+
+          <section>
+            <h2 className={styles.sectionHeading}>10. Data Retention</h2>
             <ul className={styles.list}>
               <li>
                 <strong>Website enquiries:</strong> Deleted within 6 months if you do not become a
@@ -326,7 +341,7 @@ export default function PrivacyPolicy() {
           </section>
 
           <section>
-            <h2 className={styles.sectionHeading}>10. Data Security</h2>
+            <h2 className={styles.sectionHeading}>11. Data Security</h2>
             <p>I take appropriate technical and organisational measures to protect your data:</p>
             <ul className={styles.list}>
               <li>Paper records are stored in a locked cabinet in a secure location</li>
@@ -338,7 +353,7 @@ export default function PrivacyPolicy() {
           </section>
 
           <section>
-            <h2 className={styles.sectionHeading}>11. International Data Transfers</h2>
+            <h2 className={styles.sectionHeading}>12. International Data Transfers</h2>
             <p>
               Some third-party services I use are based outside the UK. Where data is transferred
               internationally, it is protected by:
@@ -359,7 +374,7 @@ export default function PrivacyPolicy() {
           </section>
 
           <section>
-            <h2 className={styles.sectionHeading}>12. Third-Party Processors</h2>
+            <h2 className={styles.sectionHeading}>13. Third-Party Processors</h2>
             <p>I use the following third-party services:</p>
             <ul className={styles.list}>
               <li>
@@ -381,7 +396,7 @@ export default function PrivacyPolicy() {
           </section>
 
           <section>
-            <h2 className={styles.sectionHeading}>13. Your Rights</h2>
+            <h2 className={styles.sectionHeading}>14. Your Rights</h2>
             <p>Under UK GDPR, you have the following rights:</p>
             <ul className={styles.list}>
               <li>
@@ -425,7 +440,7 @@ export default function PrivacyPolicy() {
           </section>
 
           <section>
-            <h2 className={styles.sectionHeading}>14. Data Breaches</h2>
+            <h2 className={styles.sectionHeading}>15. Data Breaches</h2>
             <p>
               In the unlikely event of a data breach that poses a risk to your rights and freedoms,
               I will notify the ICO within 72 hours and inform you without undue delay if the breach
@@ -434,7 +449,7 @@ export default function PrivacyPolicy() {
           </section>
 
           <section>
-            <h2 className={styles.sectionHeading}>15. Cookies</h2>
+            <h2 className={styles.sectionHeading}>16. Cookies</h2>
             <p>
               This website uses cookies. For full details, see the{' '}
               <a href="/cookies" className={styles.link}>
@@ -445,7 +460,7 @@ export default function PrivacyPolicy() {
           </section>
 
           <section>
-            <h2 className={styles.sectionHeading}>16. Data Protection Complaints Procedure</h2>
+            <h2 className={styles.sectionHeading}>17. Data Protection Complaints Procedure</h2>
             <p>
               Under the Data (Use and Access) Act 2025, I maintain a documented data protection
               complaints procedure. If you have concerns about how your personal data is handled:
@@ -481,7 +496,7 @@ export default function PrivacyPolicy() {
           </section>
 
           <section>
-            <h2 className={styles.sectionHeading}>17. Information Commissioner&apos;s Office</h2>
+            <h2 className={styles.sectionHeading}>18. Information Commissioner&apos;s Office</h2>
             <p>
               If you are not satisfied with my response, or at any time, you have the right to
               lodge a complaint with the Information Commissioner&apos;s Office (ICO):
@@ -513,7 +528,7 @@ export default function PrivacyPolicy() {
           </section>
 
           <section>
-            <h2 className={styles.sectionHeading}>18. BACP Complaints</h2>
+            <h2 className={styles.sectionHeading}>19. BACP Complaints</h2>
             <p>
               For complaints about therapy services (as opposed to data handling), you may
               contact the BACP:
@@ -545,7 +560,7 @@ export default function PrivacyPolicy() {
           </section>
 
           <section>
-            <h2 className={styles.sectionHeading}>19. Changes to This Policy</h2>
+            <h2 className={styles.sectionHeading}>20. Changes to This Policy</h2>
             <p>
               I may update this Privacy Policy from time to time. Material changes will be
               communicated to current clients directly. The date at the top indicates when the
@@ -554,7 +569,7 @@ export default function PrivacyPolicy() {
           </section>
 
           <section>
-            <h2 className={styles.sectionHeading}>20. Contact</h2>
+            <h2 className={styles.sectionHeading}>21. Contact</h2>
             <p>
               For any questions about this Privacy Policy or your personal data, contact:
             </p>

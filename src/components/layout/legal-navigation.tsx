@@ -6,13 +6,14 @@ import Button from '../ui/button';
 import styles from './legal-navigation.module.scss';
 
 interface LegalNavigationProps {
-  currentPage: 'privacy' | 'terms' | 'cookies';
+  currentPage: 'privacy' | 'terms' | 'cookies' | 'accessibility';
 }
 
 const legalPages = {
   privacy: { url: '/privacy-policy', title: 'Privacy Policy' },
   terms: { url: '/terms', title: 'Terms of Service' },
   cookies: { url: '/cookies', title: 'Cookie Policy' },
+  accessibility: { url: '/accessibility', title: 'Accessibility Statement' },
 };
 
 export default function LegalNavigation({ currentPage }: LegalNavigationProps) {
