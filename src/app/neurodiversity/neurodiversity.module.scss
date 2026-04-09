@@ -171,6 +171,18 @@
   }
 }
 
+.roomImageWrapper {
+  margin-top: var(--spacing-large);
+  border-radius: var(--radius-medium);
+  overflow: hidden;
+}
+
+.roomImage {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 /* Section 5: Challenges */
 .challengesSection {
   background: var(--color-surface);

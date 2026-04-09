@@ -52,7 +52,7 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: 'https://nextgentherapy.co.uk/images/og/og-therapy-for-women.jpg',
+        url: 'https://nextgentherapy.co.uk/images/default-social-share.jpg',
         width: 1200,
         height: 630,
         alt: 'Therapy for Women — Next Generation Therapy',
@@ -64,7 +64,7 @@ export const metadata: Metadata = {
     title: 'Therapy for Women in Colchester & Online | Burnout, Anxiety, Self-Worth',
     description:
       'Psychodynamic therapy for women dealing with burnout, overthinking, anxiety, body image and self-worth. BACP registered.',
-    images: ['https://nextgentherapy.co.uk/images/og/og-therapy-for-women.jpg'],
+    images: ['https://nextgentherapy.co.uk/images/default-social-share.jpg'],
   },
 };
 

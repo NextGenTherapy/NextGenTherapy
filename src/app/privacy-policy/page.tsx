@@ -120,8 +120,7 @@ export default function PrivacyPolicy() {
               </a>
             </p>
             <p>
-              {/* {{ CONFIRM WITH ANDREEA: ICO registration number }} */}
-              <strong>ICO Registration Number:</strong> [Registration number to be inserted]
+              <strong>ICO Registration Number:</strong> ZB877923
             </p>
             <p>
               I am a registered member of the British Association for Counselling and Psychotherapy

@@ -57,6 +57,31 @@
   border-radius: var(--radius-medium);
 }
 
+.roomImages {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-medium);
+  margin-top: var(--spacing-large);
+}
+
+@media (min-width: 768px) {
+  .roomImages {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.roomImageWrapper {
+  border-radius: var(--radius-medium);
+  overflow: hidden;
+}
+
+.roomImage {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
 .commonConcerns {
   background: var(--color-surface);
   padding: var(--spacing-xlarge) var(--spacing-medium);

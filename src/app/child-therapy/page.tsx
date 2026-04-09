@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import Link from 'next/link';
 import { ChildTherapySchema } from '@/components/seo/ServiceSchema';
 import PageHero from '@/components/ui/PageHero';
@@ -50,7 +51,7 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: 'https://nextgentherapy.co.uk/images/og/og-child-therapy.jpg',
+        url: 'https://nextgentherapy.co.uk/images/default-social-share.jpg',
         width: 1200,
         height: 630,
         alt: 'Child Therapy Services in Colchester - Next Generation Therapy',
@@ -62,7 +63,7 @@ export const metadata: Metadata = {
     title: 'Child Therapy in Colchester | Play-Based Therapy 4–12',
     description:
       'Play-based psychodynamic therapy for children aged 4–12. BACP registered with NHS schools experience and SEN specialist training.',
-    images: ['https://nextgentherapy.co.uk/images/og/og-child-therapy.jpg'],
+    images: ['https://nextgentherapy.co.uk/images/default-social-share.jpg'],
   },
 };
 
@@ -211,6 +212,26 @@ export default function ChildTherapyPage() {
                   for any age, and stimming is welcomed — this matters especially for neurodivergent
                   children who need to move to think.
                 </p>
+                <div className={styles.roomImages}>
+                  <div className={styles.roomImageWrapper}>
+                    <Image
+                      src="/images/board-games-opt.jpg"
+                      alt="Therapy room shelving with games, toys, books, and fidgets for children"
+                      width={400}
+                      height={300}
+                      className={styles.roomImage}
+                    />
+                  </div>
+                  <div className={styles.roomImageWrapper}>
+                    <Image
+                      src="/images/doll-house-opt.jpg"
+                      alt="Doll house with figures for play-based therapy"
+                      width={400}
+                      height={300}
+                      className={styles.roomImage}
+                    />
+                  </div>
+                </div>
               </section>
 
               {/* Section 5: What sessions actually look like */}

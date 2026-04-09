@@ -299,9 +299,7 @@ export default function AboutMe() {
                 things about the experience of being between two cultures that can be hard to
                 explain to someone who hasn&apos;t lived it. I have.
               </p>
-              {/* {{ CONFIRM WITH ANDREEA: a single sentence about her own Romanian background if she wants to include it, otherwise delete this last sentence }} */}
               <p className={styles.romanianCta}>
-                {/* {{ CONFIRM WITH ANDREEA }}: Romanian CTA phrasing */}
                 Dacă preferi terapia în limba română,{' '}
                 <Link href="/book-now" className={styles.link}>
                   contactează-mă aici

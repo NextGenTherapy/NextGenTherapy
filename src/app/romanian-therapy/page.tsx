@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: 'https://nextgentherapy.co.uk/images/og/og-romanian-therapy.jpg',
+        url: 'https://nextgentherapy.co.uk/images/default-social-share.jpg',
         width: 1200,
         height: 630,
         alt: 'Romanian Therapist UK — Next Generation Therapy',
@@ -62,7 +62,7 @@ export const metadata: Metadata = {
     title: 'Romanian Therapist UK — Terapie în Limba Română | BACP Registered',
     description:
       'Romanian-speaking psychodynamic therapist in Colchester and online across the UK. Sesiuni de terapie în limba română.',
-    images: ['https://nextgentherapy.co.uk/images/og/og-romanian-therapy.jpg'],
+    images: ['https://nextgentherapy.co.uk/images/default-social-share.jpg'],
   },
 };
 
@@ -123,7 +123,6 @@ export default function RomanianTherapyPage() {
           {/* Section 3: Romanian Introduction */}
           <section className={styles.romanianSection}>
             <div className={styles.romanianContainer} lang="ro">
-              {/* {{ CONFIRM WITH ANDREEA — Romanian translation below is provisional }} */}
               <h2 className={styles.romanianHeading}>Terapie în limba română</h2>
               <p>
                 Sunt Andreea — psihoterapeut psihodinamic înregistrat BACP. Ofer ședințe de terapie
@@ -179,7 +178,6 @@ export default function RomanianTherapyPage() {
               </div>
 
               <div className={styles.topicsColumn} lang="ro">
-                {/* {{ CONFIRM WITH ANDREEA — Romanian translation below is provisional }} */}
                 <h2 className={styles.romanianHeadingSmall}>Ce lucrez adesea</h2>
                 <ul className={styles.topicsList}>
                   <li>
@@ -252,7 +250,6 @@ export default function RomanianTherapyPage() {
               </div>
 
               <div className={styles.practicalColumn} lang="ro">
-                {/* {{ CONFIRM WITH ANDREEA — Romanian translation below is provisional }} */}
                 <h2 className={styles.romanianHeadingSmall}>Informații practice</h2>
                 <dl className={styles.practicalList}>
                   <div className={styles.practicalItem}>
@@ -324,7 +321,6 @@ export default function RomanianTherapyPage() {
                 ask anything you want, and we&apos;ll decide together whether working together feels
                 right.
               </p>
-              {/* {{ CONFIRM WITH ANDREEA — Romanian translation below is provisional }} */}
               <p className={styles.romanianText} lang="ro">
                 Apelul gratuit de 15 minute este o conversație informală, nu o primă ședință. Poți
                 întreba orice vrei, și vom decide împreună dacă colaborarea pare potrivită.

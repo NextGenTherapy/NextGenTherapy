@@ -49,20 +49,6 @@
   font-family: var(--font-body);
 }
 
-.draftBanner {
-  background: var(--color-warning-bg, #fff3cd);
-  border: var(--border-width-thin) solid var(--color-warning-border, #ffc107);
-  border-radius: var(--radius-small);
-  padding: var(--spacing-medium);
-  margin-bottom: var(--spacing-large);
-  text-align: center;
-  font-size: var(--font-size-body);
-
-  strong {
-    color: var(--color-warning-text, #856404);
-  }
-}
-
 .link {
   color: var(--color-accent);
   text-decoration: underline;

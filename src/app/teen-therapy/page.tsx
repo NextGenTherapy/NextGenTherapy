@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: 'https://nextgentherapy.co.uk/images/og/og-teen-therapy.jpg',
+        url: 'https://nextgentherapy.co.uk/images/default-social-share.jpg',
         width: 1200,
         height: 630,
         alt: 'Teen Therapy in Colchester — Next Generation Therapy',
@@ -62,7 +62,7 @@ export const metadata: Metadata = {
     title: 'Therapy for Teenagers in Colchester | BACP Registered Therapist',
     description:
       'Psychodynamic therapy for teenagers 13–17 in Colchester. Anxiety, school refusal, self-harm, identity. Free intro call for parents.',
-    images: ['https://nextgentherapy.co.uk/images/og/og-teen-therapy.jpg'],
+    images: ['https://nextgentherapy.co.uk/images/default-social-share.jpg'],
   },
 };
 

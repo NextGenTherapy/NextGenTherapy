@@ -188,8 +188,17 @@ export default function IsThisRightForYouPage() {
                     className={styles.link}
                   >
                     BACP therapist directory
-                  </a>{' '}
-                  or{' '}
+                  </a>
+                  ,{' '}
+                  <a
+                    href="https://www.psychotherapy.org.uk/find-a-therapist/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={styles.link}
+                  >
+                    UKCP
+                  </a>
+                  , or{' '}
                   <a
                     href="https://www.counselling-directory.org.uk"
                     target="_blank"

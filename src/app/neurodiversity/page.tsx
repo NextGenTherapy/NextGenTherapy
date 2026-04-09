@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import Link from 'next/link';
 
 import PageHero from '@/components/ui/PageHero';
@@ -52,7 +53,7 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: 'https://nextgentherapy.co.uk/images/og/og-neurodiversity.jpg',
+        url: 'https://nextgentherapy.co.uk/images/default-social-share.jpg',
         width: 1200,
         height: 630,
         alt: 'ADHD & Autism Therapy for Adults — Next Generation Therapy',
@@ -64,7 +65,7 @@ export const metadata: Metadata = {
     title: 'ADHD & Autism Therapy for Adults — Colchester & Online | Affirmative Practice',
     description:
       'Psychodynamic, affirmative therapy for neurodivergent adults in Colchester and online. Sensory-aware room, stimming welcome.',
-    images: ['https://nextgentherapy.co.uk/images/og/og-neurodiversity.jpg'],
+    images: ['https://nextgentherapy.co.uk/images/default-social-share.jpg'],
   },
 };
 
@@ -207,7 +208,15 @@ export default function NeurodiversityTherapyPage() {
                 None of this is a gimmick. Sensory environment matters for neurodivergent clients,
                 and I designed the room knowing that.
               </p>
-              {/* {{ CONFIRM WITH ANDREEA: room photo }} */}
+              <div className={styles.roomImageWrapper}>
+                <Image
+                  src="/images/room-opt.jpg"
+                  alt="Therapy room at Colchester Business Centre — soft lighting, plants, comfortable seating, and fidgets available"
+                  width={600}
+                  height={400}
+                  className={styles.roomImage}
+                />
+              </div>
             </div>
           </section>
 
