@@ -173,6 +173,11 @@ describe('Footer Component', () => {
       const emailLink = screen.getByRole('link', { name: /email andreea/i });
       expect(emailLink).toHaveAttribute('href', 'mailto:andreeatherapytoday@gmail.com');
     });
+
+    it('displays phone number text', () => {
+      render(<Footer />);
+      expect(screen.getByText(/07448 036017/)).toBeInTheDocument();
+    });
   });
 
   describe('Social Media Links', () => {

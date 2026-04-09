@@ -42,14 +42,14 @@ describe('LegalNavigation', () => {
       render(<LegalNavigation currentPage="privacy" />);
 
       expect(screen.getByRole('button', { name: /back/i })).toBeInTheDocument();
-      expect(screen.getByRole('link', { name: /view terms of service/i })).toBeInTheDocument();
+      expect(screen.getByRole('link', { name: /terms of service/i })).toBeInTheDocument();
       expect(screen.getByRole('link', { name: /home/i })).toBeInTheDocument();
     });
 
     it('links to terms page correctly', () => {
       render(<LegalNavigation currentPage="privacy" />);
 
-      const termsLink = screen.getByRole('link', { name: /view terms of service/i });
+      const termsLink = screen.getByRole('link', { name: /terms of service/i });
       expect(termsLink).toHaveAttribute('href', '/terms');
     });
   });
@@ -59,14 +59,14 @@ describe('LegalNavigation', () => {
       render(<LegalNavigation currentPage="terms" />);
 
       expect(screen.getByRole('button', { name: /back/i })).toBeInTheDocument();
-      expect(screen.getByRole('link', { name: /view privacy policy/i })).toBeInTheDocument();
+      expect(screen.getByRole('link', { name: /privacy policy/i })).toBeInTheDocument();
       expect(screen.getByRole('link', { name: /home/i })).toBeInTheDocument();
     });
 
     it('links to privacy policy page correctly', () => {
       render(<LegalNavigation currentPage="terms" />);
 
-      const privacyLink = screen.getByRole('link', { name: /view privacy policy/i });
+      const privacyLink = screen.getByRole('link', { name: /privacy policy/i });
       expect(privacyLink).toHaveAttribute('href', '/privacy-policy');
     });
   });

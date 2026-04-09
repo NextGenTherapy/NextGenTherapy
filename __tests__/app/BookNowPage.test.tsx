@@ -112,13 +112,17 @@ describe('Book Now Page', () => {
     });
 
     it('shows email contact', () => {
-      const emailLink = screen.getByRole('link', { name: /andreeatherapytoday@gmail\.com/i });
+      // TrackedEmailLink uses aria-label="Email Andreea"
+      const emailLink = screen.getByRole('link', { name: /email andreea/i });
       expect(emailLink).toHaveAttribute('href', 'mailto:andreeatherapytoday@gmail.com');
     });
 
     it('shows phone contact', () => {
-      const phoneLink = screen.getByRole('link', { name: /\+44 7448 036017/i });
+      // TrackedPhoneLink uses aria-label="Call Andreea"
+      const phoneLink = screen.getByRole('link', { name: /call andreea/i });
       expect(phoneLink).toHaveAttribute('href', 'tel:+447448036017');
+      // Verify the visible text
+      expect(screen.getByText(/\+44 7448 036017/i)).toBeInTheDocument();
     });
   });
 

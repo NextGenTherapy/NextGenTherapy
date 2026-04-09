@@ -356,4 +356,112 @@ Check annually for updates to BACP Ethical Framework that may affect privacy pol
 
 ---
 
+---
+
+## Priority 10: Pre-Launch QA Findings (9 April 2026)
+
+### HARD BLOCKER — Must Fix Before Launch
+
+| Item | Owner | Status |
+|------|-------|--------|
+| ICO Registration Number | Andreea | ❌ BLOCKING |
+
+**File:** `src/app/privacy-policy/page.tsx` (line 123)
+
+Without the ICO registration number, the site cannot legally launch.
+
+---
+
+### SOFT BLOCKERS — Should Fix (Can Launch Without)
+
+| Item | Owner | File/Location | Status |
+|------|-------|---------------|--------|
+| Crisis signposting on homepage | Luke | `src/app/page.tsx` | ❌ Should add |
+| Crisis signposting on therapy-for-women | Luke | `src/app/therapy-for-women/page.tsx` | ❌ Should add |
+
+**Context:** Per CLAUDE.md §16, crisis signposting should appear on relevant pages. Currently missing from homepage and therapy-for-women (primary niche page serving vulnerable clients).
+
+**Recommended content:**
+```
+If you're in crisis: Call NHS 111 (press 2), Samaritans (116 123), or text Shout (85258).
+```
+
+---
+
+### NON-BLOCKING — Fix Post-Launch
+
+| Item | Owner | File | Status |
+|------|-------|------|--------|
+| Romanian translations (4 sections) | Andreea | `romanian-therapy/page.tsx` | ⏳ Review needed |
+| About page Romanian background | Andreea | `about/page.tsx:302` | ⏳ Decision needed |
+| About page Romanian CTA | Andreea | `about/page.tsx:304` | ⏳ Decision needed |
+| Neurodiversity room photo | Andreea | `neurodiversity/page.tsx:210` | ⏳ Photo needed |
+| Alternative therapist URLs | Andreea | `is-this-right-for-you/page.tsx:201` | ⏳ URLs needed |
+| BACP directory location fix | Andreea | External (BACP website) | ⏳ Shows London E16 |
+
+---
+
+## Priority 11: Luke Post-Launch Tasks
+
+### Immediate (Day 1)
+
+- [ ] Push git rollback tag: `git push origin pre-content-overhaul-rollback-point`
+- [ ] Test contact form submission end-to-end
+- [ ] Verify all 18 redirects work on production
+- [ ] Check no console errors in browser
+
+### Week 1
+
+- [ ] Submit sitemap to Google Search Console (`sitemap.xml`)
+- [ ] Submit sitemap to Bing Webmaster Tools
+- [ ] Test OG image previews in Facebook Sharing Debugger
+- [ ] Run Lighthouse on key pages, record baseline scores
+- [ ] Monitor GSC coverage report for errors
+- [ ] Add crisis signposting to homepage
+- [ ] Add crisis signposting to therapy-for-women
+
+### Week 2-4
+
+- [ ] Monitor search performance in GSC
+- [ ] Check Core Web Vitals in field data
+- [ ] Review any redirect issues
+- [ ] Optimize Google Business Profile
+
+### Ongoing
+
+- [ ] Annual ICO renewal reminder
+- [ ] Monitor BACP Ethical Framework updates
+- [ ] Monitor Crime and Policing Bill 2024-25 for mandatory reporting changes
+
+---
+
+## Pre-Launch QA Summary
+
+**Date:** 9 April 2026
+**Recommendation:** CONDITIONAL GO
+
+### All Gates Passed
+- ✅ `npm run lint` — No errors
+- ✅ `npx tsc --noEmit` — No TypeScript errors
+- ✅ `npm run build` — 57 pages generated
+- ✅ `npm run test` — 672 tests passed
+- ✅ Git rollback tag created
+- ✅ Banned phrases fixed
+- ✅ 18 redirects configured
+- ✅ Sitemap verified (52 URLs)
+- ✅ robots.txt verified
+
+### Can Launch If:
+1. ICO registration number provided
+2. Contact form tested
+
+### Documentation Generated:
+- `docs/seo-audit/pre-launch-qa.md`
+- `docs/seo-audit/redirect-verification.md`
+- `docs/seo-audit/gsc-pre-launch.md`
+- `docs/seo-audit/url-migration-map.md`
+- `docs/seo-audit/content-review-pending.md`
+
+---
+
 Last updated: 9 April 2026

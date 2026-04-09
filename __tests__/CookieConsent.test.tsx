@@ -88,12 +88,12 @@ describe('CookieConsent Component', () => {
     });
   });
 
-  test('provides link to privacy policy', () => {
+  test('provides link to cookie policy', () => {
     localStorageMock.getItem.mockReturnValue(null);
 
     render(<CookieConsent />);
 
-    const privacyLink = screen.getByRole('link', { name: /Privacy policy/i });
-    expect(privacyLink).toHaveAttribute('href', '/privacy-policy');
+    const cookieLink = screen.getByRole('link', { name: /Learn more about cookies/i });
+    expect(cookieLink).toHaveAttribute('href', '/cookies');
   });
 });

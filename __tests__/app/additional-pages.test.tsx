@@ -78,26 +78,30 @@ describe('Additional Pages', () => {
       expect(navElements.length).toBeGreaterThan(0);
     });
 
-    it('displays acceptance of terms section', () => {
-      expect(screen.getByText(/Acceptance of Counselling Terms/i)).toBeInTheDocument();
+    it('displays about this website section', () => {
+      expect(screen.getByText(/1\. About This Website/i)).toBeInTheDocument();
     });
 
-    it('displays use license section', () => {
-      expect(screen.getByText(/Use License/i)).toBeInTheDocument();
+    it('displays no professional advice section', () => {
+      expect(screen.getByText(/2\. No Professional Advice/i)).toBeInTheDocument();
     });
 
-    it('displays professional services disclaimer', () => {
-      expect(screen.getByText(/Professional Counselling Services Disclaimer/i)).toBeInTheDocument();
+    it('displays therapy services section', () => {
+      expect(screen.getByText(/3\. Therapy Services/i)).toBeInTheDocument();
     });
 
-    it('displays privacy section', () => {
-      expect(screen.getByText(/4\. Privacy/i)).toBeInTheDocument();
+    it('displays privacy and cookies section', () => {
+      expect(screen.getByText(/9\. Privacy and Cookies/i)).toBeInTheDocument();
     });
 
     it('has navigation buttons', () => {
-      expect(screen.getByRole('link', { name: /Privacy Policy/i })).toBeInTheDocument();
-      expect(screen.getByRole('link', { name: /About/i })).toBeInTheDocument();
-      expect(screen.getByRole('link', { name: /Book Now/i })).toBeInTheDocument();
+      // Privacy Policy and Cookie Policy appear multiple times (nav + button), use getAllByRole
+      const privacyLinks = screen.getAllByRole('link', { name: /Privacy Policy/i });
+      expect(privacyLinks.length).toBeGreaterThan(0);
+      const cookieLinks = screen.getAllByRole('link', { name: /Cookie Policy/i });
+      expect(cookieLinks.length).toBeGreaterThan(0);
+      const bookLinks = screen.getAllByRole('link', { name: /Book Now/i });
+      expect(bookLinks.length).toBeGreaterThan(0);
     });
 
     it('renders WebPage schema', () => {
@@ -109,7 +113,7 @@ describe('Additional Pages', () => {
 
       const webPageSchema = schemas.find((s) => s['@type'] === 'WebPage');
       expect(webPageSchema).toBeDefined();
-      expect(webPageSchema?.name).toBe('Terms & Conditions');
+      expect(webPageSchema?.name).toBe('Terms of Service');
     });
   });
 

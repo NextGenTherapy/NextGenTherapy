@@ -58,7 +58,7 @@ describe('Content Pages', () => {
     it('renders the main heading', () => {
       const heading = screen.getByRole('heading', { level: 1 });
       expect(heading).toBeInTheDocument();
-      expect(heading).toHaveTextContent(/Therapy Privacy & Client Confidentiality/i);
+      expect(heading).toHaveTextContent(/Privacy Policy/i);
     });
 
     it('displays last updated date', () => {
@@ -70,63 +70,67 @@ describe('Content Pages', () => {
       expect(navElements.length).toBeGreaterThan(0);
     });
 
-    it('displays information collection section', () => {
-      expect(screen.getByText(/Information We Collect/i)).toBeInTheDocument();
-    });
-
-    it('describes personal information collection', () => {
-      expect(screen.getByText(/Personal Information:/i)).toBeInTheDocument();
-    });
-
-    it('describes usage data collection', () => {
-      expect(screen.getByText(/Usage Data:/i)).toBeInTheDocument();
-    });
-
-    it('describes cookies', () => {
-      expect(screen.getByText(/Cookies:/i)).toBeInTheDocument();
-    });
-
     it('displays data controller section', () => {
-      const headings = screen.getAllByRole('heading', { level: 2 });
-      const dataControllerHeading = headings.find((h) => h.textContent?.includes('Data Controller'));
-      expect(dataControllerHeading).toBeInTheDocument();
+      expect(screen.getByText(/1\. Data Controller/i)).toBeInTheDocument();
+    });
+
+    it('displays information collection section', () => {
+      expect(screen.getByText(/2\. Information I Collect/i)).toBeInTheDocument();
+    });
+
+    it('describes website enquiries', () => {
+      // Multiple instances exist in the page (heading + body text references)
+      const matches = screen.getAllByText(/Website Enquiries/i);
+      expect(matches.length).toBeGreaterThan(0);
+    });
+
+    it('describes therapy clients data', () => {
+      expect(screen.getByText(/Therapy Clients/i)).toBeInTheDocument();
+    });
+
+    it('describes website analytics', () => {
+      // Multiple instances exist (heading + references)
+      const matches = screen.getAllByText(/Website Analytics/i);
+      expect(matches.length).toBeGreaterThan(0);
+    });
+
+    it('displays special category data section', () => {
+      expect(screen.getByText(/3\. Special Category Data/i)).toBeInTheDocument();
     });
 
     it('displays legal basis section', () => {
-      expect(screen.getByText(/Legal Basis for Processing/i)).toBeInTheDocument();
+      expect(screen.getByText(/4\. Legal Basis for Processing/i)).toBeInTheDocument();
     });
 
     it('displays data retention section', () => {
-      expect(screen.getByText(/Data Retention/i)).toBeInTheDocument();
+      expect(screen.getByText(/10\. Data Retention/i)).toBeInTheDocument();
     });
 
-    it('displays third party section', () => {
-      expect(screen.getByText(/Third-Party Data Processors/i)).toBeInTheDocument();
+    it('displays third party processors section', () => {
+      expect(screen.getByText(/13\. Third-Party Processors/i)).toBeInTheDocument();
     });
 
     it('displays your rights section', () => {
-      const headings = screen.getAllByRole('heading', { level: 2 });
-      const yourRightsHeading = headings.find((h) => h.textContent?.includes('Your Rights'));
-      expect(yourRightsHeading).toBeInTheDocument();
+      expect(screen.getByText(/14\. Your Rights/i)).toBeInTheDocument();
     });
 
     it('lists GDPR rights', () => {
-      expect(screen.getByText(/Right to access:/i)).toBeInTheDocument();
-      expect(screen.getByText(/Right to erasure:/i)).toBeInTheDocument();
+      expect(screen.getByText(/Access:/i)).toBeInTheDocument();
+      expect(screen.getByText(/Erasure:/i)).toBeInTheDocument();
     });
 
-    it('displays analytics section', () => {
-      expect(screen.getByText(/Analytics and Cookie Controls/i)).toBeInTheDocument();
+    it('displays cookies section', () => {
+      expect(screen.getByText(/16\. Cookies/i)).toBeInTheDocument();
     });
 
-    it('displays complaints section', () => {
-      expect(screen.getByText(/Complaints/i)).toBeInTheDocument();
+    it('displays ICO complaints section', () => {
+      // Multiple references exist in the privacy policy
+      const matches = screen.getAllByText(/Information Commissioner/i);
+      expect(matches.length).toBeGreaterThan(0);
     });
 
     it('displays contact section', () => {
-      const headings = screen.getAllByRole('heading', { level: 2 });
-      const contactHeading = headings.find((h) => h.textContent?.includes('Contact Us'));
-      expect(contactHeading).toBeInTheDocument();
+      expect(screen.getByText(/21\. Contact/i)).toBeInTheDocument();
     });
 
     it('links to contact email', () => {
@@ -136,9 +140,13 @@ describe('Content Pages', () => {
     });
 
     it('has navigation buttons', () => {
-      expect(screen.getByRole('link', { name: /Terms of Service/i })).toBeInTheDocument();
-      expect(screen.getByRole('link', { name: /About/i })).toBeInTheDocument();
-      expect(screen.getByRole('link', { name: /Book Now/i })).toBeInTheDocument();
+      // Terms of Service and Cookie Policy may appear multiple times (nav + body references)
+      const termsLinks = screen.getAllByRole('link', { name: /Terms of Service/i });
+      expect(termsLinks.length).toBeGreaterThan(0);
+      const cookieLinks = screen.getAllByRole('link', { name: /Cookie Policy/i });
+      expect(cookieLinks.length).toBeGreaterThan(0);
+      const bookLinks = screen.getAllByRole('link', { name: /Book Now/i });
+      expect(bookLinks.length).toBeGreaterThan(0);
     });
 
     it('renders WebPage schema', () => {

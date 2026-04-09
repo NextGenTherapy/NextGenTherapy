@@ -97,11 +97,11 @@ describe('Cookie Consent and Analytics Integration', () => {
       );
     });
 
-    it('includes link to privacy policy', () => {
+    it('includes link to cookie policy', () => {
       render(<CookieConsent />);
 
-      const privacyLink = screen.getByRole('link', { name: /privacy policy/i });
-      expect(privacyLink).toHaveAttribute('href', '/privacy-policy');
+      const cookieLink = screen.getByRole('link', { name: /Learn more about cookies/i });
+      expect(cookieLink).toHaveAttribute('href', '/cookies');
     });
   });
 

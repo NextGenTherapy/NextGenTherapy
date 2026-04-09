@@ -6,7 +6,7 @@ export default function CTABlock() {
   return (
     <section className={styles.cta}>
       <div className={styles.container}>
-        <h2 className={styles.heading}>Ready to take the first step?</h2>
+        <h2 className={styles.heading}>Let&apos;s see if we&apos;re the right fit</h2>
         <p className={styles.subheading}>Book a free 15-minute consultation. No commitment required.</p>
         <Link href="/book-now" className={buttonStyles.button}>
           Book Now
