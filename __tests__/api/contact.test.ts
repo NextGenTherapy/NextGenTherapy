@@ -286,6 +286,174 @@ describe('/api/contact API Route', () => {
         expect(response.status).toBe(200);
       }
     });
+
+    it('rejects name that is too long', async () => {
+      const invalidData = {
+        ...validData,
+        name: 'A'.repeat(101), // 101 characters
+      };
+
+      const request = createMockRequest(invalidData);
+      const response = await POST(request);
+      const responseData = await response.json();
+
+      expect(response.status).toBe(400);
+      expect(responseData.error).toContain('too long');
+    });
+
+    it('rejects message that is too long', async () => {
+      const invalidData = {
+        ...validData,
+        message: 'A'.repeat(1001), // 1001 characters
+      };
+
+      const request = createMockRequest(invalidData);
+      const response = await POST(request);
+      const responseData = await response.json();
+
+      expect(response.status).toBe(400);
+      expect(responseData.error).toContain('too long');
+    });
+  });
+
+  describe('All Contact Method Options', () => {
+    it('handles contact method: email correctly', async () => {
+      const data = { ...validData, contactMethod: 'email' };
+      const request = createMockRequest(data);
+      const response = await POST(request);
+
+      expect(response.status).toBe(200);
+
+      const emailCall = mockSend.mock.calls[0][0];
+      expect(emailCall.html).toContain('Email');
+      expect(emailCall.text).toContain('Preferred Contact: Email');
+    });
+
+    it('handles contact method: phone correctly', async () => {
+      const data = { ...validData, contactMethod: 'phone', phone: '07123456789' };
+      const request = createMockRequest(data);
+      const response = await POST(request);
+
+      expect(response.status).toBe(200);
+
+      const emailCall = mockSend.mock.calls[0][0];
+      expect(emailCall.html).toContain('Phone');
+      expect(emailCall.text).toContain('Preferred Contact: Phone');
+    });
+
+    it('handles contact method: either correctly', async () => {
+      const data = { ...validData, contactMethod: 'either' };
+      const request = createMockRequest(data);
+      const response = await POST(request);
+
+      expect(response.status).toBe(200);
+
+      const emailCall = mockSend.mock.calls[0][0];
+      expect(emailCall.html).toContain('Either email or phone');
+      expect(emailCall.text).toContain('Preferred Contact: Either email or phone');
+    });
+
+    it('contact method either works without phone number', async () => {
+      const data = { ...validData, contactMethod: 'either', phone: '' };
+      const request = createMockRequest(data);
+      const response = await POST(request);
+
+      expect(response.status).toBe(200);
+    });
+
+    it('contact method either works with phone number', async () => {
+      const data = { ...validData, contactMethod: 'either', phone: '07123456789' };
+      const request = createMockRequest(data);
+      const response = await POST(request);
+
+      expect(response.status).toBe(200);
+
+      const emailCall = mockSend.mock.calls[0][0];
+      expect(emailCall.html).toContain('07123456789');
+    });
+  });
+
+  describe('All Enquiry For Options', () => {
+    it('handles enquiry for: myself correctly', async () => {
+      const data = { ...validData, enquiryFor: 'myself' };
+      const request = createMockRequest(data);
+      const response = await POST(request);
+
+      expect(response.status).toBe(200);
+
+      const emailCall = mockSend.mock.calls[0][0];
+      expect(emailCall.subject).toContain('Themselves');
+      expect(emailCall.html).toContain('Themselves');
+      expect(emailCall.text).toContain('Enquiry For: Themselves');
+    });
+
+    it('handles enquiry for: child correctly', async () => {
+      const data = { ...validData, enquiryFor: 'child' };
+      const request = createMockRequest(data);
+      const response = await POST(request);
+
+      expect(response.status).toBe(200);
+
+      const emailCall = mockSend.mock.calls[0][0];
+      expect(emailCall.subject).toContain('Their child or teenager');
+      expect(emailCall.html).toContain('Their child or teenager');
+      expect(emailCall.text).toContain('Enquiry For: Their child or teenager');
+    });
+
+    it('handles enquiry for: other correctly', async () => {
+      const data = { ...validData, enquiryFor: 'other' };
+      const request = createMockRequest(data);
+      const response = await POST(request);
+
+      expect(response.status).toBe(200);
+
+      const emailCall = mockSend.mock.calls[0][0];
+      expect(emailCall.subject).toContain('A family member or partner');
+      expect(emailCall.html).toContain('A family member or partner');
+      expect(emailCall.text).toContain('Enquiry For: A family member or partner');
+    });
+  });
+
+  describe('Phone Number Formats', () => {
+    it('accepts UK mobile: 07xxxxxxxxx', async () => {
+      const data = { ...validData, phone: '07700900123', contactMethod: 'phone' };
+      const request = createMockRequest(data);
+      const response = await POST(request);
+
+      expect(response.status).toBe(200);
+    });
+
+    it('accepts UK landline: 01xxxxxxxxxx', async () => {
+      const data = { ...validData, phone: '01onal234567890', contactMethod: 'phone' };
+      const request = createMockRequest(data);
+      const response = await POST(request);
+
+      expect(response.status).toBe(200);
+    });
+
+    it('accepts UK landline: 02xxxxxxxxx', async () => {
+      const data = { ...validData, phone: '02012345678', contactMethod: 'phone' };
+      const request = createMockRequest(data);
+      const response = await POST(request);
+
+      expect(response.status).toBe(200);
+    });
+
+    it('accepts phone with spaces', async () => {
+      const data = { ...validData, phone: '07123 456 789', contactMethod: 'phone' };
+      const request = createMockRequest(data);
+      const response = await POST(request);
+
+      expect(response.status).toBe(200);
+    });
+
+    it('accepts phone with dashes', async () => {
+      const data = { ...validData, phone: '07123-456-789', contactMethod: 'phone' };
+      const request = createMockRequest(data);
+      const response = await POST(request);
+
+      expect(response.status).toBe(200);
+    });
   });
 
   describe('Input Sanitization', () => {
