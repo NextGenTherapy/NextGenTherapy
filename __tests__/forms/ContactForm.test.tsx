@@ -551,7 +551,7 @@ describe('ContactForm Component', () => {
 
         // Select phone and enter valid landline
         await user.click(screen.getByRole('radio', { name: /^phone$/i }));
-        await user.type(screen.getByLabelText(/phone number/i), '01onal234567890');
+        await user.type(screen.getByLabelText(/phone number/i), '01234567890');
 
         const submitButton = screen.getByRole('button', { name: /send/i });
         await act(async () => {
@@ -805,7 +805,7 @@ describe('ContactForm Component', () => {
         expect(screen.getByText(/thanks/i)).toBeInTheDocument();
       });
 
-      it('accepts UK landline format: 01onal2xxxxxxxx', async () => {
+      it('accepts UK landline format: 01xxxxxxxxxx', async () => {
         const user = userEvent.setup();
         (global.fetch as jest.Mock).mockResolvedValueOnce({
           ok: true,
@@ -815,7 +815,7 @@ describe('ContactForm Component', () => {
         render(<ContactForm />);
         await fillBaseFields(user);
         await user.click(screen.getByRole('radio', { name: /^phone$/i }));
-        await user.type(screen.getByLabelText(/phone number/i), '01onal234567890');
+        await user.type(screen.getByLabelText(/phone number/i), '01234567890');
 
         const submitButton = screen.getByRole('button', { name: /send/i });
         await act(async () => {
