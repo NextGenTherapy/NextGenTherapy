@@ -220,20 +220,22 @@
 }
 
 .fitList li {
-  display: flex;
-  align-items: flex-start;
-  gap: var(--spacing-small);
+  position: relative;
+  padding-left: calc(var(--spacing-medium) + var(--spacing-xs));
   font-family: var(--font-body);
   font-size: var(--font-size-body);
   color: var(--color-text);
   line-height: var(--line-height-body);
-  padding: var(--spacing-small) 0;
+  padding-top: var(--spacing-small);
+  padding-bottom: var(--spacing-small);
 
   &::before {
     content: '✓';
+    position: absolute;
+    left: 0;
+    top: var(--spacing-small);
     color: var(--color-brand);
     font-weight: bold;
-    flex-shrink: 0;
   }
 
   em {
@@ -389,6 +391,7 @@
 
 /* Links */
 .link {
+  display: inline;
   color: var(--color-brand);
   text-decoration: underline;
   text-underline-offset: var(--spacing-xs);

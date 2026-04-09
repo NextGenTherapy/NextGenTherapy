@@ -316,7 +316,15 @@ OTHER QUESTIONS:
 ### Analytics Verification
 - [ ] Accept cookies → submit contact form → verify `free_call_requested` event in GA4 Real-Time
 - [ ] Click phone/email links → verify `phone_click` / `email_click` events fire
+- [ ] Click BACP badge → verify `outbound_click` event fires (destination: `bacp_profile`)
 - [ ] Decline cookies → verify NO GA4 events fire (consent working)
+
+### OG Image Generation
+- [ ] Finalize page designs
+- [ ] Run `npm run dev` in one terminal
+- [ ] Run `npx ts-node scripts/generate-og-images.ts` in another
+- [ ] Verify images generated in `public/images/og/`
+- [ ] Verify `default-social-share.jpg` updated
 
 ---
 

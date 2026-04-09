@@ -118,7 +118,7 @@ Neither recovery is linear. There are setbacks. But the direction is toward some
 
 ## If this sounds like you
 
-I work with women up to age 40 who are experiencing burnout, depression, or the confusing overlap between them. I offer therapy in person in Colchester and online across the UK for those aged 16 and over.
+I work with women through their 30s who are experiencing burnout, depression, or the confusing overlap between them. I offer therapy in person in Colchester and online across the UK for those aged 16 and over.
 
 If you've been holding it together while quietly falling apart, or if the coping strategies that used to work have stopped working, I'd be glad to hear from you.
 

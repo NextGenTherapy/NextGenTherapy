@@ -178,6 +178,8 @@ export default function Footer() {
           <span className={styles.divider}>·</span>
           <Link href="/terms">Terms</Link>
           <span className={styles.divider}>·</span>
+          <Link href="/accessibility">Accessibility</Link>
+          <span className={styles.divider}>·</span>
           <button
             onClick={resetCookieConsent}
             className={styles.manageCookies}

@@ -2,9 +2,11 @@
 
 ## Summary
 
-This audit documents the creation and restructuring of legal pages to ensure UK GDPR/DPA 2018 compliance for Next Generation Therapy's website.
+This audit documents the creation and restructuring of legal pages to ensure UK GDPR/DPA 2018/DUAA 2025 compliance for Next Generation Therapy's website.
 
 **Status:** DRAFT — All pages are pending review by Andreea and a legal advisor before going live.
+
+**Last Updated:** 9 April 2026
 
 ---
 
@@ -23,6 +25,7 @@ This audit documents the creation and restructuring of legal pages to ensure UK 
 - How to control cookies (banner, browser settings, GA opt-out)
 - Third-party content disclosure (none currently)
 - Contact information
+- PECR 2003/DUAA 2025 compliant cookie inventory
 
 **Schema:**
 - WebPage JSON-LD
@@ -30,36 +33,47 @@ This audit documents the creation and restructuring of legal pages to ensure UK 
 
 ---
 
-### 2. Privacy Policy (RESTRUCTURED)
+### 2. Privacy Policy (COMPREHENSIVE)
 
 **File:** `src/app/privacy-policy/page.tsx`
 
-**Updated:** 8 April 2026
+**Updated:** 9 April 2026
 
-**Changes:**
-- Added DRAFT banner at top
-- Restructured from 10 to 13 sections for clarity
-- Added **Special Category Data (Health Information)** section (Article 9)
-- Added **Clinical Supervision and Confidentiality** section (BACP requirement)
-- Added **Online Therapy Sessions** section with 16+ age restriction
-- Added **Clinical Notes Retention**: 7 years per BACP guidelines
-- Added link to new Cookie Policy page
-- Updated date from "28 May 2025" to "8 April 2026"
+**Current State:**
+- 21 comprehensive sections covering UK GDPR, DPA 2018, and DUAA 2025
+- Article 6 and Article 9 legal basis documentation
+- Full data subject rights enumeration
+- Third-party processor inventory (Vercel, Google Analytics, Resend)
+- International data transfer documentation (UK-US Data Bridge, SCCs)
+- BACP-compliant clinical supervision disclosure
+- Online therapy age restrictions (16+) clearly stated
+- ICO complaint rights included
 
-**New Sections:**
+**Sections:**
 1. Data Controller
 2. Information We Collect
-3. Special Category Data (Health Information) — **NEW**
-4. Legal Basis for Processing
+3. Special Category Data (Health Information) — Article 9
+4. Legal Basis for Processing — Article 6
 5. How We Use Your Information
-6. Clinical Supervision and Confidentiality — **NEW**
-7. Online Therapy Sessions — **NEW**
-8. Data Retention
+6. Clinical Supervision and Confidentiality
+7. Online Therapy Sessions
+8. Data Retention (7-year clinical notes, 8-year records)
 9. Third-Party Data Processors
-10. Your Rights
-11. Cookies
-12. Complaints
-13. Contact
+10. International Data Transfers
+11. Data Security
+12. Your Rights (full Article 12-23 enumeration)
+13. Right to Withdraw Consent
+14. Automated Decision Making
+15. Children's Privacy
+16. Marketing Communications
+17. Cookies
+18. Changes to This Policy
+19. ICO Registration
+20. Complaints
+21. Contact
+
+**Placeholder Remaining:**
+- Line 124: ICO Registration Number `[Registration number to be inserted]`
 
 ---
 
@@ -67,18 +81,16 @@ This audit documents the creation and restructuring of legal pages to ensure UK 
 
 **File:** `src/app/terms/page.tsx`
 
-**Updated:** 8 April 2026
+**Updated:** 9 April 2026
 
-**Changes:**
-- Added DRAFT banner at top
-- Simplified from 10 to 7 sections (website terms only)
-- Removed "Use License" legalese section
-- Added note: Online sessions require age 16+
-- Added note: Separate therapy agreement for services
-- Added link to Cookie Policy page
-- Updated date from "January 1, 2025" to "8 April 2026"
+**Content:**
+- Consumer Contracts Regulations 2013 reference
+- Website terms only (separate therapy agreement for services)
+- Online sessions require age 16+
+- Crisis resources clearly displayed
+- UK jurisdiction and governing law
 
-**New Structure:**
+**Structure:**
 1. About This Website
 2. Website Content
 3. Your Use of This Website
@@ -89,109 +101,128 @@ This audit documents the creation and restructuring of legal pages to ensure UK 
 
 ---
 
-### 4. Cookie Banner (UPDATED)
+### 4. Accessibility Statement (NEW)
+
+**File:** `src/app/accessibility/page.tsx`
+
+**Created:** 9 April 2026
+
+**Content:**
+- WCAG 2.1 AA compliance commitment
+- Equality Act 2010 reference
+- Accessibility features enumerated
+- Known limitations documented
+- Contact for accessibility issues
+- Testing methodology
+
+**Schema:**
+- WebPage JSON-LD
+- BreadcrumbList JSON-LD
+
+---
+
+### 5. Cookie Banner (UPDATED)
 
 **File:** `src/components/layout/CookieConsent.tsx`
 
-**Changes:**
-- Changed link from `/privacy-policy` to `/cookies`
-- Updated link text from "Privacy policy" to "Learn more about cookies"
-
-**File:** `src/components/layout/CookieConsent.module.scss`
-
-**Changes:**
-- Added `prefers-reduced-motion: reduce` support for accessibility
+**Features:**
+- Accept/Decline options with equal button prominence (PECR 2026)
+- Consent-gated analytics (GA4 and Vercel)
+- "Manage Cookies" option in footer
+- `prefers-reduced-motion` support for accessibility
 
 ---
 
-### 5. Footer (UPDATED)
+### 6. Footer (UPDATED)
 
 **File:** `src/components/layout/footer.tsx`
 
-**Changes:**
-- Added Cookies link between Privacy Policy and Terms in legal links section
+**Legal Links Section (9 April 2026):**
+- Privacy Policy
+- Cookies
+- Terms
+- Accessibility
+- Manage Cookies button
 
 ---
 
-### 6. Legal Navigation (UPDATED)
+### 7. Legal Navigation Component
 
 **File:** `src/components/layout/legal-navigation.tsx`
 
-**Changes:**
-- Extended `currentPage` type to include `'cookies'`
-- Updated navigation to show links to other two legal pages dynamically
-- Removed emoji from Home button for consistency
+**Supports:**
+- Privacy Policy
+- Cookies
+- Terms
+- Accessibility (4 pages total)
 
 ---
 
 ## Placeholders Requiring Andreea's Input
 
-The following placeholders were added and need confirmation:
-
-| File | Line | Placeholder | Question |
-|------|------|-------------|----------|
-| `privacy-policy/page.tsx` | 157 | ICO registration number | Is Next Generation Therapy registered with ICO? Number? |
-| `privacy-policy/page.tsx` | 247 | Clinical supervisor | Name for disclosure, or just confirm existence? |
-| `privacy-policy/page.tsx` | 257 | Online platform | Which video platform? (Zoom, Google Meet, other) |
+| File | Line | Placeholder | Status |
+|------|------|-------------|--------|
+| `privacy-policy/page.tsx` | 124 | ICO registration number | Documented in `docs/andreea-todos/action-items.md` — Andreea confirmed registered, needs to provide number |
 
 ---
 
 ## Compliance Checklist
 
-### UK GDPR / DPA 2018
+### UK GDPR / DPA 2018 / DUAA 2025
 
 - [x] Data controller identified
 - [x] Legal basis for processing stated (Article 6)
 - [x] Special category data addressed (Article 9)
-- [x] Data retention periods specified
-- [x] Third-party processors listed
-- [x] Data subject rights explained
+- [x] Data retention periods specified (7-year clinical, 8-year records)
+- [x] Third-party processors listed (Vercel, Google Analytics, Resend)
+- [x] International data transfers documented (UK-US Data Bridge, SCCs)
+- [x] Data subject rights explained (Articles 12-23)
 - [x] ICO complaint rights mentioned
-- [ ] ICO registration number (pending confirmation)
+- [ ] ICO registration number (pending — Andreea to provide)
+- [x] DUAA 2025 provisions addressed
 
 ### BACP Requirements
 
 - [x] Clinical supervision disclosure
 - [x] 7-year record retention mentioned
 - [x] Confidentiality limits addressed
+- [x] Professional membership displayed (MBACP 385976)
 
-### Cookie Compliance
+### Cookie Compliance (PECR 2003/2026)
 
 - [x] Cookie consent banner with Accept/Decline options
+- [x] Equal button prominence (PECR 2026)
 - [x] Essential vs analytics cookies distinguished
 - [x] Cookie duration disclosed
+- [x] Full cookie inventory in policy
 - [x] Instructions for changing preferences
 - [x] Link to GA opt-out browser add-on
+- [x] Consent properly gates GA4 and Vercel Analytics
 
-### Accessibility
+### Accessibility (Equality Act 2010 / WCAG 2.1)
 
+- [x] Accessibility statement page exists
+- [x] WCAG 2.1 AA commitment stated
+- [x] Contact method for accessibility issues
 - [x] `prefers-reduced-motion` support in cookie banner
-- [x] Semantic HTML structure
+- [x] Semantic HTML structure throughout
 - [x] Link text is descriptive
-- [x] Form elements have labels (contact form)
+- [x] Form elements have labels
+
+### Sitemap Coverage
+
+- [x] `/privacy-policy` (priority: 0.3, changefreq: yearly)
+- [x] `/terms` (priority: 0.3, changefreq: yearly)
+- [x] `/cookies` (priority: 0.3, changefreq: yearly)
+- [x] `/accessibility` (priority: 0.3, changefreq: yearly)
 
 ---
 
 ## Items for Andreea's Review
 
-1. **ICO Registration**: Is Next Generation Therapy registered with ICO? If yes, what is the registration number?
+1. **ICO Registration Number (BLOCKING)**: Provide the number to insert at Privacy Policy line 124. Already confirmed registered.
 
-2. **Online Platform**: Which video platform is used for online sessions? (Zoom, Google Meet, other)
-
-3. **Clinical Supervisor**: For the privacy policy disclosure, should we:
-   - Just confirm that clinical supervision exists (current approach)
-   - Name the supervisor
-   - Provide supervisor's credentials
-
-4. **Data Retention**: Confirm 7-year retention period for clinical notes per BACP guidelines is correct.
-
-5. **Gmail**: Contact email is Gmail (`andreeatherapytoday@gmail.com`). Is this acceptable for processing client enquiries, or should a business email domain be used?
-
-6. **Legal Review**: All three pages are marked DRAFT. Before publishing, a legal advisor should review for:
-   - Accuracy of GDPR article references
-   - Completeness of data subject rights
-   - Adequacy of clinical supervision disclosure
-   - Any missing required disclosures
+2. **Legal Review**: All pages marked DRAFT. Recommend BACP-aware legal advisor review before removing DRAFT status.
 
 ---
 
@@ -207,13 +238,13 @@ The site uses Google Analytics 4 (ID: `G-3528EDPEXW`) with:
 
 ### Vercel Analytics
 
-Vercel Analytics and SpeedInsights are also consent-gated. When user clicks "Essential only", both GA4 and Vercel Analytics should be disabled.
+Vercel Analytics and SpeedInsights are also consent-gated. When user clicks "Essential only", both GA4 and Vercel Analytics are disabled.
 
 **Verified**: The `declineCookies` function disables GA4. Vercel Analytics reads the consent state on initial load and does not track if consent is declined.
 
 ### Therapy Contract
 
-These website terms explicitly state that therapy services are covered by a separate agreement signed before the first session. This separation is intentional to:
+Website terms explicitly state that therapy services are covered by a separate agreement signed before the first session. This separation is intentional to:
 - Keep website terms simple and accessible
 - Allow therapy terms to be more detailed (cancellation, confidentiality limits, etc.)
 - Avoid mixing website/digital consent with therapeutic consent
@@ -226,15 +257,18 @@ These website terms explicitly state that therapy services are covered by a sepa
 |------|--------|
 | `src/app/cookies/page.tsx` | Created |
 | `src/app/cookies/cookies.module.scss` | Created |
-| `src/app/privacy-policy/page.tsx` | Modified |
+| `src/app/privacy-policy/page.tsx` | Modified (21 sections) |
 | `src/app/privacy-policy/privacy-policy.module.scss` | Modified |
 | `src/app/terms/page.tsx` | Modified |
 | `src/app/terms/terms.module.scss` | Modified |
+| `src/app/accessibility/page.tsx` | Created |
+| `src/app/accessibility/accessibility.module.scss` | Created |
 | `src/components/layout/CookieConsent.tsx` | Modified |
 | `src/components/layout/CookieConsent.module.scss` | Modified |
-| `src/components/layout/footer.tsx` | Modified |
-| `src/components/layout/legal-navigation.tsx` | Modified |
+| `src/components/layout/footer.tsx` | Modified (accessibility link added) |
+| `src/components/layout/legal-navigation.tsx` | Modified (4-page support) |
+| `next-sitemap.config.js` | Modified (all legal pages) |
 
 ---
 
-Last updated: 8 April 2026
+Last updated: 9 April 2026

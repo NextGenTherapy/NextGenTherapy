@@ -116,7 +116,7 @@ I've completed post-qualification training specifically in working with neurodiv
 
 ## If this resonates
 
-I [work with neurodivergent adults](/neurodiversity) up to age 40, offering therapy in person in Colchester and [online across the UK](/online-therapy) for those aged 16 and over.
+I [work with neurodivergent adults](/neurodiversity), offering therapy in person in Colchester and [online across the UK](/online-therapy) for those aged 16 and over.
 
 If you're experiencing burnout that regular advice doesn't seem to touch — if you've been masking for so long that you don't know who you are underneath — I'd be glad to hear from you.
 

@@ -4,6 +4,7 @@ import Link from 'next/link';
 
 import PageHero from '@/components/ui/PageHero';
 import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema';
+import { TrackedBACPLink } from '@/components/ui/TrackedContactLinks';
 import styles from './about.module.scss';
 import buttonStyles from '../../components/ui/button.module.scss';
 
@@ -190,14 +191,9 @@ export default function AboutMe() {
                     <div className={styles.definitionItem}>
                       <dt>Professional membership</dt>
                       <dd>
-                        <a
-                          href="https://www.bacp.co.uk/therapists/385976/andreea-horhocea/london-e16"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className={styles.link}
-                        >
+                        <TrackedBACPLink location="about" className={styles.link}>
                           BACP Registered Member (MBACP)
-                        </a>
+                        </TrackedBACPLink>
                       </dd>
                     </div>
                     <div className={styles.definitionItem}>

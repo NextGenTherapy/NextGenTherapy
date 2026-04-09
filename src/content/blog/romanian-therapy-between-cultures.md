@@ -94,7 +94,7 @@ Nu trebuie să-ți alegi o limbă. Putem vorbi în română, în engleză, sau a
 
 ## If this resonates
 
-I [work with Romanian-speaking clients](/romanian-therapy) up to age 40, offering therapy in person in Colchester and [online across the UK](/online-therapy) for those aged 16 and over.
+I [work with Romanian-speaking clients](/romanian-therapy), offering therapy in person in Colchester and [online across the UK](/online-therapy) for those aged 16 and over.
 
 If you've been looking for a therapist who speaks Romanian — or who understands what it means to exist between two cultures — I'd be glad to hear from you.
 

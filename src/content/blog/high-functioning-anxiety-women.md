@@ -96,7 +96,7 @@ None of this happens quickly. But it happens.
 
 ## If this sounds familiar
 
-I [work with women](/therapy-for-women) up to age 40 who are experiencing exactly what I've described — the exhaustion of appearing fine when you're not, the relentless inner pressure, the sense that something needs to change but you don't know what.
+I [work with women](/therapy-for-women) through their 30s who are experiencing exactly what I've described — the exhaustion of appearing fine when you're not, the relentless inner pressure, the sense that something needs to change but you don't know what.
 
 I offer therapy [in person at my practice in Colchester](/therapy-in-colchester) and online across the UK for those aged 16 and over.
 

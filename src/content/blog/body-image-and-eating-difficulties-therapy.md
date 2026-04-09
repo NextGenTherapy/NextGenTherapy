@@ -104,7 +104,7 @@ The body image piece is often slower. We live in a culture that profits from wom
 
 ## If this sounds like you
 
-I [work with women](/therapy-for-women) up to age 40 who are struggling with eating, body image, or both. I offer therapy [in person in Colchester](/therapy-in-colchester) and online across the UK for those aged 16 and over.
+I [work with women](/therapy-for-women) through their 30s who are struggling with eating, body image, or both. I offer therapy [in person in Colchester](/therapy-in-colchester) and online across the UK for those aged 16 and over.
 
 If you've been quietly struggling with this for years — if it doesn't fit a diagnosis but it takes up too much space in your head — I'd be glad to hear from you.
 

@@ -1,6 +1,6 @@
 'use client';
 
-import { trackPhoneClick, trackEmailClick, type TrackingLocation } from '@/lib/analytics';
+import { trackPhoneClick, trackEmailClick, trackOutboundClick, type TrackingLocation } from '@/lib/analytics';
 
 interface TrackedPhoneLinkProps {
   location: TrackingLocation;
@@ -14,9 +14,16 @@ interface TrackedEmailLinkProps {
   children?: React.ReactNode;
 }
 
+interface TrackedBACPLinkProps {
+  location: TrackingLocation;
+  className?: string;
+  children: React.ReactNode;
+}
+
 const PHONE_NUMBER = '+447448036017';
 const PHONE_DISPLAY = '07448 036017';
 const EMAIL = 'andreeatherapytoday@gmail.com';
+const BACP_PROFILE_URL = 'https://www.bacp.co.uk/therapists/385976/andreea-horhocea/london-e16';
 
 /**
  * Phone link with click tracking
@@ -56,6 +63,29 @@ export function TrackedEmailLink({ location, className, children }: TrackedEmail
       aria-label="Email Andreea"
     >
       {children || EMAIL}
+    </a>
+  );
+}
+
+/**
+ * BACP profile link with click tracking
+ * Tracks outbound clicks to GA4 and Vercel Analytics
+ */
+export function TrackedBACPLink({ location, className, children }: TrackedBACPLinkProps) {
+  const handleClick = () => {
+    trackOutboundClick('bacp_profile', location);
+  };
+
+  return (
+    <a
+      href={BACP_PROFILE_URL}
+      target="_blank"
+      rel="noopener noreferrer"
+      onClick={handleClick}
+      className={className}
+      aria-label="View Andreea's BACP registration"
+    >
+      {children}
     </a>
   );
 }

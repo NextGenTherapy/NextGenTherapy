@@ -4,7 +4,7 @@
  */
 
 // Type definitions for tracking events
-type TrackingLocation = 'footer' | 'book-now';
+type TrackingLocation = 'footer' | 'book-now' | 'about';
 
 type EnquiryFor = 'myself' | 'child' | 'other';
 
@@ -112,6 +112,21 @@ export function trackEmailClick(location: TrackingLocation): void {
     ga4EventName: 'email_click',
     vercelEventName: 'Email Click',
     parameters: {
+      location,
+    },
+  });
+}
+
+/**
+ * Track outbound link clicks (external links like BACP profile)
+ */
+export function trackOutboundClick(destination: string, location: TrackingLocation): void {
+  trackEvent({
+    eventName: 'Outbound Click',
+    ga4EventName: 'outbound_click',
+    vercelEventName: 'Outbound Click',
+    parameters: {
+      destination,
       location,
     },
   });

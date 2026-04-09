@@ -16,7 +16,7 @@ I want to walk you through what to expect, because the anticipation is often wor
 
 Before we ever meet for a proper session, we have a short call. This isn't therapy. It's logistics plus a vibe check.
 
-I'll ask you briefly what brings you to therapy. You don't need to give me your whole story — just enough for me to understand whether I might be able to help. If your needs are outside my expertise (couples work, forensic issues, someone over 40), I'll tell you straight away rather than waste your time.
+I'll ask you briefly what brings you to therapy. You don't need to give me your whole story — just enough for me to understand whether I might be able to help. If your needs are outside my expertise (couples work, forensic issues), I'll tell you straight away rather than waste your time.
 
 You can ask me questions. About how I work, about practicalities, about anything you need to know. This is your chance to get a sense of me before committing.
 
@@ -136,7 +136,7 @@ We don't set a fixed number of sessions at the start. Psychodynamic therapy is o
 
 ## If you're ready to try
 
-I offer therapy in person in Colchester and online across the UK for those aged 16 and over. I work with adults and young people up to age 40.
+I offer therapy in person in Colchester and online across the UK for those aged 16 and over. I work with children, teenagers, young adults, and adults through their 30s.
 
 If you've been thinking about therapy and you're ready to try, the first step is a [free 15-minute call](/book-now). It's low-stakes: a brief conversation to see if working together might make sense. If you're [not sure whether this approach is right for you](/is-this-right-for-you), that's something we can discuss.
 

@@ -102,7 +102,7 @@ Links to all 6 cornerstones: **Pass**
 |------|-------------------|-------|
 | `/faq` | 4 | online-therapy, neurodiversity, therapy-for-women, romanian-therapy |
 | `/youth-family-faq` | 3 | child-therapy, teen-therapy, therapy-for-women |
-| `/is-this-right-for-you` | 0 | Links to `/book-now` only |
+| `/is-this-right-for-you` | 6 | Links to all 6 cornerstones + `/book-now` |
 
 ---
 

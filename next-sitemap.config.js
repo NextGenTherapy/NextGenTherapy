@@ -47,7 +47,7 @@ module.exports = {
     // Location pages
     if (path.startsWith('/therapy-in-')) priority = 0.7;
     // Legal pages - low priority, rarely change
-    if (path === '/privacy-policy' || path === '/terms') {
+    if (path === '/privacy-policy' || path === '/terms' || path === '/cookies' || path === '/accessibility') {
       priority = 0.3;
       changefreq = 'yearly';
     }

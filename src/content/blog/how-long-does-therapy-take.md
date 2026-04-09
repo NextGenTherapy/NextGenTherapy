@@ -112,7 +112,7 @@ But I also want you to go in with eyes open. If weekly therapy isn't financially
 
 ## If you're considering it
 
-I work with adults and young people up to age 40, offering therapy in person in Colchester and online across the UK for those aged 16 and over.
+I work with children, teenagers, young adults, and adults through their 30s. I offer therapy in person in Colchester and online across the UK for those aged 16 and over.
 
 If you're curious about [psychodynamic therapy](/blog/what-is-psychodynamic-therapy) — even if you're uncertain about the commitment — the first step is a [free 15-minute call](/book-now). We can talk about what you're looking for, I can give you a sense of how I work, and you can decide if it feels worth exploring further.
 

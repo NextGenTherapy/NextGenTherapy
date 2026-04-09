@@ -104,7 +104,7 @@ If you're unsure whether you might be ADHD and want to explore that, we can cert
 
 ## If this resonates
 
-I [work with neurodivergent adults](/neurodiversity) up to age 40, offering therapy in person in Colchester and [online across the UK](/online-therapy) for those aged 16 and over.
+I [work with neurodivergent adults](/neurodiversity), offering therapy in person in Colchester and [online across the UK](/online-therapy) for those aged 16 and over.
 
 If you've recently been diagnosed with ADHD and you're navigating the emotional aftermath — or if you've known for years but never had space to process it — I'd be glad to hear from you.
 

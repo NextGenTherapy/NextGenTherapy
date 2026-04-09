@@ -308,6 +308,13 @@ export default function IsThisRightForYouPage() {
                   and want therapy in your first language
                 </li>
                 <li>
+                  You&apos;re anywhere in the UK and want{' '}
+                  <Link href="/online-therapy" className={styles.link}>
+                    online therapy
+                  </Link>{' '}
+                  (available for age 16+)
+                </li>
+                <li>
                   You want an honest therapist who will tell you what she sees, not just reflect
                   things back
                 </li>

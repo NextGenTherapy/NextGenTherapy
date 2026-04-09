@@ -1,20 +1,23 @@
 # Lighthouse Baseline - Next Generation Therapy
 
 **Last updated:** April 2026
-**Status:** Template ready for measurements
+**Status:** Ready for manual measurements
 
 ---
 
 ## How to Run Lighthouse
 
-### Option 1: Chrome DevTools
-1. Open the page in Chrome
+### Option 1: Chrome DevTools (Recommended)
+1. Open the page in Chrome (production site or `npm run build && npm start`)
 2. Press F12 to open DevTools
 3. Go to "Lighthouse" tab
 4. Select "Mobile" and all categories
 5. Click "Analyze page load"
 
-### Option 2: Command Line
+### Option 2: PageSpeed Insights
+Visit https://pagespeed.web.dev/ and enter: `https://nextgentherapy.co.uk`
+
+### Option 3: Command Line
 ```bash
 # Build and start production server
 npm run build && npm start
@@ -23,8 +26,12 @@ npm run build && npm start
 npx lighthouse http://localhost:3000 --output=html --output-path=./lighthouse-report.html
 ```
 
-### Option 3: PageSpeed Insights
-Visit https://pagespeed.web.dev/ and enter your URL.
+### Option 4: Lighthouse CI
+```bash
+npm run build && npm start &
+npx lhci collect --config=.lighthouserc.json
+npx lhci assert --config=.lighthouserc.json
+```
 
 ---
 
@@ -45,24 +52,24 @@ From `/performance.config.js`:
 
 ## Lighthouse Scores
 
-> **Instructions:** Run Lighthouse on each page and record the scores below.
+> **ACTION REQUIRED:** Run Lighthouse on each page below and record the scores.
 > Use mobile emulation for accurate scores.
 
 ### Homepage (`/`)
 
 | Category | Score | Notes |
 |----------|-------|-------|
-| Performance | {{ MEASURE }} | |
-| Accessibility | {{ MEASURE }} | |
-| Best Practices | {{ MEASURE }} | |
-| SEO | {{ MEASURE }} | |
+| Performance | ___ | |
+| Accessibility | ___ | |
+| Best Practices | ___ | |
+| SEO | ___ | |
 
 #### Core Web Vitals
 | Metric | Value | Rating |
 |--------|-------|--------|
-| LCP | {{ MEASURE }} | |
-| INP | {{ MEASURE }} | |
-| CLS | {{ MEASURE }} | |
+| LCP | ___ | |
+| INP | ___ | |
+| CLS | ___ | |
 
 ---
 
@@ -70,17 +77,17 @@ From `/performance.config.js`:
 
 | Category | Score | Notes |
 |----------|-------|-------|
-| Performance | {{ MEASURE }} | |
-| Accessibility | {{ MEASURE }} | |
-| Best Practices | {{ MEASURE }} | |
-| SEO | {{ MEASURE }} | |
+| Performance | ___ | |
+| Accessibility | ___ | |
+| Best Practices | ___ | |
+| SEO | ___ | |
 
 #### Core Web Vitals
 | Metric | Value | Rating |
 |--------|-------|--------|
-| LCP | {{ MEASURE }} | |
-| INP | {{ MEASURE }} | |
-| CLS | {{ MEASURE }} | |
+| LCP | ___ | |
+| INP | ___ | |
+| CLS | ___ | |
 
 ---
 
@@ -88,10 +95,10 @@ From `/performance.config.js`:
 
 | Category | Score | Notes |
 |----------|-------|-------|
-| Performance | {{ MEASURE }} | |
-| Accessibility | {{ MEASURE }} | |
-| Best Practices | {{ MEASURE }} | |
-| SEO | {{ MEASURE }} | |
+| Performance | ___ | |
+| Accessibility | ___ | |
+| Best Practices | ___ | |
+| SEO | ___ | |
 
 ---
 
@@ -99,10 +106,10 @@ From `/performance.config.js`:
 
 | Category | Score | Notes |
 |----------|-------|-------|
-| Performance | {{ MEASURE }} | |
-| Accessibility | {{ MEASURE }} | |
-| Best Practices | {{ MEASURE }} | |
-| SEO | {{ MEASURE }} | |
+| Performance | ___ | |
+| Accessibility | ___ | |
+| Best Practices | ___ | |
+| SEO | ___ | |
 
 ---
 
@@ -110,10 +117,10 @@ From `/performance.config.js`:
 
 | Category | Score | Notes |
 |----------|-------|-------|
-| Performance | {{ MEASURE }} | |
-| Accessibility | {{ MEASURE }} | |
-| Best Practices | {{ MEASURE }} | |
-| SEO | {{ MEASURE }} | |
+| Performance | ___ | |
+| Accessibility | ___ | |
+| Best Practices | ___ | |
+| SEO | ___ | |
 
 ---
 
@@ -121,10 +128,10 @@ From `/performance.config.js`:
 
 | Category | Score | Notes |
 |----------|-------|-------|
-| Performance | {{ MEASURE }} | |
-| Accessibility | {{ MEASURE }} | |
-| Best Practices | {{ MEASURE }} | |
-| SEO | {{ MEASURE }} | |
+| Performance | ___ | |
+| Accessibility | ___ | |
+| Best Practices | ___ | |
+| SEO | ___ | |
 
 ---
 
@@ -182,10 +189,39 @@ From `/performance.config.js`:
 
 ---
 
+## Manual Action Items for Luke
+
+### Google Search Console Setup
+1. Go to https://search.google.com/search-console
+2. Add property: `https://nextgentherapy.co.uk`
+3. Verify using HTML tag method (code already in `src/app/layout.tsx` line 96)
+4. Submit sitemap: `sitemap.xml`
+5. Set international target to **United Kingdom**
+6. Enable email alerts for issues
+
+### Bing Webmaster Tools
+1. Go to https://www.bing.com/webmasters
+2. Import from Google Search Console (easiest method)
+3. Submit sitemap
+
+### Vercel Dashboard
+1. Enable Speed Insights if not already
+2. Check Core Web Vitals in analytics dashboard
+
+### OG Image Generation
+Run when page designs are finalized:
+```bash
+npm run dev  # Terminal 1
+npx ts-node scripts/generate-og-images.ts  # Terminal 2
+```
+
+---
+
 ## Next Steps
 
 1. [ ] Run Lighthouse on all key pages
 2. [ ] Record baseline scores above
 3. [ ] Address any scores below 90
-4. [ ] Set up automated Lighthouse CI (optional)
-5. [ ] Schedule monthly performance reviews
+4. [ ] Verify Google Search Console ownership
+5. [ ] Submit sitemap to GSC and Bing
+6. [ ] Schedule monthly performance reviews
