@@ -143,12 +143,6 @@ export default async function RootLayout({ children }: { children: React.ReactNo
         <meta name="msapplication-TileColor" content="#3D5940" />
         <meta name="msapplication-navbutton-color" content="#3D5940" />
 
-        {/* DNS Prefetch for faster external resource loading */}
-        <link rel="dns-prefetch" href="https://www.google-analytics.com" />
-        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
-        <link rel="preconnect" href="https://www.google-analytics.com" />
-        <link rel="preconnect" href="https://www.googletagmanager.com" />
-
         {/* Google Business Profile Integration */}
         <meta
           name="google-business-verification"
@@ -157,6 +151,9 @@ export default async function RootLayout({ children }: { children: React.ReactNo
         <meta name="business-type" content="Health & Medical" />
         <meta name="business-category" content="Mental Health Service" />
 
+      </head>
+      <body>
+        {/* Schema JSON-LD moved to body to reduce render-blocking in head */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -300,8 +297,6 @@ export default async function RootLayout({ children }: { children: React.ReactNo
             }),
           }}
         />
-      </head>
-      <body>
         <WebsiteSchema />
         <a href="#main-content" className="skip-link">
           Skip to content

@@ -150,6 +150,7 @@
   position: relative;
   width: 100%;
   max-width: 320px;
+  min-height: 400px; /* Prevent CLS by reserving space for image */
   aspect-ratio: 4 / 5;
   border-radius: var(--radius-large);
   outline: var(--border-width-thick) solid var(--color-accent);
@@ -173,16 +174,22 @@
 @media (min-width: 768px) {
   .heroImageFrame {
     max-width: 380px;
+    min-height: 475px; /* Prevent CLS by reserving space for image */
   }
 }
 
 @media (min-width: 1024px) {
   .heroImageFrame {
     max-width: 450px;
+    min-height: 562px; /* Prevent CLS by reserving space for image */
   }
 }
 
 .heroImage {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
   border-radius: var(--radius-large);
   object-fit: cover;
   object-position: center top;

@@ -130,9 +130,13 @@ export default function Home() {
                 <Image
                   src="/images/andreea.jpg"
                   alt="Andreea Horhocea - BACP registered psychotherapist in Colchester"
-                  fill
-                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 450px"
+                  width={450}
+                  height={563}
+                  sizes="(max-width: 768px) 320px, (max-width: 1024px) 380px, 450px"
                   priority
+                  fetchPriority="high"
+                  placeholder="blur"
+                  blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAKAAgDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAABQYH/8QAIhAAAgEDBAMBAAAAAAAAAAAAAQIDAAQRBQYSIRMxQVH/xAAVAQEBAAAAAAAAAAAAAAAAAAADBf/EABkRAAMAAwAAAAAAAAAAAAAAAAABAgMRIf/aAAwDAQACEQMRAD8AzPbO3dKvdv2V1dQmSWSNXZy7jJI+cT1ilfsXaPi+XHQHB+UUtKpHmuxH//Z"
                   className={styles.heroImage}
                 />
               </div>

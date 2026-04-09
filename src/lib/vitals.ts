@@ -1,9 +1,8 @@
 /**
  * Core Web Vitals monitoring utilities
  * Measures and reports performance metrics for Next Generation Therapy website
+ * Uses dynamic imports to reduce initial bundle size
  */
-
-import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals';
 
 // Metric thresholds based on Core Web Vitals recommendations
 const THRESHOLDS = {
@@ -88,12 +87,16 @@ function sendToAnalytics(metric: WebVitalMetric) {
 
 /**
  * Initialize Core Web Vitals monitoring
+ * Uses dynamic import to load web-vitals library on demand
  */
-export function initWebVitals() {
+export async function initWebVitals() {
   // Only run in browser environment
   if (typeof window === 'undefined') return;
 
   try {
+    // Dynamic import to reduce initial bundle size
+    const { onCLS, onINP, onFCP, onLCP, onTTFB } = await import('web-vitals');
+
     // Largest Contentful Paint
     onLCP((metric) => {
       const webVitalMetric: WebVitalMetric = {

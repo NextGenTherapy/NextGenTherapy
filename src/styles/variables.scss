@@ -44,8 +44,9 @@
      =========================================== */
 
   /* Font Families - uses next/font CSS variables from layout.tsx */
-  --font-display: var(--font-cormorant);
-  --font-body: var(--font-dm-sans);
+  /* Includes size-adjusted fallbacks to prevent CLS during font loading */
+  --font-display: var(--font-cormorant), 'Cormorant Garamond Fallback', Georgia, serif;
+  --font-body: var(--font-dm-sans), 'DM Sans Fallback', Arial, sans-serif;
 
   /* Font Sizes - Responsive with clamp() */
   --font-size-hero: clamp(2.8rem, 6vw, 5rem);

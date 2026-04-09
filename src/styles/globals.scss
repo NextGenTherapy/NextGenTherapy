@@ -4,6 +4,29 @@
    =========================================== */
 
 /* ===========================================
+   FONT FALLBACK METRICS - Prevent CLS
+   Size-adjusted fallback fonts to match web fonts
+   =========================================== */
+
+@font-face {
+  font-family: 'Cormorant Garamond Fallback';
+  src: local('Georgia'), local('Times New Roman');
+  size-adjust: 108%;
+  ascent-override: 95%;
+  descent-override: 23%;
+  line-gap-override: 0%;
+}
+
+@font-face {
+  font-family: 'DM Sans Fallback';
+  src: local('Arial'), local('Helvetica');
+  size-adjust: 104%;
+  ascent-override: 96%;
+  descent-override: 24%;
+  line-gap-override: 0%;
+}
+
+/* ===========================================
    SECTION 1: CSS RESET
    =========================================== */
 
