@@ -165,6 +165,35 @@
   - andreea horhocea therapist - #1-6 (dominates)
   - psychodynamic therapy colchester - #3, #7
 
+### 30 April 2026 (Post-indexing-fix checkpoint)
+**Infrastructure shipped — rankings not re-checked yet, expect movement in 2–4 weeks.**
+
+What changed:
+- Dynamic `app/sitemap.ts` and `app/robots.ts` — sitemap `lastmod` now refreshes every deploy
+- 3 GSC indexing reports submitted for Validate Fix (Page-with-redirect, 404, Crawled-not-indexed)
+- 10 high-value pages manually requested for re-indexing in GSC (book-now, services, youth-family-faq, privacy-policy + 6 blog posts)
+- 6 redirects added/fixed (parent-support fragment, /home, /contact, plus existing legacy redirects)
+- SearchAction JSON-LD removed (was generating fake `/search?q=…` 404s in GSC)
+- Related-posts block added to every blog post (improves internal linking, helps thin posts get indexed)
+- `/youth-family-faq` added to footer (was orphan-ish)
+- `BlogPosting` schema now declares `dateModified` separate from `datePublished`
+- Cookie consent confirmed blocking GA, Vercel Analytics, Speed Insights, and Web Vitals on decline
+- Permissions-Policy header bug fixed
+
+GSC submitted-then-validated URLs:
+- `/book-now`
+- `/services`
+- `/youth-family-faq`
+- `/privacy-policy`
+- `/blog/understanding-anxiety-young-people`
+- `/blog/signs-you-might-benefit-from-therapy`
+- `/blog/supporting-child-through-therapy`
+- `/blog/digital-wellbeing-young-people-mental-health`
+- `/blog/helping-young-people-friendship-difficulties-social-anxiety`
+- `/blog/preparing-for-first-therapy-session`
+
+**Next check (~21 May 2026):** verify GSC's "Indexed pages" count has climbed and re-run the 36-keyword position check.
+
 ### [Next Check Date]
 -
 -
@@ -199,8 +228,15 @@
 
 ## Next Actions
 
+**In progress / awaiting Google (~2–4 weeks):**
+- GSC validation of all 3 indexing reports
+- Re-indexing of the 10 manually-requested URLs
+
+**Content-side (still to do):**
 1. **Optimise Romanian page** - Target "terapeut român Essex" and "romanian therapist uk"
 2. **Create body image content** - Near-empty niche
 3. **Expand psychodynamic long-tails** - Build on existing #3 ranking
 4. **Submit to more directories** - Ensure BACP, Psychology Today, Counselling Directory all optimised
 5. **Google Business Profile** - Ensure optimised for local searches
+6. **Confirm with Andreea**: rename `/blog/understanding` slug to something descriptive (see `action-items.md`)
+7. **Optional**: set `INDEXNOW_SECRET` in Vercel + add deploy hook for instant Bing/Yandex pings (see `action-items.md`)
