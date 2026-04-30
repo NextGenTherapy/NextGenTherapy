@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useRef, useCallback } from 'react';
+import React, { useState, useRef, useCallback, useEffect } from 'react';
 import Link from 'next/link';
 
 import { ContactFormData, FormErrors, LoadingState, ContactMethod, EnquiryFor } from '../../types';
@@ -11,34 +11,56 @@ import styles from './contact-form.module.scss';
 
 const MAX_MESSAGE_LENGTH = 1000;
 
+// Subscribed to the textarea via a DOM input listener so typing doesn't
+// re-render the parent form. Remounted on form reset via a key prop.
+function MessageCharCounter({
+  textareaRef,
+  max,
+}: {
+  textareaRef: React.RefObject<HTMLTextAreaElement | null>;
+  max: number;
+}) {
+  const [length, setLength] = useState(0);
+
+  useEffect(() => {
+    const el = textareaRef.current;
+    if (!el) return;
+    setLength(el.value.length);
+    const handler = () => setLength(el.value.length);
+    el.addEventListener('input', handler);
+    return () => el.removeEventListener('input', handler);
+  }, [textareaRef]);
+
+  return (
+    <span id="message-counter" className={styles.charCounter}>
+      {length}/{max}
+    </span>
+  );
+}
+
 export default function ContactForm() {
   const [status, setStatus] = useState<LoadingState>('idle');
   const [serverError, setServerError] = useState<string>('');
   const [errors, setErrors] = useState<FormErrors>({});
 
-  // Controlled form state
-  const [formData, setFormData] = useState<ContactFormData>({
-    name: '',
-    email: '',
-    phone: '',
-    contactMethod: 'email',
-    enquiryFor: 'myself',
-    message: '',
-    gdprConsent: false,
-    honeypot: '',
-  });
+  // Radios + checkbox stay controlled — they only change on click, not per keystroke.
+  const [contactMethod, setContactMethod] = useState<ContactMethod>('email');
+  const [enquiryFor, setEnquiryFor] = useState<EnquiryFor>('myself');
+  const [gdprConsent, setGdprConsent] = useState(false);
 
-  // Refs for focus management
+  // Bumped after a successful submission to remount the char counter.
+  const [formKey, setFormKey] = useState(0);
+
   const formRef = useRef<HTMLFormElement>(null);
   const nameRef = useRef<HTMLInputElement>(null);
   const emailRef = useRef<HTMLInputElement>(null);
   const phoneRef = useRef<HTMLInputElement>(null);
+  const messageRef = useRef<HTMLTextAreaElement>(null);
   const contactMethodRef = useRef<HTMLFieldSetElement>(null);
   const enquiryForRef = useRef<HTMLFieldSetElement>(null);
   const gdprRef = useRef<HTMLInputElement>(null);
   const successRef = useRef<HTMLDivElement>(null);
 
-  // Map field names to refs for focus management
   const fieldRefs: Record<string, React.RefObject<HTMLElement | null>> = {
     name: nameRef,
     email: emailRef,
@@ -47,24 +69,6 @@ export default function ContactForm() {
     enquiryFor: enquiryForRef,
     gdprConsent: gdprRef,
   };
-
-  const handleInputChange = useCallback(
-    (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-      const { name, value, type } = e.target;
-      const checked = type === 'checkbox' ? (e.target as HTMLInputElement).checked : undefined;
-
-      setFormData((prev) => ({
-        ...prev,
-        [name]: type === 'checkbox' ? checked : value,
-      }));
-
-      // Clear error for this field when user starts typing
-      if (errors[name as keyof FormErrors]) {
-        setErrors((prev) => ({ ...prev, [name]: undefined }));
-      }
-    },
-    [errors]
-  );
 
   const focusFirstError = (validationErrors: FormErrors) => {
     const errorFields = Object.keys(validationErrors) as (keyof FormErrors)[];
@@ -77,13 +81,35 @@ export default function ContactForm() {
     }
   };
 
+  // Stable: no `errors` dep. Functional update bails out when nothing to clear,
+  // so most keystrokes do not trigger a parent re-render.
+  const clearFieldError = useCallback((field: keyof FormErrors) => {
+    setErrors((prev) => {
+      if (!prev[field]) return prev;
+      const next = { ...prev };
+      delete next[field];
+      return next;
+    });
+  }, []);
+
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     setStatus('idle');
     setServerError('');
     setErrors({});
 
-    // Client-side validation
+    const formData: ContactFormData = {
+      name: nameRef.current?.value.trim() ?? '',
+      email: emailRef.current?.value.trim() ?? '',
+      phone: phoneRef.current?.value.trim() ?? '',
+      contactMethod,
+      enquiryFor,
+      message: messageRef.current?.value ?? '',
+      gdprConsent,
+      honeypot:
+        (formRef.current?.elements.namedItem('honeypot') as HTMLInputElement | null)?.value ?? '',
+    };
+
     const validationErrors = validateEnquiryForm({
       name: formData.name,
       email: formData.email,
@@ -111,35 +137,28 @@ export default function ContactForm() {
 
       if (res.ok) {
         setStatus('success');
-        // Track successful form submission
         trackFormSubmission(formData.enquiryFor, window.location.pathname);
-        // Reset form
-        setFormData({
-          name: '',
-          email: '',
-          phone: '',
-          contactMethod: 'email',
-          enquiryFor: 'myself',
-          message: '',
-          gdprConsent: false,
-          honeypot: '',
-        });
-        // Focus on success message for screen readers
+        formRef.current?.reset();
+        setContactMethod('email');
+        setEnquiryFor('myself');
+        setGdprConsent(false);
+        setFormKey((k) => k + 1);
         setTimeout(() => {
           successRef.current?.focus();
         }, 100);
       } else {
         const errorData = await res.json().catch(() => ({}));
         setStatus('error');
-        setServerError(errorData.error || 'Something went wrong. Please try again, or email me directly at andreeatherapytoday@gmail.com');
+        setServerError(
+          errorData.error ||
+            'Something went wrong. Please try again, or email me directly at andreeatherapytoday@gmail.com'
+        );
       }
     } catch {
       setStatus('error');
       setServerError('Unable to send your message. Please check your connection and try again.');
     }
   };
-
-  const messageLength = formData.message?.length || 0;
 
   return (
     <form
@@ -180,8 +199,7 @@ export default function ContactForm() {
           type="text"
           id="website"
           name="honeypot"
-          value={formData.honeypot}
-          onChange={handleInputChange}
+          defaultValue=""
           tabIndex={-1}
           autoComplete="off"
         />
@@ -197,8 +215,8 @@ export default function ContactForm() {
           type="text"
           id="name"
           name="name"
-          value={formData.name}
-          onChange={handleInputChange}
+          defaultValue=""
+          onInput={() => clearFieldError('name')}
           aria-required="true"
           aria-invalid={!!errors.name}
           aria-describedby={errors.name ? 'name-error' : undefined}
@@ -222,13 +240,14 @@ export default function ContactForm() {
           type="email"
           id="email"
           name="email"
-          value={formData.email}
-          onChange={handleInputChange}
+          defaultValue=""
+          onInput={() => clearFieldError('email')}
           aria-required="true"
           aria-invalid={!!errors.email}
           aria-describedby={errors.email ? 'email-error' : undefined}
           className={errors.email ? styles.inputError : undefined}
           autoComplete="email"
+          inputMode="email"
         />
         {errors.email && (
           <div id="email-error" className={styles.errorMessage} role="alert">
@@ -247,12 +266,13 @@ export default function ContactForm() {
           type="tel"
           id="phone"
           name="phone"
-          value={formData.phone}
-          onChange={handleInputChange}
+          defaultValue=""
+          onInput={() => clearFieldError('phone')}
           aria-invalid={!!errors.phone}
           aria-describedby={errors.phone ? 'phone-error' : 'phone-hint'}
           className={errors.phone ? styles.inputError : undefined}
           autoComplete="tel"
+          inputMode="tel"
         />
         <div id="phone-hint" className={styles.fieldHint}>
           UK numbers only (e.g., 07xxx or 01xxx)
@@ -280,13 +300,11 @@ export default function ContactForm() {
               type="radio"
               name="contactMethod"
               value="email"
-              checked={formData.contactMethod === 'email'}
-              onChange={(e) =>
-                setFormData((prev) => ({
-                  ...prev,
-                  contactMethod: e.target.value as ContactMethod,
-                }))
-              }
+              checked={contactMethod === 'email'}
+              onChange={() => {
+                setContactMethod('email');
+                clearFieldError('contactMethod');
+              }}
             />
             <span>Email</span>
           </label>
@@ -295,13 +313,11 @@ export default function ContactForm() {
               type="radio"
               name="contactMethod"
               value="phone"
-              checked={formData.contactMethod === 'phone'}
-              onChange={(e) =>
-                setFormData((prev) => ({
-                  ...prev,
-                  contactMethod: e.target.value as ContactMethod,
-                }))
-              }
+              checked={contactMethod === 'phone'}
+              onChange={() => {
+                setContactMethod('phone');
+                clearFieldError('contactMethod');
+              }}
             />
             <span>Phone</span>
           </label>
@@ -310,13 +326,11 @@ export default function ContactForm() {
               type="radio"
               name="contactMethod"
               value="either"
-              checked={formData.contactMethod === 'either'}
-              onChange={(e) =>
-                setFormData((prev) => ({
-                  ...prev,
-                  contactMethod: e.target.value as ContactMethod,
-                }))
-              }
+              checked={contactMethod === 'either'}
+              onChange={() => {
+                setContactMethod('either');
+                clearFieldError('contactMethod');
+              }}
             />
             <span>Either</span>
           </label>
@@ -344,10 +358,11 @@ export default function ContactForm() {
               type="radio"
               name="enquiryFor"
               value="myself"
-              checked={formData.enquiryFor === 'myself'}
-              onChange={(e) =>
-                setFormData((prev) => ({ ...prev, enquiryFor: e.target.value as EnquiryFor }))
-              }
+              checked={enquiryFor === 'myself'}
+              onChange={() => {
+                setEnquiryFor('myself');
+                clearFieldError('enquiryFor');
+              }}
             />
             <span>Myself</span>
           </label>
@@ -356,10 +371,11 @@ export default function ContactForm() {
               type="radio"
               name="enquiryFor"
               value="child"
-              checked={formData.enquiryFor === 'child'}
-              onChange={(e) =>
-                setFormData((prev) => ({ ...prev, enquiryFor: e.target.value as EnquiryFor }))
-              }
+              checked={enquiryFor === 'child'}
+              onChange={() => {
+                setEnquiryFor('child');
+                clearFieldError('enquiryFor');
+              }}
             />
             <span>My child or teenager</span>
           </label>
@@ -368,10 +384,11 @@ export default function ContactForm() {
               type="radio"
               name="enquiryFor"
               value="other"
-              checked={formData.enquiryFor === 'other'}
-              onChange={(e) =>
-                setFormData((prev) => ({ ...prev, enquiryFor: e.target.value as EnquiryFor }))
-              }
+              checked={enquiryFor === 'other'}
+              onChange={() => {
+                setEnquiryFor('other');
+                clearFieldError('enquiryFor');
+              }}
             />
             <span>A family member or partner</span>
           </label>
@@ -389,11 +406,12 @@ export default function ContactForm() {
           What&apos;s bringing you to therapy? <span className={styles.optional}>(optional)</span>
         </label>
         <textarea
+          ref={messageRef}
           id="message"
           name="message"
           rows={4}
-          value={formData.message}
-          onChange={handleInputChange}
+          defaultValue=""
+          onInput={() => clearFieldError('message')}
           aria-invalid={!!errors.message}
           aria-describedby="message-counter message-hint"
           className={errors.message ? styles.inputError : undefined}
@@ -404,14 +422,7 @@ export default function ContactForm() {
           <span id="message-hint" className={styles.fieldHint}>
             This is optional — we can discuss everything on the call.
           </span>
-          <span
-            id="message-counter"
-            className={styles.charCounter}
-            aria-live="polite"
-            aria-atomic="true"
-          >
-            {messageLength}/{MAX_MESSAGE_LENGTH}
-          </span>
+          <MessageCharCounter key={formKey} textareaRef={messageRef} max={MAX_MESSAGE_LENGTH} />
         </div>
         {errors.message && (
           <div id="message-error" className={styles.errorMessage} role="alert">
@@ -427,8 +438,11 @@ export default function ContactForm() {
             ref={gdprRef}
             type="checkbox"
             name="gdprConsent"
-            checked={formData.gdprConsent}
-            onChange={handleInputChange}
+            checked={gdprConsent}
+            onChange={(e) => {
+              setGdprConsent(e.target.checked);
+              clearFieldError('gdprConsent');
+            }}
             aria-required="true"
             aria-invalid={!!errors.gdprConsent}
             aria-describedby={errors.gdprConsent ? 'gdprConsent-error' : undefined}
