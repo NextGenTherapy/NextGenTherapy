@@ -177,7 +177,32 @@ describe('IndexNow Utility', () => {
   });
 
   describe('submitAllPagesToIndexNow', () => {
-    it('submits all site pages', async () => {
+    // submitAllPagesToIndexNow now derives the URL list from the dynamic
+    // sitemap (src/app/sitemap.ts), so we mock that to keep the test
+    // independent of real on-disk content.
+    const mockSitemapEntries = [
+      { url: 'https://nextgentherapy.co.uk' },
+      { url: 'https://nextgentherapy.co.uk/about' },
+      { url: 'https://nextgentherapy.co.uk/services' },
+      { url: 'https://nextgentherapy.co.uk/child-therapy' },
+      { url: 'https://nextgentherapy.co.uk/pricing' },
+      { url: 'https://nextgentherapy.co.uk/book-now' },
+      { url: 'https://nextgentherapy.co.uk/blog' },
+      { url: 'https://nextgentherapy.co.uk/blog/example-post' },
+    ];
+
+    beforeEach(() => {
+      jest.doMock('@/app/sitemap', () => ({
+        __esModule: true,
+        default: () => mockSitemapEntries,
+      }));
+    });
+
+    afterEach(() => {
+      jest.dontMock('@/app/sitemap');
+    });
+
+    it('submits every URL from the sitemap', async () => {
       mockFetch.mockResolvedValue({ ok: true, status: 200 });
 
       const result = await submitAllPagesToIndexNow();
@@ -185,23 +210,11 @@ describe('IndexNow Utility', () => {
       expect(result).toBe(true);
       const callBody = JSON.parse(mockFetch.mock.calls[0][1].body);
 
-      // Check that all main pages are included
-      expect(callBody.urlList).toContain('https://nextgentherapy.co.uk/');
+      expect(callBody.urlList).toContain('https://nextgentherapy.co.uk');
       expect(callBody.urlList).toContain('https://nextgentherapy.co.uk/about');
       expect(callBody.urlList).toContain('https://nextgentherapy.co.uk/services');
-      expect(callBody.urlList).toContain('https://nextgentherapy.co.uk/child-therapy');
-      expect(callBody.urlList).toContain('https://nextgentherapy.co.uk/pricing');
-      expect(callBody.urlList).toContain('https://nextgentherapy.co.uk/book-now');
-      expect(callBody.urlList).toContain('https://nextgentherapy.co.uk/blog');
-    });
-
-    it('includes all 19 main site pages', async () => {
-      mockFetch.mockResolvedValue({ ok: true, status: 200 });
-
-      await submitAllPagesToIndexNow();
-
-      const callBody = JSON.parse(mockFetch.mock.calls[0][1].body);
-      expect(callBody.urlList).toHaveLength(19);
+      expect(callBody.urlList).toContain('https://nextgentherapy.co.uk/blog/example-post');
+      expect(callBody.urlList).toHaveLength(mockSitemapEntries.length);
     });
   });
 });

@@ -1,23 +1,47 @@
 'use client';
 
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 /**
- * Client component to initialize Core Web Vitals monitoring
- * Uses dynamic import to reduce initial bundle size
- * Must be rendered on client-side only
+ * Initializes Core Web Vitals monitoring once the user has accepted cookies.
+ * Web Vitals reports through Google Analytics / Vercel Analytics, both of which
+ * are gated behind cookie consent — so this stays gated too.
+ *
+ * Skips initialization in non-production environments and on the server.
  */
 export default function WebVitalsReporter() {
+  const [consentAccepted, setConsentAccepted] = useState(false);
+
   useEffect(() => {
-    // Only initialize in production to reduce bundle impact in development
-    if (process.env.NODE_ENV === 'production') {
-      // Dynamic import to reduce initial JavaScript load
-      import('../../lib/vitals').then(({ initWebVitals }) => {
-        initWebVitals();
-      });
-    }
+    if (typeof window === 'undefined') return;
+
+    setConsentAccepted(localStorage.getItem('cookie-consent') === 'accepted');
+
+    const handleConsentChange = () => {
+      setConsentAccepted(localStorage.getItem('cookie-consent') === 'accepted');
+    };
+
+    window.addEventListener('cookie-consent-changed', handleConsentChange);
+    window.addEventListener('storage', handleConsentChange);
+    return () => {
+      window.removeEventListener('cookie-consent-changed', handleConsentChange);
+      window.removeEventListener('storage', handleConsentChange);
+    };
   }, []);
 
-  // This component doesn't render anything visible
+  useEffect(() => {
+    if (!consentAccepted) return;
+    if (process.env.NODE_ENV !== 'production') return;
+
+    let cancelled = false;
+    import('../../lib/vitals').then(({ initWebVitals }) => {
+      if (!cancelled) initWebVitals();
+    });
+
+    return () => {
+      cancelled = true;
+    };
+  }, [consentAccepted]);
+
   return null;
 }

@@ -10,6 +10,7 @@ import { notFound } from 'next/navigation';
 import BlogPostLayout from '../../../components/ui/BlogPostLayout';
 import BlogPostNavigation from '../../../components/ui/BlogPostNavigation';
 import CTABlock from '../../../components/ui/CTABlock';
+import RelatedPosts from '../../../components/ui/RelatedPosts';
 import BlogPostSchema from '../../../components/seo/BlogPostSchema';
 import styles from '../blog.module.scss';
 
@@ -107,7 +108,7 @@ export async function generateMetadata({
       url: `https://nextgentherapy.co.uk/blog/${slug}`,
       type: 'article',
       publishedTime: data.date,
-      modifiedTime: data.date,
+      modifiedTime: data.lastUpdated || data.date,
       authors: ['Andreea Horhocea'],
       section: data.category === 'professional' ? 'Professional Insights' : 'Personal Reflections',
       tags: [
@@ -149,16 +150,23 @@ export async function generateMetadata({
   };
 }
 
-function getAllPosts() {
+type PostListEntry = {
+  slug: string;
+  title: string;
+  date: string;
+  summary?: string;
+  category?: string;
+};
+
+function getAllPosts(): PostListEntry[] {
   const postsDir = path.join(process.cwd(), 'src/content/blog');
   const files = fs.readdirSync(postsDir);
   return files
-    .map((filename) => {
+    .map((filename): PostListEntry | null => {
       const filePath = path.join(postsDir, filename);
       const fileContent = fs.readFileSync(filePath, 'utf-8');
       const { data } = matter(fileContent);
 
-      // Add error handling for missing frontmatter
       if (!data.title || !data.date) {
         console.warn(`Missing frontmatter in ${filename}`);
         return null;
@@ -168,10 +176,24 @@ function getAllPosts() {
         slug: filename.replace(/\.md$/, ''),
         title: data.title,
         date: data.date,
+        summary: data.summary,
+        category: data.category,
       };
     })
-    .filter(Boolean) // Remove null entries
-    .sort((a, b) => (a!.date < b!.date ? 1 : -1));
+    .filter((p): p is PostListEntry => p !== null)
+    .sort((a, b) => (a.date < b.date ? 1 : -1));
+}
+
+function pickRelatedPosts(
+  all: PostListEntry[],
+  currentSlug: string,
+  category: string | undefined,
+  count = 3,
+): PostListEntry[] {
+  const others = all.filter((p) => p.slug !== currentSlug);
+  const sameCategory = category ? others.filter((p) => p.category === category) : [];
+  const fillers = others.filter((p) => !sameCategory.includes(p));
+  return [...sameCategory, ...fillers].slice(0, count);
 }
 
 export default async function BlogPostPage({ params }: { params: Promise<{ slug: string }> }) {
@@ -186,7 +208,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
   }
 
   const posts = getAllPosts();
-  const currentIndex = posts.findIndex((post) => post!.slug === slug);
+  const currentIndex = posts.findIndex((post) => post.slug === slug);
   const prevPost = posts[currentIndex + 1];
   const nextPost = posts[currentIndex - 1];
 
@@ -216,6 +238,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
           'Professional insights and guidance from Next Generation Therapy to support your mental health and wellbeing journey.'
         }
         publishedAt={data.date}
+        modifiedAt={data.lastUpdated || data.date}
         slug={slug}
         category={data.category === 'professional' ? 'professional' : 'personal'}
         wordCount={wordCount}
@@ -244,6 +267,13 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
         <BlogPostNavigation
           prevPost={prevPost ? { slug: prevPost.slug, title: prevPost.title } : null}
           nextPost={nextPost ? { slug: nextPost.slug, title: nextPost.title } : null}
+        />
+        <RelatedPosts
+          posts={pickRelatedPosts(posts, slug, data.category).map((p) => ({
+            slug: p.slug,
+            title: p.title,
+            summary: p.summary,
+          }))}
         />
         <CTABlock />
       </main>

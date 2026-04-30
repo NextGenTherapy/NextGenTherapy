@@ -1,8 +1,7 @@
-import { render } from '@testing-library/react';
+import { render, waitFor, act } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import WebVitalsReporter from '../../src/components/layout/WebVitalsReporter';
 
-// Mock the vitals module
 jest.mock('../../src/lib/vitals', () => ({
   initWebVitals: jest.fn(),
 }));
@@ -10,39 +9,80 @@ jest.mock('../../src/lib/vitals', () => ({
 import { initWebVitals } from '../../src/lib/vitals';
 
 describe('WebVitalsReporter Component', () => {
+  const originalNodeEnv = process.env.NODE_ENV;
+
   beforeEach(() => {
     jest.clearAllMocks();
+    localStorage.clear();
+    Object.defineProperty(process.env, 'NODE_ENV', {
+      value: 'production',
+      configurable: true,
+      writable: true,
+    });
   });
 
-  it('renders without crashing', () => {
-    const { container } = render(<WebVitalsReporter />);
-    expect(container).toBeInTheDocument();
+  afterAll(() => {
+    Object.defineProperty(process.env, 'NODE_ENV', {
+      value: originalNodeEnv,
+      configurable: true,
+      writable: true,
+    });
   });
 
-  it('returns null (renders nothing visible)', () => {
+  it('renders nothing visible', () => {
     const { container } = render(<WebVitalsReporter />);
     expect(container.innerHTML).toBe('');
   });
 
-  it('initializes Web Vitals on mount', () => {
+  it('does not initialize Web Vitals without cookie consent', async () => {
     render(<WebVitalsReporter />);
-
-    expect(initWebVitals).toHaveBeenCalledTimes(1);
+    // Allow effects to flush
+    await act(async () => {
+      await Promise.resolve();
+    });
+    expect(initWebVitals).not.toHaveBeenCalled();
   });
 
-  it('only initializes Web Vitals once', () => {
-    const { rerender } = render(<WebVitalsReporter />);
-
-    // Rerender the component
-    rerender(<WebVitalsReporter />);
-
-    // Should still only have been called once (useEffect with [] dependency)
-    expect(initWebVitals).toHaveBeenCalledTimes(1);
-  });
-
-  it('calls initWebVitals with no arguments', () => {
+  it('initializes Web Vitals when consent is already accepted on mount', async () => {
+    localStorage.setItem('cookie-consent', 'accepted');
     render(<WebVitalsReporter />);
-
+    await waitFor(() => {
+      expect(initWebVitals).toHaveBeenCalledTimes(1);
+    });
     expect(initWebVitals).toHaveBeenCalledWith();
+  });
+
+  it('initializes Web Vitals when consent is granted after mount', async () => {
+    render(<WebVitalsReporter />);
+    await act(async () => {
+      localStorage.setItem('cookie-consent', 'accepted');
+      window.dispatchEvent(new CustomEvent('cookie-consent-changed'));
+    });
+    await waitFor(() => {
+      expect(initWebVitals).toHaveBeenCalledTimes(1);
+    });
+  });
+
+  it('does not initialize Web Vitals when consent is declined', async () => {
+    localStorage.setItem('cookie-consent', 'declined');
+    render(<WebVitalsReporter />);
+    await act(async () => {
+      await Promise.resolve();
+    });
+    expect(initWebVitals).not.toHaveBeenCalled();
+  });
+
+  it('skips initialization outside production', async () => {
+    Object.defineProperty(process.env, 'NODE_ENV', {
+      value: 'development',
+      configurable: true,
+      writable: true,
+    });
+    localStorage.setItem('cookie-consent', 'accepted');
+    render(<WebVitalsReporter />);
+    await act(async () => {
+      await Promise.resolve();
+    });
+    expect(initWebVitals).not.toHaveBeenCalled();
   });
 });

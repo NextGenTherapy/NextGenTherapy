@@ -56,16 +56,16 @@ describe('Web Vitals Utility', () => {
   });
 
   describe('initWebVitals', () => {
-    it('returns early when window is undefined', () => {
+    it('returns early when window is undefined', async () => {
       Object.defineProperty(global, 'window', { value: undefined, writable: true });
 
-      initWebVitals();
+      await initWebVitals();
 
       expect(onLCP).not.toHaveBeenCalled();
     });
 
-    it('registers all metric callbacks', () => {
-      initWebVitals();
+    it('registers all metric callbacks', async () => {
+      await initWebVitals();
 
       expect(onLCP).toHaveBeenCalled();
       expect(onINP).toHaveBeenCalled();
@@ -74,21 +74,21 @@ describe('Web Vitals Utility', () => {
       expect(onTTFB).toHaveBeenCalled();
     });
 
-    it('logs success message after initialization', () => {
-      initWebVitals();
+    it('logs success message after initialization', async () => {
+      await initWebVitals();
 
       expect(mockConsoleLog).toHaveBeenCalledWith(
         '✅ Core Web Vitals monitoring initialized'
       );
     });
 
-    it('handles initialization errors gracefully', () => {
+    it('handles initialization errors gracefully', async () => {
       // Make onLCP throw to trigger error handling
       (onLCP as jest.Mock).mockImplementationOnce(() => {
         throw new Error('Test error');
       });
 
-      initWebVitals();
+      await initWebVitals();
 
       expect(mockConsoleError).toHaveBeenCalledWith(
         'Failed to initialize Web Vitals monitoring:',
@@ -99,8 +99,8 @@ describe('Web Vitals Utility', () => {
       (onLCP as jest.Mock).mockReset();
     });
 
-    it('calls analytics callback for LCP', () => {
-      initWebVitals();
+    it('calls analytics callback for LCP', async () => {
+      await initWebVitals();
 
       // Get the callback that was registered
       const lcpCallback = (onLCP as jest.Mock).mock.calls[0][0];
@@ -125,8 +125,8 @@ describe('Web Vitals Utility', () => {
       );
     });
 
-    it('correctly rates LCP as good when under threshold', () => {
-      initWebVitals();
+    it('correctly rates LCP as good when under threshold', async () => {
+      await initWebVitals();
       const lcpCallback = (onLCP as jest.Mock).mock.calls[0][0];
 
       lcpCallback({
@@ -144,8 +144,8 @@ describe('Web Vitals Utility', () => {
       );
     });
 
-    it('correctly rates LCP as needs-improvement', () => {
-      initWebVitals();
+    it('correctly rates LCP as needs-improvement', async () => {
+      await initWebVitals();
       const lcpCallback = (onLCP as jest.Mock).mock.calls[0][0];
 
       lcpCallback({
@@ -163,8 +163,8 @@ describe('Web Vitals Utility', () => {
       );
     });
 
-    it('correctly rates LCP as poor', () => {
-      initWebVitals();
+    it('correctly rates LCP as poor', async () => {
+      await initWebVitals();
       const lcpCallback = (onLCP as jest.Mock).mock.calls[0][0];
 
       lcpCallback({
@@ -182,11 +182,11 @@ describe('Web Vitals Utility', () => {
       );
     });
 
-    it('correctly rates CLS values', () => {
+    it('correctly rates CLS values', async () => {
       // Reset mocks to ensure clean state
       jest.clearAllMocks();
 
-      initWebVitals();
+      await initWebVitals();
 
       // Get callback - check it exists first
       const calls = (onCLS as jest.Mock).mock.calls;
@@ -209,7 +209,7 @@ describe('Web Vitals Utility', () => {
       );
     });
 
-    it('sends to Google Analytics in production', () => {
+    it('sends to Google Analytics in production', async () => {
       process.env.NODE_ENV = 'production';
       const mockGtag = jest.fn();
       Object.defineProperty(global, 'window', {
@@ -220,7 +220,7 @@ describe('Web Vitals Utility', () => {
         writable: true,
       });
 
-      initWebVitals();
+      await initWebVitals();
       const lcpCallback = (onLCP as jest.Mock).mock.calls[0][0];
 
       lcpCallback({
@@ -241,7 +241,7 @@ describe('Web Vitals Utility', () => {
       );
     });
 
-    it('sends to Vercel Analytics in production when available', () => {
+    it('sends to Vercel Analytics in production when available', async () => {
       process.env.NODE_ENV = 'production';
       const mockVa = jest.fn();
       Object.defineProperty(global, 'window', {
@@ -252,7 +252,7 @@ describe('Web Vitals Utility', () => {
         writable: true,
       });
 
-      initWebVitals();
+      await initWebVitals();
       const lcpCallback = (onLCP as jest.Mock).mock.calls[0][0];
 
       lcpCallback({
@@ -274,7 +274,7 @@ describe('Web Vitals Utility', () => {
       );
     });
 
-    it('logs warning for poor performance in production', () => {
+    it('logs warning for poor performance in production', async () => {
       process.env.NODE_ENV = 'production';
       Object.defineProperty(global, 'window', {
         value: {
@@ -287,7 +287,7 @@ describe('Web Vitals Utility', () => {
         writable: true,
       });
 
-      initWebVitals();
+      await initWebVitals();
       const lcpCallback = (onLCP as jest.Mock).mock.calls[0][0];
 
       lcpCallback({
@@ -310,7 +310,7 @@ describe('Web Vitals Utility', () => {
   });
 
   describe('reportWebVitals', () => {
-    it('creates WebVitalMetric and sends to analytics', () => {
+    it('creates WebVitalMetric and sends to analytics', async () => {
       reportWebVitals({
         name: 'LCP',
         value: 2000,
@@ -322,7 +322,7 @@ describe('Web Vitals Utility', () => {
       );
     });
 
-    it('handles various metric types', () => {
+    it('handles various metric types', async () => {
       const metrics = ['LCP', 'FCP', 'CLS', 'FID', 'TTFB'];
 
       metrics.forEach((name) => {
@@ -358,7 +358,7 @@ describe('Web Vitals Utility', () => {
       jest.useRealTimers();
     });
 
-    it('returns early when window is undefined', () => {
+    it('returns early when window is undefined', async () => {
       Object.defineProperty(global, 'window', { value: undefined, writable: true });
 
       usePerformanceMonitoring('TestComponent');
@@ -367,7 +367,7 @@ describe('Web Vitals Utility', () => {
       expect(mockConsoleWarn).not.toHaveBeenCalled();
     });
 
-    it('logs warning for slow component renders', () => {
+    it('logs warning for slow component renders', async () => {
       usePerformanceMonitoring('SlowComponent');
 
       jest.runAllTimers();
@@ -381,7 +381,7 @@ describe('Web Vitals Utility', () => {
       );
     });
 
-    it('does not log warning for fast renders', () => {
+    it('does not log warning for fast renders', async () => {
       // Override to return fast render time
       const fastPerformance = jest.fn()
         .mockReturnValueOnce(0)

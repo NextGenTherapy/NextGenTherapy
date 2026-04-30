@@ -103,6 +103,9 @@ export default function Footer() {
               <Link href="/faq">FAQ</Link>
             </li>
             <li>
+              <Link href="/youth-family-faq">Youth & Family FAQ</Link>
+            </li>
+            <li>
               <Link href="/book-now">Book a Free Call</Link>
             </li>
           </ul>

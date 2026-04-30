@@ -11,7 +11,6 @@ interface WebSite {
   copyrightYear?: string;
   copyrightHolder?: object;
   publisher?: object;
-  potentialAction?: object[];
   mainEntity?: object;
   about?: object[];
   audience?: object;
@@ -49,16 +48,6 @@ export default function WebsiteSchema({ className }: WebsiteSchemaProps) {
       name: 'Next Generation Therapy',
       '@id': 'https://nextgentherapy.co.uk/#organization',
     },
-    potentialAction: [
-      {
-        '@type': 'SearchAction',
-        target: {
-          '@type': 'EntryPoint',
-          urlTemplate: 'https://nextgentherapy.co.uk/search?q={search_term_string}',
-        },
-        'query-input': 'required name=search_term_string',
-      },
-    ],
     mainEntity: {
       '@type': 'Organization',
       '@id': 'https://nextgentherapy.co.uk/#organization',

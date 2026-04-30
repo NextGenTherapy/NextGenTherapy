@@ -118,12 +118,23 @@ const nextConfig: NextConfig = {
       },
       {
         source: '/parent-support',
-        destination: '/child-therapy#for-parents',
+        destination: '/child-therapy',
         permanent: true,
       },
       {
         source: '/about-therapy',
         destination: '/is-this-right-for-you',
+        permanent: true,
+      },
+      // Common 404s reported in Google Search Console
+      {
+        source: '/home',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/contact',
+        destination: '/book-now',
         permanent: true,
       },
     ];
@@ -149,14 +160,6 @@ const nextConfig: NextConfig = {
       // Prevent indexing of technical files
       {
         source: '/manifest.json',
-        headers: [{ key: 'X-Robots-Tag', value: 'noindex, nofollow' }],
-      },
-      {
-        source: '/sitemap.xml',
-        headers: [{ key: 'X-Robots-Tag', value: 'noindex, nofollow' }],
-      },
-      {
-        source: '/sitemap-0.xml',
         headers: [{ key: 'X-Robots-Tag', value: 'noindex, nofollow' }],
       },
       {

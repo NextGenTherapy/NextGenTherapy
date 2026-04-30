@@ -135,14 +135,12 @@
 .heroImageWrapper {
   display: flex;
   justify-content: center;
-  order: -1;
 }
 
 @media (min-width: 1024px) {
   .heroImageWrapper {
     flex: 0 0 45%;
     justify-content: flex-end;
-    order: 0;
   }
 }
 

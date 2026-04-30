@@ -83,30 +83,15 @@ export async function submitUrlsToIndexNow(urls: string[]): Promise<boolean> {
 }
 
 /**
- * Submit all site pages to IndexNow (for initial setup)
+ * Submit every URL in the sitemap to IndexNow.
+ * Pulls from the dynamic sitemap so location pages and blog posts are included.
  */
 export async function submitAllPagesToIndexNow(): Promise<boolean> {
-  const allPages = [
-    '/',
-    '/about',
-    '/is-this-right-for-you',
-    '/services',
-    '/therapy-for-women',
-    '/neurodiversity',
-    '/teen-therapy',
-    '/child-therapy',
-    '/romanian-therapy',
-    '/online-therapy',
-    '/youth-family-faq',
-    '/pricing',
-    '/location',
-    '/book-now',
-    '/faq',
-    '/blog',
-    '/privacy-policy',
-    '/terms',
-    '/trust'
-  ];
+  // Imported lazily so this module stays usable from places that don't
+  // have access to fs (the sitemap reads from disk).
+  const sitemapModule = await import('@/app/sitemap');
+  const entries = sitemapModule.default();
+  const urls = entries.map((entry) => entry.url);
 
-  return submitToIndexNow(allPages);
+  return submitToIndexNow(urls);
 }

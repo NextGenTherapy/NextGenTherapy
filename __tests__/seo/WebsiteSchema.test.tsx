@@ -72,17 +72,14 @@ describe('WebsiteSchema Component', () => {
     });
   });
 
-  it('includes search action', () => {
+  it('does not declare a SearchAction (no on-site search)', () => {
+    // SearchAction was removed because there is no /search route on the site —
+    // declaring one caused Google Search Console to report /search?q=… as a 404.
     const { container } = render(<WebsiteSchema />);
     const scriptTag = container.querySelector('script[type="application/ld+json"]');
     const jsonData = JSON.parse(scriptTag?.textContent || '{}');
 
-    expect(jsonData.potentialAction).toHaveLength(1);
-    expect(jsonData.potentialAction[0]['@type']).toBe('SearchAction');
-    expect(jsonData.potentialAction[0].target.urlTemplate).toBe(
-      'https://nextgentherapy.co.uk/search?q={search_term_string}'
-    );
-    expect(jsonData.potentialAction[0]['query-input']).toBe('required name=search_term_string');
+    expect(jsonData.potentialAction).toBeUndefined();
   });
 
   it('includes main entity reference', () => {
