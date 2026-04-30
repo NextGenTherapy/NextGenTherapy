@@ -1,116 +1,129 @@
 # SEO Ranking Tracker
 
 **Baseline Date:** 9 April 2026
+**Latest Check:** 30 April 2026
 **Site:** nextgentherapy.co.uk
 **Purpose:** Track organic search positions for target keywords over time
 
 ---
 
-## Summary
+## Summary (30 April 2026)
 
-| Keyword Category | Keywords Tracked | Currently Ranking | Top 10 | Top 20 |
-|-----------------|------------------|-------------------|--------|--------|
-| Core Colchester | 4 | 1 | 1 | 1 |
-| Brand Searches | 2 | 2 | 2 | 2 |
-| Location Pages | 7 | 0 | 0 | 0 |
-| Neurodiversity | 5 | 0 | 0 | 0 |
-| Romanian | 3 | 0 | 0 | 0 |
-| Women/Burnout | 4 | 0 | 0 | 0 |
-| Teen/Child | 5 | 0 | 0 | 0 |
-| Specific Issues | 6 | 0 | 0 | 0 |
+| Keyword Category | Keywords Tracked | Ranking 9 Apr | Ranking 30 Apr | Change |
+|-----------------|------------------|---------------|----------------|--------|
+| Brand Searches | 2 | 2 | 2 | — (expanded depth) |
+| Core Colchester | 4 | 1 | 2 | **+1** (BACP therapist colchester) |
+| Location Pages | 7 | 0 | 0 | — (newly published, indexing in progress) |
+| Neurodiversity | 5 | 0 | 0 | — |
+| Romanian | 3 | 0 | 0 | — |
+| Women/Burnout | 4 | 0 | 0 | — |
+| Teen/Child | 5 | 0 | 1 | **+1** (play therapy colchester essex) |
+| Specific Issues | 6 | 0 | 0 | — |
 
-**Total:** 36 keywords tracked | 3 ranking (8%)
+**Total:** 36 keywords tracked | **5 ranking in top 10 (14%)** — up from 3 (8%) on 9 April
+
+**Methodology note (30 Apr check):** Searches run via Claude WebSearch tool. Results reflect a US-vantage Google query; UK-local results from a Colchester incognito search may show some additional ranking variations. Treat as directional, not absolute.
 
 ---
 
 ## Brand Searches (Ranking Well)
 
-| Keyword | 9 Apr 2026 | Position | Notes |
-|---------|------------|----------|-------|
-| **"next generation therapy" colchester** | **Found** | **#1 and #2** | Homepage and blog ranking |
-| **andreea horhocea therapist** | **Found** | **#1, #2, #3, #4, #5, #6** | Dominates first page - About, Homepage, BACP, Psychology Today, FAQ, Counselling Directory |
+| Keyword | 9 Apr 2026 | 30 Apr 2026 | Change |
+|---------|------------|-------------|--------|
+| **"next generation therapy" colchester** | #1, #2 | **#1 (Home), #2 (FAQ), #3, #4 (blog posts)** | **Expanded** — 4 results in top 10 |
+| **andreea horhocea therapist** | #1–6 | **#1 (About), #2 (Home), #3 (BACP), #4 (PsychToday), #5 (FAQ), #6 (Counselling Directory)** | Maintained dominance |
 
 ---
 
 ## Core Colchester Keywords
 
-| Keyword | 9 Apr 2026 | Position | Notes |
-|---------|------------|----------|-------|
-| therapy colchester | Not found | - | Turner Centre, Stockwell Centre, directories dominate |
-| psychotherapist colchester | Not found | - | Turner Centre, Stockwell Centre, Ian Rattray, directories |
-| **psychodynamic therapy colchester** | **Found** | **#3 (About), #7 (Homepage)** | Strong position - key differentiator |
-| BACP therapist colchester | Not found | - | Individual BACP profiles dominate |
+| Keyword | 9 Apr 2026 | 30 Apr 2026 | Change |
+|---------|------------|-------------|--------|
+| therapy colchester | Not found | Not found | — Turner Centre / Stockwell still entrenched |
+| psychotherapist colchester | Not found | Not found | — Turner Centre / Stockwell / Ian Rattray |
+| **psychodynamic therapy colchester** | #3, #7 | **#2 (About), #4 (Services), #10 (Home)** | **Improved** — 3 results in top 10, About moved up |
+| **BACP therapist colchester** | Not found | **#7 (Home), #10 (About)** | **NEW WIN** — broke into top 10 |
 
 ---
 
 ## Location Page Keywords
 
-| Keyword | 9 Apr 2026 | Position | Notes |
-|---------|------------|----------|-------|
-| therapist wivenhoe | Not found | - | Counselling Directory, Therapy Directory dominate |
-| therapist mersea | Not found | - | Andy Merz Counselling ranks, directories |
-| therapist manningtree | Not found | - | 2 Rivers Counselling, directories |
-| therapist clacton | Not found | - | Psychology Today, local therapists |
-| therapist ipswich | Not found | - | Stephenson Centre dominates, directories |
-| therapist tiptree | Not checked | - | |
-| therapist marks tey | Not checked | - | |
+All 7 location pages are newly published (Apr 2026) and require time for Google to index and rank. None ranking yet on either check date — same as baseline.
+
+| Keyword | 9 Apr 2026 | 30 Apr 2026 | Top competitors |
+|---------|------------|-------------|-----------------|
+| therapist wivenhoe | Not found | Not found | Counselling Directory, Therapy Directory, Chloe Sparrow Art Psychotherapy |
+| therapist mersea | Not found | Not found | Andy Merz Counselling, Jessica Guise, directories |
+| therapist manningtree | Not found | Not found | 2 Rivers Counselling, Psychology Today |
+| therapist clacton | Not found | Not found | Psychology Today, BACP profiles, local therapists |
+| therapist ipswich | Not found | Not found | Stephenson Centre, M Salter, directories |
+| therapist tiptree | Not checked | Not found | Andy Merz, Gary Hewitt, directories |
+| therapist marks tey | Not checked | Not found | Mostly massage therapists — opportunity |
 
 ---
 
 ## Neurodiversity Keywords
 
-| Keyword | 9 Apr 2026 | Position | Notes |
-|---------|------------|----------|-------|
-| adult adhd therapist essex | Not found | - | ADHD Centre, NurtureNeuro, NHS services dominate |
-| autism therapy colchester | Not found | - | Colchester Children's Counselling, Autism Anglia |
-| neurodivergent therapist uk | Not found | - | Directories dominate (ndtherapists.com, neurodirect.co.uk) |
-| late diagnosed adhd therapy women uk | Not found | - | Headstuff ADHD Therapy, ADHD Women's Wellbeing |
-| autistic burnout therapist uk | Not found | - | Dr Alice Nicholls, Tayler Remi, directories |
+No movement on neurodiversity keywords. Specialist directories (ndtherapists.com, neurodirect.co.uk) dominate. Will need targeted content + backlinks.
+
+| Keyword | 9 Apr 2026 | 30 Apr 2026 | Top competitors |
+|---------|------------|-------------|-----------------|
+| adult adhd therapist essex | Not found | Not found | ADHD Centre, NurtureNeuro, NHS, Provide Wellbeing |
+| autism therapy colchester | Not found | Not found | Acorn Autism, Autism Service, Colchester Children's Counselling |
+| neurodivergent therapist uk | Not found | Not found | ndtherapists.com, NeuroDirect, NeuroTribe UK |
+| late diagnosed adhd therapy women uk | Not found | Not found | Headstuff ADHD, ADHD Women's Wellbeing, AuDHD Psychiatry |
+| autistic burnout therapist uk | Not found | Not found | Tayler Remi, Towards Meaning, Dr Alice Nicholls |
 
 ---
 
 ## Romanian Keywords (Near-Empty Niche)
 
-| Keyword | 9 Apr 2026 | Position | Notes |
-|---------|------------|----------|-------|
-| romanian therapist uk | Not found | - | Psychology Today directory, therapycounselling.org |
-| terapeut român essex | Not found | - | Very few UK results - big opportunity |
-| terapie online UK română | Not found | - | Pasul.ro, Recoverly.uk dominate this space |
+No movement. The Romanian page may need bilingual content and external Romanian-community backlinks before ranking.
+
+| Keyword | 9 Apr 2026 | 30 Apr 2026 | Top competitors |
+|---------|------------|-------------|-----------------|
+| romanian therapist uk | Not found | Not found | Psychology Today, therapycounselling.org, Miha Momoiu |
+| terapeut român essex | Not found | Not found | Psychology Today (very few UK-Essex results — opportunity) |
+| terapie online UK română | Not found | Not found | Pasul.ro, Recoverly.uk, Counselling Insight |
 
 ---
 
 ## Women/Burnout Keywords
 
-| Keyword | 9 Apr 2026 | Position | Notes |
-|---------|------------|----------|-------|
-| burnout therapy for women uk | Not found | - | Schoen Clinic, directories, Balancing Bluebells |
-| therapist for high achieving women | Not found | - | US-based practices dominate |
-| therapist for overthinking anxiety women | Not found | - | US practices dominate, no UK-specific results |
-| therapist for perfectionism uk | Not found | - | theperfectionismtherapist.com, KlearMinds |
+No movement. US practices dominate; UK-specific gap remains. The therapy-for-women cornerstone page is new and still building authority.
+
+| Keyword | 9 Apr 2026 | 30 Apr 2026 | Top competitors |
+|---------|------------|-------------|-----------------|
+| burnout therapy for women uk | Not found | Not found | Schoen Clinic, Balancing Bluebells, Mental Health UK |
+| therapist for high achieving women | Not found | Not found | US-based practices (Howell, Brenner, Hillier, Wilson) |
+| therapist for overthinking anxiety women | Not found | Not found | US practices dominate |
+| therapist for perfectionism uk | Not found | Not found | theperfectionismtherapist.com, KlearMinds, My Therapist Online |
 
 ---
 
 ## Teen/Child Keywords
 
-| Keyword | 9 Apr 2026 | Position | Notes |
-|---------|------------|----------|-------|
-| teen therapy colchester | Not found | - | Turner Centre, Psychology Today listings |
-| child therapist colchester | Not found | - | Colchester Children's Counselling, Turner Centre, Tough Stuff Play Therapy |
-| play therapy colchester essex | Not found | - | Tough Stuff, Bumblebee, Sue Gascoyne dominate |
-| self harm therapist teenager colchester | Not found | - | Turner Centre, Teenage Mental Health Ltd |
-| school refusal anxiety therapist essex | Not found | - | Essex SENDIASS, US results dominate |
+| Keyword | 9 Apr 2026 | 30 Apr 2026 | Change |
+|---------|------------|-------------|--------|
+| teen therapy colchester | Not found | Not found | Turner Centre, Psychology Today entrenched |
+| child therapist colchester | Not found | Not found | Colchester Children's Counselling, Turner Centre |
+| **play therapy colchester essex** | Not found | **#6 (Child Therapy page)** | **NEW WIN** — broke into top 10 |
+| self harm therapist teenager colchester | Not found | Not found | Turner Centre, Teenage Mental Health, Sophie Simmons |
+| school refusal anxiety therapist essex | Not found | Not found | Mostly US results — opportunity |
 
 ---
 
 ## Specific Issue Keywords
 
-| Keyword | 9 Apr 2026 | Position | Notes |
-|---------|------------|----------|-------|
-| anxiety therapist colchester | Not found | - | Louise Wheeler, Better Your Life, Turner Centre |
-| body image therapist essex | Not found | - | Very few UK results - opportunity |
-| eating disorder therapist colchester | Not found | - | NHS EPUT, Philippe Jacquet, specialists |
-| women therapist colchester anxiety burnout | Not found | - | Better Your Life, directories |
-| sensory friendly therapist autism uk | Not found | - | Sensory UK, CASS, OT services |
+No movement. These are competitive niches dominated by established Colchester/Essex therapists and specialist clinics.
+
+| Keyword | 9 Apr 2026 | 30 Apr 2026 | Top competitors |
+|---------|------------|-------------|-----------------|
+| anxiety therapist colchester | Not found | Not found | Better Your Life, Leonie Holmes, Turner Centre, RH Counselling |
+| body image therapist essex | Not found | Not found | Mostly US results — UK gap remains |
+| eating disorder therapist colchester | Not found | Not found | Philippe Jacquet, NHS EPUT, Northgate Centre |
+| women therapist colchester anxiety burnout | Not found | Not found | Better Your Life, RH Counselling, Light Bubble |
+| sensory friendly therapist autism uk | Not found | Not found | Sensory UK, ASD Clinic, OT-led services |
 
 ---
 
@@ -165,10 +178,20 @@
   - andreea horhocea therapist - #1-6 (dominates)
   - psychodynamic therapy colchester - #3, #7
 
-### 30 April 2026 (Post-indexing-fix checkpoint)
-**Infrastructure shipped — rankings not re-checked yet, expect movement in 2–4 weeks.**
+### 30 April 2026 (Post-indexing-fix checkpoint + ranking re-check)
 
-What changed:
+**Headline: 5 keywords now ranking in top 10 (up from 3 on 9 April)**
+
+Ranking changes:
+- **NEW**: BACP therapist colchester → #7 (Home), #10 (About)
+- **NEW**: play therapy colchester essex → #6 (Child Therapy page)
+- **IMPROVED**: psychodynamic therapy colchester → #2, #4, #10 (was #3, #7) — added Services page, About moved up
+- **EXPANDED**: "next generation therapy" colchester → 4 results in top 10 (was 2)
+- **MAINTAINED**: andreea horhocea therapist still dominates positions 1–6
+- 7 location pages: still not ranking (newly published, expected — needs more time)
+- All other categories: no change yet
+
+What changed (infrastructure):
 - Dynamic `app/sitemap.ts` and `app/robots.ts` — sitemap `lastmod` now refreshes every deploy
 - 3 GSC indexing reports submitted for Validate Fix (Page-with-redirect, 404, Crawled-not-indexed)
 - 10 high-value pages manually requested for re-indexing in GSC (book-now, services, youth-family-faq, privacy-policy + 6 blog posts)
